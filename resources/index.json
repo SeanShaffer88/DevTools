@@ -175,7 +175,7 @@
       "id": "github-resource-library",
       "title": "Local GitHub Tool And Resource Library",
       "category": "Toolkit",
-      "path": "github/library-reference.md",
+      "path": "github-library-reference.md",
       "source": "Authorized local capture from SeanShaffer88 GitHub repositories; source commits and file hashes in github/catalog.json and manifests",
       "capturedUtc": "2026-11-04T04:34:53.807005+00:00",
       "versionScope": "100 repository metadata/README captures;19 pinned shallow source snapshots; no runtime validation",
