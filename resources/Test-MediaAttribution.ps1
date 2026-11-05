@@ -1,4 +1,4 @@
-#requires -Version 7.0
+#requires -Version 7.1
 <#
 .SYNOPSIS
 Verifies a bounded offline attribution catalog and optionally writes new plain-text credits.

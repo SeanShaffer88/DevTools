@@ -1,6 +1,7 @@
 #requires -Version 7.0
-[CmdletBinding()]param()
+[CmdletBinding()]param([string]$EvidenceDirectory)
 $ErrorActionPreference='Stop'
+$evidencePath=& (Join-Path $PSScriptRoot 'Resolve-SuiteEvidencePath.ps1') 'validation-quality-foundations.json' $EvidenceDirectory ($PSBoundParameters.ContainsKey('EvidenceDirectory'))
 $root=Split-Path $PSScriptRoot
 . (Join-Path $root 'lib/QualityCommon.ps1')
 $fixture=Join-Path $PSScriptRoot 'fixtures/quality'
@@ -164,7 +165,7 @@ try{
 }catch{Check ('unexpected: '+$_.Exception.Message) $false;$_|Out-String|Set-Content (Join-Path $work 'failure.log')}
 $failed=@($checks|Where-Object {-not $_.passed}).Count
 $code=if($failed){2}elseif($blockedGates.Count){3}else{0}
-@{schemaVersion=1;command='pwsh -NoProfile -File tests/Test-QualityFoundations.ps1';exitCode=$code;observedUtc=[DateTime]::UtcNow.ToString('o');fixturePath=$fixture;artifactRoot=$work;blockedGates=$blockedGates.ToArray();checks=$checks.ToArray();commands=$commands.ToArray();passed=$checks.Count-$failed;failed=$failed;limits=@{childOutputBytes=2097152;fixtureEntries=10000;fixtureBytes=134217728};limitations=@('Positive UIA coverage uses the owned WPF fixture. WinForms bridge qualification remains Unknown: observed Pane children without stable IDs or Value/Invoke patterns.','No foreign applications, device, installer, release or external-service actions performed.')}|ConvertTo-Json -Depth 40|Set-Content -LiteralPath (Join-Path $root 'validation-quality-foundations.json') -Encoding utf8
+@{schemaVersion=1;command='pwsh -NoProfile -File tests/Test-QualityFoundations.ps1';exitCode=$code;observedUtc=[DateTime]::UtcNow.ToString('o');fixturePath=$fixture;artifactRoot=$work;blockedGates=$blockedGates.ToArray();checks=$checks.ToArray();commands=$commands.ToArray();passed=$checks.Count-$failed;failed=$failed;limits=@{childOutputBytes=2097152;fixtureEntries=10000;fixtureBytes=134217728};limitations=@('Positive UIA coverage uses the owned WPF fixture. WinForms bridge qualification remains Unknown: observed Pane children without stable IDs or Value/Invoke patterns.','No foreign applications, device, installer, release or external-service actions performed.')}|ConvertTo-Json -Depth 40|Set-Content -LiteralPath $evidencePath -Encoding utf8
 Write-Host "Evidence: $work; checks=$($checks.Count); failures=$failed"
 exit $code
 

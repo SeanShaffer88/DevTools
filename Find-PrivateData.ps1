@@ -1,3 +1,4 @@
+#requires -Version 7.1
 <#
 .SYNOPSIS
 Bounded local heuristic scan; output uses file ordinals, never source paths or text.

@@ -1,3 +1,4 @@
+#requires -Version 7.1
 <#
 .SYNOPSIS
 Compare explicit PNG/BMP images and/or schema1 UIA snapshots with compatible contexts.

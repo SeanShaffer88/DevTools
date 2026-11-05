@@ -5,6 +5,20 @@
   "entrypoint": "README.md",
   "requires": {
     "powerShell": ">=7.0",
+    "powerShellByHelper": {
+      "Get-PolicyDiagnostics.ps1": ">=7.1",
+      "Invoke-ParserFuzz.ps1": ">=7.1",
+      "Find-PrivateData.ps1": ">=7.1",
+      "Compare-UiSnapshot.ps1": ">=7.1",
+      "Compare-ManagedApi.ps1": ">=7.1",
+      "Test-GameAssets.ps1": ">=7.1",
+      "Invoke-GameplayReplay.ps1": ">=7.1",
+      "Invoke-AndroidLifecycle.ps1": ">=7.1",
+      "New-WowDiagnosticsAddon.ps1": ">=7.1",
+      "resources/Test-MediaAttribution.ps1": ">=7.1",
+      "Manage-CrashSymbolVault.ps1": ">=7.3",
+      "tools/lua-5.1.5/Build-Lua.ps1": ">=7.3"
+    },
     "platform": "Windows",
     "thirdPartyDependencies": [],
     "core": "PowerShell7 and built-in .NET; optional explicitly approved toolchains separately indexed"
@@ -37,7 +51,8 @@
         "ProjectPath (required)",
         "Executable (required)",
         "ArgumentList (string[])",
-        "ArtifactPath (string[])"
+        "ArtifactPath (string[])",
+        "TimeoutSeconds (optional 1-86400; process and output capture deadline)"
       ],
       "writes": [
         "runs/<unique-run>/stdout.log",
@@ -95,7 +110,8 @@
         "ManifestPath",
         "ExpectedArchitecture (x86|x64|Arm64)",
         "Strict",
-        "Json"
+        "Json",
+        "MaxHashBytes (optional nonnegative cumulative limit)"
       ],
       "writes": [],
       "resultSchemaVersion": 1

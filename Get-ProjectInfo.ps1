@@ -15,6 +15,9 @@ $ErrorActionPreference = 'Stop'
 $root = Get-Item -LiteralPath $ProjectPath
 if (-not $root.PSIsContainer) { throw 'ProjectPath must be a directory.' }
 if ($root.Attributes -band [IO.FileAttributes]::ReparsePoint) { throw 'ProjectPath must not be a reparse point.' }
+for ($parent=$root.Parent; $null -ne $parent; $parent=$parent.Parent) {
+    if ($parent.Attributes -band [IO.FileAttributes]::ReparsePoint) { throw 'ProjectPath must not have a reparse point ancestor.' }
+}
 $excluded = @('.git','.svn','node_modules','vendor','target','build','dist','bin','obj','.gradle','.idea','.vs','.venv','venv','__pycache__','runs')
 $queue = [Collections.Generic.Queue[object]]::new()
 $queue.Enqueue(@($root.FullName,0))
@@ -49,15 +52,35 @@ while ($queue.Count -gt 0) {
     if ($limitReached) { break }
 }
 $gitInfo = $null
+$gitProbe = [pscustomobject]@{status='NotAvailable';exitCode=$null}
 $git = Get-Command git.exe -CommandType Application -ErrorAction SilentlyContinue | Select-Object -First 1
 if ($git) {
-    $isRepo = & $git.Source --no-optional-locks -C $root.FullName rev-parse --is-inside-work-tree 2>$null
-    if ($LASTEXITCODE -eq 0 -and $isRepo -eq 'true') {
+    # A nonzero native exit is probe data, even when the caller enables native error handling.
+    $PSNativeCommandUseErrorActionPreference = $false
+    $probeOutput = @(& $git.Source --no-optional-locks -C $root.FullName rev-parse --is-inside-work-tree 2>&1)
+    $gitProbe.exitCode = $LASTEXITCODE
+    $gitProbe.status = 'ProbeFailed'
+    if ($gitProbe.exitCode -eq 0) {
+        $probeValue = @($probeOutput | Where-Object { $_ -is [string] })
+        if ($probeValue.Count -eq 1 -and $probeValue[0] -ceq 'true') { $gitProbe.status = 'Available' }
+        elseif ($probeValue.Count -eq 1 -and $probeValue[0] -ceq 'false') { $gitProbe.status = 'NotWorkTree' }
+    } else {
+        # Classify only Git's known English diagnostics. Leave other failures opaque.
+        $probeErrors = @($probeOutput | Where-Object { $_ -is [System.Management.Automation.ErrorRecord] } | ForEach-Object { [string]$_ })
+        if ($probeErrors.Count -eq 1 -and $probeErrors[0] -ceq 'fatal: not a git repository (or any of the parent directories): .git') {
+            $gitProbe.status = 'NotRepository'
+        } elseif ($probeErrors.Count -eq 2 -and
+            $probeErrors[0] -cmatch '\Afatal: not a git repository \(or any parent up to mount point [^\r\n]+\)\z' -and
+            $probeErrors[1] -ceq 'Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).') {
+            $gitProbe.status = 'NotRepository'
+        }
+    }
+    if ($gitProbe.status -eq 'Available') {
         $branch = & $git.Source --no-optional-locks -C $root.FullName symbolic-ref --quiet --short HEAD 2>$null
         if ($LASTEXITCODE -ne 0) { $branch='(detached)' }
         # Git status may execute configured clean filters; metadata inspection must not do that.
         $gitInfo = [pscustomobject]@{ branch=($branch -join ''); status='NotQueried'; statusReason='Git status can execute repository-configured filters.' }
     }
 }
-$result = [pscustomobject]@{schemaVersion=1;observedUtc=[DateTime]::UtcNow.ToString('o');projectPath=$root.FullName;maxDepth=$MaxDepth;entryLimit=10000;limitReached=$limitReached;markers=@($markers.ToArray());instructionFiles=@($instructions.ToArray());wrappers=@($wrappers.ToArray());git=$gitInfo;buildPolicy='Provide an explicit executable and argument array to Invoke-DevBuild.ps1; no build command was executed.'}
+$result = [pscustomobject]@{schemaVersion=1;observedUtc=[DateTime]::UtcNow.ToString('o');projectPath=$root.FullName;maxDepth=$MaxDepth;entryLimit=10000;limitReached=$limitReached;markers=@($markers.ToArray());instructionFiles=@($instructions.ToArray());wrappers=@($wrappers.ToArray());git=$gitInfo;gitProbe=$gitProbe;buildPolicy='Provide an explicit executable and argument array to Invoke-DevBuild.ps1; no build command was executed.'}
 if ($Json) { $result | ConvertTo-Json -Depth 8 } else { $result }

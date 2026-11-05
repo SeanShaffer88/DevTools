@@ -1,4 +1,4 @@
-#requires -Version 7.0
+#requires -Version 7.1
 <#
 .SYNOPSIS
 Runs an explicitly trusted JSON stdin/stdout gameplay adapter once or twice.

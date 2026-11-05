@@ -1,3 +1,4 @@
+#requires -Version 7.3
 <#
 .SYNOPSIS
 Adds, verifies or finds explicitly selected local crash symbol entries without loading targets.

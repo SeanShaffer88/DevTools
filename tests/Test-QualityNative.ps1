@@ -1,8 +1,10 @@
 <# .SYNOPSIS
 Real repeatable original-fixture tests. Retains all outputs in a unique owned work folder.
 #>
-[CmdletBinding()]param([string]$WorkRoot=(Join-Path $PSScriptRoot '../work/quality-native'))
-$ErrorActionPreference='Stop';$root=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'));. "$root/lib/QualityNative.ps1"
+[CmdletBinding()]param([string]$WorkRoot=(Join-Path $PSScriptRoot '../work/quality-native'), [string]$EvidenceDirectory)
+$ErrorActionPreference='Stop'
+$evidencePath=& (Join-Path $PSScriptRoot 'Resolve-SuiteEvidencePath.ps1') 'validation-quality-native.json' $EvidenceDirectory ($PSBoundParameters.ContainsKey('EvidenceDirectory'))
+$root=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'));. "$root/lib/QualityNative.ps1"
 $work=Join-Path (Assert-QPath $WorkRoot) ('test-'+[guid]::NewGuid().ToString('N'));[void][IO.Directory]::CreateDirectory($work)
 $checks=[Collections.Generic.List[object]]::new();$commands=[Collections.Generic.List[object]]::new();$artifacts=[Collections.Generic.List[string]]::new();$pwsh=(Get-Process -Id $PID).Path;$dotnet=(Get-Command dotnet.exe -CommandType Application).Source
 function Check($name,$ok){$checks.Add(@{name=$name;passed=[bool]$ok});if(-not $ok){Write-Host "FAIL: $name"}}
@@ -85,4 +87,4 @@ try {
  $limits=Write-J 'metric-low.json' @{schemaVersion=1;metrics=@{cpu=9}};$z=Run 'wpr-supplied-fail' 'Invoke-WindowsPerformance.ps1' @('-Mode','Metrics','-MetricsPath',$metrics,'-BudgetPath',$limits) 2
  $z=Run 'wpr-offline-no-analysis' 'Invoke-WindowsPerformance.ps1' @('-Mode','Inventory','-EtlPath',(Join-Path $work 'fake-success/capture.etl')) 3
 }catch{Check 'suite-exception' $false;[IO.File]::WriteAllText((Join-Path $work 'suite-exception.txt'),($_|Out-String));Write-Host ($_|Out-String)}
-$failed=@($checks|Where-Object {-not $_.passed}).Count;$evidence=@{schemaVersion=1;observedUtc=[DateTime]::UtcNow.ToString('o');tool='Test-QualityNative';scope='Original local fixtures';exitCode=if($failed){2}else{0};checks=@($checks);status=if($failed){'Fail'}else{'Pass'};counts=@{total=$checks.Count;passed=$checks.Count-$failed;failed=$failed};findings=@($checks);artifacts=@($artifacts);fixturePath=$work;executionEvidence=@($commands);limitations=@('Fake WPR tests prove orchestration only; real capture evidence separate.','No live UI, accessibility qualification, ETL analysis, arbitrary parser safety or full runtime/API compatibility certification.','Independent code review is a separate outstanding gate.')};$evidence|ConvertTo-Json -Depth 50|Set-Content -LiteralPath "$root/validation-quality-native.json" -Encoding utf8;Write-Host "$($checks.Count-$failed)/$($checks.Count) passed; evidence: $root/validation-quality-native.json; fixtures: $work";exit $(if($failed){2}else{0})
+$failed=@($checks|Where-Object {-not $_.passed}).Count;$evidence=@{schemaVersion=1;observedUtc=[DateTime]::UtcNow.ToString('o');tool='Test-QualityNative';scope='Original local fixtures';exitCode=if($failed){2}else{0};checks=@($checks);status=if($failed){'Fail'}else{'Pass'};counts=@{total=$checks.Count;passed=$checks.Count-$failed;failed=$failed};findings=@($checks);artifacts=@($artifacts);fixturePath=$work;executionEvidence=@($commands);limitations=@('Fake WPR tests prove orchestration only; real capture evidence separate.','No live UI, accessibility qualification, ETL analysis, arbitrary parser safety or full runtime/API compatibility certification.','Independent code review is a separate outstanding gate.')};$evidence|ConvertTo-Json -Depth 50|Set-Content -LiteralPath $evidencePath -Encoding utf8;Write-Host "$($checks.Count-$failed)/$($checks.Count) passed; evidence: $evidencePath; fixtures: $work";exit $(if($failed){2}else{0})

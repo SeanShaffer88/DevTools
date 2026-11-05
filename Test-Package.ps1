@@ -6,16 +6,25 @@ Checks a local package folder, optional file manifest, and explicit PE architect
 JSON schemaVersion 1 and files array: path, optional Boolean required, optional SHA256.
 .PARAMETER Strict
 Treat unexpected payload files as errors. Requires ManifestPath. The manifest itself is excluded from unexpected files.
+.PARAMETER MaxHashBytes
+Optional cumulative byte limit for file hashes. Zero permits only empty files. A skipped file makes the result incomplete and returns exit 2.
 .NOTES
 Read-only. Does not execute installers or validate upgrades, signatures, runtime
 dependencies, or settings preservation. ExpectedArchitecture compares PE machine headers.
 #>
 [CmdletBinding()]
-param([Parameter(Mandatory)][string]$PackagePath,[string]$ManifestPath,[ValidateSet('x86','x64','Arm64')][string]$ExpectedArchitecture,[switch]$Strict,[switch]$Json)
+param([Parameter(Mandatory)][string]$PackagePath,[string]$ManifestPath,[ValidateSet('x86','x64','Arm64')][string]$ExpectedArchitecture,[switch]$Strict,[switch]$Json,[ValidateRange('NonNegative')][long]$MaxHashBytes)
 $ErrorActionPreference='Stop'
 $files=[Collections.Generic.List[object]]::new();$findings=[Collections.Generic.List[object]]::new()
 $expected=[Collections.Generic.Dictionary[string,object]]::new([StringComparer]::OrdinalIgnoreCase)
 $result=[ordered]@{schemaVersion=1;observedUtc=[DateTime]::UtcNow.ToString('o');valid=$false;packagePath=$null;manifestPath=$null;strict=[bool]$Strict;expectedArchitecture=$ExpectedArchitecture;files=@();findings=@();installerUpgrade='NotPerformed';settingsPreservation='NotPerformed';runtimeDependencies='NotPerformed';signatureVerification='NotPerformed';limits=@{entries=10000;depth=32;manifestBytes=2097152}}
+$hashBudgeted=$PSBoundParameters.ContainsKey('MaxHashBytes')
+$budgetExceeded=$false
+if ($hashBudgeted) {
+    $result.limits.maxHashBytes=$MaxHashBytes
+    $result.hashedBytes=0L
+    $result.hashCoverage='Incomplete'
+}
 function Finding([string]$Code,[string]$Message,[string]$Severity='Error'){$findings.Add([pscustomobject]@{code=$Code;severity=$Severity;message=$Message})}
 function No-Reparse([string]$Path){
     $part=$Path
@@ -66,9 +75,25 @@ try{
             if(($entry.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0){Finding 'ReparsePoint' "Skipped reparse point: $([IO.Path]::GetRelativePath($root,$entry.FullName))";continue}
             if($entry.PSIsContainer){if($dir.depth -ge 32){throw 'Package inventory exceeds depth 32.'};$queue.Enqueue([pscustomobject]@{path=$entry.FullName;depth=$dir.depth+1});continue}
             $relative=[IO.Path]::GetRelativePath($root,$entry.FullName);$null=$actual.Add($relative)
-            $hash=(Get-FileHash -LiteralPath $entry.FullName -Algorithm SHA256).Hash
-            $info=[ordered]@{path=$relative;size=$entry.Length;sha256=$hash;architecture=$null;hasClrHeader=$null;fileVersion=$null}
-            if($entry.Extension -in @('.exe','.dll')){
+            if ($hashBudgeted) {
+                $stream=[IO.File]::Open($entry.FullName,[IO.FileMode]::Open,[IO.FileAccess]::Read,[IO.FileShare]::Read)
+                try {
+                    $size=$stream.Length
+                    $hash=$null
+                    if ($size -gt $MaxHashBytes - $result.hashedBytes) {
+                        $budgetExceeded=$true
+                        Finding 'HashBudgetExceeded' "Skipped hash and PE inspection for $relative because its size exceeds the remaining hash budget."
+                    } else {
+                        $hash=(Get-FileHash -InputStream $stream -Algorithm SHA256).Hash
+                        $result.hashedBytes+=$size
+                    }
+                } finally { $stream.Dispose() }
+            } else {
+                $hash=(Get-FileHash -LiteralPath $entry.FullName -Algorithm SHA256).Hash
+                $size=$entry.Length
+            }
+            $info=[ordered]@{path=$relative;size=$size;sha256=$hash;architecture=$null;hasClrHeader=$null;fileVersion=$null}
+            if($null -ne $hash -and $entry.Extension -in @('.exe','.dll')){
                 $pe=& (Join-Path $PSScriptRoot 'Get-DllInfo.ps1') -Path $entry.FullName
                 if(-not $pe.valid){Finding 'InvalidPe' "$relative : $($pe.error)"}
                 else{
@@ -79,11 +104,12 @@ try{
             }
             $files.Add([pscustomobject]$info)
             if($expected.ContainsKey($relative)){
-                if($expected[$relative].sha256 -and $expected[$relative].sha256 -ine $hash){Finding 'HashMismatch' "SHA256 mismatch: $relative"}
+                if($null -ne $hash -and $expected[$relative].sha256 -and $expected[$relative].sha256 -ine $hash){Finding 'HashMismatch' "SHA256 mismatch: $relative"}
             }elseif($ManifestPath -and $entry.FullName -ine $manifestFull){Finding 'UnexpectedFile' "Unexpected file: $relative" $(if($Strict){'Error'}else{'Warning'})}
         }
     }
     foreach($key in $expected.Keys){if(-not $actual.Contains($key)){Finding $(if($expected[$key].required){'MissingRequiredFile'}else{'MissingOptionalFile'}) "Missing file: $key" $(if($expected[$key].required){'Error'}else{'Information'})}}
+    if ($hashBudgeted -and -not $budgetExceeded) { $result.hashCoverage='Complete' }
 }catch{Finding 'InvalidPackage' $_.Exception.Message}
 $result.files=@($files.ToArray());$result.findings=@($findings.ToArray());$result.valid=@($findings | Where-Object severity -eq 'Error').Count -eq 0
 $global:LASTEXITCODE=if($result.valid){0}else{2}
