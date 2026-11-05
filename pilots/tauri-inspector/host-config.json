@@ -1,0 +1,8 @@
+{
+  "helper": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Get-ProjectInfo.ps1",
+  "pwshHash": "362A356CE7F0940EC74F73A8FC2C990A2CC24A38A11C90BBD8ECA947110AD139",
+  "pwsh": "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1103-91-0_26.1103.91.0_x64__3k8sg7r9htsxt\\dependencies\\native\\powershell\\pwsh.exe",
+  "helperHash": "6797AEA28A1C483A9C9CEF34D17EA6999EF6F3A305CA738590EFEF3FDFCBE4E1",
+  "wrapper": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\pilots\\tauri-inspector\\inspect-project.ps1",
+  "wrapperHash": "E6CFBA10A0FDE2C0E84513FD2300187946A2DB01A3888161CD3B2F6569EC73ED"
+}

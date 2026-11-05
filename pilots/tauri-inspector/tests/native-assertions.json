@@ -1,0 +1,1 @@
+{"schemaVersion":1,"context":{},"checks":[{"id":"select-folder","selector":{"name":"Select folder","controlType":"Button"},"enabled":true,"keyboardFocusable":true},{"id":"inspect-initially-disabled","selector":{"name":"Inspect","controlType":"Button"},"enabled":false},{"id":"cancel-initially-disabled","selector":{"name":"Cancel","controlType":"Button"},"enabled":false}]}
