@@ -1,7 +1,8 @@
 #requires -Version 7.0
 [CmdletBinding()]
-param([string]$WorkRoot='C:\Users\Sean Shaffer\Documents\Codex\2026-11-03\a\work')
+param([string]$WorkRoot='C:\Users\Sean Shaffer\Documents\Codex\2026-11-03\a\work', [string]$EvidenceDirectory)
 $ErrorActionPreference='Stop'
+$evidencePath=& (Join-Path $PSScriptRoot 'Resolve-SuiteEvidencePath.ps1') 'validation-binary-addon.json' $EvidenceDirectory ($PSBoundParameters.ContainsKey('EvidenceDirectory'))
 $toolRoot=Split-Path $PSScriptRoot -Parent
 $fixture=Join-Path $WorkRoot ('binary-addon-'+[Guid]::NewGuid().ToString('N'))
 $null=New-Item -ItemType Directory -Path $fixture
@@ -100,6 +101,6 @@ try{
     $exitCode=0
 }catch{$failure=$_.Exception.Message;Write-Error $failure -ErrorAction Continue}
 $evidence=[ordered]@{schemaVersion=1;observedUtc=[DateTime]::UtcNow.ToString('o');command="pwsh -NoProfile -File '$PSCommandPath'";exitCode=$exitCode;fixturePath=$fixture;checks=@($checks.ToArray());skipped=@($skipped.ToArray());failure=$failure;limitations=@('Lua syntax/API/runtime not tested.','Synthetic PE fixtures and real system image exercised; not full PE-format conformance certification.')}
-$evidence | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $toolRoot 'validation-binary-addon.json') -Encoding utf8
+$evidence | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $evidencePath -Encoding utf8
 Write-Output "$($checks.Count) checks passed; $($skipped.Count) skipped; exit $exitCode; fixtures $fixture"
 exit $exitCode

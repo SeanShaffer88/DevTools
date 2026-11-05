@@ -3,7 +3,7 @@
 .SYNOPSIS
 Inspects an APK offline or runs finite diagnostics against one explicitly selected device.
 .PARAMETER ApkPath
-Literal APK file; ZIP metadata is inspected without extraction or ADB execution.
+Literal APK file. Offline inspection preflights at most 50,000 central-directory entries and 32 MiB of central-directory metadata. No extraction or ADB execution.
 .PARAMETER DeviceSerial
 Explicit ADB serial. Device diagnostics may start the local ADB server.
 .PARAMETER PackageName
@@ -29,9 +29,12 @@ try {
  if($PSCmdlet.ParameterSetName -eq 'Apk') {
   $file=Get-Item -LiteralPath $ApkPath -ErrorAction Stop
   if($file.PSIsContainer){throw 'ApkPath must be a file.'}
-  $archive=[IO.Compression.ZipFile]::OpenRead($file.FullName)
+  if(-not ('LocalDevTools.ApkZipDirectory' -as [type])){Add-Type -Path (Join-Path $PSScriptRoot 'lib/ApkZipDirectory.cs')}
+  $apkStream=[IO.File]::Open($file.FullName,[IO.FileMode]::Open,[IO.FileAccess]::Read,[IO.FileShare]::Read)
+  $archive=$null
   try {
-   if($archive.Entries.Count -gt 50000){throw 'Archive exceeds 50,000-entry inspection limit.'}
+   [LocalDevTools.ApkZipDirectory]::Validate($apkStream)
+   $archive=[IO.Compression.ZipArchive]::new($apkStream,[IO.Compression.ZipArchiveMode]::Read,$true)
    $names=[Collections.Generic.HashSet[string]]::new([StringComparer]::Ordinal)
    $entries=[Collections.Generic.List[object]]::new();$manifest='Missing';$abis=[Collections.Generic.HashSet[string]]::new();$dex=0;$assets=0
    foreach($entry in $archive.Entries){
@@ -47,8 +50,11 @@ try {
     }
    }
    if($manifest -eq 'Missing'){throw 'AndroidManifest.xml is missing.'}
-   $result.apk=[ordered]@{path=$file.FullName;size=$file.Length;sha256=(Get-FileHash -LiteralPath $file.FullName -Algorithm SHA256).Hash;manifest=$manifest;dexFiles=$dex;assetEntries=$assets;nativeAbis=@($abis | Sort-Object);entries=$entries.ToArray()}
-  } finally {$archive.Dispose()}
+   $apkStream.Position=0
+   $result.apk=[ordered]@{path=$file.FullName;size=$apkStream.Length;sha256=(Get-FileHash -InputStream $apkStream -Algorithm SHA256).Hash;manifest=$manifest;dexFiles=$dex;assetEntries=$assets;nativeAbis=@($abis | Sort-Object);entries=$entries.ToArray()}
+  } finally {
+   try {if($null -ne $archive){$archive.Dispose()}} finally {$apkStream.Dispose()}
+  }
  } else {
   if($DeviceSerial -notmatch '^[A-Za-z0-9][A-Za-z0-9._:\-]{0,127}$'){throw 'Invalid explicit device serial.'}
   if($PackageName -and $PackageName -notmatch '^[A-Za-z][A-Za-z0-9_]*(\.[A-Za-z][A-Za-z0-9_]*)+$'){throw 'Invalid package name.'}

@@ -10,6 +10,7 @@ Optional schema1 records [{ecosystem,name,version,identifiers[],severity?}], sou
 Optional schema1 records [{ecosystem,name,version,license}], source and capturedUtc.
 .PARAMETER OnlineDotNetAudit
 Explicitly authorizes installed dotnet CLI project/feed query with --no-restore. Never default.
+Uses NuGet JSON output version 1. Incomplete evidence remains unknown.
 .NOTES
 DevTools.ComponentInventory/1 is a documented custom SBOM, not SPDX/CycloneDX certification.
 Missing license/advisory evidence is Unknown. Offline mode executes no tools/network.
@@ -30,6 +31,65 @@ function Get-DependencyKeys($Map){if($null -eq $Map){return};if($Map -isnot [Col
 function Same-Package($Record,$Component){$Record.ecosystem -eq $Component.ecosystem -and $Record.version -ceq $Component.version -and $(if($Component.ecosystem -eq 'NuGet'){$Record.name -ieq $Component.name}else{$Record.name -ceq $Component.name})}
 function Has-Evidence($Value){$Value -is [string] -and -not [string]::IsNullOrWhiteSpace($Value) -and $Value.Trim() -notin @('Unknown','NOASSERTION','NotProvided','NotPerformed','None','N/A')}
 function Read-Auxiliary([string]$File){$data=Read-DevJson $File;if($data.schemaVersion -ne 1 -or $data.records -isnot [array] -or $data.records.Count -gt 20000 -or -not $data.source -or -not $data.capturedUtc){throw 'Auxiliary evidence needs schemaVersion1, records, source and capturedUtc.'};$date=[datetime]::MinValue;if(-not [datetime]::TryParse($data.capturedUtc,[ref]$date)){throw 'Invalid evidence capture timestamp.'};foreach($record in $data.records){if($record.ecosystem -notin @('NuGet','npm') -or -not $record.name -or -not $record.version){throw 'Invalid auxiliary component identity.'}};return $data}
+function Test-NuGetReportText($Value,[int]$MaxLength) {
+    $Value -is [string] -and $Value.Length -le $MaxLength -and -not [string]::IsNullOrWhiteSpace($Value) -and $Value -notmatch '[\x00-\x1f\x7f]'
+}
+function ConvertFrom-NuGetAuditReport([string]$JsonText) {
+    try { $report=ConvertFrom-Json -InputObject $JsonText -AsHashtable -NoEnumerate -Depth 24 } catch { return $null }
+    if ($report -isnot [Collections.IDictionary] -or
+        ($report.version -isnot [int] -and $report.version -isnot [long]) -or $report.version -ne 1 -or
+        $report.projects -isnot [array] -or $report.projects.Count -eq 0) { return $null }
+
+    $complete=$report.sources -is [array] -and $report.sources.Count -gt 0
+    foreach ($source in @($report.sources)) { if (-not (Test-NuGetReportText $source 8192)) { $complete=$false } }
+    if ($report.Contains('problems') -and ($report.problems -isnot [array] -or $report.problems.Count -gt 0)) { $complete=$false }
+    $projects=[Collections.Generic.List[object]]::new()
+    $advisories=[Collections.Generic.List[object]]::new()
+    foreach ($project in $report.projects) {
+        if ($project -isnot [Collections.IDictionary] -or -not (Test-NuGetReportText $project.path 32767)) { $complete=$false; continue }
+        $safeProject=@{path=$project.path}
+        $projects.Add($safeProject)
+        if (-not $project.Contains('frameworks')) { continue }
+        if ($project.frameworks -isnot [array]) { $complete=$false; continue }
+        $frameworks=[Collections.Generic.List[object]]::new()
+        foreach ($framework in $project.frameworks) {
+            if ($framework -isnot [Collections.IDictionary] -or -not (Test-NuGetReportText $framework.framework 512)) { $complete=$false; continue }
+            $safeFramework=@{framework=$framework.framework}
+            $frameworks.Add($safeFramework)
+            foreach ($field in @('topLevelPackages','transitivePackages')) {
+                if (-not $framework.Contains($field)) { continue }
+                if ($framework[$field] -isnot [array]) { $complete=$false; continue }
+                $packages=[Collections.Generic.List[object]]::new()
+                foreach ($package in $framework[$field]) {
+                    if ($package -isnot [Collections.IDictionary] -or -not (Test-NuGetReportText $package.id 512) -or
+                        -not (Test-NuGetReportText $package.resolvedVersion 256)) { $complete=$false; continue }
+                    $safePackage=@{id=$package.id;resolvedVersion=$package.resolvedVersion}
+                    $packages.Add($safePackage)
+                    if (-not $package.Contains('vulnerabilities')) { continue }
+                    if ($package.vulnerabilities -isnot [array]) { $complete=$false; continue }
+                    $vulnerabilities=[Collections.Generic.List[object]]::new()
+                    foreach ($item in $package.vulnerabilities) {
+                        $uri=$null
+                        if ($item -isnot [Collections.IDictionary] -or $item.severity -isnot [string] -or
+                            $item.severity -notin @('Low','Moderate','High','Critical') -or -not (Test-NuGetReportText $item.advisoryurl 8192) -or
+                            -not [uri]::TryCreate($item.advisoryurl,[UriKind]::Absolute,[ref]$uri) -or $uri.Scheme -notin @('https','http') -or -not $uri.Host) {
+                            $complete=$false
+                            continue
+                        }
+                        $url=$uri.GetComponents(([UriComponents]::SchemeAndServer -bor [UriComponents]::Path),[UriFormat]::UriEscaped)
+                        $vulnerabilities.Add(@{severity=$item.severity;advisoryurl=$url})
+                    }
+                    $safePackage.vulnerabilities=$vulnerabilities.ToArray()
+                    if ($vulnerabilities.Count) { $advisories.Add(@{id='OnlineAdvisory';status='fail';name=$package.id;version=$package.resolvedVersion;advisories=$safePackage.vulnerabilities}) }
+                }
+                $safeFramework[$field]=$packages.ToArray()
+            }
+        }
+        $safeProject.frameworks=$frameworks.ToArray()
+    }
+    # Feed locations, command parameters and raw problem text can contain credentials.
+    @{complete=$complete;advisories=$advisories.ToArray();report=@{version=1;projects=$projects.ToArray()}}
+}
 try{
     if($InputPath.Count -gt 16 -or (-not $InputPath.Count -and -not $OnlineDotNetAudit -and -not $CacheCatalogPath)){throw 'Provide 1-16 explicit lockfiles, an explicit online audit, or a cache catalog.'}
     foreach($input in $InputPath){$file=Get-Item -LiteralPath $input;$data=Read-DevJson $file.FullName;$source=$file.FullName
@@ -55,7 +115,30 @@ try{
         if(-not (Has-Evidence $component.license)){$findings.Add(@{id='LicenseUnknown';status='unknown';component=$component.id})};if($component.advisoryStatus -eq 'Unknown'){$findings.Add(@{id='AdvisoryUnknown';status='unknown';component=$component.id;detail='No complete current advisory coverage was established.'})}
     }
     if($CacheCatalogPath){if(-not $CacheRoot){throw 'CacheRoot is required with CacheCatalogPath.'};$catalog=Read-DevJson $CacheCatalogPath;if($catalog.schemaVersion -ne 1 -or $catalog.entries -isnot [array] -or $catalog.entries.Count -gt 10000){throw 'Invalid cache catalog schema.'};$cache=[Collections.Generic.List[object]]::new();foreach($entry in $catalog.entries){if($entry.sha256 -notmatch '^[A-Fa-f0-9]{64}$'){throw 'Cache entry requires SHA256.'};$path=Resolve-DevContainedFile $CacheRoot $entry.path;$status=if(-not [IO.File]::Exists($path)){'fail'}elseif((Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash -ine $entry.sha256){'fail'}elseif(-not (Has-Evidence $entry.license) -or -not (Has-Evidence $entry.source) -or -not (Has-Evidence $entry.version) -or -not (Has-Evidence $entry.provenance)){'unknown'}else{'pass'};$cache.Add(@{path=$path;status=$status;source=$entry.source;version=$entry.version;license=$entry.license;provenance=$entry.provenance});if($status -ne 'pass'){$findings.Add(@{id='CacheVerification';status=$status;path=$path})}};$result.cache=@($cache.ToArray())}
-    if($OnlineDotNetAudit){if(-not $ProjectPath){throw 'Explicit ProjectPath is required for online .NET audit.'};$project=Get-Item -LiteralPath $ProjectPath;if($project.PSIsContainer -or $project.Extension -notin @('.csproj','.fsproj','.vbproj','.sln','.slnx')){throw 'ProjectPath must name an explicit .NET project/solution.'};$dotnet=Get-Command dotnet.exe -CommandType Application -ErrorAction Stop | Select-Object -First 1;$help=Invoke-DevBoundedProcess $dotnet.Source @('package','list','--help') $project.DirectoryName $TimeoutSeconds;if($help.ExitCode -ne 0 -or $help.Stdout -notmatch '--no-restore'){$result.onlineAudit=@{status='unsupported';exitCode=$help.ExitCode};$findings.Add(@{id='OnlineAuditUnsupported';status='unknown'})}else{$result.networkAccess='ExplicitlyRequested';$command=Invoke-DevBoundedProcess $dotnet.Source @('package','list','--project',$project.FullName,'--no-restore','--vulnerable','--include-transitive','--format','json') $project.DirectoryName $TimeoutSeconds;$output=$null;try{$output=$command.Stdout | ConvertFrom-Json -Depth 24}catch{};$result.onlineAudit=@{exitCode=$command.ExitCode;timedOut=$command.TimedOut;truncated=$command.Truncated;result=$output};if($command.ExitCode -ne 0 -or -not $output -or $command.Truncated){$findings.Add(@{id='OnlineAuditUnavailable';status='unknown'})}else{foreach($projectResult in @($output.projects)){foreach($framework in @($projectResult.frameworks)){foreach($package in @($framework.topLevelPackages)+@($framework.transitivePackages)){if(@($package.vulnerabilities).Count){$findings.Add(@{id='OnlineAdvisory';status='fail';name=$package.id;version=$package.resolvedVersion;advisories=$package.vulnerabilities})}}}}}}}
+    if ($OnlineDotNetAudit) {
+        if (-not $ProjectPath) { throw 'Explicit ProjectPath is required for online .NET audit.' }
+        $project=Get-Item -LiteralPath $ProjectPath
+        if ($project.PSIsContainer -or $project.Extension -notin @('.csproj','.fsproj','.vbproj','.sln','.slnx')) { throw 'ProjectPath must name an explicit .NET project/solution.' }
+        $dotnet=Get-Command dotnet.exe -CommandType Application -ErrorAction SilentlyContinue | Select-Object -First 1
+        $help=$null
+        if ($dotnet) { try { $help=Invoke-DevBoundedProcess $dotnet.Source @('package','list','--help') $project.DirectoryName $TimeoutSeconds } catch {} }
+        if ($null -eq $help -or $help.ExitCode -ne 0 -or $help.TimedOut -or $help.Truncated -or
+            $help.Stdout -notmatch '(?m)^\s+--no-restore(?=\s|$)' -or $help.Stdout -notmatch '(?m)^\s+--output-version(?=\s|$)') {
+            $result.onlineAudit=@{status='unsupported';exitCode=$help.ExitCode}
+            $findings.Add(@{id='OnlineAuditUnsupported';status='unknown'})
+        } else {
+            $result.networkAccess='ExplicitlyRequested'
+            $command=$null
+            try { $command=Invoke-DevBoundedProcess $dotnet.Source @('package','list','--project',$project.FullName,'--no-restore','--vulnerable','--include-transitive','--format','json','--output-version','1') $project.DirectoryName $TimeoutSeconds } catch {}
+            $parsed=$null
+            if ($null -ne $command -and $command.ExitCode -eq 0 -and -not $command.TimedOut -and -not $command.Truncated) {
+                $parsed=ConvertFrom-NuGetAuditReport $command.Stdout
+            }
+            $result.onlineAudit=@{exitCode=$command.ExitCode;timedOut=$command.TimedOut;truncated=$command.Truncated;result=$parsed.report}
+            foreach ($advisoryFinding in $parsed.advisories) { $findings.Add($advisoryFinding) }
+            if (-not $parsed.complete) { $findings.Add(@{id='OnlineAuditUnavailable';status='unknown'}) }
+        }
+    }
     $result.components=@($components.ToArray());$result.relationships=@($relationships.ToArray());$result.evidence=@($evidence.ToArray());$result.findings=@($findings.ToArray());$result.valid= -not @($findings | Where-Object status -in @('fail','unknown')).Count;$global:LASTEXITCODE=if(@($findings | Where-Object status -eq fail).Count){2}elseif(-not $result.valid){3}else{0}
     if($OutputPath){$output=Assert-DevNewDestination $OutputPath;$parent=Split-Path $output -Parent;if(-not [IO.Directory]::Exists($parent)){throw 'OutputPath parent must already exist.'};$stream=[IO.File]::Open($output,[IO.FileMode]::CreateNew,[IO.FileAccess]::Write,[IO.FileShare]::None);try{$writer=[IO.StreamWriter]::new($stream);try{$writer.Write(($result | ConvertTo-Json -Depth 24))}finally{$writer.Dispose()}}finally{$stream.Dispose()}}
 }catch{$result.error=$_.Exception.Message;$global:LASTEXITCODE=125}

@@ -1,4 +1,4 @@
-#requires -Version 7.0
+#requires -Version 7.3
 <#
 .SYNOPSIS
 Builds the specifically user-approved official Lua 5.1.5 archive using installed MSVC.

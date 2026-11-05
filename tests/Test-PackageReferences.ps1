@@ -1,7 +1,8 @@
 #requires -Version 7.0
 [CmdletBinding()]
-param([string]$WorkRoot='C:\Users\Sean Shaffer\Documents\Codex\2026-11-03\a\work')
+param([string]$WorkRoot='C:\Users\Sean Shaffer\Documents\Codex\2026-11-03\a\work', [string]$EvidenceDirectory)
 $ErrorActionPreference='Stop'
+$evidencePath=& (Join-Path $PSScriptRoot 'Resolve-SuiteEvidencePath.ps1') 'validation-package-references.json' $EvidenceDirectory ($PSBoundParameters.ContainsKey('EvidenceDirectory'))
 $toolRoot=Split-Path $PSScriptRoot -Parent;$fixture=Join-Path $WorkRoot ('package-reference-'+[Guid]::NewGuid().ToString('N'))
 $null=New-Item -ItemType Directory -Path $fixture
 $checks=[Collections.Generic.List[object]]::new();$skipped=[Collections.Generic.List[string]]::new()
@@ -69,6 +70,6 @@ try{
     $exitCode=0
 }catch{$failure=$_.Exception.Message;Write-Error $failure -ErrorAction Continue}
 $evidence=[ordered]@{schemaVersion=1;observedUtc=[DateTime]::UtcNow.ToString('o');command="pwsh -NoProfile -File '$PSCommandPath'";exitCode=$exitCode;fixturePath=$fixture;checks=@($checks.ToArray());skipped=@($skipped.ToArray());failure=$failure;limitations=@('Installer upgrade/settings/runtime behavior not tested.','Package architecture compares PE machine fields; not a complete managed runtime policy.','Reference library is original local notes and pointers, not an SDK mirror.')}
-$evidence | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $toolRoot 'validation-package-references.json') -Encoding utf8
+$evidence | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $evidencePath -Encoding utf8
 Write-Output "$($checks.Count) checks passed; $($skipped.Count) skipped; exit $exitCode; fixtures $fixture"
 exit $exitCode

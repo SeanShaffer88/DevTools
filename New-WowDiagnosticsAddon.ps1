@@ -1,4 +1,4 @@
-#requires -Version 7.0
+#requires -Version 7.1
 <#
 .SYNOPSIS
 Generates a bounded diagnostics addon in a new directory, using an explicit existing client profile.

@@ -1,4 +1,4 @@
-#requires -Version 7.0
+#requires -Version 7.1
 <#
 .SYNOPSIS
 Executes finite explicitly selected lifecycle actions for one selected Android app/device.

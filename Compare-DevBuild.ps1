@@ -15,7 +15,25 @@ try{
   $base=Assert-PlatformPath $Root;if(-not(Test-Path -LiteralPath $base -PathType Container)){throw 'Root must be a directory.'};$config=@{schemaVersion=1;toolchain=@{};configuration=@{}};if($ConfigurationPath){$config=Read-PlatformJson $ConfigurationPath;if($config.schemaVersion -ne 1){throw 'Configuration schema must be 1.'}}
   $s=[ordered]@{schemaVersion=1;capturedUtc=[DateTime]::UtcNow.ToString('o');toolchain=$config.toolchain;configuration=$config.configuration;inputs=@();artifacts=@()}
   foreach($group in @(@{kind='inputs';paths=$InputPath},@{kind='artifacts';paths=$ArtifactPath})){$seen=[Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase);if($group.paths.Count -gt 10000){throw 'Capture limit exceeded.'};foreach($p in $group.paths){$full=Assert-PlatformPath $(if([IO.Path]::IsPathRooted($p)){$p}else{Join-Path $base $p});$rel=([IO.Path]::GetRelativePath($base,$full)).Replace('\','/');if($rel -eq '..' -or $rel.StartsWith('../') -or -not $seen.Add($rel)){throw 'Capture path outside root or duplicated.'};$f=Get-Item -LiteralPath $full;if($f.PSIsContainer -or $f.Length -gt 1073741824){throw 'Capture needs files at most 1 GiB.'};$s[$group.kind]+=@{path=$rel;size=$f.Length;sha256=(Get-FileHash -LiteralPath $full).Hash}}};Check-Snapshot $s
-  if($OutputPath){$out=Assert-PlatformPath $OutputPath -New;$parent=[IO.Path]::GetDirectoryName($out);if(-not(Test-Path -LiteralPath $parent -PathType Container)){throw 'Output parent must exist.'};$s|ConvertTo-Json -Depth 30|Set-Content -LiteralPath $out -Encoding utf8;$r.outputPath=$out};$r.manifest=$s;$r.valid=$true;$global:LASTEXITCODE=0
+  if ($OutputPath) {
+   $out=Assert-PlatformPath $OutputPath -New
+   $parent=[IO.Path]::GetDirectoryName($out)
+   if (-not (Test-Path -LiteralPath $parent -PathType Container)) { throw 'Output parent must exist.' }
+   $bytes=[Text.Encoding]::UTF8.GetBytes(($s | ConvertTo-Json -Depth 30) + [Environment]::NewLine)
+   $temporary=Join-Path $parent ('.compare-devbuild-' + [guid]::NewGuid().ToString('N') + '.tmp')
+   $ownsTemporary=$false
+   try {
+    $stream=[IO.File]::Open($temporary,[IO.FileMode]::CreateNew,[IO.FileAccess]::Write,[IO.FileShare]::None)
+    $ownsTemporary=$true
+    try { $stream.Write($bytes,0,$bytes.Length) } finally { $stream.Dispose() }
+    [IO.File]::Move($temporary,$out)
+    $ownsTemporary=$false
+   } finally {
+    if ($ownsTemporary) { [IO.File]::Delete($temporary) }
+   }
+   $r.outputPath=$out
+  }
+  $r.manifest=$s;$r.valid=$true;$global:LASTEXITCODE=0
  }else{
   $b=Read-PlatformJson $BaselinePath;$c=Read-PlatformJson $CurrentPath;Check-Snapshot $b;Check-Snapshot $c;$changes=@()
   foreach($kind in @('toolchain','configuration')){if((Canon $b[$kind]) -cne (Canon $c[$kind])){$changes+=@{kind=$kind;change='Changed';before=$b[$kind];after=$c[$kind]}}}

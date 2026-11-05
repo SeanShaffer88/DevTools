@@ -1,7 +1,9 @@
 #requires -Version 7.0
 [CmdletBinding()]
-param([string]$WorkRoot='C:\Users\Sean Shaffer\Documents\Codex\2026-11-03\a\work\devtools-runtime-wave')
-$ErrorActionPreference='Stop';$root=Split-Path $PSScriptRoot -Parent;. (Join-Path $root 'lib/WindowsDiagnosticsCommon.ps1')
+param([string]$WorkRoot='C:\Users\Sean Shaffer\Documents\Codex\2026-11-03\a\work\devtools-runtime-wave', [string]$EvidenceDirectory)
+$ErrorActionPreference='Stop'
+$evidencePath=& (Join-Path $PSScriptRoot 'Resolve-SuiteEvidencePath.ps1') 'validation-windows-diagnostics.json' $EvidenceDirectory ($PSBoundParameters.ContainsKey('EvidenceDirectory'))
+$root=Split-Path $PSScriptRoot -Parent;. (Join-Path $root 'lib/WindowsDiagnosticsCommon.ps1')
 $fixture=Join-Path $WorkRoot ('windows-diagnostics-'+[guid]::NewGuid().ToString('N'));$null=New-Item -ItemType Directory -Path $fixture
 $checks=[Collections.Generic.List[object]]::new();$commands=[Collections.Generic.List[object]]::new();$failure=$null;$exitCode=1;$child=$null
 function Assert([bool]$Condition,[string]$Name){if(-not $Condition){throw "FAILED: $Name"};$checks.Add(@{name=$Name;passed=$true})}
@@ -65,4 +67,4 @@ try{
     $exitCode=0
 }catch{$failure=$_.Exception.Message;Write-Error $failure -ErrorAction Continue}finally{if($child){try{if(-not $child.HasExited){$child.Kill($true);$child.WaitForExit(5000) | Out-Null}}finally{$child.Dispose()}}}
 $evidence=@{schemaVersion=1;observedUtc=[datetime]::UtcNow.ToString('o');command="pwsh -NoProfile -File '$PSCommandPath'";exitCode=$exitCode;fixturePath=$fixture;checks=@($checks.ToArray());commands=@($commands.ToArray());failure=$failure;limitations=@('No actual Windows Sandbox VM or host installer was launched; guest engine was tested only with our compiled harmless fixture under PS5.1.','No online advisory feed query or restore ran.','Only a dedicated owned child process was dumped; binary minidump is not redacted.');routing='Actual work used local fallback after current Ruflo worker file reads were blocked by policy.'}
-$evidence | ConvertTo-Json -Depth 16 | Set-Content -LiteralPath (Join-Path $root 'validation-windows-diagnostics.json');Write-Output "$($checks.Count) checks passed; exit $exitCode; fixture $fixture";exit $exitCode
+$evidence | ConvertTo-Json -Depth 16 | Set-Content -LiteralPath $evidencePath;Write-Output "$($checks.Count) checks passed; exit $exitCode; fixture $fixture";exit $exitCode

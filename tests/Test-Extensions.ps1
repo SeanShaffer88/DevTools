@@ -1,7 +1,9 @@
 #requires -Version 7.0
 [CmdletBinding()]
-param([string]$WorkRoot='C:\Users\Sean Shaffer\Documents\Codex\2026-11-03\a\work\devtools-expansion')
-$ErrorActionPreference='Stop';$toolRoot=Split-Path $PSScriptRoot -Parent
+param([string]$WorkRoot='C:\Users\Sean Shaffer\Documents\Codex\2026-11-03\a\work\devtools-expansion', [string]$EvidenceDirectory)
+$ErrorActionPreference='Stop'
+$evidencePath=& (Join-Path $PSScriptRoot 'Resolve-SuiteEvidencePath.ps1') 'validation-extensions.json' $EvidenceDirectory ($PSBoundParameters.ContainsKey('EvidenceDirectory'))
+$toolRoot=Split-Path $PSScriptRoot -Parent
 $fixture=Join-Path $WorkRoot ('android-template-'+[Guid]::NewGuid().ToString('N'));$null=[IO.Directory]::CreateDirectory($fixture)
 $checks=[Collections.Generic.List[object]]::new();$commands=[Collections.Generic.List[object]]::new();$exitCode=1;$failure=$null
 $oldPath=$env:PATH;$oldLog=$env:DEVTOOLS_FAKE_ADB_LOG;$oldMode=$env:DEVTOOLS_FAKE_ADB_MODE
@@ -121,7 +123,7 @@ return 0;
 }catch{$failure=$_.Exception.Message;Write-Error -Message $failure -ErrorAction Continue}
 finally{
  $env:PATH=$oldPath;$env:DEVTOOLS_FAKE_ADB_LOG=$oldLog;$env:DEVTOOLS_FAKE_ADB_MODE=$oldMode
- [ordered]@{schemaVersion=1;observedUtc=[DateTime]::UtcNow.ToString('o');command='pwsh -NoProfile -File tests/Test-Extensions.ps1';exitCode=$exitCode;checks=$checks.ToArray();commands=$commands.ToArray();fixturePath=$fixture;error=$failure;limitations=@('No real device or Android runtime test.','APKs are unsigned; no signing keys or installs.','Ruflo worker was policy-blocked; implementation/testing used local fallback.')} | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath (Join-Path $toolRoot 'validation-extensions.json')
+ [ordered]@{schemaVersion=1;observedUtc=[DateTime]::UtcNow.ToString('o');command='pwsh -NoProfile -File tests/Test-Extensions.ps1';exitCode=$exitCode;checks=$checks.ToArray();commands=$commands.ToArray();fixturePath=$fixture;error=$failure;limitations=@('No real device or Android runtime test.','APKs are unsigned; no signing keys or installs.','Ruflo worker was policy-blocked; implementation/testing used local fallback.')} | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $evidencePath
 }
 Write-Output "$($checks.Count) checks passed; exit $exitCode; fixture $fixture"
 exit $exitCode

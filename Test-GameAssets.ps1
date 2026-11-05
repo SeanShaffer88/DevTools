@@ -1,4 +1,4 @@
-#requires -Version 7.0
+#requires -Version 7.1
 <#
 .SYNOPSIS
 Inspects explicitly selected asset files without modification or codec execution.

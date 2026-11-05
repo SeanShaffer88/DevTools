@@ -88,6 +88,8 @@ Package manifest example (omit `sha256` if no expected hash):
 
 Optional `sha256` must be exactly 64 hexadecimal characters; required defaults to true. Paths must stay inside the package; duplicates, traversal, alternate streams and reparse points are refused. Unexpected files fail only with `-Strict`, which requires a manifest. The manifest itself is excluded from unexpected payload files. Static checks do not test installer upgrades, running-instance closure, shortcuts/startup settings, runtime dependencies or preserved data/settings.
 
+`Test-Package.ps1 -MaxHashBytes` optionally caps the cumulative bytes hashed. A file that cannot fit the remaining budget is reported with `HashBudgetExceeded` and a null hash. The helper skips PE inspection for that file and returns exit `2` with incomplete hash coverage. A budget of zero still hashes empty files.
+
 ## Project Templates And Offline References
 
 ```powershell
@@ -102,6 +104,21 @@ Templates: `WindowsConsole`, `NativeDll`, `WowAddon`, `AndroidApp`, `AndroidGame
 Android templates use native Java platform APIs, include SVG mockups, and have a local `Build.ps1`. Explicitly running that build compiles Java, runs the installed D8 JAR, links an APK with aapt2, adds DEX and checks alignment. Verified local combination: JDK 21, SDK `android-36`, Build Tools `36.0.0`. Unique build folders retain logs and actual exit codes. Both Android template artifacts were built locally as **unsigned APKs**. No keys, signing, installation or device/runtime validation occurred. Generation itself runs no toolchain commands.
 
 References are locally authored operational notes with provenance/version scope, not a complete offline SDK mirror. Search reads local files only; upstream URLs are pointers and are never fetched by the helper. Future chats should read this README and `toolkit.json` first.
+
+Offline APK inspection checks up to 50,000 central-directory entries and 32 MiB of central-directory metadata before opening ZIP entries.
+
+## Windows host requirements and exceptions
+
+The baseline is PowerShell 7.0. The following entry points enforce higher minimums for the .NET APIs they use. The catalog lists these exceptions under `requires.powerShellByHelper`.
+
+| Minimum | Entry points |
+| --- | --- |
+| PowerShell 7.1 (.NET 5) | `Get-PolicyDiagnostics.ps1`, `Invoke-ParserFuzz.ps1`, `Find-PrivateData.ps1`, `Compare-UiSnapshot.ps1`, `Compare-ManagedApi.ps1`, `Test-GameAssets.ps1`, `Invoke-GameplayReplay.ps1`, `Invoke-AndroidLifecycle.ps1`, `New-WowDiagnosticsAddon.ps1`, `resources/Test-MediaAttribution.ps1` |
+| PowerShell 7.3 (.NET 7) | `Manage-CrashSymbolVault.ps1`, `tools/lua-5.1.5/Build-Lua.ps1` |
+
+For the bundled .NET versions and currently supported releases, see the [PowerShell support lifecycle](https://learn.microsoft.com/powershell/scripting/install/powershell-support-lifecycle).
+
+Use `Invoke-DevBuild.ps1 -TimeoutSeconds <1–86400>` to bound process exit and output capture after the child starts. A timeout returns `124` with `TimedOut` status, partial logs and any observed root exit code. Artifact verification is skipped. Cleanup closes the runner's pipes and attempts to stop the owned process tree when its root is still running. A descendant can survive if its root has already exited. Omitting the parameter keeps the unbounded wait.
 
 ## Runtime, Dependency And Execution Tools
 
@@ -137,7 +154,9 @@ Run `pwsh -NoProfile -File 'C:\Users\Sean Shaffer\Documents\DevTools\tests\Test-
 
 Repeatable suites: `tests/Test-DevTools.ps1`, `tests/Test-BinaryAddon.ps1`, `tests/Test-PackageReferences.ps1`, `tests/Test-Extensions.ps1`, `tests/Test-RuntimeSdkDependencies.ps1`, `tests/Test-WindowsDiagnostics.ps1`, `tests/Test-PlatformResources.ps1`. Evidence files are indexed in `toolkit.json`. They retain actual commands, exit codes, checks, limits and fixture paths. No recursive cleanup occurs. Tests explicitly build/run trusted fixture code only; inspection helpers never load arbitrary inspected DLLs or execute addon files.
 
-`validation-summary.json` is a snapshot of those suite outcomes plus built fixture paths, sizes and hashes. Rerunning a suite updates its own evidence; regenerate the summary when collecting a new combined snapshot.
+The catalog-indexed validation suites accept `-EvidenceDirectory` for an existing local folder. Each suite keeps its usual evidence filename. Use `-Verbose` to display the resolved evidence path. Without this option the evidence goes to the toolkit root. `-WorkRoot` controls fixture placement in the suites that support it.
+
+`validation-summary.json` is a snapshot of those suite outcomes plus built fixture paths, sizes and hashes. Regenerate the summary when collecting a new combined snapshot.
 
 Earlier policy-blocked routing evidence is retained. The launcher now forwards the configured Windows sandbox backend while preserving requested worker access policy. Fresh read-only Ruflo probes and independent quality reviews succeeded. The platform/game implementation worker timed out after an actual 108-check passing run; targeted local corrections and the fresh 120-check suite are recorded separately. Long terminal operations use a trusted hidden background launcher with owned-process deadlines; launcher exit alone does not establish completion. No authentication or global access policy was weakened.
 

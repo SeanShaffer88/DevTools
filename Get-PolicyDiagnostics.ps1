@@ -1,4 +1,4 @@
-#requires -Version 7.0
+#requires -Version 7.1
 <#
 .SYNOPSIS
 Diagnose supplied operation evidence without executing it or changing settings.

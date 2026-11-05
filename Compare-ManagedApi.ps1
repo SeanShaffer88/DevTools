@@ -1,3 +1,4 @@
+#requires -Version 7.1
 <#
 .SYNOPSIS
 Compare declared public/protected metadata API in isolated bounded children; never loads targets.

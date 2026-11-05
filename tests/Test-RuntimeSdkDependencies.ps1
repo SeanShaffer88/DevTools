@@ -1,7 +1,9 @@
 #requires -Version 7.0
 [CmdletBinding()]
-param([string]$WorkRoot='C:\Users\Sean Shaffer\Documents\Codex\2026-11-03\a\work\devtools-runtime-wave')
-$ErrorActionPreference='Stop';$toolRoot=Split-Path $PSScriptRoot -Parent
+param([string]$WorkRoot='C:\Users\Sean Shaffer\Documents\Codex\2026-11-03\a\work\devtools-runtime-wave', [string]$EvidenceDirectory)
+$ErrorActionPreference='Stop'
+$evidencePath=& (Join-Path $PSScriptRoot 'Resolve-SuiteEvidencePath.ps1') 'validation-runtime-sdk-dependencies.json' $EvidenceDirectory ($PSBoundParameters.ContainsKey('EvidenceDirectory'))
+$toolRoot=Split-Path $PSScriptRoot -Parent
 $fixture=Join-Path $WorkRoot ('runtime-sdk-'+[guid]::NewGuid().ToString('N'));$null=New-Item -ItemType Directory -Path $fixture
 $checks=[Collections.Generic.List[object]]::new();$hostChecks=[Collections.Generic.List[object]]::new();$failure=$null;$code=1
 function Assert([bool]$Condition,[string]$Name){if(-not $Condition){throw "FAILED: $Name"};$checks.Add(@{name=$Name;passed=$true})}
@@ -71,5 +73,5 @@ try{
     $code=0
 }catch{$failure=$_.Exception.Message;Write-Error $failure -ErrorAction Continue}
 $evidence=@{schemaVersion=1;observedUtc=[DateTime]::UtcNow.ToString('o');command="pwsh -NoProfile -File '$PSCommandPath'";exitCode=$code;fixturePath=$fixture;checks=@($checks.ToArray());hostChecks=@($hostChecks.ToArray());failure=$failure;limitations=@('Host checks structural/read-only; no installation or compile/link executed.','Supplied runtime evidence and synthetic PE fixture checks are not host compatibility guarantees.','API-set, nonzero delay imports, activation-context and dynamic loading not emulated.');routing='Actual implementation/testing used local fallback after Ruflo worker reads blocked by policy.'}
-$evidence | ConvertTo-Json -Depth 16 | Set-Content -LiteralPath (Join-Path $toolRoot 'validation-runtime-sdk-dependencies.json')
+$evidence | ConvertTo-Json -Depth 16 | Set-Content -LiteralPath $evidencePath
 Write-Output "$($checks.Count) checks passed; exit $code; fixture $fixture";exit $code
