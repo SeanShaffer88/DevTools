@@ -1,0 +1,10 @@
+{
+ "schemaVersion":1,
+ "cases":[{
+  "id":"upgrade","source":"valid","fromVersion":1,"toVersion":2,
+  "executable":"C:/verified/PowerShell/pwsh.exe",
+  "arguments":["-NoProfile","-File","C:/trusted/migrator.ps1","-InputRoot","{InputRoot}","-OutputRoot","{OutputRoot}"],
+  "expectedExitCodes":[0],"timeoutSeconds":20,
+  "assertions":{"jsonFiles":[{"path":"settings.json","versionPointer":"/schemaVersion","expectedVersion":2,"preservePointers":["/keep"],"equals":{"/transformed":"done"}}]}
+ }]
+}

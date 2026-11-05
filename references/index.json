@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "dll-inspection",
+      "title": "DLL Inspection",
+      "category": "Dll",
+      "tags": [
+        "PE",
+        "exports",
+        "imports",
+        "ABI",
+        "architecture"
+      ],
+      "path": "dll-inspection.md",
+      "source": "Original local operational note; https://learn.microsoft.com/en-us/windows/win32/debug/pe-format",
+      "capturedUtc": "2026-11-03T21:00:11.8006077Z",
+      "versionScope": "DevTools PE reader schema 1; PE32/PE32+",
+      "verification": "Local implementation and fixture tests; upstream pointer verified 2026-11-03, not mirrored"
+    },
+    {
+      "id": "wow-addon-validation",
+      "title": "WoW Addon Validation",
+      "category": "Wow",
+      "tags": [
+        "TOC",
+        "XML",
+        "Lua",
+        "Interface",
+        "Malikor"
+      ],
+      "path": "wow-addon-validation.md",
+      "source": "Original local operational note describing Test-WowAddon.ps1",
+      "capturedUtc": "2026-11-03T21:00:11.8006077Z",
+      "versionScope": "DevTools addon validator schema 1; explicit client Interface required for matching",
+      "verification": "Local TOC/XML fixture tests; Lua/API/runtime validation not performed"
+    },
+    {
+      "id": "android-diagnostics",
+      "title": "Android Diagnostics And Builds",
+      "category": "Android",
+      "tags": [
+        "ADB",
+        "APK",
+        "logcat",
+        "DEX",
+        "unsigned"
+      ],
+      "path": "android-diagnostics.md",
+      "source": "Original local note; https://developer.android.com/tools/adb ; https://developer.android.com/tools/logcat ; https://developer.android.com/tools/apkanalyzer",
+      "capturedUtc": "2026-11-03T21:00:11.8006077Z",
+      "versionScope": "Installed JDK 21 and Android SDK tools; helper-specific validation evidence",
+      "verification": "Official pointers verified 2026-11-03; local notes, no downloaded SDK documentation mirror"
+    },
+    {
+      "id": "package-manifest",
+      "title": "Package Manifest And Static Checks",
+      "category": "Packaging",
+      "tags": [
+        "manifest",
+        "SHA256",
+        "Strict",
+        "installer",
+        "architecture"
+      ],
+      "path": "package-manifest.md",
+      "source": "Original local operational note describing Test-Package.ps1",
+      "capturedUtc": "2026-11-03T21:00:11.8006077Z",
+      "versionScope": "DevTools package manifest schemaVersion 1",
+      "verification": "Local package fixtures; installer runtime/upgrade/settings tests not performed"
+    },
+    {
+      "id": "project-templates",
+      "title": "Local Project Templates",
+      "category": "Templates",
+      "tags": [
+        "CMake",
+        "CSharp",
+        "Java",
+        "Canvas",
+        "WoW"
+      ],
+      "path": "project-templates.md",
+      "source": "Original local operational note describing New-DevProject.ps1",
+      "capturedUtc": "2026-11-03T21:00:11.8006077Z",
+      "versionScope": "Local .NET 10, MSVC 2022 and Android SDK/JDK prerequisites; see build evidence",
+      "verification": "Toolchain prerequisites inspected locally; template-specific execution evidence recorded separately"
+    },
+    {
+      "id": "toolkit-troubleshooting",
+      "title": "Toolkit Operation And Troubleshooting",
+      "category": "Toolkit",
+      "tags": [
+        "build",
+        "logs",
+        "exit code",
+        "doctor",
+        "Git filters"
+      ],
+      "path": "toolkit-troubleshooting.md",
+      "source": "Original local DevTools operational guidance",
+      "capturedUtc": "2026-11-03T21:00:11.8006077Z",
+      "versionScope": "PowerShell 7 DevTools schemaVersion 1",
+      "verification": "Describes verified local foundation behavior and explicit execution boundaries"
+    }
+  ]
+}

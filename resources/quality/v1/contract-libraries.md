@@ -1,0 +1,7 @@
+# Contract Libraries V1
+
+contracts/ipc.schema.json, public-api.schema.json and save.schema.json are original versioned JSON Schema contracts. Companion examples describe explicit compatibility and score-to-points migration scenarios; migration descriptions are data, never executable code. Require an explicit source/target version and independently verified transformed values before accepting a real migration. A declared mapping is not a tested migration.
+
+Invoke-GameplayReplay accepts contracts/replay-scenario.json. Adapter protocol is strict schema1 JSON stdin/stdout, one or two runs, finite limits, required assertion IDs and checkpoint states/save-load hashes. See helper help. State hashing is SHA256 of UTF8 canonical JSON: ordinal case-sensitive object keys, JSON-escaped strings, arrays in order, raw JSON numeric lexemes preserved, no whitespace/BOM. A and a are distinct; 1 and 1.0 differ. Duplicate properties, nonfinite numbers, absent assertions, empty states and malformed responses never pass. Optional inline states are hashed independently. An adapter can be an owned simulation fixture and does not prove game engine integration.
+
+Android app-owned bridges use schema1 selected device/package/action requests and explicit passed boolean plus optional Persistence values; they require trusted execution acknowledgement. ProcessRecreate is selected-package force-stop/relaunch, not natural OS kill. No global rotation changes, root/run-as or arbitrary storage dumps are authorized by a contract.

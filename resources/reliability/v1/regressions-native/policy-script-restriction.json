@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "operation": "architecture-launch",
+  "exitCode": 1,
+  "stderr": "File cannot be loaded because running scripts is disabled on this system. UnauthorizedAccess",
+  "stdout": "",
+  "context": {"host": "Windows PowerShell launcher", "sandbox": "read-only"}
+}

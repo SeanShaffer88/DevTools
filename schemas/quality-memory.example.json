@@ -1,0 +1,8 @@
+{
+ "schemaVersion":1,
+ "compilerPath":"C:/verified/toolchain/cl.exe",
+ "compileArguments":["/nologo","/fsanitize=address","/Zi","/Od","/MD","{ProjectRoot}/memory.c","/Fe{WorkRoot}/fixture.exe","/link","/INCREMENTAL:NO"],
+ "executablePath":"fixture.exe","runArguments":[],
+ "instrumentation":"AddressSanitizer","timeoutSeconds":30,"maxOutputBytes":1048576,
+ "runtimeFiles":["C:/verified/toolchain/clang_rt.asan_dynamic-x86_64.dll"]
+}

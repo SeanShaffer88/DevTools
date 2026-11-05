@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","$id":"urn:devtools:quality:v1:public-api","title":"Original GetScore Request V1","type":"object","additionalProperties":false,"required":["schemaVersion","method","requestId"],"properties":{"schemaVersion":{"const":1},"method":{"const":"GetScore"},"requestId":{"type":"string","minLength":1,"maxLength":64}}}

@@ -1,0 +1,34 @@
+{
+  "root": {
+    "name": "Preferences",
+    "controlType": "Window",
+    "children": [
+      {
+        "name": "Display Name",
+        "automationId": "DisplayName",
+        "controlType": "Edit",
+        "isKeyboardFocusable": true
+      },
+      {
+        "name": "Save",
+        "automationId": "Save",
+        "controlType": "Button",
+        "isKeyboardFocusable": true
+      }
+    ]
+  },
+  "source": "Original illustrative UIA tree; synthetic not live automation",
+  "schemaVersion": 1,
+  "keyboardWorkflow": [
+    "Focus Display Name",
+    "Type Example",
+    "Tab To Save",
+    "Press Enter",
+    "Observe Saved Status"
+  ],
+  "expected": {
+    "unobservedTree": "Unknown",
+    "sameTree": "Pass",
+    "missingSave": "Fail"
+  }
+}

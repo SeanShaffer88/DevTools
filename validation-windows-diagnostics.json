@@ -1,0 +1,232 @@
+{
+  "observedUtc": "2026-11-03T23:26:57.4655510Z",
+  "limitations": [
+    "No actual Windows Sandbox VM or host installer was launched; guest engine was tested only with our compiled harmless fixture under PS5.1.",
+    "No online advisory feed query or restore ran.",
+    "Only a dedicated owned child process was dumped; binary minidump is not redacted."
+  ],
+  "fixturePath": "C:\\Users\\Sean Shaffer\\Documents\\Codex\\2026-11-03\\a\\work\\devtools-runtime-wave\\windows-diagnostics-a5d1cea199e942b5be2211c68509f8ff",
+  "checks": [
+    {
+      "name": "AST Get-DependencyAudit.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST Export-CrashDiagnostics.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST Test-DllContract.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST New-InstallerTestLab.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST lib\\WindowsDiagnosticsCommon.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST lib\\WindowsDiagnosticsGuest.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST lib\\WindowsDiagnosticsContractChild.ps1",
+      "passed": true
+    },
+    {
+      "name": "NuGet leaf without dependency map preserves graph and unknown evidence",
+      "passed": true
+    },
+    {
+      "name": "npm v3 hoisted dependency and omitted leaf map",
+      "passed": true
+    },
+    {
+      "name": "NuGet assets target graph and leaf map",
+      "passed": true
+    },
+    {
+      "name": "NuGet case-insensitive supplied advisory/license identities",
+      "passed": true
+    },
+    {
+      "name": "Explicit empty advisory snapshot distinguished from missing evidence",
+      "passed": true
+    },
+    {
+      "name": "Malformed dependency maps rejected",
+      "passed": true
+    },
+    {
+      "name": "Cache hash match does not turn unknown provenance/licenses into certainty",
+      "passed": true
+    },
+    {
+      "name": "Offline cache known provenance/hash verification",
+      "passed": true
+    },
+    {
+      "name": "Cache tampering fails",
+      "passed": true
+    },
+    {
+      "name": "Cache traversal rejected",
+      "passed": true
+    },
+    {
+      "name": "Custom component inventory export clearly named",
+      "passed": true
+    },
+    {
+      "name": "Inventory export refuses existing file overwrite",
+      "passed": true
+    },
+    {
+      "name": "Actual dedicated child ownership/start identity verified and captured",
+      "passed": true
+    },
+    {
+      "name": "Actual MiniDumpWriteDump creates MDMP file",
+      "passed": true
+    },
+    {
+      "name": "JSON credentials and Bearer synthetic values redacted",
+      "passed": true
+    },
+    {
+      "name": "Mismatched process identity guard refuses capture",
+      "passed": true
+    },
+    {
+      "name": "Crash bundle refuses existing destination",
+      "passed": true
+    },
+    {
+      "name": "Real configured MSVC owned DLL fixture compile",
+      "passed": true
+    },
+    {
+      "name": "Default contract mode never loads DLL and runtime is unperformed",
+      "passed": true
+    },
+    {
+      "name": "Actual isolated trusted DLL normal and saturation cases",
+      "passed": true
+    },
+    {
+      "name": "UInt64 maximum and Int64 extreme values preserve exact JSON integer conversion",
+      "passed": true
+    },
+    {
+      "name": "Missing export fails before child execution",
+      "passed": true
+    },
+    {
+      "name": "Declared architecture mismatch fails statically",
+      "passed": true
+    },
+    {
+      "name": "Code-generation injection-bearing identifier refused",
+      "passed": true
+    },
+    {
+      "name": "Owned native infinite-call child timeout terminated",
+      "passed": true
+    },
+    {
+      "name": "Actual owned native access violation isolated and bounded even when Windows crash handling requires timeout cleanup",
+      "passed": true
+    },
+    {
+      "name": "Real .NET Framework harmless installer-lifecycle fixture compile",
+      "passed": true
+    },
+    {
+      "name": "Lab generation succeeds with explicit unperformed VM boundary",
+      "passed": true
+    },
+    {
+      "name": "WSB networking disabled and input/output mapping scopes correct",
+      "passed": true
+    },
+    {
+      "name": "Actual PS5.1 guest engine harmless install upgrade uninstall assertions",
+      "passed": true
+    },
+    {
+      "name": "Settings preservation and uninstall absence checked in harmless fixture scope",
+      "passed": true
+    },
+    {
+      "name": "Guest native argv quoting preserves spaces quotes slashes metacharacters empty Unicode",
+      "passed": true
+    },
+    {
+      "name": "Minimal plan permits absent optional assertion arrays and normal JSON integer timeout",
+      "passed": true
+    },
+    {
+      "name": "Minimal generated guest plan runs under PS5.1 without optional assertions",
+      "passed": true
+    },
+    {
+      "name": "Lab destination overwrite refused",
+      "passed": true
+    },
+    {
+      "name": "Lab executable traversal refused before writes",
+      "passed": true
+    },
+    {
+      "name": "Invalid startup name cannot be treated as known absence",
+      "passed": true
+    },
+    {
+      "name": "Guest startup read errors remain unknown rather than absent pass",
+      "passed": true
+    },
+    {
+      "name": "Empty expected startup value does not skip exact comparison (pure helper, no registry writes)",
+      "passed": true
+    },
+    {
+      "name": "Empty exact match and omitted startup-value assertion have distinct semantics",
+      "passed": true
+    },
+    {
+      "name": "Nonstring registry data cannot pass a declared exact string assertion by PowerShell coercion",
+      "passed": true
+    },
+    {
+      "name": "Lab source junction refused",
+      "passed": true
+    }
+  ],
+  "commands": [
+    {
+      "name": "Compile owned noCRT DLL fixture",
+      "stdout": "fixture.c\r\n   Creating library fixture.lib and object fixture.exp\r\n",
+      "stderr": "",
+      "exitCode": 0
+    },
+    {
+      "name": "Compile harmless PS5 guest fixture",
+      "stdout": "",
+      "stderr": "",
+      "exitCode": 0
+    },
+    {
+      "name": "Run harmless generated guest engine under actual Windows PowerShell5.1",
+      "stdout": "",
+      "stderr": "",
+      "exitCode": 0
+    }
+  ],
+  "schemaVersion": 1,
+  "command": "pwsh -NoProfile -File 'C:\\Users\\Sean Shaffer\\Documents\\DevTools\\tests\\Test-WindowsDiagnostics.ps1'",
+  "exitCode": 0,
+  "failure": null,
+  "routing": "Actual work used local fallback after current Ruflo worker file reads were blocked by policy."
+}

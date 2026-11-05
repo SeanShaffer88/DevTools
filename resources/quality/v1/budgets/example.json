@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "source": "Original illustrative user-declared sample; not universal hardware guidance",
+  "ranges": "All finite positive maxima; sample values require replacement with project requirements",
+  "limits": {
+    "audioSampleRateHz": 48000,
+    "frameMilliseconds": 33.33,
+    "audioChannels": 2,
+    "textureWidthPixels": 512,
+    "audioBitsPerSample": 16,
+    "startupMilliseconds": 1000,
+    "textureHeightPixels": 512,
+    "memoryMiB": 128
+  },
+  "assetManifest": {
+    "references": [
+      "tile.png",
+      "tone.wav"
+    ],
+    "schemaVersion": 1,
+    "files": [
+      {
+        "maxWidth": 512,
+        "path": "tile.png",
+        "maxHeight": 512
+      },
+      {
+        "maxSampleRate": 48000,
+        "maxBits": 16,
+        "path": "tone.wav",
+        "maxChannels": 2,
+        "maxDurationSeconds": 1.0
+      }
+    ],
+    "budgets": {
+      "maxTotalBytes": 1048576,
+      "maxFileBytes": 524288
+    }
+  },
+  "date": "2026-11-03",
+  "resourceVersion": 1,
+  "profile": "Example Local Fixture"
+}

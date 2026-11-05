@@ -1,0 +1,95 @@
+{
+  "generator": "resources/New-RegressionFixture.ps1",
+  "files": [
+    {
+      "path": "broken.apk",
+      "sha256": "7DF8DFA805C1FCCEEAA2792CE995E892A218D58EB5D68C64709A0F52914F16F3",
+      "license": "User-owned fixture; redistribution rights not assessed",
+      "source": "Original DevTools inert fixture generator"
+    },
+    {
+      "path": "header-only-x64.dll",
+      "sha256": "A1080391B3237E1047FDAD8F6E9307FB280526FB491B5500107EA061ED6C58ED",
+      "license": "User-owned fixture; redistribution rights not assessed",
+      "source": "Original DevTools inert fixture generator"
+    },
+    {
+      "path": "metadata-only.apk",
+      "sha256": "BC3B8102C67BC6BF54410A07529B6304443DC02353383FFE694AAD34FBBE0029",
+      "license": "User-owned fixture; redistribution rights not assessed",
+      "source": "Original DevTools inert fixture generator"
+    },
+    {
+      "path": "missing-package-manifest.json",
+      "sha256": "3FFD97753BA2A44A2CBFA8335947B083ED145A475D1D222D41FA4FB98D80A468",
+      "license": "User-owned fixture; redistribution rights not assessed",
+      "source": "Original DevTools inert fixture generator"
+    },
+    {
+      "path": "runtime-requirements.json",
+      "sha256": "F03FB530EADB3E7DAC658C57C2E037642037EC296248EA009A29B6CD3B9DF016",
+      "license": "User-owned fixture; redistribution rights not assessed",
+      "source": "Original DevTools inert fixture generator"
+    },
+    {
+      "path": "truncated.dll",
+      "sha256": "0DEF7C7EB38D4010BCB671E24A566DAEC14890690BF06AF36620487ED74D284C",
+      "license": "User-owned fixture; redistribution rights not assessed",
+      "source": "Original DevTools inert fixture generator"
+    },
+    {
+      "path": "BadAddon/BadAddon.toc",
+      "sha256": "3AC9569FF7A4C1AC73FBBEDF49A3C1C2B05C0605F2D1E51AE86BED763E519BC3",
+      "license": "User-owned fixture; redistribution rights not assessed",
+      "source": "Original DevTools inert fixture generator"
+    },
+    {
+      "path": "GoodAddon/GoodAddon.toc",
+      "sha256": "D2100AF44920C93B1C15C454198AE0CDE23BECD8B4FF320B31E2067E4DEADF98",
+      "license": "User-owned fixture; redistribution rights not assessed",
+      "source": "Original DevTools inert fixture generator"
+    },
+    {
+      "path": "GoodAddon/main.lua",
+      "sha256": "8B49C81FE0C3229ED281A8431D08B8EEA7195D42D96B3F632C7011F9D53D6C66",
+      "license": "User-owned fixture; redistribution rights not assessed",
+      "source": "Original DevTools inert fixture generator"
+    }
+  ],
+  "schemaVersion": 1,
+  "generatedUtc": "2026-11-03T21:54:25.3233194Z",
+  "expected": [
+    {
+      "path": "header-only-x64.dll",
+      "scope": "Header reader only; not runnable/loadable",
+      "helper": "Get-DllInfo.ps1",
+      "expectedExit": 0
+    },
+    {
+      "path": "truncated.dll",
+      "helper": "Get-DllInfo.ps1",
+      "expectedExit": 2
+    },
+    {
+      "path": "GoodAddon",
+      "helper": "Test-WowAddon.ps1",
+      "expectedExit": 0
+    },
+    {
+      "path": "BadAddon",
+      "helper": "Test-WowAddon.ps1",
+      "expectedExit": 2
+    },
+    {
+      "path": "metadata-only.apk",
+      "scope": "ZIP metadata only, not an installable APK",
+      "helper": "Get-AndroidDiagnostics.ps1",
+      "expectedExit": 0
+    },
+    {
+      "path": "broken.apk",
+      "helper": "Get-AndroidDiagnostics.ps1",
+      "expectedExit": 2
+    }
+  ]
+}

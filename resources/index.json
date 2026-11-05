@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "title": "Runtime And SDK Evidence",
+      "tags": [
+        "runtime",
+        "sdk"
+      ],
+      "verification": "Original instructions; actual tests recorded in named validation evidence, runtime limitations retained",
+      "category": "Runtime",
+      "capturedUtc": "2026-11-03T21:55:41.5517603Z",
+      "id": "runtime-sdk",
+      "path": "docs/v1/runtime-sdk.md",
+      "versionScope": "DevTools schema1 / resource version1; selected installed toolchains",
+      "source": "Original locally authored operational note; official pointers within note"
+    },
+    {
+      "title": "Dependencies And Native Contracts",
+      "tags": [
+        "dependencies",
+        "abi"
+      ],
+      "verification": "Original instructions; actual tests recorded in named validation evidence, runtime limitations retained",
+      "category": "Dependencies",
+      "capturedUtc": "2026-11-03T21:55:41.553837Z",
+      "id": "dependencies-abi",
+      "path": "docs/v1/dependencies-abi.md",
+      "versionScope": "DevTools schema1 / resource version1; selected installed toolchains",
+      "source": "Original locally authored operational note; official pointers within note"
+    },
+    {
+      "title": "Crashes And Installer Labs",
+      "tags": [
+        "crashes",
+        "installer"
+      ],
+      "verification": "Original instructions; actual tests recorded in named validation evidence, runtime limitations retained",
+      "category": "Crash",
+      "capturedUtc": "2026-11-03T21:55:41.5538486Z",
+      "id": "crashes-installer",
+      "path": "docs/v1/crashes-installer.md",
+      "versionScope": "DevTools schema1 / resource version1; selected installed toolchains",
+      "source": "Original locally authored operational note; official pointers within note"
+    },
+    {
+      "title": "Client Profiles And Lua",
+      "tags": [
+        "wow",
+        "client",
+        "lua"
+      ],
+      "verification": "Original instructions; actual tests recorded in named validation evidence, runtime limitations retained",
+      "category": "Wow",
+      "capturedUtc": "2026-11-03T21:55:41.5538561Z",
+      "id": "wow-client-lua",
+      "path": "docs/v1/wow-client-lua.md",
+      "versionScope": "DevTools schema1 / resource version1; selected installed toolchains",
+      "source": "Original locally authored operational note; official pointers within note"
+    },
+    {
+      "title": "Android Artifacts And Performance",
+      "tags": [
+        "android",
+        "artifacts",
+        "performance"
+      ],
+      "verification": "Original instructions; actual tests recorded in named validation evidence, runtime limitations retained",
+      "category": "Android",
+      "capturedUtc": "2026-11-03T21:55:41.5538645Z",
+      "id": "android-artifacts-performance",
+      "path": "docs/v1/android-artifacts-performance.md",
+      "versionScope": "DevTools schema1 / resource version1; selected installed toolchains",
+      "source": "Original locally authored operational note; official pointers within note"
+    },
+    {
+      "title": "Builds Cache And Fixtures",
+      "tags": [
+        "build",
+        "cache",
+        "fixtures"
+      ],
+      "verification": "Original instructions; actual tests recorded in named validation evidence, runtime limitations retained",
+      "category": "Build",
+      "capturedUtc": "2026-11-03T21:55:41.553872Z",
+      "id": "build-cache-fixtures",
+      "path": "docs/v1/build-cache-fixtures.md",
+      "versionScope": "DevTools schema1 / resource version1; selected installed toolchains",
+      "source": "Original locally authored operational note; official pointers within note"
+    },
+    {
+      "title": "Diagnostic Recipes",
+      "tags": [
+        "runtime",
+        "DLL",
+        "Lua",
+        "APK",
+        "crash",
+        "installer",
+        "cache"
+      ],
+      "verification": "See exact helper test evidence; device/game/VM/online execution not assumed",
+      "category": "Recipes",
+      "capturedUtc": "2026-11-03T21:55:41.5538785Z",
+      "id": "diagnostic-recipes",
+      "path": "recipes/v1/diagnostics.md",
+      "versionScope": "DevTools schema1 / recipe version1",
+      "source": "Original locally authored bounded recipes"
+    },
+    {
+      "tags": [
+        "quality",
+        "games",
+        "resources",
+        "quality-ui-acceptance"
+      ],
+      "versionScope": "Quality resource v1 / schema1",
+      "category": "Fixtures",
+      "path": "quality/v1/ui-acceptance.md",
+      "capturedUtc": "2026-11-03T23:05:35.7131083Z",
+      "title": "UI Acceptance Baselines",
+      "source": "Original locally authored resource; no third-party downloads",
+      "verification": "Synthetic fixtures; actual local tests recorded in validation-quality-games.json; live app/device/game gates unperformed",
+      "id": "quality-ui-acceptance"
+    },
+    {
+      "tags": [
+        "quality",
+        "games",
+        "resources",
+        "quality-target-budgets"
+      ],
+      "versionScope": "Quality resource v1 / schema1",
+      "category": "Runtime",
+      "path": "quality/v1/target-budgets.md",
+      "capturedUtc": "2026-11-03T23:05:35.7198442Z",
+      "title": "Target Device And Asset Budgets",
+      "source": "Original locally authored resource; no third-party downloads",
+      "verification": "Synthetic fixtures; actual local tests recorded in validation-quality-games.json; live app/device/game gates unperformed",
+      "id": "quality-target-budgets"
+    },
+    {
+      "tags": [
+        "quality",
+        "games",
+        "resources",
+        "quality-contract-libraries"
+      ],
+      "versionScope": "Quality resource v1 / schema1",
+      "category": "Contracts",
+      "path": "quality/v1/contract-libraries.md",
+      "capturedUtc": "2026-11-03T23:05:35.7200135Z",
+      "title": "Contract Libraries And Gameplay Replay",
+      "source": "Original locally authored resource; no third-party downloads",
+      "verification": "Synthetic fixtures; actual local tests recorded in validation-quality-games.json; live app/device/game gates unperformed",
+      "id": "quality-contract-libraries"
+    },
+    {
+      "tags": [
+        "quality",
+        "games",
+        "resources",
+        "quality-media-attribution"
+      ],
+      "versionScope": "Quality resource v1 / schema1",
+      "category": "Dependencies",
+      "path": "quality/v1/media-attribution.md",
+      "capturedUtc": "2026-11-03T23:05:35.7200274Z",
+      "title": "Media Attribution Catalog",
+      "source": "Original locally authored resource; no third-party downloads",
+      "verification": "Synthetic fixtures; actual local tests recorded in validation-quality-games.json; live app/device/game gates unperformed",
+      "id": "quality-media-attribution"
+    },
+    {
+      "id": "github-resource-library",
+      "title": "Local GitHub Tool And Resource Library",
+      "category": "Toolkit",
+      "path": "github/library-reference.md",
+      "source": "Authorized local capture from SeanShaffer88 GitHub repositories; source commits and file hashes in github/catalog.json and manifests",
+      "capturedUtc": "2026-11-04T04:34:53.807005+00:00",
+      "versionScope": "100 repository metadata/README captures;19 pinned shallow source snapshots; no runtime validation",
+      "verification": "Local hash/HEAD/license file preservation and100dispositions validated; builds/runtime not performed",
+      "tags": [
+        "github",
+        "repositories",
+        "reference",
+        "WinDevKit",
+        "ForAI",
+        "ContextPack",
+        "GateRunner",
+        "RepoRadar",
+        "FieldVerify",
+        "GoldenKit",
+        "BuildTrail",
+        "PublishPilot",
+        "CaptureKit",
+        "ForAISearch",
+        "ReleaseKit",
+        "WinCommon",
+        "AppHost",
+        "WinUIHelpers",
+        "HardwareInfo",
+        "SQLiteSuperBuild",
+        "WhyNot",
+        "ResolveLock",
+        "DevBench"
+      ]
+    }
+  ],
+  "toolchains": [
+    {
+      "id": "lua-5.1.5",
+      "canonicalBin": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\tools\\lua-5.1.5\\bin",
+      "approval": "Explicit user approval in current chat",
+      "license": "MIT; exact upstream COPYRIGHT retained",
+      "source": "https://www.lua.org/ftp/lua-5.1.5.tar.gz",
+      "sourceSha256": "2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333",
+      "provenancePath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\tools\\lua-5.1.5\\provenance.json",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\tools\\lua-5.1.5\\verified-build\\lua.exe",
+          "sha256": "CD01A1F87BD7A94407CA9670DB0B3303CDA55BE7FB1676B065498004CA522D6D"
+        },
+        {
+          "path": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\tools\\lua-5.1.5\\verified-build\\luac.exe",
+          "sha256": "942B723BA397D32231742CE814A31E5B7DCD1810340EE119A1B5CCC59F64C9FD"
+        }
+      ],
+      "offlineManualPath": "tools/lua-5.1.5/verified-build/source/lua-5.1.5/doc/manual.html",
+      "licensePath": "tools/lua-5.1.5/bin/COPYRIGHT"
+    }
+  ],
+  "utilities": [
+    {
+      "path": "Test-MediaAttribution.ps1",
+      "purpose": "Offline bounded media identity/attribution metadata verification and optional new plain-text credits",
+      "writes": [
+        "Explicit new credits file only"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+## Interface: __INTERFACE__
+## Title: __NAME__
+## Notes: Minimal local addon starter
+## Author: Malikor
+## Version: 0.1.0
+__NAME__.lua

@@ -1,0 +1,25 @@
+#requires -Version 7.0
+<#
+.SYNOPSIS
+Captures explicit build inputs/artifacts, or compares two captured manifests without rebuilding.
+.PARAMETER ConfigurationPath
+JSON data with schemaVersion 1 and optional toolchain/configuration objects. Never executed.
+#>
+[CmdletBinding(DefaultParameterSetName='Capture')]
+param([Parameter(Mandatory,ParameterSetName='Capture')][string]$Root,[Parameter(ParameterSetName='Capture')][string[]]$InputPath=@(),[Parameter(ParameterSetName='Capture')][string[]]$ArtifactPath=@(),[Parameter(ParameterSetName='Capture')][string]$ConfigurationPath,[Parameter(ParameterSetName='Capture')][string]$OutputPath,[Parameter(Mandatory,ParameterSetName='Compare')][string]$BaselinePath,[Parameter(Mandatory,ParameterSetName='Compare')][string]$CurrentPath,[switch]$Json)
+$ErrorActionPreference='Stop';. (Join-Path $PSScriptRoot 'lib\PlatformResources.ps1');$r=New-PlatformResult 'Compare-DevBuild' $PSCmdlet.ParameterSetName;$global:LASTEXITCODE=125
+function Check-Snapshot($s){if($s.schemaVersion -ne 1 -or $s.inputs -isnot [array] -or $s.artifacts -isnot [array]){throw 'Invalid build manifest.'};foreach($kind in @('inputs','artifacts')){$seen=[Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase);if($s[$kind].Count -gt 10000){throw 'Snapshot entry limit.'};foreach($f in $s[$kind]){if(-not $f.path -or [IO.Path]::IsPathRooted($f.path) -or $f.path -match '[:*?\x00-\x1f]' -or @($f.path.Replace('\','/').Split('/')|Where-Object{$_ -in @('','..','.')}).Count -or $f.sha256 -notmatch '^[a-fA-F0-9]{64}$' -or -not $seen.Add($f.path.Replace('\','/'))){throw 'Invalid snapshot file record.'}}}}
+function Canon($v){if($v -is [System.Collections.IDictionary]){$keys=[string[]]@($v.Keys);[Array]::Sort($keys,[StringComparer]::Ordinal);$parts=@(foreach($k in $keys){(ConvertTo-Json -InputObject $k -Compress)+':'+(Canon $v[$k])});return '{'+($parts -join ',')+'}'};if($v -is [array]){return '['+(@(foreach($item in $v){Canon $item}) -join ',')+']'};ConvertTo-Json -InputObject $v -Depth 30 -Compress}
+try{
+ if($PSCmdlet.ParameterSetName -eq 'Capture'){
+  $base=Assert-PlatformPath $Root;if(-not(Test-Path -LiteralPath $base -PathType Container)){throw 'Root must be a directory.'};$config=@{schemaVersion=1;toolchain=@{};configuration=@{}};if($ConfigurationPath){$config=Read-PlatformJson $ConfigurationPath;if($config.schemaVersion -ne 1){throw 'Configuration schema must be 1.'}}
+  $s=[ordered]@{schemaVersion=1;capturedUtc=[DateTime]::UtcNow.ToString('o');toolchain=$config.toolchain;configuration=$config.configuration;inputs=@();artifacts=@()}
+  foreach($group in @(@{kind='inputs';paths=$InputPath},@{kind='artifacts';paths=$ArtifactPath})){$seen=[Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase);if($group.paths.Count -gt 10000){throw 'Capture limit exceeded.'};foreach($p in $group.paths){$full=Assert-PlatformPath $(if([IO.Path]::IsPathRooted($p)){$p}else{Join-Path $base $p});$rel=([IO.Path]::GetRelativePath($base,$full)).Replace('\','/');if($rel -eq '..' -or $rel.StartsWith('../') -or -not $seen.Add($rel)){throw 'Capture path outside root or duplicated.'};$f=Get-Item -LiteralPath $full;if($f.PSIsContainer -or $f.Length -gt 1073741824){throw 'Capture needs files at most 1 GiB.'};$s[$group.kind]+=@{path=$rel;size=$f.Length;sha256=(Get-FileHash -LiteralPath $full).Hash}}};Check-Snapshot $s
+  if($OutputPath){$out=Assert-PlatformPath $OutputPath -New;$parent=[IO.Path]::GetDirectoryName($out);if(-not(Test-Path -LiteralPath $parent -PathType Container)){throw 'Output parent must exist.'};$s|ConvertTo-Json -Depth 30|Set-Content -LiteralPath $out -Encoding utf8;$r.outputPath=$out};$r.manifest=$s;$r.valid=$true;$global:LASTEXITCODE=0
+ }else{
+  $b=Read-PlatformJson $BaselinePath;$c=Read-PlatformJson $CurrentPath;Check-Snapshot $b;Check-Snapshot $c;$changes=@()
+  foreach($kind in @('toolchain','configuration')){if((Canon $b[$kind]) -cne (Canon $c[$kind])){$changes+=@{kind=$kind;change='Changed';before=$b[$kind];after=$c[$kind]}}}
+  foreach($kind in @('inputs','artifacts')){$old=@{};$new=@{};foreach($f in $b[$kind]){$old[$f.path.Replace('\','/')]=$f};foreach($f in $c[$kind]){$new[$f.path.Replace('\','/')]=$f};foreach($name in @(@($old.Keys)+@($new.Keys)|Sort-Object -Unique)){if(-not $old.ContainsKey($name)){$changes+=@{kind=$kind;path=$name;change='Added'}}elseif(-not $new.ContainsKey($name)){$changes+=@{kind=$kind;path=$name;change='Removed'}}elseif($old[$name].sha256 -ine $new[$name].sha256 -or $old[$name].size -ne $new[$name].size){$changes+=@{kind=$kind;path=$name;change='Changed';before=$old[$name];after=$new[$name]}}}}
+  $r.changes=$changes;$r.identical=$changes.Count -eq 0;$r.valid=$true;$global:LASTEXITCODE=if($r.identical){0}else{2}
+ };$r.limitations=@('Captures explicit file identity and supplied configuration only; no rebuild or proof of independent reproducibility.','Do not include credentials in supplied configuration; configuration is retained as provided.')
+}catch{$r.error=$_.Exception.Message};Write-PlatformResult $r -Json:$Json

@@ -1,0 +1,2496 @@
+{
+  "findings": [
+    {
+      "passed": true,
+      "name": "installed-api-reflection"
+    },
+    {
+      "passed": true,
+      "name": "image-identical-png-bmp"
+    },
+    {
+      "passed": true,
+      "name": "image-pixel-change"
+    },
+    {
+      "passed": true,
+      "name": "pixel-measurement"
+    },
+    {
+      "passed": true,
+      "name": "diff-created"
+    },
+    {
+      "passed": true,
+      "name": "image-tolerance-boundary"
+    },
+    {
+      "passed": true,
+      "name": "image-context-mismatch"
+    },
+    {
+      "passed": true,
+      "name": "image-missing-context"
+    },
+    {
+      "passed": true,
+      "name": "image-dimensions"
+    },
+    {
+      "passed": true,
+      "name": "image-pixel-budget"
+    },
+    {
+      "passed": true,
+      "name": "image-byte-budget"
+    },
+    {
+      "passed": true,
+      "name": "image-no-overwrite"
+    },
+    {
+      "passed": true,
+      "name": "image-malformed"
+    },
+    {
+      "passed": true,
+      "name": "image-strict-number"
+    },
+    {
+      "passed": true,
+      "name": "uia-ignore-time"
+    },
+    {
+      "passed": true,
+      "name": "uia-name-case"
+    },
+    {
+      "passed": true,
+      "name": "uia-state-pattern"
+    },
+    {
+      "passed": true,
+      "name": "uia-both-properties"
+    },
+    {
+      "passed": true,
+      "name": "uia-ambiguity"
+    },
+    {
+      "passed": true,
+      "name": "uia-node-removed"
+    },
+    {
+      "passed": true,
+      "name": "uia-node-added"
+    },
+    {
+      "passed": true,
+      "name": "privacy-secrets"
+    },
+    {
+      "passed": true,
+      "name": "privacy-no-literals-or-path"
+    },
+    {
+      "passed": true,
+      "name": "privacy-duplicate-hmac"
+    },
+    {
+      "passed": true,
+      "name": "privacy-fresh-run"
+    },
+    {
+      "passed": true,
+      "name": "privacy-random-key"
+    },
+    {
+      "passed": true,
+      "name": "privacy-clean"
+    },
+    {
+      "passed": true,
+      "name": "privacy-binary"
+    },
+    {
+      "passed": true,
+      "name": "privacy-size"
+    },
+    {
+      "passed": true,
+      "name": "privacy-depth"
+    },
+    {
+      "passed": true,
+      "name": "privacy-encoding"
+    },
+    {
+      "passed": true,
+      "name": "privacy-escaped-key"
+    },
+    {
+      "passed": true,
+      "name": "privacy-escaped-key-redaction"
+    },
+    {
+      "passed": true,
+      "name": "privacy-finding-budget"
+    },
+    {
+      "passed": true,
+      "name": "privacy-finding-cap"
+    },
+    {
+      "passed": true,
+      "name": "privacy-total-bytes"
+    },
+    {
+      "passed": true,
+      "name": "privacy-no-junction-traversal"
+    },
+    {
+      "passed": true,
+      "name": "privacy-junction-no-credentials"
+    },
+    {
+      "passed": true,
+      "name": "image-ordinal-schema"
+    },
+    {
+      "passed": true,
+      "name": "image-big-integer-range"
+    },
+    {
+      "passed": true,
+      "name": "api-baseline-build"
+    },
+    {
+      "passed": true,
+      "name": "api-body-build"
+    },
+    {
+      "passed": true,
+      "name": "api-body-only"
+    },
+    {
+      "passed": true,
+      "name": "api-overload-build"
+    },
+    {
+      "passed": true,
+      "name": "api-overload"
+    },
+    {
+      "passed": true,
+      "name": "api-overload-removed"
+    },
+    {
+      "passed": true,
+      "name": "api-type-build"
+    },
+    {
+      "passed": true,
+      "name": "api-type"
+    },
+    {
+      "passed": true,
+      "name": "api-type-removed"
+    },
+    {
+      "passed": true,
+      "name": "api-property-build"
+    },
+    {
+      "passed": true,
+      "name": "api-property"
+    },
+    {
+      "passed": true,
+      "name": "api-property-removed"
+    },
+    {
+      "passed": true,
+      "name": "api-event-build"
+    },
+    {
+      "passed": true,
+      "name": "api-event"
+    },
+    {
+      "passed": true,
+      "name": "api-event-removed"
+    },
+    {
+      "passed": true,
+      "name": "api-generic-build"
+    },
+    {
+      "passed": true,
+      "name": "api-generic"
+    },
+    {
+      "passed": true,
+      "name": "api-generic-removed"
+    },
+    {
+      "passed": true,
+      "name": "api-nested-build"
+    },
+    {
+      "passed": true,
+      "name": "api-nested"
+    },
+    {
+      "passed": true,
+      "name": "api-nested-removed"
+    },
+    {
+      "passed": true,
+      "name": "api-constraint-build"
+    },
+    {
+      "passed": true,
+      "name": "api-constraint"
+    },
+    {
+      "passed": true,
+      "name": "api-constraint-removed"
+    },
+    {
+      "passed": true,
+      "name": "api-signature-build"
+    },
+    {
+      "passed": true,
+      "name": "api-signature"
+    },
+    {
+      "passed": true,
+      "name": "api-signature-removed"
+    },
+    {
+      "passed": true,
+      "name": "api-added-build"
+    },
+    {
+      "passed": true,
+      "name": "api-added"
+    },
+    {
+      "passed": true,
+      "name": "api-added-distinct"
+    },
+    {
+      "passed": true,
+      "name": "api-malformed"
+    },
+    {
+      "passed": true,
+      "name": "api-native-no-cli"
+    },
+    {
+      "passed": true,
+      "name": "api-pointer-build"
+    },
+    {
+      "passed": true,
+      "name": "api-pointer-signature"
+    },
+    {
+      "passed": true,
+      "name": "api-function-pointer-build"
+    },
+    {
+      "passed": true,
+      "name": "api-unsupported-signature"
+    },
+    {
+      "passed": true,
+      "name": "api-trust-required"
+    },
+    {
+      "passed": true,
+      "name": "api-no-untrusted-decoder"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-real-a"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-minimizer-reproduced"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-minimized-content"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-real-b"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-determinism"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-expected-reject"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-time-limit"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-output-limit"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-input-limit"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-missing-target"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-trust-required"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-no-overwrite"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-global-deadline"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-global-incomplete"
+    },
+    {
+      "passed": true,
+      "name": "wpr-real-probe"
+    },
+    {
+      "passed": true,
+      "name": "wpr-real-capture-truthful"
+    },
+    {
+      "passed": true,
+      "name": "wpr-blocked-evidence"
+    },
+    {
+      "passed": true,
+      "name": "fake-wpr-build"
+    },
+    {
+      "passed": true,
+      "name": "wpr-fake-success"
+    },
+    {
+      "passed": true,
+      "name": "wpr-fake-start-fail"
+    },
+    {
+      "passed": true,
+      "name": "wpr-scoped-cleanup-failed-start"
+    },
+    {
+      "passed": true,
+      "name": "wpr-fake-stop-fail"
+    },
+    {
+      "passed": true,
+      "name": "wpr-owned-cleanup"
+    },
+    {
+      "passed": true,
+      "name": "wpr-fake-uncertain-start"
+    },
+    {
+      "passed": true,
+      "name": "wpr-uncertain-owned-cancel"
+    },
+    {
+      "passed": true,
+      "name": "wpr-uncertain-marker-removed"
+    },
+    {
+      "passed": true,
+      "name": "wpr-foreign-marker-preserved"
+    },
+    {
+      "passed": true,
+      "name": "wpr-instance-last-every-command"
+    },
+    {
+      "passed": true,
+      "name": "wpr-unique-session"
+    },
+    {
+      "passed": true,
+      "name": "wpr-supplied-boundary"
+    },
+    {
+      "passed": true,
+      "name": "wpr-supplied-fail"
+    },
+    {
+      "passed": true,
+      "name": "wpr-offline-no-analysis"
+    }
+  ],
+  "scope": "Original local fixtures",
+  "schemaVersion": 1,
+  "observedUtc": "2026-11-03T23:24:20.3494264Z",
+  "artifacts": [
+    "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.png",
+    "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.bmp",
+    "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-baseline\\bin\\Debug\\net10.0\\Fixture.dll",
+    "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-body\\bin\\Debug\\net10.0\\Fixture.dll",
+    "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-overload\\bin\\Debug\\net10.0\\Fixture.dll",
+    "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-type\\bin\\Debug\\net10.0\\Fixture.dll",
+    "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-property\\bin\\Debug\\net10.0\\Fixture.dll",
+    "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-event\\bin\\Debug\\net10.0\\Fixture.dll",
+    "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-generic\\bin\\Debug\\net10.0\\Fixture.dll",
+    "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-nested\\bin\\Debug\\net10.0\\Fixture.dll",
+    "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-constraint\\bin\\Debug\\net10.0\\Fixture.dll",
+    "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-signature\\bin\\Debug\\net10.0\\Fixture.dll",
+    "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-added\\bin\\Debug\\net10.0\\Fixture.dll",
+    "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-pointer\\bin\\Debug\\net10.0\\Fixture.dll",
+    "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-function-pointer\\bin\\Debug\\net10.0\\Fixture.dll",
+    "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fake-wpr\\bin\\Debug\\net10.0\\Fixture.exe"
+  ],
+  "fixturePath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b",
+  "exitCode": 0,
+  "limitations": [
+    "Fake WPR tests prove orchestration only; real capture evidence separate.",
+    "No live UI, accessibility qualification, ETL analysis, arbitrary parser safety or full runtime/API compatibility certification.",
+    "Independent code review is a separate outstanding gate."
+  ],
+  "tool": "Test-QualityNative",
+  "checks": [
+    {
+      "passed": true,
+      "name": "installed-api-reflection"
+    },
+    {
+      "passed": true,
+      "name": "image-identical-png-bmp"
+    },
+    {
+      "passed": true,
+      "name": "image-pixel-change"
+    },
+    {
+      "passed": true,
+      "name": "pixel-measurement"
+    },
+    {
+      "passed": true,
+      "name": "diff-created"
+    },
+    {
+      "passed": true,
+      "name": "image-tolerance-boundary"
+    },
+    {
+      "passed": true,
+      "name": "image-context-mismatch"
+    },
+    {
+      "passed": true,
+      "name": "image-missing-context"
+    },
+    {
+      "passed": true,
+      "name": "image-dimensions"
+    },
+    {
+      "passed": true,
+      "name": "image-pixel-budget"
+    },
+    {
+      "passed": true,
+      "name": "image-byte-budget"
+    },
+    {
+      "passed": true,
+      "name": "image-no-overwrite"
+    },
+    {
+      "passed": true,
+      "name": "image-malformed"
+    },
+    {
+      "passed": true,
+      "name": "image-strict-number"
+    },
+    {
+      "passed": true,
+      "name": "uia-ignore-time"
+    },
+    {
+      "passed": true,
+      "name": "uia-name-case"
+    },
+    {
+      "passed": true,
+      "name": "uia-state-pattern"
+    },
+    {
+      "passed": true,
+      "name": "uia-both-properties"
+    },
+    {
+      "passed": true,
+      "name": "uia-ambiguity"
+    },
+    {
+      "passed": true,
+      "name": "uia-node-removed"
+    },
+    {
+      "passed": true,
+      "name": "uia-node-added"
+    },
+    {
+      "passed": true,
+      "name": "privacy-secrets"
+    },
+    {
+      "passed": true,
+      "name": "privacy-no-literals-or-path"
+    },
+    {
+      "passed": true,
+      "name": "privacy-duplicate-hmac"
+    },
+    {
+      "passed": true,
+      "name": "privacy-fresh-run"
+    },
+    {
+      "passed": true,
+      "name": "privacy-random-key"
+    },
+    {
+      "passed": true,
+      "name": "privacy-clean"
+    },
+    {
+      "passed": true,
+      "name": "privacy-binary"
+    },
+    {
+      "passed": true,
+      "name": "privacy-size"
+    },
+    {
+      "passed": true,
+      "name": "privacy-depth"
+    },
+    {
+      "passed": true,
+      "name": "privacy-encoding"
+    },
+    {
+      "passed": true,
+      "name": "privacy-escaped-key"
+    },
+    {
+      "passed": true,
+      "name": "privacy-escaped-key-redaction"
+    },
+    {
+      "passed": true,
+      "name": "privacy-finding-budget"
+    },
+    {
+      "passed": true,
+      "name": "privacy-finding-cap"
+    },
+    {
+      "passed": true,
+      "name": "privacy-total-bytes"
+    },
+    {
+      "passed": true,
+      "name": "privacy-no-junction-traversal"
+    },
+    {
+      "passed": true,
+      "name": "privacy-junction-no-credentials"
+    },
+    {
+      "passed": true,
+      "name": "image-ordinal-schema"
+    },
+    {
+      "passed": true,
+      "name": "image-big-integer-range"
+    },
+    {
+      "passed": true,
+      "name": "api-baseline-build"
+    },
+    {
+      "passed": true,
+      "name": "api-body-build"
+    },
+    {
+      "passed": true,
+      "name": "api-body-only"
+    },
+    {
+      "passed": true,
+      "name": "api-overload-build"
+    },
+    {
+      "passed": true,
+      "name": "api-overload"
+    },
+    {
+      "passed": true,
+      "name": "api-overload-removed"
+    },
+    {
+      "passed": true,
+      "name": "api-type-build"
+    },
+    {
+      "passed": true,
+      "name": "api-type"
+    },
+    {
+      "passed": true,
+      "name": "api-type-removed"
+    },
+    {
+      "passed": true,
+      "name": "api-property-build"
+    },
+    {
+      "passed": true,
+      "name": "api-property"
+    },
+    {
+      "passed": true,
+      "name": "api-property-removed"
+    },
+    {
+      "passed": true,
+      "name": "api-event-build"
+    },
+    {
+      "passed": true,
+      "name": "api-event"
+    },
+    {
+      "passed": true,
+      "name": "api-event-removed"
+    },
+    {
+      "passed": true,
+      "name": "api-generic-build"
+    },
+    {
+      "passed": true,
+      "name": "api-generic"
+    },
+    {
+      "passed": true,
+      "name": "api-generic-removed"
+    },
+    {
+      "passed": true,
+      "name": "api-nested-build"
+    },
+    {
+      "passed": true,
+      "name": "api-nested"
+    },
+    {
+      "passed": true,
+      "name": "api-nested-removed"
+    },
+    {
+      "passed": true,
+      "name": "api-constraint-build"
+    },
+    {
+      "passed": true,
+      "name": "api-constraint"
+    },
+    {
+      "passed": true,
+      "name": "api-constraint-removed"
+    },
+    {
+      "passed": true,
+      "name": "api-signature-build"
+    },
+    {
+      "passed": true,
+      "name": "api-signature"
+    },
+    {
+      "passed": true,
+      "name": "api-signature-removed"
+    },
+    {
+      "passed": true,
+      "name": "api-added-build"
+    },
+    {
+      "passed": true,
+      "name": "api-added"
+    },
+    {
+      "passed": true,
+      "name": "api-added-distinct"
+    },
+    {
+      "passed": true,
+      "name": "api-malformed"
+    },
+    {
+      "passed": true,
+      "name": "api-native-no-cli"
+    },
+    {
+      "passed": true,
+      "name": "api-pointer-build"
+    },
+    {
+      "passed": true,
+      "name": "api-pointer-signature"
+    },
+    {
+      "passed": true,
+      "name": "api-function-pointer-build"
+    },
+    {
+      "passed": true,
+      "name": "api-unsupported-signature"
+    },
+    {
+      "passed": true,
+      "name": "api-trust-required"
+    },
+    {
+      "passed": true,
+      "name": "api-no-untrusted-decoder"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-real-a"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-minimizer-reproduced"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-minimized-content"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-real-b"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-determinism"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-expected-reject"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-time-limit"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-output-limit"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-input-limit"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-missing-target"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-trust-required"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-no-overwrite"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-global-deadline"
+    },
+    {
+      "passed": true,
+      "name": "fuzz-global-incomplete"
+    },
+    {
+      "passed": true,
+      "name": "wpr-real-probe"
+    },
+    {
+      "passed": true,
+      "name": "wpr-real-capture-truthful"
+    },
+    {
+      "passed": true,
+      "name": "wpr-blocked-evidence"
+    },
+    {
+      "passed": true,
+      "name": "fake-wpr-build"
+    },
+    {
+      "passed": true,
+      "name": "wpr-fake-success"
+    },
+    {
+      "passed": true,
+      "name": "wpr-fake-start-fail"
+    },
+    {
+      "passed": true,
+      "name": "wpr-scoped-cleanup-failed-start"
+    },
+    {
+      "passed": true,
+      "name": "wpr-fake-stop-fail"
+    },
+    {
+      "passed": true,
+      "name": "wpr-owned-cleanup"
+    },
+    {
+      "passed": true,
+      "name": "wpr-fake-uncertain-start"
+    },
+    {
+      "passed": true,
+      "name": "wpr-uncertain-owned-cancel"
+    },
+    {
+      "passed": true,
+      "name": "wpr-uncertain-marker-removed"
+    },
+    {
+      "passed": true,
+      "name": "wpr-foreign-marker-preserved"
+    },
+    {
+      "passed": true,
+      "name": "wpr-instance-last-every-command"
+    },
+    {
+      "passed": true,
+      "name": "wpr-unique-session"
+    },
+    {
+      "passed": true,
+      "name": "wpr-supplied-boundary"
+    },
+    {
+      "passed": true,
+      "name": "wpr-supplied-fail"
+    },
+    {
+      "passed": true,
+      "name": "wpr-offline-no-analysis"
+    }
+  ],
+  "executionEvidence": [
+    {
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "name": "installed-api-reflection",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\installed-api.txt",
+      "arguments": [
+        "-NoProfile",
+        "-Command",
+        "[System.Reflection.Metadata.MetadataReader].Assembly.FullName; [System.Reflection.PortableExecutable.PEReader].GetConstructors() | ForEach-Object ToString"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "image-identical-png-bmp",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-identical-png-bmp.json",
+      "exitCode": 0,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-UiSnapshot.ps1",
+        "-BaselineImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.png",
+        "-CurrentImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.bmp",
+        "-BaselineContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-CurrentContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-BudgetPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\pixels.json",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-identical-png-bmp.stderr.txt"
+    },
+    {
+      "name": "image-pixel-change",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-pixel-change.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-UiSnapshot.ps1",
+        "-BaselineImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.png",
+        "-CurrentImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\changed.png",
+        "-BaselineContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-CurrentContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-BudgetPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\pixels.json",
+        "-DiffImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\diff.png",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-pixel-change.stderr.txt"
+    },
+    {
+      "name": "image-tolerance-boundary",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-tolerance-boundary.json",
+      "exitCode": 0,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-UiSnapshot.ps1",
+        "-BaselineImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.png",
+        "-CurrentImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\changed.png",
+        "-BaselineContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-CurrentContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-BudgetPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\tolerance.json",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-tolerance-boundary.stderr.txt"
+    },
+    {
+      "name": "image-context-mismatch",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-context-mismatch.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-UiSnapshot.ps1",
+        "-BaselineImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.png",
+        "-CurrentImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.png",
+        "-BaselineContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-CurrentContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context-bad.json",
+        "-BudgetPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\pixels.json",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-context-mismatch.stderr.txt"
+    },
+    {
+      "name": "image-missing-context",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-missing-context.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-UiSnapshot.ps1",
+        "-BaselineImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.png",
+        "-CurrentImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.png",
+        "-BudgetPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\pixels.json",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-missing-context.stderr.txt"
+    },
+    {
+      "name": "image-dimensions",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-dimensions.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-UiSnapshot.ps1",
+        "-BaselineImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.png",
+        "-CurrentImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\small.png",
+        "-BaselineContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-CurrentContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-BudgetPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\pixels.json",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-dimensions.stderr.txt"
+    },
+    {
+      "name": "image-pixel-budget",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-pixel-budget.json",
+      "exitCode": 125,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-UiSnapshot.ps1",
+        "-BaselineImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.png",
+        "-CurrentImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.bmp",
+        "-BaselineContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-CurrentContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-BudgetPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\pixels.json",
+        "-MaxPixels",
+        "4",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-pixel-budget.stderr.txt"
+    },
+    {
+      "name": "image-byte-budget",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-byte-budget.json",
+      "exitCode": 125,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-UiSnapshot.ps1",
+        "-BaselineImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.png",
+        "-CurrentImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.bmp",
+        "-BaselineContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-CurrentContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-BudgetPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\pixels.json",
+        "-MaxImageBytes",
+        "10",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-byte-budget.stderr.txt"
+    },
+    {
+      "name": "image-no-overwrite",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-no-overwrite.json",
+      "exitCode": 125,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-UiSnapshot.ps1",
+        "-BaselineImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.png",
+        "-CurrentImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.bmp",
+        "-BaselineContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-CurrentContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-BudgetPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\pixels.json",
+        "-DiffImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\diff.png",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-no-overwrite.stderr.txt"
+    },
+    {
+      "name": "image-malformed",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-malformed.json",
+      "exitCode": 125,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-UiSnapshot.ps1",
+        "-BaselineImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\invalid.bin",
+        "-CurrentImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.png",
+        "-BaselineContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-CurrentContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-BudgetPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\pixels.json",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-malformed.stderr.txt"
+    },
+    {
+      "name": "image-strict-number",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-strict-number.json",
+      "exitCode": 125,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-UiSnapshot.ps1",
+        "-BaselineImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.png",
+        "-CurrentImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.png",
+        "-BaselineContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-CurrentContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-BudgetPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\bad-budget.json",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-strict-number.stderr.txt"
+    },
+    {
+      "name": "uia-ignore-time",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia-ignore-time.json",
+      "exitCode": 0,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-UiSnapshot.ps1",
+        "-BaselineSnapshot",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia1.json",
+        "-CurrentSnapshot",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia2.json",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia-ignore-time.stderr.txt"
+    },
+    {
+      "name": "uia-name-case",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia-name-case.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-UiSnapshot.ps1",
+        "-BaselineSnapshot",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia1.json",
+        "-CurrentSnapshot",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia-case.json",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia-name-case.stderr.txt"
+    },
+    {
+      "name": "uia-state-pattern",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia-state-pattern.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-UiSnapshot.ps1",
+        "-BaselineSnapshot",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia1.json",
+        "-CurrentSnapshot",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia-state.json",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia-state-pattern.stderr.txt"
+    },
+    {
+      "name": "uia-ambiguity",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia-ambiguity.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-UiSnapshot.ps1",
+        "-BaselineSnapshot",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia1.json",
+        "-CurrentSnapshot",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia-ambiguous.json",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia-ambiguity.stderr.txt"
+    },
+    {
+      "name": "uia-node-removed",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia-node-removed.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-UiSnapshot.ps1",
+        "-BaselineSnapshot",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia1.json",
+        "-CurrentSnapshot",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia-empty.json",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia-node-removed.stderr.txt"
+    },
+    {
+      "name": "uia-node-added",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia-node-added.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-UiSnapshot.ps1",
+        "-BaselineSnapshot",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia-empty.json",
+        "-CurrentSnapshot",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia1.json",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\uia-node-added.stderr.txt"
+    },
+    {
+      "name": "privacy-secrets",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-secrets.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Find-PrivateData.ps1",
+        "-Path",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-secrets.stderr.txt"
+    },
+    {
+      "name": "privacy-fresh-run",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-fresh-run.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Find-PrivateData.ps1",
+        "-Path",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-fresh-run.stderr.txt"
+    },
+    {
+      "name": "privacy-clean",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-clean.json",
+      "exitCode": 0,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Find-PrivateData.ps1",
+        "-Path",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\clean.txt",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-clean.stderr.txt"
+    },
+    {
+      "name": "privacy-binary",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-binary.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Find-PrivateData.ps1",
+        "-Path",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\invalid.bin",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-binary.stderr.txt"
+    },
+    {
+      "name": "privacy-size",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-size.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Find-PrivateData.ps1",
+        "-Path",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\clean.txt",
+        "-MaxFileBytes",
+        "2",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-size.stderr.txt"
+    },
+    {
+      "name": "privacy-depth",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-depth.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Find-PrivateData.ps1",
+        "-Path",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy",
+        "-MaxDepth",
+        "0",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-depth.stderr.txt"
+    },
+    {
+      "name": "privacy-encoding",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-encoding.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Find-PrivateData.ps1",
+        "-Path",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\bad-encoding.txt",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-encoding.stderr.txt"
+    },
+    {
+      "name": "privacy-escaped-key",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-escaped-key.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Find-PrivateData.ps1",
+        "-Path",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\escaped-key.json",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-escaped-key.stderr.txt"
+    },
+    {
+      "name": "privacy-finding-budget",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-finding-budget.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Find-PrivateData.ps1",
+        "-Path",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy",
+        "-MaxFindings",
+        "1",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-finding-budget.stderr.txt"
+    },
+    {
+      "name": "privacy-total-bytes",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-total-bytes.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Find-PrivateData.ps1",
+        "-Path",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy",
+        "-MaxTotalBytes",
+        "2",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-total-bytes.stderr.txt"
+    },
+    {
+      "name": "privacy-no-junction-traversal",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-no-junction-traversal.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Find-PrivateData.ps1",
+        "-Path",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\scan-link",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\privacy-no-junction-traversal.stderr.txt"
+    },
+    {
+      "name": "image-ordinal-schema",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-ordinal-schema.json",
+      "exitCode": 125,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-UiSnapshot.ps1",
+        "-BaselineImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.png",
+        "-CurrentImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.png",
+        "-BaselineContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-CurrentContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-BudgetPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\wrong-case.json",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-ordinal-schema.stderr.txt"
+    },
+    {
+      "name": "image-big-integer-range",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-big-integer-range.json",
+      "exitCode": 125,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-UiSnapshot.ps1",
+        "-BaselineImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.png",
+        "-CurrentImage",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\baseline.png",
+        "-BaselineContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-CurrentContext",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\context.json",
+        "-BudgetPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\big-integer.json",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\image-big-integer-range.stderr.txt"
+    },
+    {
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-baseline\\build.stderr.txt",
+      "arguments": [
+        "build",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-baseline\\Fixture.csproj",
+        "--configfile",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-baseline\\NuGet.Config",
+        "--disable-build-servers",
+        "--nologo",
+        "-v:q"
+      ],
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-baseline\\build.stdout.txt",
+      "exitCode": 0,
+      "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+      "name": "api-baseline"
+    },
+    {
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-body\\build.stderr.txt",
+      "arguments": [
+        "build",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-body\\Fixture.csproj",
+        "--configfile",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-body\\NuGet.Config",
+        "--disable-build-servers",
+        "--nologo",
+        "-v:q"
+      ],
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-body\\build.stdout.txt",
+      "exitCode": 0,
+      "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+      "name": "api-body"
+    },
+    {
+      "name": "api-body-only",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-body-only.json",
+      "exitCode": 0,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-ManagedApi.ps1",
+        "-TrustMetadata",
+        "-BaselinePath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-baseline\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-CurrentPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-body\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-body-only.stderr.txt"
+    },
+    {
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-overload\\build.stderr.txt",
+      "arguments": [
+        "build",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-overload\\Fixture.csproj",
+        "--configfile",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-overload\\NuGet.Config",
+        "--disable-build-servers",
+        "--nologo",
+        "-v:q"
+      ],
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-overload\\build.stdout.txt",
+      "exitCode": 0,
+      "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+      "name": "api-overload"
+    },
+    {
+      "name": "api-overload",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-overload.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-ManagedApi.ps1",
+        "-TrustMetadata",
+        "-BaselinePath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-baseline\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-CurrentPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-overload\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-overload.stderr.txt"
+    },
+    {
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-type\\build.stderr.txt",
+      "arguments": [
+        "build",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-type\\Fixture.csproj",
+        "--configfile",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-type\\NuGet.Config",
+        "--disable-build-servers",
+        "--nologo",
+        "-v:q"
+      ],
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-type\\build.stdout.txt",
+      "exitCode": 0,
+      "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+      "name": "api-type"
+    },
+    {
+      "name": "api-type",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-type.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-ManagedApi.ps1",
+        "-TrustMetadata",
+        "-BaselinePath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-baseline\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-CurrentPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-type\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-type.stderr.txt"
+    },
+    {
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-property\\build.stderr.txt",
+      "arguments": [
+        "build",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-property\\Fixture.csproj",
+        "--configfile",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-property\\NuGet.Config",
+        "--disable-build-servers",
+        "--nologo",
+        "-v:q"
+      ],
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-property\\build.stdout.txt",
+      "exitCode": 0,
+      "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+      "name": "api-property"
+    },
+    {
+      "name": "api-property",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-property.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-ManagedApi.ps1",
+        "-TrustMetadata",
+        "-BaselinePath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-baseline\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-CurrentPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-property\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-property.stderr.txt"
+    },
+    {
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-event\\build.stderr.txt",
+      "arguments": [
+        "build",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-event\\Fixture.csproj",
+        "--configfile",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-event\\NuGet.Config",
+        "--disable-build-servers",
+        "--nologo",
+        "-v:q"
+      ],
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-event\\build.stdout.txt",
+      "exitCode": 0,
+      "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+      "name": "api-event"
+    },
+    {
+      "name": "api-event",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-event.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-ManagedApi.ps1",
+        "-TrustMetadata",
+        "-BaselinePath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-baseline\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-CurrentPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-event\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-event.stderr.txt"
+    },
+    {
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-generic\\build.stderr.txt",
+      "arguments": [
+        "build",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-generic\\Fixture.csproj",
+        "--configfile",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-generic\\NuGet.Config",
+        "--disable-build-servers",
+        "--nologo",
+        "-v:q"
+      ],
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-generic\\build.stdout.txt",
+      "exitCode": 0,
+      "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+      "name": "api-generic"
+    },
+    {
+      "name": "api-generic",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-generic.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-ManagedApi.ps1",
+        "-TrustMetadata",
+        "-BaselinePath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-baseline\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-CurrentPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-generic\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-generic.stderr.txt"
+    },
+    {
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-nested\\build.stderr.txt",
+      "arguments": [
+        "build",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-nested\\Fixture.csproj",
+        "--configfile",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-nested\\NuGet.Config",
+        "--disable-build-servers",
+        "--nologo",
+        "-v:q"
+      ],
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-nested\\build.stdout.txt",
+      "exitCode": 0,
+      "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+      "name": "api-nested"
+    },
+    {
+      "name": "api-nested",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-nested.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-ManagedApi.ps1",
+        "-TrustMetadata",
+        "-BaselinePath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-baseline\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-CurrentPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-nested\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-nested.stderr.txt"
+    },
+    {
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-constraint\\build.stderr.txt",
+      "arguments": [
+        "build",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-constraint\\Fixture.csproj",
+        "--configfile",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-constraint\\NuGet.Config",
+        "--disable-build-servers",
+        "--nologo",
+        "-v:q"
+      ],
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-constraint\\build.stdout.txt",
+      "exitCode": 0,
+      "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+      "name": "api-constraint"
+    },
+    {
+      "name": "api-constraint",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-constraint.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-ManagedApi.ps1",
+        "-TrustMetadata",
+        "-BaselinePath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-baseline\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-CurrentPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-constraint\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-constraint.stderr.txt"
+    },
+    {
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-signature\\build.stderr.txt",
+      "arguments": [
+        "build",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-signature\\Fixture.csproj",
+        "--configfile",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-signature\\NuGet.Config",
+        "--disable-build-servers",
+        "--nologo",
+        "-v:q"
+      ],
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-signature\\build.stdout.txt",
+      "exitCode": 0,
+      "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+      "name": "api-signature"
+    },
+    {
+      "name": "api-signature",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-signature.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-ManagedApi.ps1",
+        "-TrustMetadata",
+        "-BaselinePath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-baseline\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-CurrentPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-signature\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-signature.stderr.txt"
+    },
+    {
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-added\\build.stderr.txt",
+      "arguments": [
+        "build",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-added\\Fixture.csproj",
+        "--configfile",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-added\\NuGet.Config",
+        "--disable-build-servers",
+        "--nologo",
+        "-v:q"
+      ],
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-added\\build.stdout.txt",
+      "exitCode": 0,
+      "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+      "name": "api-added"
+    },
+    {
+      "name": "api-added",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-added.json",
+      "exitCode": 0,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-ManagedApi.ps1",
+        "-TrustMetadata",
+        "-BaselinePath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-baseline\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-CurrentPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-added\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-added.stderr.txt"
+    },
+    {
+      "name": "api-malformed",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-malformed.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-ManagedApi.ps1",
+        "-TrustMetadata",
+        "-BaselinePath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-baseline\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-CurrentPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\invalid.bin",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-malformed.stderr.txt"
+    },
+    {
+      "name": "api-native-no-cli",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-native-no-cli.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-ManagedApi.ps1",
+        "-TrustMetadata",
+        "-BaselinePath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-baseline\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-CurrentPath",
+        "C:/Windows/System32/wpr.exe",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-native-no-cli.stderr.txt"
+    },
+    {
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-pointer\\build.stderr.txt",
+      "arguments": [
+        "build",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-pointer\\Fixture.csproj",
+        "--configfile",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-pointer\\NuGet.Config",
+        "--disable-build-servers",
+        "--nologo",
+        "-v:q"
+      ],
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-pointer\\build.stdout.txt",
+      "exitCode": 0,
+      "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+      "name": "api-pointer"
+    },
+    {
+      "name": "api-pointer-signature",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-pointer-signature.json",
+      "exitCode": 0,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-ManagedApi.ps1",
+        "-TrustMetadata",
+        "-BaselinePath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-pointer\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-CurrentPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-pointer\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-pointer-signature.stderr.txt"
+    },
+    {
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-function-pointer\\build.stderr.txt",
+      "arguments": [
+        "build",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-function-pointer\\Fixture.csproj",
+        "--configfile",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-function-pointer\\NuGet.Config",
+        "--disable-build-servers",
+        "--nologo",
+        "-v:q"
+      ],
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-function-pointer\\build.stdout.txt",
+      "exitCode": 0,
+      "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+      "name": "api-function-pointer"
+    },
+    {
+      "name": "api-unsupported-signature",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-unsupported-signature.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-ManagedApi.ps1",
+        "-TrustMetadata",
+        "-BaselinePath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-function-pointer\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-CurrentPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-function-pointer\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-unsupported-signature.stderr.txt"
+    },
+    {
+      "name": "api-trust-required",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-trust-required.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Compare-ManagedApi.ps1",
+        "-BaselinePath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-baseline\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-CurrentPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-body\\bin\\Debug\\net10.0\\Fixture.dll",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\api-trust-required.stderr.txt"
+    },
+    {
+      "name": "fuzz-real-a",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-real-a.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-real-a.ps1",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-real-a.stderr.txt"
+    },
+    {
+      "name": "fuzz-real-b",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-real-b.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-real-b.ps1",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-real-b.stderr.txt"
+    },
+    {
+      "name": "fuzz-expected-reject",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-expected-reject.json",
+      "exitCode": 0,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-reject.ps1",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-expected-reject.stderr.txt"
+    },
+    {
+      "name": "fuzz-time-limit",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-time-limit.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-time.ps1",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-time-limit.stderr.txt"
+    },
+    {
+      "name": "fuzz-output-limit",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-output-limit.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-output.ps1",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-output-limit.stderr.txt"
+    },
+    {
+      "name": "fuzz-input-limit",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-input-limit.json",
+      "exitCode": 125,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-size.ps1",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-input-limit.stderr.txt"
+    },
+    {
+      "name": "fuzz-missing-target",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-missing-target.json",
+      "exitCode": 125,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-missing.ps1",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-missing-target.stderr.txt"
+    },
+    {
+      "name": "fuzz-trust-required",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-trust-required.json",
+      "exitCode": 125,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-untrusted.ps1",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-trust-required.stderr.txt"
+    },
+    {
+      "name": "fuzz-no-overwrite",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-no-overwrite.json",
+      "exitCode": 125,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-existing-destination.ps1",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-no-overwrite.stderr.txt"
+    },
+    {
+      "name": "fuzz-global-deadline",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-global-deadline.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-global.ps1",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fuzz-global-deadline.stderr.txt"
+    },
+    {
+      "name": "wpr-real-probe",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\wpr-real-probe.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Invoke-WindowsPerformance.ps1",
+        "-Mode",
+        "Probe",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\wpr-real-probe.stderr.txt"
+    },
+    {
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "name": "wpr-real-capture",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\wpr-real-capture.json",
+      "arguments": [
+        "-NoProfile",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools/Invoke-WindowsPerformance.ps1",
+        "-Mode",
+        "Capture",
+        "-DurationSeconds",
+        "1",
+        "-Destination",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\real-capture",
+        "-Json"
+      ],
+      "exitCode": 3
+    },
+    {
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fake-wpr\\build.stderr.txt",
+      "arguments": [
+        "build",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fake-wpr\\Fixture.csproj",
+        "--configfile",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fake-wpr\\NuGet.Config",
+        "--disable-build-servers",
+        "--nologo",
+        "-v:q"
+      ],
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fake-wpr\\build.stdout.txt",
+      "exitCode": 0,
+      "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+      "name": "fake-wpr"
+    },
+    {
+      "name": "wpr-fake-success",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\wpr-fake-success.json",
+      "exitCode": 0,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Invoke-WindowsPerformance.ps1",
+        "-Mode",
+        "Capture",
+        "-WprPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fake-wpr\\bin\\Debug\\net10.0\\Fixture.exe",
+        "-Profile",
+        "CPU",
+        "-Destination",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fake-success",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\wpr-fake-success.stderr.txt"
+    },
+    {
+      "name": "wpr-fake-start-fail",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\wpr-fake-start-fail.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Invoke-WindowsPerformance.ps1",
+        "-Mode",
+        "Capture",
+        "-WprPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fake-wpr\\bin\\Debug\\net10.0\\Fixture.exe",
+        "-Profile",
+        "FailStart",
+        "-Destination",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fake-start-fail",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\wpr-fake-start-fail.stderr.txt"
+    },
+    {
+      "name": "wpr-fake-stop-fail",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\wpr-fake-stop-fail.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Invoke-WindowsPerformance.ps1",
+        "-Mode",
+        "Capture",
+        "-WprPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fake-wpr\\bin\\Debug\\net10.0\\Fixture.exe",
+        "-Profile",
+        "FailStop",
+        "-Destination",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fake-stop-fail",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\wpr-fake-stop-fail.stderr.txt"
+    },
+    {
+      "name": "wpr-fake-uncertain-start",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\wpr-fake-uncertain-start.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Invoke-WindowsPerformance.ps1",
+        "-Mode",
+        "Capture",
+        "-WprPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fake-wpr\\bin\\Debug\\net10.0\\Fixture.exe",
+        "-Profile",
+        "HangStart",
+        "-Destination",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fake-hang-start",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\wpr-fake-uncertain-start.stderr.txt"
+    },
+    {
+      "name": "wpr-supplied-boundary",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\wpr-supplied-boundary.json",
+      "exitCode": 0,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Invoke-WindowsPerformance.ps1",
+        "-Mode",
+        "Metrics",
+        "-MetricsPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\metrics.json",
+        "-BudgetPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\metric-limits.json",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\wpr-supplied-boundary.stderr.txt"
+    },
+    {
+      "name": "wpr-supplied-fail",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\wpr-supplied-fail.json",
+      "exitCode": 2,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Invoke-WindowsPerformance.ps1",
+        "-Mode",
+        "Metrics",
+        "-MetricsPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\metrics.json",
+        "-BudgetPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\metric-low.json",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\wpr-supplied-fail.stderr.txt"
+    },
+    {
+      "name": "wpr-offline-no-analysis",
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\wpr-offline-no-analysis.json",
+      "exitCode": 3,
+      "timedOut": false,
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "truncated": false,
+      "arguments": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\Invoke-WindowsPerformance.ps1",
+        "-Mode",
+        "Inventory",
+        "-EtlPath",
+        "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\fake-success\\capture.etl",
+        "-Json"
+      ],
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-native\\test-2ee7ac16d3004691974c11feadaeb58b\\wpr-offline-no-analysis.stderr.txt"
+    }
+  ],
+  "counts": {
+    "total": 110,
+    "failed": 0,
+    "passed": 110
+  },
+  "status": "Pass"
+}

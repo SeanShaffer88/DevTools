@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "ExampleWrath",
+  "interfaceVersion": 30300,
+  "luaVersion": "5.1",
+  "apiSources": [],
+  "savedVariablesFixtures": [],
+  "capturedUtc": "2026-11-03T21:55:41.6256213Z",
+  "verification": "Copied as data; no client/game API compatibility certification"
+}

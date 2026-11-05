@@ -1,0 +1,6 @@
+{
+ "schemaVersion":1,
+ "context":{"dpi":96,"theme":"fixture","locale":"en-US"},
+ "checks":[{"id":"apply","selector":{"automationId":"FixtureApply"},"name":"Applied","enabled":true,"keyboardFocusable":true,"patterns":["Invoke"]}],
+ "workflow":[{"action":"SetFocus","selector":{"automationId":"FixtureInput"}},{"action":"SetValue","selector":{"automationId":"FixtureInput"},"value":"example"},{"action":"Invoke","selector":{"automationId":"FixtureApply"}}]
+}

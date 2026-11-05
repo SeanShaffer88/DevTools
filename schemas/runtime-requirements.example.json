@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "requirements": [
+    { "id": "windows", "kind": "Windows", "architecture": "x64", "minInclusive": "10.0.19041" },
+    { "id": "dotnet-desktop", "kind": "DotNet", "name": "Microsoft.WindowsDesktop.App", "architecture": "x64", "minInclusive": "10.0", "maxExclusive": "11.0", "allowPrerelease": false },
+    { "id": "vc-runtime", "kind": "VCRedist", "name": "Microsoft.VC.14", "architecture": "x64", "minInclusive": "14.44" }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "observedUtc": "2026-11-03T23:20:03.6433830Z",
+  "command": "pwsh -NoProfile -File 'C:\\Users\\Sean Shaffer\\Documents\\DevTools\\tests\\Test-BinaryAddon.ps1'",
+  "exitCode": 0,
+  "fixturePath": "C:\\Users\\Sean Shaffer\\Documents\\Codex\\2026-11-03\\a\\work\\binary-addon-6c5e8f75b25346729185f37284a71f68",
+  "checks": [
+    {
+      "name": "AST Get-DllInfo.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST Test-WowAddon.ps1",
+      "passed": true
+    },
+    {
+      "name": "Real kernel32 inspected without loading target",
+      "passed": true
+    },
+    {
+      "name": "Synthetic image tables: sample x86.dll",
+      "passed": true
+    },
+    {
+      "name": "Named and ordinal imports: PE32",
+      "passed": true
+    },
+    {
+      "name": "Ordinal forwarded export: PE32",
+      "passed": true
+    },
+    {
+      "name": "Synthetic image tables: sample x64.dll",
+      "passed": true
+    },
+    {
+      "name": "Named and ordinal imports: PE32+",
+      "passed": true
+    },
+    {
+      "name": "Ordinal forwarded export: PE32+",
+      "passed": true
+    },
+    {
+      "name": "Architecture and export comparison",
+      "passed": true
+    },
+    {
+      "name": "Export target in zero-filled virtual section accepted",
+      "passed": true
+    },
+    {
+      "name": "Truncated PE rejected with failure exit",
+      "passed": true
+    },
+    {
+      "name": "Off-file export RVA rejected",
+      "passed": true
+    },
+    {
+      "name": "Valid TOC and XML-relative nested load order",
+      "passed": true
+    },
+    {
+      "name": "Declared dependencies and runtime limits explicit",
+      "passed": true
+    },
+    {
+      "name": "Addon inspection leaves all files unchanged",
+      "passed": true
+    },
+    {
+      "name": "Interface mismatch rejected",
+      "passed": true
+    },
+    {
+      "name": "Multiple TOCs require explicit selection",
+      "passed": true
+    },
+    {
+      "name": "Explicit TOC selection",
+      "passed": true
+    },
+    {
+      "name": "Missing TOC rejected",
+      "passed": true
+    },
+    {
+      "name": "Missing referenced file rejected",
+      "passed": true
+    },
+    {
+      "name": "Required metadata and numeric Interface checked",
+      "passed": true
+    },
+    {
+      "name": "Repeated loads reported as warnings",
+      "passed": true
+    },
+    {
+      "name": "Unsafe path rejected: ..\\outside.lua",
+      "passed": true
+    },
+    {
+      "name": "Unsafe path rejected: C:\\Windows\\win.ini",
+      "passed": true
+    },
+    {
+      "name": "Unsafe path rejected: /Windows/win.ini",
+      "passed": true
+    },
+    {
+      "name": "Unsafe path rejected: main.lua:stream",
+      "passed": true
+    },
+    {
+      "name": "XML cycle rejected",
+      "passed": true
+    },
+    {
+      "name": "DTD and external entity rejected",
+      "passed": true
+    },
+    {
+      "name": "Reparse-point escape rejected",
+      "passed": true
+    }
+  ],
+  "skipped": [],
+  "failure": null,
+  "limitations": [
+    "Lua syntax/API/runtime not tested.",
+    "Synthetic PE fixtures and real system image exercised; not full PE-format conformance certification."
+  ]
+}

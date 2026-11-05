@@ -1,0 +1,54 @@
+{
+  "generatedUtc": "2026-11-03T23:04:46.7268212Z",
+  "schemaVersion": 1,
+  "captures": [
+    {
+      "source": "Original offscreen System.Drawing raster fixture; not a desktop/app screenshot",
+      "context": {
+        "id": "light-96-en",
+        "label": "Save",
+        "width": 320,
+        "locale": "en-US",
+        "theme": "Light",
+        "dpi": 96
+      },
+      "path": "light-96-en.png",
+      "sha256": "384D6F5C1F8EA459C38EB7EEA437A326FAD3D1B89A5E9F0FF410589EF55C7669",
+      "expectedComparator": "Same file exact identity Pass; different context requires selected baseline, never infer equivalence"
+    },
+    {
+      "source": "Original offscreen System.Drawing raster fixture; not a desktop/app screenshot",
+      "context": {
+        "id": "dark-144-en",
+        "label": "Save",
+        "width": 480,
+        "locale": "en-US",
+        "theme": "Dark",
+        "dpi": 144
+      },
+      "path": "dark-144-en.png",
+      "sha256": "0A85B27B9A3F5269842B52AC9E53AB8339F2A4556A95D788CF9AA4EC4376BBF6",
+      "expectedComparator": "Same file exact identity Pass; different context requires selected baseline, never infer equivalence"
+    },
+    {
+      "source": "Original offscreen System.Drawing raster fixture; not a desktop/app screenshot",
+      "context": {
+        "id": "light-96-de",
+        "label": "Speichern",
+        "width": 320,
+        "locale": "de-DE",
+        "theme": "Light",
+        "dpi": 96
+      },
+      "path": "light-96-de.png",
+      "sha256": "B8908EC1035E3138B7FCE419B50A0DC0B413E90652A7A2FABAD12E34D720EF81",
+      "expectedComparator": "Same file exact identity Pass; different context requires selected baseline, never infer equivalence"
+    }
+  ],
+  "limitations": [
+    "Synthetic offscreen rendering; no real app UIA/accessibility/desktop capture acceptance",
+    "DPI/theme/locale are explicit fixture parameters, not global OS settings"
+  ],
+  "generator": "work/quality-games/Generate-Resources.ps1; built-in Windows System.Drawing",
+  "resourceVersion": 1
+}

@@ -1,0 +1,13 @@
+{
+  "requirements": [
+    {
+      "name": "Microsoft.NETCore.App",
+      "minInclusive": "10.0.0",
+      "maxExclusive": "11.0.0",
+      "architecture": "x64",
+      "id": "sample",
+      "kind": "DotNet"
+    }
+  ],
+  "schemaVersion": 1
+}

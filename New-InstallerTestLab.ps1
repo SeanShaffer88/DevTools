@@ -1,0 +1,46 @@
+#requires -Version 7.0
+<#
+.SYNOPSIS
+Generates a Windows Sandbox lab and working PS5.1 lifecycle/assertion runner; does not launch it.
+.PARAMETER PlanPath
+schemaVersion1 plan phases install/upgrade/uninstall; each phase declares a staged executable,
+argument array, expectedExitCodes, timeoutSeconds, and optional file/process/startup assertions.
+%INPUT% and %WORK% in argument/assertion paths expand inside the guest. @system/msiexec.exe
+selects the guest's system installer only. file assertions support sha256 and preserveFromPhase.
+.NOTES
+InputRoot is copied bounded without reparse traversal. Input mapping is read-only; only a new
+results directory is writable. Network/clipboard/audio/video/printer sharing disabled.
+VMExecution remains NotPerformed until separately authorized actual Sandbox execution.
+#>
+[CmdletBinding()]
+param([Parameter(Mandatory)][string]$InputRoot,[Parameter(Mandatory)][string]$PlanPath,[Parameter(Mandatory)][string]$Destination,[switch]$Json)
+$ErrorActionPreference='Stop';. (Join-Path $PSScriptRoot 'lib/RuntimeCommon.ps1');. (Join-Path $PSScriptRoot 'lib/WindowsDiagnosticsCommon.ps1')
+$result=[ordered]@{schemaVersion=1;observedUtc=[datetime]::UtcNow.ToString('o');tool='New-InstallerTestLab';scope='Generation only';valid=$false;destination=$null;configuration=$null;vmExecution='NotPerformed';error=$null;limitations=@('A generated lab is not a passed installer/upgrade qualification.','Opening lab.wsb executes the explicit plan inside Windows Sandbox; do not run installers on the host.','Guest logs/results can contain sensitive application data.','Guest phase timeout stops its direct child; detached installer descendants are discarded when the Sandbox is closed.')}
+try{
+    $destinationPath=Assert-DevNewDestination $Destination;$input=Get-Item -LiteralPath $InputRoot;if(-not $input.PSIsContainer -or -not $input.Parent){throw 'InputRoot must be a dedicated existing directory.'};$root=$input.FullName.TrimEnd('\')
+    $cursor=$root;while($cursor){$item=Get-Item -LiteralPath $cursor -Force;if($item.Attributes -band [IO.FileAttributes]::ReparsePoint){throw 'InputRoot ancestors must not be reparse points.'};$next=Split-Path $cursor -Parent;if($next -eq $cursor){break};$cursor=$next}
+    if(Test-Path -LiteralPath (Join-Path $root '_devtools')){throw 'InputRoot reserved _devtools path already exists.'}
+    $plan=Read-DevJson $PlanPath;if($plan.schemaVersion -ne 1 -or $plan.phases -isnot [array] -or $plan.phases.Count -lt 1 -or $plan.phases.Count -gt 3){throw 'Invalid lifecycle plan schema.'}
+    if($plan.Contains('fixtureOnly') -and $plan.fixtureOnly -isnot [bool]){throw 'fixtureOnly must be Boolean.'}
+    $seen=[Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase);$last=-1
+    foreach($phase in $plan.phases){$order=@('install','upgrade','uninstall').IndexOf($phase.name);if($order -lt 0 -or $order -le $last -or -not $seen.Add($phase.name)){throw 'Phases must be unique and ordered install, upgrade, uninstall.'};$last=$order
+        if($phase.executable -eq '@system/msiexec.exe'){if($plan.fixtureOnly){throw 'Fixture plans cannot use the system installer.'}}else{$executable=Resolve-DevContainedFile $root $phase.executable;if(-not [IO.File]::Exists($executable) -or [IO.Path]::GetExtension($executable) -ine '.exe'){throw 'Phase executable must be a staged .exe file.'}}
+        if($phase.arguments -isnot [array] -or $phase.arguments.Count -gt 128 -or @($phase.arguments | Where-Object {$_ -isnot [string] -or $_.Length -gt 8192}).Count){throw 'Phase arguments must be bounded string arrays.'}
+        if($phase.expectedExitCodes -isnot [array] -or $phase.expectedExitCodes.Count -lt 1 -or $phase.expectedExitCodes.Count -gt 16 -or @($phase.expectedExitCodes | Where-Object {$_ -isnot [int] -and $_ -isnot [long]}).Count){throw 'Expected exit codes must be an integer array.'}
+        if(($phase.timeoutSeconds -isnot [int] -and $phase.timeoutSeconds -isnot [long]) -or $phase.timeoutSeconds -lt 1 -or $phase.timeoutSeconds -gt 300){throw 'Phase timeout must be1..300 seconds.'}
+        foreach($field in @('fileAssertions','processAssertions','startupAssertions')){if($phase.Contains($field)){if($phase[$field] -isnot [array] -or $phase[$field].Count -gt 256){throw 'Assertions must be bounded arrays.'};foreach($entry in $phase[$field]){if($entry -isnot [Collections.IDictionary]){throw 'Each assertion must be an object.'}}}}
+        foreach($assertion in @($phase.fileAssertions | Where-Object {$null -ne $_})){if($assertion.path -isnot [string] -or -not $assertion.path -or $assertion.path.Length -gt 2048 -or $assertion.exists -isnot [bool] -or ($assertion.sha256 -and $assertion.sha256 -notmatch '^[a-fA-F0-9]{64}$')){throw 'Invalid file assertion.'};if($assertion.preserveFromPhase -and ($assertion.preserveFromPhase -eq $phase.name -or -not $seen.Contains($assertion.preserveFromPhase))){throw 'Preservation source phase must already exist.'}}
+        foreach($assertion in @($phase.processAssertions | Where-Object {$null -ne $_})){if($assertion.name -notmatch '^[A-Za-z0-9_.-]{1,128}$' -or $assertion.running -isnot [bool]){throw 'Invalid process assertion.'}}
+        foreach($assertion in @($phase.startupAssertions | Where-Object {$null -ne $_})){if($assertion.hive -notin @('CurrentUser','LocalMachine') -or $assertion.name -isnot [string] -or [string]::IsNullOrWhiteSpace($assertion.name) -or $assertion.name.Length -gt 256 -or $assertion.name -match '[\x00-\x1f]' -or $assertion.exists -isnot [bool] -or ($assertion.Contains('expectedValue') -and $assertion.expectedValue -isnot [string])){throw 'Invalid startup assertion.'}}
+    }
+    $inventory=[Collections.Generic.List[object]]::new();$stack=[Collections.Generic.Stack[object]]::new();$stack.Push(@{path=$root;depth=0});$bytes=0L
+    while($stack.Count){$entry=$stack.Pop();foreach($item in Get-ChildItem -LiteralPath $entry.path -Force){if($inventory.Count -ge 4096){throw 'Input file/count bound reached.'};if($item.Attributes -band [IO.FileAttributes]::ReparsePoint){throw 'Input reparse points are not supported.'};$relative=[IO.Path]::GetRelativePath($root,$item.FullName);$inventory.Add(@{path=$item.FullName;relative=$relative;directory=$item.PSIsContainer});if($item.PSIsContainer){if($entry.depth -ge 8){throw 'Input depth bound reached.'};$stack.Push(@{path=$item.FullName;depth=$entry.depth+1})}else{$bytes+=$item.Length;if($item.Length -gt 268435456 -or $bytes -gt 536870912){throw 'Input byte bound reached.'}}}}
+    $staged=Join-Path $destinationPath 'input';$results=Join-Path $destinationPath 'results';$engine=Join-Path $staged '_devtools';$null=[IO.Directory]::CreateDirectory($engine);$null=[IO.Directory]::CreateDirectory($results)
+    foreach($entry in $inventory){$target=Join-Path $staged $entry.relative;if($entry.directory){$null=[IO.Directory]::CreateDirectory($target)}else{$parent=Split-Path $target -Parent;$null=[IO.Directory]::CreateDirectory($parent);[IO.File]::Copy($entry.path,$target,$false)}}
+    Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'lib/WindowsDiagnosticsGuest.ps1') -Destination (Join-Path $engine 'guest.ps1');Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'lib/WindowsDiagnosticsGuestProcess.cs') -Destination (Join-Path $engine 'WindowsDiagnosticsGuestProcess.cs');$plan | ConvertTo-Json -Depth 20 | Set-Content -LiteralPath (Join-Path $engine 'plan.json')
+    $wsb=Join-Path $destinationPath 'lab.wsb';$settings=[Xml.XmlWriterSettings]::new();$settings.Indent=$true;$writer=[Xml.XmlWriter]::Create($wsb,$settings)
+    try{$writer.WriteStartElement('Configuration');foreach($field in @('Networking','ClipboardRedirection','AudioInput','VideoInput','PrinterRedirection','vGPU')){$writer.WriteElementString($field,'Disable')};$writer.WriteStartElement('MappedFolders');foreach($mapping in @(@($staged,'C:\DevToolsInput','true'),@($results,'C:\DevToolsResults','false'))){$writer.WriteStartElement('MappedFolder');$writer.WriteElementString('HostFolder',$mapping[0]);$writer.WriteElementString('SandboxFolder',$mapping[1]);$writer.WriteElementString('ReadOnly',$mapping[2]);$writer.WriteEndElement()};$writer.WriteEndElement();$writer.WriteStartElement('LogonCommand');$writer.WriteElementString('Command','powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File C:\DevToolsInput\_devtools\guest.ps1 -PlanPath C:\DevToolsInput\_devtools\plan.json -InputRoot C:\DevToolsInput -ResultsRoot C:\DevToolsResults -SandboxAcknowledged');$writer.WriteEndElement();$writer.WriteEndElement()}finally{$writer.Dispose()}
+    [IO.File]::WriteAllText((Join-Path $destinationPath 'README.txt'),"Generated lab only. No installer executed by generation. Review input\_devtools\plan.json, then explicitly open lab.wsb on a Sandbox-capable host. Results are written only to results. A VM execution was not performed. Never run an installer on the host as a substitute. Logs and dumps may be sensitive.")
+    $result.valid=$true;$result.destination=$destinationPath;$result.configuration=$wsb;$result.stagedFiles=@($inventory | Where-Object {-not $_.directory}).Count;$global:LASTEXITCODE=0
+}catch{$result.error=$_.Exception.Message;$global:LASTEXITCODE=125}
+if($Json){$result | ConvertTo-Json -Depth 10}else{[pscustomobject]$result}

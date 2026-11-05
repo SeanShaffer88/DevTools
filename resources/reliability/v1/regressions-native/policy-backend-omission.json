@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "operation": "worker-launch",
+  "exitCode": 1,
+  "stderr": "Sandbox backend was omitted from the worker launch configuration.",
+  "stdout": "",
+  "context": {"host": "local", "sandbox": "unknown", "windowsSandboxConfigured": true}
+}

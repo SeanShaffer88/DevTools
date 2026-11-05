@@ -1,0 +1,1 @@
+-- Original harmless syntax fixture

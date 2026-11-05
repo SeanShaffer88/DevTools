@@ -1,0 +1,710 @@
+{
+  "schemaVersion": 1,
+  "name": "Local Developer Toolkit",
+  "version": "0.4.0",
+  "entrypoint": "README.md",
+  "requires": {
+    "powerShell": ">=7.0",
+    "platform": "Windows",
+    "thirdPartyDependencies": [],
+    "core": "PowerShell7 and built-in .NET; optional explicitly approved toolchains separately indexed"
+  },
+  "helpers": [
+    {
+      "path": "Get-DevEnvironment.ps1",
+      "purpose": "Read-only local toolchain inventory",
+      "parameters": [
+        "Json"
+      ],
+      "writes": [],
+      "resultSchemaVersion": 1
+    },
+    {
+      "path": "Get-ProjectInfo.ps1",
+      "purpose": "Read-only bounded project and Git inspection",
+      "parameters": [
+        "ProjectPath (required)",
+        "MaxDepth (0-4; default 2)",
+        "Json"
+      ],
+      "writes": [],
+      "resultSchemaVersion": 1
+    },
+    {
+      "path": "Invoke-DevBuild.ps1",
+      "purpose": "Explicit process execution, logs and artifact hashes",
+      "parameters": [
+        "ProjectPath (required)",
+        "Executable (required)",
+        "ArgumentList (string[])",
+        "ArtifactPath (string[])"
+      ],
+      "writes": [
+        "runs/<unique-run>/stdout.log",
+        "runs/<unique-run>/stderr.log",
+        "runs/<unique-run>/result.json",
+        "Explicit command's own write scope"
+      ],
+      "resultSchemaVersion": 1
+    },
+    {
+      "path": "Get-DllInfo.ps1",
+      "purpose": "Bounded PE architecture/import/export inspection without loading target",
+      "parameters": [
+        "Path (required)",
+        "CompareTo",
+        "Json"
+      ],
+      "writes": [],
+      "resultSchemaVersion": 1
+    },
+    {
+      "path": "Test-WowAddon.ps1",
+      "purpose": "TOC/interface and contained Lua/XML load-graph validation",
+      "parameters": [
+        "AddonPath (required)",
+        "TocPath",
+        "InterfaceVersion",
+        "Json"
+      ],
+      "writes": [],
+      "resultSchemaVersion": 1
+    },
+    {
+      "path": "Get-AndroidDiagnostics.ps1",
+      "purpose": "Offline APK inspection or explicitly selected finite device diagnostics",
+      "parameters": [
+        "ApkPath (offline mode)",
+        "DeviceSerial (device mode)",
+        "PackageName (device mode)",
+        "LogLines (1-2000; per PID)",
+        "AdbPath (device mode)",
+        "TimeoutSeconds (1-120; per command)",
+        "Json"
+      ],
+      "writes": [
+        "No helper files; explicit device mode may start local ADB server"
+      ],
+      "resultSchemaVersion": 1
+    },
+    {
+      "path": "Test-Package.ps1",
+      "purpose": "Package inventory, manifest hashes and explicitly expected PE architecture",
+      "parameters": [
+        "PackagePath (required)",
+        "ManifestPath",
+        "ExpectedArchitecture (x86|x64|Arm64)",
+        "Strict",
+        "Json"
+      ],
+      "writes": [],
+      "resultSchemaVersion": 1
+    },
+    {
+      "path": "New-DevProject.ps1",
+      "purpose": "Generate local source templates without building/downloading",
+      "parameters": [
+        "Template (WindowsConsole|NativeDll|WowAddon|AndroidApp|AndroidGame)",
+        "Destination (new directory)",
+        "Name (safe identifier)",
+        "InterfaceVersion (required for WowAddon)",
+        "TargetFramework (default net10.0)",
+        "Json"
+      ],
+      "writes": [
+        "Explicit new destination only"
+      ],
+      "resultSchemaVersion": 1
+    },
+    {
+      "path": "Get-DevReference.ps1",
+      "purpose": "Search original local operational notes and provenance",
+      "parameters": [
+        "Query",
+        "Category (Dll|Wow|Android|Packaging|Templates|Toolkit|Runtime|Sdk|Dependencies|Crash|Contracts|Installer|Build|Fixtures|Cache|Recipes)",
+        "Resources (search versioned resource notes/recipes)",
+        "Json"
+      ],
+      "writes": [],
+      "resultSchemaVersion": 1
+    },
+    {
+      "resultSchemaVersion": 1,
+      "purpose": "Declared runtime architecture/version requirements vs host or supplied evidence",
+      "writes": [],
+      "path": "Test-RuntimeRequirements.ps1",
+      "exitCodes": {
+        "pass": 0,
+        "setup": 125,
+        "unknownOrUnavailable": 3,
+        "failure": 2
+      },
+      "parameters": [
+        "ManifestPath",
+        "InventoryPath",
+        "Json"
+      ]
+    },
+    {
+      "resultSchemaVersion": 1,
+      "purpose": "Structural SDK/compiler/header/library/reference-pack completeness",
+      "writes": [],
+      "path": "Test-SdkCompleteness.ps1",
+      "exitCodes": {
+        "pass": 0,
+        "setup": 125,
+        "unknownOrUnavailable": 3,
+        "failure": 2
+      },
+      "parameters": [
+        "Profile",
+        "Root",
+        "Architecture",
+        "Version",
+        "WindowsSdkRoot",
+        "WindowsSdkVersion",
+        "JdkRoot",
+        "BuildToolsVersion",
+        "Json"
+      ]
+    },
+    {
+      "resultSchemaVersion": 1,
+      "purpose": "Bounded static native dependency candidates, symbols and forwarders",
+      "writes": [],
+      "path": "Resolve-NativeDependencies.ps1",
+      "exitCodes": {
+        "pass": 0,
+        "setup": 125,
+        "unknownOrUnavailable": 3,
+        "failure": 2
+      },
+      "parameters": [
+        "Path",
+        "SearchDirectory",
+        "MaxDepth",
+        "MaxNodes",
+        "Json"
+      ]
+    },
+    {
+      "resultSchemaVersion": 1,
+      "purpose": "Supported offline dependency component inventory and supplied license/advisory evidence",
+      "writes": [
+        "Explicit new output; opt-in online source queries without restore"
+      ],
+      "path": "Get-DependencyAudit.ps1",
+      "exitCodes": {
+        "pass": 0,
+        "setup": 125,
+        "unknownOrUnavailable": 3,
+        "failure": 2
+      },
+      "parameters": [
+        "InputPath",
+        "AdvisoryPath",
+        "LicensePath",
+        "CacheCatalogPath",
+        "CacheRoot",
+        "OnlineDotNetAudit",
+        "ProjectPath",
+        "OutputPath",
+        "TimeoutSeconds",
+        "Json"
+      ]
+    },
+    {
+      "resultSchemaVersion": 1,
+      "purpose": "Explicit owned-process diagnostic bundle and optional native minidump",
+      "writes": [
+        "Explicit new bundle destination; optional sensitive dump/logs"
+      ],
+      "path": "Export-CrashDiagnostics.ps1",
+      "exitCodes": {
+        "pass": 0,
+        "setup": 125,
+        "unknownOrUnavailable": 3,
+        "failure": 2
+      },
+      "parameters": [
+        "ProcessId",
+        "Destination",
+        "ExpectedStartTimeUtc",
+        "IncludeDump",
+        "LogPath",
+        "MaxLogBytes",
+        "Json"
+      ]
+    },
+    {
+      "resultSchemaVersion": 1,
+      "purpose": "Explicit trusted typed DLL contract checks in an isolated child",
+      "writes": [
+        "Unique child-run evidence; explicit ExecuteTrusted executes selected DLL in child"
+      ],
+      "path": "Test-DllContract.ps1",
+      "exitCodes": {
+        "pass": 0,
+        "setup": 125,
+        "unknownOrUnavailable": 3,
+        "failure": 2
+      },
+      "parameters": [
+        "LibraryPath",
+        "ContractPath",
+        "ExecuteTrusted",
+        "TimeoutSeconds",
+        "PowerShellPath",
+        "Json"
+      ]
+    },
+    {
+      "resultSchemaVersion": 1,
+      "purpose": "Generate reviewable Windows Sandbox lifecycle lab without launch",
+      "writes": [
+        "Explicit new lab and result directory; guest execution separate"
+      ],
+      "path": "New-InstallerTestLab.ps1",
+      "exitCodes": {
+        "pass": 0,
+        "setup": 125,
+        "unknownOrUnavailable": 3,
+        "failure": 2
+      },
+      "parameters": [
+        "InputRoot",
+        "PlanPath",
+        "Destination",
+        "Json"
+      ]
+    },
+    {
+      "resultSchemaVersion": 1,
+      "purpose": "Create/import/verify client Interface and Lua profiles as data",
+      "writes": [
+        "Explicit new profile destination"
+      ],
+      "path": "Manage-WowClientProfile.ps1",
+      "exitCodes": {
+        "pass": 0,
+        "setup": 125,
+        "unknownOrUnavailable": 3,
+        "failure": 2
+      },
+      "parameters": [
+        "Destination",
+        "Id",
+        "InterfaceVersion",
+        "LuaVersion",
+        "SourcePath",
+        "SavedVariablesPath",
+        "SourceDescription",
+        "ProfilePath",
+        "Json"
+      ]
+    },
+    {
+      "resultSchemaVersion": 1,
+      "purpose": "Actual matching Lua syntax and optional explicitly trusted mock harness",
+      "writes": [
+        "Interpreter child only; selected trusted harness may perform its own actions"
+      ],
+      "path": "Test-WowLua.ps1",
+      "exitCodes": {
+        "pass": 0,
+        "setup": 125,
+        "unknownOrUnavailable": 3,
+        "failure": 2
+      },
+      "parameters": [
+        "AddonPath",
+        "ProfilePath",
+        "TocPath",
+        "InterpreterPath",
+        "HarnessPath",
+        "ExecuteTrustedHarness",
+        "TimeoutSeconds",
+        "Json"
+      ]
+    },
+    {
+      "resultSchemaVersion": 1,
+      "purpose": "Installed SDK manifest/alignment/signature verification without signing",
+      "writes": [],
+      "path": "Test-AndroidArtifact.ps1",
+      "exitCodes": {
+        "pass": 0,
+        "setup": 125,
+        "unknownOrUnavailable": 3,
+        "failure": 2
+      },
+      "parameters": [
+        "ApkPath",
+        "BuildToolsRoot",
+        "JavaPath",
+        "TimeoutSeconds",
+        "Json"
+      ]
+    },
+    {
+      "resultSchemaVersion": 1,
+      "purpose": "Explicit finite selected-device smoke/performance diagnostics",
+      "writes": [
+        "Explicit new results; selected Launch/Startup starts Activity"
+      ],
+      "path": "Invoke-AndroidTest.ps1",
+      "exitCodes": {
+        "pass": 0,
+        "setup": 125,
+        "unknownOrUnavailable": 3,
+        "failure": 2
+      },
+      "parameters": [
+        "DeviceSerial",
+        "PackageName",
+        "Component",
+        "Tasks",
+        "Destination",
+        "AdbPath",
+        "TimeoutSeconds",
+        "Json"
+      ]
+    },
+    {
+      "resultSchemaVersion": 1,
+      "purpose": "Capture and compare explicit build/input/configuration/artifact evidence",
+      "writes": [
+        "Explicit new capture output"
+      ],
+      "path": "Compare-DevBuild.ps1",
+      "exitCodes": {
+        "pass": 0,
+        "setup": 125,
+        "unknownOrUnavailable": 3,
+        "failure": 2
+      },
+      "parameters": [
+        "Root",
+        "InputPath",
+        "ArtifactPath",
+        "ConfigurationPath",
+        "OutputPath",
+        "BaselinePath",
+        "CurrentPath",
+        "Json"
+      ]
+    },
+    {
+      "path": "Test-WindowsUi.ps1",
+      "purpose": "Test-WindowsUi.ps1 -ProcessId <int> -AssertionsPath <string> [-AllowActions] [-TimeoutSeconds <int>] [-MaxNodes <int>] [-MaxDepth <int>] [-Destination <string>] [-Json] [<CommonParameters>]\r\nTest-WindowsUi.ps1 -SnapshotPath <string> -AssertionsPath <string> [-AllowActions] [-TimeoutSeconds <int>] [-MaxNodes <int>] [-MaxDepth <int>] [-Destination <string>] [-Json] [<CommonParameters>]",
+      "parameters": [
+        "ProcessId",
+        "SnapshotPath",
+        "AssertionsPath",
+        "AllowActions",
+        "TimeoutSeconds",
+        "MaxNodes",
+        "MaxDepth",
+        "Destination",
+        "Json"
+      ],
+      "writes": [
+        "Optional explicit new Destination; owned-process actions only with AllowActions"
+      ],
+      "resultSchemaVersion": 1
+    },
+    {
+      "path": "Invoke-NativeMemoryTest.ps1",
+      "purpose": "Invoke-NativeMemoryTest.ps1 [-ProjectPath] <string> [-BuildManifestPath] <string> [-Destination] <string> [-ExecuteTrusted] [-Json] [<CommonParameters>]",
+      "parameters": [
+        "ProjectPath",
+        "BuildManifestPath",
+        "Destination",
+        "ExecuteTrusted",
+        "Json"
+      ],
+      "writes": [
+        "Explicit new Destination and trusted build/test manifest actions"
+      ],
+      "resultSchemaVersion": 1
+    },
+    {
+      "path": "Test-DataMigration.ps1",
+      "purpose": "Test-DataMigration.ps1 [-FixtureRoot] <string> [-PlanPath] <string> [-Destination] <string> [-ExecuteTrusted] [-Json] [<CommonParameters>]",
+      "parameters": [
+        "FixtureRoot",
+        "PlanPath",
+        "Destination",
+        "ExecuteTrusted",
+        "Json"
+      ],
+      "writes": [
+        "Explicit new Destination and copied fixtures; trusted migration actions"
+      ],
+      "resultSchemaVersion": 1
+    },
+    {
+      "path": "Compare-UiSnapshot.ps1",
+      "purpose": "Compare explicit PNG/BMP images and/or schema1 UIA snapshots with compatible contexts.",
+      "parameters": [
+        "BaselineImage",
+        "CurrentImage",
+        "BaselineSnapshot",
+        "CurrentSnapshot",
+        "BaselineContext",
+        "CurrentContext",
+        "BudgetPath",
+        "DiffImage",
+        "MaxImageBytes",
+        "MaxPixels",
+        "MaxNodes",
+        "Json"
+      ],
+      "writes": [
+        "Optional explicit new DiffImage"
+      ],
+      "resultSchemaVersion": 1
+    },
+    {
+      "path": "Invoke-WindowsPerformance.ps1",
+      "purpose": "Named owned WPR capture, supplied metric budgets, or explicit ETL inventory.",
+      "parameters": [
+        "Mode",
+        "Destination",
+        "Profile",
+        "DurationSeconds",
+        "EtlPath",
+        "MetricsPath",
+        "BudgetPath",
+        "WprPath",
+        "Json"
+      ],
+      "writes": [
+        "Explicit new Destination; owned unique WPR instance only"
+      ],
+      "resultSchemaVersion": 1
+    },
+    {
+      "path": "Invoke-ParserFuzz.ps1",
+      "purpose": "Deterministic bounded mutations of explicit seeds against an explicitly trusted executable.",
+      "parameters": [
+        "TargetPath",
+        "ArgumentList",
+        "SeedPath",
+        "AllowedExitCodes",
+        "Destination",
+        "ExecuteTrusted",
+        "RandomSeed",
+        "Cases",
+        "PerProcessSeconds",
+        "GlobalSeconds",
+        "MaxInputBytes",
+        "MaxOutputBytes",
+        "MinimizeCalls",
+        "Json"
+      ],
+      "writes": [
+        "Explicit new Destination; explicitly trusted target actions"
+      ],
+      "resultSchemaVersion": 1
+    },
+    {
+      "path": "Compare-ManagedApi.ps1",
+      "purpose": "Compare declared public/protected metadata API in isolated bounded children; never loads targets.",
+      "parameters": [
+        "BaselinePath",
+        "CurrentPath",
+        "TimeoutSeconds",
+        "TrustMetadata",
+        "Json"
+      ],
+      "writes": [],
+      "resultSchemaVersion": 1
+    },
+    {
+      "path": "Find-PrivateData.ps1",
+      "purpose": "Bounded local heuristic scan; output uses file ordinals, never source paths or text.",
+      "parameters": [
+        "Path",
+        "MaxDepth",
+        "MaxFiles",
+        "MaxFileBytes",
+        "MaxTotalBytes",
+        "MaxFindings",
+        "Json"
+      ],
+      "writes": [],
+      "resultSchemaVersion": 1
+    },
+    {
+      "path": "Test-GameAssets.ps1",
+      "purpose": "Test-GameAssets.ps1 [-AssetRoot] <string> [[-ManifestPath] <string>] [[-PathPolicy] <string>] [-Json] [<CommonParameters>]",
+      "parameters": [
+        "AssetRoot",
+        "ManifestPath",
+        "PathPolicy",
+        "Json"
+      ],
+      "writes": [],
+      "resultSchemaVersion": 1
+    },
+    {
+      "path": "Invoke-GameplayReplay.ps1",
+      "purpose": "Invoke-GameplayReplay.ps1 [-AdapterPath] <string> [[-ArgumentList] <string[]>] [-ScenarioPath] <string> [-Destination] <string> [[-Runs] <int>] [[-TimeoutSeconds] <int>] [-ExecuteTrusted] [-Json] [<CommonParameters>]",
+      "parameters": [
+        "AdapterPath",
+        "ArgumentList",
+        "ScenarioPath",
+        "Destination",
+        "ExecuteTrusted",
+        "Runs",
+        "TimeoutSeconds",
+        "Json"
+      ],
+      "writes": [
+        "Explicit new Destination; explicitly trusted adapter actions"
+      ],
+      "resultSchemaVersion": 1
+    },
+    {
+      "path": "Invoke-AndroidLifecycle.ps1",
+      "purpose": "Invoke-AndroidLifecycle.ps1 [-DeviceSerial] <string> [-PackageName] <string> [-Component] <string> [-Tasks] <string[]> [-Destination] <string> [-AdbPath] <string> [[-AdapterPath] <string>] [[-AdapterArguments] <string[]>] [[-PersistencePath] <string>] [[-TimeoutSeconds] <int>] [-ExecuteTrustedAdapter] [-AllowHomeBackground] [-Json] [<CommonParameters>]",
+      "parameters": [
+        "DeviceSerial",
+        "PackageName",
+        "Component",
+        "Tasks",
+        "Destination",
+        "AdbPath",
+        "AdapterPath",
+        "AdapterArguments",
+        "ExecuteTrustedAdapter",
+        "AllowHomeBackground",
+        "PersistencePath",
+        "TimeoutSeconds",
+        "Json"
+      ],
+      "writes": [
+        "Explicit new Destination; selected device/app tasks and acknowledged trusted adapter"
+      ],
+      "resultSchemaVersion": 1
+    },
+    {
+      "path": "New-WowDiagnosticsAddon.ps1",
+      "purpose": "New-WowDiagnosticsAddon.ps1 [-Destination] <string> [-Name] <string> [-ProfilePath] <string> [-Json] [<CommonParameters>]",
+      "parameters": [
+        "Destination",
+        "Name",
+        "ProfilePath",
+        "Json"
+      ],
+      "writes": [
+        "Explicit new Destination only"
+      ],
+      "resultSchemaVersion": 1
+    }
+  ],
+  "validation": "tests/Test-DevTools.ps1",
+  "evidence": "validation.json",
+  "validationSummary": "validation-summary.json",
+  "extensionValidation": [
+    {
+      "test": "tests/Test-BinaryAddon.ps1",
+      "evidence": "validation-binary-addon.json"
+    },
+    {
+      "test": "tests/Test-PackageReferences.ps1",
+      "evidence": "validation-package-references.json"
+    },
+    {
+      "test": "tests/Test-Extensions.ps1",
+      "evidence": "validation-extensions.json"
+    },
+    {
+      "evidence": "validation-runtime-sdk-dependencies.json",
+      "test": "tests/Test-RuntimeSdkDependencies.ps1"
+    },
+    {
+      "evidence": "validation-windows-diagnostics.json",
+      "test": "tests/Test-WindowsDiagnostics.ps1"
+    },
+    {
+      "evidence": "validation-platform-resources.json",
+      "test": "tests/Test-PlatformResources.ps1"
+    }
+  ],
+  "templateRoot": "templates",
+  "referenceIndex": "references/index.json",
+  "discovery": {
+    "globalInstructions": "C:/Users/Sean Shaffer/.codex/AGENTS.md",
+    "scope": "New local Codex chats using this profile",
+    "behavior": "Automatically select relevant helpers for authorized project work; delegated workers receive toolkit context"
+  },
+  "limitations": [
+    "Static inspections do not certify full ABI or actual Windows loader contexts; unknown/unsupported evidence remains nonpass.",
+    "DLL contract execution requires explicit trust and occurs only in child; inspection helpers never load their targets.",
+    "Real Lua syntax/mock tests do not establish real WoW API, taint or game execution.",
+    "Android artifact checks do not certify all ELF/page-size/release policy requirements; actual unsigned fixture correctly fails signature.",
+    "Real-device, Windows Sandbox lifecycle and fresh online advisory gates remain unperformed unless recorded.",
+    "Other profiles/machines/products require their own discovery guidance and folder access."
+  ],
+  "optionalDependencies": [
+    {
+      "automaticDownload": false,
+      "compilerPath": "tools/lua-5.1.5/bin/luac.exe",
+      "licensePath": "tools/lua-5.1.5/bin/COPYRIGHT",
+      "source": "https://www.lua.org/ftp/lua-5.1.5.tar.gz",
+      "name": "Lua",
+      "sha256": "2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333",
+      "provenancePath": "tools/lua-5.1.5/provenance.json",
+      "version": "5.1.5",
+      "license": "MIT",
+      "path": "tools/lua-5.1.5/bin/lua.exe",
+      "approval": "Specific explicit user approval, November3 2026"
+    }
+  ],
+  "resourceIndex": "resources/index.json",
+  "resourceUtilities": [
+    {
+      "path": "resources/New-RegressionFixture.ps1",
+      "writes": [
+        "New selected destination"
+      ],
+      "purpose": "Generate inert original bounded regression fixtures into new folder"
+    },
+    {
+      "path": "resources/Test-CacheCatalog.ps1",
+      "writes": [],
+      "purpose": "Offline cache identity and provenance metadata verification"
+    },
+    {
+      "path": "tools/lua-5.1.5/Build-Lua.ps1",
+      "writes": [
+        "Explicit new build destination only"
+      ],
+      "purpose": "Rebuild specifically approved pinned official Lua source using installed SDK"
+    },
+    {
+      "path": "resources/Test-MediaAttribution.ps1",
+      "purpose": "Bounded catalog hashes and declared media attribution",
+      "writes": [
+        "Optional explicit new CreditsPath"
+      ]
+    }
+  ],
+  "examples": [
+    "schemas/runtime-requirements.example.json",
+    "schemas/runtime-inventory.example.json",
+    "schemas/dll-contract.example.json",
+    "schemas/installer-lifecycle.example.json",
+    "resources/quality/v1/budgets/example.json",
+    "resources/quality/v1/contracts/replay-scenario.json",
+    "resources/quality/v1/contracts/save.schema.json",
+    "resources/quality/v1/media/catalog.json"
+  ],
+  "qualityValidation": [
+    "validation-quality-foundations.json",
+    "validation-quality-native.json",
+    "validation-quality-games.json"
+  ]
+}

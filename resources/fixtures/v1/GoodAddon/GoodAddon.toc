@@ -1,0 +1,5 @@
+## Interface: 30300
+## Title: GoodAddon
+## Author: Malikor
+main.lua
+

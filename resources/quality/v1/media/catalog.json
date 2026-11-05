@@ -1,0 +1,23 @@
+{
+  "entries": [
+    {
+      "sha256": "384D6F5C1F8EA459C38EB7EEA437A326FAD3D1B89A5E9F0FF410589EF55C7669",
+      "requiredCredits": "Original DevTools fixture",
+      "path": "original-button.png",
+      "author": "DevTools fixture author",
+      "modification": "None",
+      "license": "Original fixture; local use declared by toolkit author",
+      "source": "Original locally generated DevTools fixture"
+    },
+    {
+      "sha256": "C419DEDBD63F6B828F6D62715FFE12DEB36D844EAA2453B9AD1EF2641BE39CE3",
+      "requiredCredits": "Original DevTools fixture",
+      "path": "original-tone.wav",
+      "author": "DevTools fixture author",
+      "modification": "None",
+      "license": "Original fixture; local use declared by toolkit author",
+      "source": "Original locally generated DevTools fixture"
+    }
+  ],
+  "schemaVersion": 1
+}

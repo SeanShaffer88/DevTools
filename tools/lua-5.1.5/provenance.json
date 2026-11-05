@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "observedUtc": "2026-11-03T22:01:19.043087Z",
+  "tool": "Build-Lua",
+  "scope": "ApprovedLua515Build",
+  "valid": true,
+  "findings": [],
+  "limitations": [],
+  "error": null,
+  "buildExitCode": 0,
+  "sourceUrl": "https://www.lua.org/ftp/lua-5.1.5.tar.gz",
+  "sourceSha256": "2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333",
+  "compilerEnvironment": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvars64.bat",
+  "flags": [
+    "/O2",
+    "/DLUA_USE_WINDOWS",
+    "/D_CRT_SECURE_NO_WARNINGS",
+    "normal configured CRT"
+  ],
+  "version": "Lua 5.1.5  Copyright (C) 1994-2012 Lua.org, PUC-Rio",
+  "destination": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\tools\\lua-5.1.5\\verified-build",
+  "artifacts": [
+    {
+      "path": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\tools\\lua-5.1.5\\verified-build\\lua.exe",
+      "sha256": "CD01A1F87BD7A94407CA9670DB0B3303CDA55BE7FB1676B065498004CA522D6D"
+    },
+    {
+      "path": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\tools\\lua-5.1.5\\verified-build\\luac.exe",
+      "sha256": "942B723BA397D32231742CE814A31E5B7DCD1810340EE119A1B5CCC59F64C9FD"
+    }
+  ],
+  "license": "MIT; exact upstream COPYRIGHT retained",
+  "canonicalBin": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\tools\\lua-5.1.5\\bin",
+  "compilerVersion": "19.44.35229.0",
+  "windowsSdkVersion": "10.0.26100.0",
+  "explicitIncludeDirectories": [
+    "ucrt",
+    "shared",
+    "um"
+  ],
+  "explicitLibraryDirectories": [
+    "ucrt\\x64",
+    "um\\x64"
+  ],
+  "originalAttempt": {
+    "reason": "vcvars environment omitted UCRT include/lib; corrected explicit SDK flags",
+    "exitCode": 2,
+    "logs": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\tools\\lua-5.1.5\\bin\\build.stdout.log"
+  }
+}

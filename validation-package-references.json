@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "observedUtc": "2026-11-03T23:20:09.7365364Z",
+  "command": "pwsh -NoProfile -File 'C:\\Users\\Sean Shaffer\\Documents\\DevTools\\tests\\Test-PackageReferences.ps1'",
+  "exitCode": 0,
+  "fixturePath": "C:\\Users\\Sean Shaffer\\Documents\\Codex\\2026-11-03\\a\\work\\package-reference-d52d65ae031d440d8edabae091f2759f",
+  "checks": [
+    {
+      "name": "AST Test-Package.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST Get-DevReference.ps1",
+      "passed": true
+    },
+    {
+      "name": "Valid package/hash/Strict and self-manifest exclusion",
+      "passed": true
+    },
+    {
+      "name": "Package inspection leaves payload unchanged",
+      "passed": true
+    },
+    {
+      "name": "Unperformed installer/runtime checks explicit",
+      "passed": true
+    },
+    {
+      "name": "Hash mismatch fails with exit 2",
+      "passed": true
+    },
+    {
+      "name": "Required file defaults true and missing fails",
+      "passed": true
+    },
+    {
+      "name": "Optional missing informational and unexpected warning",
+      "passed": true
+    },
+    {
+      "name": "Strict unexpected file fails",
+      "passed": true
+    },
+    {
+      "name": "Strict requires manifest",
+      "passed": true
+    },
+    {
+      "name": "Malformed manifest rejected before hashing",
+      "passed": true
+    },
+    {
+      "name": "Malformed manifest rejected before hashing",
+      "passed": true
+    },
+    {
+      "name": "Malformed manifest rejected before hashing",
+      "passed": true
+    },
+    {
+      "name": "Malformed manifest rejected before hashing",
+      "passed": true
+    },
+    {
+      "name": "Malformed manifest rejected before hashing",
+      "passed": true
+    },
+    {
+      "name": "Malformed manifest rejected before hashing",
+      "passed": true
+    },
+    {
+      "name": "Malformed manifest rejected before hashing",
+      "passed": true
+    },
+    {
+      "name": "Malformed manifest rejected before hashing",
+      "passed": true
+    },
+    {
+      "name": "Case-insensitive normalized duplicate rejected before hashing",
+      "passed": true
+    },
+    {
+      "name": "Unsafe manifest path rejected: ..\\escape.txt",
+      "passed": true
+    },
+    {
+      "name": "Unsafe manifest path rejected: data/../config.json",
+      "passed": true
+    },
+    {
+      "name": "Unsafe manifest path rejected: C:\\Windows\\win.ini",
+      "passed": true
+    },
+    {
+      "name": "Unsafe manifest path rejected: data/config.json:stream",
+      "passed": true
+    },
+    {
+      "name": "Unsafe manifest path rejected: data/*.json",
+      "passed": true
+    },
+    {
+      "name": "Unsafe manifest path rejected: data/[x].json",
+      "passed": true
+    },
+    {
+      "name": "Unsafe manifest path rejected: data/config.json.",
+      "passed": true
+    },
+    {
+      "name": "Unsafe manifest path rejected: data//config.json",
+      "passed": true
+    },
+    {
+      "name": "Invalid JSON rejected",
+      "passed": true
+    },
+    {
+      "name": "PE machine architecture and version metadata inspection",
+      "passed": true
+    },
+    {
+      "name": "Explicit architecture mismatch fails",
+      "passed": true
+    },
+    {
+      "name": "Malformed packaged PE reported",
+      "passed": true
+    },
+    {
+      "name": "Manifest reparse escape rejected before hashing",
+      "passed": true
+    },
+    {
+      "name": "Inventory skips reparse content and reports failure",
+      "passed": true
+    },
+    {
+      "name": "Reference library index and all original notes readable offline",
+      "passed": true
+    },
+    {
+      "name": "Literal case-insensitive category search returns original note content",
+      "passed": true
+    },
+    {
+      "name": "Unknown reference query empty success",
+      "passed": true
+    },
+    {
+      "name": "Reference provenance: dll-inspection",
+      "passed": true
+    },
+    {
+      "name": "Reference provenance: wow-addon-validation",
+      "passed": true
+    },
+    {
+      "name": "Reference provenance: android-diagnostics",
+      "passed": true
+    },
+    {
+      "name": "Reference provenance: package-manifest",
+      "passed": true
+    },
+    {
+      "name": "Reference provenance: project-templates",
+      "passed": true
+    },
+    {
+      "name": "Reference provenance: toolkit-troubleshooting",
+      "passed": true
+    },
+    {
+      "name": "Reference traversal rejected",
+      "passed": true
+    },
+    {
+      "name": "Reference note size bound enforced",
+      "passed": true
+    }
+  ],
+  "skipped": [],
+  "failure": null,
+  "limitations": [
+    "Installer upgrade/settings/runtime behavior not tested.",
+    "Package architecture compares PE machine fields; not a complete managed runtime policy.",
+    "Reference library is original local notes and pointers, not an SDK mirror."
+  ]
+}

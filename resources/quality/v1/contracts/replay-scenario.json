@@ -1,0 +1,29 @@
+{
+  "events": [
+    {
+      "type": "Advance",
+      "tick": 0,
+      "data": {
+        "amount": 1
+      }
+    },
+    {
+      "type": "Advance",
+      "tick": 1,
+      "data": {
+        "amount": 2
+      }
+    }
+  ],
+  "schemaVersion": 1,
+  "checkpoints": [
+    1
+  ],
+  "initialState": {
+    "score": 0
+  },
+  "rules": [
+    "progression"
+  ],
+  "seed": 42
+}

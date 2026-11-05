@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "observedUtc": "2026-11-03T23:26:32.2083654Z",
+  "command": "pwsh -NoProfile -File tests/Test-Extensions.ps1",
+  "exitCode": 0,
+  "checks": [
+    {
+      "name": "AST Get-AndroidDiagnostics.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST New-DevProject.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST templates\\AndroidCommon\\Build.ps1",
+      "passed": true
+    },
+    {
+      "name": "Generate WindowsConsole",
+      "passed": true
+    },
+    {
+      "name": "Refuse overwrite WindowsConsole",
+      "passed": true
+    },
+    {
+      "name": "Generate NativeDll",
+      "passed": true
+    },
+    {
+      "name": "Refuse overwrite NativeDll",
+      "passed": true
+    },
+    {
+      "name": "Generate WowAddon",
+      "passed": true
+    },
+    {
+      "name": "Refuse overwrite WowAddon",
+      "passed": true
+    },
+    {
+      "name": "Generate AndroidApp",
+      "passed": true
+    },
+    {
+      "name": "Refuse overwrite AndroidApp",
+      "passed": true
+    },
+    {
+      "name": "Generate AndroidGame",
+      "passed": true
+    },
+    {
+      "name": "Refuse overwrite AndroidGame",
+      "passed": true
+    },
+    {
+      "name": "Reject injected project name",
+      "passed": true
+    },
+    {
+      "name": "Require explicit WoW interface",
+      "passed": true
+    },
+    {
+      "name": "Reject Root template junction before destination creation",
+      "passed": true
+    },
+    {
+      "name": "Reject Nested template junction before destination creation",
+      "passed": true
+    },
+    {
+      "name": "Reject destination ancestor junction",
+      "passed": true
+    },
+    {
+      "name": "Generated addon validates",
+      "passed": true
+    },
+    {
+      "name": ".NET source actually compiles offline",
+      "passed": true
+    },
+    {
+      "name": "Generated native DLL compiles and exports C ABI",
+      "passed": true
+    },
+    {
+      "name": "Default CMake native DLL is x64 with no runtime imports",
+      "passed": true
+    },
+    {
+      "name": "Trusted generated native sample ordinary function call",
+      "passed": true
+    },
+    {
+      "name": "Trusted generated native sample saturates arithmetic",
+      "passed": true
+    },
+    {
+      "name": "AndroidApp unsigned APK built",
+      "passed": true
+    },
+    {
+      "name": "AndroidApp APK has DEX and binary manifest",
+      "passed": true
+    },
+    {
+      "name": "AndroidApp SVG mockup present",
+      "passed": true
+    },
+    {
+      "name": "AndroidGame unsigned APK built",
+      "passed": true
+    },
+    {
+      "name": "AndroidGame APK has DEX and binary manifest",
+      "passed": true
+    },
+    {
+      "name": "AndroidGame SVG mockup present",
+      "passed": true
+    },
+    {
+      "name": "Android build junction rejected before outside artifacts",
+      "passed": true
+    },
+    {
+      "name": "Offline APK metadata",
+      "passed": true
+    },
+    {
+      "name": "Offline APK invokes no ADB",
+      "passed": true
+    },
+    {
+      "name": "APK inspection unchanged",
+      "passed": true
+    },
+    {
+      "name": "Distinct case-sensitive APK assets accepted",
+      "passed": true
+    },
+    {
+      "name": "Malformed APK rejected",
+      "passed": true
+    },
+    {
+      "name": "ZIP traversal rejected without extraction",
+      "passed": true
+    },
+    {
+      "name": "Explicit selected device diagnostics using fake ADB",
+      "passed": true
+    },
+    {
+      "name": "Exact serial argv boundaries",
+      "passed": true
+    },
+    {
+      "name": "Finite fixed logcat argv",
+      "passed": true
+    },
+    {
+      "name": "Multiple PIDs use separate logcat invocations",
+      "passed": true
+    },
+    {
+      "name": "ADB output bounded to 2 MiB while draining child",
+      "passed": true
+    },
+    {
+      "name": "ADB native failure propagated",
+      "passed": true
+    },
+    {
+      "name": "ADB timeout terminates selected child",
+      "passed": true
+    },
+    {
+      "name": "ADB serial injection rejected",
+      "passed": true
+    },
+    {
+      "name": "ADB package injection rejected",
+      "passed": true
+    }
+  ],
+  "commands": [
+    {
+      "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+      "exitCode": 0,
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\Codex\\2026-11-03\\a\\work\\devtools-expansion\\android-template-eaa329595bc24e359644f9a80655fb86\\0.stdout.log",
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\Codex\\2026-11-03\\a\\work\\devtools-expansion\\android-template-eaa329595bc24e359644f9a80655fb86\\0.stderr.log"
+    },
+    {
+      "executable": "C:\\WINDOWS\\system32\\cmd.exe",
+      "exitCode": 0,
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\Codex\\2026-11-03\\a\\work\\devtools-expansion\\android-template-eaa329595bc24e359644f9a80655fb86\\1.stdout.log",
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\Codex\\2026-11-03\\a\\work\\devtools-expansion\\android-template-eaa329595bc24e359644f9a80655fb86\\1.stderr.log"
+    },
+    {
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "exitCode": 0,
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\Codex\\2026-11-03\\a\\work\\devtools-expansion\\android-template-eaa329595bc24e359644f9a80655fb86\\2.stdout.log",
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\Codex\\2026-11-03\\a\\work\\devtools-expansion\\android-template-eaa329595bc24e359644f9a80655fb86\\2.stderr.log"
+    },
+    {
+      "executable": "C:\\Users\\Sean Shaffer\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "exitCode": 0,
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\Codex\\2026-11-03\\a\\work\\devtools-expansion\\android-template-eaa329595bc24e359644f9a80655fb86\\3.stdout.log",
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\Codex\\2026-11-03\\a\\work\\devtools-expansion\\android-template-eaa329595bc24e359644f9a80655fb86\\3.stderr.log"
+    },
+    {
+      "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+      "exitCode": 0,
+      "stdout": "C:\\Users\\Sean Shaffer\\Documents\\Codex\\2026-11-03\\a\\work\\devtools-expansion\\android-template-eaa329595bc24e359644f9a80655fb86\\4.stdout.log",
+      "stderr": "C:\\Users\\Sean Shaffer\\Documents\\Codex\\2026-11-03\\a\\work\\devtools-expansion\\android-template-eaa329595bc24e359644f9a80655fb86\\4.stderr.log"
+    }
+  ],
+  "fixturePath": "C:\\Users\\Sean Shaffer\\Documents\\Codex\\2026-11-03\\a\\work\\devtools-expansion\\android-template-eaa329595bc24e359644f9a80655fb86",
+  "error": null,
+  "limitations": [
+    "No real device or Android runtime test.",
+    "APKs are unsigned; no signing keys or installs.",
+    "Ruflo worker was policy-blocked; implementation/testing used local fallback."
+  ]
+}

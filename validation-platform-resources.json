@@ -1,0 +1,305 @@
+{
+  "executions": [
+    {
+      "exitCode": 0,
+      "provenancePath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\tools\\lua-5.1.5\\provenance.json",
+      "command": "User-approved official Lua5.1.5 source build with explicit installed SDK flags"
+    },
+    {
+      "command": "dotnet build FakeAdb Release using empty packageSources",
+      "exitCode": 0
+    },
+    {
+      "artifact": "C:\\Users\\Sean Shaffer\\Documents\\Codex\\2026-11-03\\a\\work\\devtools-expansion\\android-template-8ca5906288fe480692a4a173f8d79fc4\\AndroidApp With Spaces\\build\\736f6edb52f947e9b3e11481c0e85181\\SampleAndroidApp-unsigned.apk",
+      "exitCode": 2,
+      "findings": [
+        {
+          "outputTruncated": false,
+          "timedOut": false,
+          "id": "manifest",
+          "exitCode": 0,
+          "output": "package: name='local.devtools.appsampleandroidapp' versionCode='1' versionName='0.1.0' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'\r\nminSdkVersion:'23'\r\ntargetSdkVersion:'36'\r\napplication: label='SampleAndroidApp' icon=''\r\nlaunchable-activity: name='local.devtools.appsampleandroidapp.MainActivity'  label='' icon=''\r\nfeature-group: label=''\r\n  uses-feature: name='android.hardware.faketouch'\r\n  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'\r\nmain\r\nsupports-screens: 'small' 'normal' 'large' 'xlarge'\r\nsupports-any-density: 'true'\r\nlocales:\r\ndensities:\r\n",
+          "status": "Pass",
+          "stderr": ""
+        },
+        {
+          "outputTruncated": false,
+          "timedOut": false,
+          "id": "permissions",
+          "exitCode": 0,
+          "output": "package: local.devtools.appsampleandroidapp\r\n",
+          "status": "Pass",
+          "stderr": ""
+        },
+        {
+          "outputTruncated": false,
+          "timedOut": false,
+          "id": "alignment",
+          "exitCode": 0,
+          "output": "Verifying alignment of C:\\Users\\Sean Shaffer\\Documents\\Codex\\2026-11-03\\a\\work\\devtools-expansion\\android-template-8ca5906288fe480692a4a173f8d79fc4\\AndroidApp With Spaces\\build\\736f6edb52f947e9b3e11481c0e85181\\SampleAndroidApp-unsigned.apk (4)...\r\n      49 AndroidManifest.xml (OK - compressed)\r\n     812 resources.arsc (OK)\r\n     893 classes.dex (OK - compressed)\r\nVerification successful\r\n",
+          "status": "Pass",
+          "stderr": ""
+        },
+        {
+          "outputTruncated": false,
+          "timedOut": false,
+          "id": "signature",
+          "exitCode": 1,
+          "output": "",
+          "status": "Fail",
+          "stderr": "DOES NOT VERIFY\r\nERROR: Missing META-INF/MANIFEST.MF\r\n"
+        }
+      ],
+      "command": "Actual installed aapt2/zipalign/apksigner verification of existing unsigned template APK"
+    }
+  ],
+  "observedUtc": "2026-11-03T23:27:06.3814764Z",
+  "exitCode": 0,
+  "failure": null,
+  "schemaVersion": 1,
+  "command": "pwsh -NoProfile -File tests/Test-PlatformResources.ps1",
+  "unperformed": [
+    "Real Android device execution",
+    "WoW in-game/API/taint validation",
+    "Signed APK positive verification fixture"
+  ],
+  "fixturePath": "C:\\Users\\Sean Shaffer\\Documents\\Codex\\2026-11-03\\a\\work\\devtools-runtime-wave\\platform-3e7608a6e2b1415fb410d1b87f25fb56",
+  "checks": [
+    {
+      "name": "AST Manage-WowClientProfile.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST Test-WowLua.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST Test-AndroidArtifact.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST Invoke-AndroidTest.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST Compare-DevBuild.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST lib\\PlatformResources.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST resources\\New-RegressionFixture.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST resources\\Test-CacheCatalog.ps1",
+      "passed": true
+    },
+    {
+      "name": "Profile copies explicit data and hashes",
+      "passed": true
+    },
+    {
+      "name": "Profile hash verification",
+      "passed": true
+    },
+    {
+      "name": "Profile overwrite refused",
+      "passed": true
+    },
+    {
+      "name": "Profile changed source hash fails",
+      "passed": true
+    },
+    {
+      "name": "Profile traversal refused",
+      "passed": true
+    },
+    {
+      "name": "Profile source junction rejected before destination write",
+      "passed": true
+    },
+    {
+      "name": "Missing interpreter never passes",
+      "passed": true
+    },
+    {
+      "name": "Actual approved Lua syntax and mock events",
+      "passed": true
+    },
+    {
+      "name": "Real Lua syntax driver does not execute source",
+      "passed": true
+    },
+    {
+      "name": "Real bad Lua syntax fails with diagnostic",
+      "passed": true
+    },
+    {
+      "name": "Explicit TOC supports multi-client addon selection",
+      "passed": true
+    },
+    {
+      "name": "Real Lua harness failure nonpass",
+      "passed": true
+    },
+    {
+      "name": "Real Lua harness timeout bounded",
+      "passed": true
+    },
+    {
+      "name": "Real interpreter version mismatch blocked",
+      "passed": true
+    },
+    {
+      "name": "Approved Lua official source checksum",
+      "passed": true
+    },
+    {
+      "name": "Real Lua build exit and upstream license retained",
+      "passed": true
+    },
+    {
+      "name": "Build capture explicit files/configuration",
+      "passed": true
+    },
+    {
+      "name": "Same build evidence identical ignoring capture time",
+      "passed": true
+    },
+    {
+      "name": "Changed input detected",
+      "passed": true
+    },
+    {
+      "name": "Nested case-distinct JSON keys preserved",
+      "passed": true
+    },
+    {
+      "name": "Build capture traversal refused",
+      "passed": true
+    },
+    {
+      "name": "Build capture output overwrite refused",
+      "passed": true
+    },
+    {
+      "name": "Actual dependency-free fake ADB executable build",
+      "passed": true
+    },
+    {
+      "name": "Explicit finite Android tasks orchestration",
+      "passed": true
+    },
+    {
+      "name": "Screenshot binary bytes preserved",
+      "passed": true
+    },
+    {
+      "name": "Every ADB command targets explicit serial",
+      "passed": true
+    },
+    {
+      "name": "FrameStats exact finite argv no reset",
+      "passed": true
+    },
+    {
+      "name": "Startup missing/timeout evidence blank nonpass",
+      "passed": true
+    },
+    {
+      "name": "Startup missing/timeout evidence semantictimeout nonpass",
+      "passed": true
+    },
+    {
+      "name": "Activity printed error with exit zero fails",
+      "passed": true
+    },
+    {
+      "name": "ADB timeout bounded nonpass",
+      "passed": true
+    },
+    {
+      "name": "ADB nonzero preserved",
+      "passed": true
+    },
+    {
+      "name": "ADB output cap nonpass",
+      "passed": true
+    },
+    {
+      "name": "Offline device not accepted",
+      "passed": true
+    },
+    {
+      "name": "Original fixture generator",
+      "passed": true
+    },
+    {
+      "name": "Fixture expected result header-only-x64.dll",
+      "passed": true
+    },
+    {
+      "name": "Fixture expected result truncated.dll",
+      "passed": true
+    },
+    {
+      "name": "Fixture expected result GoodAddon",
+      "passed": true
+    },
+    {
+      "name": "Fixture expected result BadAddon",
+      "passed": true
+    },
+    {
+      "name": "Fixture expected result metadata-only.apk",
+      "passed": true
+    },
+    {
+      "name": "Fixture expected result broken.apk",
+      "passed": true
+    },
+    {
+      "name": "Original cache catalog actual hash",
+      "passed": true
+    },
+    {
+      "name": "Cache hash mismatch fails",
+      "passed": true
+    },
+    {
+      "name": "Cache unknown license never clean",
+      "passed": true
+    },
+    {
+      "name": "Missing cache file fails",
+      "passed": true
+    },
+    {
+      "name": "Cache traversal rejected",
+      "passed": true
+    },
+    {
+      "name": "Resource library searchable offline",
+      "passed": true
+    },
+    {
+      "name": "Original six-reference default compatible",
+      "passed": true
+    },
+    {
+      "name": "Actual aapt2 decodes binary manifest",
+      "passed": true
+    },
+    {
+      "name": "Actual zipalign16KiB ZIP alignment",
+      "passed": true
+    },
+    {
+      "name": "Actual unsigned APK signature correctly rejected",
+      "passed": true
+    }
+  ]
+}

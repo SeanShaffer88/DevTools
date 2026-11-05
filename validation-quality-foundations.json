@@ -1,0 +1,480 @@
+{
+  "command": "pwsh -NoProfile -File tests/Test-QualityFoundations.ps1",
+  "artifactRoot": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e",
+  "passed": 66,
+  "observedUtc": "2026-11-03T22:59:13.3443112Z",
+  "schemaVersion": 1,
+  "limits": {
+    "fixtureEntries": 10000,
+    "fixtureBytes": 134217728,
+    "childOutputBytes": 2097152
+  },
+  "checks": [
+    {
+      "passed": true,
+      "name": "parse Test-WindowsUi.ps1"
+    },
+    {
+      "passed": true,
+      "name": "parse Invoke-NativeMemoryTest.ps1"
+    },
+    {
+      "passed": true,
+      "name": "parse Test-DataMigration.ps1"
+    },
+    {
+      "passed": true,
+      "name": "parse lib/QualityCommon.ps1"
+    },
+    {
+      "passed": true,
+      "name": "parse lib/QualityUiWorker.ps1"
+    },
+    {
+      "passed": true,
+      "name": "parse tests/Test-QualityFoundations.ps1"
+    },
+    {
+      "passed": true,
+      "name": "PS5.1 worker parse"
+    },
+    {
+      "passed": true,
+      "name": "numeric canonical comparison"
+    },
+    {
+      "passed": true,
+      "name": "string numeric distinction"
+    },
+    {
+      "passed": true,
+      "name": "large integer comparison"
+    },
+    {
+      "passed": true,
+      "name": "traversal refused"
+    },
+    {
+      "passed": true,
+      "name": "migration-Migrate"
+    },
+    {
+      "passed": true,
+      "name": "migration-Corrupt"
+    },
+    {
+      "passed": true,
+      "name": "migration-Crash"
+    },
+    {
+      "passed": true,
+      "name": "Crash actual rollback"
+    },
+    {
+      "passed": true,
+      "name": "migration-Timeout"
+    },
+    {
+      "passed": true,
+      "name": "Timeout actual rollback"
+    },
+    {
+      "passed": true,
+      "name": "migration-Wrong"
+    },
+    {
+      "passed": true,
+      "name": "wrong version never executed"
+    },
+    {
+      "passed": true,
+      "name": "migration-contradictory"
+    },
+    {
+      "passed": true,
+      "name": "contradictory no execution or writes"
+    },
+    {
+      "passed": true,
+      "name": "migration-rollback-contradictory"
+    },
+    {
+      "passed": true,
+      "name": "rollback-contradictory no execution or writes"
+    },
+    {
+      "passed": true,
+      "name": "migration-missing-json"
+    },
+    {
+      "passed": true,
+      "name": "missing-json no execution or writes"
+    },
+    {
+      "passed": true,
+      "name": "migration-bad-pointer"
+    },
+    {
+      "passed": true,
+      "name": "bad-pointer no execution or writes"
+    },
+    {
+      "passed": true,
+      "name": "migration-mutate-both"
+    },
+    {
+      "passed": true,
+      "name": "frozen preservation rejects mutated copies"
+    },
+    {
+      "passed": true,
+      "name": "original fixtures unchanged"
+    },
+    {
+      "passed": true,
+      "name": "migration-overlap-refused"
+    },
+    {
+      "passed": true,
+      "name": "migration-malformed-refused"
+    },
+    {
+      "passed": true,
+      "name": "reparse refused"
+    },
+    {
+      "passed": true,
+      "name": "actual process output cap"
+    },
+    {
+      "passed": true,
+      "name": "actual child timeout"
+    },
+    {
+      "passed": true,
+      "name": "asan-safe"
+    },
+    {
+      "passed": true,
+      "name": "safe actual ASan runtime"
+    },
+    {
+      "passed": true,
+      "name": "asan-overflow"
+    },
+    {
+      "passed": true,
+      "name": "overflow actual ASan runtime"
+    },
+    {
+      "passed": true,
+      "name": "actual heap overflow diagnostic"
+    },
+    {
+      "passed": true,
+      "name": "asan-fake-runtime"
+    },
+    {
+      "passed": true,
+      "name": "fake-runtime never executed"
+    },
+    {
+      "passed": true,
+      "name": "asan-missing-symbols"
+    },
+    {
+      "passed": true,
+      "name": "missing-symbols never executed"
+    },
+    {
+      "passed": true,
+      "name": "asan-missing-flag"
+    },
+    {
+      "passed": true,
+      "name": "missing-flag never executed"
+    },
+    {
+      "passed": true,
+      "name": "asan-no-instrument-refused"
+    },
+    {
+      "passed": true,
+      "name": "asan-actual-compiler-error"
+    },
+    {
+      "passed": true,
+      "name": "asan-overlap-refused"
+    },
+    {
+      "passed": true,
+      "name": "actual Framework UI fixture compile"
+    },
+    {
+      "passed": true,
+      "name": "ui-live-read-root"
+    },
+    {
+      "passed": true,
+      "name": "ui-live-control-patterns"
+    },
+    {
+      "passed": true,
+      "name": "ui-live-bad"
+    },
+    {
+      "passed": true,
+      "name": "ui-live-ambiguous"
+    },
+    {
+      "passed": true,
+      "name": "ui-tree-cap"
+    },
+    {
+      "passed": true,
+      "name": "ui-actions-denied"
+    },
+    {
+      "passed": true,
+      "name": "ui-actions-refreshed"
+    },
+    {
+      "passed": true,
+      "name": "ui-stale-name-refused"
+    },
+    {
+      "passed": true,
+      "name": "stale selector stops after first action"
+    },
+    {
+      "passed": true,
+      "name": "ui-renamed-invoked-once"
+    },
+    {
+      "passed": true,
+      "name": "ui-tab-unsupported"
+    },
+    {
+      "passed": true,
+      "name": "Tab rejected before preceding workflow input"
+    },
+    {
+      "passed": true,
+      "name": "no global keyboard injection"
+    },
+    {
+      "passed": true,
+      "name": "ui-worker-budget"
+    },
+    {
+      "passed": true,
+      "name": "actual UI worker timeout"
+    },
+    {
+      "passed": true,
+      "name": "ui-target-exited"
+    }
+  ],
+  "limitations": [
+    "Positive UIA coverage uses the owned WPF fixture. WinForms bridge qualification remains Unknown: observed Pane children without stable IDs or Value/Invoke patterns.",
+    "No foreign applications, device, installer, release or external-service actions performed."
+  ],
+  "fixturePath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\tests\\fixtures\\quality",
+  "commands": [
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\migration-Migrate.json",
+      "name": "migration-Migrate",
+      "command": "Test-DataMigration.ps1",
+      "exitCode": 0
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\migration-Corrupt.json",
+      "name": "migration-Corrupt",
+      "command": "Test-DataMigration.ps1",
+      "exitCode": 0
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\migration-Crash.json",
+      "name": "migration-Crash",
+      "command": "Test-DataMigration.ps1",
+      "exitCode": 2
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\migration-Timeout.json",
+      "name": "migration-Timeout",
+      "command": "Test-DataMigration.ps1",
+      "exitCode": 3
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\migration-Wrong.json",
+      "name": "migration-Wrong",
+      "command": "Test-DataMigration.ps1",
+      "exitCode": 2
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\migration-contradictory.json",
+      "name": "migration-contradictory",
+      "command": "Test-DataMigration.ps1",
+      "exitCode": 125
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\migration-rollback-contradictory.json",
+      "name": "migration-rollback-contradictory",
+      "command": "Test-DataMigration.ps1",
+      "exitCode": 125
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\migration-missing-json.json",
+      "name": "migration-missing-json",
+      "command": "Test-DataMigration.ps1",
+      "exitCode": 125
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\migration-bad-pointer.json",
+      "name": "migration-bad-pointer",
+      "command": "Test-DataMigration.ps1",
+      "exitCode": 125
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\migration-mutate-both.json",
+      "name": "migration-mutate-both",
+      "command": "Test-DataMigration.ps1",
+      "exitCode": 2
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\migration-overlap-refused.json",
+      "name": "migration-overlap-refused",
+      "command": "Test-DataMigration.ps1",
+      "exitCode": 125
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\migration-malformed-refused.json",
+      "name": "migration-malformed-refused",
+      "command": "Test-DataMigration.ps1",
+      "exitCode": 125
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\asan-safe.json",
+      "name": "asan-safe",
+      "command": "Invoke-NativeMemoryTest.ps1",
+      "exitCode": 0
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\asan-overflow.json",
+      "name": "asan-overflow",
+      "command": "Invoke-NativeMemoryTest.ps1",
+      "exitCode": 2
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\asan-fake-runtime.json",
+      "name": "asan-fake-runtime",
+      "command": "Invoke-NativeMemoryTest.ps1",
+      "exitCode": 3
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\asan-missing-symbols.json",
+      "name": "asan-missing-symbols",
+      "command": "Invoke-NativeMemoryTest.ps1",
+      "exitCode": 3
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\asan-missing-flag.json",
+      "name": "asan-missing-flag",
+      "command": "Invoke-NativeMemoryTest.ps1",
+      "exitCode": 3
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\asan-no-instrument-refused.json",
+      "name": "asan-no-instrument-refused",
+      "command": "Invoke-NativeMemoryTest.ps1",
+      "exitCode": 125
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\asan-actual-compiler-error.json",
+      "name": "asan-actual-compiler-error",
+      "command": "Invoke-NativeMemoryTest.ps1",
+      "exitCode": 2
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\asan-overlap-refused.json",
+      "name": "asan-overlap-refused",
+      "command": "Invoke-NativeMemoryTest.ps1",
+      "exitCode": 125
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\ui-live-read-root.json",
+      "name": "ui-live-read-root",
+      "command": "Test-WindowsUi.ps1",
+      "exitCode": 0
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\ui-live-control-patterns.json",
+      "name": "ui-live-control-patterns",
+      "command": "Test-WindowsUi.ps1",
+      "exitCode": 0
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\ui-live-bad.json",
+      "name": "ui-live-bad",
+      "command": "Test-WindowsUi.ps1",
+      "exitCode": 2
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\ui-live-ambiguous.json",
+      "name": "ui-live-ambiguous",
+      "command": "Test-WindowsUi.ps1",
+      "exitCode": 2
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\ui-tree-cap.json",
+      "name": "ui-tree-cap",
+      "command": "Test-WindowsUi.ps1",
+      "exitCode": 3
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\ui-actions-denied.json",
+      "name": "ui-actions-denied",
+      "command": "Test-WindowsUi.ps1",
+      "exitCode": 3
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\ui-actions-refreshed.json",
+      "name": "ui-actions-refreshed",
+      "command": "Test-WindowsUi.ps1",
+      "exitCode": 0
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\ui-stale-name-refused.json",
+      "name": "ui-stale-name-refused",
+      "command": "lib/QualityUiWorker.ps1",
+      "exitCode": 3
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\ui-renamed-invoked-once.json",
+      "name": "ui-renamed-invoked-once",
+      "command": "Test-WindowsUi.ps1",
+      "exitCode": 0
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\ui-tab-unsupported.json",
+      "name": "ui-tab-unsupported",
+      "command": "Test-WindowsUi.ps1",
+      "exitCode": 3
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\ui-worker-budget.json",
+      "name": "ui-worker-budget",
+      "command": "Test-WindowsUi.ps1",
+      "exitCode": 3
+    },
+    {
+      "resultPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\scratchwork\\quality-foundations-handoff\\run-1b88308f64b443858d13414c1ce6b47e\\ui-target-exited.json",
+      "name": "ui-target-exited",
+      "command": "Test-WindowsUi.ps1",
+      "exitCode": 125
+    }
+  ],
+  "blockedGates": [],
+  "exitCode": 0,
+  "failed": 0
+}

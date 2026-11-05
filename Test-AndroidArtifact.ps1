@@ -1,0 +1,19 @@
+#requires -Version 7.0
+<#
+.SYNOPSIS
+Verifies APK manifest decoding, ZIP alignment and signature using existing Android SDK tools.
+.NOTES
+Never signs, installs or creates keys. Unsigned APKs fail signature verification.
+#>
+[CmdletBinding()]
+param([Parameter(Mandatory)][string]$ApkPath,[string]$BuildToolsRoot,[string]$JavaPath='java.exe',[ValidateRange(1,120)][int]$TimeoutSeconds=30,[switch]$Json)
+$ErrorActionPreference='Stop';. (Join-Path $PSScriptRoot 'lib\PlatformResources.ps1');$r=New-PlatformResult 'Test-AndroidArtifact' 'OfflineSdkVerification';$global:LASTEXITCODE=125
+try{
+ $apk=Assert-PlatformPath $ApkPath;$offline=& (Join-Path $PSScriptRoot 'Get-AndroidDiagnostics.ps1') -ApkPath $apk;if(-not $offline.valid){$global:LASTEXITCODE=2;throw "Invalid APK: $($offline.error)"};$r.apk=$offline.apk
+ if(-not $BuildToolsRoot){$sdk=Join-Path $env:LOCALAPPDATA 'Android\Sdk\build-tools';$BuildToolsRoot=(Get-ChildItem -LiteralPath $sdk -Directory -ErrorAction SilentlyContinue|Where-Object{$_.Name -match '^\d+\.\d+\.\d+$'}|Sort-Object {[version]$_.Name} -Descending|Select-Object -First 1).FullName}
+ if(-not $BuildToolsRoot){$global:LASTEXITCODE=3;throw 'Android SDK build-tools are unavailable.'};$bt=Assert-PlatformPath $BuildToolsRoot;$aapt=Join-Path $bt 'aapt2.exe';$align=Join-Path $bt 'zipalign.exe';$signer=Join-Path $bt 'lib\apksigner.jar'
+ foreach($p in @($aapt,$align,$signer)){if(-not(Test-Path -LiteralPath (Assert-PlatformPath $p) -PathType Leaf)){$global:LASTEXITCODE=3;throw 'Required SDK verification component missing.'}}
+ $java=Resolve-PlatformExe $JavaPath;$checks=@(@{id='manifest';exe=$aapt;args=@('dump','badging',$apk)},@{id='permissions';exe=$aapt;args=@('dump','permissions',$apk)},@{id='alignment';exe=$align;args=@('-c','-P','16','-v','4',$apk)},@{id='signature';exe=$java;args=@('-jar',$signer,'verify','--verbose','--print-certs',$apk)})
+ $code=0;foreach($check in $checks){$cmd=Invoke-PlatformCommand $check.exe $check.args $TimeoutSeconds;$status=if($cmd.TimedOut -or $cmd.Truncated){'Unknown'}elseif($cmd.ExitCode -eq 0){'Pass'}else{'Fail'};$r.findings+=@{id=$check.id;status=$status;exitCode=$cmd.ExitCode;timedOut=$cmd.TimedOut;outputTruncated=$cmd.Truncated;output=[Text.Encoding]::UTF8.GetString($cmd.Output);stderr=$cmd.Error};if($status -eq 'Fail'){$code=2}elseif($status -eq 'Unknown' -and $code -eq 0){$code=3}}
+ $r.valid=$code -eq 0;$global:LASTEXITCODE=$code;$r.limitations=@('ZIP alignment does not establish ELF segment 16 KiB compatibility.','No signing, installation, device execution, release-policy or target API eligibility certification.','Native ABI directory names are metadata, not a full native binary compatibility check.')
+}catch{$r.error=$_.Exception.Message};Write-PlatformResult $r -Json:$Json

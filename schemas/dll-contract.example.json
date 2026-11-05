@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "architecture": "x64",
+  "functions": [
+    {
+      "export": "Add",
+      "callingConvention": "Cdecl",
+      "returnType": "Int32",
+      "parameterTypes": ["Int32", "Int32"],
+      "cases": [
+        { "arguments": [2, 3], "expectedReturn": 5 },
+        { "arguments": [2147483647, 1], "expectedReturn": 2147483647 }
+      ]
+    }
+  ]
+}

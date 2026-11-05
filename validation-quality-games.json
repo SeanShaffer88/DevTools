@@ -1,0 +1,1473 @@
+{
+  "schemaVersion": 1,
+  "checks": [
+    {
+      "passed": true,
+      "name": "AST Test-GameAssets.ps1"
+    },
+    {
+      "passed": true,
+      "name": "AST Invoke-GameplayReplay.ps1"
+    },
+    {
+      "passed": true,
+      "name": "AST Invoke-AndroidLifecycle.ps1"
+    },
+    {
+      "passed": true,
+      "name": "AST New-WowDiagnosticsAddon.ps1"
+    },
+    {
+      "passed": true,
+      "name": "AST lib/QualityGames.ps1"
+    },
+    {
+      "passed": true,
+      "name": "AST resources/Test-MediaAttribution.ps1"
+    },
+    {
+      "passed": true,
+      "name": "AST tests/Test-QualityGames.ps1"
+    },
+    {
+      "passed": true,
+      "name": "Canonical keys sorted ordinal with case retained"
+    },
+    {
+      "passed": true,
+      "name": "Canonical hashing preserves integer precision"
+    },
+    {
+      "passed": true,
+      "name": "Canonical number lexemes explicitly distinct"
+    },
+    {
+      "passed": true,
+      "name": "Canonical arrays retain order"
+    },
+    {
+      "passed": true,
+      "name": "Strict JSON rejects {\"x\":1,\"x\":2}"
+    },
+    {
+      "passed": true,
+      "name": "Strict JSON rejects {\"x\":1e999}"
+    },
+    {
+      "passed": true,
+      "name": "Strict JSON rejects {\"x\":NaN}"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 0, got 0 ()"
+    },
+    {
+      "passed": true,
+      "name": "Actual original PNG BMP JPEG PCM WAV structures accepted"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 0, got 0 ()"
+    },
+    {
+      "passed": true,
+      "name": "SHA256 duplicates reported without modifying assets"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Corrupt PNG CRC rejected"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 3, got 3 ()"
+    },
+    {
+      "passed": true,
+      "name": "Unsupported codecs explicitly Unknown"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 0, got 0 ()"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Windows mixed-case positive budget applies to actual width3"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 0, got 0 ()"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Explicit zero-valued width and bytes budgets are not ignored"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 125, got 125 (Duplicate file budget under selected path policy.)"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Tiny BMP cannot overflow multiplication into valid pixel storage"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 125, got 125 (Missing property: schemaVersion)"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 125, got 125 (Unsafe relative path.)"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 125, got 125 (Typed integer out of range.)"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 125, got 125 (Typed integer out of range.)"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 125, got 125 (Unexpected property: Budgets)"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 125, got 125 (Reparse paths refused.)"
+    },
+    {
+      "passed": true,
+      "name": "Test-GameAssets.ps1 expected exit 3, got 3 ()"
+    },
+    {
+      "passed": true,
+      "name": "Verified installed compiler input C:\\Program Files\\dotnet\\sdk\\10.0.403\\Roslyn\\bincore\\csc.dll"
+    },
+    {
+      "passed": true,
+      "name": "Verified installed compiler input C:\\Program Files\\dotnet\\sdk\\10.0.403\\Microsoft.NET.HostModel.dll"
+    },
+    {
+      "passed": true,
+      "name": "Verified installed compiler input C:\\Program Files\\dotnet\\packs\\Microsoft.NETCore.App.Ref\\10.0.14\\ref\\net10.0"
+    },
+    {
+      "passed": true,
+      "name": "Verified installed compiler input C:\\Program Files\\dotnet\\packs\\Microsoft.NETCore.App.Host.win-x64\\10.0.14\\runtimes\\win-x64\\native\\apphost.exe"
+    },
+    {
+      "passed": true,
+      "name": "Actual installed .NET fixture compiled directly without restore"
+    },
+    {
+      "passed": true,
+      "name": "Installed SDK HostWriter creates fixture native apphost"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-GameplayReplay.ps1 expected exit 0, got 0 ()"
+    },
+    {
+      "passed": true,
+      "name": "Two actual independent adapter processes for deterministic progression/save-load"
+    },
+    {
+      "passed": true,
+      "name": "Both adapter stdout/stderr retained and hashed"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-GameplayReplay.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-GameplayReplay.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-GameplayReplay.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-GameplayReplay.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-GameplayReplay.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-GameplayReplay.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-GameplayReplay.ps1 expected exit 3, got 3 ()"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-GameplayReplay.ps1 expected exit 3, got 3 ()"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-GameplayReplay.ps1 expected exit 3, got 3 ()"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-GameplayReplay.ps1 expected exit 3, got 3 ()"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-GameplayReplay.ps1 expected exit 3, got 3 ()"
+    },
+    {
+      "passed": true,
+      "name": "Adapter timeout actual process terminated"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-GameplayReplay.ps1 expected exit 125, got 125 (ExecuteTrusted acknowledgement required.)"
+    },
+    {
+      "passed": true,
+      "name": "Untrusted adapter refused before output writes"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-GameplayReplay.ps1 expected exit 125, got 125 (Typed integer out of range.)"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-GameplayReplay.ps1 expected exit 125, got 125 (Bounded events and nonempty required rules arrays required.)"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-GameplayReplay.ps1 expected exit 125, got 125 (Checkpoints must be nonempty bounded ticks array.)"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-AndroidLifecycle.ps1 expected exit 125, got 125 (Component must belong to the selected package and use the documented shell-safe grammar (no dollar signs).)"
+    },
+    {
+      "passed": true,
+      "name": "Dollar component rejected before writes or fake ADB execution"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-AndroidLifecycle.ps1 expected exit 0, got 0 ()"
+    },
+    {
+      "passed": true,
+      "name": "Force-stop/relaunch accurately labelled"
+    },
+    {
+      "passed": true,
+      "name": "Configured persistence checked before and after"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-AndroidLifecycle.ps1 expected exit 0, got 0 ()"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-AndroidLifecycle.ps1 expected exit 3, got 3 (HOME refused: selected own app not uniquely verified foreground.)"
+    },
+    {
+      "passed": true,
+      "name": "HOME never sent when arbitrary other app foreground"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-AndroidLifecycle.ps1 expected exit 3, got 3 (Requested task requires an app-owned adapter; no device operation performed.)"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-AndroidLifecycle.ps1 expected exit 3, got 3 (Requested task requires an app-owned adapter; no device operation performed.)"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-AndroidLifecycle.ps1 expected exit 2, got 2 (Selected command failed; inspect retained output.)"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-AndroidLifecycle.ps1 expected exit 3, got 3 (Activity start lacks successful semantic Status: ok.)"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-AndroidLifecycle.ps1 expected exit 3, got 3 (Activity start lacks successful semantic Status: ok.)"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-AndroidLifecycle.ps1 expected exit 3, got 3 (Selected device is not ready.)"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-AndroidLifecycle.ps1 expected exit 3, got 3 (Selected command exceeded time/output bound.)"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-AndroidLifecycle.ps1 expected exit 3, got 3 (Selected command exceeded time/output bound.)"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-AndroidLifecycle.ps1 expected exit 2, got 2 (Selected command failed; inspect retained output.)"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-AndroidLifecycle.ps1 expected exit 2, got 2 (App-owned adapter reported failure.)"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-AndroidLifecycle.ps1 expected exit 3, got 3 (Adapter target/action/type mismatch.)"
+    },
+    {
+      "passed": true,
+      "name": "Invoke-AndroidLifecycle.ps1 expected exit 2, got 2 (Persistence assertion failed.)"
+    },
+    {
+      "passed": true,
+      "name": "All fake ADB commands select exact serial"
+    },
+    {
+      "passed": true,
+      "name": "Force-stop exact selected package only"
+    },
+    {
+      "passed": true,
+      "name": "No forbidden ADB mutation commands"
+    },
+    {
+      "passed": true,
+      "name": "Actual client profile helper creates explicit synthetic profile"
+    },
+    {
+      "passed": true,
+      "name": "New-WowDiagnosticsAddon.ps1 expected exit 0, got 0 ()"
+    },
+    {
+      "passed": true,
+      "name": "Generated author Malikor"
+    },
+    {
+      "passed": true,
+      "name": "Generated Interface matches explicit client"
+    },
+    {
+      "passed": true,
+      "name": "Generated addon passes existing structural validator"
+    },
+    {
+      "passed": true,
+      "name": "New-WowDiagnosticsAddon.ps1 expected exit 125, got 125 (Destination must be new.)"
+    },
+    {
+      "passed": true,
+      "name": "Actual approved Lua5.1 syntax and synthetic diagnostics harness"
+    },
+    {
+      "passed": true,
+      "name": "resources/Test-MediaAttribution.ps1 expected exit 0, got 0 ()"
+    },
+    {
+      "passed": true,
+      "name": "Offline original media identity and declared credits"
+    },
+    {
+      "passed": true,
+      "name": "resources/Test-MediaAttribution.ps1 expected exit 3, got 3 ()"
+    },
+    {
+      "passed": true,
+      "name": "resources/Test-MediaAttribution.ps1 expected exit 2, got 2 ()"
+    },
+    {
+      "passed": true,
+      "name": "resources/Test-MediaAttribution.ps1 expected exit 125, got 125 (Unsafe relative path.)"
+    },
+    {
+      "passed": true,
+      "name": "Original six-reference search preserved"
+    },
+    {
+      "passed": true,
+      "name": "New resource set searchable: UI Acceptance Baselines"
+    },
+    {
+      "passed": true,
+      "name": "New resource set searchable: Target, Device And Asset Budgets"
+    },
+    {
+      "passed": true,
+      "name": "New resource set searchable: Contract Libraries V1"
+    },
+    {
+      "passed": true,
+      "name": "New resource set searchable: Media Attribution Catalog V1"
+    },
+    {
+      "passed": true,
+      "name": "Prior indexed resource categories preserved"
+    },
+    {
+      "passed": true,
+      "name": "Schema JSON valid ipc.schema.json"
+    },
+    {
+      "passed": true,
+      "name": "Schema JSON valid public-api.schema.json"
+    },
+    {
+      "passed": true,
+      "name": "Schema JSON valid save.schema.json"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-games\\run-d66fa5c8d6a34d3eb73ffbeb0053db07\\Owned Fixture\\QualityFixture.exe",
+      "bytes": 162304,
+      "sha256": "43C05816852B5431F52BA0CE50B3338D337731960EC38183113AA2AC597C8BDC"
+    },
+    {
+      "path": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-games\\run-d66fa5c8d6a34d3eb73ffbeb0053db07\\assets.json",
+      "bytes": 434,
+      "sha256": "50FB7D4FD2728254CEE2717381642451F7FCA7D5451CD1F1E0C7C9F668F5C12E"
+    },
+    {
+      "path": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-games\\run-d66fa5c8d6a34d3eb73ffbeb0053db07\\diagnostics-harness.lua",
+      "bytes": 2915,
+      "sha256": "819D331D9DB425B9FF20504E414BA002D84BAD97622D3D9FE9CB37AB10ECD266"
+    },
+    {
+      "path": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-games\\run-d66fa5c8d6a34d3eb73ffbeb0053db07\\exact-argv.jsonl",
+      "bytes": 1564,
+      "sha256": "F1354B399718CEA4617261917F5970445EC2703C9C0194DCEC4EADAD07BD359A"
+    }
+  ],
+  "observedUtc": "2026-11-03T23:15:25.4082575Z",
+  "durationSeconds": 12.2634662,
+  "executions": [
+    {
+      "executionEvidence": [],
+      "status": "Pass",
+      "expectedExit": 0,
+      "exitCode": 0,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Pass",
+      "expectedExit": 0,
+      "exitCode": 0,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Unknown",
+      "expectedExit": 3,
+      "exitCode": 3,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Pass",
+      "expectedExit": 0,
+      "exitCode": 0,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Pass",
+      "expectedExit": 0,
+      "exitCode": 0,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "SetupError",
+      "expectedExit": 125,
+      "exitCode": 125,
+      "tool": "Test-GameAssets.ps1",
+      "error": "Duplicate file budget under selected path policy."
+    },
+    {
+      "executionEvidence": [],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "SetupError",
+      "expectedExit": 125,
+      "exitCode": 125,
+      "tool": "Test-GameAssets.ps1",
+      "error": "Missing property: schemaVersion"
+    },
+    {
+      "executionEvidence": [],
+      "status": "SetupError",
+      "expectedExit": 125,
+      "exitCode": 125,
+      "tool": "Test-GameAssets.ps1",
+      "error": "Unsafe relative path."
+    },
+    {
+      "executionEvidence": [],
+      "status": "SetupError",
+      "expectedExit": 125,
+      "exitCode": 125,
+      "tool": "Test-GameAssets.ps1",
+      "error": "Typed integer out of range."
+    },
+    {
+      "executionEvidence": [],
+      "status": "SetupError",
+      "expectedExit": 125,
+      "exitCode": 125,
+      "tool": "Test-GameAssets.ps1",
+      "error": "Typed integer out of range."
+    },
+    {
+      "executionEvidence": [],
+      "status": "SetupError",
+      "expectedExit": 125,
+      "exitCode": 125,
+      "tool": "Test-GameAssets.ps1",
+      "error": "Unexpected property: Budgets"
+    },
+    {
+      "executionEvidence": [],
+      "status": "SetupError",
+      "expectedExit": 125,
+      "exitCode": 125,
+      "tool": "Test-GameAssets.ps1",
+      "error": "Reparse paths refused."
+    },
+    {
+      "executionEvidence": [],
+      "status": "Unknown",
+      "expectedExit": 3,
+      "exitCode": 3,
+      "tool": "Test-GameAssets.ps1",
+      "error": null
+    },
+    {
+      "result": [
+        {},
+        {},
+        {
+          "schemaVersion": 1,
+          "startedUtc": "2026-11-03T23:15:15.3882729Z",
+          "finishedUtc": "2026-11-03T23:15:15.9729371Z",
+          "projectPath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-games\\run-d66fa5c8d6a34d3eb73ffbeb0053db07\\Owned Fixture",
+          "executable": "C:\\Program Files\\dotnet\\dotnet.exe",
+          "argumentCount": 174,
+          "processExitCode": 0,
+          "runnerExitCode": 0,
+          "status": "Succeeded",
+          "error": null,
+          "artifacts": [
+            {
+              "path": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-games\\run-d66fa5c8d6a34d3eb73ffbeb0053db07\\Owned Fixture\\QualityFixture.dll",
+              "status": "Hashed",
+              "sizeBytes": 15360,
+              "sha256": "4E38B081B2A8AADAC4876D6340965D24A694006A4FF0217EBCAB1117381AB0F1"
+            }
+          ],
+          "runDirectory": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\runs\\20261103T231515386Z-a8553c3bbaa94daa9753947bb833f23e"
+        }
+      ],
+      "command": "Installed dotnet Roslyn csc.dll /noconfig /nostdlib+ with explicit installed net10.0 reference assemblies, output QualityFixture.dll",
+      "fallbackReason": "dotnet build --configfile and RestoreConfigFile both failed: protected user NuGet.Config unauthorized; direct installed compiler avoids restore/config access",
+      "tool": "Invoke-DevBuild.ps1",
+      "exitCode": 0
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "run": 1,
+          "pid": 18232,
+          "truncated": false,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "run": 2,
+          "pid": 22144,
+          "truncated": false,
+          "exitCode": 0
+        }
+      ],
+      "status": "Pass",
+      "expectedExit": 0,
+      "exitCode": 0,
+      "tool": "Invoke-GameplayReplay.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "run": 1,
+          "pid": 21556,
+          "truncated": false,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "run": 2,
+          "pid": 4036,
+          "truncated": false,
+          "exitCode": 0
+        }
+      ],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Invoke-GameplayReplay.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "run": 1,
+          "pid": 22516,
+          "truncated": false,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "run": 2,
+          "pid": 30216,
+          "truncated": false,
+          "exitCode": 0
+        }
+      ],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Invoke-GameplayReplay.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "run": 1,
+          "pid": 18952,
+          "truncated": false,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "run": 2,
+          "pid": 25800,
+          "truncated": false,
+          "exitCode": 0
+        }
+      ],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Invoke-GameplayReplay.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "run": 1,
+          "pid": 10384,
+          "truncated": false,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "run": 2,
+          "pid": 13536,
+          "truncated": false,
+          "exitCode": 0
+        }
+      ],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Invoke-GameplayReplay.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "run": 1,
+          "pid": 30284,
+          "truncated": false,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "run": 2,
+          "pid": 11084,
+          "truncated": false,
+          "exitCode": 0
+        }
+      ],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Invoke-GameplayReplay.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "run": 1,
+          "pid": 7724,
+          "truncated": false,
+          "exitCode": 7
+        }
+      ],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Invoke-GameplayReplay.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "run": 1,
+          "pid": 8052,
+          "truncated": false,
+          "exitCode": 0
+        }
+      ],
+      "status": "Unknown",
+      "expectedExit": 3,
+      "exitCode": 3,
+      "tool": "Invoke-GameplayReplay.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "run": 1,
+          "pid": 9864,
+          "truncated": false,
+          "exitCode": 0
+        }
+      ],
+      "status": "Unknown",
+      "expectedExit": 3,
+      "exitCode": 3,
+      "tool": "Invoke-GameplayReplay.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "run": 1,
+          "pid": 728,
+          "truncated": false,
+          "exitCode": 0
+        }
+      ],
+      "status": "Unknown",
+      "expectedExit": 3,
+      "exitCode": 3,
+      "tool": "Invoke-GameplayReplay.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "run": 1,
+          "pid": 30528,
+          "truncated": true,
+          "exitCode": -1
+        }
+      ],
+      "status": "Unknown",
+      "expectedExit": 3,
+      "exitCode": 3,
+      "tool": "Invoke-GameplayReplay.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": true,
+          "run": 1,
+          "pid": 29660,
+          "truncated": false,
+          "exitCode": -1
+        }
+      ],
+      "status": "Unknown",
+      "expectedExit": 3,
+      "exitCode": 3,
+      "tool": "Invoke-GameplayReplay.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "SetupError",
+      "expectedExit": 125,
+      "exitCode": 125,
+      "tool": "Invoke-GameplayReplay.ps1",
+      "error": "ExecuteTrusted acknowledgement required."
+    },
+    {
+      "executionEvidence": [],
+      "status": "SetupError",
+      "expectedExit": 125,
+      "exitCode": 125,
+      "tool": "Invoke-GameplayReplay.ps1",
+      "error": "Typed integer out of range."
+    },
+    {
+      "executionEvidence": [],
+      "status": "SetupError",
+      "expectedExit": 125,
+      "exitCode": 125,
+      "tool": "Invoke-GameplayReplay.ps1",
+      "error": "Bounded events and nonempty required rules arrays required."
+    },
+    {
+      "executionEvidence": [],
+      "status": "SetupError",
+      "expectedExit": 125,
+      "exitCode": 125,
+      "tool": "Invoke-GameplayReplay.ps1",
+      "error": "Checkpoints must be nonempty bounded ticks array."
+    },
+    {
+      "executionEvidence": [],
+      "status": "SetupError",
+      "expectedExit": 125,
+      "exitCode": 125,
+      "tool": "Invoke-AndroidLifecycle.ps1",
+      "error": "Component must belong to the selected package and use the documented shell-safe grammar (no dollar signs)."
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 1964,
+          "sequence": 1,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 24752,
+          "sequence": 2,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 14068,
+          "sequence": 3,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 1596,
+          "sequence": 4,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 17736,
+          "sequence": 5,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 2244,
+          "sequence": 6,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 30272,
+          "sequence": 7,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 13116,
+          "sequence": 8,
+          "exitCode": 0
+        }
+      ],
+      "status": "Pass",
+      "expectedExit": 0,
+      "exitCode": 0,
+      "tool": "Invoke-AndroidLifecycle.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 31000,
+          "sequence": 1,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 13472,
+          "sequence": 2,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 18784,
+          "sequence": 3,
+          "exitCode": 0
+        }
+      ],
+      "status": "Pass",
+      "expectedExit": 0,
+      "exitCode": 0,
+      "tool": "Invoke-AndroidLifecycle.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 26516,
+          "sequence": 1,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 18624,
+          "sequence": 2,
+          "exitCode": 0
+        }
+      ],
+      "status": "Unknown",
+      "expectedExit": 3,
+      "exitCode": 3,
+      "tool": "Invoke-AndroidLifecycle.ps1",
+      "error": "HOME refused: selected own app not uniquely verified foreground."
+    },
+    {
+      "executionEvidence": [],
+      "status": "Unknown",
+      "expectedExit": 3,
+      "exitCode": 3,
+      "tool": "Invoke-AndroidLifecycle.ps1",
+      "error": "Requested task requires an app-owned adapter; no device operation performed."
+    },
+    {
+      "executionEvidence": [],
+      "status": "Unknown",
+      "expectedExit": 3,
+      "exitCode": 3,
+      "tool": "Invoke-AndroidLifecycle.ps1",
+      "error": "Requested task requires an app-owned adapter; no device operation performed."
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 21208,
+          "sequence": 1,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 31492,
+          "sequence": 2,
+          "exitCode": 0
+        }
+      ],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Invoke-AndroidLifecycle.ps1",
+      "error": "Selected command failed; inspect retained output."
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 29312,
+          "sequence": 1,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 10160,
+          "sequence": 2,
+          "exitCode": 0
+        }
+      ],
+      "status": "Unknown",
+      "expectedExit": 3,
+      "exitCode": 3,
+      "tool": "Invoke-AndroidLifecycle.ps1",
+      "error": "Activity start lacks successful semantic Status: ok."
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 9368,
+          "sequence": 1,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 18612,
+          "sequence": 2,
+          "exitCode": 0
+        }
+      ],
+      "status": "Unknown",
+      "expectedExit": 3,
+      "exitCode": 3,
+      "tool": "Invoke-AndroidLifecycle.ps1",
+      "error": "Activity start lacks successful semantic Status: ok."
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 19656,
+          "sequence": 1,
+          "exitCode": 0
+        }
+      ],
+      "status": "Unknown",
+      "expectedExit": 3,
+      "exitCode": 3,
+      "tool": "Invoke-AndroidLifecycle.ps1",
+      "error": "Selected device is not ready."
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": true,
+          "truncated": false,
+          "pid": 18532,
+          "sequence": 1,
+          "exitCode": -1
+        }
+      ],
+      "status": "Unknown",
+      "expectedExit": 3,
+      "exitCode": 3,
+      "tool": "Invoke-AndroidLifecycle.ps1",
+      "error": "Selected command exceeded time/output bound."
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "truncated": true,
+          "pid": 15664,
+          "sequence": 1,
+          "exitCode": -1
+        }
+      ],
+      "status": "Unknown",
+      "expectedExit": 3,
+      "exitCode": 3,
+      "tool": "Invoke-AndroidLifecycle.ps1",
+      "error": "Selected command exceeded time/output bound."
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 31136,
+          "sequence": 1,
+          "exitCode": 7
+        }
+      ],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Invoke-AndroidLifecycle.ps1",
+      "error": "Selected command failed; inspect retained output."
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 17416,
+          "sequence": 1,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 5244,
+          "sequence": 2,
+          "exitCode": 0
+        }
+      ],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Invoke-AndroidLifecycle.ps1",
+      "error": "App-owned adapter reported failure."
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 9068,
+          "sequence": 1,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 3176,
+          "sequence": 2,
+          "exitCode": 0
+        }
+      ],
+      "status": "Unknown",
+      "expectedExit": 3,
+      "exitCode": 3,
+      "tool": "Invoke-AndroidLifecycle.ps1",
+      "error": "Adapter target/action/type mismatch."
+    },
+    {
+      "executionEvidence": [
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 25916,
+          "sequence": 1,
+          "exitCode": 0
+        },
+        {
+          "timedOut": false,
+          "truncated": false,
+          "pid": 23276,
+          "sequence": 2,
+          "exitCode": 0
+        }
+      ],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "Invoke-AndroidLifecycle.ps1",
+      "error": "Persistence assertion failed."
+    },
+    {
+      "executionEvidence": [],
+      "status": "Pass",
+      "expectedExit": 0,
+      "exitCode": 0,
+      "tool": "New-WowDiagnosticsAddon.ps1",
+      "error": null
+    },
+    {
+      "valid": true,
+      "tool": "Test-WowAddon.ps1",
+      "exitCode": 0
+    },
+    {
+      "executionEvidence": [],
+      "status": "SetupError",
+      "expectedExit": 125,
+      "exitCode": 125,
+      "tool": "New-WowDiagnosticsAddon.ps1",
+      "error": "Destination must be new."
+    },
+    {
+      "findings": [
+        {
+          "exitCode": 0,
+          "status": "Pass",
+          "stderr": "",
+          "id": "Fixture.lua"
+        },
+        {
+          "exitCode": 0,
+          "status": "Pass",
+          "stderr": "",
+          "output": "Fixture Diagnostics: Disabled; CPU Profiling: Unavailable\r\nFixture Diagnostics: Disabled; CPU Profiling: Unavailable\r\nFixture Diagnostics: Disabled; CPU Profiling: Unavailable\r\nFixture Diagnostics: Disabled; CPU Profiling: Unavailable\r\nFixture Diagnostics: Disabled; CPU Profiling: Unavailable\r\nSynthetic event dispatch, error chaining/restore/later handler, prior errors, sample caps and absent APIs passed\r\n",
+          "id": "mockHarness"
+        }
+      ],
+      "error": null,
+      "tool": "Test-WowLua.ps1",
+      "exitCode": 0
+    },
+    {
+      "executionEvidence": [],
+      "status": "Pass",
+      "expectedExit": 0,
+      "exitCode": 0,
+      "tool": "resources/Test-MediaAttribution.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Unknown",
+      "expectedExit": 3,
+      "exitCode": 3,
+      "tool": "resources/Test-MediaAttribution.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "Fail",
+      "expectedExit": 2,
+      "exitCode": 2,
+      "tool": "resources/Test-MediaAttribution.ps1",
+      "error": null
+    },
+    {
+      "executionEvidence": [],
+      "status": "SetupError",
+      "expectedExit": 125,
+      "exitCode": 125,
+      "tool": "resources/Test-MediaAttribution.ps1",
+      "error": "Unsafe relative path."
+    }
+  ],
+  "exitCode": 0,
+  "failure": null,
+  "unperformed": [
+    "Real Android device/app lifecycle and natural OS process death",
+    "WoW in-game API/taint/runtime certification",
+    "Real application UIA/desktop screenshot/accessibility acceptance",
+    "Full media codec decoding and legal rights certification",
+    "Independent artifact auditor gate; parent operator owns review"
+  ],
+  "limits": [
+    "Asset4096 entries,16MiB/file,64MiB total",
+    "JSON1MiB/depth32; adapter1MiB stdout/stderr each; replay1-60sec/lifecycle1-30sec command",
+    "No external dependencies/downloads; installed .NET fixture compiler and approved Lua5.1 only"
+  ],
+  "fixturePath": "C:\\Users\\Sean Shaffer\\Documents\\DevTools\\work\\quality-games\\run-d66fa5c8d6a34d3eb73ffbeb0053db07",
+  "command": "pwsh -NoProfile -File tests/Test-QualityGames.ps1"
+}

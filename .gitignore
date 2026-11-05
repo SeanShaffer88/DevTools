@@ -1,0 +1,35 @@
+# Local execution evidence and generated artifacts
+/runs/
+**/bin/
+**/obj/
+*.log
+*.pdb
+*.exe
+*.dll
+*.o
+*.obj
+*.lib
+*.exp
+*.zip
+*.tar.gz
+*.bak
+.env
+.env.*
+*.pem
+*.pfx
+*.key
+# Private third-party reference library stays on disk
+/resources/github/
+# Preserve Lua build recipe/provenance, exclude third-party build/source cache
+/tools/lua-5.1.5/verified-build/
+# Inert original fixture DLLs are intentional test data
+!/resources/fixtures/v1/*.dll
+# Retain authored development scripts; ignore generated work evidence
+/work/*/*
+!/work/*/*.ps1
+!/work/*/*.py
+!/work/*/*.md
+/scratchwork/*/*
+!/scratchwork/*/*.ps1
+!/scratchwork/*/*.py
+!/scratchwork/*/*.md

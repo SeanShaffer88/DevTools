@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "required": true,
+      "path": "required-missing.txt"
+    }
+  ]
+}

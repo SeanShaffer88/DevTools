@@ -1,0 +1,490 @@
+{
+  "schemaVersion": 1,
+  "observedUtc": "2026-11-03T23:26:11.6012321Z",
+  "command": "pwsh -NoProfile -File C:\\Users\\Sean Shaffer\\Documents\\DevTools\\tests\\Test-DevTools.ps1",
+  "exitCode": 0,
+  "powerShellVersion": "7.6.5",
+  "fixturePath": "C:\\Users\\Sean Shaffer\\Documents\\Codex\\2026-11-03\\a\\work\\devtools-tests-29736eb338c247d2babc316c2c384540",
+  "checks": [
+    {
+      "name": "AST parse: Compare-DevBuild.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Compare-ManagedApi.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Compare-UiSnapshot.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Export-CrashDiagnostics.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Find-PrivateData.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Get-AndroidDiagnostics.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Get-DependencyAudit.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Get-DevEnvironment.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Get-DevReference.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Get-DllInfo.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Get-ProjectInfo.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Invoke-AndroidLifecycle.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Invoke-AndroidTest.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Invoke-DevBuild.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Invoke-GameplayReplay.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Invoke-NativeMemoryTest.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Invoke-ParserFuzz.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Invoke-WindowsPerformance.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Manage-WowClientProfile.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: New-DevProject.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: New-InstallerTestLab.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: New-WowDiagnosticsAddon.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Resolve-NativeDependencies.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-AndroidArtifact.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-DataMigration.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-DllContract.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-GameAssets.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-Package.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-RuntimeRequirements.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-SdkCompleteness.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-WindowsUi.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-WowAddon.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-WowLua.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: PlatformResources.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: QualityCommon.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: QualityGames.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: QualityNative.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: QualityNativeMetadataWorker.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: QualityUiWorker.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: RuntimeCommon.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: WindowsDiagnosticsCommon.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: WindowsDiagnosticsContractChild.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: WindowsDiagnosticsGuest.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: New-RegressionFixture.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-CacheCatalog.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-MediaAttribution.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Build.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-BinaryAddon.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-DevTools.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-Extensions.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-PackageReferences.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-PlatformResources.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-QualityFoundations.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-QualityGames.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-QualityNative.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-RuntimeSdkDependencies.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Test-WindowsDiagnostics.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: build-ui.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: copy-artifact.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: migrator.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: ui-wpf.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: ui.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Parser.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Build-Lua.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: probe-background.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: probe-provider.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: probe-wpf-fixture.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: run-ui-final.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: start-audit-fixes.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: start-full-main.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: start-ui-final.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: Generate-Resources.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: start-worker.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: start-fix.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: start.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-existing-destination.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-global.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-missing.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-output.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-real-a.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-real-b.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-reject.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-size.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-time.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-untrusted.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-existing-destination.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-global.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-missing.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-output.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-real-a.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-real-b.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-reject.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-size.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-time.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-untrusted.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-output.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-real-a.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-real-b.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-reject.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-size.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-time.ps1",
+      "passed": true
+    },
+    {
+      "name": "AST parse: fuzz-real-a.ps1",
+      "passed": true
+    },
+    {
+      "name": "Doctor JSON",
+      "passed": true
+    },
+    {
+      "name": "Inspector nonrepository markers and spaces",
+      "passed": true
+    },
+    {
+      "name": "Inspector unchanged file hashes",
+      "passed": true
+    },
+    {
+      "name": "Inspector nonexistent directory",
+      "passed": true
+    },
+    {
+      "name": "Git fixture init exit 0",
+      "passed": true
+    },
+    {
+      "name": "Inspector Git fixture with status deliberately skipped",
+      "passed": true
+    },
+    {
+      "name": "Filter fixture index setup exit 0",
+      "passed": true
+    },
+    {
+      "name": "Filter fixture local config exit 0",
+      "passed": true
+    },
+    {
+      "name": "Inspector never invokes configured Git clean filter",
+      "passed": true
+    },
+    {
+      "name": "Runner success exit 0",
+      "passed": true
+    },
+    {
+      "name": "Argument boundaries spaces quotes metacharacters empty trailing slash",
+      "passed": true
+    },
+    {
+      "name": "Separate stdout and stderr logs",
+      "passed": true
+    },
+    {
+      "name": "Artifact SHA256",
+      "passed": true
+    },
+    {
+      "name": "Runner native failure exit 7",
+      "passed": true
+    },
+    {
+      "name": "Unique run directories",
+      "passed": true
+    },
+    {
+      "name": "Missing artifact exit 2",
+      "passed": true
+    },
+    {
+      "name": "Missing executable exit 125",
+      "passed": true
+    },
+    {
+      "name": "Large concurrent stdout and stderr streams: 16 MiB each",
+      "passed": true
+    }
+  ]
+}

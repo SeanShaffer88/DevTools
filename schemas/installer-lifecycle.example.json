@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "description": "Example only: adapt executables, arguments and assertions to your installer. Generation does not run installers or qualify this plan.",
+  "phases": [
+    {
+      "name": "install",
+      "executable": "Setup-v1.exe",
+      "arguments": [],
+      "expectedExitCodes": [0],
+      "timeoutSeconds": 300,
+      "fileAssertions": [{ "path": "C:\\Program Files\\ExampleApp\\ExampleApp.exe", "exists": true }]
+    },
+    {
+      "name": "upgrade",
+      "executable": "Setup-v2.exe",
+      "arguments": [],
+      "expectedExitCodes": [0],
+      "timeoutSeconds": 300,
+      "fileAssertions": [{ "path": "C:\\Program Files\\ExampleApp\\ExampleApp.exe", "exists": true }],
+      "processAssertions": [{ "name": "ExampleApp", "running": false }],
+      "startupAssertions": [{ "hive": "CurrentUser", "name": "ExampleApp", "exists": false }]
+    },
+    {
+      "name": "uninstall",
+      "executable": "Uninstall.exe",
+      "arguments": [],
+      "expectedExitCodes": [0],
+      "timeoutSeconds": 300,
+      "fileAssertions": [{ "path": "C:\\Program Files\\ExampleApp\\ExampleApp.exe", "exists": false }]
+    }
+  ]
+}

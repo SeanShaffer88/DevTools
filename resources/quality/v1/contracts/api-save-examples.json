@@ -1,0 +1,40 @@
+{
+  "compatibility": {
+    "version2": "Requires explicit migration, never execute supplied source",
+    "sameVersion": "Validate required typed fields; ordinal property names",
+    "migrationExample": {
+      "before": {
+        "saveVersion": 1,
+        "score": 3
+      },
+      "after": {
+        "points": 3,
+        "saveVersion": 2
+      },
+      "rename": {
+        "score": "points"
+      },
+      "from": 1,
+      "to": 2
+    }
+  },
+  "schemaVersion": 1,
+  "contractVersion": 1,
+  "api": {
+    "response": {
+      "score": 3,
+      "requestId": "example-1"
+    },
+    "request": {
+      "method": "GetScore",
+      "requestId": "example-1"
+    }
+  },
+  "save": {
+    "inventory": [
+      "key"
+    ],
+    "saveVersion": 1,
+    "score": 3
+  }
+}

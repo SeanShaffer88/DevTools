@@ -1,0 +1,5 @@
+# Target, Device And Asset Budgets V1
+
+budgets/example.json is an original illustrative profile dated November 3, 2026. Its numbers are user-declared examples, never universal hardware limits: memory MiB, startup/frame milliseconds, texture pixels and audio channels/Hz/bits. Replace the profile with actual project requirements. Require finite positive quantities, explicit units and dated provenance; absent runtime measurement remains Unknown.
+
+Test-GameAssets -AssetRoot <root> -ManifestPath <manifest> uses schema1 references, optional budgets and per-file files entries. See Get-Help Test-GameAssets.ps1 -Detailed for exact maxima and read limits. Keep audio-specific budgets on audio files and image-specific budgets on images; unmeasurable declared budgets are Unknown. Windows reference matching is case-insensitive; Android is ordinal case-sensitive. Both refuse ambiguous case-colliding names and path traversal/reparse points. Static PNG/BMP/JPEG structure and PCM WAV chunks do not certify decoding, GPU behavior, device performance or rights. MP3/Ogg/GPU containers remain Unknown. No selected assets are modified.

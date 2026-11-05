@@ -1,0 +1,495 @@
+{
+  "fixturePath": "C:\\Users\\Sean Shaffer\\Documents\\Codex\\2026-11-03\\a\\work\\devtools-runtime-wave\\runtime-sdk-fb513ee206624c40ad00653699c4543a",
+  "failure": null,
+  "hostChecks": [
+    {
+      "profile": "DotNet",
+      "exitCode": 0,
+      "valid": true,
+      "findings": [
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files\\dotnet\\dotnet.exe",
+          "observed": true,
+          "id": "dotnet.host"
+        },
+        {
+          "status": "pass",
+          "expected": "Directory",
+          "path": "C:\\Program Files\\dotnet\\sdk\\10.0.403",
+          "observed": true,
+          "id": "dotnet.sdk"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files\\dotnet\\sdk\\10.0.403\\Roslyn\\bincore\\csc.dll",
+          "observed": true,
+          "id": "dotnet.compiler"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files\\dotnet\\sdk\\10.0.403\\MSBuild.dll",
+          "observed": true,
+          "id": "dotnet.msbuild"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files\\dotnet\\packs\\Microsoft.NETCore.App.Ref\\10.0.14\\ref\\net10.0\\System.Runtime.dll",
+          "observed": true,
+          "id": "dotnet.reference-pack"
+        },
+        {
+          "status": "pass",
+          "expected": "x64",
+          "observed": "x64",
+          "id": "dotnet.host-architecture"
+        }
+      ]
+    },
+    {
+      "profile": "NativeWindows",
+      "exitCode": 0,
+      "valid": true,
+      "findings": [
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+          "observed": true,
+          "id": "msvc.cl.exe"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe",
+          "observed": true,
+          "id": "msvc.link.exe"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\lib.exe",
+          "observed": true,
+          "id": "msvc.lib.exe"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\include\\vcruntime.h",
+          "observed": true,
+          "id": "msvc.vcruntime.h"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\include\\vadefs.h",
+          "observed": true,
+          "id": "msvc.vadefs.h"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\lib\\x64\\vcruntime.lib",
+          "observed": true,
+          "id": "msvc.vcruntime.lib"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\lib\\x64\\libcmt.lib",
+          "observed": true,
+          "id": "msvc.libcmt.lib"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\um\\Windows.h",
+          "observed": true,
+          "id": "windows.header.windows.h"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\shared\\sdkddkver.h",
+          "observed": true,
+          "id": "windows.header.sdkddkver.h"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\ucrt\\stdlib.h",
+          "observed": true,
+          "id": "windows.header.stdlib.h"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\ucrt\\stddef.h",
+          "observed": true,
+          "id": "windows.header.stddef.h"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\um\\x64\\kernel32.lib",
+          "observed": true,
+          "id": "windows.library.kernel32.lib"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\ucrt\\x64\\ucrt.lib",
+          "observed": true,
+          "id": "windows.library.ucrt.lib"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\ucrt\\x64\\libucrt.lib",
+          "observed": true,
+          "id": "windows.library.libucrt.lib"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe",
+          "observed": true,
+          "id": "windows.rc.exe"
+        }
+      ]
+    },
+    {
+      "profile": "Android",
+      "exitCode": 0,
+      "valid": true,
+      "findings": [
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Users\\Sean Shaffer\\AppData\\Local\\Android\\Sdk\\platforms\\android-36\\android.jar",
+          "observed": true,
+          "id": "android.platform"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Users\\Sean Shaffer\\AppData\\Local\\Android\\Sdk\\build-tools\\37.0.0\\aapt2.exe",
+          "observed": true,
+          "id": "android.aapt2.exe"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Users\\Sean Shaffer\\AppData\\Local\\Android\\Sdk\\build-tools\\37.0.0\\zipalign.exe",
+          "observed": true,
+          "id": "android.zipalign.exe"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Users\\Sean Shaffer\\AppData\\Local\\Android\\Sdk\\build-tools\\37.0.0\\lib\\d8.jar",
+          "observed": true,
+          "id": "android.lib\\d8.jar"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Users\\Sean Shaffer\\AppData\\Local\\Android\\Sdk\\build-tools\\37.0.0\\lib\\apksigner.jar",
+          "observed": true,
+          "id": "android.lib\\apksigner.jar"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Users\\Sean Shaffer\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+          "observed": true,
+          "id": "android.adb"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files\\Microsoft\\jdk-21.0.13.21-hotspot\\bin\\java.exe",
+          "observed": true,
+          "id": "android.jdk.bin\\java.exe"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files\\Microsoft\\jdk-21.0.13.21-hotspot\\bin\\javac.exe",
+          "observed": true,
+          "id": "android.jdk.bin\\javac.exe"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files\\Microsoft\\jdk-21.0.13.21-hotspot\\release",
+          "observed": true,
+          "id": "android.jdk.release"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files\\Microsoft\\jdk-21.0.13.21-hotspot\\include\\jni.h",
+          "observed": true,
+          "id": "android.jdk.include\\jni.h"
+        }
+      ]
+    },
+    {
+      "profile": "Java",
+      "exitCode": 0,
+      "valid": true,
+      "findings": [
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files\\Microsoft\\jdk-21.0.13.21-hotspot\\bin\\java.exe",
+          "observed": true,
+          "id": "java.bin\\java.exe"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files\\Microsoft\\jdk-21.0.13.21-hotspot\\bin\\javac.exe",
+          "observed": true,
+          "id": "java.bin\\javac.exe"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files\\Microsoft\\jdk-21.0.13.21-hotspot\\release",
+          "observed": true,
+          "id": "java.release"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files\\Microsoft\\jdk-21.0.13.21-hotspot\\include\\jni.h",
+          "observed": true,
+          "id": "java.include\\jni.h"
+        },
+        {
+          "status": "pass",
+          "expected": "File",
+          "path": "C:\\Program Files\\Microsoft\\jdk-21.0.13.21-hotspot\\include\\win32\\jni_md.h",
+          "observed": true,
+          "id": "java.include\\win32\\jni_md.h"
+        },
+        {
+          "status": "pass",
+          "expected": "x64",
+          "observed": "x64",
+          "id": "java.architecture"
+        }
+      ]
+    }
+  ],
+  "routing": "Actual implementation/testing used local fallback after Ruflo worker reads blocked by policy.",
+  "limitations": [
+    "Host checks structural/read-only; no installation or compile/link executed.",
+    "Supplied runtime evidence and synthetic PE fixture checks are not host compatibility guarantees.",
+    "API-set, nonzero delay imports, activation-context and dynamic loading not emulated."
+  ],
+  "observedUtc": "2026-11-03T23:26:34.2754800Z",
+  "command": "pwsh -NoProfile -File 'C:\\Users\\Sean Shaffer\\Documents\\DevTools\\tests\\Test-RuntimeSdkDependencies.ps1'",
+  "exitCode": 0,
+  "checks": [
+    {
+      "passed": true,
+      "name": "AST Test-RuntimeRequirements.ps1"
+    },
+    {
+      "passed": true,
+      "name": "AST Test-SdkCompleteness.ps1"
+    },
+    {
+      "passed": true,
+      "name": "AST Resolve-NativeDependencies.ps1"
+    },
+    {
+      "passed": true,
+      "name": "AST lib\\RuntimeCommon.ps1"
+    },
+    {
+      "passed": true,
+      "name": "Numeric 10 vs 9 comparison and supplied evidence provenance"
+    },
+    {
+      "passed": true,
+      "name": "Complete evidence wrong version fails"
+    },
+    {
+      "passed": true,
+      "name": "Wrong runtime architecture fails"
+    },
+    {
+      "passed": true,
+      "name": "Unknown runtime architecture never passes"
+    },
+    {
+      "passed": true,
+      "name": "Any architecture requirement does not demand architecture evidence"
+    },
+    {
+      "passed": true,
+      "name": "Unavailable observation remains unknown"
+    },
+    {
+      "passed": true,
+      "name": "Complete absent runtime fails"
+    },
+    {
+      "passed": true,
+      "name": "Partial absent runtime remains unknown"
+    },
+    {
+      "passed": true,
+      "name": "Prerelease excluded by default"
+    },
+    {
+      "passed": true,
+      "name": "Explicit prerelease policy honored"
+    },
+    {
+      "passed": true,
+      "name": "Java build metadata LTS is stable"
+    },
+    {
+      "passed": true,
+      "name": "Java early access is prerelease"
+    },
+    {
+      "passed": true,
+      "name": "Five-component Java vendor runtime supported"
+    },
+    {
+      "passed": true,
+      "name": "Java vendor tail compared without truncation"
+    },
+    {
+      "passed": true,
+      "name": "Legacy Java8 update normalized"
+    },
+    {
+      "passed": true,
+      "name": "Duplicate requirement rejected before observation evaluation"
+    },
+    {
+      "passed": true,
+      "name": "Real host runtime inventory without inspected-app execution"
+    },
+    {
+      "passed": true,
+      "name": "Actual installed Java vendor version evaluated"
+    },
+    {
+      "passed": true,
+      "name": "Coherent synthetic native SDK structural completeness"
+    },
+    {
+      "passed": true,
+      "name": "Missing CRT library detected despite compiler presence"
+    },
+    {
+      "passed": true,
+      "name": "Wrong target architecture SDK directories fail"
+    },
+    {
+      "passed": true,
+      "name": "Missing resource compiler fails"
+    },
+    {
+      "passed": true,
+      "name": "Direct toolset root cannot silently ignore explicit version"
+    },
+    {
+      "passed": true,
+      "name": "Host DotNet SDK checked without configuration mutation"
+    },
+    {
+      "passed": true,
+      "name": "Host NativeWindows SDK checked without configuration mutation"
+    },
+    {
+      "passed": true,
+      "name": "Actual coherent Windows SDK structural inventory passes"
+    },
+    {
+      "passed": true,
+      "name": "Host Android SDK checked without configuration mutation"
+    },
+    {
+      "passed": true,
+      "name": "Host Java SDK checked without configuration mutation"
+    },
+    {
+      "passed": true,
+      "name": "SDK selector traversal rejected"
+    },
+    {
+      "passed": true,
+      "name": "Native named and ordinal dependency checks pass"
+    },
+    {
+      "passed": true,
+      "name": "Native graph leaves image bytes unchanged"
+    },
+    {
+      "passed": true,
+      "name": "Missing native DLL fails explicitly"
+    },
+    {
+      "passed": true,
+      "name": "Native candidate architecture mismatch fails"
+    },
+    {
+      "passed": true,
+      "name": "Missing named export fails"
+    },
+    {
+      "passed": true,
+      "name": "Forwarded named and ordinal exports resolved"
+    },
+    {
+      "passed": true,
+      "name": "Forwarder cycles remain unknown without recursion runaway"
+    },
+    {
+      "passed": true,
+      "name": "Foo forwarder to distinct case-sensitive foo export is not a cycle"
+    },
+    {
+      "passed": true,
+      "name": "Actual same-symbol self-forwarder remains a cycle"
+    },
+    {
+      "passed": true,
+      "name": "Import graph cycles detected and bounded"
+    },
+    {
+      "passed": true,
+      "name": "API-set contract not misreported as missing DLL"
+    },
+    {
+      "passed": true,
+      "name": "Nonzero delay imports explicitly unknown"
+    },
+    {
+      "passed": true,
+      "name": "Dependency graph node bound explicit"
+    },
+    {
+      "passed": true,
+      "name": "Malformed root PE rejected cleanly"
+    },
+    {
+      "passed": true,
+      "name": "Real system native image inspected without loading"
+    }
+  ],
+  "schemaVersion": 1
+}

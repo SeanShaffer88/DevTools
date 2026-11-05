@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "coverage": { "DotNet": "Partial", "VCRedist": "Unknown", "Java": "Unknown", "WebView2": "Unknown", "Windows": "Unknown" },
+  "observations": [
+    { "kind": "DotNet", "name": "Microsoft.WindowsDesktop.App", "architecture": "x64", "version": "10.0.14", "status": "Observed", "path": null, "evidence": "Example only; replace with actual collected evidence. Not a scan of this host." }
+  ]
+}

@@ -1,0 +1,5 @@
+## Interface: 30300
+## Title: BadAddon
+## Author: Malikor
+main.lua
+
