@@ -174,3 +174,7 @@ Add future helpers to `toolkit.json` with parameters, write scope, requirements 
 - Quality resources: `Get-DevReference.ps1 -Resources` searches original UI baselines, device/asset budgets, API/save/IPC schemas and media attribution notes in `resources/quality/v1`. `resources/Test-MediaAttribution.ps1` checks supplied hashes and declared attribution; license strings do not prove legal rights.
 
 Repeatable suites: tests/Test-QualityFoundations.ps1, tests/Test-QualityNative.ps1, tests/Test-QualityGames.ps1. Actual evidence is indexed in toolkit.json. The UIA sidecar uses installed Windows PowerShell 5.1; public helpers require PowerShell 7. UI mockups and PNG baselines are original synthetic fixtures. Real-device, in-game, elevated WPR and installer lifecycle checks remain separate gates. Read helper help before first use.
+
+## AI-native Developer Utilities
+
+The Python 3.10+ standard-library suite adds 15 offline CLI checks for Godot, WoW addons, Rust projects, export profiles, and release manifests. It has no added package dependencies or telemetry. Start with [ai_tools/README.md](ai_tools/README.md) for commands, schemas, limits, and safety notes.

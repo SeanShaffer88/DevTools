@@ -33,3 +33,7 @@
 !/scratchwork/*/*.ps1
 !/scratchwork/*/*.py
 !/scratchwork/*/*.md
+
+# Python AI-native developer utilities
+__pycache__/
+*.py[cod]
