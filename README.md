@@ -178,3 +178,7 @@ Repeatable suites: tests/Test-QualityFoundations.ps1, tests/Test-QualityNative.p
 ## AI-native Developer Utilities
 
 The Python 3.10+ standard-library suite adds 15 offline CLI checks for Godot, WoW addons, Rust projects, export profiles, and release manifests. It has no added package dependencies or telemetry. Start with [ai_tools/README.md](ai_tools/README.md) for commands, schemas, limits, and safety notes.
+
+## Knowledge base
+
+The [`knowledge/`](knowledge/) folder of this repo is a self-contained Windows desktop development knowledge base — the rule layers (Elite Prompt, Engineering Contract V4.0, guardrails), tiered project classes and sanctioned stacks, the QUALITY.md gate, SeanPak packaging, the TesselGUI design system, and release verification — written for AI coding agents and human developers. It is built to be downloaded and used locally: start with [`knowledge/manifest.json`](knowledge/manifest.json) and [`knowledge/AGENTS.md`](knowledge/AGENTS.md), or upload [`knowledge/ai-bundle.md`](knowledge/ai-bundle.md) as a single file.
