@@ -821,6 +821,10 @@
         "guide": "ai_tools/tools/release-manifest-gen/README.md",
         "purpose": "SHA-256 manifest generation"
       }
-    ]
+    ],
+    "validation": "tests/test_ai_tools.py",
+    "validationCommand": "python -m unittest -v tests.test_ai_tools",
+    "fixtureRoot": "tests/fixtures/ai_tools",
+    "fixtureCoverage": 15
   }
 }

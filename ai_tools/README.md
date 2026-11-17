@@ -45,4 +45,4 @@ Run the offline smoke suite from the repository root:
 py -3 -m unittest -v tests.test_ai_tools
 ```
 
-The tests use temporary local fixtures and do not launch Godot, Cargo, Lua, or a WoW client.
+The tests use checked-in fixtures and temporary output paths. They do not launch Godot, Cargo, Lua, or a WoW client.
