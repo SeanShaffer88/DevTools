@@ -36,10 +36,12 @@ try{
     }
     Save-Manifest @{schemaVersion=1;files=@(@{path='data/config.json'},@{path='DATA\CONFIG.JSON'})}
     $r=Check-Package;Assert (-not $r.valid -and $r.files.Count -eq 0) 'Case-insensitive normalized duplicate rejected before hashing'
-    foreach($unsafe in @('..\escape.txt','data/../config.json','C:\Windows\win.ini','data/config.json:stream','data/*.json','data/[x].json','data/config.json.','data//config.json')){
+    foreach($unsafe in @('..\escape.txt','data/../config.json','C:\Windows\win.ini','data/config.json:stream','data/*.json','data/[x].json','data/config.json.','data//config.json','data/CON.json','NUL')){
         Save-Manifest @{schemaVersion=1;files=@(@{path=$unsafe})};$r=Check-Package;Assert (-not $r.valid -and $r.files.Count -eq 0) "Unsafe manifest path rejected: $unsafe"
     }
     [IO.File]::WriteAllText($manifest,'not json');$r=Check-Package;Assert (-not $r.valid) 'Invalid JSON rejected'
+    [IO.File]::WriteAllBytes($manifest,[Text.Encoding]::ASCII.GetBytes('{"schemaVersion":1,"files":[{"path":"data/')+[byte[]](0xC3,0x28)+[Text.Encoding]::ASCII.GetBytes('.json"}]}'));$r=Check-Package;Assert (-not $r.valid -and $r.files.Count -eq 0) 'Invalid UTF-8 manifest rejected before hashing'
+    $r=& (Join-Path $toolRoot 'Test-Package.ps1') -PackagePath (Join-Path $fixture 'missing') -Json | ConvertFrom-Json;Assert (-not $r.valid -and $r.findings[0].message -notmatch [regex]::Escape([Environment]::GetFolderPath('UserProfile'))) 'Package error messages redact profile path'
     Copy-Item -LiteralPath 'C:\Windows\System32\kernel32.dll' -Destination (Join-Path $package 'native.dll')
     Save-Manifest @{schemaVersion=1;files=@(@{path='data/config.json'},@{path='native.dll'})}
     $r=Check-Package 'x64';Assert ($r.valid -and ($r.files | Where-Object path -eq 'native.dll').architecture -eq 'x64') 'PE machine architecture and version metadata inspection'
@@ -58,15 +60,25 @@ try{
     Assert ($r.valid -and $r.matches.Count -eq 1 -and $r.matches[0].id -eq 'package-manifest' -and $r.matches[0].content.Contains('required')) 'Literal case-insensitive category search returns original note content'
     $r=& (Join-Path $toolRoot 'Get-DevReference.ps1') -Query 'NoSuchReference-42' -Json | ConvertFrom-Json;Assert ($r.valid -and $r.matches.Count -eq 0) 'Unknown reference query empty success'
     foreach($entry in (& (Join-Path $toolRoot 'Get-DevReference.ps1')).matches){Assert ([bool]$entry.source -and [bool]$entry.capturedUtc -and [bool]$entry.versionScope -and [bool]$entry.verification) "Reference provenance: $($entry.id)"}
-    $copy=Join-Path $fixture 'ReferenceClone';$null=New-Item -ItemType Directory -Path (Join-Path $copy 'references')
+    $copy=Join-Path $fixture 'ReferenceClone';$null=New-Item -ItemType Directory -Path (Join-Path $copy 'references'),(Join-Path $copy 'lib')
     Copy-Item -LiteralPath (Join-Path $toolRoot 'Get-DevReference.ps1') -Destination $copy
+    Copy-Item -LiteralPath (Join-Path $toolRoot 'lib\DevToolsCommon.psm1') -Destination (Join-Path $copy 'lib')
     $index=Get-Content -LiteralPath (Join-Path $toolRoot 'references\index.json') -Raw | ConvertFrom-Json
-    $index.entries=@($index.entries[0]);$index.entries[0].path='../outside.txt'
+    $first=$index.entries[0].path;Copy-Item -LiteralPath (Join-Path $toolRoot "references\$first") -Destination (Join-Path $copy "references\$first")
+    $index.entries=@($index.entries[0]);$index | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath (Join-Path $copy 'references\index.json')
+    $r=& (Join-Path $copy 'Get-DevReference.ps1') -Json | ConvertFrom-Json;Assert ($r.valid -and $r.matches.Count -eq 1) 'Reference clone loads shared module'
+    $index.entries[0].path='../outside.txt'
     $index | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath (Join-Path $copy 'references\index.json')
-    $r=& (Join-Path $copy 'Get-DevReference.ps1') -Json | ConvertFrom-Json;Assert (-not $r.valid -and $r.matches.Count -eq 0) 'Reference traversal rejected'
+    $r=& (Join-Path $copy 'Get-DevReference.ps1') -Json | ConvertFrom-Json;Assert (-not $r.valid -and $r.matches.Count -eq 0 -and $r.error -eq 'Unsafe reference path.') 'Reference traversal rejected'
     $index.entries[0].path='oversized.md';[IO.File]::WriteAllText((Join-Path $copy 'references\oversized.md'),('x'*65537))
     $index | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath (Join-Path $copy 'references\index.json')
-    $r=& (Join-Path $copy 'Get-DevReference.ps1') -Json | ConvertFrom-Json;Assert (-not $r.valid) 'Reference note size bound enforced'
+    $r=& (Join-Path $copy 'Get-DevReference.ps1') -Json | ConvertFrom-Json;Assert (-not $r.valid -and $r.error -eq 'Reference note must be a file no larger than 64 KiB.') 'Reference note size bound enforced'
+    $index.entries[0].path="$first.";$index | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath (Join-Path $copy 'references\index.json')
+    $r=& (Join-Path $copy 'Get-DevReference.ps1') -Json | ConvertFrom-Json;Assert (-not $r.valid) 'Reference trailing-dot alias rejected'
+    [IO.File]::WriteAllBytes((Join-Path $copy 'references\bad.md'),[byte[]](0x61,0xC3,0x28));$index.entries[0].path='bad.md';$index | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath (Join-Path $copy 'references\index.json')
+    $r=& (Join-Path $copy 'Get-DevReference.ps1') -Json | ConvertFrom-Json;Assert (-not $r.valid) 'Reference invalid UTF-8 note rejected'
+    $index.entries[0].path='missing.md';$index | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath (Join-Path $copy 'references\index.json')
+    $r=& (Join-Path $copy 'Get-DevReference.ps1') -Json | ConvertFrom-Json;Assert (-not $r.valid -and $r.error -notmatch [regex]::Escape([Environment]::GetFolderPath('UserProfile'))) 'Reference error messages redact profile path'
     $exitCode=0
 }catch{$failure=$_.Exception.Message;Write-Error $failure -ErrorAction Continue}
 $evidence=[ordered]@{schemaVersion=1;observedUtc=[DateTime]::UtcNow.ToString('o');command="pwsh -NoProfile -File '$PSCommandPath'";exitCode=$exitCode;fixturePath=$fixture;checks=@($checks.ToArray());skipped=@($skipped.ToArray());failure=$failure;limitations=@('Installer upgrade/settings/runtime behavior not tested.','Package architecture compares PE machine fields; not a complete managed runtime policy.','Reference library is original local notes and pointers, not an SDK mirror.')}

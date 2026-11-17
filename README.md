@@ -20,6 +20,7 @@ Start here when working with this toolkit. Global Codex instructions in `C:/User
 | `Export-CrashDiagnostics.ps1` | Bundle one explicit owned process's diagnostics, optional selected logs/minidump | New destination only |
 | `Test-DllContract.ps1` | Static contract checks; explicit trusted-owned primitive calls in a separate child | Unique child-result evidence; executes selected DLL only with acknowledgement |
 | `New-InstallerTestLab.ps1` | Generate a reviewable Windows Sandbox install/upgrade/uninstall lab and guest assertions | New lab/results mapping; does not launch VM or installers on host |
+| `New-BuildSandbox.ps1` | WSL2 (Windows Home compatible) disposable build/test sandbox: `-BuildImage` bakes a hardened C++/Python/C# golden image; `-JobFolder`/`-InboxRoot` run validated job folders offline as an unprivileged user with DevTools mounted read-only, then unregister the distro. Job format: `templates/build-sandbox-job/JOB-FORMAT.md` | New image/results/outbox directories; per-run distro under `%LOCALAPPDATA%\BuildSandbox\instances` removed after each run; `-BuildImage` uses apt network inside the temporary distro only |
 | `Manage-WowClientProfile.ps1` | Create/import/verify client/Interface/Lua profiles with hashed sources and SavedVariables as data | Explicit new profile destination only |
 | `Test-WowLua.ps1` | Real matching-interpreter syntax checks and optional trusted Lua event/API mock harness | Child process only; no source writes or dependency installation |
 | `Test-AndroidArtifact.ps1` | Installed aapt2 manifest/permission decoding, zipalign and apksigner verification | None; never signs/installs |
@@ -139,6 +140,20 @@ Rebuild only when needed using `tools/lua-5.1.5/Build-Lua.ps1 -Destination <new-
 `Manage-WowClientProfile.ps1` imports explicit client/API/SavedVariables data without executing it. The included ExampleWrath profile and event harness are illustrative, not authentic game API snapshots. `Test-WowLua.ps1` uses compile-only `loadfile` syntax checks and an explicitly selected trusted harness. Use `-TocPath` for multiple TOCs and the actual client's Interface. Real Lua good/bad syntax, no-execution marker and mock event/timeout tests ran; real game, taint and secure execution remain unperformed.
 
 `Test-AndroidArtifact.ps1` separately reports binary manifest/permission decoding, ZIP alignment and signature verification. The actual unsigned template APK passes manifest/alignment and correctly fails signature. ZIP 16 KiB alignment is not full ELF load-segment compatibility or release-policy certification. `Invoke-AndroidTest.ps1` requires explicit serial/package/tasks. Startup requires semantic `Status: ok`; printed errors/timeouts and absent evidence are nonpass even with process exit 0. Memory and FrameStats retain raw data without resetting counters. Fake-ADB fixtures prove argv, binary capture and failure orchestration only; no real device execution is claimed.
+
+## Shared Helper Module
+
+New helpers should `Import-Module lib/DevToolsCommon.psm1` instead of copying path, JSON, process or result boilerplate. It provides:
+
+- local path and contained-path resolution that refuses UNC/device paths, ADS, reserved names and reparse points
+- bounded tree, byte, strict UTF-8 and JSON readers
+- atomic writes
+- canonical JSON
+- streamed SHA-256
+- shell-free process execution with timeouts, output caps, closed stdin and Job Object cleanup of descendants
+- result envelopes with secret redaction
+
+See `lib/DevToolsCommon.md` for per-function inputs, security notes, residual risks and an audit of the older duplicated helpers, which remain unchanged. Validate with `tests/Test-DevToolsCommon.ps1`.
 
 ## Versioned Resources
 

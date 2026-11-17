@@ -84,10 +84,16 @@ try{
     $r=Wow $addon 'Second.toc';Assert (-not $r.valid -and 'MissingMetadata' -in $r.findings.code -and 'InvalidInterface' -in $r.findings.code) 'Required metadata and numeric Interface checked'
     Write-Text (Join-Path $addon 'Second.toc') "## Interface: 30300`n## Title: Second`nmain.lua`nmain.lua"
     $r=Wow $addon 'Second.toc';Assert ($r.valid -and 'RepeatedLoad' -in $r.findings.code) 'Repeated loads reported as warnings'
-    foreach($reference in @('..\outside.lua','C:\Windows\win.ini','/Windows/win.ini','main.lua:stream')){
+    foreach($reference in @('..\outside.lua','C:\Windows\win.ini','/Windows/win.ini','main.lua:stream','main.lua.','CON.lua','ui\..\..\outside.lua')){
         Write-Text (Join-Path $addon 'Second.toc') "## Interface: 30300`n## Title: Second`n$reference"
         $r=Wow $addon 'Second.toc';Assert (-not $r.valid -and 'UnsafeReference' -in $r.findings.code) "Unsafe path rejected: $reference"
     }
+    Write-Text (Join-Path $addon 'ui\parent.xml') '<Ui><Script file="..\main.lua"/></Ui>'
+    Write-Text (Join-Path $addon 'Second.toc') "## Interface: 30300`n## Title: Second`nui\parent.xml"
+    $r=Wow $addon 'Second.toc';Assert ($r.valid -and $r.loadOrder[1].path -eq 'main.lua') 'Parent-relative XML include inside addon accepted'
+    Write-Text (Join-Path $addon 'ui\parent.xml') '<Ui><Script file="nested.lua."/></Ui>'
+    $r=Wow $addon 'Second.toc';Assert (-not $r.valid -and 'UnsafeReference' -in $r.findings.code) 'Trailing-dot XML include alias rejected'
+    $r=Wow (Join-Path $fixture 'MissingAddon');Assert (-not $r.valid -and $r.findings[0].message -notmatch [regex]::Escape([Environment]::GetFolderPath('UserProfile'))) 'Addon error messages redact profile path'
     Write-Text (Join-Path $addon 'ui\nested.xml') '<Ui><Include file="main.xml"/></Ui>'
     $r=Wow $addon 'ExampleAddon.toc';Assert (-not $r.valid -and 'ReferenceCycle' -in $r.findings.code) 'XML cycle rejected'
     Write-Text (Join-Path $addon 'ui\nested.xml') '<!DOCTYPE Ui [<!ENTITY xxe SYSTEM "file:///C:/Windows/win.ini">]><Ui>&xxe;</Ui>'

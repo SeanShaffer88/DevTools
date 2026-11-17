@@ -7,6 +7,9 @@ from .common import walk_files, read_text, finding, finish, project_path
 REF = re.compile(r'res://([^"\')\s]+)')
 AUDIO = {".wav", ".ogg", ".mp3"}
 IMAGE = {".png", ".jpg", ".jpeg", ".webp"}
+# printf-style (%s, %d, %03d, %.2f) or format()-style ({}, {0}, {name}) placeholders mark a
+# path assembled at runtime; it cannot be checked statically.
+PLACEHOLDER = re.compile(r'%[-+ 0#]*\d*(?:\.\d+)?[sdifxXo]|\{[A-Za-z0-9_]*\}')
 
 def dimensions(path: Path):
     with path.open("rb") as stream: data=stream.read(2*1024*1024)
@@ -43,6 +46,10 @@ def main(argv=None):
             text=read_text(f)
             for m in REF.finditer(text):
                 rel=m.group(1).split("::",1)[0]
+                if PLACEHOLDER.search(rel):
+                    findings.append(finding("DynamicResourcePath",str(f.relative_to(root)),"info",
+                                            f"res://{rel} contains a format placeholder; not checked statically"))
+                    continue
                 referenced.add(rel.replace("\\","/").casefold())
                 if not project_path(root,"res://"+rel).exists():
                     findings.append(finding("MissingResource",str(f.relative_to(root)),"error",f"Missing res://{rel}"))

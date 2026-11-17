@@ -4,11 +4,20 @@ import argparse,re
 from pathlib import Path
 from .common import walk_files,read_text,finding,finish
 
+def input_section(text):
+ """Return only the [input] section body; other `key={...}` sections (e.g. [shader_globals]) are not actions."""
+ out=[]; inside=False
+ for line in text.splitlines():
+  h=re.match(r'^\s*\[([^\]]+)\]\s*$',line)
+  if h: inside=h.group(1).strip()=="input"; continue
+  if inside: out.append(line)
+ return "\n".join(out)
+
 def main(argv=None):
  p=argparse.ArgumentParser(description=__doc__);p.add_argument("project",type=Path);p.add_argument("--text",action="store_true");a=p.parse_args(argv)
  root=a.project.resolve(); cfg=root/"project.godot"; findings=[]
  if not cfg.is_file(): return finish("InputMapAuditor",[finding("MissingProjectConfig","project.godot","error","Godot project.godot not found")],a.text)
- text=read_text(cfg); actions=set(re.findall(r'^\s*([A-Za-z_]\w*)\s*=\s*\{',text,re.M))
+ text=read_text(cfg); actions=set(re.findall(r'^\s*([A-Za-z_]\w*)\s*=\s*\{',input_section(text),re.M))
  used=set(); hardcoded=[]
  for f in walk_files(root,{".gd",".cs"}):
   code=read_text(f); rel=f.relative_to(root).as_posix()
@@ -21,5 +30,5 @@ def main(argv=None):
   findings.append(finding("UnusedInputAction","project.godot","info",f"Action {name!r} has no detected script use"))
  for rel in sorted(set(hardcoded)): findings.append(finding("HardcodedKey","/"+rel,"warning","Key constant found; verify intentional remapping behavior"))
  return finish("InputMapAuditor",findings,a.text,actions=sorted(actions),usedActions=sorted(used),
-   limitation="Static string matching; indirect calls and generated input maps are not resolved.")
+   limitation="Static string matching; only project.godot [input] entries are actions. Indirect calls and generated input maps are not resolved.")
 if __name__=="__main__":raise SystemExit(main())
