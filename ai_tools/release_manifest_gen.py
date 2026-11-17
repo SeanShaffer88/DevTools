@@ -12,7 +12,7 @@ def main(argv=None):
   files=[]
   for f in sorted(root.rglob("*")):
    if f.is_symlink():raise ValueError(f"symlinks are refused: {f.relative_to(root)}")
-   if f.is_file() and f.name!="SHA256SUMS.txt":
+   if f.is_file() and f.resolve()!=(root/"SHA256SUMS.txt").resolve():
     files.append(f)
     if len(files)>MAX_FILES:raise ValueError(f"more than {MAX_FILES} files")
   rows=[]

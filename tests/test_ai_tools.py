@@ -13,6 +13,7 @@ from ai_tools.toc_manifest_linter import main as toc_main
 from ai_tools.saved_variables_inspector import main as saved_main
 from ai_tools.godot_test_harness import main as harness_main
 from ai_tools.state_time_machine_validator import main as state_main
+from ai_tools.release_manifest_gen import main as release_main
 
 class AiToolsTests(unittest.TestCase):
     def test_dispatcher_has_fifteen_tools(self):
@@ -32,6 +33,10 @@ class AiToolsTests(unittest.TestCase):
         self.assertEqual(data["count"], 3)
         self.assertEqual(data["enabled"], True)
         self.assertEqual(data["child"][2], 2)
+
+    def test_saved_variables_keeps_comment_marker_inside_string(self):
+        data = Parser('{["text"]="left--right", -- real comment\n count=1}').value()
+        self.assertEqual(data["text"], "left--right")
 
     def test_saved_variables_rejects_expressions(self):
         with self.assertRaises(ValueError):
@@ -84,12 +89,34 @@ class AiToolsTests(unittest.TestCase):
             self.assertEqual(code, 2)
             self.assertIn("DanglingTransition", [x["code"] for x in json.loads(output.getvalue())["findings"]])
 
+    def test_state_validator_handles_unhashable_ids_as_findings(self):
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / "state.json"
+            path.write_text(json.dumps({"states": [{"id": ["bad"]}], "transitions": []}), encoding="utf-8")
+            output = io.StringIO()
+            with contextlib.redirect_stdout(output):
+                code = state_main([str(path)])
+            self.assertEqual(code, 2)
+            self.assertIn("InvalidState", [x["code"] for x in json.loads(output.getvalue())["findings"]])
+
     def test_harness_refuses_execution_without_acknowledgement(self):
         output = io.StringIO()
         with contextlib.redirect_stderr(output):
             code = harness_main([".", "--godot", "Godot.exe", "--test-script", "tests/run.gd"])
         self.assertEqual(code, 125)
         self.assertIn("allow-project-code", output.getvalue())
+
+    def test_release_manifest_includes_nested_checksum_named_payload(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            (root / "nested").mkdir()
+            (root / "nested" / "SHA256SUMS.txt").write_text("payload", encoding="utf-8")
+            output = io.StringIO()
+            with contextlib.redirect_stdout(output):
+                code = release_main([d])
+            payload = json.loads(output.getvalue())
+            self.assertEqual(code, 0)
+            self.assertIn("nested/SHA256SUMS.txt", payload["manifest"])
 
 if __name__ == "__main__":
     unittest.main()

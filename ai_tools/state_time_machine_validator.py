@@ -16,14 +16,23 @@ def main(argv=None):
    findings.append(finding("InvalidSchema",str(a.file),"error","states and transitions arrays are required"))
   states=data.get("states",[]); transitions=data.get("transitions",[])
   if not isinstance(states,list) or not isinstance(transitions,list): raise ValueError("states and transitions must be arrays")
-  names={s.get("id",s.get("name")) for s in states if isinstance(s,dict) and s.get("id",s.get("name")) is not None}
-  if len(names)!=len(states): findings.append(finding("InvalidState","states","error","State entries must be objects with unique id/name"))
-  starts={s.get("id",s.get("name")) for s in states if isinstance(s,dict) and s.get("initial") is True}
+  state_ids=[]
+  for i,s in enumerate(states):
+   ident=s.get("id",s.get("name")) if isinstance(s,dict) else None
+   if isinstance(ident,bool) or not isinstance(ident,(str,int)):
+    findings.append(finding("InvalidState",f"states[{i}]","error","State must have a string or integer id/name"))
+   else: state_ids.append(ident)
+  names=set(state_ids)
+  if len(names)!=len(states): findings.append(finding("InvalidState","states","error","State entries must have unique id/name values"))
+  starts={s.get("id",s.get("name")) for s in states if isinstance(s,dict) and s.get("initial") is True and isinstance(s.get("id",s.get("name")),(str,int)) and not isinstance(s.get("id",s.get("name")),bool)}
   if len(starts)>1: findings.append(finding("MultipleInitialStates","states","error","More than one initial state"))
   referenced=set()
   for i,t in enumerate(transitions):
    if not isinstance(t,dict): findings.append(finding("InvalidTransition",f"transitions[{i}]","error","Transition must be an object"));continue
-   src=t.get("from"); dst=t.get("to"); referenced.update([src,dst])
+   src=t.get("from"); dst=t.get("to")
+   if isinstance(src,bool) or not isinstance(src,(str,int)) or isinstance(dst,bool) or not isinstance(dst,(str,int)):
+    findings.append(finding("InvalidTransition",f"transitions[{i}]","error","Transition endpoints must be string or integer ids"));continue
+   referenced.update([src,dst])
    if src not in names or dst not in names: findings.append(finding("DanglingTransition",f"transitions[{i}]","error",f"Transition endpoint missing: {src!r} -> {dst!r}"))
   for n in sorted((names-referenced)-starts,key=str): findings.append(finding("OrphanState",str(n),"warning","State has no detected incoming or outgoing transition"))
   payload=finish("StateTimeMachineValidator",findings,a.text,version=ver,stateCount=len(states),transitionCount=len(transitions),initialStates=sorted(starts,key=str),

@@ -1,6 +1,6 @@
 """Run a selected Godot headless test entrypoint with bounded JSON evidence."""
 from __future__ import annotations
-import argparse,subprocess
+import argparse,subprocess,shutil
 from pathlib import Path
 from .common import emit,stderr_error
 
@@ -10,7 +10,10 @@ def main(argv=None):
  try:
   root=a.project.resolve(strict=True); test=(root/a.test_script).resolve(strict=True)
   if root not in test.parents: raise ValueError("test script must be inside project")
-  cmd=[str(Path(a.godot).resolve()),"--headless","--path",str(root),"--script",str(test)]
+  godot=Path(a.godot)
+  executable=str(godot.resolve()) if godot.exists() else shutil.which(a.godot)
+  if not executable: raise FileNotFoundError(f"Godot executable not found: {a.godot}")
+  cmd=[executable,"--headless","--path",str(root),"--script",str(test)]
   run=subprocess.run(cmd,capture_output=True,text=True,timeout=max(1,min(a.timeout,3600)),shell=False)
   out={"schemaVersion":1,"tool":"GTHarness","exitCode":run.returncode,"passed":run.returncode==0,"command":cmd,
        "stdout":run.stdout[-20000:],"stderr":run.stderr[-20000:],

@@ -42,7 +42,7 @@ def main(argv=None):
   raw=a.file.read_text(encoding="utf-8-sig")
   if len(raw.encode("utf-8"))>a.max_bytes: raise ValueError("input exceeds configured byte limit")
   # Ignore Lua comments and permit one or more VariableName = { ... } assignments.
-  clean=re.sub(r'--[^\n]*',"",raw)
+  clean=raw
   assignments=re.findall(r'(?m)^\s*([A-Za-z_]\w*)\s*=\s*(\{)',clean)
   findings=[]; values={}
   for name,_ in assignments:
@@ -75,7 +75,7 @@ def main(argv=None):
    dest=a.sanitize_json.resolve()
    if dest.exists(): raise ValueError(f"refusing to overwrite existing output: {dest}")
    dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(json.dumps(values,ensure_ascii=False,indent=2)+"\n",encoding="utf-8");written=str(dest)
-  payload={"schemaVersion":1,"tool":"SavedVariablesInspector","valid":not findings,"variables":sorted(values),"stats":stats,"findings":findings,
+  payload={"schemaVersion":1,"tool":"SavedVariablesInspector","valid":not any(x.get("severity")=="error" for x in findings),"variables":sorted(values),"stats":stats,"findings":findings,
            "sanitizedJsonWrittenTo":written,"limitation":"Parses literal tables only; expressions, metatables, and Lua execution are unsupported."}
   if a.json_data: payload["data"]=values
   emit(payload,not a.text);return 0

@@ -43,7 +43,7 @@ def main(argv=None):
             text=read_text(f)
             for m in REF.finditer(text):
                 rel=m.group(1).split("::",1)[0]
-                referenced.add(rel.replace("\\","/"))
+                referenced.add(rel.replace("\\","/").casefold())
                 if not project_path(root,"res://"+rel).exists():
                     findings.append(finding("MissingResource",str(f.relative_to(root)),"error",f"Missing res://{rel}"))
         if f.suffix.lower() in IMAGE and f.stat().st_size>a.max_texture_bytes:
@@ -65,7 +65,7 @@ def main(argv=None):
                                         "Physics node found without explicit collision layer/mask; defaults may be intentional"))
     for f in allfiles:
         rel=f.relative_to(root).as_posix()
-        if f.suffix.lower() in AUDIO and rel not in referenced:
+        if f.suffix.lower() in AUDIO and rel.casefold() not in referenced:
             findings.append(finding("UnreferencedAudio",rel,"info","No literal res:// reference found"))
     return finish("AssetHealthGuard",findings,a.text,filesScanned=len(allfiles),
                   limits={"maxFiles":a.max_files,"textureBytes":a.max_texture_bytes,
