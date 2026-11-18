@@ -215,5 +215,7 @@ This repo is the single home of the development knowledge library — six self-c
 | Kotlin Android apps and games | [`kotlin/`](kotlin/) | `kotlin/manifest.json` |
 | Godot for Android games and apps | [`godot/`](godot/) | `godot/manifest.json` |
 | AI development resource index | [`ai-resources/`](ai-resources/) | `ai-resources/manifest.json` |
+| ForAI resource library | [`forai/`](forai/) | `forai/AI_INDEX.md` |
+| WinDevKit shared development resources | [`windevkit/`](windevkit/) | `windevkit/docs/CATALOG.md` |
 
-The PortableApps, WoW, Kotlin, and Godot domains were merged in from the former PafDev, WowDev, KotlinDev, and GodotDevTools knowledge repos on 2026-11-18; those repos remain on GitHub untouched. The nine Godot editor addons also live here as a complete, openable Godot project in [`godot/toolbox/`](godot/toolbox/), and the ai-knowledge-vault resource index as [`ai-resources/`](ai-resources/), both merged 2026-11-18; their original repos remain on GitHub untouched.
+The PortableApps, WoW, Kotlin, and Godot domains were merged in from the former PafDev, WowDev, KotlinDev, and GodotDevTools knowledge repos on 2026-11-18; those repos remain on GitHub untouched. The nine Godot editor addons also live here as a complete, openable Godot project in [`godot/toolbox/`](godot/toolbox/), and the ai-knowledge-vault resource index as [`ai-resources/`](ai-resources/), both merged 2026-11-18. ForAI and WinDevKit followed the same day ([`forai/`](forai/), [`windevkit/`](windevkit/)). With the library complete, the seven copied source repos (PafDev, WowDev, KotlinDev, GodotDevTools, ai-knowledge-vault, ForAI, WinDevKit) were archived on GitHub on 2026-11-18 — they stay readable there, and this repo is the single live home.

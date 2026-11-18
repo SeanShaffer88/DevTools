@@ -1,6 +1,6 @@
 # INDEX — DevTools knowledge library master map
 
-One repo, seven development knowledge bases, plus the local developer toolkit.
+One repo, nine development knowledge bases and resource collections, plus the local developer toolkit.
 This file is the router: find the domain, then the file, in seconds.
 
 ## How an AI should use this repo
@@ -18,6 +18,8 @@ This file is the router: find the domain, then the file, in seconds.
 | PortableApps.com packaging | [`portableapps/`](portableapps/) | PortableApps.com format, Launcher + Installer INI, packaging workflow, updating, failure modes, submission | [portableapps/manifest.json](portableapps/manifest.json) | [portableapps/ai-bundle.md](portableapps/ai-bundle.md) |
 | World of Warcraft addon development | [`wow-addons/`](wow-addons/) | Addon anatomy, Lua, API/events/widgets, flavors + interface numbers (Forever first, interface 16001), libraries, packaging | [wow-addons/manifest.json](wow-addons/manifest.json) | [wow-addons/ai-bundle.md](wow-addons/ai-bundle.md) |
 | Kotlin Android apps and games | [`kotlin/`](kotlin/) | Kotlin, Compose, architecture, Room, coroutines, testing, Play release, billing, games (Compose Canvas, libGDX, native graphics) | [kotlin/manifest.json](kotlin/manifest.json) | [kotlin/ai-bundle.md](kotlin/ai-bundle.md) |
+| ForAI resource library | [`forai/`](forai/) | The big curated library: dev resources, Windows development repositories, AI resources, catalogs and category files, with its own AI index and full-text file | [forai/AI_INDEX.md](forai/AI_INDEX.md) | [forai/llms-full.txt](forai/llms-full.txt) |
+| WinDevKit shared development resources | [`windevkit/`](windevkit/) | Windows dev kits and crates (image, OCR, PDF, thumbnails and more), bindings, templates, schemas, tools — built for the wider Windows dev community | [windevkit/docs/CATALOG.md](windevkit/docs/CATALOG.md) | [windevkit/README.md](windevkit/README.md) |
 | AI development resource index | [`ai-resources/`](ai-resources/) | Curated pointers: toolchains, MCP servers, agent frameworks, local inference, models/providers, RAG + vector, eval/observability, coding agents, ML libraries, learning references | [ai-resources/manifest.json](ai-resources/manifest.json) | [ai-resources/resources.json](ai-resources/resources.json) |
 | Godot for Android games and apps | [`godot/`](godot/) | Godot engine versions, project anatomy, Android export pipeline, Google Play, plugins, testing/CI, permissions | [godot/manifest.json](godot/manifest.json) | [godot/ai-bundle.md](godot/ai-bundle.md) |
 | Windows desktop development system | [`knowledge/`](knowledge/) | Rule layers (Elite Prompt, Engineering Contract V4.0, guardrails), tiers + sanctioned stacks, QUALITY.md gate, SeanPak packaging, TesselGUI design, release verification | [knowledge/manifest.json](knowledge/manifest.json) | [knowledge/ai-bundle.md](knowledge/ai-bundle.md) |
@@ -95,6 +97,13 @@ This file is the router: find the domain, then the file, in seconds.
 | AI resources: toolchains by language/platform | [ai-resources/categories/toolchains.md](ai-resources/categories/toolchains.md) |
 | AI resources: machine-readable index (all entries) | [ai-resources/resources.json](ai-resources/resources.json) |
 
+| ForAI library entry point (AI index) | [forai/AI_INDEX.md](forai/AI_INDEX.md) |
+| ForAI: Windows development repositories catalog | [forai/catalogs/windows-development-repositories.md](forai/catalogs/windows-development-repositories.md) |
+| ForAI: software development resources catalog | [forai/catalogs/software-development-resources.md](forai/catalogs/software-development-resources.md) |
+| ForAI: machine-readable resources | [forai/resources.json](forai/resources.json) |
+| WinDevKit kit catalog (all kits) | [windevkit/docs/CATALOG.md](windevkit/docs/CATALOG.md) |
+| WinDevKit pain points / why the kits exist | [windevkit/docs/PAIN_POINTS.md](windevkit/docs/PAIN_POINTS.md) |
+
 ## Same task, different stack — pick by stack first
 
 - **Releasing an Android app:** Kotlin → `kotlin/docs/19-build-signing-release-and-google-play.md` · Godot → `godot/docs/05-google-play.md` · Flutter → `flutter/guides/10-android-release.md`. Play deadlines that apply to all: `kotlin/reference/play-requirements-and-deadlines.md`.
@@ -103,4 +112,4 @@ This file is the router: find the domain, then the file, in seconds.
 
 ## Provenance
 
-Merged 2026-11-18 from PafDev, WowDev, KotlinDev, and the knowledge layer of GodotDevTools, joining the Windows desktop base (`knowledge/`, 2026-11-17) and the Flutter pack (`flutter/`, 2026-11-18) already here. Domain content is unchanged apart from a banner in each domain README and merge fields in each domain manifest. The Godot editor addons project followed on 2026-11-18 as `godot/toolbox/` (complete and openable in Godot), and the ai-knowledge-vault resource index as `ai-resources/`. Binary files in the toolbox (demo PNGs and the addon release zips) were uploaded through the GitHub web interface because the batched text push cannot carry binaries; the source repo's generated `.godot/` editor cache and local `reports/` output were not carried over. The original repos remain on GitHub untouched.
+Merged 2026-11-18 from PafDev, WowDev, KotlinDev, and the knowledge layer of GodotDevTools, joining the Windows desktop base (`knowledge/`, 2026-11-17) and the Flutter pack (`flutter/`, 2026-11-18) already here. Domain content is unchanged apart from a banner in each domain README and merge fields in each domain manifest. The Godot editor addons project followed on 2026-11-18 as `godot/toolbox/` (complete and openable in Godot), and the ai-knowledge-vault resource index as `ai-resources/`. Binary files in the toolbox (demo PNGs and the addon release zips) were uploaded through the GitHub web interface because the batched text push cannot carry binaries; the source repo's generated `.godot/` editor cache and local `reports/` output were not carried over. ForAI and WinDevKit joined on 2026-11-18 (`forai/`, `windevkit/`). With the library complete, the seven copied source repos — PafDev, WowDev, KotlinDev, GodotDevTools, ai-knowledge-vault, ForAI, and WinDevKit — were archived on GitHub on 2026-11-18; this repo is their single live home. Archived repos stay readable and downloadable on GitHub, and can be unarchived at any time.

@@ -75,6 +75,26 @@
       "manifest": "ai-resources/manifest.json",
       "bundle": "ai-resources/resources.json",
       "files": 29
+    },
+    {
+      "id": "forai",
+      "folder": "forai/",
+      "title": "ForAI resource library",
+      "covers": "Curated dev-resource library: categories, catalogs (incl. Windows development repositories), resources.json/csv, llms.txt + llms-full.txt; its own AI_INDEX.md is the file map",
+      "mergedFrom": "SeanShaffer88/ForAI",
+      "manifest": "forai/AI_INDEX.md",
+      "bundle": "forai/llms-full.txt",
+      "files": 266
+    },
+    {
+      "id": "windevkit",
+      "folder": "windevkit/",
+      "title": "WinDevKit shared development resources",
+      "covers": "Windows dev kits + crates, bindings, templates, schemas, tools; docs/CATALOG.md is the file map",
+      "mergedFrom": "SeanShaffer88/WinDevKit",
+      "manifest": "windevkit/manifest.json",
+      "bundle": "windevkit/README.md",
+      "files": 845
     }
   ],
   "files": [
