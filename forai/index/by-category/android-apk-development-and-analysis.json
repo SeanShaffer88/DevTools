@@ -1,0 +1,1613 @@
+[
+ {
+  "resource_id": "res-apk-analyzer-70211498c422",
+  "name": "APK Analyzer",
+  "url": "https://developer.android.com/studio/debug/apk-analyzer",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Inspect manifest, DEX, resources and package size in Android Studio.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-apkanalyzer-3cc04782fc2f",
+  "name": "apkanalyzer",
+  "url": "https://developer.android.com/tools/apkanalyzer",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Scriptable package, manifest, DEX and resource inspection.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-android-cli-7ab5c7364a89",
+  "name": "Android CLI",
+  "url": "https://developer.android.com/studio/intro",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Current command-line Android project and SDK workflows; recheck availability before replacing existing tooling.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "api-integration",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-sdkmanager-2e99bab36822",
+  "name": "sdkmanager",
+  "url": "https://developer.android.com/tools/sdkmanager",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "SDK package management reference; fetched page marks it deprecated in favor of Android CLI, while existing SDK installations still use it.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "api-integration",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-android-command-line-builds-4866dec4f609",
+  "name": "Android command-line builds",
+  "url": "https://developer.android.com/build/building-cmdline",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Gradle-wrapper builds of APKs and app bundles from source.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-android-gradle-plugin-7e4a3595bde1",
+  "name": "Android Gradle Plugin",
+  "url": "https://developer.android.com/build/releases/about-agp",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Build-system compatibility and release guidance; pin compatible AGP, Gradle and JDK versions.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-android-build-jdks-64175d6e7946",
+  "name": "Android build JDKs",
+  "url": "https://developer.android.com/build/jdks",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Distinguish Gradle runtime JDK, toolchains, source levels and Android API availability.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "api-integration",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-aapt2-358bbe6c4a7c",
+  "name": "AAPT2",
+  "url": "https://developer.android.com/tools/aapt2",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Compile/link Android resources and inspect packaging problems.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-d8-af3620df1a48",
+  "name": "D8",
+  "url": "https://developer.android.com/tools/d8",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Convert Java bytecode to Android DEX; preserve minSdk and library/desugaring inputs.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "java",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [
+   "java"
+  ],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-apksigner-56e56bfc9911",
+  "name": "Apksigner",
+  "url": "https://developer.android.com/tools/apksigner",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Sign and verify APKs; every subsequent byte modification invalidates signatures.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-zipalign-c31d07fa6dec",
+  "name": "Zipalign",
+  "url": "https://developer.android.com/tools/zipalign",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Verify APK entry alignment; align before apksigner signing.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-app-bundle-format-7b9f9c8e9762",
+  "name": "App bundle format",
+  "url": "https://developer.android.com/guide/app-bundle/app-bundle-format",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Understand base, feature and configuration splits versus distributable APKs.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-bundletool-cae0a6230062",
+  "name": "Bundletool",
+  "url": "https://developer.android.com/tools/bundletool",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Generate and install device-specific APK sets from AABs; not a universal arbitrary-APK merger.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-android-app-updates-4432efd76965",
+  "name": "Android app updates",
+  "url": "https://developer.android.com/google/play/app-updates",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Package identity, signing compatibility and version rules for preserving installed data.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-apk-signature-v4-8fb5d19f89be",
+  "name": "APK signature v4",
+  "url": "https://source.android.com/docs/security/features/apksigning/v4",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Understand incremental-install idsig sidecars and their relationship to APK signing.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-android-abis-de1dd62f8e99",
+  "name": "Android ABIs",
+  "url": "https://developer.android.com/ndk/guides/abis",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Native architectures, calling conventions and packaging requirements.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-16-kb-page-sizes-65c7c9844a05",
+  "name": "16 KB page sizes",
+  "url": "https://developer.android.com/guide/practices/page-sizes",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Separate native ELF alignment, ZIP alignment and runtime page-size assumptions.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-android-compatibility-7cd07ee39027",
+  "name": "Android compatibility",
+  "url": "https://developer.android.com/guide/app-compatibility",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Separate behavior changes affecting all apps from changes gated by target SDK.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "api-integration",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-android-storage-1a56cc158014",
+  "name": "Android storage",
+  "url": "https://developer.android.com/training/data-storage",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "App-specific files, shared storage and permissions; scoped-storage implications.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-adb-251196db35ea",
+  "name": "ADB",
+  "url": "https://developer.android.com/tools/adb",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Install, inspect, launch and debug on authorized devices and emulators.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-logcat-8dcdc84daab4",
+  "name": "Logcat",
+  "url": "https://developer.android.com/tools/logcat",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Capture complete startup exceptions and correlate package/process logs.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-ndk-stack-symbolization-557d0346537b",
+  "name": "NDK stack symbolization",
+  "url": "https://developer.android.com/ndk/guides/ndk-stack",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Symbolize native crash traces with exact matching unstripped libraries.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-android-testing-35add734ea55",
+  "name": "Android testing",
+  "url": "https://developer.android.com/studio/test",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Source-level and device test workflows; complement package checks with gameplay tests.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile",
+   "testing"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-play-asset-delivery-a5a9508d53fd",
+  "name": "Play Asset Delivery",
+  "url": "https://developer.android.com/guide/playcore/asset-delivery",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Understand install-time, fast-follow and on-demand game assets.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "game-development",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-apk-expansion-files-dd17204eb3c1",
+  "name": "APK expansion files",
+  "url": "https://developer.android.com/google/play/expansion-files",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Legacy OBB naming, storage and downloader model; distinguish from custom caches.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-offline-first-architecture-dc3aecb2108d",
+  "name": "Offline-first architecture",
+  "url": "https://developer.android.com/topic/architecture/data-layer/offline-first",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Local data sources, persistence and synchronization architecture; server-dependent games may need more than cached assets.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "architecture",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-unity-il2cpp-c34150bfcc28",
+  "name": "Unity IL2CPP",
+  "url": "https://docs.unity3d.com/Manual/IL2CPP.html",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "AOT managed-to-native scripting backend; metadata stubs are not recovered game source.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "game-development",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-unity-assetbundles-bff880c0efc2",
+  "name": "Unity AssetBundles",
+  "url": "https://docs.unity3d.com/Manual/AssetBundlesIntro.html",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Runtime asset archives; match platform, engine and serialized type compatibility.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-apktool-efa9c6b5411f",
+  "name": "Apktool",
+  "url": "https://github.com/iBotPeaches/Apktool",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Decode/rebuild Android resources and smali; framework packages and exact tool version matter.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-jadx-6ad65dad2c1b",
+  "name": "JADX",
+  "url": "https://github.com/skylot/jadx",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Java-like DEX decompilation for analysis; output is not a guaranteed recompilable source project.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "java",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [
+   "java"
+  ],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-google-smali-baksmali-c696641f9cb9",
+  "name": "Google smali/baksmali",
+  "url": "https://github.com/google/smali",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "DEX assembler/disassembler and dexlib2; maintained fork, mixed component licenses require review.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-apkeditor-4bf3eb43bec3",
+  "name": "APKEditor",
+  "url": "https://github.com/REAndroid/APKEditor",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Alternative resource decode/build, split merging and resource repair; validate merged manifests, ABIs and signatures.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-arsclib-9f0b17554174",
+  "name": "ARSCLib",
+  "url": "https://github.com/REAndroid/ARSCLib",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Programmatic Android resource-table/binary-XML editing without aapt2.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-androguard-5ba30daa2ecc",
+  "name": "Androguard",
+  "url": "https://github.com/androguard/androguard",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Python APK/DEX/resource inspection and analysis; select supported Python/tool version.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile",
+   "python"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [
+   "python"
+  ],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-apkid-8d0acffcf43f",
+  "name": "APKiD",
+  "url": "https://github.com/rednaga/APKiD",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Identify packers, protectors and obfuscators; heuristic classification, not decryption or a security verdict.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile",
+   "security"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-mobsf-4e69ac86feed",
+  "name": "MobSF",
+  "url": "https://github.com/MobSF/Mobile-Security-Framework-MobSF",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Local static/dynamic mobile security analysis; separate service requirements and report false positives.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile",
+   "security"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-owasp-mastg-edace67addab",
+  "name": "OWASP MASTG",
+  "url": "https://mas.owasp.org/MASTG/",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Mobile testing/reverse-engineering methodology and tool references.",
+  "resource_type": "reference",
+  "topics": [
+   "android",
+   "mobile",
+   "testing"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-frida-android-0f1e76251637",
+  "name": "Frida Android",
+  "url": "https://frida.re/docs/android/",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Runtime instrumentation on controlled devices; server/gadget, ABI and version compatibility matter.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-objection-9c120d6722ec",
+  "name": "Objection",
+  "url": "https://github.com/sensepost/objection",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Frida-based runtime exploration; gadget patching changes package and signing behavior.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-il2cppdumper-41787dc141f9",
+  "name": "Il2CppDumper",
+  "url": "https://github.com/Perfare/Il2CppDumper",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Recover IL2CPP metadata/type/method maps and dummy assemblies; older maintenance, exact metadata-version limits.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-cpp2il-bfa78bc58596",
+  "name": "Cpp2IL",
+  "url": "https://github.com/SamboyCoding/Cpp2IL",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Work-in-progress IL2CPP analysis and reconstruction; validate output against native instructions.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-unitypy-6467a7e42943",
+  "name": "UnityPy",
+  "url": "https://github.com/K0lb3/UnityPy",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Script extraction and modification of Unity serialized assets; preserve references and re-read written output.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-assetripper-1ea420921f85",
+  "name": "AssetRipper",
+  "url": "https://github.com/AssetRipper/AssetRipper",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Unity game-file analysis/export; exported projects do not imply complete recoverable source or behavior.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "game-development",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-uabea-f63c6bf4c5a8",
+  "name": "UABEA",
+  "url": "https://github.com/nesrak1/UABEA",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Unity bundle/serialized asset inspection and editing; upstream points to UABEANext as work in progress.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-uabeanext-1761c7e28662",
+  "name": "UABEANext",
+  "url": "https://github.com/nesrak1/UABEANext",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "New multi-bundle Unity editor; work-in-progress successor, not a compatibility guarantee.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-ghidra-6bf9a51e857c",
+  "name": "Ghidra",
+  "url": "https://github.com/NationalSecurityAgency/ghidra",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Native ELF disassembly/decompilation; apply exact architecture, symbols and relocations.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "architecture",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-keystone-79ef444e1e6e",
+  "name": "Keystone",
+  "url": "https://github.com/keystone-engine/keystone",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Assemble architecture-specific native patches; GPL/commercial and component licensing require review.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "architecture",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-unicorn-e2c9e4ece03b",
+  "name": "Unicorn",
+  "url": "https://github.com/unicorn-engine/unicorn",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "CPU-level execution of native patch tests; mocked framework boundaries do not test Android runtime behavior.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile",
+   "testing"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-pyelftools-1ab8b5d27160",
+  "name": "pyelftools",
+  "url": "https://github.com/eliben/pyelftools",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Read ELF headers, segments and symbols; translate RVAs through PT_LOAD segments rather than assuming file offsets.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-apklab-176018059c7c",
+  "name": "APKLab",
+  "url": "https://github.com/APKLab/APKLab",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "VS Code integration of APK analysis, smali and rebuild workflows; inspect bundled tools and AGPL license obligations.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-flutter-build-modes-1923482ca16c",
+  "name": "Flutter build modes",
+  "url": "https://docs.flutter.dev/testing/build-modes",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Distinguish Flutter debug/JIT from release AOT artifacts before choosing an analysis path.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-react-native-android-releases-c967e8d4294b",
+  "name": "React Native Android releases",
+  "url": "https://reactnative.dev/docs/signed-apk-android",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Understand JS/assets, native packaging and signing of React Native Android builds.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-godot-android-export-52c414cca9d8",
+  "name": "Godot Android export",
+  "url": "https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_android.html",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Godot Android toolchain, templates, package data and signing requirements.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-perfetto-24a2eb985eba",
+  "name": "Perfetto",
+  "url": "https://perfetto.dev/docs/",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "System/app tracing for startup, scheduling and performance investigation.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile",
+   "observability"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-android-monkey-2c0490d43486",
+  "name": "Android Monkey",
+  "url": "https://developer.android.com/studio/test/other-testing-tools/monkey",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Device UI event stress testing; bound runs and inspect results rather than treating no crash as correctness.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile",
+   "testing"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-android-local-webview-content-a6d22857d87e",
+  "name": "Android local WebView content",
+  "url": "https://developer.android.com/develop/ui/views/layout/webapps/load-local-content",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Official guidance for bundling HTML/JS/CSS inside Android apps; use an app-owned HTTPS origin and controlled asset loading, prohibit external navigation, and verify offline startup and WebView lifecycle.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-universal-android-debloater-2d3d53a858ce",
+  "name": "universal android debloater",
+  "url": "https://github.com/0x192/universal-android-debloater",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Cross-platform GUI written in Rust using ADB to debloat non-rooted android devices. Improve your privacy, the security and battery life of your device. GPL-3.0: derivative works must stay under the GPL.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile",
+   "rust",
+   "security"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [
+   "rust"
+  ],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-aaa-ff1428eb5334",
+  "name": "AAA",
+  "url": "https://github.com/Psyhackological/AAA",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "iphone: Curated list of THE BEST FOSS Android apps to maximize your freedom & privacy!",
+  "resource_type": "curated-list",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-repostore-82febdde0428",
+  "name": "RepoStore",
+  "url": "https://github.com/samyak2403/RepoStore",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Explore apps published on GitHub, view release details, and install APKs instantly — all in one place. Developed using pure Kotlin, optimized for modern Android devices.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "kotlin",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [
+   "kotlin"
+  ],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-dex2jar-0edd211a4324",
+  "name": "dex2jar",
+  "url": "https://github.com/pxb1988/dex2jar",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Tools to work with android .dex and java .class files.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "java",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [
+   "java"
+  ],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-android-emulator-container-scripts-957716a682e5",
+  "name": "android emulator container scripts",
+  "url": "https://github.com/google/android-emulator-container-scripts",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "This is a set of minimal scripts to run the emulator in a container for various systems such as Docker, for external consumption.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "containers",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-scrcpy-034b627c6deb",
+  "name": "scrcpy",
+  "url": "https://github.com/Genymobile/scrcpy",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Display and control your Android device.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-sai-3f00c3ea0952",
+  "name": "SAI",
+  "url": "https://github.com/Aefyr/SAI",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Android split APKs installer. GPL-3.0: derivative works must stay under the GPL.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-newpipe-30efaa691f40",
+  "name": "NewPipe",
+  "url": "https://github.com/TeamNewPipe/NewPipe",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "A libre lightweight streaming front-end for Android. GPL-3.0: derivative works must stay under the GPL.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile",
+   "web"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile",
+   "web"
+  ]
+ },
+ {
+  "resource_id": "res-firefox-android-232f5413b8c0",
+  "name": "firefox android",
+  "url": "https://github.com/mozilla-mobile/firefox-android",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "warning: This repository hosts the Firefox for Android (Fenix), Focus for Android, and Mozilla Android Components projects. It is now developed and maintained as part of Mozilla Central. MPL-2.0: file-level copyleft; modified files must be published.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "git",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-architecture-samples-06b0ef2ff42a",
+  "name": "architecture samples",
+  "url": "https://github.com/android/architecture-samples",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "A collection of samples to discuss and showcase different architectural tools and patterns for Android apps.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "architecture",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-compose-samples-0d3436c2f7f4",
+  "name": "compose samples",
+  "url": "https://github.com/android/compose-samples",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Official Jetpack Compose samples.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-androidx-5eeacf0aec63",
+  "name": "androidx",
+  "url": "https://github.com/androidx/androidx",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Development environment for Android Jetpack extension libraries under the androidx namespace. Synchronized with Android Jetpack's primary development branch on AOSP.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-accompanist-eb49c2bc9082",
+  "name": "accompanist",
+  "url": "https://github.com/google/accompanist",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "A collection of extension libraries for Jetpack Compose.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-leakcanary-6bb5ff36d5c4",
+  "name": "leakcanary",
+  "url": "https://github.com/square/leakcanary",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "A memory leak detection library for Android.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-retrofit-aebff35659c2",
+  "name": "retrofit",
+  "url": "https://github.com/lysine-dev/retrofit",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "A type-safe HTTP client for Android and the JVM.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "api-integration",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-okhttp-bd91abcc14c0",
+  "name": "okhttp",
+  "url": "https://github.com/lysine-dev/okhttp",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "A meticulous HTTP client for the JVM, Android, and GraalVM.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "api-integration",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-coil-2d33bf739ebc",
+  "name": "coil",
+  "url": "https://github.com/coil-kt/coil",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Image loading for Android and Compose Multiplatform.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-pokedex-22c0b4597347",
+  "name": "pokedex",
+  "url": "https://github.com/skydoves/Pokedex",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Pokedex demonstrates modern Android development with Hilt, Material Motion, Coroutines, Flow, Jetpack (Room, ViewModel) based on MVVM architecture.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "architecture",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-koin-c035f19b48d1",
+  "name": "koin",
+  "url": "https://github.com/InsertKoinIO/koin",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Koin - pragmatic dependency injection for Kotlin & Kotlin Multiplatform. Koin DSL or Koin Annotations (JSR-330), compile safe with the Koin Compiler Plugin.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "build-tools",
+   "kotlin",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [
+   "kotlin"
+  ],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-kotlinx-coroutines-6454be02abe1",
+  "name": "kotlinx.coroutines",
+  "url": "https://github.com/Kotlin/kotlinx.coroutines",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "Library support for Kotlin coroutines.",
+  "resource_type": "repository",
+  "topics": [
+   "android",
+   "kotlin",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [
+   "kotlin"
+  ],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-awesome-android-ui-8118a0923793",
+  "name": "awesome android ui",
+  "url": "https://github.com/wasabeef/awesome-android-ui",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "A curated list of awesome Android UI/UX libraries.",
+  "resource_type": "curated-list",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-awesome-flutter-817023727333",
+  "name": "awesome flutter",
+  "url": "https://github.com/Solido/awesome-flutter",
+  "category_id": "android-apk-development-and-analysis",
+  "purpose": "An awesome list that curates the best Flutter libraries, tools, tutorials, articles and more. No license detected by GitHub; default copyright applies, so treat reuse as unsupported.",
+  "resource_type": "curated-list",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ }
+]

@@ -1,0 +1,100 @@
+# Android APK development and analysis
+
+[All categories](README.md) · [AI selection guide](../AGENTS.md) · [Practical APK guide](../docs/android-apk-development.md)
+
+Selected primary documentation, README excerpts and repository metadata reviewed 2026-10-22. Version, license, maintenance and device-support checks remain project-specific; this is not a comprehensive adoption audit. No tool was automatically installed for this research.
+
+| Resource | Useful for / constraints |
+|---|---|
+| [APK Analyzer](https://developer.android.com/studio/debug/apk-analyzer) | Inspect manifest, DEX, resources and package size in Android Studio. |
+| [apkanalyzer](https://developer.android.com/tools/apkanalyzer) | Scriptable package, manifest, DEX and resource inspection. |
+| [Android CLI](https://developer.android.com/studio/intro) | Current command-line Android project and SDK workflows; recheck availability before replacing existing tooling. |
+| [sdkmanager](https://developer.android.com/tools/sdkmanager) | SDK package management reference; fetched page marks it deprecated in favor of Android CLI, while existing SDK installations still use it. |
+| [Android command-line builds](https://developer.android.com/build/building-cmdline) | Gradle-wrapper builds of APKs and app bundles from source. |
+| [Android Gradle Plugin](https://developer.android.com/build/releases/about-agp) | Build-system compatibility and release guidance; pin compatible AGP, Gradle and JDK versions. |
+| [Android build JDKs](https://developer.android.com/build/jdks) | Distinguish Gradle runtime JDK, toolchains, source levels and Android API availability. |
+| [AAPT2](https://developer.android.com/tools/aapt2) | Compile/link Android resources and inspect packaging problems. |
+| [D8](https://developer.android.com/tools/d8) | Convert Java bytecode to Android DEX; preserve minSdk and library/desugaring inputs. |
+| [Apksigner](https://developer.android.com/tools/apksigner) | Sign and verify APKs; every subsequent byte modification invalidates signatures. |
+| [Zipalign](https://developer.android.com/tools/zipalign) | Verify APK entry alignment; align before apksigner signing. |
+| [App bundle format](https://developer.android.com/guide/app-bundle/app-bundle-format) | Understand base, feature and configuration splits versus distributable APKs. |
+| [Bundletool](https://developer.android.com/tools/bundletool) | Generate and install device-specific APK sets from AABs; not a universal arbitrary-APK merger. |
+| [Android app updates](https://developer.android.com/google/play/app-updates) | Package identity, signing compatibility and version rules for preserving installed data. |
+| [APK signature v4](https://source.android.com/docs/security/features/apksigning/v4) | Understand incremental-install idsig sidecars and their relationship to APK signing. |
+| [Android ABIs](https://developer.android.com/ndk/guides/abis) | Native architectures, calling conventions and packaging requirements. |
+| [16 KB page sizes](https://developer.android.com/guide/practices/page-sizes) | Separate native ELF alignment, ZIP alignment and runtime page-size assumptions. |
+| [Android compatibility](https://developer.android.com/guide/app-compatibility) | Separate behavior changes affecting all apps from changes gated by target SDK. |
+| [Android storage](https://developer.android.com/training/data-storage) | App-specific files, shared storage and permissions; scoped-storage implications. |
+| [ADB](https://developer.android.com/tools/adb) | Install, inspect, launch and debug on authorized devices and emulators. |
+| [Logcat](https://developer.android.com/tools/logcat) | Capture complete startup exceptions and correlate package/process logs. |
+| [NDK stack symbolization](https://developer.android.com/ndk/guides/ndk-stack) | Symbolize native crash traces with exact matching unstripped libraries. |
+| [Android testing](https://developer.android.com/studio/test) | Source-level and device test workflows; complement package checks with gameplay tests. |
+| [Play Asset Delivery](https://developer.android.com/guide/playcore/asset-delivery) | Understand install-time, fast-follow and on-demand game assets. |
+| [APK expansion files](https://developer.android.com/google/play/expansion-files) | Legacy OBB naming, storage and downloader model; distinguish from custom caches. |
+| [Offline-first architecture](https://developer.android.com/topic/architecture/data-layer/offline-first) | Local data sources, persistence and synchronization architecture; server-dependent games may need more than cached assets. |
+| [Unity IL2CPP](https://docs.unity3d.com/Manual/IL2CPP.html) | AOT managed-to-native scripting backend; metadata stubs are not recovered game source. |
+| [Unity AssetBundles](https://docs.unity3d.com/Manual/AssetBundlesIntro.html) | Runtime asset archives; match platform, engine and serialized type compatibility. |
+| [Apktool](https://github.com/iBotPeaches/Apktool) | Decode/rebuild Android resources and smali; framework packages and exact tool version matter. |
+| [JADX](https://github.com/skylot/jadx) | Java-like DEX decompilation for analysis; output is not a guaranteed recompilable source project. |
+| [Google smali/baksmali](https://github.com/google/smali) | DEX assembler/disassembler and dexlib2; maintained fork, mixed component licenses require review. |
+| [APKEditor](https://github.com/REAndroid/APKEditor) | Alternative resource decode/build, split merging and resource repair; validate merged manifests, ABIs and signatures. |
+| [ARSCLib](https://github.com/REAndroid/ARSCLib) | Programmatic Android resource-table/binary-XML editing without aapt2. |
+| [Androguard](https://github.com/androguard/androguard) | Python APK/DEX/resource inspection and analysis; select supported Python/tool version. |
+| [APKiD](https://github.com/rednaga/APKiD) | Identify packers, protectors and obfuscators; heuristic classification, not decryption or a security verdict. |
+| [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF) | Local static/dynamic mobile security analysis; separate service requirements and report false positives. |
+| [OWASP MASTG](https://mas.owasp.org/MASTG/) | Mobile testing/reverse-engineering methodology and tool references. |
+| [Frida Android](https://frida.re/docs/android/) | Runtime instrumentation on controlled devices; server/gadget, ABI and version compatibility matter. |
+| [Objection](https://github.com/sensepost/objection) | Frida-based runtime exploration; gadget patching changes package and signing behavior. |
+| [Il2CppDumper](https://github.com/Perfare/Il2CppDumper) | Recover IL2CPP metadata/type/method maps and dummy assemblies; older maintenance, exact metadata-version limits. |
+| [Cpp2IL](https://github.com/SamboyCoding/Cpp2IL) | Work-in-progress IL2CPP analysis and reconstruction; validate output against native instructions. |
+| [UnityPy](https://github.com/K0lb3/UnityPy) | Script extraction and modification of Unity serialized assets; preserve references and re-read written output. |
+| [AssetRipper](https://github.com/AssetRipper/AssetRipper) | Unity game-file analysis/export; exported projects do not imply complete recoverable source or behavior. |
+| [UABEA](https://github.com/nesrak1/UABEA) | Unity bundle/serialized asset inspection and editing; upstream points to UABEANext as work in progress. |
+| [UABEANext](https://github.com/nesrak1/UABEANext) | New multi-bundle Unity editor; work-in-progress successor, not a compatibility guarantee. |
+| [Ghidra](https://github.com/NationalSecurityAgency/ghidra) | Native ELF disassembly/decompilation; apply exact architecture, symbols and relocations. |
+| [Keystone](https://github.com/keystone-engine/keystone) | Assemble architecture-specific native patches; GPL/commercial and component licensing require review. |
+| [Unicorn](https://github.com/unicorn-engine/unicorn) | CPU-level execution of native patch tests; mocked framework boundaries do not test Android runtime behavior. |
+| [pyelftools](https://github.com/eliben/pyelftools) | Read ELF headers, segments and symbols; translate RVAs through PT_LOAD segments rather than assuming file offsets. |
+| [APKLab](https://github.com/APKLab/APKLab) | VS Code integration of APK analysis, smali and rebuild workflows; inspect bundled tools and AGPL license obligations. |
+| [Flutter build modes](https://docs.flutter.dev/testing/build-modes) | Distinguish Flutter debug/JIT from release AOT artifacts before choosing an analysis path. |
+| [React Native Android releases](https://reactnative.dev/docs/signed-apk-android) | Understand JS/assets, native packaging and signing of React Native Android builds. |
+| [Godot Android export](https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_android.html) | Godot Android toolchain, templates, package data and signing requirements. |
+| [Perfetto](https://perfetto.dev/docs/) | System/app tracing for startup, scheduling and performance investigation. |
+| [Android Monkey](https://developer.android.com/studio/test/other-testing-tools/monkey) | Device UI event stress testing; bound runs and inspect results rather than treating no crash as correctness. |
+
+Project reference checked 2026-10-22:
+
+| Resource | Useful for / constraints |
+|---|---|
+| [Android local WebView content](https://developer.android.com/develop/ui/views/layout/webapps/load-local-content) | Official guidance for bundling HTML/JS/CSS inside Android apps; use an app-owned HTTPS origin and controlled asset loading, prohibit external navigation, and verify offline startup and WebView lifecycle. Official load-in-app-content documentation read for an offline game shell; local asset packaging, source restriction and no-network manifest checked. Physical-device lifecycle and startup remain to be tested. |
+
+<!-- expansion-2026-11-11:begin -->
+## Expansion — 2026-11-11
+
+Repository metadata and primary documentation pages checked, not read end to end: latest release, license, and current maintenance are yours to verify before adopting. See the [expansion notes and evidence limits](../catalogs/expansion-2026-11-11.md).
+
+| Resource | Useful for / constraints |
+|---|---|
+| [AAA](https://github.com/Psyhackological/AAA) | iphone: Curated list of THE BEST FOSS Android apps to maximize your freedom & privacy! |
+| [accompanist](https://github.com/google/accompanist) | A collection of extension libraries for Jetpack Compose. |
+| [android emulator container scripts](https://github.com/google/android-emulator-container-scripts) | This is a set of minimal scripts to run the emulator in a container for various systems such as Docker, for external consumption. |
+| [androidx](https://github.com/androidx/androidx) | Development environment for Android Jetpack extension libraries under the androidx namespace. Synchronized with Android Jetpack's primary development branch on AOSP. |
+| [architecture samples](https://github.com/android/architecture-samples) | A collection of samples to discuss and showcase different architectural tools and patterns for Android apps. |
+| [awesome android ui](https://github.com/wasabeef/awesome-android-ui) | A curated list of awesome Android UI/UX libraries. |
+| [awesome flutter](https://github.com/Solido/awesome-flutter) | An awesome list that curates the best Flutter libraries, tools, tutorials, articles and more. No license detected by GitHub; default copyright applies, so treat reuse as unsupported. |
+| [coil](https://github.com/coil-kt/coil) | Image loading for Android and Compose Multiplatform. |
+| [compose samples](https://github.com/android/compose-samples) | Official Jetpack Compose samples. |
+| [dex2jar](https://github.com/pxb1988/dex2jar) | Tools to work with android .dex and java .class files. |
+| [firefox android](https://github.com/mozilla-mobile/firefox-android) | warning: This repository hosts the Firefox for Android (Fenix), Focus for Android, and Mozilla Android Components projects. It is now developed and maintained as part of Mozilla Central. MPL-2.0: file-level copyleft; modified files must be published. |
+| [koin](https://github.com/InsertKoinIO/koin) | Koin - pragmatic dependency injection for Kotlin & Kotlin Multiplatform. Koin DSL or Koin Annotations (JSR-330), compile safe with the Koin Compiler Plugin. |
+| [kotlinx.coroutines](https://github.com/Kotlin/kotlinx.coroutines) | Library support for Kotlin coroutines. |
+| [leakcanary](https://github.com/square/leakcanary) | A memory leak detection library for Android. |
+| [NewPipe](https://github.com/TeamNewPipe/NewPipe) | A libre lightweight streaming front-end for Android. GPL-3.0: derivative works must stay under the GPL. |
+| [okhttp](https://github.com/lysine-dev/okhttp) | A meticulous HTTP client for the JVM, Android, and GraalVM. |
+| [pokedex](https://github.com/skydoves/Pokedex) | Pokedex demonstrates modern Android development with Hilt, Material Motion, Coroutines, Flow, Jetpack (Room, ViewModel) based on MVVM architecture. |
+| [RepoStore](https://github.com/samyak2403/RepoStore) | Explore apps published on GitHub, view release details, and install APKs instantly — all in one place. Developed using pure Kotlin, optimized for modern Android devices. |
+| [retrofit](https://github.com/lysine-dev/retrofit) | A type-safe HTTP client for Android and the JVM. |
+| [SAI](https://github.com/Aefyr/SAI) | Android split APKs installer. GPL-3.0: derivative works must stay under the GPL. |
+| [scrcpy](https://github.com/Genymobile/scrcpy) | Display and control your Android device. |
+| [universal android debloater](https://github.com/0x192/universal-android-debloater) | Cross-platform GUI written in Rust using ADB to debloat non-rooted android devices. Improve your privacy, the security and battery life of your device. GPL-3.0: derivative works must stay under the GPL. |
+<!-- expansion-2026-11-11:end -->
