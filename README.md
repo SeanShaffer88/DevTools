@@ -201,3 +201,18 @@ The [`knowledge/`](knowledge/) folder of this repo is a self-contained Windows d
 ## Flutter pack
 
 The [`flutter/`](flutter/) folder of this repo is a self-contained Flutter development pack — 14 guides (toolchain, Dart, widgets and UI, state management, navigation, networking, storage, testing, Windows desktop, Android release, web and other platforms, flavors, performance, architecture), a verified dependency catalog (Flutter 3.50.0 / Dart 3.14.0 snapshot, November 2026), PowerShell 7 + bash toolchain/build scripts that check and report without installing anything, an app skeleton and CI templates, synthetic fixtures, and offline Python validators. It is built to be downloaded and used locally by AI coding agents and human developers: start with [`flutter/manifest.json`](flutter/manifest.json) and [`flutter/AGENTS.md`](flutter/AGENTS.md), or upload [`flutter/ai-bundle.md`](flutter/ai-bundle.md) as a single file.
+
+## Development knowledge library
+
+This repo is the single home of the development knowledge library — six self-contained domains, each with its own `manifest.json` (file map + reading order), `AGENTS.md` (rules), and `ai-bundle.md` (the whole domain in one file). **Start with [`INDEX.md`](INDEX.md)** — the master map with a task routing table that points straight at the one best file — or the machine-readable [`manifest.json`](manifest.json).
+
+| Domain | Folder | Start |
+| --- | --- | --- |
+| Windows desktop development system | [`knowledge/`](knowledge/) | `knowledge/manifest.json` |
+| Flutter development pack | [`flutter/`](flutter/) | `flutter/manifest.json` |
+| PortableApps.com packaging | [`portableapps/`](portableapps/) | `portableapps/manifest.json` |
+| World of Warcraft addon development | [`wow-addons/`](wow-addons/) | `wow-addons/manifest.json` |
+| Kotlin Android apps and games | [`kotlin/`](kotlin/) | `kotlin/manifest.json` |
+| Godot for Android games and apps | [`godot/`](godot/) | `godot/manifest.json` |
+
+The PortableApps, WoW, Kotlin, and Godot domains were merged in from the former PafDev, WowDev, KotlinDev, and GodotDevTools knowledge repos on 2026-11-18; those repos remain on GitHub untouched. The Godot editor addons code itself stays in the GodotDevTools repo — this repo carries its Android knowledge base.

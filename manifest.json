@@ -1,0 +1,1733 @@
+{
+  "repo": "SeanShaffer88/DevTools",
+  "generated": "2026-11-18",
+  "purpose": "Unified development knowledge library (six domains) plus the local developer toolkit",
+  "startHere": [
+    "INDEX.md",
+    "README.md"
+  ],
+  "domains": [
+    {
+      "id": "portableapps",
+      "folder": "portableapps/",
+      "title": "PortableApps.com packaging",
+      "covers": "PortableApps.com format, Launcher + Installer INI, packaging workflow, updating, failure modes, submission",
+      "mergedFrom": "SeanShaffer88/PafDev",
+      "manifest": "portableapps/manifest.json",
+      "bundle": "portableapps/ai-bundle.md",
+      "files": 66
+    },
+    {
+      "id": "wow-addons",
+      "folder": "wow-addons/",
+      "title": "World of Warcraft addon development",
+      "covers": "Addon anatomy, Lua, API/events/widgets, flavors + interface numbers (Forever first, interface 16001), libraries, packaging",
+      "mergedFrom": "SeanShaffer88/WowDev",
+      "manifest": "wow-addons/manifest.json",
+      "bundle": "wow-addons/ai-bundle.md",
+      "files": 54
+    },
+    {
+      "id": "kotlin",
+      "folder": "kotlin/",
+      "title": "Kotlin Android apps and games",
+      "covers": "Kotlin, Compose, architecture, Room, coroutines, testing, Play release, billing, games (Compose Canvas, libGDX, native graphics)",
+      "mergedFrom": "SeanShaffer88/KotlinDev",
+      "manifest": "kotlin/manifest.json",
+      "bundle": "kotlin/ai-bundle.md",
+      "files": 132
+    },
+    {
+      "id": "godot",
+      "folder": "godot/",
+      "title": "Godot for Android games and apps",
+      "covers": "Godot engine versions, project anatomy, Android export pipeline, Google Play, plugins, testing/CI, permissions",
+      "mergedFrom": "SeanShaffer88/GodotDevTools (knowledge/ layer)",
+      "manifest": "godot/manifest.json",
+      "bundle": "godot/ai-bundle.md",
+      "files": 24
+    },
+    {
+      "id": "windows-desktop",
+      "folder": "knowledge/",
+      "title": "Windows desktop development system",
+      "covers": "Rule layers (Elite Prompt, Engineering Contract V4.0, guardrails), tiers + sanctioned stacks, QUALITY.md gate, SeanPak packaging, TesselGUI design, release verification",
+      "manifest": "knowledge/manifest.json",
+      "bundle": "knowledge/ai-bundle.md",
+      "note": "Already in this repo before the 2026-11-18 merge; its manifest lists its files."
+    },
+    {
+      "id": "flutter",
+      "folder": "flutter/",
+      "title": "Flutter development pack",
+      "covers": "Toolchain, Dart, widgets/UI, state, navigation, networking, storage, testing, Windows desktop, Android release, flavors, performance, architecture",
+      "manifest": "flutter/manifest.json",
+      "bundle": "flutter/ai-bundle.md",
+      "note": "Already in this repo before the 2026-11-18 merge; its manifest lists its files."
+    }
+  ],
+  "files": [
+    {
+      "path": "portableapps/AGENTS.md",
+      "domain": "portableapps",
+      "bytes": 7342,
+      "summary": "AGENTS.md — Instructions for AI agents building PortableApps.com packages"
+    },
+    {
+      "path": "portableapps/README.md",
+      "domain": "portableapps",
+      "bytes": 10575,
+      "summary": "PafDev — PortableApps.com Development Knowledge Base"
+    },
+    {
+      "path": "portableapps/SOURCES.md",
+      "domain": "portableapps",
+      "bytes": 4300,
+      "summary": "Sources"
+    },
+    {
+      "path": "portableapps/ai-bundle.md",
+      "domain": "portableapps",
+      "bytes": 232139,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/checklists/package-checklist.md",
+      "domain": "portableapps",
+      "bytes": 4731,
+      "summary": "Package Structure Checklist"
+    },
+    {
+      "path": "portableapps/checklists/pre-release-checklist.md",
+      "domain": "portableapps",
+      "bytes": 4090,
+      "summary": "Pre-Release Checklist"
+    },
+    {
+      "path": "portableapps/docs/01-format-spec.md",
+      "domain": "portableapps",
+      "bytes": 13197,
+      "summary": "01 — PortableApps.com Format 3.9 Specification"
+    },
+    {
+      "path": "portableapps/docs/02-installer-and-installer-ini.md",
+      "domain": "portableapps",
+      "bytes": 15784,
+      "summary": "02 — PortableApps.com Installer and installer.ini"
+    },
+    {
+      "path": "portableapps/docs/03-launcher-overview.md",
+      "domain": "portableapps",
+      "bytes": 6080,
+      "summary": "03 — PortableApps.com Launcher (PAL) Overview"
+    },
+    {
+      "path": "portableapps/docs/04-launcher-ini-reference.md",
+      "domain": "portableapps",
+      "bytes": 20896,
+      "summary": "04 — Launcher INI Complete Reference (PAL 2.2)"
+    },
+    {
+      "path": "portableapps/docs/05-launcher-advanced-custom-code.md",
+      "domain": "portableapps",
+      "bytes": 9244,
+      "summary": "05 — Launcher Advanced Topics: Segments and Custom Code"
+    },
+    {
+      "path": "portableapps/docs/06-environment-variables.md",
+      "domain": "portableapps",
+      "bytes": 7131,
+      "summary": "06 — PAL Environment Variable Substitution (envsub)"
+    },
+    {
+      "path": "portableapps/docs/07-end-to-end-workflow.md",
+      "domain": "portableapps",
+      "bytes": 8309,
+      "summary": "07 — End-to-End Workflow: From Local App to .paf.exe"
+    },
+    {
+      "path": "portableapps/docs/08-testing-debugging-troubleshooting.md",
+      "domain": "portableapps",
+      "bytes": 10914,
+      "summary": "08 — Testing, Debugging, and Troubleshooting"
+    },
+    {
+      "path": "portableapps/docs/09-licensing-permissions-submission.md",
+      "domain": "portableapps",
+      "bytes": 6490,
+      "summary": "09 — Licensing, Permissions, and Submitting to PortableApps.com"
+    },
+    {
+      "path": "portableapps/docs/10-platform-integration.md",
+      "domain": "portableapps",
+      "bytes": 4324,
+      "summary": "10 — PortableApps.com Platform Integration"
+    },
+    {
+      "path": "portableapps/docs/11-tools-and-versions.md",
+      "domain": "portableapps",
+      "bytes": 5085,
+      "summary": "11 — Official Tools and Versions"
+    },
+    {
+      "path": "portableapps/docs/12-glossary-and-faq.md",
+      "domain": "portableapps",
+      "bytes": 5772,
+      "summary": "12 — Glossary and FAQ"
+    },
+    {
+      "path": "portableapps/docs/13-ecosystem-and-source-repositories.md",
+      "domain": "portableapps",
+      "bytes": 6691,
+      "summary": "13 — Ecosystem, Source Repositories, and Community Resources"
+    },
+    {
+      "path": "portableapps/docs/14-beginner-packaging-guide.md",
+      "domain": "portableapps",
+      "bytes": 4839,
+      "summary": "14 — The Beginner Packaging Guide (Distilled, with Modern Corrections)"
+    },
+    {
+      "path": "portableapps/docs/15-users-contexts-and-environments.md",
+      "domain": "portableapps",
+      "bytes": 10591,
+      "summary": "15 — Who Uses These Packages, Where, and What That Obliges You to Do"
+    },
+    {
+      "path": "portableapps/docs/16-updating-a-package.md",
+      "domain": "portableapps",
+      "bytes": 3421,
+      "summary": "16 — Updating an Existing Package (the Maintainer's Workflow)"
+    },
+    {
+      "path": "portableapps/docs/17-failure-mode-reference.md",
+      "domain": "portableapps",
+      "bytes": 19293,
+      "summary": "17 — Failure-Mode Reference"
+    },
+    {
+      "path": "portableapps/docs/18-security-privacy-and-abuse.md",
+      "domain": "portableapps",
+      "bytes": 14281,
+      "summary": "18 — Security, Privacy, and Abuse"
+    },
+    {
+      "path": "portableapps/docs/19-accessibility.md",
+      "domain": "portableapps",
+      "bytes": 5954,
+      "summary": "19 — Accessibility"
+    },
+    {
+      "path": "portableapps/docs/20-common-recipes.md",
+      "domain": "portableapps",
+      "bytes": 5449,
+      "summary": "20 — Common Recipes"
+    },
+    {
+      "path": "portableapps/examples/01-natively-portable-app.md",
+      "domain": "portableapps",
+      "bytes": 1500,
+      "summary": "Example 1 — Natively portable app"
+    },
+    {
+      "path": "portableapps/examples/02-registry-settings-app.md",
+      "domain": "portableapps",
+      "bytes": 1793,
+      "summary": "Example 2 — Registry-settings app"
+    },
+    {
+      "path": "portableapps/examples/03-appdata-filesmove-app.md",
+      "domain": "portableapps",
+      "bytes": 3053,
+      "summary": "Example 3 — %APPDATA% app with stored absolute paths"
+    },
+    {
+      "path": "portableapps/examples/04-java-app.md",
+      "domain": "portableapps",
+      "bytes": 2272,
+      "summary": "Example 4 — Java application"
+    },
+    {
+      "path": "portableapps/examples/05-qt-app.md",
+      "domain": "portableapps",
+      "bytes": 1886,
+      "summary": "Example 5 — Qt application"
+    },
+    {
+      "path": "portableapps/examples/06-online-installer-app.md",
+      "domain": "portableapps",
+      "bytes": 2834,
+      "summary": "Example 6 — Online installer (freeware, no redistribution)"
+    },
+    {
+      "path": "portableapps/examples/README.md",
+      "domain": "portableapps",
+      "bytes": 1581,
+      "summary": "Examples"
+    },
+    {
+      "path": "portableapps/examples/real-world/7zip/7-ZipPortable.ini",
+      "domain": "portableapps",
+      "bytes": 1263,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/examples/real-world/README.md",
+      "domain": "portableapps",
+      "bytes": 5474,
+      "summary": "Real-World Configurations (Mirrored)"
+    },
+    {
+      "path": "portableapps/examples/real-world/notepadplusplus/Custom.nsh",
+      "domain": "portableapps",
+      "bytes": 2007,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/examples/real-world/notepadplusplus/Notepad++Portable.ini",
+      "domain": "portableapps",
+      "bytes": 2684,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/examples/real-world/notepadplusplus/PortableApps.comInstallerCustom.nsh",
+      "domain": "portableapps",
+      "bytes": 2756,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/examples/real-world/notepadplusplus/appinfo.ini",
+      "domain": "portableapps",
+      "bytes": 882,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/examples/real-world/notepadplusplus/installer.ini",
+      "domain": "portableapps",
+      "bytes": 252,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/manifest.json",
+      "domain": "portableapps",
+      "bytes": 9940,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/reference/environment-variables.md",
+      "domain": "portableapps",
+      "bytes": 2138,
+      "summary": "Reference — Environment Variables"
+    },
+    {
+      "path": "portableapps/reference/installer-keys.md",
+      "domain": "portableapps",
+      "bytes": 1550,
+      "summary": "Reference — installer.ini Quick Sections"
+    },
+    {
+      "path": "portableapps/reference/launcher-keys.md",
+      "domain": "portableapps",
+      "bytes": 3362,
+      "summary": "Reference — Launcher INI Quick Keys"
+    },
+    {
+      "path": "portableapps/reference/package-layout.md",
+      "domain": "portableapps",
+      "bytes": 2140,
+      "summary": "Reference — Package Layout"
+    },
+    {
+      "path": "portableapps/templates/MinimalAppPortable/App/AppInfo/Launcher/AppNamePortable.ini",
+      "domain": "portableapps",
+      "bytes": 1237,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/templates/MinimalAppPortable/App/AppInfo/Launcher/Custom.nsh",
+      "domain": "portableapps",
+      "bytes": 570,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/templates/MinimalAppPortable/App/AppInfo/appinfo.ini",
+      "domain": "portableapps",
+      "bytes": 567,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/templates/MinimalAppPortable/App/AppInfo/installer.ini",
+      "domain": "portableapps",
+      "bytes": 674,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/templates/MinimalAppPortable/App/AppName/README.txt",
+      "domain": "portableapps",
+      "bytes": 360,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/templates/MinimalAppPortable/App/DefaultData/README.txt",
+      "domain": "portableapps",
+      "bytes": 551,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/templates/MinimalAppPortable/Data/README.txt",
+      "domain": "portableapps",
+      "bytes": 380,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/templates/MinimalAppPortable/Other/Help/Images/README.txt",
+      "domain": "portableapps",
+      "bytes": 213,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/templates/MinimalAppPortable/Other/Source/AppNamePortable.ini",
+      "domain": "portableapps",
+      "bytes": 234,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/templates/MinimalAppPortable/Other/Source/Readme.txt",
+      "domain": "portableapps",
+      "bytes": 1289,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/templates/MinimalAppPortable/help.html",
+      "domain": "portableapps",
+      "bytes": 2292,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/templates/PortableApps.comInstallerCustom.nsh",
+      "domain": "portableapps",
+      "bytes": 1186,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/templates/README.md",
+      "domain": "portableapps",
+      "bytes": 2706,
+      "summary": "Templates"
+    },
+    {
+      "path": "portableapps/templates/online-installer.ini",
+      "domain": "portableapps",
+      "bytes": 879,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/tools/README.md",
+      "domain": "portableapps",
+      "bytes": 1821,
+      "summary": "Tools"
+    },
+    {
+      "path": "portableapps/tools/build-ai-bundle.py",
+      "domain": "portableapps",
+      "bytes": 4415,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/tools/check-package.py",
+      "domain": "portableapps",
+      "bytes": 11817,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/tools/new-package.ps1",
+      "domain": "portableapps",
+      "bytes": 2378,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/tools/new-package.sh",
+      "domain": "portableapps",
+      "bytes": 2338,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/tools/package.gitignore",
+      "domain": "portableapps",
+      "bytes": 518,
+      "summary": ""
+    },
+    {
+      "path": "portableapps/tools/paf-data.json",
+      "domain": "portableapps",
+      "bytes": 2335,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/AGENTS.md",
+      "domain": "wow-addons",
+      "bytes": 4623,
+      "summary": "AGENTS.md — Instructions for AI agents writing WoW addons"
+    },
+    {
+      "path": "wow-addons/README.md",
+      "domain": "wow-addons",
+      "bytes": 9973,
+      "summary": "WowDev — World of Warcraft Addon Development Knowledge Base"
+    },
+    {
+      "path": "wow-addons/SOURCES.md",
+      "domain": "wow-addons",
+      "bytes": 11900,
+      "summary": "SOURCES.md — The seed list, verified"
+    },
+    {
+      "path": "wow-addons/ai-bundle.md",
+      "domain": "wow-addons",
+      "bytes": 98018,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/checklists/addon-checklist.md",
+      "domain": "wow-addons",
+      "bytes": 2638,
+      "summary": "Addon Release Checklist"
+    },
+    {
+      "path": "wow-addons/checklists/debugging-checklist.md",
+      "domain": "wow-addons",
+      "bytes": 2463,
+      "summary": "Debugging Checklist"
+    },
+    {
+      "path": "wow-addons/checklists/multi-flavor-port-checklist.md",
+      "domain": "wow-addons",
+      "bytes": 2129,
+      "summary": "Multi-Flavor Port Checklist"
+    },
+    {
+      "path": "wow-addons/docs/01-addon-anatomy.md",
+      "domain": "wow-addons",
+      "bytes": 3968,
+      "summary": "01 — Addon Anatomy"
+    },
+    {
+      "path": "wow-addons/docs/02-lua-in-wow.md",
+      "domain": "wow-addons",
+      "bytes": 3428,
+      "summary": "02 — Lua in WoW"
+    },
+    {
+      "path": "wow-addons/docs/03-api-events-and-widgets.md",
+      "domain": "wow-addons",
+      "bytes": 4459,
+      "summary": "03 — The API, Events, and Widgets"
+    },
+    {
+      "path": "wow-addons/docs/04-flavors-and-interface-numbers.md",
+      "domain": "wow-addons",
+      "bytes": 3238,
+      "summary": "04 — Flavors and Interface Numbers"
+    },
+    {
+      "path": "wow-addons/docs/05-libraries-and-frameworks.md",
+      "domain": "wow-addons",
+      "bytes": 6027,
+      "summary": "05 — Libraries and Frameworks"
+    },
+    {
+      "path": "wow-addons/docs/06-tools-and-editors.md",
+      "domain": "wow-addons",
+      "bytes": 5072,
+      "summary": "06 — Tools and Editors"
+    },
+    {
+      "path": "wow-addons/docs/07-textures-and-art.md",
+      "domain": "wow-addons",
+      "bytes": 2377,
+      "summary": "07 — Textures and Art"
+    },
+    {
+      "path": "wow-addons/docs/08-testing-and-debugging.md",
+      "domain": "wow-addons",
+      "bytes": 2930,
+      "summary": "08 — Testing and Debugging"
+    },
+    {
+      "path": "wow-addons/docs/09-packaging-and-distribution.md",
+      "domain": "wow-addons",
+      "bytes": 4380,
+      "summary": "09 — Packaging and Distribution"
+    },
+    {
+      "path": "wow-addons/docs/10-communities-and-learning.md",
+      "domain": "wow-addons",
+      "bytes": 4357,
+      "summary": "10 — Communities and Learning"
+    },
+    {
+      "path": "wow-addons/docs/11-ai-assisted-development.md",
+      "domain": "wow-addons",
+      "bytes": 3447,
+      "summary": "11 — AI-Assisted Addon Development"
+    },
+    {
+      "path": "wow-addons/docs/12-patterns-cookbook.md",
+      "domain": "wow-addons",
+      "bytes": 3383,
+      "summary": "12 — Patterns Cookbook"
+    },
+    {
+      "path": "wow-addons/docs/13-performance-and-memory.md",
+      "domain": "wow-addons",
+      "bytes": 2911,
+      "summary": "13 — Performance and Memory"
+    },
+    {
+      "path": "wow-addons/docs/14-localization.md",
+      "domain": "wow-addons",
+      "bytes": 2302,
+      "summary": "14 — Localization"
+    },
+    {
+      "path": "wow-addons/examples/01-hello-world/HelloWorld.lua",
+      "domain": "wow-addons",
+      "bytes": 832,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/examples/01-hello-world/HelloWorld.toc",
+      "domain": "wow-addons",
+      "bytes": 212,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/examples/01-hello-world/README.md",
+      "domain": "wow-addons",
+      "bytes": 965,
+      "summary": "01 — Hello World"
+    },
+    {
+      "path": "wow-addons/examples/02-session-tracker/README.md",
+      "domain": "wow-addons",
+      "bytes": 1107,
+      "summary": "02 — Session Tracker"
+    },
+    {
+      "path": "wow-addons/examples/02-session-tracker/SessionTracker.lua",
+      "domain": "wow-addons",
+      "bytes": 1486,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/examples/02-session-tracker/SessionTracker.toc",
+      "domain": "wow-addons",
+      "bytes": 239,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/examples/03-movable-frame/MovableFrame.lua",
+      "domain": "wow-addons",
+      "bytes": 2021,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/examples/03-movable-frame/MovableFrame.toc",
+      "domain": "wow-addons",
+      "bytes": 207,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/examples/03-movable-frame/README.md",
+      "domain": "wow-addons",
+      "bytes": 1034,
+      "summary": "03 — Movable Frame"
+    },
+    {
+      "path": "wow-addons/examples/README.md",
+      "domain": "wow-addons",
+      "bytes": 1257,
+      "summary": "Worked Examples"
+    },
+    {
+      "path": "wow-addons/manifest.json",
+      "domain": "wow-addons",
+      "bytes": 7289,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/reference/common-events.md",
+      "domain": "wow-addons",
+      "bytes": 2286,
+      "summary": "Reference — Common Events (starter subset)"
+    },
+    {
+      "path": "wow-addons/reference/interface-numbers.md",
+      "domain": "wow-addons",
+      "bytes": 1667,
+      "summary": "Reference — Interface Numbers"
+    },
+    {
+      "path": "wow-addons/reference/library-directory.md",
+      "domain": "wow-addons",
+      "bytes": 2144,
+      "summary": "Reference — Library Directory"
+    },
+    {
+      "path": "wow-addons/templates/README.md",
+      "domain": "wow-addons",
+      "bytes": 1541,
+      "summary": "Templates"
+    },
+    {
+      "path": "wow-addons/templates/ace3/.pkgmeta",
+      "domain": "wow-addons",
+      "bytes": 870,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/templates/ace3/AceSkeleton.toc",
+      "domain": "wow-addons",
+      "bytes": 232,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/templates/ace3/Core.lua",
+      "domain": "wow-addons",
+      "bytes": 1385,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/templates/ace3/embeds.xml",
+      "domain": "wow-addons",
+      "bytes": 702,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/templates/github-workflows/luacheck.yml",
+      "domain": "wow-addons",
+      "bytes": 547,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/templates/github-workflows/release.yml",
+      "domain": "wow-addons",
+      "bytes": 1113,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/templates/minimal/Core.lua",
+      "domain": "wow-addons",
+      "bytes": 1699,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/templates/minimal/Minimal.toc",
+      "domain": "wow-addons",
+      "bytes": 183,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/tools/.luacheckrc",
+      "domain": "wow-addons",
+      "bytes": 1279,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/tools/README.md",
+      "domain": "wow-addons",
+      "bytes": 1467,
+      "summary": "Tools"
+    },
+    {
+      "path": "wow-addons/tools/build-ai-bundle.py",
+      "domain": "wow-addons",
+      "bytes": 4415,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/tools/check-addon.py",
+      "domain": "wow-addons",
+      "bytes": 4729,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/tools/interface-numbers.json",
+      "domain": "wow-addons",
+      "bytes": 1379,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/tools/new-addon.ps1",
+      "domain": "wow-addons",
+      "bytes": 2475,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/tools/new-addon.sh",
+      "domain": "wow-addons",
+      "bytes": 2459,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/tools/vscode/extensions.json",
+      "domain": "wow-addons",
+      "bytes": 68,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/tools/vscode/settings.json",
+      "domain": "wow-addons",
+      "bytes": 507,
+      "summary": ""
+    },
+    {
+      "path": "wow-addons/tools/vscode/wow-addon.code-snippets",
+      "domain": "wow-addons",
+      "bytes": 1593,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/.editorconfig",
+      "domain": "kotlin",
+      "bytes": 1086,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/AGENTS.md",
+      "domain": "kotlin",
+      "bytes": 6966,
+      "summary": "AGENTS.md — Instructions for AI agents writing Kotlin Android code"
+    },
+    {
+      "path": "kotlin/README.md",
+      "domain": "kotlin",
+      "bytes": 16489,
+      "summary": "KotlinDev — Android App and Game Development Knowledge Base (Kotlin)"
+    },
+    {
+      "path": "kotlin/SOURCES.md",
+      "domain": "kotlin",
+      "bytes": 9843,
+      "summary": "SOURCES.md — Curated source list, verified"
+    },
+    {
+      "path": "kotlin/ai-bundle.md",
+      "domain": "kotlin",
+      "bytes": 376384,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/checklists/game-release-checklist.md",
+      "domain": "kotlin",
+      "bytes": 2869,
+      "summary": "Game Release Checklist"
+    },
+    {
+      "path": "kotlin/checklists/new-project-checklist.md",
+      "domain": "kotlin",
+      "bytes": 2876,
+      "summary": "New Project Checklist"
+    },
+    {
+      "path": "kotlin/checklists/performance-audit-checklist.md",
+      "domain": "kotlin",
+      "bytes": 2304,
+      "summary": "Performance Audit Checklist"
+    },
+    {
+      "path": "kotlin/checklists/play-submission-checklist.md",
+      "domain": "kotlin",
+      "bytes": 2203,
+      "summary": "Play Submission Checklist"
+    },
+    {
+      "path": "kotlin/checklists/pre-release-checklist.md",
+      "domain": "kotlin",
+      "bytes": 2521,
+      "summary": "Pre-Release Checklist"
+    },
+    {
+      "path": "kotlin/checklists/security-and-privacy-checklist.md",
+      "domain": "kotlin",
+      "bytes": 2599,
+      "summary": "Security and Privacy Checklist"
+    },
+    {
+      "path": "kotlin/docs/01-kotlin-language-for-android.md",
+      "domain": "kotlin",
+      "bytes": 8201,
+      "summary": "Kotlin Language for Android"
+    },
+    {
+      "path": "kotlin/docs/02-android-platform-and-versions.md",
+      "domain": "kotlin",
+      "bytes": 8284,
+      "summary": "Android Platform and Versions"
+    },
+    {
+      "path": "kotlin/docs/03-project-setup-gradle-and-tooling.md",
+      "domain": "kotlin",
+      "bytes": 7770,
+      "summary": "Project Setup, Gradle, and Tooling"
+    },
+    {
+      "path": "kotlin/docs/04-app-anatomy-lifecycle-and-components.md",
+      "domain": "kotlin",
+      "bytes": 7485,
+      "summary": "App Anatomy, Lifecycle, and Components"
+    },
+    {
+      "path": "kotlin/docs/05-jetpack-compose-ui.md",
+      "domain": "kotlin",
+      "bytes": 8079,
+      "summary": "Jetpack Compose UI"
+    },
+    {
+      "path": "kotlin/docs/06-views-xml-and-interop.md",
+      "domain": "kotlin",
+      "bytes": 6825,
+      "summary": "Views, XML, and Interop"
+    },
+    {
+      "path": "kotlin/docs/07-navigation-and-app-structure.md",
+      "domain": "kotlin",
+      "bytes": 7084,
+      "summary": "Navigation and App Structure"
+    },
+    {
+      "path": "kotlin/docs/08-architecture-patterns.md",
+      "domain": "kotlin",
+      "bytes": 7360,
+      "summary": "Architecture Patterns"
+    },
+    {
+      "path": "kotlin/docs/09-dependency-injection.md",
+      "domain": "kotlin",
+      "bytes": 6302,
+      "summary": "Dependency Injection"
+    },
+    {
+      "path": "kotlin/docs/10-coroutines-flow-and-concurrency.md",
+      "domain": "kotlin",
+      "bytes": 7192,
+      "summary": "Coroutines, Flow, and Concurrency"
+    },
+    {
+      "path": "kotlin/docs/11-data-persistence-room-datastore-files.md",
+      "domain": "kotlin",
+      "bytes": 7593,
+      "summary": "Data Persistence: Room, DataStore, and Files"
+    },
+    {
+      "path": "kotlin/docs/12-networking-retrofit-ktor-serialization.md",
+      "domain": "kotlin",
+      "bytes": 9456,
+      "summary": "Networking: Retrofit, Ktor Client, and kotlinx.serialization"
+    },
+    {
+      "path": "kotlin/docs/13-images-media-camera-and-playback.md",
+      "domain": "kotlin",
+      "bytes": 8572,
+      "summary": "Images, Media, Camera, and Playback"
+    },
+    {
+      "path": "kotlin/docs/14-background-work-and-foreground-services.md",
+      "domain": "kotlin",
+      "bytes": 8922,
+      "summary": "Background Work and Foreground Services"
+    },
+    {
+      "path": "kotlin/docs/15-permissions-security-and-privacy.md",
+      "domain": "kotlin",
+      "bytes": 9434,
+      "summary": "Permissions, Security, and Privacy"
+    },
+    {
+      "path": "kotlin/docs/16-testing-strategy.md",
+      "domain": "kotlin",
+      "bytes": 10136,
+      "summary": "Testing Strategy for Android Apps"
+    },
+    {
+      "path": "kotlin/docs/17-performance-profiling-and-optimization.md",
+      "domain": "kotlin",
+      "bytes": 11712,
+      "summary": "Performance Profiling and Optimization"
+    },
+    {
+      "path": "kotlin/docs/18-accessibility-internationalization-and-theming.md",
+      "domain": "kotlin",
+      "bytes": 12383,
+      "summary": "Accessibility, Internationalization, and Theming"
+    },
+    {
+      "path": "kotlin/docs/19-build-signing-release-and-google-play.md",
+      "domain": "kotlin",
+      "bytes": 10338,
+      "summary": "Build, Signing, Release, and Google Play"
+    },
+    {
+      "path": "kotlin/docs/20-monetization-billing-and-ads.md",
+      "domain": "kotlin",
+      "bytes": 10630,
+      "summary": "Monetization, Play Billing, and Ads"
+    },
+    {
+      "path": "kotlin/docs/21-form-factors-wear-tv-auto-foldables.md",
+      "domain": "kotlin",
+      "bytes": 9901,
+      "summary": "Form Factors: Large Screens, Foldables, Wear, TV, Auto, and XR"
+    },
+    {
+      "path": "kotlin/docs/22-kotlin-multiplatform-and-compose-multiplatform.md",
+      "domain": "kotlin",
+      "bytes": 9684,
+      "summary": "Kotlin Multiplatform and Compose Multiplatform"
+    },
+    {
+      "path": "kotlin/docs/23-games-overview-choosing-a-route.md",
+      "domain": "kotlin",
+      "bytes": 7967,
+      "summary": "Games Overview — Choosing a Route"
+    },
+    {
+      "path": "kotlin/docs/24-games-2d-with-compose-canvas-and-custom-rendering.md",
+      "domain": "kotlin",
+      "bytes": 7521,
+      "summary": "Games 2D with Compose Canvas and Custom Rendering"
+    },
+    {
+      "path": "kotlin/docs/25-games-engines-libgdx-korge-godot.md",
+      "domain": "kotlin",
+      "bytes": 7401,
+      "summary": "Games Engines — libGDX, KorGE, and Godot"
+    },
+    {
+      "path": "kotlin/docs/26-games-native-graphics-opengl-vulkan-agdk.md",
+      "domain": "kotlin",
+      "bytes": 6791,
+      "summary": "Games Native Graphics — OpenGL, Vulkan, and AGDK"
+    },
+    {
+      "path": "kotlin/docs/27-games-services-play-games-and-play-games-on-pc.md",
+      "domain": "kotlin",
+      "bytes": 7741,
+      "summary": "Games Services — Play Games and Play Games on PC"
+    },
+    {
+      "path": "kotlin/docs/28-games-performance-input-audio-and-saves.md",
+      "domain": "kotlin",
+      "bytes": 8841,
+      "summary": "Games Performance, Input, Audio, and Saves"
+    },
+    {
+      "path": "kotlin/docs/29-backend-sync-and-online-services.md",
+      "domain": "kotlin",
+      "bytes": 8765,
+      "summary": "Backend, Sync, and Online Services"
+    },
+    {
+      "path": "kotlin/docs/30-ci-cd-and-automation.md",
+      "domain": "kotlin",
+      "bytes": 7499,
+      "summary": "CI/CD and Automation"
+    },
+    {
+      "path": "kotlin/docs/31-migration-java-and-views-to-modern-kotlin.md",
+      "domain": "kotlin",
+      "bytes": 8101,
+      "summary": "Migration — Java and Views to Modern Kotlin"
+    },
+    {
+      "path": "kotlin/docs/32-patterns-cookbook.md",
+      "domain": "kotlin",
+      "bytes": 8229,
+      "summary": "Patterns Cookbook"
+    },
+    {
+      "path": "kotlin/docs/33-ai-assisted-development.md",
+      "domain": "kotlin",
+      "bytes": 6708,
+      "summary": "AI-Assisted Development — How an AI Should Use This Repo"
+    },
+    {
+      "path": "kotlin/examples/01-hello-compose/MainActivity.kt",
+      "domain": "kotlin",
+      "bytes": 2044,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/examples/01-hello-compose/README.md",
+      "domain": "kotlin",
+      "bytes": 918,
+      "summary": "01 — Hello Compose"
+    },
+    {
+      "path": "kotlin/examples/02-counter-mvvm-flow/CounterScreen.kt",
+      "domain": "kotlin",
+      "bytes": 2617,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/examples/02-counter-mvvm-flow/CounterViewModel.kt",
+      "domain": "kotlin",
+      "bytes": 1064,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/examples/02-counter-mvvm-flow/README.md",
+      "domain": "kotlin",
+      "bytes": 1181,
+      "summary": "02 — Counter with MVVM + StateFlow (unidirectional data flow)"
+    },
+    {
+      "path": "kotlin/examples/03-room-notes/Note.kt",
+      "domain": "kotlin",
+      "bytes": 704,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/examples/03-room-notes/NoteDao.kt",
+      "domain": "kotlin",
+      "bytes": 817,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/examples/03-room-notes/NotesRepository.kt",
+      "domain": "kotlin",
+      "bytes": 1584,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/examples/03-room-notes/README.md",
+      "domain": "kotlin",
+      "bytes": 1925,
+      "summary": "03 — Room notes (entity, DAO, repository)"
+    },
+    {
+      "path": "kotlin/examples/04-canvas-game-loop/GameScreen.kt",
+      "domain": "kotlin",
+      "bytes": 4947,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/examples/04-canvas-game-loop/README.md",
+      "domain": "kotlin",
+      "bytes": 1448,
+      "summary": "04 — Canvas game loop (Compose)"
+    },
+    {
+      "path": "kotlin/examples/README.md",
+      "domain": "kotlin",
+      "bytes": 1312,
+      "summary": "Examples"
+    },
+    {
+      "path": "kotlin/fixtures/README.md",
+      "domain": "kotlin",
+      "bytes": 3506,
+      "summary": "Fixtures — Sample Data, Mock API, and Database Seeds"
+    },
+    {
+      "path": "kotlin/fixtures/mock-api/README.md",
+      "domain": "kotlin",
+      "bytes": 2134,
+      "summary": "Mock API — the Fixtures, Over HTTP"
+    },
+    {
+      "path": "kotlin/fixtures/mock-api/mock-server.py",
+      "domain": "kotlin",
+      "bytes": 4430,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/fixtures/mock-api/openapi-lite.json",
+      "domain": "kotlin",
+      "bytes": 7112,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/fixtures/room/README.md",
+      "domain": "kotlin",
+      "bytes": 2795,
+      "summary": "Room Seed — Prepopulating a Database from `seed.sql`"
+    },
+    {
+      "path": "kotlin/fixtures/room/seed.sql",
+      "domain": "kotlin",
+      "bytes": 4398,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/fixtures/sample-data/game-scores.json",
+      "domain": "kotlin",
+      "bytes": 2892,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/fixtures/sample-data/levels/level-001.json",
+      "domain": "kotlin",
+      "bytes": 1611,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/fixtures/sample-data/levels/level-002.json",
+      "domain": "kotlin",
+      "bytes": 2140,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/fixtures/sample-data/notes.json",
+      "domain": "kotlin",
+      "bytes": 4561,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/fixtures/sample-data/products.json",
+      "domain": "kotlin",
+      "bytes": 2955,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/fixtures/sample-data/users.json",
+      "domain": "kotlin",
+      "bytes": 2652,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/manifest.json",
+      "domain": "kotlin",
+      "bytes": 19074,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/reference/adb-and-tooling-commands.md",
+      "domain": "kotlin",
+      "bytes": 5322,
+      "summary": "Reference — adb and Tooling Commands"
+    },
+    {
+      "path": "kotlin/reference/api-levels.md",
+      "domain": "kotlin",
+      "bytes": 3045,
+      "summary": "Reference — Android API Levels"
+    },
+    {
+      "path": "kotlin/reference/game-route-comparison.md",
+      "domain": "kotlin",
+      "bytes": 3889,
+      "summary": "Reference — Game Route Comparison"
+    },
+    {
+      "path": "kotlin/reference/gradle-and-versions-cheatsheet.md",
+      "domain": "kotlin",
+      "bytes": 9632,
+      "summary": "Reference — Gradle and Versions Cheatsheet"
+    },
+    {
+      "path": "kotlin/reference/library-directory.md",
+      "domain": "kotlin",
+      "bytes": 8619,
+      "summary": "Reference — Library Directory"
+    },
+    {
+      "path": "kotlin/reference/permissions-table.md",
+      "domain": "kotlin",
+      "bytes": 5301,
+      "summary": "Reference — Permissions Table"
+    },
+    {
+      "path": "kotlin/reference/play-requirements-and-deadlines.md",
+      "domain": "kotlin",
+      "bytes": 4786,
+      "summary": "Reference — Play Requirements and Deadlines"
+    },
+    {
+      "path": "kotlin/scripts/README.md",
+      "domain": "kotlin",
+      "bytes": 4983,
+      "summary": "Scripts — adb, emulator, and release helpers"
+    },
+    {
+      "path": "kotlin/scripts/adb-app-ops.ps1",
+      "domain": "kotlin",
+      "bytes": 2252,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/scripts/adb-app-ops.sh",
+      "domain": "kotlin",
+      "bytes": 3146,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/scripts/adb-capture.ps1",
+      "domain": "kotlin",
+      "bytes": 1716,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/scripts/adb-capture.sh",
+      "domain": "kotlin",
+      "bytes": 1936,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/scripts/adb-install-launch.ps1",
+      "domain": "kotlin",
+      "bytes": 2178,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/scripts/adb-install-launch.sh",
+      "domain": "kotlin",
+      "bytes": 2648,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/scripts/adb-logcat-app.ps1",
+      "domain": "kotlin",
+      "bytes": 1316,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/scripts/adb-logcat-app.sh",
+      "domain": "kotlin",
+      "bytes": 1890,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/scripts/deeplink-test.ps1",
+      "domain": "kotlin",
+      "bytes": 2099,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/scripts/deeplink-test.sh",
+      "domain": "kotlin",
+      "bytes": 2927,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/scripts/emulator-boot.ps1",
+      "domain": "kotlin",
+      "bytes": 2259,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/scripts/emulator-boot.sh",
+      "domain": "kotlin",
+      "bytes": 3014,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/scripts/keystore-create.ps1",
+      "domain": "kotlin",
+      "bytes": 3699,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/scripts/keystore-create.sh",
+      "domain": "kotlin",
+      "bytes": 3823,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/scripts/play-bundle-verify.ps1",
+      "domain": "kotlin",
+      "bytes": 3731,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/scripts/play-bundle-verify.sh",
+      "domain": "kotlin",
+      "bytes": 3884,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/README.md",
+      "domain": "kotlin",
+      "bytes": 1749,
+      "summary": "Templates"
+    },
+    {
+      "path": "kotlin/templates/baseline-profiles/README.md",
+      "domain": "kotlin",
+      "bytes": 1982,
+      "summary": "Baseline Profiles — Example File"
+    },
+    {
+      "path": "kotlin/templates/baseline-profiles/baseline-prof.txt",
+      "domain": "kotlin",
+      "bytes": 317,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/code-quality/.editorconfig",
+      "domain": "kotlin",
+      "bytes": 861,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/code-quality/README.md",
+      "domain": "kotlin",
+      "bytes": 2885,
+      "summary": "Code Quality Templates — detekt + .editorconfig (+ ktlint)"
+    },
+    {
+      "path": "kotlin/templates/code-quality/detekt.yml",
+      "domain": "kotlin",
+      "bytes": 4705,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/compose-app/app/build.gradle.kts",
+      "domain": "kotlin",
+      "bytes": 2043,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/compose-app/app/src/main/AndroidManifest.xml",
+      "domain": "kotlin",
+      "bytes": 843,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/compose-app/app/src/main/java/com/example/app/MainActivity.kt",
+      "domain": "kotlin",
+      "bytes": 2061,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/compose-app/build.gradle.kts",
+      "domain": "kotlin",
+      "bytes": 249,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/compose-app/gradle/libs.versions.toml",
+      "domain": "kotlin",
+      "bytes": 5023,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/compose-app/settings.gradle.kts",
+      "domain": "kotlin",
+      "bytes": 534,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/fastlane/Appfile.example",
+      "domain": "kotlin",
+      "bytes": 650,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/fastlane/Fastfile.example",
+      "domain": "kotlin",
+      "bytes": 2095,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/fastlane/README.md",
+      "domain": "kotlin",
+      "bytes": 2449,
+      "summary": "Fastlane Templates — Play Publishing with `supply`"
+    },
+    {
+      "path": "kotlin/templates/fastlane/metadata/en-US/full_description.txt",
+      "domain": "kotlin",
+      "bytes": 625,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/fastlane/metadata/en-US/short_description.txt",
+      "domain": "kotlin",
+      "bytes": 92,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/fastlane/metadata/en-US/title.txt",
+      "domain": "kotlin",
+      "bytes": 44,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/github-workflows/android-ci.yml",
+      "domain": "kotlin",
+      "bytes": 989,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/github-workflows/release-aab.yml",
+      "domain": "kotlin",
+      "bytes": 2298,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/macrobenchmark/Macrobenchmark.kt",
+      "domain": "kotlin",
+      "bytes": 2887,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/macrobenchmark/README.md",
+      "domain": "kotlin",
+      "bytes": 3177,
+      "summary": "Macrobenchmark Template + Baseline Profile Flow"
+    },
+    {
+      "path": "kotlin/templates/macrobenchmark/build.gradle.kts",
+      "domain": "kotlin",
+      "bytes": 1771,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/r8/README.md",
+      "domain": "kotlin",
+      "bytes": 2407,
+      "summary": "R8 / ProGuard Rules Template"
+    },
+    {
+      "path": "kotlin/templates/r8/proguard-rules.pro",
+      "domain": "kotlin",
+      "bytes": 3514,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/templates/snippets/README.md",
+      "domain": "kotlin",
+      "bytes": 1828,
+      "summary": "VS Code Snippets — Compose / Kotlin Android"
+    },
+    {
+      "path": "kotlin/templates/snippets/compose.code-snippets",
+      "domain": "kotlin",
+      "bytes": 5508,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/tools/README.md",
+      "domain": "kotlin",
+      "bytes": 1449,
+      "summary": "Tools"
+    },
+    {
+      "path": "kotlin/tools/asset-pipeline.py",
+      "domain": "kotlin",
+      "bytes": 5984,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/tools/build-ai-bundle.py",
+      "domain": "kotlin",
+      "bytes": 4449,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/tools/check-project.py",
+      "domain": "kotlin",
+      "bytes": 5801,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/tools/ide.md",
+      "domain": "kotlin",
+      "bytes": 3123,
+      "summary": "Android Studio — recommended settings and setup"
+    },
+    {
+      "path": "kotlin/tools/localization-csv.py",
+      "domain": "kotlin",
+      "bytes": 4304,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/tools/new-project.ps1",
+      "domain": "kotlin",
+      "bytes": 2080,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/tools/new-project.sh",
+      "domain": "kotlin",
+      "bytes": 2366,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/tools/save-migrator.py",
+      "domain": "kotlin",
+      "bytes": 4482,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/tools/sprite-sheet-packer.py",
+      "domain": "kotlin",
+      "bytes": 9368,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/tools/tilemap-validate.py",
+      "domain": "kotlin",
+      "bytes": 5978,
+      "summary": ""
+    },
+    {
+      "path": "kotlin/tools/versions.json",
+      "domain": "kotlin",
+      "bytes": 826,
+      "summary": ""
+    },
+    {
+      "path": "godot/AGENTS.md",
+      "domain": "godot",
+      "bytes": 2112,
+      "summary": "AGENTS.md — rules for any AI working with Godot for Android"
+    },
+    {
+      "path": "godot/README.md",
+      "domain": "godot",
+      "bytes": 4864,
+      "summary": "Godot Android development — knowledge base"
+    },
+    {
+      "path": "godot/SOURCES.md",
+      "domain": "godot",
+      "bytes": 2591,
+      "summary": "SOURCES.md — where the facts live"
+    },
+    {
+      "path": "godot/ai-bundle.md",
+      "domain": "godot",
+      "bytes": 38366,
+      "summary": ""
+    },
+    {
+      "path": "godot/checklists/first-export-checklist.md",
+      "domain": "godot",
+      "bytes": 863,
+      "summary": "First Android export checklist"
+    },
+    {
+      "path": "godot/checklists/play-release-checklist.md",
+      "domain": "godot",
+      "bytes": 1182,
+      "summary": "Google Play release checklist"
+    },
+    {
+      "path": "godot/docs/01-engine-and-versions.md",
+      "domain": "godot",
+      "bytes": 1745,
+      "summary": "01 — The engine and its versions"
+    },
+    {
+      "path": "godot/docs/02-project-anatomy.md",
+      "domain": "godot",
+      "bytes": 2467,
+      "summary": "02 — Project anatomy and version control"
+    },
+    {
+      "path": "godot/docs/03-export-pipeline.md",
+      "domain": "godot",
+      "bytes": 3684,
+      "summary": "03 — The Android export pipeline"
+    },
+    {
+      "path": "godot/docs/04-languages.md",
+      "domain": "godot",
+      "bytes": 1884,
+      "summary": "04 — Languages: GDScript, C#, GDExtension"
+    },
+    {
+      "path": "godot/docs/05-google-play.md",
+      "domain": "godot",
+      "bytes": 2826,
+      "summary": "05 — Google Play: the hard requirements in force"
+    },
+    {
+      "path": "godot/docs/06-plugins.md",
+      "domain": "godot",
+      "bytes": 2749,
+      "summary": "06 — Android plugins"
+    },
+    {
+      "path": "godot/docs/07-asset-store.md",
+      "domain": "godot",
+      "bytes": 1659,
+      "summary": "07 — The Asset Store (and the Asset Library it replaced)"
+    },
+    {
+      "path": "godot/docs/08-testing-and-ci.md",
+      "domain": "godot",
+      "bytes": 2067,
+      "summary": "08 — Testing and CI"
+    },
+    {
+      "path": "godot/docs/09-permissions.md",
+      "domain": "godot",
+      "bytes": 1361,
+      "summary": "09 — Android permissions"
+    },
+    {
+      "path": "godot/examples/README.md",
+      "domain": "godot",
+      "bytes": 922,
+      "summary": "Examples"
+    },
+    {
+      "path": "godot/manifest.json",
+      "domain": "godot",
+      "bytes": 3651,
+      "summary": ""
+    },
+    {
+      "path": "godot/reference/android-preset-options.md",
+      "domain": "godot",
+      "bytes": 1348,
+      "summary": "Android export preset — option groups"
+    },
+    {
+      "path": "godot/reference/version-matrix.md",
+      "domain": "godot",
+      "bytes": 1805,
+      "summary": "Version matrix (checked 2026-11-17)"
+    },
+    {
+      "path": "godot/templates/README.md",
+      "domain": "godot",
+      "bytes": 495,
+      "summary": "Templates"
+    },
+    {
+      "path": "godot/templates/godot.gitignore",
+      "domain": "godot",
+      "bytes": 188,
+      "summary": ""
+    },
+    {
+      "path": "godot/templates/project-seed.md",
+      "domain": "godot",
+      "bytes": 1213,
+      "summary": "Seeding a new Godot Android project"
+    },
+    {
+      "path": "godot/tools/README.md",
+      "domain": "godot",
+      "bytes": 600,
+      "summary": "Tools"
+    },
+    {
+      "path": "godot/tools/build-ai-bundle.py",
+      "domain": "godot",
+      "bytes": 4415,
+      "summary": ""
+    },
+    {
+      "path": "INDEX.md",
+      "domain": "root",
+      "bytes": 9982,
+      "summary": "Master map: domain table + task routing for the whole library"
+    }
+  ]
+}
