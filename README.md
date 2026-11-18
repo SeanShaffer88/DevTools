@@ -197,3 +197,7 @@ The Python 3.10+ standard-library suite adds 15 offline CLI checks for Godot, Wo
 ## Knowledge base
 
 The [`knowledge/`](knowledge/) folder of this repo is a self-contained Windows desktop development knowledge base — the rule layers (Elite Prompt, Engineering Contract V4.0, guardrails), tiered project classes and sanctioned stacks, the QUALITY.md gate, SeanPak packaging, the TesselGUI design system, and release verification — written for AI coding agents and human developers. It is built to be downloaded and used locally: start with [`knowledge/manifest.json`](knowledge/manifest.json) and [`knowledge/AGENTS.md`](knowledge/AGENTS.md), or upload [`knowledge/ai-bundle.md`](knowledge/ai-bundle.md) as a single file.
+
+## Flutter pack
+
+The [`flutter/`](flutter/) folder of this repo is a self-contained Flutter development pack — 14 guides (toolchain, Dart, widgets and UI, state management, navigation, networking, storage, testing, Windows desktop, Android release, web and other platforms, flavors, performance, architecture), a verified dependency catalog (Flutter 3.50.0 / Dart 3.14.0 snapshot, November 2026), PowerShell 7 + bash toolchain/build scripts that check and report without installing anything, an app skeleton and CI templates, synthetic fixtures, and offline Python validators. It is built to be downloaded and used locally by AI coding agents and human developers: start with [`flutter/manifest.json`](flutter/manifest.json) and [`flutter/AGENTS.md`](flutter/AGENTS.md), or upload [`flutter/ai-bundle.md`](flutter/ai-bundle.md) as a single file.

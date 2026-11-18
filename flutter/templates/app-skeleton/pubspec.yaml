@@ -1,0 +1,47 @@
+name: app_skeleton
+description: "Flutter app skeleton — feature-first structure, Material 3. Rename and replace this description when you start a real project."
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  # Dart 3.14.0 is the SDK bundled with Flutter 3.50.0.
+  # "^3.14.0" is valid Dart SDK constraint syntax (>=3.14.0 <4.0.0);
+  # see templates/README.md for the note on constraint forms.
+  sdk: ^3.14.0
+  flutter: ">=3.50.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # --- Optional dependencies (uncomment what the project actually uses) ---
+  # State management — pick ONE approach per project:
+  # provider: ^6.1.5+1
+  # flutter_riverpod: ^3.5.0
+  # Routing:
+  # go_router: ^18.1.4
+  # Networking — pick one client:
+  # dio: ^5.11.1
+  # http: ^1.6.0
+  # Local database (SQLite via drift):
+  # drift: ^2.35.4
+  # sqlite3_flutter_libs: ^0.5.0 # re-check the current version before enabling
+  # Code generation annotations (used by freezed / json_serializable):
+  # freezed_annotation: ^3.1.0
+  # json_annotation: ^4.9.0 # re-check the current version before enabling
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+  # --- Optional dev dependencies (code generation + testing) ---
+  # build_runner: ^2.17.1
+  # freezed: ^4.0.3
+  # json_serializable: ^6.15.2
+  # drift_dev: ^2.35.4 # keep in step with the drift runtime version
+  # mocktail: ^1.0.5
+
+flutter:
+  uses-material-design: true
