@@ -41,11 +41,12 @@
       "id": "godot",
       "folder": "godot/",
       "title": "Godot for Android games and apps",
-      "covers": "Godot engine versions, project anatomy, Android export pipeline, Google Play, plugins, testing/CI, permissions",
+      "covers": "Godot engine versions, project anatomy, Android export pipeline, Google Play, plugins, testing/CI, permissions Plus the nine Godot editor addons as a complete project in godot/toolbox/.",
       "mergedFrom": "SeanShaffer88/GodotDevTools (knowledge/ layer)",
       "manifest": "godot/manifest.json",
       "bundle": "godot/ai-bundle.md",
-      "files": 24
+      "files": 24,
+      "toolbox": "godot/toolbox/"
     },
     {
       "id": "windows-desktop",
@@ -64,6 +65,16 @@
       "manifest": "flutter/manifest.json",
       "bundle": "flutter/ai-bundle.md",
       "note": "Already in this repo before the 2026-11-18 merge; its manifest lists its files."
+    },
+    {
+      "id": "ai-resources",
+      "folder": "ai-resources/",
+      "title": "AI development resource index",
+      "covers": "Curated pointers to toolchains, MCP servers, agent frameworks, local inference, models/providers, RAG, eval, coding agents, ML libraries, learning references",
+      "mergedFrom": "SeanShaffer88/ai-knowledge-vault",
+      "manifest": "ai-resources/manifest.json",
+      "bundle": "ai-resources/resources.json",
+      "files": 29
     }
   ],
   "files": [
@@ -1728,6 +1739,756 @@
       "domain": "root",
       "bytes": 9982,
       "summary": "Master map: domain table + task routing for the whole library"
+    },
+    {
+      "path": "ai-resources/.gitignore",
+      "domain": "ai-resources",
+      "bytes": 13,
+      "summary": ""
+    },
+    {
+      "path": "ai-resources/AGENTS.md",
+      "domain": "ai-resources",
+      "bytes": 2275,
+      "summary": "Instructions for an AI consuming this vault"
+    },
+    {
+      "path": "ai-resources/CONTRIBUTING.md",
+      "domain": "ai-resources",
+      "bytes": 880,
+      "summary": "Contributing"
+    },
+    {
+      "path": "ai-resources/LICENSE",
+      "domain": "ai-resources",
+      "bytes": 1069,
+      "summary": ""
+    },
+    {
+      "path": "ai-resources/README.md",
+      "domain": "ai-resources",
+      "bytes": 5425,
+      "summary": "AI Knowledge Vault"
+    },
+    {
+      "path": "ai-resources/categories/agent-frameworks.md",
+      "domain": "ai-resources",
+      "bytes": 2934,
+      "summary": "Agent frameworks and orchestration"
+    },
+    {
+      "path": "ai-resources/categories/awesome-and-discovery.md",
+      "domain": "ai-resources",
+      "bytes": 1836,
+      "summary": "Awesome lists and discovery indexes"
+    },
+    {
+      "path": "ai-resources/categories/coding-agents.md",
+      "domain": "ai-resources",
+      "bytes": 1832,
+      "summary": "AI coding tools and software-engineering agents"
+    },
+    {
+      "path": "ai-resources/categories/eval-and-observability.md",
+      "domain": "ai-resources",
+      "bytes": 2475,
+      "summary": "Evaluation, observability, and guardrails"
+    },
+    {
+      "path": "ai-resources/categories/learning.md",
+      "domain": "ai-resources",
+      "bytes": 1954,
+      "summary": "Learning roadmaps and deep references"
+    },
+    {
+      "path": "ai-resources/categories/local-inference.md",
+      "domain": "ai-resources",
+      "bytes": 1930,
+      "summary": "Local inference and model runners"
+    },
+    {
+      "path": "ai-resources/categories/mcp-servers.md",
+      "domain": "ai-resources",
+      "bytes": 4057,
+      "summary": "MCP servers, SDKs, and directories"
+    },
+    {
+      "path": "ai-resources/categories/ml-libraries.md",
+      "domain": "ai-resources",
+      "bytes": 1993,
+      "summary": "ML / DL libraries and training toolchains"
+    },
+    {
+      "path": "ai-resources/categories/models-and-providers.md",
+      "domain": "ai-resources",
+      "bytes": 2607,
+      "summary": "Models, hubs, and API providers"
+    },
+    {
+      "path": "ai-resources/categories/prompt-and-context.md",
+      "domain": "ai-resources",
+      "bytes": 2108,
+      "summary": "Prompt engineering and context engineering"
+    },
+    {
+      "path": "ai-resources/categories/rag-and-data.md",
+      "domain": "ai-resources",
+      "bytes": 2572,
+      "summary": "RAG, embeddings, vector databases, and search"
+    },
+    {
+      "path": "ai-resources/categories/toolchains.md",
+      "domain": "ai-resources",
+      "bytes": 4158,
+      "summary": "Toolchains by language and platform"
+    },
+    {
+      "path": "ai-resources/llms.txt",
+      "domain": "ai-resources",
+      "bytes": 1501,
+      "summary": ""
+    },
+    {
+      "path": "ai-resources/manifest.json",
+      "domain": "ai-resources",
+      "bytes": 3784,
+      "summary": ""
+    },
+    {
+      "path": "ai-resources/playbooks/selecting-a-stack.md",
+      "domain": "ai-resources",
+      "bytes": 1342,
+      "summary": "Selecting a stack for a new AI project"
+    },
+    {
+      "path": "ai-resources/playbooks/start-here-for-ai.md",
+      "domain": "ai-resources",
+      "bytes": 1663,
+      "summary": "Start here: how an AI should use this vault"
+    },
+    {
+      "path": "ai-resources/playbooks/verifying-a-resource.md",
+      "domain": "ai-resources",
+      "bytes": 1271,
+      "summary": "Verifying a resource before recommending it"
+    },
+    {
+      "path": "ai-resources/resources.csv",
+      "domain": "ai-resources",
+      "bytes": 33684,
+      "summary": ""
+    },
+    {
+      "path": "ai-resources/resources.json",
+      "domain": "ai-resources",
+      "bytes": 52855,
+      "summary": ""
+    },
+    {
+      "path": "ai-resources/scripts/search.py",
+      "domain": "ai-resources",
+      "bytes": 889,
+      "summary": ""
+    },
+    {
+      "path": "ai-resources/scripts/validate.py",
+      "domain": "ai-resources",
+      "bytes": 1293,
+      "summary": ""
+    },
+    {
+      "path": "ai-resources/tools/catalog.py",
+      "domain": "ai-resources",
+      "bytes": 15450,
+      "summary": ""
+    },
+    {
+      "path": "ai-resources/tools/catalog2.py",
+      "domain": "ai-resources",
+      "bytes": 14261,
+      "summary": ""
+    },
+    {
+      "path": "ai-resources/tools/generate.py",
+      "domain": "ai-resources",
+      "bytes": 2552,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/.gitignore",
+      "domain": "godot-toolbox",
+      "bytes": 39,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/LICENSE",
+      "domain": "godot-toolbox",
+      "bytes": 1069,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/PROJECT_RULES.md",
+      "domain": "godot-toolbox",
+      "bytes": 1571,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/QUALITY.md",
+      "domain": "godot-toolbox",
+      "bytes": 2418,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/README.md",
+      "domain": "godot-toolbox",
+      "bytes": 12682,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/accessibility/README.md",
+      "domain": "godot-toolbox",
+      "bytes": 1488,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/accessibility/cli/a11y_cli.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2288,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/accessibility/core/a11y_checker.gd",
+      "domain": "godot-toolbox",
+      "bytes": 7290,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/accessibility/plugin.cfg",
+      "domain": "godot-toolbox",
+      "bytes": 219,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/accessibility/plugin.gd",
+      "domain": "godot-toolbox",
+      "bytes": 565,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/accessibility/ui/a11y_dock.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2405,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/asset_health/README.md",
+      "domain": "godot-toolbox",
+      "bytes": 1458,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/asset_health/cli/ahd_cli.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2503,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/asset_health/core/ahd_scanner.gd",
+      "domain": "godot-toolbox",
+      "bytes": 9590,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/asset_health/plugin.cfg",
+      "domain": "godot-toolbox",
+      "bytes": 242,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/asset_health/plugin.gd",
+      "domain": "godot-toolbox",
+      "bytes": 536,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/asset_health/ui/ahd_dock.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2358,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/dialogue_quest/README.md",
+      "domain": "godot-toolbox",
+      "bytes": 1551,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/dialogue_quest/cli/dqd_cli.gd",
+      "domain": "godot-toolbox",
+      "bytes": 3376,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/dialogue_quest/core/dqd_graph.gd",
+      "domain": "godot-toolbox",
+      "bytes": 11455,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/dialogue_quest/plugin.cfg",
+      "domain": "godot-toolbox",
+      "bytes": 231,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/dialogue_quest/plugin.gd",
+      "domain": "godot-toolbox",
+      "bytes": 553,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/dialogue_quest/ui/dqd_dock.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2648,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/export_doctor/README.md",
+      "domain": "godot-toolbox",
+      "bytes": 1473,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/export_doctor/cli/bed_cli.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2288,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/export_doctor/core/bed_doctor.gd",
+      "domain": "godot-toolbox",
+      "bytes": 9525,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/export_doctor/plugin.cfg",
+      "domain": "godot-toolbox",
+      "bytes": 239,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/export_doctor/plugin.gd",
+      "domain": "godot-toolbox",
+      "bytes": 540,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/export_doctor/ui/bed_dock.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2375,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/network_sim/README.md",
+      "domain": "godot-toolbox",
+      "bytes": 1536,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/network_sim/cli/mns_cli.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2959,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/network_sim/core/mns_channel.gd",
+      "domain": "godot-toolbox",
+      "bytes": 7520,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/network_sim/plugin.cfg",
+      "domain": "godot-toolbox",
+      "bytes": 248,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/network_sim/plugin.gd",
+      "domain": "godot-toolbox",
+      "bytes": 556,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/network_sim/runtime/mns_proxy.gd",
+      "domain": "godot-toolbox",
+      "bytes": 1191,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/network_sim/ui/mns_dock.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2519,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/responsive_ui/README.md",
+      "domain": "godot-toolbox",
+      "bytes": 1471,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/responsive_ui/cli/ruip_cli.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2241,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/responsive_ui/core/ruip_evaluator.gd",
+      "domain": "godot-toolbox",
+      "bytes": 8537,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/responsive_ui/plugin.cfg",
+      "domain": "godot-toolbox",
+      "bytes": 229,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/responsive_ui/plugin.gd",
+      "domain": "godot-toolbox",
+      "bytes": 541,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/responsive_ui/ui/ruip_dock.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2390,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/scene_search/README.md",
+      "domain": "godot-toolbox",
+      "bytes": 1553,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/scene_search/cli/nlss_cli.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2510,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/scene_search/core/nlss_search.gd",
+      "domain": "godot-toolbox",
+      "bytes": 7771,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/scene_search/plugin.cfg",
+      "domain": "godot-toolbox",
+      "bytes": 282,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/scene_search/plugin.gd",
+      "domain": "godot-toolbox",
+      "bytes": 558,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/scene_search/ui/nlss_dock.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2861,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/time_machine/README.md",
+      "domain": "godot-toolbox",
+      "bytes": 1533,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/time_machine/cli/gstm_cli.gd",
+      "domain": "godot-toolbox",
+      "bytes": 3115,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/time_machine/core/gstm_recorder.gd",
+      "domain": "godot-toolbox",
+      "bytes": 5885,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/time_machine/plugin.cfg",
+      "domain": "godot-toolbox",
+      "bytes": 271,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/time_machine/plugin.gd",
+      "domain": "godot-toolbox",
+      "bytes": 540,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/time_machine/runtime/gstm_node.gd",
+      "domain": "godot-toolbox",
+      "bytes": 1685,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/time_machine/ui/gstm_dock.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2481,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/visual_regression/README.md",
+      "domain": "godot-toolbox",
+      "bytes": 1515,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/visual_regression/cli/vrt_cli.gd",
+      "domain": "godot-toolbox",
+      "bytes": 3702,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/visual_regression/core/vrt_baselines.gd",
+      "domain": "godot-toolbox",
+      "bytes": 6554,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/visual_regression/core/vrt_compare.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2649,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/visual_regression/plugin.cfg",
+      "domain": "godot-toolbox",
+      "bytes": 239,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/visual_regression/plugin.gd",
+      "domain": "godot-toolbox",
+      "bytes": 550,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/addons/visual_regression/ui/vrt_dock.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2475,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/assets/big.png.import",
+      "domain": "godot-toolbox",
+      "bytes": 754,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/assets/hero.png.import",
+      "domain": "godot-toolbox",
+      "bytes": 758,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/assets/hero_copy.png.import",
+      "domain": "godot-toolbox",
+      "bytes": 773,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/assets/orphan.png.import",
+      "domain": "godot-toolbox",
+      "bytes": 763,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/dialogue/story.json",
+      "domain": "godot-toolbox",
+      "bytes": 2112,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/enemy/enemy.gd",
+      "domain": "godot-toolbox",
+      "bytes": 567,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/enemy/enemy.tscn",
+      "domain": "godot-toolbox",
+      "bytes": 273,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/level/door.gd",
+      "domain": "godot-toolbox",
+      "bytes": 262,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/level/door.tscn",
+      "domain": "godot-toolbox",
+      "bytes": 297,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/main/main.gd",
+      "domain": "godot-toolbox",
+      "bytes": 81,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/main/main.tscn",
+      "domain": "godot-toolbox",
+      "bytes": 706,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/shared/icon.svg",
+      "domain": "godot-toolbox",
+      "bytes": 217,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/shared/icon.svg.import",
+      "domain": "godot-toolbox",
+      "bytes": 855,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/time_machine/example_session.json",
+      "domain": "godot-toolbox",
+      "bytes": 534,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/ui/hud.gd",
+      "domain": "godot-toolbox",
+      "bytes": 101,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/ui/hud.tscn",
+      "domain": "godot-toolbox",
+      "bytes": 1425,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/visual/baselines/hud__320x240.png.import",
+      "domain": "godot-toolbox",
+      "bytes": 792,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/visual/baselines/menu__320x240.png.import",
+      "domain": "godot-toolbox",
+      "bytes": 795,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/visual/current/extra__320x240.png.import",
+      "domain": "godot-toolbox",
+      "bytes": 795,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/visual/current/hud__320x240.png.import",
+      "domain": "godot-toolbox",
+      "bytes": 790,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/demo/visual/current/menu__320x240.png.import",
+      "domain": "godot-toolbox",
+      "bytes": 793,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/docs/PARITY.md",
+      "domain": "godot-toolbox",
+      "bytes": 3218,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/export_presets.cfg",
+      "domain": "godot-toolbox",
+      "bytes": 1193,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/project.godot",
+      "domain": "godot-toolbox",
+      "bytes": 1337,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/tests/run_tests.sh",
+      "domain": "godot-toolbox",
+      "bytes": 2836,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/tests/test_a11y.gd",
+      "domain": "godot-toolbox",
+      "bytes": 1726,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/tests/test_ahd.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2354,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/tests/test_bed.gd",
+      "domain": "godot-toolbox",
+      "bytes": 1564,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/tests/test_dqd.gd",
+      "domain": "godot-toolbox",
+      "bytes": 3059,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/tests/test_gstm.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2512,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/tests/test_mns.gd",
+      "domain": "godot-toolbox",
+      "bytes": 3297,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/tests/test_nlss.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2175,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/tests/test_ruip.gd",
+      "domain": "godot-toolbox",
+      "bytes": 2566,
+      "summary": ""
+    },
+    {
+      "path": "godot/toolbox/tests/test_vrt.gd",
+      "domain": "godot-toolbox",
+      "bytes": 3301,
+      "summary": ""
     }
   ]
 }

@@ -141,5 +141,9 @@
   ],
   "domain": "godot",
   "mergedFrom": "SeanShaffer88/GodotDevTools (knowledge/ layer)",
-  "location": "godot/"
+  "location": "godot/",
+  "toolbox": {
+    "path": "godot/toolbox/",
+    "note": "Complete GodotDevTools addons project (9 editor addons + demo + tests), merged 2026-11-18. Binary files (demo PNGs, addon zips) listed in the root INDEX provenance note."
+  }
 }

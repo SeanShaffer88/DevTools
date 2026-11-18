@@ -214,5 +214,6 @@ This repo is the single home of the development knowledge library — six self-c
 | World of Warcraft addon development | [`wow-addons/`](wow-addons/) | `wow-addons/manifest.json` |
 | Kotlin Android apps and games | [`kotlin/`](kotlin/) | `kotlin/manifest.json` |
 | Godot for Android games and apps | [`godot/`](godot/) | `godot/manifest.json` |
+| AI development resource index | [`ai-resources/`](ai-resources/) | `ai-resources/manifest.json` |
 
-The PortableApps, WoW, Kotlin, and Godot domains were merged in from the former PafDev, WowDev, KotlinDev, and GodotDevTools knowledge repos on 2026-11-18; those repos remain on GitHub untouched. The Godot editor addons code itself stays in the GodotDevTools repo — this repo carries its Android knowledge base.
+The PortableApps, WoW, Kotlin, and Godot domains were merged in from the former PafDev, WowDev, KotlinDev, and GodotDevTools knowledge repos on 2026-11-18; those repos remain on GitHub untouched. The nine Godot editor addons also live here as a complete, openable Godot project in [`godot/toolbox/`](godot/toolbox/), and the ai-knowledge-vault resource index as [`ai-resources/`](ai-resources/), both merged 2026-11-18; their original repos remain on GitHub untouched.

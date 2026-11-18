@@ -1,0 +1,155 @@
+{
+  "repo": "SeanShaffer88/DevTools",
+  "domain": "ai-resources",
+  "mergedFrom": "SeanShaffer88/ai-knowledge-vault",
+  "location": "ai-resources/",
+  "generated": "2026-11-18",
+  "purpose": "AI development resource index: toolchains, MCP servers, agent frameworks, local inference, models/providers, RAG, eval, coding agents, ML libraries, learning references. Entries are pointers to primary sources, not copies.",
+  "startHere": [
+    "AGENTS.md",
+    "README.md",
+    "llms.txt"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 13,
+      "summary": ""
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 2275,
+      "summary": "Instructions for an AI consuming this vault"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 880,
+      "summary": "Contributing"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1069,
+      "summary": ""
+    },
+    {
+      "path": "README.md",
+      "bytes": 5425,
+      "summary": "AI Knowledge Vault"
+    },
+    {
+      "path": "categories/agent-frameworks.md",
+      "bytes": 2934,
+      "summary": "Agent frameworks and orchestration"
+    },
+    {
+      "path": "categories/awesome-and-discovery.md",
+      "bytes": 1836,
+      "summary": "Awesome lists and discovery indexes"
+    },
+    {
+      "path": "categories/coding-agents.md",
+      "bytes": 1832,
+      "summary": "AI coding tools and software-engineering agents"
+    },
+    {
+      "path": "categories/eval-and-observability.md",
+      "bytes": 2475,
+      "summary": "Evaluation, observability, and guardrails"
+    },
+    {
+      "path": "categories/learning.md",
+      "bytes": 1954,
+      "summary": "Learning roadmaps and deep references"
+    },
+    {
+      "path": "categories/local-inference.md",
+      "bytes": 1930,
+      "summary": "Local inference and model runners"
+    },
+    {
+      "path": "categories/mcp-servers.md",
+      "bytes": 4057,
+      "summary": "MCP servers, SDKs, and directories"
+    },
+    {
+      "path": "categories/ml-libraries.md",
+      "bytes": 1993,
+      "summary": "ML / DL libraries and training toolchains"
+    },
+    {
+      "path": "categories/models-and-providers.md",
+      "bytes": 2607,
+      "summary": "Models, hubs, and API providers"
+    },
+    {
+      "path": "categories/prompt-and-context.md",
+      "bytes": 2108,
+      "summary": "Prompt engineering and context engineering"
+    },
+    {
+      "path": "categories/rag-and-data.md",
+      "bytes": 2572,
+      "summary": "RAG, embeddings, vector databases, and search"
+    },
+    {
+      "path": "categories/toolchains.md",
+      "bytes": 4158,
+      "summary": "Toolchains by language and platform"
+    },
+    {
+      "path": "llms.txt",
+      "bytes": 1501,
+      "summary": ""
+    },
+    {
+      "path": "playbooks/selecting-a-stack.md",
+      "bytes": 1342,
+      "summary": "Selecting a stack for a new AI project"
+    },
+    {
+      "path": "playbooks/start-here-for-ai.md",
+      "bytes": 1663,
+      "summary": "Start here: how an AI should use this vault"
+    },
+    {
+      "path": "playbooks/verifying-a-resource.md",
+      "bytes": 1271,
+      "summary": "Verifying a resource before recommending it"
+    },
+    {
+      "path": "resources.csv",
+      "bytes": 33684,
+      "summary": ""
+    },
+    {
+      "path": "resources.json",
+      "bytes": 52855,
+      "summary": ""
+    },
+    {
+      "path": "scripts/search.py",
+      "bytes": 889,
+      "summary": ""
+    },
+    {
+      "path": "scripts/validate.py",
+      "bytes": 1293,
+      "summary": ""
+    },
+    {
+      "path": "tools/catalog.py",
+      "bytes": 15450,
+      "summary": ""
+    },
+    {
+      "path": "tools/catalog2.py",
+      "bytes": 14261,
+      "summary": ""
+    },
+    {
+      "path": "tools/generate.py",
+      "bytes": 2552,
+      "summary": ""
+    }
+  ]
+}

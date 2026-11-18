@@ -1,6 +1,6 @@
 # INDEX — DevTools knowledge library master map
 
-One repo, six development knowledge bases, plus the local developer toolkit.
+One repo, seven development knowledge bases, plus the local developer toolkit.
 This file is the router: find the domain, then the file, in seconds.
 
 ## How an AI should use this repo
@@ -18,6 +18,7 @@ This file is the router: find the domain, then the file, in seconds.
 | PortableApps.com packaging | [`portableapps/`](portableapps/) | PortableApps.com format, Launcher + Installer INI, packaging workflow, updating, failure modes, submission | [portableapps/manifest.json](portableapps/manifest.json) | [portableapps/ai-bundle.md](portableapps/ai-bundle.md) |
 | World of Warcraft addon development | [`wow-addons/`](wow-addons/) | Addon anatomy, Lua, API/events/widgets, flavors + interface numbers (Forever first, interface 16001), libraries, packaging | [wow-addons/manifest.json](wow-addons/manifest.json) | [wow-addons/ai-bundle.md](wow-addons/ai-bundle.md) |
 | Kotlin Android apps and games | [`kotlin/`](kotlin/) | Kotlin, Compose, architecture, Room, coroutines, testing, Play release, billing, games (Compose Canvas, libGDX, native graphics) | [kotlin/manifest.json](kotlin/manifest.json) | [kotlin/ai-bundle.md](kotlin/ai-bundle.md) |
+| AI development resource index | [`ai-resources/`](ai-resources/) | Curated pointers: toolchains, MCP servers, agent frameworks, local inference, models/providers, RAG + vector, eval/observability, coding agents, ML libraries, learning references | [ai-resources/manifest.json](ai-resources/manifest.json) | [ai-resources/resources.json](ai-resources/resources.json) |
 | Godot for Android games and apps | [`godot/`](godot/) | Godot engine versions, project anatomy, Android export pipeline, Google Play, plugins, testing/CI, permissions | [godot/manifest.json](godot/manifest.json) | [godot/ai-bundle.md](godot/ai-bundle.md) |
 | Windows desktop development system | [`knowledge/`](knowledge/) | Rule layers (Elite Prompt, Engineering Contract V4.0, guardrails), tiers + sanctioned stacks, QUALITY.md gate, SeanPak packaging, TesselGUI design, release verification | [knowledge/manifest.json](knowledge/manifest.json) | [knowledge/ai-bundle.md](knowledge/ai-bundle.md) |
 | Flutter development pack | [`flutter/`](flutter/) | Toolchain, Dart, widgets/UI, state, navigation, networking, storage, testing, Windows desktop, Android release, flavors, performance, architecture | [flutter/manifest.json](flutter/manifest.json) | [flutter/ai-bundle.md](flutter/ai-bundle.md) |
@@ -77,6 +78,23 @@ This file is the router: find the domain, then the file, in seconds.
 | Flutter Android release | [flutter/guides/10-android-release.md](flutter/guides/10-android-release.md) |
 | Flutter toolchain setup | [flutter/guides/01-getting-started-and-toolchain.md](flutter/guides/01-getting-started-and-toolchain.md) |
 
+| Godot editor addons — all nine, with the demo project | [godot/toolbox/README.md](godot/toolbox/README.md) |
+| Godot addon: accessibility checker | [godot/toolbox/addons/accessibility/README.md](godot/toolbox/addons/accessibility/README.md) |
+| Godot addon: asset health scanner | [godot/toolbox/addons/asset_health/README.md](godot/toolbox/addons/asset_health/README.md) |
+| Godot addon: dialogue / quest graph | [godot/toolbox/addons/dialogue_quest/README.md](godot/toolbox/addons/dialogue_quest/README.md) |
+| Godot addon: export doctor | [godot/toolbox/addons/export_doctor/README.md](godot/toolbox/addons/export_doctor/README.md) |
+| Godot addon: network simulation | [godot/toolbox/addons/network_sim/README.md](godot/toolbox/addons/network_sim/README.md) |
+| Godot addon: responsive UI checker | [godot/toolbox/addons/responsive_ui/README.md](godot/toolbox/addons/responsive_ui/README.md) |
+| Godot addon: scene search | [godot/toolbox/addons/scene_search/README.md](godot/toolbox/addons/scene_search/README.md) |
+| Godot addon: time machine (session record/replay) | [godot/toolbox/addons/time_machine/README.md](godot/toolbox/addons/time_machine/README.md) |
+| Godot addon: visual regression | [godot/toolbox/addons/visual_regression/README.md](godot/toolbox/addons/visual_regression/README.md) |
+| AI resources: MCP servers and directories | [ai-resources/categories/mcp-servers.md](ai-resources/categories/mcp-servers.md) |
+| AI resources: agent frameworks | [ai-resources/categories/agent-frameworks.md](ai-resources/categories/agent-frameworks.md) |
+| AI resources: local inference runners | [ai-resources/categories/local-inference.md](ai-resources/categories/local-inference.md) |
+| AI resources: coding agents | [ai-resources/categories/coding-agents.md](ai-resources/categories/coding-agents.md) |
+| AI resources: toolchains by language/platform | [ai-resources/categories/toolchains.md](ai-resources/categories/toolchains.md) |
+| AI resources: machine-readable index (all entries) | [ai-resources/resources.json](ai-resources/resources.json) |
+
 ## Same task, different stack — pick by stack first
 
 - **Releasing an Android app:** Kotlin → `kotlin/docs/19-build-signing-release-and-google-play.md` · Godot → `godot/docs/05-google-play.md` · Flutter → `flutter/guides/10-android-release.md`. Play deadlines that apply to all: `kotlin/reference/play-requirements-and-deadlines.md`.
@@ -85,4 +103,4 @@ This file is the router: find the domain, then the file, in seconds.
 
 ## Provenance
 
-Merged 2026-11-18 from PafDev, WowDev, KotlinDev, and the knowledge layer of GodotDevTools, joining the Windows desktop base (`knowledge/`, 2026-11-17) and the Flutter pack (`flutter/`, 2026-11-18) already here. Domain content is unchanged apart from a banner in each domain README and merge fields in each domain manifest. The Godot editor addons themselves (the `addons/` code) remain in the GodotDevTools repo; this repo carries its Android knowledge base. The original repos remain on GitHub untouched.
+Merged 2026-11-18 from PafDev, WowDev, KotlinDev, and the knowledge layer of GodotDevTools, joining the Windows desktop base (`knowledge/`, 2026-11-17) and the Flutter pack (`flutter/`, 2026-11-18) already here. Domain content is unchanged apart from a banner in each domain README and merge fields in each domain manifest. The Godot editor addons project followed on 2026-11-18 as `godot/toolbox/` (complete and openable in Godot), and the ai-knowledge-vault resource index as `ai-resources/`. Binary files in the toolbox (demo PNGs and the addon release zips) were uploaded through the GitHub web interface because the batched text push cannot carry binaries; the source repo's generated `.godot/` editor cache and local `reports/` output were not carried over. The original repos remain on GitHub untouched.
