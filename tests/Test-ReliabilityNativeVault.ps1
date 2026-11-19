@@ -4,7 +4,8 @@ $root=Split-Path $PSScriptRoot
 . "$root/lib/QualityCommon.ps1"
 if(-not $Destination){$Destination=Join-Path $root ('work/devtools-reliability-wave/native/vault/run-'+[Guid]::NewGuid().ToString('N'))}
 $dest=Assert-QPath $Destination -New;$null=New-Item -ItemType Directory $dest
-$cl='C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe'
+$compiler=Get-Command cl.exe -CommandType Application -ErrorAction Stop | Select-Object -First 1
+$cl=$compiler.Source
 $builds=@();$cases=[Collections.Generic.List[object]]::new()
 foreach($n in 1,2){$d=Join-Path $dest "build $n";$null=New-Item -ItemType Directory $d;"__declspec(dllexport) int arithmetic(int x) { return x + $n; }"|Set-Content (Join-Path $d 'fixture.c');$argsList=@('/nologo','/LD','/Zi','/Od',"/Fo$d/fixture.obj","/Fd$d/compiler.pdb",(Join-Path $d 'fixture.c'),'/link','/NOENTRY','/NODEFAULTLIB','/DEBUG:FULL','/INCREMENTAL:NO',"/OUT:$d/fixture.dll","/PDB:$d/fixture.pdb");$process=Invoke-QProcess $cl $argsList $d 60 65536;$process|ConvertTo-Json -Depth 10|Set-Content (Join-Path $d 'compiler-result.json');$builds+=@{executable=$cl;arguments=$argsList;result=$process};if($process.exitCode -ne 0){throw "Compiler failed: $($process|ConvertTo-Json -Compress)"}}
 $pe=Join-Path $dest 'build 1/fixture.dll';$pdb=Join-Path $dest 'build 1/fixture.pdb';$other=Join-Path $dest 'build 2/fixture.pdb';$vault=Join-Path $dest 'vault with spaces'
