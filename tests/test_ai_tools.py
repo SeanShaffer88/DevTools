@@ -189,6 +189,17 @@ class AiToolsTests(unittest.TestCase):
             self.assertEqual(payload["actions"], ["jump", "unused_action"])
             self.assertEqual(unused, ["Action 'unused_action' has no detected script use"])
 
+    def test_input_map_auditor_recognizes_pressed_and_released_calls(self):
+        with tempfile.TemporaryDirectory() as d:
+            write_tree(d, {
+                "project.godot": '[input]\njump={\n"deadzone": 0.5,\n"events": []\n}\n',
+                "player.gd": 'extends Node\nfunc _process(_d):\n\tInput.is_action_pressed("jump")\n\tInput.is_action_just_released("jump")\n',
+            })
+            code, payload = run_json(input_map_main, [d])
+            self.assertEqual(code, 0)
+            self.assertEqual(payload["usedActions"], ["jump"])
+            self.assertNotIn("MissingInputAction", [x["code"] for x in payload["findings"]])
+
     def test_asset_health_guard_treats_format_paths_as_dynamic(self):
         with tempfile.TemporaryDirectory() as d:
             write_tree(d, {
