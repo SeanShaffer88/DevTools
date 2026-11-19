@@ -20,6 +20,9 @@ from ai_tools.saved_variables_inspector import main as saved_main
 from ai_tools.godot_test_harness import main as harness_main
 from ai_tools.state_time_machine_validator import main as state_main
 from ai_tools.release_manifest_gen import main as release_main
+from ai_tools.signal_flow_spy import main as signal_main
+from ai_tools.input_map_auditor import main as input_main
+from ai_tools.asset_health_guard import main as asset_main
 from ai_tools.input_map_auditor import main as input_map_main
 from ai_tools.addon_memory_taint_auditor import main as taint_main
 from ai_tools.addon_api_compat_checker import main as api_compat_main
@@ -27,6 +30,20 @@ from ai_tools.cargo_semantic_lint import run as cargo_run
 from ai_tools.module_dep_graph import main as module_graph_main
 from ai_tools.export_matrix import main as export_matrix_main
 from ai_tools.portable_env_auditor import main as portable_env_main
+
+
+def run_json(main, argv):
+    output = io.StringIO()
+    with contextlib.redirect_stdout(output):
+        code = main(argv)
+    return code, json.loads(output.getvalue())
+
+
+def write_tree(root, files):
+    for rel, text in files.items():
+        path = Path(root) / rel
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(text, encoding="utf-8")
 
 FIXTURES = Path(__file__).parent / "fixtures" / "ai_tools"
 
@@ -138,6 +155,54 @@ class AiToolsTests(unittest.TestCase):
             payload = json.loads(output.getvalue())
             self.assertEqual(code, 0)
             self.assertIn("nested/SHA256SUMS.txt", payload["manifest"])
+
+    def test_signal_flow_spy_resolves_autoload_and_own_script_signal_objects(self):
+        with tempfile.TemporaryDirectory() as d:
+            write_tree(d, {
+                "project.godot": '[application]\nconfig/name="Fixture"\n\n[autoload]\n\nEvents="*res://autoload/events.gd"\n\n[display]\nEvents2="*res://nope.gd"\n',
+                "autoload/events.gd": "extends Node\nsignal player_dashed(direction)\nsignal never_used\n",
+                "scripts/hero.gd": "extends Node\nsignal died\nfunc dash():\n\tEvents.player_dashed.emit(Vector2.ZERO)\nfunc kill():\n\tdied.emit()\n",
+                "scripts/audio.gd": "extends Node\nfunc _ready():\n\tEvents.player_dashed.connect(_on_dash)\n\tEvents.tree_exiting.connect(_on_exit)\n",
+                "scripts/other.gd": "extends Node\nsignal orphan\nfunc _ready():\n\tnode.orphan.connect(_x)\n",
+            })
+            code, payload = run_json(signal_main, [d])
+            unreferenced = {f["message"].split()[1] for f in payload["findings"] if f["code"] == "UnreferencedSignal"}
+            self.assertEqual(code, 0)
+            self.assertEqual(payload["autoloads"], {"Events": "res://autoload/events.gd"})
+            self.assertNotIn("player_dashed", unreferenced)
+            self.assertNotIn("died", unreferenced)
+            # Unchanged behaviour: truly unused signals and instance-variable receivers stay unresolved.
+            self.assertIn("never_used", unreferenced)
+            self.assertIn("orphan", unreferenced)
+            # Built-in Node signals on an autoload are not reported as undeclared.
+            self.assertNotIn("UnknownConnection", [f["code"] for f in payload["findings"]])
+
+    def test_input_map_auditor_ignores_non_input_sections(self):
+        with tempfile.TemporaryDirectory() as d:
+            write_tree(d, {
+                "project.godot": '[input]\n\njump={\n"deadzone": 0.5,\n"events": []\n}\nunused_action={\n"deadzone": 0.5,\n"events": []\n}\n\n[shader_globals]\n\nsg_height_tex={\n"type": "sampler2D",\n"value": ""\n}\n',
+                "player.gd": 'extends Node\nfunc _process(_d):\n\tif Input.is_action_just_pressed("jump"):\n\t\tpass\n',
+            })
+            code, payload = run_json(input_main, [d])
+            unused = [f["message"] for f in payload["findings"] if f["code"] == "UnusedInputAction"]
+            self.assertEqual(code, 0)
+            self.assertEqual(payload["actions"], ["jump", "unused_action"])
+            self.assertEqual(unused, ["Action 'unused_action' has no detected script use"])
+
+    def test_asset_health_guard_treats_format_paths_as_dynamic(self):
+        with tempfile.TemporaryDirectory() as d:
+            write_tree(d, {
+                "project.godot": "[application]\n",
+                "resources/heroes/sol.tres": "[gd_resource format=3]\n",
+                "scripts/hero.gd": 'extends Node\nconst A = "res://resources/heroes/%s.tres"\nconst B = "res://assets/audio/%s"\nconst C = "res://lvl/level_%02d.tscn"\nconst D = "res://items/{0}.tres"\nconst E = "res://items/{name}.tres"\nconst OK = "res://resources/heroes/sol.tres"\nconst GONE = "res://resources/heroes/missing.tres"\n',
+            })
+            code, payload = run_json(asset_main, [d])
+            missing = [f["message"] for f in payload["findings"] if f["code"] == "MissingResource"]
+            dynamic = [f for f in payload["findings"] if f["code"] == "DynamicResourcePath"]
+            self.assertEqual(code, 2)
+            self.assertEqual(missing, ["Missing res://resources/heroes/missing.tres"])
+            self.assertEqual(len(dynamic), 5)
+            self.assertTrue(all(f["severity"] == "info" for f in dynamic))
 
     def test_fixture_directory_exists_for_every_command(self):
         self.assertEqual({p.name for p in FIXTURES.iterdir() if p.is_dir()}, set(COMMANDS))
