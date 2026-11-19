@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 2,
+  "states": [
+    {"id": "idle", "initial": true},
+    {"id": "running"}
+  ],
+  "transitions": [
+    {"from": "idle", "to": "missing"}
+  ]
+}

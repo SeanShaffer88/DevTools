@@ -1,0 +1,3 @@
+[gd_scene format=3]
+
+[connection signal="missing_signal" from="." to="." method="_on_missing"]

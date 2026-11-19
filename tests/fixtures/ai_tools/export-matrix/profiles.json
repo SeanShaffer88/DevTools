@@ -1,0 +1,7 @@
+{
+  "profiles": [
+    {"engine": "godot", "target": "windows-x64", "os": "Windows 11 x64"},
+    {"engine": "godot", "target": "android-x86_64", "packageName": "dev.fixture.game", "signingRequired": false},
+    {"engine": "rust", "target": "linux-x64"}
+  ]
+}
