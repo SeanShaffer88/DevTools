@@ -6258,6 +6258,33 @@
       ],
       "publisherChecksumVerified": true,
       "distributionNotes": "Derived compiler bootstrap provenance and exact source/build recipe: development/samples/bootstraps/nsis/provenance.json. Host tool preparation is not offline sample-build proof."
+    },
+    {
+      "id": "lua515-win-x64",
+      "recipe": "cpp-packages",
+      "url": "https://www.lua.org/ftp/lua-5.1.5.tar.gz",
+      "license": "MIT; upstream COPYRIGHT retained",
+      "version": "5.1.5-devtools-local-build",
+      "format": "zip",
+      "filename": "lua-5.1.5-devtools-win-x64.zip",
+      "sizeBytes": 745662,
+      "sha256": "6dcd7161d7949c19e69897a37bf736e060c6a474d9b42da41642b42cb4059e3d",
+      "pieces": [
+        {
+          "path": "payloads/lua515-win-x64/lua-5.1.5-devtools-win-x64.zip",
+          "sizeBytes": 745662,
+          "sha256": "6dcd7161d7949c19e69897a37bf736e060c6a474d9b42da41642b42cb4059e3d"
+        }
+      ],
+      "licenseFiles": [
+        {
+          "path": "notices/lua515-win-x64-COPYRIGHT",
+          "sizeBytes": 1528,
+          "sha256": "ee5e3e82af1e1b543c4f216e399d7c8cfee797711913f349e385101c4ae60a79"
+        }
+      ],
+      "publisherChecksumVerified": false,
+      "distributionNotes": "Derived approved local MSVC x64 build, not publisher binary; exact Lua source archive, build script and original provenance included. Static PE imports inspected: Windows KERNEL32 only; no non-system DLLs required."
     }
   ],
   "recipes": [
@@ -6355,7 +6382,8 @@
       "status": "partial",
       "artifactIds": [
         "cmake-win-x64",
-        "vcpkg-source"
+        "vcpkg-source",
+        "lua515-win-x64"
       ],
       "report": "recipes/cpp-packages.md",
       "originalSubstitute": null,

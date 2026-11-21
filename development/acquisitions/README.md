@@ -1,7 +1,7 @@
 # Offline payloads and original substitutes
 
-All 19 acquisition recipes were reviewed. This pack contains **46 selected
-archives, 5,570,347,796 bytes** (about 5.19 GiB), plus retained
+All 19 acquisition recipes were reviewed. This pack contains **47 selected
+archives, 5,571,093,458 bytes** (about 5.19 GiB), plus retained
 licenses, provenance, original test doubles and inert examples. Every recipe is
 explicitly **partial** or **restricted-with-original**; no arbitrary project is
 claimed ready to build offline.
@@ -111,3 +111,5 @@ and the actual reviewed output SHA-256 is recorded. Inspect the scripts and thei
 input receipts before any later derivation.
 
 Platform samples also retain Zig binaries/source, official PortableApps.com tools and matching sources, plus a clearly labeled relocatable NSIS compiler derived from unchanged NSIS 3.13 source with zlib 1.4. Its exact bootstrap inputs and host preparation recipe are in `../samples/bootstraps/nsis/`. Actual network-denied sample build evidence is separate from compiler preparation.
+
+The saved Lua 5.1.5 local-build ZIP includes the approved x64 executables, exact pinned source archive, MIT COPYRIGHT, original build script and provenance; sample preparation does not depend on ignored local binaries.

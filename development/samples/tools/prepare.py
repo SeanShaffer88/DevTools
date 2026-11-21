@@ -135,11 +135,8 @@ def prepare(repo, root, android_sdk, platform, build_tools, targets):
             records.append({'id': ident, 'archiveSha256': artifact['sha256'], 'selection': 'Inert extraction; installer never launched',
                             'extractorSha256': extractor_identity['sha256'], 'extractionExitCode': result.returncode})
     if 'wow-addon' in targets:
-        lua = tools_dir / 'lua-5.1.5'
-        lua.mkdir()
-        for name in ('lua.exe', 'luac.exe', 'COPYRIGHT'):
-            shutil.copy2(repo / 'tools/lua-5.1.5/bin' / name, lua / name)
-        records.append({'id': 'existing-approved-lua-5.1.5', 'files': {name: identity(lua / name) for name in ('lua.exe', 'luac.exe', 'COPYRIGHT')}})
+        extract_zip('lua515-win-x64')
+        lua = extracted['lua515-win-x64']
     if need_sdk:
         if android_sdk is None: raise ValueError('Android targets require an explicit private licensed SDK path')
         sdk = tools_dir / 'android-sdk-private'

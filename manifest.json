@@ -100,10 +100,10 @@
       "id": "development",
       "folder": "development/",
       "title": "Offline development workflows and dependency preparation",
-      "covers": "Windows, Android apps/games, websites, PC games, userscripts, userstyles, dependencies, PortableApps.com and WoW; ten sample build/validation targets, 46 saved archives, offline search, licenses/provenance and explicit private SDK prerequisites",
+      "covers": "Windows, Android apps/games, websites, PC games, userscripts, userstyles, dependencies, PortableApps.com and WoW; ten sample build/validation targets, 47 saved archives, offline search, licenses/provenance and explicit private SDK prerequisites",
       "manifest": "development/manifest.json",
       "bundle": "development/README.md",
-      "files": 1054
+      "files": 1063
     }
   ],
   "files": [
@@ -2576,7 +2576,7 @@
     {
       "path": "development/acquisitions/README.md",
       "domain": "development",
-      "bytes": 7087,
+      "bytes": 7307,
       "summary": "Offline acquisition payload, original tool/fixture or retained license/provenance. See development/acquisitions/inventory.json and README for exact identity and limits."
     },
     {
@@ -2594,7 +2594,7 @@
     {
       "path": "development/acquisitions/inventory.json",
       "domain": "development",
-      "bytes": 335318,
+      "bytes": 336512,
       "summary": "Offline acquisition payload, original tool/fixture or retained license/provenance. See development/acquisitions/inventory.json and README for exact identity and limits."
     },
     {
@@ -3310,6 +3310,12 @@
       "domain": "development",
       "bytes": 4399,
       "summary": "Offline acquisition payload, original tool/fixture or retained license/provenance. See development/acquisitions/inventory.json and README for exact identity and limits."
+    },
+    {
+      "path": "development/acquisitions/notices/lua515-win-x64-COPYRIGHT",
+      "domain": "development",
+      "bytes": 1528,
+      "summary": "Saved development resource or provenance"
     },
     {
       "path": "development/acquisitions/notices/lucide-source-1-LICENSE",
@@ -7332,6 +7338,12 @@
       "summary": "Offline platform sample, saved development resource or provenance"
     },
     {
+      "path": "development/acquisitions/payloads/7zip-tools-win-x64/7zip-26.06-windows-x64-tools.zip",
+      "domain": "development",
+      "bytes": 1166391,
+      "summary": "Saved development resource or provenance"
+    },
+    {
       "path": "development/acquisitions/payloads/android-ndk-samples/android-ndk-samples.zip",
       "domain": "development",
       "bytes": 18312348,
@@ -7968,10 +7980,40 @@
       "summary": "Offline platform sample, saved development resource or provenance"
     },
     {
+      "path": "development/acquisitions/payloads/nsis-compatible-bootstrap/scons-4.11.1.tar.gz",
+      "domain": "development",
+      "bytes": 3268963,
+      "summary": "Saved development resource or provenance"
+    },
+    {
+      "path": "development/acquisitions/payloads/nsis-compatible-bootstrap/zlib-1.4.tar.gz",
+      "domain": "development",
+      "bytes": 1507140,
+      "summary": "Saved development resource or provenance"
+    },
+    {
+      "path": "development/acquisitions/payloads/nsis-compatible-win-x86/nsis-3.13-devtools-relocatable-x86.zip",
+      "domain": "development",
+      "bytes": 2490549,
+      "summary": "Saved development resource or provenance"
+    },
+    {
+      "path": "development/acquisitions/payloads/nsis-portable/NSISPortable_3.13_English.paf.exe",
+      "domain": "development",
+      "bytes": 5118920,
+      "summary": "Saved development resource or provenance"
+    },
+    {
       "path": "development/acquisitions/payloads/nsis-source/nsis-3.13-src.tar.bz2",
       "domain": "development",
       "bytes": 1819771,
       "summary": "Offline platform sample, saved development resource or provenance"
+    },
+    {
+      "path": "development/acquisitions/payloads/nsis-unicode-source/nsis-2.46.5-Unicode-src.zip",
+      "domain": "development",
+      "bytes": 5505185,
+      "summary": "Saved development resource or provenance"
     },
     {
       "path": "development/acquisitions/payloads/packaging-source/packaging-26.3.tar.gz",
@@ -7990,6 +8032,18 @@
       "domain": "development",
       "bytes": 43281107,
       "summary": "Offline acquisition payload, original tool/fixture or retained license/provenance. See development/acquisitions/inventory.json and README for exact identity and limits."
+    },
+    {
+      "path": "development/acquisitions/payloads/portableapps-installer/PortableApps.comInstaller_3.9.24.paf.exe",
+      "domain": "development",
+      "bytes": 6442672,
+      "summary": "Saved development resource or provenance"
+    },
+    {
+      "path": "development/acquisitions/payloads/portableapps-launcher/PortableApps.comLauncher_2.2.9.paf.exe",
+      "domain": "development",
+      "bytes": 2761896,
+      "summary": "Saved development resource or provenance"
     },
     {
       "path": "development/acquisitions/payloads/python-embed-win-x64/python-3.15.2-embed-amd64.zip",
@@ -8378,7 +8432,7 @@
     {
       "path": "development/samples/README.md",
       "domain": "development",
-      "bytes": 6371,
+      "bytes": 6589,
       "summary": "Offline platform sample, saved development resource or provenance"
     },
     {
@@ -8582,7 +8636,7 @@
     {
       "path": "development/samples/tools/prepare.py",
       "domain": "development",
-      "bytes": 11916,
+      "bytes": 11656,
       "summary": "Offline platform sample, saved development resource or provenance"
     },
     {
