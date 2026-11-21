@@ -1,0 +1,13 @@
+/* ==UserStyle==
+@name         Offline Example Style
+@namespace    org.devtools.samples
+@version      1.0.0
+@description  Narrow original local stylesheet example.
+@author       Sean Shaffer
+@license      MIT
+==/UserStyle== */
+@-moz-document domain("example.com") {
+  body { background: #f5f6f8; color: #172033; font-family: system-ui, sans-serif; }
+  a:focus-visible { outline: 3px solid currentColor; outline-offset: 3px; }
+  @media (forced-colors: active) { body { background: Canvas; color: CanvasText; } }
+}

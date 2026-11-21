@@ -19,7 +19,7 @@ from urllib.parse import urlsplit
 RECIPE_IDS = frozenset(('windows-sdk', 'dotnet-nuget', 'webview2', 'android-sdk',
     'gradle', 'node-npm', 'rust-cargo', 'python-wheels', 'cpp-packages', 'godot',
     'flutter', 'browsers', 'userscript-manager', 'userstyle-manager', 'unity',
-    'unreal', 'platform-services', 'media-assets'))
+    'unreal', 'platform-services', 'media-assets', 'portableapps'))
 # The pinned Firefox source has 510,603 members (3,519,444,241 expanded bytes).
 # Keep a finite reviewed ceiling with modest room for archive directory entries.
 MAX_MEMBERS = 550000
@@ -151,7 +151,7 @@ def archive_check(stream, kind):
                     with z.open(info) as f:
                         while f.read(CHUNK):
                             pass  # consumes all bytes and verifies CRC
-    elif kind in ('tar.xz', 'tar.gz', 'tar'):
+    elif kind in ('tar.xz', 'tar.gz', 'tar.bz2', 'tar'):
         with tarfile.open(fileobj=stream, mode='r:*') as t:
             for info in t:
                 member(info.name, info.size)
@@ -232,8 +232,8 @@ def load(root):
     if not isinstance(recipes, list) or any(not isinstance(r, dict) for r in recipes):
         raise Invalid('recipe object array required')
     ids = [r['id'] for r in recipes]
-    if len(ids) != 18 or set(ids) != RECIPE_IDS:
-        raise Invalid('exact 18 recipe coverage required')
+    if len(ids) != len(RECIPE_IDS) or set(ids) != RECIPE_IDS:
+        raise Invalid(f'exact {len(RECIPE_IDS)} recipe coverage required')
     artifacts = inventory.get('artifacts', [])
     if not isinstance(artifacts, list) or len(artifacts) > 256:
         raise Invalid('artifact count limit')
@@ -311,7 +311,7 @@ def verify(root, archives=True):
         except (Invalid, OSError, ValueError, zipfile.BadZipFile, tarfile.TarError) as error:
             raise Invalid(a['id'] + ': ' + str(error)) from error
         results.append({'id': a['id'], 'sizeBytes': total, 'archive': report})
-    return {'valid': True, 'recipeCount': 18, 'artifactCount': len(results),
+    return {'valid': True, 'recipeCount': len(RECIPE_IDS), 'artifactCount': len(results),
             'payloadBytes': sum(x['sizeBytes'] for x in results), 'artifacts': results,
             'network': 'NotPerformed', 'runtime': 'NotPerformed'}
 

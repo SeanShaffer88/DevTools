@@ -13,7 +13,7 @@ This file is the router: find the domain, then the file, in seconds.
 
 ## Offline Development Workflows
 
-Start with [development/README.md](development/README.md) for the cross-domain offline library covering Windows software, Android apps, Android games, websites, PC games, userscripts, userstyles and developer dependencies. Its original guides and templates fill workflow gaps while linking to the canonical domain material below. [SOURCES.json](development/vendor/SOURCES.json) records the small licensed source snapshots actually present.
+Start with [development/README.md](development/README.md) for the cross-domain offline library covering Windows software, Android apps, Android games, websites, PC games, userscripts, userstyles and developer dependencies, PortableApps.com packaging and WoW addons. Its original guides and templates fill workflow gaps while linking to the canonical domain material below. [SOURCES.json](development/vendor/SOURCES.json) records the small licensed source snapshots actually present.
 
 ~~~powershell
 python development/tools/library.py audit
@@ -21,7 +21,9 @@ python development/tools/library.py search "keyboard focus" --domain websites
 python development/tools/library.py plan --domain dependencies
 ~~~
 
-The catalog distinguishes local content, reference-only pointers and partial or restricted acquisition coverage. [Offline payloads and original substitutes](development/acquisitions/README.md) records all 18 recipe decisions, retained licenses and exact archive identities. Run `python development/acquisitions/verify.py verify` for the separate offline binary/archive gate. Search reads curated local files without network access. Read dependency acquisition and licensing notes before preparing an offline toolchain. Validation proves the recorded files and examples, with actual builds and device/browser checks reported separately.
+The catalog distinguishes local content, reference-only pointers and partial or restricted acquisition coverage. [Offline payloads and original substitutes](development/acquisitions/README.md) records all 19 recipe decisions, retained licenses and exact archive identities. Run `python development/acquisitions/verify.py verify` for the separate offline binary/archive gate. Search reads curated local files without network access. Read dependency acquisition and licensing notes before preparing an offline toolchain. Validation proves the recorded files and examples, with actual builds and device/browser checks reported separately.
+
+Original [platform samples](development/samples/README.md) provide a reproducible `Build-OfflineSamples.ps1` entrypoint for ten build/validation targets, including real PortableApps PAL/PAF compilation. Android requires an explicitly supplied private licensed SDK. Generated binaries remain local verification artifacts; runtime/device/installer checks are separate.
 
 ## Domains
 

@@ -520,6 +520,30 @@
       "acquisitionReport": "development/acquisitions/recipes/media-assets.md",
       "originalSubstitute": "development/acquisitions/original/media",
       "remainingRequirements": "The pinned JetBrains Mono 2.304 font archive (OFL 1.1), Lucide source/icons with ISC notices, and original MIT SVG/WAV/OBJ/JSON fixtures are retained. Respect reserved font names and each asset license. Rendering and embedding were not tested; rights to unrelated assets are not implied."
+    },
+    {
+      "id": "portableapps",
+      "title": "PortableApps.com Launcher, Installer and NSIS",
+      "domains": [
+        "portableapps",
+        "windows",
+        "dependencies"
+      ],
+      "status": "partial",
+      "versionPolicy": "Pinned official PAL 2.2.9, Installer 3.9.24 and NSIS Portable 3.13 captured 2026-11-21; recheck tool currency for any later release.",
+      "officialSources": [
+        "https://portableapps.com/apps/development/portableapps.com_installer",
+        "https://portableapps.com/apps/development/portableapps.com_launcher",
+        "https://portableapps.com/apps/development/nsis_portable"
+      ],
+      "distributionNotes": "GPL and component-specific licenses retained with official archives and exact compiler sources. Do not blanket relicense tools or infer trademark endorsement.",
+      "prepare": "Use the saved official archives and their recorded license/source evidence. Extract tools as data into a new owned build root; do not launch their installers.",
+      "offlineVerification": "Run the original sample build commands with zero-network AppContainer capabilities and inspect the resulting PAL/PAF artifacts.",
+      "localAlternatives": [
+        "portableapps/README.md",
+        "development/samples/README.md"
+      ],
+      "verification": "Acquisition/source identity checked; final sample receipts record exact build outcomes separately."
     }
   ]
 }

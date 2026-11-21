@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "catalogSha256": "388cc6dd5edffee608479cece54ef1262d5bd089b6b41c6a13537e1bad935c3a",
+  "catalogSha256": "7366382c03690ac352a643a1d259aedf3f98fa9f7919ddbcb292dfe7da0d395b",
   "files": [
     {
       "id": "windows-windows-md",
@@ -138,8 +138,8 @@
     {
       "id": "dependency-readiness-recipes",
       "path": "development/dependency-recipes.json",
-      "sizeBytes": 33754,
-      "sha256": "992f8a91de3c212b8232f6f2ab6000888c2f09b7e3d39427d7629266a80dc491",
+      "sizeBytes": 35163,
+      "sha256": "68180a992d4790d67d21d519e5deacaf3c6b7e0a9f251f6c37aa796930d2e9de",
       "identityEncoding": "raw-bytes"
     },
     {
@@ -490,6 +490,41 @@
       "path": "development/acquisitions/recipes/media-assets.md",
       "sizeBytes": 1089,
       "sha256": "90c4a62dc06b87e4b0cbdea157afe71a338bba8bf2a2658518e546b749235bac",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "sample-portableapps-guide",
+      "path": "development/guides/portableapps.md",
+      "sizeBytes": 2090,
+      "sha256": "302d26e64fba781d72ffe267d9052902fa888e29cf52f1a7257d77c77f552936",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "sample-portableapps-template",
+      "path": "development/samples/portableapps/help.html",
+      "sizeBytes": 252,
+      "sha256": "80f4b48dea8f17a9e799f35f741be582e977469c0d09f2b843893a452ea21852",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "sample-wow-addons-guide",
+      "path": "development/guides/wow-addons.md",
+      "sizeBytes": 1280,
+      "sha256": "12122df67a8e023ae261b8d5f20158145d44ba8472c258e05dbd83bd209aff46",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "sample-wow-addons-example",
+      "path": "development/samples/wow-addon/OfflineSample.lua",
+      "sizeBytes": 154,
+      "sha256": "aabf64742bf444d39ad7a36be00a6da9c0d97ab59f5acd6f0db4e3ed272a4b6f",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-portableapps",
+      "path": "development/acquisitions/recipes/portableapps.md",
+      "sizeBytes": 2132,
+      "sha256": "4ff922ac7e294b413d8c9513911c77f3115fa580b55ea3923e18ba87a3d89c68",
       "identityEncoding": "raw-bytes"
     },
     {
