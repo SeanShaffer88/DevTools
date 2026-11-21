@@ -1,6 +1,6 @@
-payloads/** -text -whitespace
-notices/** -text -whitespace
-original/media/** -text -whitespace
 *.py text eol=lf
 *.json text eol=lf
 *.md text eol=lf
+payloads/** -text -whitespace
+notices/** -text -whitespace
+original/media/** -text -whitespace
