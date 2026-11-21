@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "catalogSha256": "e6477c29472dae0c19eb08cb22d24245559e18b6c447eaa515a8fc1a755823a9",
+  "catalogSha256": "388cc6dd5edffee608479cece54ef1262d5bd089b6b41c6a13537e1bad935c3a",
   "files": [
     {
       "id": "windows-windows-md",
@@ -138,8 +138,8 @@
     {
       "id": "dependency-readiness-recipes",
       "path": "development/dependency-recipes.json",
-      "sizeBytes": 23740,
-      "sha256": "7a4f4660362051bab9e12804071aa298106d075866c35ec46e2cfcedaba406e7",
+      "sizeBytes": 33754,
+      "sha256": "992f8a91de3c212b8232f6f2ab6000888c2f09b7e3d39427d7629266a80dc491",
       "identityEncoding": "raw-bytes"
     },
     {
@@ -365,6 +365,132 @@
       "sizeBytes": 4400,
       "sha256": "eb7dff3aed12acac8f74817bafbba1f2c27a95e918f08ea875aabf43c4720118",
       "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "acquire-windows-sdk",
+      "path": "development/acquisitions/recipes/windows-sdk.md",
+      "sizeBytes": 1020,
+      "sha256": "7237e36e854fccd925d7c38eb16676b596472ce0799ecb8e772359c09924118f",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-dotnet-nuget",
+      "path": "development/acquisitions/recipes/dotnet-nuget.md",
+      "sizeBytes": 1240,
+      "sha256": "4b78b04d7a459faffbd3fb5965ce18902d409b0b2bc9428d1f85d14ea91c647a",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-webview2",
+      "path": "development/acquisitions/recipes/webview2.md",
+      "sizeBytes": 784,
+      "sha256": "22a9511f1db1fe5f4b372f87482a4f8b71573851c04a34d0c539fcc1443123c4",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-android-sdk",
+      "path": "development/acquisitions/recipes/android-sdk.md",
+      "sizeBytes": 1317,
+      "sha256": "fbe9dc8e86f033f6a895ce2db03bfbbf614818bc4ed07449f8f782df7d5cc062",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-gradle",
+      "path": "development/acquisitions/recipes/gradle.md",
+      "sizeBytes": 1010,
+      "sha256": "ac08e8aca7c767a3f932bb1cb5b13b7099f790e3082e903669115d8b00ea3438",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-node-npm",
+      "path": "development/acquisitions/recipes/node-npm.md",
+      "sizeBytes": 830,
+      "sha256": "b52017afdb9db08504771c70fd00ae528c6b8bf52865b0b3c61d24217ddf2dc8",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-rust-cargo",
+      "path": "development/acquisitions/recipes/rust-cargo.md",
+      "sizeBytes": 856,
+      "sha256": "88d3671b46a03bb5704d485a4a8dacf7a13ff871156e7b8913698ba3a1c2d0e8",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-python-wheels",
+      "path": "development/acquisitions/recipes/python-wheels.md",
+      "sizeBytes": 971,
+      "sha256": "c4b291024fe0ef7a6cf573e2e35b468319292cb56ec17f184e9b22ef0da4ff8f",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-cpp-packages",
+      "path": "development/acquisitions/recipes/cpp-packages.md",
+      "sizeBytes": 880,
+      "sha256": "df10fdde901468eec469c064d1ffe3231273709d2a61282ae827c58fc5c390d0",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-godot",
+      "path": "development/acquisitions/recipes/godot.md",
+      "sizeBytes": 932,
+      "sha256": "6290b062b5163a6d0c897489671e1384e48a39b867768035b166dfba5faf79c8",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-flutter",
+      "path": "development/acquisitions/recipes/flutter.md",
+      "sizeBytes": 1101,
+      "sha256": "a0444fee432c7c21c7779efca00818104d04f7620c1de59896b5f8de4634113c",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-browsers",
+      "path": "development/acquisitions/recipes/browsers.md",
+      "sizeBytes": 1560,
+      "sha256": "aa710cb8e9466c6dd1fe96fbf5ad36025ce495fec54cdc4f18385265beb128c6",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-userscript-manager",
+      "path": "development/acquisitions/recipes/userscript-manager.md",
+      "sizeBytes": 882,
+      "sha256": "63dbae65eac2e3d7fa0dcbbc82863bfd67cf29fa96bae906ff65f47f0baca598",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-userstyle-manager",
+      "path": "development/acquisitions/recipes/userstyle-manager.md",
+      "sizeBytes": 814,
+      "sha256": "180838641a014b2568f2629d452258a34fcb95b38a7460c622a7ef3344127822",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-unity",
+      "path": "development/acquisitions/recipes/unity.md",
+      "sizeBytes": 1144,
+      "sha256": "ebfb08f90cf46e01f751a263eaf7b4845c853e57b8e2a3416b7d7df3bd5965c7",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-unreal",
+      "path": "development/acquisitions/recipes/unreal.md",
+      "sizeBytes": 1018,
+      "sha256": "44a10b1bb14ff81e9437879ef7155081be3624aa22e2f1ee42a9fd17f5f5656d",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-platform-services",
+      "path": "development/acquisitions/recipes/platform-services.md",
+      "sizeBytes": 1124,
+      "sha256": "a49b39ef1bb301b422b96d7e2a3f63eeda92c64a4537563149a2a6da3527f168",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-media-assets",
+      "path": "development/acquisitions/recipes/media-assets.md",
+      "sizeBytes": 1089,
+      "sha256": "90c4a62dc06b87e4b0cbdea157afe71a338bba8bf2a2658518e546b749235bac",
+      "identityEncoding": "raw-bytes"
     },
     {
       "id": "vendor-windows-keyboard-keyboard-interactions",

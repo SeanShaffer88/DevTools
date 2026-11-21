@@ -1144,23 +1144,27 @@
         "pc-games",
         "windows"
       ],
-      "kind": "pointer",
-      "summary": "Capture the installed SDK, compiler, linker, CRT version, target architecture and component IDs. Create and verify a vendor offline layout for the selected project workload. Save Win32 API reference selections under their individual terms.",
+      "kind": "reference",
+      "summary": "MSVC compiler, Windows SDK/CRT/layout remain vendor-licensed and unbundled. Original contract records compiler/SDK/architecture/flags; it does not compile or replace Win32 APIs.",
       "tags": [
         "dependency",
         "acquisition",
-        "missing-payload"
+        "offline-payloads",
+        "partial-coverage"
       ],
-      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
-      "status": "not-acquired",
-      "origin": "Original acquisition recipe in development/dependency-recipes.json",
-      "license": "Vendor layout and component licenses govern redistribution. Acquire a selected compiler/SDK layout from Microsoft, retain manifest and license evidence.",
+      "verification": "Original acquisition report with pinned payload identities and explicit remaining requirements. SDK/runtime activation and project builds are not verified.",
+      "status": "original",
+      "origin": "Original acquisition assessment in development/acquisitions/inventory.json",
+      "license": "MIT (original report); each referenced archive retains separately recorded upstream terms",
       "officialSources": [
         "https://learn.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio"
       ],
       "requires": [
-        "Developer-selected compatible version, target platform and licensed artifact acquisition."
-      ]
+        "MSVC compiler, Windows SDK/CRT/layout remain vendor-licensed and unbundled. Original contract records compiler/SDK/architecture/flags; it does not compile or replace Win32 APIs."
+      ],
+      "path": "development/acquisitions/recipes/windows-sdk.md",
+      "acquisitionStatus": "restricted-with-original",
+      "artifactIds": []
     },
     {
       "id": "acquire-dotnet-nuget",
@@ -1169,23 +1173,29 @@
         "dependencies",
         "windows"
       ],
-      "kind": "pointer",
-      "summary": "Pin SDK in global.json and packages with lockfiles. Collect all transitive nupkg files into a local feed. Expanded global-package folders alone are not a complete transferable feed. Configure a project-scoped NuGet.Config with clear and the local feed.",
+      "kind": "reference",
+      "summary": "Windows .NET SDK binary is not mirrored: its .NET Library License restricts standalone redistribution. SDK source snapshot does not include build dependencies, runtime binaries or project-specific NuGet graph. Original readiness contract is not a .NET compiler/runtime.",
       "tags": [
         "dependency",
         "acquisition",
-        "missing-payload"
+        "offline-payloads",
+        "partial-coverage"
       ],
-      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
-      "status": "not-acquired",
-      "origin": "Original acquisition recipe in development/dependency-recipes.json",
-      "license": "SDK and each package have separate licenses. Retain actual nupkg archives and their notices, with locked versions.",
+      "verification": "Original acquisition report with pinned payload identities and explicit remaining requirements. SDK/runtime activation and project builds are not verified.",
+      "status": "original",
+      "origin": "Original acquisition assessment in development/acquisitions/inventory.json",
+      "license": "MIT (original report); each referenced archive retains separately recorded upstream terms",
       "officialSources": [
         "https://learn.microsoft.com/en-us/nuget/hosting-packages/local-feeds",
         "https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-restore"
       ],
       "requires": [
-        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+        "Windows .NET SDK binary is not mirrored: its .NET Library License restricts standalone redistribution. SDK source snapshot does not include build dependencies, runtime binaries or project-specific NuGet graph. Original readiness contract is not a .NET compiler/runtime."
+      ],
+      "path": "development/acquisitions/recipes/dotnet-nuget.md",
+      "acquisitionStatus": "partial",
+      "artifactIds": [
+        "dotnet-source"
       ]
     },
     {
@@ -1196,22 +1206,28 @@
         "websites",
         "windows"
       ],
-      "kind": "pointer",
-      "summary": "Record Fixed Version or Evergreen strategy, exact architecture, native loader, runtime version and deployment behavior. Acquire the selected offline installer or fixed-version artifact from the vendor and retain its signatures and notices.",
+      "kind": "reference",
+      "summary": "Official SDK NuGet headers/loaders retained under bundled license. WebView2 browser runtime, architecture-specific deployment and runtime validation remain separate.",
       "tags": [
         "dependency",
         "acquisition",
-        "missing-payload"
+        "offline-payloads",
+        "partial-coverage"
       ],
-      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
-      "status": "not-acquired",
-      "origin": "Original acquisition recipe in development/dependency-recipes.json",
-      "license": "Follow Microsoft's runtime redistribution and package terms. Runtime installation is a separate operation.",
+      "verification": "Original acquisition report with pinned payload identities and explicit remaining requirements. SDK/runtime activation and project builds are not verified.",
+      "status": "original",
+      "origin": "Original acquisition assessment in development/acquisitions/inventory.json",
+      "license": "MIT (original report); each referenced archive retains separately recorded upstream terms",
       "officialSources": [
         "https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution"
       ],
       "requires": [
-        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+        "Official SDK NuGet headers/loaders retained under bundled license. WebView2 browser runtime, architecture-specific deployment and runtime validation remain separate."
+      ],
+      "path": "development/acquisitions/recipes/webview2.md",
+      "acquisitionStatus": "partial",
+      "artifactIds": [
+        "webview2-sdk"
       ]
     },
     {
@@ -1222,23 +1238,32 @@
         "android-games",
         "dependencies"
       ],
-      "kind": "pointer",
-      "summary": "Pin compileSdk/build tools, NDK, CMake, JDK, Android Gradle Plugin and ABIs. Prepare platform/build-tools/platform-tools and optional NDK packages while connected. Retain SDK package.xml and source.properties, accepted terms and trusted download evidence.",
+      "kind": "reference",
+      "summary": "Apache-licensed NDK samples and a portable Temurin 21 Windows x64 JDK, exact OpenJDK source and Temurin build scripts are retained. The Google Android SDK/NDK bundle remains unmirrored under restrictive SDK terms. Target platforms, build tools, NDK and each project Gradle dependency graph are still required. The original validator does not install software, accept licenses or replace vendor APIs.",
       "tags": [
         "dependency",
         "acquisition",
-        "missing-payload"
+        "offline-payloads",
+        "partial-coverage"
       ],
-      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
-      "status": "not-acquired",
-      "origin": "Original acquisition recipe in development/dependency-recipes.json",
-      "license": "SDK packages require their applicable licenses. License acceptance belongs to the developer's environment.",
+      "verification": "Original acquisition report with pinned payload identities and explicit remaining requirements. SDK/runtime activation and project builds are not verified.",
+      "status": "original",
+      "origin": "Original acquisition assessment in development/acquisitions/inventory.json",
+      "license": "MIT (original report); each referenced archive retains separately recorded upstream terms",
       "officialSources": [
         "https://developer.android.com/tools/sdkmanager",
         "https://developer.android.com/ndk/downloads"
       ],
       "requires": [
-        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+        "Apache-licensed NDK samples and a portable Temurin 21 Windows x64 JDK, exact OpenJDK source and Temurin build scripts are retained. The Google Android SDK/NDK bundle remains unmirrored under restrictive SDK terms. Target platforms, build tools, NDK and each project Gradle dependency graph are still required. The original validator does not install software, accept licenses or replace vendor APIs."
+      ],
+      "path": "development/acquisitions/recipes/android-sdk.md",
+      "acquisitionStatus": "partial",
+      "artifactIds": [
+        "android-ndk-samples",
+        "temurin21-win-x64",
+        "temurin21-source",
+        "temurin21-build-source"
       ]
     },
     {
@@ -1249,22 +1274,31 @@
         "android-games",
         "dependencies"
       ],
-      "kind": "pointer",
-      "summary": "Record wrapper checksum, plugin version, verification metadata and dependency locks. Resolve the project's actual build variants while connected, then preserve the matching Gradle user-home cache and wrapper distribution. A single resolved task does not prove every variant is ready.",
+      "kind": "reference",
+      "summary": "The Gradle binary distribution and portable Temurin 21 Windows JDK with exact source/build scripts are retained. Select project-compatible JDK, Gradle and Android Gradle plugin versions. Project Maven dependencies, wrapper pinning, variants and caches remain required. No vendor build or runtime test was performed.",
       "tags": [
         "dependency",
         "acquisition",
-        "missing-payload"
+        "offline-payloads",
+        "partial-coverage"
       ],
-      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
-      "status": "not-acquired",
-      "origin": "Original acquisition recipe in development/dependency-recipes.json",
-      "license": "Plugin, wrapper, Maven artifact and SDK licenses apply separately.",
+      "verification": "Original acquisition report with pinned payload identities and explicit remaining requirements. SDK/runtime activation and project builds are not verified.",
+      "status": "original",
+      "origin": "Original acquisition assessment in development/acquisitions/inventory.json",
+      "license": "MIT (original report); each referenced archive retains separately recorded upstream terms",
       "officialSources": [
         "https://docs.gradle.org/current/userguide/dependency_caching.html"
       ],
       "requires": [
-        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+        "The Gradle binary distribution and portable Temurin 21 Windows JDK with exact source/build scripts are retained. Select project-compatible JDK, Gradle and Android Gradle plugin versions. Project Maven dependencies, wrapper pinning, variants and caches remain required. No vendor build or runtime test was performed."
+      ],
+      "path": "development/acquisitions/recipes/gradle.md",
+      "acquisitionStatus": "partial",
+      "artifactIds": [
+        "gradle-bin",
+        "temurin21-win-x64",
+        "temurin21-source",
+        "temurin21-build-source"
       ]
     },
     {
@@ -1276,23 +1310,29 @@
         "userstyles",
         "websites"
       ],
-      "kind": "pointer",
-      "summary": "Pin Node/npm and package-lock. Prepare the full lock graph in a dedicated cache while connected using the project's npm flags. Review install scripts before any preparation. Retain integrity fields and license files. npm cache verification checks cache integrity, not complete project readiness.",
+      "kind": "reference",
+      "summary": "Node/npm portable Windows x64 distribution retained with complete bundled licenses. Arbitrary project package-lock transitive dependencies/cache/install scripts remain project-specific.",
       "tags": [
         "dependency",
         "acquisition",
-        "missing-payload"
+        "offline-payloads",
+        "partial-coverage"
       ],
-      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
-      "status": "not-acquired",
-      "origin": "Original acquisition recipe in development/dependency-recipes.json",
-      "license": "Each transitive package's license and bundled assets must be checked.",
+      "verification": "Original acquisition report with pinned payload identities and explicit remaining requirements. SDK/runtime activation and project builds are not verified.",
+      "status": "original",
+      "origin": "Original acquisition assessment in development/acquisitions/inventory.json",
+      "license": "MIT (original report); each referenced archive retains separately recorded upstream terms",
       "officialSources": [
         "https://docs.npmjs.com/cli/v11/commands/npm-cache/",
         "https://docs.npmjs.com/cli/v11/commands/npm-ci/"
       ],
       "requires": [
-        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+        "Node/npm portable Windows x64 distribution retained with complete bundled licenses. Arbitrary project package-lock transitive dependencies/cache/install scripts remain project-specific."
+      ],
+      "path": "development/acquisitions/recipes/node-npm.md",
+      "acquisitionStatus": "partial",
+      "artifactIds": [
+        "node-win-x64"
       ]
     },
     {
@@ -1303,22 +1343,28 @@
         "pc-games",
         "windows"
       ],
-      "kind": "pointer",
-      "summary": "Pin toolchain, targets and Cargo.lock. Vendor locked crate sources while connected and retain cargo vendor source-replacement configuration. Prepare native libraries and linker toolchains separately. Build scripts and proc macros execute project dependency code.",
+      "kind": "reference",
+      "summary": "Rust standalone Windows MSVC toolchain archive retained with bundled notices. Separately licensed MSVC linker/Windows SDK and per-project locked crate/native source graph remain required. No install, proc macro or build script was executed.",
       "tags": [
         "dependency",
         "acquisition",
-        "missing-payload"
+        "offline-payloads",
+        "partial-coverage"
       ],
-      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
-      "status": "not-acquired",
-      "origin": "Original acquisition recipe in development/dependency-recipes.json",
-      "license": "Check every crate and native dependency license; preserve license texts with source snapshots.",
+      "verification": "Original acquisition report with pinned payload identities and explicit remaining requirements. SDK/runtime activation and project builds are not verified.",
+      "status": "original",
+      "origin": "Original acquisition assessment in development/acquisitions/inventory.json",
+      "license": "MIT (original report); each referenced archive retains separately recorded upstream terms",
       "officialSources": [
         "https://doc.rust-lang.org/cargo/commands/cargo-vendor.html"
       ],
       "requires": [
-        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+        "Rust standalone Windows MSVC toolchain archive retained with bundled notices. Separately licensed MSVC linker/Windows SDK and per-project locked crate/native source graph remain required. No install, proc macro or build script was executed."
+      ],
+      "path": "development/acquisitions/recipes/rust-cargo.md",
+      "acquisitionStatus": "partial",
+      "artifactIds": [
+        "rust-win-msvc"
       ]
     },
     {
@@ -1328,23 +1374,31 @@
         "dependencies",
         "websites"
       ],
-      "kind": "pointer",
-      "summary": "Pin interpreter, OS, architecture, ABI and fully hashed requirements. Download all required wheels for the exact target; build any source-only packages in a controlled matching environment. Retain hashes and notices. A wheelhouse for one target is not a universal cache.",
+      "kind": "reference",
+      "summary": "Python Windows embeddable distribution plus packaging pure-Python wheel and matching source retained. Embeddable runtime has no pip; use an independently prepared compatible interpreter/pip. Other project requirements and native ABI wheels remain project-specific.",
       "tags": [
         "dependency",
         "acquisition",
-        "missing-payload"
+        "offline-payloads",
+        "partial-coverage"
       ],
-      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
-      "status": "not-acquired",
-      "origin": "Original acquisition recipe in development/dependency-recipes.json",
-      "license": "Wheel metadata and each bundled native library have their own terms.",
+      "verification": "Original acquisition report with pinned payload identities and explicit remaining requirements. SDK/runtime activation and project builds are not verified.",
+      "status": "original",
+      "origin": "Original acquisition assessment in development/acquisitions/inventory.json",
+      "license": "MIT (original report); each referenced archive retains separately recorded upstream terms",
       "officialSources": [
         "https://pip.pypa.io/en/stable/cli/pip_download/",
         "https://pip.pypa.io/en/stable/topics/repeatable-installs/"
       ],
       "requires": [
-        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+        "Python Windows embeddable distribution plus packaging pure-Python wheel and matching source retained. Embeddable runtime has no pip; use an independently prepared compatible interpreter/pip. Other project requirements and native ABI wheels remain project-specific."
+      ],
+      "path": "development/acquisitions/recipes/python-wheels.md",
+      "acquisitionStatus": "partial",
+      "artifactIds": [
+        "python-embed-win-x64",
+        "packaging-wheel",
+        "packaging-source"
       ]
     },
     {
@@ -1355,23 +1409,30 @@
         "pc-games",
         "windows"
       ],
-      "kind": "pointer",
-      "summary": "Pin compiler, triplet, vcpkg baseline, overlays and CMake presets. Prepare source/download caches and matching binary cache for each triplet. Retain compiler flags, ABI identity, hashes and debug symbols separately. Avoid implicit FetchContent network operations in offline builds.",
+      "kind": "reference",
+      "summary": "Portable CMake and vcpkg source snapshot retained. Compiler/SDK, target triplets, per-project source/binary caches, native licenses and build configuration remain project-specific.",
       "tags": [
         "dependency",
         "acquisition",
-        "missing-payload"
+        "offline-payloads",
+        "partial-coverage"
       ],
-      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
-      "status": "not-acquired",
-      "origin": "Original acquisition recipe in development/dependency-recipes.json",
-      "license": "Library licenses, toolchain runtime and binary redistribution rights apply per component.",
+      "verification": "Original acquisition report with pinned payload identities and explicit remaining requirements. SDK/runtime activation and project builds are not verified.",
+      "status": "original",
+      "origin": "Original acquisition assessment in development/acquisitions/inventory.json",
+      "license": "MIT (original report); each referenced archive retains separately recorded upstream terms",
       "officialSources": [
         "https://learn.microsoft.com/en-us/vcpkg/consume/binary-caching-local",
         "https://cmake.org/cmake/help/latest/manual/cmake-presets.7.html"
       ],
       "requires": [
-        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+        "Portable CMake and vcpkg source snapshot retained. Compiler/SDK, target triplets, per-project source/binary caches, native licenses and build configuration remain project-specific."
+      ],
+      "path": "development/acquisitions/recipes/cpp-packages.md",
+      "acquisitionStatus": "partial",
+      "artifactIds": [
+        "cmake-win-x64",
+        "vcpkg-source"
       ]
     },
     {
@@ -1382,23 +1443,30 @@
         "dependencies",
         "pc-games"
       ],
-      "kind": "pointer",
-      "summary": "Acquire matching editor and export templates for the project's exact version and target. Keep .NET and native runtime prerequisites where used. Import project assets while connected only if importers require additional downloads, then verify a fresh offline import.",
+      "kind": "reference",
+      "summary": "Matching Godot standard Windows editor and export templates retained with source license/COPYRIGHT notices. Android/other platform SDKs, .NET variant, project assets/plugins/imports and actual export/runtime checks remain required.",
       "tags": [
         "dependency",
         "acquisition",
-        "missing-payload"
+        "offline-payloads",
+        "partial-coverage"
       ],
-      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
-      "status": "not-acquired",
-      "origin": "Original acquisition recipe in development/dependency-recipes.json",
-      "license": "Godot MIT and bundled third-party notices apply. Exported games and assets need separate license records.",
+      "verification": "Original acquisition report with pinned payload identities and explicit remaining requirements. SDK/runtime activation and project builds are not verified.",
+      "status": "original",
+      "origin": "Original acquisition assessment in development/acquisitions/inventory.json",
+      "license": "MIT (original report); each referenced archive retains separately recorded upstream terms",
       "officialSources": [
         "https://docs.godotengine.org/en/4.5/tutorials/export/exporting_projects.html",
         "https://godotengine.org/license/"
       ],
       "requires": [
-        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+        "Matching Godot standard Windows editor and export templates retained with source license/COPYRIGHT notices. Android/other platform SDKs, .NET variant, project assets/plugins/imports and actual export/runtime checks remain required."
+      ],
+      "path": "development/acquisitions/recipes/godot.md",
+      "acquisitionStatus": "partial",
+      "artifactIds": [
+        "godot-win-x64",
+        "godot-export-templates"
       ]
     },
     {
@@ -1410,23 +1478,30 @@
         "websites",
         "windows"
       ],
-      "kind": "pointer",
-      "summary": "Pin Flutter revision and pubspec.lock. Acquire the selected SDK and platform artifacts, populate the pub cache, and prepare Android/Windows SDKs separately. Review code generators and plugin build steps.",
+      "kind": "reference",
+      "summary": "Pinned Flutter source plus a modified Flutter 3.50.1 Windows SDK/Dart/engine archive are retained. The entire bundled MinGit subtree was removed to avoid GPL/LGPL binary redistribution without complete corresponding sources. All other member bytes remain unchanged and their notices are retained. A separately installed Git, target SDKs and project-specific pub/plugin caches are required. No SDK activation, build or runtime check was performed.",
       "tags": [
         "dependency",
         "acquisition",
-        "missing-payload"
+        "offline-payloads",
+        "partial-coverage"
       ],
-      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
-      "status": "not-acquired",
-      "origin": "Original acquisition recipe in development/dependency-recipes.json",
-      "license": "SDK, pub packages and platform plugins have separate licenses.",
+      "verification": "Original acquisition report with pinned payload identities and explicit remaining requirements. SDK/runtime activation and project builds are not verified.",
+      "status": "original",
+      "origin": "Original acquisition assessment in development/acquisitions/inventory.json",
+      "license": "MIT (original report); each referenced archive retains separately recorded upstream terms",
       "officialSources": [
         "https://dart.dev/tools/pub/cmd/pub-get",
         "https://docs.flutter.dev/install"
       ],
       "requires": [
-        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+        "Pinned Flutter source plus a modified Flutter 3.50.1 Windows SDK/Dart/engine archive are retained. The entire bundled MinGit subtree was removed to avoid GPL/LGPL binary redistribution without complete corresponding sources. All other member bytes remain unchanged and their notices are retained. A separately installed Git, target SDKs and project-specific pub/plugin caches are required. No SDK activation, build or runtime check was performed."
+      ],
+      "path": "development/acquisitions/recipes/flutter.md",
+      "acquisitionStatus": "partial",
+      "artifactIds": [
+        "flutter-source",
+        "flutter-sdk-no-mingit-win-x64"
       ]
     },
     {
@@ -1438,23 +1513,38 @@
         "userstyles",
         "websites"
       ],
-      "kind": "pointer",
-      "summary": "Pin exact test browser builds, OS and architecture. Save browser-test runner packages and browser binary cache separately. Preserve fonts and rendering context for visual tests. Device/browser installation remains an explicit step.",
+      "kind": "reference",
+      "summary": "Playwright source and a modified DevTools browser reference derived from Mullvad 16.0.2 are retained with exact Firefox core source, build configuration, NoScript/NSCL and Mullvad extension sources. The entire uBO extension was removed because it contains a noncommercial Peter Lowe asset; uBO code source remains a separate reference only. This is an independently modified archive, with no vendor endorsement or official package/signature claim. Browser installation, runtime and compatibility remain unverified. BROWSER-DERIVATION.json records the original input checksum and 181 unchanged retained member identities.",
       "tags": [
         "dependency",
         "acquisition",
-        "missing-payload"
+        "offline-payloads",
+        "partial-coverage"
       ],
-      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
-      "status": "not-acquired",
-      "origin": "Original acquisition recipe in development/dependency-recipes.json",
-      "license": "Browser distribution and codec terms vary by vendor and channel.",
+      "verification": "Original acquisition report with pinned payload identities and explicit remaining requirements. SDK/runtime activation and project builds are not verified.",
+      "status": "original",
+      "origin": "Original acquisition assessment in development/acquisitions/inventory.json",
+      "license": "MIT (original report); each referenced archive retains separately recorded upstream terms",
       "officialSources": [
         "https://playwright.dev/docs/browsers",
         "https://www.mozilla.org/en-US/MPL/"
       ],
       "requires": [
-        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+        "Playwright source and a modified DevTools browser reference derived from Mullvad 16.0.2 are retained with exact Firefox core source, build configuration, NoScript/NSCL and Mullvad extension sources. The entire uBO extension was removed because it contains a noncommercial Peter Lowe asset; uBO code source remains a separate reference only. This is an independently modified archive, with no vendor endorsement or official package/signature claim. Browser installation, runtime and compatibility remain unverified. BROWSER-DERIVATION.json records the original input checksum and 181 unchanged retained member identities."
+      ],
+      "path": "development/acquisitions/recipes/browsers.md",
+      "acquisitionStatus": "partial",
+      "artifactIds": [
+        "playwright-source",
+        "mullvad-browser-core-source",
+        "mullvad-build-source",
+        "mullvad-extension-source",
+        "ublock-source",
+        "noscript-source",
+        "noscript-nscl-source",
+        "mullvad-extension",
+        "noscript-extension",
+        "devtools-browser-reference-no-ublock"
       ]
     },
     {
@@ -1464,23 +1554,30 @@
         "dependencies",
         "userscripts"
       ],
-      "kind": "pointer",
-      "summary": "Choose a manager and browser explicitly. Obtain its extension package through the official distribution channel and record version and terms. Use the original localhost fixture and narrow metadata template for offline development. Review grants, updates and remote requirements.",
+      "kind": "reference",
+      "summary": "Official Violentmonkey webextension ZIP and exact MIT source retained. No extension installation, signing compatibility, browser activation, storage/grants or actual userscript workflow verified.",
       "tags": [
         "dependency",
         "acquisition",
-        "missing-payload"
+        "offline-payloads",
+        "partial-coverage"
       ],
-      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
-      "status": "not-acquired",
-      "origin": "Original acquisition recipe in development/dependency-recipes.json",
-      "license": "Managers have different distribution terms and API behavior. No universal manager package is bundled.",
+      "verification": "Original acquisition report with pinned payload identities and explicit remaining requirements. SDK/runtime activation and project builds are not verified.",
+      "status": "original",
+      "origin": "Original acquisition assessment in development/acquisitions/inventory.json",
+      "license": "MIT (original report); each referenced archive retains separately recorded upstream terms",
       "officialSources": [
         "https://violentmonkey.github.io/api/metadata-block/",
         "https://www.tampermonkey.net/documentation.php"
       ],
       "requires": [
-        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+        "Official Violentmonkey webextension ZIP and exact MIT source retained. No extension installation, signing compatibility, browser activation, storage/grants or actual userscript workflow verified."
+      ],
+      "path": "development/acquisitions/recipes/userscript-manager.md",
+      "acquisitionStatus": "partial",
+      "artifactIds": [
+        "violentmonkey-source",
+        "violentmonkey-extension"
       ]
     },
     {
@@ -1490,22 +1587,28 @@
         "dependencies",
         "userstyles"
       ],
-      "kind": "pointer",
-      "summary": "Choose manager/browser/version. Save original site fixtures and styles in the repository. Avoid remote imports and opaque dependencies; save asset licenses and hashes. Verify CSS behavior under forced colors and reduced motion.",
+      "kind": "reference",
+      "summary": "Stylus GPL3 exact source tree retained, not its compiled extension: corresponding npm build dependency source graph is not bundled. Browser/manager build/install/forced-colors workflows remain unverified.",
       "tags": [
         "dependency",
         "acquisition",
-        "missing-payload"
+        "offline-payloads",
+        "partial-coverage"
       ],
-      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
-      "status": "not-acquired",
-      "origin": "Original acquisition recipe in development/dependency-recipes.json",
-      "license": "Retain the manager's source/extension license and individual stylesheet/font/asset terms.",
+      "verification": "Original acquisition report with pinned payload identities and explicit remaining requirements. SDK/runtime activation and project builds are not verified.",
+      "status": "original",
+      "origin": "Original acquisition assessment in development/acquisitions/inventory.json",
+      "license": "MIT (original report); each referenced archive retains separately recorded upstream terms",
       "officialSources": [
         "https://github.com/openstyles/stylus/wiki/UserCSS"
       ],
       "requires": [
-        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+        "Stylus GPL3 exact source tree retained, not its compiled extension: corresponding npm build dependency source graph is not bundled. Browser/manager build/install/forced-colors workflows remain unverified."
+      ],
+      "path": "development/acquisitions/recipes/userstyle-manager.md",
+      "acquisitionStatus": "partial",
+      "artifactIds": [
+        "stylus-source"
       ]
     },
     {
@@ -1516,24 +1619,28 @@
         "dependencies",
         "pc-games"
       ],
-      "kind": "pointer",
-      "summary": "Use the developer's authorized vendor installation and offline activation workflow where supported. Record editor version, package manifest/lock, required target modules, assets and licenses. Keep proprietary payloads outside the shared repository unless rights are established.",
+      "kind": "reference",
+      "summary": "No Unity editor/proprietary packages mirrored. Original engine-neutral scene/input/save contract and deterministic fixture tests are supplied; they do not provide Unity APIs, rendering, editor/importer or a compiler. Unity.Mathematics download was excluded because actual license is Unity Companion License, not assumed MIT.",
       "tags": [
         "dependency",
         "acquisition",
-        "missing-payload"
+        "offline-payloads",
+        "partial-coverage"
       ],
-      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
-      "status": "not-acquired",
-      "origin": "Original acquisition recipe in development/dependency-recipes.json",
-      "license": "Editor, platform modules, Asset Store packages and services are governed by their current vendor terms.",
+      "verification": "Original acquisition report with pinned payload identities and explicit remaining requirements. SDK/runtime activation and project builds are not verified.",
+      "status": "original",
+      "origin": "Original acquisition assessment in development/acquisitions/inventory.json",
+      "license": "MIT (original report); each referenced archive retains separately recorded upstream terms",
       "officialSources": [
         "https://unity.com/legal",
         "https://docs.unity3d.com/Manual/upm-ui-offline.html"
       ],
       "requires": [
-        "Developer-selected compatible version, target platform and licensed artifact acquisition."
-      ]
+        "No Unity editor/proprietary packages mirrored. Original engine-neutral scene/input/save contract and deterministic fixture tests are supplied; they do not provide Unity APIs, rendering, editor/importer or a compiler. Unity.Mathematics download was excluded because actual license is Unity Companion License, not assumed MIT."
+      ],
+      "path": "development/acquisitions/recipes/unity.md",
+      "acquisitionStatus": "restricted-with-original",
+      "artifactIds": []
     },
     {
       "id": "acquire-unreal",
@@ -1543,23 +1650,27 @@
         "dependencies",
         "pc-games"
       ],
-      "kind": "pointer",
-      "summary": "Acquire engine source/binaries and target modules through the developer's authorized account. Keep restricted engine/platform content in the approved private store. Record BuildGraph/toolchain inputs and asset/plugin licenses.",
+      "kind": "reference",
+      "summary": "No Epic engine/editor/partner content mirrored under restricted distribution terms. Original engine-neutral scene/input/save contract and tests are provided; no Unreal API/editor/rendering/build compatibility is claimed.",
       "tags": [
         "dependency",
         "acquisition",
-        "missing-payload"
+        "offline-payloads",
+        "partial-coverage"
       ],
-      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
-      "status": "not-acquired",
-      "origin": "Original acquisition recipe in development/dependency-recipes.json",
-      "license": "Epic EULA, source-access rules, platform SDKs and asset terms govern sharing.",
+      "verification": "Original acquisition report with pinned payload identities and explicit remaining requirements. SDK/runtime activation and project builds are not verified.",
+      "status": "original",
+      "origin": "Original acquisition assessment in development/acquisitions/inventory.json",
+      "license": "MIT (original report); each referenced archive retains separately recorded upstream terms",
       "officialSources": [
         "https://www.unrealengine.com/en-US/eula/unreal"
       ],
       "requires": [
-        "Developer-selected compatible version, target platform and licensed artifact acquisition."
-      ]
+        "No Epic engine/editor/partner content mirrored under restricted distribution terms. Original engine-neutral scene/input/save contract and tests are provided; no Unreal API/editor/rendering/build compatibility is claimed."
+      ],
+      "path": "development/acquisitions/recipes/unreal.md",
+      "acquisitionStatus": "restricted-with-original",
+      "artifactIds": []
     },
     {
       "id": "acquire-platform-services",
@@ -1570,24 +1681,28 @@
         "dependencies",
         "pc-games"
       ],
-      "kind": "pointer",
-      "summary": "Use official authorized SDK delivery and retain only the allowed artifacts. Keep authentication data out of DevTools. Isolate platform APIs behind a host adapter and provide original offline test doubles for saves, achievements, billing and networking.",
+      "kind": "reference",
+      "summary": "No partner-only Steamworks/console/store credentials or SDKs mirrored. Original injected in-memory achievements/save/fake-purchase adapter supports deterministic testing without network, billing or vendor API compatibility. Real integration still needs authorized SDK/environment.",
       "tags": [
         "dependency",
         "acquisition",
-        "missing-payload"
+        "offline-payloads",
+        "partial-coverage"
       ],
-      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
-      "status": "not-acquired",
-      "origin": "Original acquisition recipe in development/dependency-recipes.json",
-      "license": "Partner access, agreements, credentials and store-specific terms apply.",
+      "verification": "Original acquisition report with pinned payload identities and explicit remaining requirements. SDK/runtime activation and project builds are not verified.",
+      "status": "original",
+      "origin": "Original acquisition assessment in development/acquisitions/inventory.json",
+      "license": "MIT (original report); each referenced archive retains separately recorded upstream terms",
       "officialSources": [
         "https://partner.steamgames.com/doc/sdk",
         "https://developer.android.com/google/play/integrity"
       ],
       "requires": [
-        "Developer-selected compatible version, target platform and licensed artifact acquisition."
-      ]
+        "No partner-only Steamworks/console/store credentials or SDKs mirrored. Original injected in-memory achievements/save/fake-purchase adapter supports deterministic testing without network, billing or vendor API compatibility. Real integration still needs authorized SDK/environment."
+      ],
+      "path": "development/acquisitions/recipes/platform-services.md",
+      "acquisitionStatus": "restricted-with-original",
+      "artifactIds": []
     },
     {
       "id": "acquire-media-assets",
@@ -1600,23 +1715,30 @@
         "websites",
         "windows"
       ],
-      "kind": "pointer",
-      "summary": "Prefer original synthetic fixtures. For external assets retain original bytes, creator/source/license, modifications and hashes. Verify fonts can be embedded or redistributed for the selected target, and preserve attribution in packaged artifacts.",
+      "kind": "reference",
+      "summary": "The pinned JetBrains Mono 2.304 font archive (OFL 1.1), Lucide source/icons with ISC notices, and original MIT SVG/WAV/OBJ/JSON fixtures are retained. Respect reserved font names and each asset license. Rendering and embedding were not tested; rights to unrelated assets are not implied.",
       "tags": [
         "dependency",
         "acquisition",
-        "missing-payload"
+        "offline-payloads",
+        "partial-coverage"
       ],
-      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
-      "status": "not-acquired",
-      "origin": "Original acquisition recipe in development/dependency-recipes.json",
-      "license": "Each asset has its own rights, attribution and modification restrictions; repository or site labels do not grant universal rights.",
+      "verification": "Original acquisition report with pinned payload identities and explicit remaining requirements. SDK/runtime activation and project builds are not verified.",
+      "status": "original",
+      "origin": "Original acquisition assessment in development/acquisitions/inventory.json",
+      "license": "MIT (original report); each referenced archive retains separately recorded upstream terms",
       "officialSources": [
         "https://spdx.org/licenses/",
         "https://creativecommons.org/publicdomain/zero/1.0/"
       ],
       "requires": [
-        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+        "The pinned JetBrains Mono 2.304 font archive (OFL 1.1), Lucide source/icons with ISC notices, and original MIT SVG/WAV/OBJ/JSON fixtures are retained. Respect reserved font names and each asset license. Rendering and embedding were not tested; rights to unrelated assets are not implied."
+      ],
+      "path": "development/acquisitions/recipes/media-assets.md",
+      "acquisitionStatus": "partial",
+      "artifactIds": [
+        "lucide-source",
+        "jetbrains-mono-fonts"
       ]
     }
   ]

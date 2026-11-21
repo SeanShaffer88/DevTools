@@ -11,7 +11,7 @@ Version 1 is a practical lifecycle overlay, not an exhaustive API manual, SDK mi
 | PC games | Lifecycle guide; versioned save schema/fixture | godot; asset/replay helpers | Engine/toolchain, replay determinism, hardware performance, distribution |
 | Userscripts | Lifecycle guide; narrow example.com script | Original guidance and linked official manager/API references | Manager install, browser injection/security scope, actual site compatibility |
 | Userstyles | Lifecycle guide; narrow original UserCSS | Original guidance and linked official manager/API references; design material | Actual manager parsing, site selectors, zoom/print/forced colors |
-| Dependencies | Lifecycle guide; inert acquisition plan | ai-resources; pinned GitHub catalog; toolkit | Actual downloads/licenses, complete caches, isolated disconnected build |
+| Dependencies | Lifecycle guide; inert acquisition plan | ai-resources; pinned GitHub catalog; toolkit | Pinned selected downloads/licenses present; complete project caches and isolated disconnected build remain required |
 
 ## Availability and trust
 
@@ -25,3 +25,13 @@ Version 1 is a practical lifecycle overlay, not an exhaustive API manual, SDK mi
 Select one domain guide plus its template. Fill in actual versions, targets, write boundaries, executable/argument arrays and acceptance gates. Reuse canonical material through links instead of duplicating it. Prepare dependency caches through a reviewed acquisition plan, then test the selected project's declared build with networking unavailable. Keep private registries, signing keys, authentication data, user files and runtime profiles outside this library.
 
 Each project records Pass/Fail/Unknown/NotRun, commands and exit codes, dated evidence paths and remaining gaps. No tool activation, external publication, device state change or package hook execution follows merely from a catalog match.
+
+## Acquisition follow-through
+
+All 18 acquisition recipes now have explicit local assessment reports in
+`acquisitions/recipes/`. Redistributable selected payloads and exact licenses are
+recorded in `acquisitions/inventory.json`; restricted SDKs have original input,
+scene/save or service-double substitutes where feasible. Every recipe remains
+partial or restricted-with-original because project dependencies, vendor APIs,
+activation and runtime validation are separate requirements. The acquisition
+verifier checks byte identity and bounded inert archive contents offline.

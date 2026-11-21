@@ -21,7 +21,7 @@ python development/tools/library.py search "keyboard focus" --domain websites
 python development/tools/library.py plan --domain dependencies
 ~~~
 
-The catalog distinguishes local content, reference-only pointers and dependencies that have not been acquired. Search reads curated local files without network access. Read dependency acquisition and licensing notes before preparing an offline toolchain. Validation proves the recorded files and examples, with actual builds and device/browser checks reported separately.
+The catalog distinguishes local content, reference-only pointers and partial or restricted acquisition coverage. [Offline payloads and original substitutes](development/acquisitions/README.md) records all 18 recipe decisions, retained licenses and exact archive identities. Run `python development/acquisitions/verify.py verify` for the separate offline binary/archive gate. Search reads curated local files without network access. Read dependency acquisition and licensing notes before preparing an offline toolchain. Validation proves the recorded files and examples, with actual builds and device/browser checks reported separately.
 
 ## Domains
 

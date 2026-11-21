@@ -1,0 +1,7 @@
+{
+  "applicationId": "org.example.offlinefixture",
+  "minSdk": 26,
+  "targetSdk": 36,
+  "abis": ["arm64-v8a", "x86_64"],
+  "sdkPackages": ["platform-tools", "platforms;android-36", "build-tools;36.0.0"]
+}
