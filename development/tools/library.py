@@ -11,7 +11,7 @@ from pathlib import Path, PurePosixPath
 from urllib.parse import urlsplit
 
 DOMAINS = ('windows', 'android-apps', 'android-games', 'websites', 'pc-games',
-           'userscripts', 'userstyles', 'dependencies')
+           'userscripts', 'userstyles', 'dependencies', 'portableapps', 'wow-addons')
 MAX_DOCUMENT = 1024 * 1024
 MAX_TOTAL = 16 * MAX_DOCUMENT
 MAX_ENTRIES = 512

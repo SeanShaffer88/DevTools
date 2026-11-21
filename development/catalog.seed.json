@@ -1740,6 +1740,107 @@
         "lucide-source",
         "jetbrains-mono-fonts"
       ]
+    },
+    {
+      "status": "original",
+      "origin": "Original DevTools sample/workflow resource",
+      "license": "MIT; see development/samples/LICENSE and development/LICENSE",
+      "verification": "Original source/workflow. Consult exact sample build receipts for compiled artifacts; no runtime/device certification.",
+      "id": "sample-portableapps-guide",
+      "title": "PortableApps.com Offline Development",
+      "domains": [
+        "portableapps"
+      ],
+      "kind": "guide",
+      "path": "development/guides/portableapps.md",
+      "summary": "PortableApps.com Offline Development; canonical version-bound workflow and explicit unverified runtime gates.",
+      "tags": [
+        "offline",
+        "sample",
+        "build"
+      ]
+    },
+    {
+      "status": "original",
+      "origin": "Original DevTools sample/workflow resource",
+      "license": "MIT; see development/samples/LICENSE and development/LICENSE",
+      "verification": "Original source/workflow. Consult exact sample build receipts for compiled artifacts; no runtime/device certification.",
+      "id": "sample-portableapps-template",
+      "title": "PortableApps.com Original Package Fixture",
+      "domains": [
+        "portableapps"
+      ],
+      "kind": "template",
+      "path": "development/samples/portableapps/help.html",
+      "summary": "PortableApps.com Original Package Fixture; canonical version-bound workflow and explicit unverified runtime gates.",
+      "tags": [
+        "offline",
+        "sample",
+        "build"
+      ]
+    },
+    {
+      "status": "original",
+      "origin": "Original DevTools sample/workflow resource",
+      "license": "MIT; see development/samples/LICENSE and development/LICENSE",
+      "verification": "Original source/workflow. Consult exact sample build receipts for compiled artifacts; no runtime/device certification.",
+      "id": "sample-wow-addons-guide",
+      "title": "WoW Addon Offline Fixture",
+      "domains": [
+        "wow-addons"
+      ],
+      "kind": "guide",
+      "path": "development/guides/wow-addons.md",
+      "summary": "WoW Addon Offline Fixture; canonical version-bound workflow and explicit unverified runtime gates.",
+      "tags": [
+        "offline",
+        "sample",
+        "build"
+      ]
+    },
+    {
+      "status": "original",
+      "origin": "Original DevTools sample/workflow resource",
+      "license": "MIT; see development/samples/LICENSE and development/LICENSE",
+      "verification": "Original source/workflow. Consult exact sample build receipts for compiled artifacts; no runtime/device certification.",
+      "id": "sample-wow-addons-example",
+      "title": "Original Lua Addon Fixture",
+      "domains": [
+        "wow-addons"
+      ],
+      "kind": "example",
+      "path": "development/samples/wow-addon/OfflineSample.lua",
+      "summary": "Original Lua Addon Fixture; canonical version-bound workflow and explicit unverified runtime gates.",
+      "tags": [
+        "offline",
+        "sample",
+        "build"
+      ]
+    },
+    {
+      "status": "original",
+      "origin": "Original DevTools sample/workflow resource",
+      "license": "MIT; see development/samples/LICENSE and development/LICENSE",
+      "verification": "Original source/workflow. Consult exact sample build receipts for compiled artifacts; no runtime/device certification.",
+      "id": "acquire-portableapps",
+      "title": "PortableApps.com Build Tools and Source",
+      "domains": [
+        "portableapps",
+        "windows",
+        "dependencies"
+      ],
+      "kind": "reference",
+      "path": "development/acquisitions/recipes/portableapps.md",
+      "summary": "Official PAL/Installer/NSIS tools and matching compiler source retained for real offline builds.",
+      "tags": [
+        "offline",
+        "acquisition",
+        "portableapps"
+      ],
+      "acquisitionStatus": "partial",
+      "requires": [
+        "A successful PAF build does not prove installation, upgrade, relocation or runtime portability."
+      ]
     }
   ]
 }

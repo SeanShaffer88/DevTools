@@ -5455,13 +5455,846 @@
       "capturedUtc": "2026-11-21T19:42:46.424585+00:00",
       "derivationReceipt": "BROWSER-DERIVATION.json",
       "distributionNotes": "Modified independent browser reference. Only the Browser/ subtree is retained and the entire uBO extension is omitted due to a noncommercial bundled asset. All 181 remaining member bytes are unchanged. Exact core source, build configuration, NoScript/NSCL and Mullvad extension sources accompany it. No vendor endorsement, official package/signature claim, browser installation or runtime verification."
+    },
+    {
+      "id": "zig-win-x64",
+      "recipe": "windows-sdk",
+      "url": "https://ziglang.org/download/0.17.1/zig-x86_64-windows-0.17.1.zip",
+      "license": "MIT and bundled component licenses; all notices and matching Zig source retained",
+      "expected": "b03f477a1943673e02aca0f570e8030dffd536ce1f45cbc4d3326ec31159562e",
+      "algorithm": "sha256",
+      "version": "0.17.1",
+      "format": "zip",
+      "distributionNotes": "Portable compiler; no Microsoft SDK redistribution. Bundled libc/import sources and notices remain in archive.",
+      "source": "https://ziglang.org/download/0.17.1/zig-0.17.1.tar.xz",
+      "filename": "zig-x86_64-windows-0.17.1.zip",
+      "sizeBytes": 100343666,
+      "sha256": "b03f477a1943673e02aca0f570e8030dffd536ce1f45cbc4d3326ec31159562e",
+      "pieces": [
+        {
+          "path": "payloads/zig-win-x64/zig-x86_64-windows-0.17.1.zip.part001",
+          "sizeBytes": 50331648,
+          "sha256": "4a47d4d5659773bffac7d06439c89e40bc9d6dc9281bebeb47c844f71f3e6673"
+        },
+        {
+          "path": "payloads/zig-win-x64/zig-x86_64-windows-0.17.1.zip.part002",
+          "sizeBytes": 50012018,
+          "sha256": "8958009e602580e99aecdaf9023e6a5df5aa68f254e5f601f97d35cf3d7a5d5c"
+        }
+      ],
+      "licenseFiles": [
+        {
+          "path": "notices/zig-win-x64-1-LICENSE",
+          "archiveMember": "zig-x86_64-windows-0.17.1/LICENSE",
+          "sizeBytes": 1080,
+          "sha256": "5c537d6853e005298a285d508cff9ac7192cea23576c840d485b2b586a7ff177"
+        },
+        {
+          "path": "notices/zig-win-x64-2-COPYRIGHT",
+          "archiveMember": "zig-x86_64-windows-0.17.1/lib/libc/freebsd/COPYRIGHT",
+          "sizeBytes": 6070,
+          "sha256": "4bb0fdcd07d8a7774ba71faecf86d7db64d7a8574ee395f51a86d629c39f77cc"
+        },
+        {
+          "path": "notices/zig-win-x64-3-COPYING",
+          "archiveMember": "zig-x86_64-windows-0.17.1/lib/libc/mingw/COPYING",
+          "sizeBytes": 2326,
+          "sha256": "99a69660981156c21336fdb5661f89341b013c94e4bf9e1c7467b4745718397f"
+        },
+        {
+          "path": "notices/zig-win-x64-4-COPYRIGHT",
+          "archiveMember": "zig-x86_64-windows-0.17.1/lib/libc/musl/COPYRIGHT",
+          "sizeBytes": 6204,
+          "sha256": "f9bc4423732350eb0b3f7ed7e91d530298476f8fec0c6c427a1c04ade22655af"
+        },
+        {
+          "path": "notices/zig-win-x64-5-LICENSE",
+          "archiveMember": "zig-x86_64-windows-0.17.1/lib/libc/wasi/LICENSE",
+          "sizeBytes": 831,
+          "sha256": "673f577e363e80e0058bd78214683f045d1d0c63930969a87f01a1d87d7cf1d6"
+        },
+        {
+          "path": "notices/zig-win-x64-6-COPYING",
+          "archiveMember": "zig-x86_64-windows-0.17.1/lib/libc/wasi/fts/musl-fts/COPYING",
+          "sizeBytes": 1514,
+          "sha256": "55af87e4017668f54467a3380e7ebbac5e672d8c763bfe95e6fc882a6fdc4046"
+        },
+        {
+          "path": "notices/zig-win-x64-7-LICENSE",
+          "archiveMember": "zig-x86_64-windows-0.17.1/lib/libc/wasi/libc-bottom-half/cloudlibc/LICENSE",
+          "sizeBytes": 1292,
+          "sha256": "c8b789cf5a746611e6300a0cc7750dbf92b61912a709d04e639245f7290656d0"
+        },
+        {
+          "path": "notices/zig-win-x64-8-COPYRIGHT",
+          "archiveMember": "zig-x86_64-windows-0.17.1/lib/libc/wasi/libc-top-half/musl/COPYRIGHT",
+          "sizeBytes": 6204,
+          "sha256": "f9bc4423732350eb0b3f7ed7e91d530298476f8fec0c6c427a1c04ade22655af"
+        },
+        {
+          "path": "notices/zig-win-x64-9-LICENSE.TXT",
+          "archiveMember": "zig-x86_64-windows-0.17.1/lib/libcxx/LICENSE.TXT",
+          "sizeBytes": 16703,
+          "sha256": "539dd7aed86e8a4f12cbdd0e6c50c189c7d74847e4fecc64ce2c6ee3a01da38b"
+        },
+        {
+          "path": "notices/zig-win-x64-10-LICENSE.TXT",
+          "archiveMember": "zig-x86_64-windows-0.17.1/lib/libcxxabi/LICENSE.TXT",
+          "sizeBytes": 16706,
+          "sha256": "e2b35be49f7284a45b7baca8fc7b3ab7440e7902392b2528a457816b5bb2a15c"
+        },
+        {
+          "path": "notices/zig-win-x64-11-LICENSE.TXT",
+          "archiveMember": "zig-x86_64-windows-0.17.1/lib/libtsan/LICENSE.TXT",
+          "sizeBytes": 16708,
+          "sha256": "1a8f1058753f1ba890de984e48f0242a3a5c29a6a8f2ed9fd813f36985387e8d"
+        },
+        {
+          "path": "notices/zig-win-x64-12-LICENSE.TXT",
+          "archiveMember": "zig-x86_64-windows-0.17.1/lib/libunwind/LICENSE.TXT",
+          "sizeBytes": 16706,
+          "sha256": "b5efebcaca80879234098e52d1725e6d9eb8fb96a19fce625d39184b705f7b6d"
+        }
+      ],
+      "publisherChecksumVerified": true
+    },
+    {
+      "id": "zig-source",
+      "recipe": "windows-sdk",
+      "url": "https://ziglang.org/download/0.17.1/zig-0.17.1.tar.xz",
+      "license": "MIT and bundled component licenses; all notices and matching Zig source retained",
+      "expected": "1e89bf06610b769a8c77676c6c8d54b093a0db60f4891f2f91014829012f0e24",
+      "algorithm": "sha256",
+      "version": "0.17.1",
+      "format": "tar.xz",
+      "distributionNotes": "Portable compiler; no Microsoft SDK redistribution. Bundled libc/import sources and notices remain in archive.",
+      "source": "https://ziglang.org/download/0.17.1/zig-0.17.1.tar.xz",
+      "filename": "zig-0.17.1.tar.xz",
+      "sizeBytes": 23183076,
+      "sha256": "1e89bf06610b769a8c77676c6c8d54b093a0db60f4891f2f91014829012f0e24",
+      "pieces": [
+        {
+          "path": "payloads/zig-source/zig-0.17.1.tar.xz",
+          "sizeBytes": 23183076,
+          "sha256": "1e89bf06610b769a8c77676c6c8d54b093a0db60f4891f2f91014829012f0e24"
+        }
+      ],
+      "licenseFiles": [
+        {
+          "path": "notices/zig-source-LICENSE",
+          "archiveMember": "zig-0.17.1/LICENSE",
+          "sizeBytes": 1080,
+          "sha256": "5c537d6853e005298a285d508cff9ac7192cea23576c840d485b2b586a7ff177"
+        }
+      ],
+      "publisherChecksumVerified": true
+    },
+    {
+      "id": "portableapps-installer",
+      "recipe": "portableapps",
+      "url": "https://downloads.sourceforge.net/portableapps/PortableApps.comInstaller_3.9.24.paf.exe",
+      "license": "GPL and component-specific terms retained; no blanket relicensing",
+      "version": "3.9.24",
+      "format": "pe",
+      "filename": "PortableApps.comInstaller_3.9.24.paf.exe",
+      "sizeBytes": 6442672,
+      "sha256": "7ef6e2758cb578843d767fb5fafdbde8bf872b84f0acd6e64f18afbb05c04f00",
+      "pieces": [
+        {
+          "path": "payloads/portableapps-installer/PortableApps.comInstaller_3.9.24.paf.exe",
+          "sizeBytes": 6442672,
+          "sha256": "7ef6e2758cb578843d767fb5fafdbde8bf872b84f0acd6e64f18afbb05c04f00"
+        }
+      ],
+      "licenseFiles": [
+        {
+          "path": "notices/portableapps-installer-1-License.txt",
+          "sizeBytes": 18322,
+          "sha256": "eae2b033f0b0822913c076f36d498e51450c712b3229c1c83c7d12198fa097ee",
+          "archiveMember": "Other/Source/License.txt"
+        },
+        {
+          "path": "notices/portableapps-installer-2-License.txt",
+          "sizeBytes": 6031,
+          "sha256": "519ac0a4bded9c18ea02e0afb71f663d8c47373bd9facd3ac96a79f51d77765d",
+          "archiveMember": "App/7zip/License.txt"
+        },
+        {
+          "path": "notices/portableapps-installer-3-License.txt",
+          "sizeBytes": 5188,
+          "sha256": "39d2187b942cc88818dd959e53c6b7dddd152097a42061467c4d56050168d646",
+          "archiveMember": "App/7zipLight/License.txt"
+        },
+        {
+          "path": "notices/portableapps-installer-4-license.txt",
+          "sizeBytes": 1857,
+          "sha256": "d49c3efa00f949bf0fa1ebceb56ae7355f9a44eff54ecd8e0d68b40c85131fff",
+          "archiveMember": "App/InnoExtract/license.txt"
+        },
+        {
+          "path": "notices/portableapps-installer-5-COPYING",
+          "sizeBytes": 15632,
+          "sha256": "388357c1215ff403c5ebde3a5ecd273e68f8b79a579996775245d1ee65442aba",
+          "archiveMember": "App/nsis/COPYING"
+        },
+        {
+          "path": "notices/portableapps-installer-6-License.txt",
+          "sizeBytes": 910,
+          "sha256": "5ab8e53598d27d3d06eda02ac0b42d462e9ff6f81ca406273004ebf53cd9ad42",
+          "archiveMember": "App/nsis/Docs/makensisw/License.txt"
+        },
+        {
+          "path": "notices/portableapps-installer-7-License.txt",
+          "sizeBytes": 840,
+          "sha256": "c762b5c6f3baf0e034794926cdb11e7e7df7a042dc1cf9a4fd60e5366f10e508",
+          "archiveMember": "App/nsis/Docs/Modern UI/License.txt"
+        },
+        {
+          "path": "notices/portableapps-installer-8-License.txt",
+          "sizeBytes": 840,
+          "sha256": "36608f72902ac188e45eab9bf6f673df72dd76f871f61d0c6d60592dfc15461c",
+          "archiveMember": "App/nsis/Docs/Modern UI 2/License.txt"
+        },
+        {
+          "path": "notices/portableapps-installer-9-LICENSE.brotli.md",
+          "sizeBytes": 1084,
+          "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94",
+          "archiveMember": "App/nsis/Docs/NScurl/LICENSE.brotli.md"
+        },
+        {
+          "path": "notices/portableapps-installer-10-LICENSE.curl.md",
+          "sizeBytes": 3985,
+          "sha256": "fe53111d55b3825f9e92c8b122c572032bf6384695d84097431782568a0416b4",
+          "archiveMember": "App/nsis/Docs/NScurl/LICENSE.curl.md"
+        },
+        {
+          "path": "notices/portableapps-installer-11-LICENSE.md",
+          "sizeBytes": 1540,
+          "sha256": "462b42a24fa6417eaa9dff47c337296beff012e1099e1e4e28cd83577984d8ac",
+          "archiveMember": "App/nsis/Docs/NScurl/LICENSE.md"
+        },
+        {
+          "path": "notices/portableapps-installer-12-LICENSE.nghttp2.md",
+          "sizeBytes": 1156,
+          "sha256": "6b94f3abc1aabd0c72a7c7d92a77f79dda7c8a0cb3df839a97890b4116a2de2a",
+          "archiveMember": "App/nsis/Docs/NScurl/LICENSE.nghttp2.md"
+        },
+        {
+          "path": "notices/portableapps-installer-13-LICENSE.openssl.md",
+          "sizeBytes": 10175,
+          "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+          "archiveMember": "App/nsis/Docs/NScurl/LICENSE.openssl.md"
+        },
+        {
+          "path": "notices/portableapps-installer-14-LICENSE.zlib.md",
+          "sizeBytes": 1002,
+          "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243",
+          "archiveMember": "App/nsis/Docs/NScurl/LICENSE.zlib.md"
+        },
+        {
+          "path": "notices/portableapps-installer-15-LICENSE.zstd.md",
+          "sizeBytes": 20086,
+          "sha256": "434dca949c6da7c500413aef694539fe37f867dd1a94d83d4ed1d260194e2660",
+          "archiveMember": "App/nsis/Docs/NScurl/LICENSE.zstd.md"
+        },
+        {
+          "path": "notices/portableapps-installer-16-License.txt",
+          "sizeBytes": 943,
+          "sha256": "326e587f36ca58e14bd09cca153f9e69f1c5ed701189aa47d2d0627af7e16280",
+          "archiveMember": "App/nsis/Docs/NSISdl/License.txt"
+        },
+        {
+          "path": "notices/portableapps-installer-17-LICENSE.txt",
+          "sizeBytes": 1131,
+          "sha256": "281b3a39230a705a4147604df1035a3149eb3fb390a4c4136db33f412b4ee5c0",
+          "archiveMember": "App/nsis/Docs/nsisfilecheck/LICENSE.txt"
+        }
+      ],
+      "publisherChecksumVerified": true,
+      "distributionNotes": "Exact official PAF archive; installer is never executed to prepare the tools. Bundled source and licenses retained; separate NSIS sources accompany compiler versions. InnoExtract remains an unmodified separately licensed build tool, not embedded in samples.",
+      "source": null,
+      "expected": "7ef6e2758cb578843d767fb5fafdbde8bf872b84f0acd6e64f18afbb05c04f00",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "portableapps-launcher",
+      "recipe": "portableapps",
+      "url": "https://downloads.sourceforge.net/portableapps/PortableApps.comLauncher_2.2.9.paf.exe",
+      "license": "GPL and component-specific terms retained; no blanket relicensing",
+      "version": "2.2.9",
+      "format": "pe",
+      "filename": "PortableApps.comLauncher_2.2.9.paf.exe",
+      "sizeBytes": 2761896,
+      "sha256": "7bc93e47b885d5e953fa2082a2e65169ae98128026ac4d747f774a23bd01345b",
+      "pieces": [
+        {
+          "path": "payloads/portableapps-launcher/PortableApps.comLauncher_2.2.9.paf.exe",
+          "sizeBytes": 2761896,
+          "sha256": "7bc93e47b885d5e953fa2082a2e65169ae98128026ac4d747f774a23bd01345b"
+        }
+      ],
+      "licenseFiles": [
+        {
+          "path": "notices/portableapps-launcher-1-License.txt",
+          "sizeBytes": 18322,
+          "sha256": "eae2b033f0b0822913c076f36d498e51450c712b3229c1c83c7d12198fa097ee",
+          "archiveMember": "Other/Source/License.txt"
+        },
+        {
+          "path": "notices/portableapps-launcher-2-COPYING",
+          "sizeBytes": 31266,
+          "sha256": "c6e5bea15cd9a69679aee37e722c276038dc410c8b02f1b5dd2be30afcf1d690",
+          "archiveMember": "App/NSIS/COPYING"
+        },
+        {
+          "path": "notices/portableapps-launcher-3-License.txt",
+          "sizeBytes": 910,
+          "sha256": "5ab8e53598d27d3d06eda02ac0b42d462e9ff6f81ca406273004ebf53cd9ad42",
+          "archiveMember": "App/NSIS/Docs/makensisw/License.txt"
+        },
+        {
+          "path": "notices/portableapps-launcher-4-License.txt",
+          "sizeBytes": 1690,
+          "sha256": "709c091fd55c163481f37c7bf189c0dfd05ee66dd9be03155db9e90ef6e6a04c",
+          "archiveMember": "App/NSIS/Docs/Modern UI/License.txt"
+        },
+        {
+          "path": "notices/portableapps-launcher-5-License.txt",
+          "sizeBytes": 842,
+          "sha256": "2977a0bcb216df5e1fddec9cc6ce20702487184bf020037281946fd28f76391d",
+          "archiveMember": "App/NSIS/Docs/Modern UI 2/License.txt"
+        },
+        {
+          "path": "notices/portableapps-launcher-6-License.txt",
+          "sizeBytes": 943,
+          "sha256": "326e587f36ca58e14bd09cca153f9e69f1c5ed701189aa47d2d0627af7e16280",
+          "archiveMember": "App/NSIS/Docs/NSISdl/License.txt"
+        }
+      ],
+      "publisherChecksumVerified": true,
+      "distributionNotes": "Exact official PAF archive; installer is never executed to prepare the tools. Bundled source and licenses retained; separate NSIS sources accompany compiler versions. InnoExtract remains an unmodified separately licensed build tool, not embedded in samples.",
+      "source": null,
+      "expected": "7bc93e47b885d5e953fa2082a2e65169ae98128026ac4d747f774a23bd01345b",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "nsis-portable",
+      "recipe": "portableapps",
+      "url": "https://downloads.sourceforge.net/portableapps/NSISPortable_3.13_English.paf.exe",
+      "license": "GPL and component-specific terms retained; no blanket relicensing",
+      "version": "3.13",
+      "format": "pe",
+      "filename": "NSISPortable_3.13_English.paf.exe",
+      "sizeBytes": 5118920,
+      "sha256": "cb17f1f8c0c2ed7ddda4307e95661bb753a519f3eee40e8e41312b8bb731fbdc",
+      "pieces": [
+        {
+          "path": "payloads/nsis-portable/NSISPortable_3.13_English.paf.exe",
+          "sizeBytes": 5118920,
+          "sha256": "cb17f1f8c0c2ed7ddda4307e95661bb753a519f3eee40e8e41312b8bb731fbdc"
+        }
+      ],
+      "licenseFiles": [
+        {
+          "path": "notices/nsis-portable-1-License.txt",
+          "sizeBytes": 18322,
+          "sha256": "eae2b033f0b0822913c076f36d498e51450c712b3229c1c83c7d12198fa097ee",
+          "archiveMember": "Other/Source/License.txt"
+        },
+        {
+          "path": "notices/nsis-portable-2-COPYING",
+          "sizeBytes": 15632,
+          "sha256": "388357c1215ff403c5ebde3a5ecd273e68f8b79a579996775245d1ee65442aba",
+          "archiveMember": "App/NSIS/COPYING"
+        },
+        {
+          "path": "notices/nsis-portable-3-License.txt",
+          "sizeBytes": 910,
+          "sha256": "5ab8e53598d27d3d06eda02ac0b42d462e9ff6f81ca406273004ebf53cd9ad42",
+          "archiveMember": "App/NSIS/Docs/makensisw/License.txt"
+        },
+        {
+          "path": "notices/nsis-portable-4-License.txt",
+          "sizeBytes": 840,
+          "sha256": "c762b5c6f3baf0e034794926cdb11e7e7df7a042dc1cf9a4fd60e5366f10e508",
+          "archiveMember": "App/NSIS/Docs/Modern UI/License.txt"
+        },
+        {
+          "path": "notices/nsis-portable-5-License.txt",
+          "sizeBytes": 840,
+          "sha256": "36608f72902ac188e45eab9bf6f673df72dd76f871f61d0c6d60592dfc15461c",
+          "archiveMember": "App/NSIS/Docs/Modern UI 2/License.txt"
+        },
+        {
+          "path": "notices/nsis-portable-6-LICENSE.brotli.md",
+          "sizeBytes": 1084,
+          "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94",
+          "archiveMember": "App/NSIS/Docs/NScurl/LICENSE.brotli.md"
+        },
+        {
+          "path": "notices/nsis-portable-7-LICENSE.curl.md",
+          "sizeBytes": 3985,
+          "sha256": "fe53111d55b3825f9e92c8b122c572032bf6384695d84097431782568a0416b4",
+          "archiveMember": "App/NSIS/Docs/NScurl/LICENSE.curl.md"
+        },
+        {
+          "path": "notices/nsis-portable-8-LICENSE.md",
+          "sizeBytes": 1540,
+          "sha256": "462b42a24fa6417eaa9dff47c337296beff012e1099e1e4e28cd83577984d8ac",
+          "archiveMember": "App/NSIS/Docs/NScurl/LICENSE.md"
+        },
+        {
+          "path": "notices/nsis-portable-9-LICENSE.nghttp2.md",
+          "sizeBytes": 1156,
+          "sha256": "6b94f3abc1aabd0c72a7c7d92a77f79dda7c8a0cb3df839a97890b4116a2de2a",
+          "archiveMember": "App/NSIS/Docs/NScurl/LICENSE.nghttp2.md"
+        },
+        {
+          "path": "notices/nsis-portable-10-LICENSE.openssl.md",
+          "sizeBytes": 10175,
+          "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+          "archiveMember": "App/NSIS/Docs/NScurl/LICENSE.openssl.md"
+        },
+        {
+          "path": "notices/nsis-portable-11-LICENSE.zlib.md",
+          "sizeBytes": 1002,
+          "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243",
+          "archiveMember": "App/NSIS/Docs/NScurl/LICENSE.zlib.md"
+        },
+        {
+          "path": "notices/nsis-portable-12-LICENSE.zstd.md",
+          "sizeBytes": 20086,
+          "sha256": "434dca949c6da7c500413aef694539fe37f867dd1a94d83d4ed1d260194e2660",
+          "archiveMember": "App/NSIS/Docs/NScurl/LICENSE.zstd.md"
+        },
+        {
+          "path": "notices/nsis-portable-13-License.txt",
+          "sizeBytes": 943,
+          "sha256": "326e587f36ca58e14bd09cca153f9e69f1c5ed701189aa47d2d0627af7e16280",
+          "archiveMember": "App/NSIS/Docs/NSISdl/License.txt"
+        },
+        {
+          "path": "notices/nsis-portable-14-LICENSE.txt",
+          "sizeBytes": 1131,
+          "sha256": "281b3a39230a705a4147604df1035a3149eb3fb390a4c4136db33f412b4ee5c0",
+          "archiveMember": "App/NSIS/Docs/nsisfilecheck/LICENSE.txt"
+        }
+      ],
+      "publisherChecksumVerified": true,
+      "distributionNotes": "Exact official PAF archive; installer is never executed to prepare the tools. Bundled source and licenses retained; separate NSIS sources accompany compiler versions. InnoExtract remains an unmodified separately licensed build tool, not embedded in samples.",
+      "source": null,
+      "expected": "cb17f1f8c0c2ed7ddda4307e95661bb753a519f3eee40e8e41312b8bb731fbdc",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "nsis-source",
+      "recipe": "portableapps",
+      "url": "https://prdownloads.sourceforge.net/nsis/nsis-3.13-src.tar.bz2?download",
+      "license": "GPL and component-specific terms retained; no blanket relicensing",
+      "version": "3.13",
+      "format": "tar.bz2",
+      "filename": "nsis-3.13-src.tar.bz2",
+      "sizeBytes": 1819771,
+      "sha256": "a8ffe024602d46b6d766f9e1ce30c324ad2a24daeacd3efc2642d436a0c157ac",
+      "pieces": [
+        {
+          "path": "payloads/nsis-source/nsis-3.13-src.tar.bz2",
+          "sizeBytes": 1819771,
+          "sha256": "a8ffe024602d46b6d766f9e1ce30c324ad2a24daeacd3efc2642d436a0c157ac"
+        }
+      ],
+      "licenseFiles": [
+        {
+          "path": "notices/nsis-source-1-License.txt",
+          "sizeBytes": 910,
+          "sha256": "5ab8e53598d27d3d06eda02ac0b42d462e9ff6f81ca406273004ebf53cd9ad42",
+          "archiveMember": "nsis-3.13-src/Contrib/Makensisw/License.txt"
+        },
+        {
+          "path": "notices/nsis-source-2-License.txt",
+          "sizeBytes": 840,
+          "sha256": "c762b5c6f3baf0e034794926cdb11e7e7df7a042dc1cf9a4fd60e5366f10e508",
+          "archiveMember": "nsis-3.13-src/Contrib/Modern UI/License.txt"
+        },
+        {
+          "path": "notices/nsis-source-3-License.txt",
+          "sizeBytes": 840,
+          "sha256": "36608f72902ac188e45eab9bf6f673df72dd76f871f61d0c6d60592dfc15461c",
+          "archiveMember": "nsis-3.13-src/Contrib/Modern UI 2/License.txt"
+        },
+        {
+          "path": "notices/nsis-source-4-License.nsh",
+          "sizeBytes": 4477,
+          "sha256": "5a0e23d50459dd45efe7e03fad862abd76deae8bc007148d24be7f5b5e2ecc7c",
+          "archiveMember": "nsis-3.13-src/Contrib/Modern UI 2/Pages/License.nsh"
+        },
+        {
+          "path": "notices/nsis-source-5-License.txt",
+          "sizeBytes": 943,
+          "sha256": "326e587f36ca58e14bd09cca153f9e69f1c5ed701189aa47d2d0627af7e16280",
+          "archiveMember": "nsis-3.13-src/Contrib/NSISdl/License.txt"
+        },
+        {
+          "path": "notices/nsis-source-6-COPYING",
+          "sizeBytes": 15632,
+          "sha256": "388357c1215ff403c5ebde3a5ecd273e68f8b79a579996775245d1ee65442aba",
+          "archiveMember": "nsis-3.13-src/COPYING"
+        },
+        {
+          "path": "notices/nsis-source-7-LICENSE",
+          "sizeBytes": 1159,
+          "sha256": "9923094967612d55c7a301c75c586203e89cc71b38aeb828395b8c5bcd75be03",
+          "archiveMember": "nsis-3.13-src/Docs/src/bin/halibut/LICENSE"
+        },
+        {
+          "path": "notices/nsis-source-8-license.but",
+          "sizeBytes": 15309,
+          "sha256": "eba8495e56c75ade8a0e5c1ef7457acce169f1725ee3a99d451887968410aa95",
+          "archiveMember": "nsis-3.13-src/Docs/src/license.but"
+        }
+      ],
+      "publisherChecksumVerified": false,
+      "distributionNotes": "Filename/release link taken directly from https://nsis.sourceforge.io/Download; upstream GitHub v313 commit a4ba28e60bd9e7c271cd2bfc1558889ce3355653.",
+      "source": null
+    },
+    {
+      "id": "nsis-unicode-source",
+      "recipe": "portableapps",
+      "url": "https://downloads.sourceforge.net/project/portableapps/Source/NSIS/nsis-2.46.5-Unicode-src.zip",
+      "license": "GPL and component-specific terms retained; no blanket relicensing",
+      "version": "2.46.5-Unicode",
+      "format": "zip",
+      "filename": "nsis-2.46.5-Unicode-src.zip",
+      "sizeBytes": 5505185,
+      "sha256": "545580d04bb6d51c4f96f5d63e122689104305f0d46829eb101a4e6e34552e7b",
+      "pieces": [
+        {
+          "path": "payloads/nsis-unicode-source/nsis-2.46.5-Unicode-src.zip",
+          "sizeBytes": 5505185,
+          "sha256": "545580d04bb6d51c4f96f5d63e122689104305f0d46829eb101a4e6e34552e7b"
+        }
+      ],
+      "licenseFiles": [
+        {
+          "path": "notices/nsis-unicode-source-1-COPYING",
+          "sizeBytes": 15632,
+          "sha256": "a0cbd2b385b32ae914293e4faf20ed8c4f55021630b386368871c975f2600c0a",
+          "archiveMember": "ANSI/COPYING"
+        },
+        {
+          "path": "notices/nsis-unicode-source-2-License.txt",
+          "sizeBytes": 910,
+          "sha256": "5ab8e53598d27d3d06eda02ac0b42d462e9ff6f81ca406273004ebf53cd9ad42",
+          "archiveMember": "Contrib/Makensisw/License.txt"
+        },
+        {
+          "path": "notices/nsis-unicode-source-3-License.txt",
+          "sizeBytes": 840,
+          "sha256": "403973200888670be5ba55ce51c533d66fd5a2071892c700e999313be1bc20bc",
+          "archiveMember": "Contrib/Modern UI/ANSI/License.txt"
+        },
+        {
+          "path": "notices/nsis-unicode-source-4-License.txt",
+          "sizeBytes": 1690,
+          "sha256": "709c091fd55c163481f37c7bf189c0dfd05ee66dd9be03155db9e90ef6e6a04c",
+          "archiveMember": "Contrib/Modern UI/Unicode/License.txt"
+        },
+        {
+          "path": "notices/nsis-unicode-source-5-License.txt",
+          "sizeBytes": 842,
+          "sha256": "2977a0bcb216df5e1fddec9cc6ce20702487184bf020037281946fd28f76391d",
+          "archiveMember": "Contrib/Modern UI 2/License.txt"
+        },
+        {
+          "path": "notices/nsis-unicode-source-6-License.nsh",
+          "sizeBytes": 4494,
+          "sha256": "1f3198c58ada8ac0ea2e17f00bda9893a4ca14911f15512f934573516ae168e4",
+          "archiveMember": "Contrib/Modern UI 2/ANSI/Pages/License.nsh"
+        },
+        {
+          "path": "notices/nsis-unicode-source-7-License.nsh",
+          "sizeBytes": 8990,
+          "sha256": "9a2b98b1590c1870ff90bee237f6bbdc3a718ab09186c1851290dfdc474ac158",
+          "archiveMember": "Contrib/Modern UI 2/Unicode/Pages/License.nsh"
+        },
+        {
+          "path": "notices/nsis-unicode-source-8-License.txt",
+          "sizeBytes": 943,
+          "sha256": "326e587f36ca58e14bd09cca153f9e69f1c5ed701189aa47d2d0627af7e16280",
+          "archiveMember": "Contrib/NSISdl/License.txt"
+        },
+        {
+          "path": "notices/nsis-unicode-source-9-license.but",
+          "sizeBytes": 15470,
+          "sha256": "9b96f27e8188cbfa0a86873c5b9d39f4cad75ea5e730159c1e0823dc79b53dc7",
+          "archiveMember": "Docs/src/license.but"
+        },
+        {
+          "path": "notices/nsis-unicode-source-10-LICENSE",
+          "sizeBytes": 1182,
+          "sha256": "deae067cbbf2c32146feaf9bd76453385cedc6252d7d588a9deb438f5eb59c06",
+          "archiveMember": "Docs/src/bin/halibut/LICENSE"
+        },
+        {
+          "path": "notices/nsis-unicode-source-11-COPYING",
+          "sizeBytes": 31266,
+          "sha256": "c6e5bea15cd9a69679aee37e722c276038dc410c8b02f1b5dd2be30afcf1d690",
+          "archiveMember": "Unicode/COPYING"
+        }
+      ],
+      "publisherChecksumVerified": true,
+      "distributionNotes": "Matching NSIS Unicode source from official PortableApps Source/NSIS distribution.",
+      "source": null,
+      "expected": "545580d04bb6d51c4f96f5d63e122689104305f0d46829eb101a4e6e34552e7b",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "7zip-tools-win-x64",
+      "recipe": "portableapps",
+      "url": "https://github.com/ip7z/7zip/releases/download/26.06/7z2606-x64.exe",
+      "license": "GPL and component-specific terms retained; no blanket relicensing",
+      "version": "26.06",
+      "format": "zip",
+      "filename": "7zip-26.06-windows-x64-tools.zip",
+      "sizeBytes": 1166391,
+      "sha256": "6ecfc54d8aa03a0f3c36757e113905ce129b5f8b4ad939e76376c242be257ee2",
+      "pieces": [
+        {
+          "path": "payloads/7zip-tools-win-x64/7zip-26.06-windows-x64-tools.zip",
+          "sizeBytes": 1166391,
+          "sha256": "6ecfc54d8aa03a0f3c36757e113905ce129b5f8b4ad939e76376c242be257ee2"
+        }
+      ],
+      "licenseFiles": [
+        {
+          "path": "notices/7zip-tools-win-x64-1-License.txt",
+          "sizeBytes": 6031,
+          "sha256": "519ac0a4bded9c18ea02e0afb71f663d8c47373bd9facd3ac96a79f51d77765d",
+          "archiveMember": "License.txt"
+        }
+      ],
+      "publisherChecksumVerified": false,
+      "distributionNotes": "Derived tool-only ZIP. Exact original member bytes selected from verified official installer; installer and uninstaller omitted. LGPL source plus unRAR license restrictions retained separately.",
+      "source": "https://github.com/ip7z/7zip/releases/download/26.06/7z2606-src.tar.xz",
+      "derivation": {
+        "inputSha256": "9b697f65ecc2d9b0152f5ee96d72dde522a7827690349d9307935dacf40f42ec",
+        "publisherInputChecksumVerified": true,
+        "members": [
+          {
+            "path": "7z.exe",
+            "sha256": "dc0493429fe28136fcb177a0e77c9875cbb3b0bff5f2f8eeba4df302e98cef76",
+            "sizeBytes": 574464
+          },
+          {
+            "path": "7z.dll",
+            "sha256": "500db9eb17f3c21b729ba41dd02ecfe1823da05028c7e4ba129084cc74cc364e",
+            "sizeBytes": 1897984
+          },
+          {
+            "path": "License.txt",
+            "sha256": "519ac0a4bded9c18ea02e0afb71f663d8c47373bd9facd3ac96a79f51d77765d",
+            "sizeBytes": 6031
+          },
+          {
+            "path": "readme.txt",
+            "sha256": "de4a45e9dcdabfd21e5e0e31e29079998f216db15079217b6160e92b1c151e40",
+            "sizeBytes": 1711
+          },
+          {
+            "path": "History.txt",
+            "sha256": "37f9447d63a244a7350578a12d067b6db71ec27c136609d66e1dfda8138ffbad",
+            "sizeBytes": 12451
+          }
+        ]
+      }
+    },
+    {
+      "id": "7zip-source",
+      "recipe": "portableapps",
+      "url": "https://github.com/ip7z/7zip/releases/download/26.06/7z2606-src.tar.xz",
+      "license": "GPL and component-specific terms retained; no blanket relicensing",
+      "version": "26.06",
+      "format": "tar.xz",
+      "filename": "7z2606-src.tar.xz",
+      "sizeBytes": 1567328,
+      "sha256": "a4e374c8f864f51df48c2cfd0e1413ec3b2ea030deae852d6a655402ebb61ac4",
+      "pieces": [
+        {
+          "path": "payloads/7zip-source/7z2606-src.tar.xz",
+          "sizeBytes": 1567328,
+          "sha256": "a4e374c8f864f51df48c2cfd0e1413ec3b2ea030deae852d6a655402ebb61ac4"
+        }
+      ],
+      "licenseFiles": [
+        {
+          "path": "notices/7zip-source-1-copying.txt",
+          "sizeBytes": 27032,
+          "sha256": "1e7e6bae5a5bde32f1ae5a7c37a082d1ab03cf89354f7f936ac40be9e39a6531",
+          "archiveMember": "DOC/copying.txt"
+        },
+        {
+          "path": "notices/7zip-source-2-License.txt",
+          "sizeBytes": 6341,
+          "sha256": "9ac2b4a97ab5d523965534d8b2d5868e511b39096d51fff458ab72c38b80fccc",
+          "archiveMember": "DOC/License.txt"
+        },
+        {
+          "path": "notices/7zip-source-3-unRarLicense.txt",
+          "sizeBytes": 1921,
+          "sha256": "17bd9fa4399092c777536fff045b41df76ec9d2ac4c9b8e7345d3b8b6ccc7976",
+          "archiveMember": "DOC/unRarLicense.txt"
+        }
+      ],
+      "publisherChecksumVerified": true,
+      "distributionNotes": "Exact matching 7-Zip source, LGPL and unRAR limitations retained.",
+      "source": null,
+      "expected": "a4e374c8f864f51df48c2cfd0e1413ec3b2ea030deae852d6a655402ebb61ac4",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "nsis-compatible-win-x86",
+      "recipe": "portableapps",
+      "url": "https://prdownloads.sourceforge.net/nsis/nsis-3.13.zip?download",
+      "license": "Original component licenses retained; no blanket relicensing",
+      "version": "3.13-devtools-relocatable",
+      "format": "zip",
+      "filename": "nsis-3.13-devtools-relocatable-x86.zip",
+      "sizeBytes": 2490549,
+      "sha256": "090af40642cbd11fa9fddc8f052a8fdad9f241b2a6194bace6350e24b4c2adeb",
+      "pieces": [
+        {
+          "path": "payloads/nsis-compatible-win-x86/nsis-3.13-devtools-relocatable-x86.zip",
+          "sizeBytes": 2490549,
+          "sha256": "090af40642cbd11fa9fddc8f052a8fdad9f241b2a6194bace6350e24b4c2adeb"
+        }
+      ],
+      "licenseFiles": [
+        {
+          "path": "notices/nsis-compatible-win-x86-nsis-compatible-NSIS-COPYING.txt",
+          "sizeBytes": 15632,
+          "sha256": "388357c1215ff403c5ebde3a5ecd273e68f8b79a579996775245d1ee65442aba"
+        }
+      ],
+      "publisherChecksumVerified": false,
+      "distributionNotes": "Derived compiler bootstrap provenance and exact source/build recipe: development/samples/bootstraps/nsis/provenance.json. Host tool preparation is not offline sample-build proof."
+    },
+    {
+      "id": "scons-bootstrap-wheel",
+      "recipe": "portableapps",
+      "url": "https://pypi.org/project/SCons/4.11.1/",
+      "license": "Original component licenses retained; no blanket relicensing",
+      "version": "4.11.1",
+      "format": "zip",
+      "filename": "scons-4.11.1-py3-none-any.whl",
+      "sizeBytes": 4123659,
+      "sha256": "454cef364348053422696e3d2ecb4fa593c96a624f955842eaaea64f95c8d11d",
+      "pieces": [
+        {
+          "path": "payloads/nsis-compatible-bootstrap/scons-4.11.1-py3-none-any.whl",
+          "sizeBytes": 4123659,
+          "sha256": "454cef364348053422696e3d2ecb4fa593c96a624f955842eaaea64f95c8d11d"
+        }
+      ],
+      "licenseFiles": [
+        {
+          "path": "notices/scons-bootstrap-wheel-nsis-compatible-scons-LICENSE.txt",
+          "sizeBytes": 1084,
+          "sha256": "2f6ac9a1fc98394d18b80dba9bedb9d5626006d44db3fecf7cf3e21cff7e8b1c"
+        }
+      ],
+      "publisherChecksumVerified": true,
+      "distributionNotes": "Derived compiler bootstrap provenance and exact source/build recipe: development/samples/bootstraps/nsis/provenance.json. Host tool preparation is not offline sample-build proof."
+    },
+    {
+      "id": "scons-bootstrap-source",
+      "recipe": "portableapps",
+      "url": "https://pypi.org/project/SCons/4.11.1/",
+      "license": "Original component licenses retained; no blanket relicensing",
+      "version": "4.11.1",
+      "format": "tar.gz",
+      "filename": "scons-4.11.1.tar.gz",
+      "sizeBytes": 3268963,
+      "sha256": "4210d1a80a62e986029208117991b6347ccaaaab37b67463a3ff31ee065dc487",
+      "pieces": [
+        {
+          "path": "payloads/nsis-compatible-bootstrap/scons-4.11.1.tar.gz",
+          "sizeBytes": 3268963,
+          "sha256": "4210d1a80a62e986029208117991b6347ccaaaab37b67463a3ff31ee065dc487"
+        }
+      ],
+      "licenseFiles": [
+        {
+          "path": "notices/scons-bootstrap-source-nsis-compatible-scons-LICENSE.txt",
+          "sizeBytes": 1084,
+          "sha256": "2f6ac9a1fc98394d18b80dba9bedb9d5626006d44db3fecf7cf3e21cff7e8b1c"
+        }
+      ],
+      "publisherChecksumVerified": true,
+      "distributionNotes": "Derived compiler bootstrap provenance and exact source/build recipe: development/samples/bootstraps/nsis/provenance.json. Host tool preparation is not offline sample-build proof."
+    },
+    {
+      "id": "zlib-bootstrap-source",
+      "recipe": "portableapps",
+      "url": "https://zlib.net/zlib-1.4.tar.gz",
+      "license": "Original component licenses retained; no blanket relicensing",
+      "version": "1.4",
+      "format": "tar.gz",
+      "filename": "zlib-1.4.tar.gz",
+      "sizeBytes": 1507140,
+      "sha256": "02dd159783677a749c04adbdd02b55b8a2bcc7e054f51b76b549199a916ad584",
+      "pieces": [
+        {
+          "path": "payloads/nsis-compatible-bootstrap/zlib-1.4.tar.gz",
+          "sizeBytes": 1507140,
+          "sha256": "02dd159783677a749c04adbdd02b55b8a2bcc7e054f51b76b549199a916ad584"
+        }
+      ],
+      "licenseFiles": [
+        {
+          "path": "notices/zlib-bootstrap-source-nsis-compatible-zlib-LICENSE.txt",
+          "sizeBytes": 1002,
+          "sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2"
+        }
+      ],
+      "publisherChecksumVerified": true,
+      "distributionNotes": "Derived compiler bootstrap provenance and exact source/build recipe: development/samples/bootstraps/nsis/provenance.json. Host tool preparation is not offline sample-build proof."
+    },
+    {
+      "id": "lua515-win-x64",
+      "recipe": "cpp-packages",
+      "url": "https://www.lua.org/ftp/lua-5.1.5.tar.gz",
+      "license": "MIT; upstream COPYRIGHT retained",
+      "version": "5.1.5-devtools-local-build",
+      "format": "zip",
+      "filename": "lua-5.1.5-devtools-win-x64.zip",
+      "sizeBytes": 745662,
+      "sha256": "6dcd7161d7949c19e69897a37bf736e060c6a474d9b42da41642b42cb4059e3d",
+      "pieces": [
+        {
+          "path": "payloads/lua515-win-x64/lua-5.1.5-devtools-win-x64.zip",
+          "sizeBytes": 745662,
+          "sha256": "6dcd7161d7949c19e69897a37bf736e060c6a474d9b42da41642b42cb4059e3d"
+        }
+      ],
+      "licenseFiles": [
+        {
+          "path": "notices/lua515-win-x64-COPYRIGHT",
+          "sizeBytes": 1528,
+          "sha256": "ee5e3e82af1e1b543c4f216e399d7c8cfee797711913f349e385101c4ae60a79"
+        }
+      ],
+      "publisherChecksumVerified": false,
+      "distributionNotes": "Derived approved local MSVC x64 build, not publisher binary; exact Lua source archive, build script and original provenance included. Static PE imports inspected: Windows KERNEL32 only; no non-system DLLs required."
     }
   ],
   "recipes": [
     {
       "id": "windows-sdk",
       "status": "restricted-with-original",
-      "artifactIds": [],
+      "artifactIds": [
+        "zig-win-x64",
+        "zig-source"
+      ],
       "report": "recipes/windows-sdk.md",
       "originalSubstitute": "original/offline_contracts.py",
       "remaining": "MSVC compiler, Windows SDK/CRT/layout remain vendor-licensed and unbundled. Original contract records compiler/SDK/architecture/flags; it does not compile or replace Win32 APIs."
@@ -5549,7 +6382,8 @@
       "status": "partial",
       "artifactIds": [
         "cmake-win-x64",
-        "vcpkg-source"
+        "vcpkg-source",
+        "lua515-win-x64"
       ],
       "report": "recipes/cpp-packages.md",
       "originalSubstitute": null,
@@ -5651,6 +6485,26 @@
       "report": "recipes/media-assets.md",
       "originalSubstitute": "original/media",
       "remaining": "The pinned JetBrains Mono 2.304 font archive (OFL 1.1), Lucide source/icons with ISC notices, and original MIT SVG/WAV/OBJ/JSON fixtures are retained. Respect reserved font names and each asset license. Rendering and embedding were not tested; rights to unrelated assets are not implied."
+    },
+    {
+      "id": "portableapps",
+      "status": "partial",
+      "artifactIds": [
+        "portableapps-installer",
+        "portableapps-launcher",
+        "nsis-portable",
+        "nsis-source",
+        "nsis-unicode-source",
+        "7zip-tools-win-x64",
+        "7zip-source",
+        "nsis-compatible-win-x86",
+        "scons-bootstrap-wheel",
+        "scons-bootstrap-source",
+        "zlib-bootstrap-source"
+      ],
+      "report": "recipes/portableapps.md",
+      "originalSubstitute": null,
+      "remaining": "Tools and matching source are saved. The original sample verifies real PAL/PAF compilation; installation, upgrade, relocation and runtime footprint require separate isolated testing."
     }
   ],
   "supportFiles": [
@@ -5755,14 +6609,19 @@
       "sha256": "cc5cd3e616c1c07f3eabf1391b5076dcdcd012e52ff7aa05c909950f76f726b9"
     },
     {
-      "path": "notices/ublock-assets-effective_tld_names.dat",
-      "sizeBytes": 341265,
-      "sha256": "a54f1e53dc8c40aed8040878a79d52df8cff4c0f44909a0ac2c1f06c3dc19c2e"
-    },
-    {
       "path": "notices/ublock-assets-LICENSE.md",
       "sizeBytes": 6630,
       "sha256": "2d8bb16b9275a25c5c2a8036e88f3a03fdcc5769d3691c76a47cd0ee28f49002"
+    },
+    {
+      "path": "notices/ublock-assets-UNLICENSE",
+      "sizeBytes": 1211,
+      "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+    },
+    {
+      "path": "notices/ublock-assets-effective_tld_names.dat",
+      "sizeBytes": 341265,
+      "sha256": "a54f1e53dc8c40aed8040878a79d52df8cff4c0f44909a0ac2c1f06c3dc19c2e"
     },
     {
       "path": "notices/ublock-assets-pgl-policy.html",
@@ -5775,19 +6634,14 @@
       "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
     },
     {
-      "path": "notices/ublock-assets-UNLICENSE",
-      "sizeBytes": 1211,
-      "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+      "path": "original/LICENSE",
+      "sizeBytes": 1069,
+      "sha256": "5e4bd1e3ce27db9a51911ac76e15fda79f29d309153038950c444432f86dc9c2"
     },
     {
       "path": "original/android-inputs.json",
       "sizeBytes": 205,
       "sha256": "cc73a825d14055bd219381748d848b7939d697290a6522f43774af9f838f1f96"
-    },
-    {
-      "path": "original/LICENSE",
-      "sizeBytes": 1069,
-      "sha256": "5e4bd1e3ce27db9a51911ac76e15fda79f29d309153038950c444432f86dc9c2"
     },
     {
       "path": "original/media/check.svg",
@@ -5873,6 +6727,11 @@
       "path": "recipes/platform-services.md",
       "sizeBytes": 1124,
       "sha256": "a49b39ef1bb301b422b96d7e2a3f63eeda92c64a4537563149a2a6da3527f168"
+    },
+    {
+      "path": "recipes/portableapps.md",
+      "sizeBytes": 2132,
+      "sha256": "4ff922ac7e294b413d8c9513911c77f3115fa580b55ea3923e18ba87a3d89c68"
     },
     {
       "path": "recipes/python-wheels.md",

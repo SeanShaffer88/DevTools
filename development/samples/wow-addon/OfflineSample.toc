@@ -1,0 +1,6 @@
+## Interface: 16001
+## Title: Offline Sample
+## Notes: Original packaging/syntax fixture, not client verified.
+## Author: Malikor
+## Version: 1.0.0
+OfflineSample.lua

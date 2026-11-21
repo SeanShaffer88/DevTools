@@ -28,7 +28,7 @@ Each project records Pass/Fail/Unknown/NotRun, commands and exit codes, dated ev
 
 ## Acquisition follow-through
 
-All 18 acquisition recipes now have explicit local assessment reports in
+All 19 acquisition recipes now have explicit local assessment reports in
 `acquisitions/recipes/`. Redistributable selected payloads and exact licenses are
 recorded in `acquisitions/inventory.json`; restricted SDKs have original input,
 scene/save or service-double substitutes where feasible. Every recipe remains

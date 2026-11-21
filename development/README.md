@@ -42,7 +42,7 @@ Original library content uses [MIT](LICENSE); `vendor/` retains upstream terms.
 
 ## Acquired dependencies and original substitutes
 
-See [acquisitions/README.md](acquisitions/README.md) and its 18 per-recipe reports
+See [acquisitions/README.md](acquisitions/README.md) and its 19 per-recipe reports
 for the exact redistributable payloads, retained licenses, source identities and
 remaining requirements. Binary archives/chunks use a separate streaming verifier
 and are never decoded by the bounded text search. Original contracts and local

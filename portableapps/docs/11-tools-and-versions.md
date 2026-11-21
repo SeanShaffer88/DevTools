@@ -1,13 +1,13 @@
 # 11 — Official Tools and Versions
 
 All tools are from https://portableapps.com/development (checked
-2026-11-16).
+2026-11-21).
 
 | Tool | Current version | Role |
 |---|---|---|
 | PortableApps.com Format | 3.9 (2026-03-02) | The specification (`docs/01-format-spec.md`) |
 | PortableApps.com Launcher | 2.2.9 (2024-05-25) | Generator that compiles `<AppID>.exe` from the launcher INI (`docs/03`–`06`) |
-| PortableApps.com Installer | 3.9.18 (2026-07-20) | Wizard that compiles the `.paf.exe` (`docs/02-installer-and-installer-ini.md`) |
+| PortableApps.com Installer | 3.9.24 (2026-11-10) | Wizard that compiles the `.paf.exe` (`docs/02-installer-and-installer-ini.md`) |
 | PortableApps.com Application Template | 3.9.2 (2026-07-11) | Commented reference `appinfo.ini` / `installer.ini` / launcher INI + a default launcher — the official starting skeleton. The templates in this repo mirror its structure |
 | PortableApps.com AppCompactor | — | Historically compressed app binaries (UPX-style). **No longer used for official releases** (noted in Format 3.6, 2022). Do not add an `appcompactor.ini` to new packages |
 | PortableApps.com Platform | (rolling) | Menu + App Store end users run; see `docs/10-platform-integration.md` |
@@ -97,3 +97,7 @@ See `docs/05-launcher-advanced-custom-code.md` and
 - A pragmatic CI shape: lint the INIs on any runner, build on a Windows
   runner with a human-triggered release step, and never let CI publish a
   `.paf.exe` no human has installed once.
+
+## Offline Tool Capture
+
+Official publisher pages were fetched directly on 2026-11-21; Installer 3.9.24, Launcher 2.2.9 and NSIS Portable 3.13 publisher SHA-256 values matched downloaded archives. Read ../../development/acquisitions/recipes/portableapps.md and inventory.json for immutable identity, matching compiler source, component terms and passive verification limits. Existing installed tools were not modified.

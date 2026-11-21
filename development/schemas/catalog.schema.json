@@ -49,7 +49,9 @@
                 "pc-games",
                 "userscripts",
                 "userstyles",
-                "dependencies"
+                "dependencies",
+                "portableapps",
+                "wow-addons"
               ]
             }
           },
