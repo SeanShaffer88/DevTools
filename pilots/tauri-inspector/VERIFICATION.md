@@ -1,0 +1,55 @@
+# Verification record — 2026-11-05 UTC
+
+The Get-ProjectInfo-only bounded prototype has passed its recorded test/build gates, targeted independent code audit and coordinator native interactions described below. SDK inventory and other helpers remain deferred; this is not beta, release or production acceptance.
+
+## Executed gates
+
+- Rust 1.99.1 x86_64-pc-windows-msvc, actual installed cl.exe/link.exe 14.44.35207 and SDK 10.0.26100.0 verified; `verify.ps1` explicitly sets compiler/linker/include environment. First failure was missing linker PATH, next missing windows.h INCLUDE; both corrected in the caller only.
+- TDD RED: Rust missing adapter APIs, exit 101, `evidence/runs/20261105T021551478Z-444eff29ed184693aa428f97be7606c7/`. Frontend missing model module, exit 1, `evidence/runs/20261105T021810797Z-f53a0811b8f64f2eb3ed40f948a06001/`.
+- GREEN: `pwsh -NoProfile -File verify.ps1 -Task test`, runner and cargo exit 0. Four internal plus three integration tests: timeout, in-flight cancel, failure exit/stderr, output bound, bad paths, malformed/schema failures, actual CLI/adapter normalized equality on a spaces+Unicode fixture. Only observedUtc is excluded from equality. Latest test run `evidence/runs/20261105T022147116Z-87aa462c723e4f6288e7ce639d5f669b/`.
+- `pwsh -NoProfile -File verify.ps1 -Task frontend`, runner and Node exit 0, two tests: unknown evidence/text filtering and stale/cancelled acceptance. Evidence `evidence/runs/20261105T021903918Z-6fd8e75d1e8b459c84ec2422aeaa239c/`.
+- Real offline locked Windows cargo build succeeded, exit 0; first successful run `evidence/runs/20261105T022036680Z-e430375fe9594a618ee7c03794bb0dae/`. Subsequent native profile/API corrections also built successfully. Final protocol-feature rebuild result is recorded in the final handoff and evidence run results.
+- Native launch initially exited 101 with `Failed to setup app: Access is denied. (os error 5)`. Fixed configuration's relative dataDirectory assumption using verified native builder absolute profile path. Window then opened and responded. UIA worker exit 0 captured only Window/Pane; declared controls all failed (helper exit 2), so interaction/accessibility is **not verified**. PrintWindow capture exit 0 produced a blank content image, correctly treated as a failure. A final embedded-protocol correction was then built/rechecked; consult final handoff for outcome.
+
+All paths above are relative to `C:/Users/Sean Shaffer/Documents/DevTools/pilots/tauri-inspector`. Evidence `result.json` includes the exact executable, child/runner exit, timestamps and build artifact hashes. Native evidence: `evidence/native-process.json`, `evidence/native-exits.json`, `evidence/native-stdout.log`, `evidence/native-stderr.log`, `evidence/native-window.bmp`, timestamped `evidence/native-ui-*/result.json` and snapshots. Latest capture supersedes the image while failed snapshots remain.
+
+The initial build helper call wrote its documented logs outside pilot ownership at `C:/Users/Sean Shaffer/Documents/DevTools/runs/20261105T021456544Z-40061aa0b25847119abfe3335a6ad2bc/` (exit 101). No existing source was edited. Subsequent runs use a byte-identical runner copied under ignored evidence to contain its PSScriptRoot-based writes.
+
+## Final bounded handoff
+
+Final offline locked Cargo build exit 0: `evidence/runs/20261105T022511106Z-b472efb40ff74c6fa15c22e19b66b604/`. Executable `target/debug/devtools-inspector.exe`, 12,680,704 bytes, SHA256 `C3FE40D9A1EA0F3CE3CF1E9D633B66BE321B22BC9C7EDC03577B78282CA2984F`. This includes `tauri/custom-protocol` so direct Cargo builds embed/serve local assets.
+
+Final native smoke after that build still failed its three declared control assertions. The process opened a responsive native window; UIA worker exit 0, assertion helper exit 2, captured only Window/Pane. Screenshot producer exit 0; captured content remained white. Snapshot/result: `evidence/native-ui-20261105T022559441Z/`. The outer `pwsh -File native-smoke.ps1` invocation reported exit 1; `evidence/native-exits.json` records the component exits. This was a restricted-worker environment-specific result, superseded for main-desktop rendering and folder/Inspect interaction by the coordinator evidence below. No sandbox relaxation, browser sandbox bypass, elevation or global setting changes attempted.
+
+## Remaining gates / limitations
+
+Full Windows keyboard behavior; screen-reader and WCAG review; responsiveness on large evidence; reparse-point fixture execution; measured load/animation performance; transitive license/advisory review for distribution. No claims of 60fps, <1.5-second load, complete accessibility or native parity certification. The earlier private-console workaround was removed after audit; the fixed child adapter now configures UTF-8 without console allocation. Host trust pins require deliberate review after PowerShell/helper updates. No publication, commits, tags, releases, installers or services were performed. XERJ indexing was unavailable per coordinator; targeted read fallback only.
+
+## Coordinator main-desktop evidence (supplied, before corrective rebuild)
+
+The coordinator successfully rendered the main desktop application using supported sky, selected DevTools with the native folder picker, and ran Inspect, displaying 16 actual evidence items. Screenshot: `C:/Users/Sean Shaffer/Documents/Codex/2026-11-04/ru/outputs/devtools-inspector-native.png`. Producer: supported sky; no exit code was provided. This establishes actual main-desktop rendering/folder/Inspect behavior for the prior binary. The worker's UIA/blank-image failures above remain historical, environment-specific evidence. This prior-revision session did not exercise keyboard, theme, search or Cancel. Rebuilt-native results below supersede that interaction gap; accessibility remains uncertified. No corrective worker native-smoke or screenshot script was launched.
+
+## Targeted audit corrections
+
+- RED reproduced all three defects with inert Unicode emit-then-sleep and multibyte-limit children: Cargo/runner exit 101, `evidence/runs/20261105T023428279Z-a9bf9765bbb64c81b0de5d8a2d1ef4f2/` (outer shell reported 1). Timeout/cancel lost diagnostics; the byte cap returned a decoding error.
+- Removed AllocConsole/ShowWindow initialization. The GUI uses the Windows subsystem in debug and release; child launches explicitly use CREATE_NO_WINDOW. Fixed trusted `inspect-project.ps1` configures UTF-8 in the child then calls the authoritative helper. Its absolute path and SHA256 are pinned in host-config.json alongside the existing host/helper pins. No generic execution endpoint or frontend-selectable script was added.
+- Job closure precedes bounded reader draining; pipe workers poll availability, retain capped bytes and are joined. Tests assert the owned direct child has exited, and an owned descendant is terminated. Unicode truncation preserves valid capped text and output_limit/cancel/timeout status.
+- First GREEN attempt passed the three regressions but failed the legacy-encoding direct CLI baseline, Cargo/runner exit 101: `evidence/runs/20261105T023523730Z-9f6fba3cf15942f4a69119e9b9be479e/`. Test baseline now configures its own child encoding before invoking the original helper. All helper interpretation remains unchanged.
+- Final Rust gate: 8 unit + 3 integration tests passed, Cargo/runner/outer exit 0: `evidence/runs/20261105T023625331Z-09c80cf1148b46fb863a807cb1c09126/`. Both readers are joined on the tested cancellation/timeout/limit paths; actual helper spaces/Unicode normalized parity passes.
+- Frontend: 2 tests passed, Node/runner/outer exit 0: `evidence/runs/20261105T023635697Z-979b31badd4b48aaad0ad3fabff01781/`.
+- Corrective native offline locked build: Cargo/runner/outer exit 0, `evidence/runs/20261105T023602429Z-cff6e4302ab8463485a6b96d6f638bca/`. Artifact `target/debug/devtools-inspector.exe`, 12,678,656 bytes, SHA256 `6F09F2B268D6E7519855982BF16BBC4AB1164CBF84ECCF04671717C9BF335538`. This worker did not run native smoke; coordinator observations of the rebuilt binary are recorded below.
+
+All corrective run paths are relative to `C:/Users/Sean Shaffer/Documents/DevTools/pilots/tauri-inspector`. No root helper/application source, external service, commit, push, tag or release was changed or performed. The subsequent independent audit and coordinator evidence below close the targeted code and bounded native-interaction gates; remaining limitations above still apply.
+
+## Final coordinator native evidence and independent audit
+
+Independent auditor `C:/Users/Sean Shaffer/AppData/Local/Ruflo/state/runs/20261105T024824Z-b52a2eee7b18/result.txt` accepts DevTools code with this documentation reconciliation required; no remaining code blocker was found. Corrective gates passed: 11 Rust tests, 2 frontend tests and native build, all exit 0.
+
+The coordinator exercised the actual rebuilt application in an isolated WebView2 profile with a loopback debugging session. Actual app/browser PID start identity and ancestry were verified. No registry or security settings were changed. Evidence paths below are absolute:
+
+- `C:/Users/Sean Shaffer/Documents/Codex/2026-11-04/ru/work/devtools-native-flow.json`: producer `cdp-call.ps1`, exit 0. The actual UI Inspect event handler invoked the fixed helper through Tauri using an explicitly seeded selected test path; this was not a new folder-picker test. Inspection completed with exit 0, raw schema 1 and 16 rows filtered to 1; light theme and programmatic native-browser search focus were verified.
+- `C:/Users/Sean Shaffer/Documents/Codex/2026-11-04/ru/work/devtools-native-cancel.json`: producer `cdp-call.ps1`, exit 0. Actual UI cancellation reported cancelled in 6 ms, discarded results to zero rows and re-enabled Inspect. Cancellation metadata reports exit unavailable, not helper exit 0.
+- `C:/Users/Sean Shaffer/Documents/Codex/2026-11-04/ru/work/devtools-console-observation.json`: the owned helper PID was observed during inspection with MainWindowHandle 0 and an empty title; no visible helper window was observed. This record supplies no producer exit code. Source uses CREATE_NO_WINDOW for initial hidden launch; the observation does not establish exhaustive absence of every possible flash.
+- `C:/Users/Sean Shaffer/Documents/Codex/2026-11-04/ru/outputs/devtools-inspector-native-final.png`: actual native WebView `Page.captureScreenshot`, producer exit 0, visually reviewed by the coordinator.
+
+The session was closed using owned-process identity guards and the debug listener was closed. Its generated test profile remains in ignored `C:/Users/Sean Shaffer/Documents/Codex/2026-11-04/ru/work`. Earlier worker access-denied, blank capture and UIA failures remain environment-specific history, not a global native blocker. The prior-revision native folder-picker result remains separate evidence. These results supersede the pending coordinator checks above for Inspect, console observation, Cancel, search and theme. Programmatic browser focus does not certify full Windows keyboard operation or accessibility. No build was rerun for this documentation-only reconciliation.
