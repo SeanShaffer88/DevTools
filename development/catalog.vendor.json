@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "vendor-windows-keyboard-keyboard-interactions",
+      "title": "Windows Keyboard \u2014 keyboard-interactions.md",
+      "domains": [
+        "windows"
+      ],
+      "kind": "reference",
+      "path": "development/vendor/windows-keyboard/hub/apps/develop/input/keyboard-interactions.md",
+      "summary": "Pinned primary-source reference. Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "tags": [
+        "offline",
+        "primary-source",
+        "windows-keyboard"
+      ],
+      "verification": "Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "status": "vendored",
+      "origin": "https://github.com/MicrosoftDocs/windows-dev-docs@a3812316d9d6678be4e526ffb4b1c4f3958d956d",
+      "license": "CC-BY-4.0 (documentation); MIT (code)",
+      "licenseFile": "development/vendor/windows-keyboard/LICENSE",
+      "officialSources": [
+        "https://raw.githubusercontent.com/MicrosoftDocs/windows-dev-docs/a3812316d9d6678be4e526ffb4b1c4f3958d956d/hub/apps/develop/input/keyboard-interactions.md"
+      ],
+      "sha256": "707f5e7e2dcc00079a3589eb8c175d79b4c3b6da46fde5dfabced2075d5936b9",
+      "sizeBytes": 38012
+    },
+    {
+      "id": "vendor-windows-keyboard-keyboard-events",
+      "title": "Windows Keyboard \u2014 keyboard-events.md",
+      "domains": [
+        "windows"
+      ],
+      "kind": "reference",
+      "path": "development/vendor/windows-keyboard/hub/apps/develop/input/keyboard-events.md",
+      "summary": "Pinned primary-source reference. Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "tags": [
+        "offline",
+        "primary-source",
+        "windows-keyboard"
+      ],
+      "verification": "Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "status": "vendored",
+      "origin": "https://github.com/MicrosoftDocs/windows-dev-docs@a3812316d9d6678be4e526ffb4b1c4f3958d956d",
+      "license": "CC-BY-4.0 (documentation); MIT (code)",
+      "licenseFile": "development/vendor/windows-keyboard/LICENSE",
+      "officialSources": [
+        "https://raw.githubusercontent.com/MicrosoftDocs/windows-dev-docs/a3812316d9d6678be4e526ffb4b1c4f3958d956d/hub/apps/develop/input/keyboard-events.md"
+      ],
+      "sha256": "2d482541483db758d726b72b0bc9763702fb1546c22c3babe53e3a081441524f",
+      "sizeBytes": 32102
+    },
+    {
+      "id": "vendor-godot-manual-input-examples",
+      "title": "Godot Manual \u2014 input_examples.rst",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "development/vendor/godot-manual/tutorials/inputs/input_examples.rst",
+      "summary": "Pinned primary-source reference. Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "tags": [
+        "offline",
+        "primary-source",
+        "godot-manual"
+      ],
+      "verification": "Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "status": "vendored",
+      "origin": "https://github.com/godotengine/godot-docs@33e08e14c517541fac3d9069e82fb3ee2fc99a10",
+      "license": "CC-BY-3.0",
+      "licenseFile": "development/vendor/godot-manual/LICENSE.txt",
+      "officialSources": [
+        "https://raw.githubusercontent.com/godotengine/godot-docs/33e08e14c517541fac3d9069e82fb3ee2fc99a10/tutorials/inputs/input_examples.rst"
+      ],
+      "sha256": "90359a6ab0c45bd034c19e67547a2643b63576287e421a9683482ab19d142b84",
+      "sizeBytes": 13239
+    },
+    {
+      "id": "vendor-godot-manual-saving-games",
+      "title": "Godot Manual \u2014 saving_games.rst",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "development/vendor/godot-manual/tutorials/io/saving_games.rst",
+      "summary": "Pinned primary-source reference. Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "tags": [
+        "offline",
+        "primary-source",
+        "godot-manual"
+      ],
+      "verification": "Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "status": "vendored",
+      "origin": "https://github.com/godotengine/godot-docs@33e08e14c517541fac3d9069e82fb3ee2fc99a10",
+      "license": "CC-BY-3.0",
+      "licenseFile": "development/vendor/godot-manual/LICENSE.txt",
+      "officialSources": [
+        "https://raw.githubusercontent.com/godotengine/godot-docs/33e08e14c517541fac3d9069e82fb3ee2fc99a10/tutorials/io/saving_games.rst"
+      ],
+      "sha256": "b4e8b1662e3c810d1a1f9f854de872fd278ed073d4c899712542dbd459514162",
+      "sizeBytes": 15073
+    },
+    {
+      "id": "vendor-godot-manual-exporting-for-android",
+      "title": "Godot Manual \u2014 exporting_for_android.rst",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "development/vendor/godot-manual/tutorials/export/exporting_for_android.rst",
+      "summary": "Pinned primary-source reference. Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "tags": [
+        "offline",
+        "primary-source",
+        "godot-manual"
+      ],
+      "verification": "Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "status": "vendored",
+      "origin": "https://github.com/godotengine/godot-docs@33e08e14c517541fac3d9069e82fb3ee2fc99a10",
+      "license": "CC-BY-3.0",
+      "licenseFile": "development/vendor/godot-manual/LICENSE.txt",
+      "officialSources": [
+        "https://raw.githubusercontent.com/godotengine/godot-docs/33e08e14c517541fac3d9069e82fb3ee2fc99a10/tutorials/export/exporting_for_android.rst"
+      ],
+      "sha256": "aa509b5b79a8130c2f05b57010ef00b76526b56b67e30cfb36ea5a10c6baa6ea",
+      "sizeBytes": 9182
+    },
+    {
+      "id": "vendor-normalize-css-normalize",
+      "title": "Normalize Css \u2014 normalize.css",
+      "domains": [
+        "websites",
+        "userstyles",
+        "dependencies"
+      ],
+      "kind": "reference",
+      "path": "development/vendor/normalize-css/normalize.css",
+      "summary": "Pinned primary-source reference. Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "tags": [
+        "offline",
+        "primary-source",
+        "normalize-css"
+      ],
+      "verification": "Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "status": "vendored",
+      "origin": "https://github.com/necolas/normalize.css@fc091cce1534909334c1911709a39c22d406977b",
+      "license": "MIT",
+      "licenseFile": "development/vendor/normalize-css/LICENSE.md",
+      "officialSources": [
+        "https://raw.githubusercontent.com/necolas/normalize.css/fc091cce1534909334c1911709a39c22d406977b/normalize.css"
+      ],
+      "sha256": "580818700724d42d7fcc4979b0197971fca1c6d2e0286769237a0ac897df5512",
+      "sizeBytes": 6138
+    },
+    {
+      "id": "vendor-android-architecture-architecturelearningjourney",
+      "title": "Android Architecture \u2014 ArchitectureLearningJourney.md",
+      "domains": [
+        "android-apps",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "development/vendor/android-architecture/docs/ArchitectureLearningJourney.md",
+      "summary": "Pinned primary-source reference. Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "tags": [
+        "offline",
+        "primary-source",
+        "android-architecture"
+      ],
+      "verification": "Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "status": "vendored",
+      "origin": "https://github.com/android/nowinandroid@2982e63cb691ad49cd009aab43dc206fee6699c2",
+      "license": "Apache-2.0",
+      "licenseFile": "development/vendor/android-architecture/LICENSE",
+      "officialSources": [
+        "https://raw.githubusercontent.com/android/nowinandroid/2982e63cb691ad49cd009aab43dc206fee6699c2/docs/ArchitectureLearningJourney.md"
+      ],
+      "sha256": "08e096c1067ef6cf92cc118793e81454ff9fb8ee11964013277b5fdb6c90517b",
+      "sizeBytes": 14281
+    },
+    {
+      "id": "vendor-android-architecture-modularizationlearningjourney",
+      "title": "Android Architecture \u2014 ModularizationLearningJourney.md",
+      "domains": [
+        "android-apps",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "development/vendor/android-architecture/docs/ModularizationLearningJourney.md",
+      "summary": "Pinned primary-source reference. Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "tags": [
+        "offline",
+        "primary-source",
+        "android-architecture"
+      ],
+      "verification": "Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "status": "vendored",
+      "origin": "https://github.com/android/nowinandroid@2982e63cb691ad49cd009aab43dc206fee6699c2",
+      "license": "Apache-2.0",
+      "licenseFile": "development/vendor/android-architecture/LICENSE",
+      "officialSources": [
+        "https://raw.githubusercontent.com/android/nowinandroid/2982e63cb691ad49cd009aab43dc206fee6699c2/docs/ModularizationLearningJourney.md"
+      ],
+      "sha256": "1beb4673b2535ee5c8bb651b4410f8de91e59c6f476ab0447fabdb14ed6e2bc9",
+      "sizeBytes": 10615
+    }
+  ]
+}

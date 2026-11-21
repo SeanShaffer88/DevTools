@@ -1,0 +1,15 @@
+/* ==UserStyle==
+@name           Example reading layout
+@namespace      example.com/devtools-original
+@version        1.0.0
+@description    Scoped offline reading and focus example.
+@author         DevTools contributors
+@license        MIT
+==/UserStyle== */
+@-moz-document url-prefix("https://example.com/") {
+  body { max-width: 65ch; margin-inline: auto; padding-inline: 1rem; }
+  a:focus-visible { outline: 3px solid currentColor; outline-offset: 3px; }
+  @media (forced-colors: active) {
+    a:focus-visible { outline-color: Highlight; }
+  }
+}

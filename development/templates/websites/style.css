@@ -1,0 +1,9 @@
+:root { color-scheme: light dark; font: 1rem/1.6 system-ui,sans-serif; }
+body { margin: 0; padding: 1.5rem; }
+main { max-width: 42rem; margin-inline: auto; }
+label,input,button { display: block; }
+input { box-sizing: border-box; width: 100%; font: inherit; padding: .5rem; }
+button { font: inherit; margin-block: .75rem; padding: .5rem 1rem; }
+:focus-visible { outline: .2rem solid Highlight; outline-offset: .2rem; }
+#preview { overflow-wrap: anywhere; }
+@media (forced-colors: active) { input,button { border: 1px solid ButtonText; } }

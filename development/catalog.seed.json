@@ -1,0 +1,1623 @@
+{
+  "schemaVersion": 1,
+  "domains": [
+    {
+      "id": "windows",
+      "title": "Windows software"
+    },
+    {
+      "id": "android-apps",
+      "title": "Android apps"
+    },
+    {
+      "id": "android-games",
+      "title": "Android games"
+    },
+    {
+      "id": "websites",
+      "title": "Websites"
+    },
+    {
+      "id": "pc-games",
+      "title": "PC games"
+    },
+    {
+      "id": "userscripts",
+      "title": "Userscripts"
+    },
+    {
+      "id": "userstyles",
+      "title": "Userstyles"
+    },
+    {
+      "id": "dependencies",
+      "title": "Developer dependencies"
+    }
+  ],
+  "entries": [
+    {
+      "id": "windows-windows-md",
+      "title": "Windows software: windows.md",
+      "domains": [
+        "windows"
+      ],
+      "kind": "guide",
+      "path": "development/guides/windows.md",
+      "summary": "Original lifecycle guide; no target runtime certification.",
+      "tags": [
+        "windows",
+        "offline",
+        "guide"
+      ],
+      "status": "original",
+      "verification": "Local links and JSON checked; web/userscript Node DOM-fixture checks passed; browser/device/engine integration not performed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": []
+    },
+    {
+      "id": "windows-quality-contract-md",
+      "title": "Windows software: quality-contract.md",
+      "domains": [
+        "windows"
+      ],
+      "kind": "template",
+      "path": "development/templates/windows/quality-contract.md",
+      "summary": "Original inert contract or local-only example; no target runtime certification.",
+      "tags": [
+        "windows",
+        "offline",
+        "template"
+      ],
+      "status": "original",
+      "verification": "Local links and JSON checked; web/userscript Node DOM-fixture checks passed; browser/device/engine integration not performed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": []
+    },
+    {
+      "id": "android-apps-android-apps-md",
+      "title": "Android apps: android-apps.md",
+      "domains": [
+        "android-apps"
+      ],
+      "kind": "guide",
+      "path": "development/guides/android-apps.md",
+      "summary": "Original lifecycle guide; no target runtime certification.",
+      "tags": [
+        "android-apps",
+        "offline",
+        "guide"
+      ],
+      "status": "original",
+      "verification": "Local links and JSON checked; web/userscript Node DOM-fixture checks passed; browser/device/engine integration not performed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": []
+    },
+    {
+      "id": "android-apps-acceptance-md",
+      "title": "Android apps: acceptance.md",
+      "domains": [
+        "android-apps"
+      ],
+      "kind": "template",
+      "path": "development/templates/android-apps/acceptance.md",
+      "summary": "Original inert contract or local-only example; no target runtime certification.",
+      "tags": [
+        "android-apps",
+        "offline",
+        "template"
+      ],
+      "status": "original",
+      "verification": "Local links and JSON checked; web/userscript Node DOM-fixture checks passed; browser/device/engine integration not performed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": []
+    },
+    {
+      "id": "android-games-android-games-md",
+      "title": "Android games: android-games.md",
+      "domains": [
+        "android-games"
+      ],
+      "kind": "guide",
+      "path": "development/guides/android-games.md",
+      "summary": "Original lifecycle guide; no target runtime certification.",
+      "tags": [
+        "android-games",
+        "offline",
+        "guide"
+      ],
+      "status": "original",
+      "verification": "Local links and JSON checked; web/userscript Node DOM-fixture checks passed; browser/device/engine integration not performed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": []
+    },
+    {
+      "id": "android-games-acceptance-md",
+      "title": "Android games: acceptance.md",
+      "domains": [
+        "android-games"
+      ],
+      "kind": "template",
+      "path": "development/templates/android-games/acceptance.md",
+      "summary": "Original inert contract or local-only example; no target runtime certification.",
+      "tags": [
+        "android-games",
+        "offline",
+        "template"
+      ],
+      "status": "original",
+      "verification": "Local links and JSON checked; web/userscript Node DOM-fixture checks passed; browser/device/engine integration not performed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": []
+    },
+    {
+      "id": "websites-websites-md",
+      "title": "Websites: websites.md",
+      "domains": [
+        "websites"
+      ],
+      "kind": "guide",
+      "path": "development/guides/websites.md",
+      "summary": "Original lifecycle guide; no target runtime certification.",
+      "tags": [
+        "websites",
+        "offline",
+        "guide"
+      ],
+      "status": "original",
+      "verification": "Local links and JSON checked; web/userscript Node DOM-fixture checks passed; browser/device/engine integration not performed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": [
+        "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role"
+      ]
+    },
+    {
+      "id": "websites-app-js",
+      "title": "Websites: app.js",
+      "domains": [
+        "websites"
+      ],
+      "kind": "example",
+      "path": "development/templates/websites/app.js",
+      "summary": "Original inert contract or local-only example; no target runtime certification.",
+      "tags": [
+        "websites",
+        "offline",
+        "example"
+      ],
+      "status": "original",
+      "verification": "Local links and JSON checked; web/userscript Node DOM-fixture checks passed; browser/device/engine integration not performed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": [
+        "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role"
+      ]
+    },
+    {
+      "id": "websites-index-html",
+      "title": "Websites: index.html",
+      "domains": [
+        "websites"
+      ],
+      "kind": "example",
+      "path": "development/templates/websites/index.html",
+      "summary": "Original inert contract or local-only example; no target runtime certification.",
+      "tags": [
+        "websites",
+        "offline",
+        "example"
+      ],
+      "status": "original",
+      "verification": "Local links and JSON checked; web/userscript Node DOM-fixture checks passed; browser/device/engine integration not performed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": [
+        "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role"
+      ]
+    },
+    {
+      "id": "websites-style-css",
+      "title": "Websites: style.css",
+      "domains": [
+        "websites"
+      ],
+      "kind": "example",
+      "path": "development/templates/websites/style.css",
+      "summary": "Original inert contract or local-only example; no target runtime certification.",
+      "tags": [
+        "websites",
+        "offline",
+        "example"
+      ],
+      "status": "original",
+      "verification": "Local links and JSON checked; web/userscript Node DOM-fixture checks passed; browser/device/engine integration not performed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": [
+        "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role"
+      ]
+    },
+    {
+      "id": "pc-games-pc-games-md",
+      "title": "PC games: pc-games.md",
+      "domains": [
+        "pc-games"
+      ],
+      "kind": "guide",
+      "path": "development/guides/pc-games.md",
+      "summary": "Original lifecycle guide; no target runtime certification.",
+      "tags": [
+        "pc-games",
+        "offline",
+        "guide"
+      ],
+      "status": "original",
+      "verification": "Local links and JSON checked; web/userscript Node DOM-fixture checks passed; browser/device/engine integration not performed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": [
+        "https://docs.godotengine.org/en/stable/tutorials/io/saving_games.html"
+      ]
+    },
+    {
+      "id": "pc-games-save-json",
+      "title": "PC games: save.json",
+      "domains": [
+        "pc-games"
+      ],
+      "kind": "template",
+      "path": "development/templates/pc-games/save.json",
+      "summary": "Original inert contract or local-only example; no target runtime certification.",
+      "tags": [
+        "pc-games",
+        "offline",
+        "template"
+      ],
+      "status": "original",
+      "verification": "Local links and JSON checked; web/userscript Node DOM-fixture checks passed; browser/device/engine integration not performed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": [
+        "https://docs.godotengine.org/en/stable/tutorials/io/saving_games.html"
+      ]
+    },
+    {
+      "id": "pc-games-save-schema-json",
+      "title": "PC games: save.schema.json",
+      "domains": [
+        "pc-games"
+      ],
+      "kind": "template",
+      "path": "development/templates/pc-games/save.schema.json",
+      "summary": "Original inert contract or local-only example; no target runtime certification.",
+      "tags": [
+        "pc-games",
+        "offline",
+        "template"
+      ],
+      "status": "original",
+      "verification": "Local links and JSON checked; web/userscript Node DOM-fixture checks passed; browser/device/engine integration not performed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": [
+        "https://docs.godotengine.org/en/stable/tutorials/io/saving_games.html"
+      ]
+    },
+    {
+      "id": "userscripts-userscripts-md",
+      "title": "Userscripts: userscripts.md",
+      "domains": [
+        "userscripts"
+      ],
+      "kind": "guide",
+      "path": "development/guides/userscripts.md",
+      "summary": "Original lifecycle guide; no target runtime certification.",
+      "tags": [
+        "userscripts",
+        "offline",
+        "guide"
+      ],
+      "status": "original",
+      "verification": "Local links and JSON checked; web/userscript Node DOM-fixture checks passed; browser/device/engine integration not performed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": [
+        "https://www.tampermonkey.net/documentation.php"
+      ]
+    },
+    {
+      "id": "userscripts-example-user-js",
+      "title": "Userscripts: example.user.js",
+      "domains": [
+        "userscripts"
+      ],
+      "kind": "example",
+      "path": "development/templates/userscripts/example.user.js",
+      "summary": "Original inert contract or local-only example; no target runtime certification.",
+      "tags": [
+        "userscripts",
+        "offline",
+        "example"
+      ],
+      "status": "original",
+      "verification": "Local links and JSON checked; web/userscript Node DOM-fixture checks passed; browser/device/engine integration not performed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": [
+        "https://www.tampermonkey.net/documentation.php"
+      ]
+    },
+    {
+      "id": "userstyles-userstyles-md",
+      "title": "Userstyles: userstyles.md",
+      "domains": [
+        "userstyles"
+      ],
+      "kind": "guide",
+      "path": "development/guides/userstyles.md",
+      "summary": "Original lifecycle guide; no target runtime certification.",
+      "tags": [
+        "userstyles",
+        "offline",
+        "guide"
+      ],
+      "status": "original",
+      "verification": "Local links and JSON checked; web/userscript Node DOM-fixture checks passed; browser/device/engine integration not performed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": [
+        "https://github.com/openstyles/stylus/wiki/Writing-UserCSS"
+      ]
+    },
+    {
+      "id": "userstyles-example-user-css",
+      "title": "Userstyles: example.user.css",
+      "domains": [
+        "userstyles"
+      ],
+      "kind": "example",
+      "path": "development/templates/userstyles/example.user.css",
+      "summary": "Original inert contract or local-only example; no target runtime certification.",
+      "tags": [
+        "userstyles",
+        "offline",
+        "example"
+      ],
+      "status": "original",
+      "verification": "Local links and JSON checked; web/userscript Node DOM-fixture checks passed; browser/device/engine integration not performed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": [
+        "https://github.com/openstyles/stylus/wiki/Writing-UserCSS"
+      ]
+    },
+    {
+      "id": "dependencies-dependencies-md",
+      "title": "Developer dependencies: dependencies.md",
+      "domains": [
+        "dependencies"
+      ],
+      "kind": "guide",
+      "path": "development/guides/dependencies.md",
+      "summary": "Original lifecycle guide; no target runtime certification.",
+      "tags": [
+        "dependencies",
+        "offline",
+        "guide"
+      ],
+      "status": "original",
+      "verification": "Local links and JSON checked; web/userscript Node DOM-fixture checks passed; browser/device/engine integration not performed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": []
+    },
+    {
+      "id": "dependencies-acquisition-json",
+      "title": "Developer dependencies: acquisition.json",
+      "domains": [
+        "dependencies"
+      ],
+      "kind": "template",
+      "path": "development/templates/dependencies/acquisition.json",
+      "summary": "Original inert contract or local-only example; no target runtime certification.",
+      "tags": [
+        "dependencies",
+        "offline",
+        "template"
+      ],
+      "status": "original",
+      "verification": "Local links and JSON checked; web/userscript Node DOM-fixture checks passed; browser/device/engine integration not performed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": []
+    },
+    {
+      "id": "dependency-readiness-recipes",
+      "title": "Dependency acquisition and offline readiness recipes",
+      "domains": [
+        "dependencies",
+        "windows",
+        "android-apps",
+        "android-games",
+        "websites",
+        "pc-games",
+        "userscripts",
+        "userstyles"
+      ],
+      "kind": "reference",
+      "path": "development/dependency-recipes.json",
+      "summary": "Original inert preparation routes; no dependency payloads acquired or installed.",
+      "tags": [
+        "offline",
+        "acquisition",
+        "readiness"
+      ],
+      "status": "original",
+      "verification": "Inert metadata; acquisition and target toolchains not executed",
+      "origin": "Original DevTools content, 2026-11-21",
+      "license": "MIT; development/LICENSE",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-knowledge-docs-02-tiers-and-stacks-md",
+      "title": "Tiers And Stacks",
+      "domains": [
+        "windows"
+      ],
+      "kind": "reference",
+      "path": "knowledge/docs/02-tiers-and-stacks.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-knowledge-docs-03-engineering-contract-md",
+      "title": "Engineering Contract",
+      "domains": [
+        "windows"
+      ],
+      "kind": "reference",
+      "path": "knowledge/docs/03-engineering-contract.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-knowledge-docs-04-quality-gates-md",
+      "title": "Quality Gates",
+      "domains": [
+        "windows"
+      ],
+      "kind": "reference",
+      "path": "knowledge/docs/04-quality-gates.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-knowledge-docs-05-guardrails-md",
+      "title": "Guardrails",
+      "domains": [
+        "windows"
+      ],
+      "kind": "reference",
+      "path": "knowledge/docs/05-guardrails.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-knowledge-docs-06-every-program-rules-md",
+      "title": "Every Program Rules",
+      "domains": [
+        "windows"
+      ],
+      "kind": "reference",
+      "path": "knowledge/docs/06-every-program-rules.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-knowledge-docs-07-design-tesselgui-md",
+      "title": "Design Tesselgui",
+      "domains": [
+        "windows"
+      ],
+      "kind": "reference",
+      "path": "knowledge/docs/07-design-tesselgui.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-knowledge-docs-08-packaging-seanpak-md",
+      "title": "Packaging Seanpak",
+      "domains": [
+        "windows"
+      ],
+      "kind": "reference",
+      "path": "knowledge/docs/08-packaging-seanpak.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-knowledge-docs-09-release-and-verification-md",
+      "title": "Release And Verification",
+      "domains": [
+        "windows"
+      ],
+      "kind": "reference",
+      "path": "knowledge/docs/09-release-and-verification.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-windevkit-docs-catalog-md",
+      "title": "Catalog",
+      "domains": [
+        "windows"
+      ],
+      "kind": "reference",
+      "path": "windevkit/docs/CATALOG.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-portableapps-docs-07-end-to-end-workflow-md",
+      "title": "End To End Workflow",
+      "domains": [
+        "windows"
+      ],
+      "kind": "reference",
+      "path": "portableapps/docs/07-end-to-end-workflow.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-kotlin-docs-03-project-setup-gradle-and-tooling-md",
+      "title": "Project Setup Gradle And Tooling",
+      "domains": [
+        "android-apps",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "kotlin/docs/03-project-setup-gradle-and-tooling.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-kotlin-docs-04-app-anatomy-lifecycle-and-components-md",
+      "title": "App Anatomy Lifecycle And Components",
+      "domains": [
+        "android-apps",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "kotlin/docs/04-app-anatomy-lifecycle-and-components.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-kotlin-docs-05-jetpack-compose-ui-md",
+      "title": "Jetpack Compose Ui",
+      "domains": [
+        "android-apps",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "kotlin/docs/05-jetpack-compose-ui.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-kotlin-docs-10-coroutines-flow-and-concurrency-md",
+      "title": "Coroutines Flow And Concurrency",
+      "domains": [
+        "android-apps",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "kotlin/docs/10-coroutines-flow-and-concurrency.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-kotlin-docs-11-data-persistence-room-datastore-files-md",
+      "title": "Data Persistence Room Datastore Files",
+      "domains": [
+        "android-apps",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "kotlin/docs/11-data-persistence-room-datastore-files.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-kotlin-docs-15-permissions-security-and-privacy-md",
+      "title": "Permissions Security And Privacy",
+      "domains": [
+        "android-apps",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "kotlin/docs/15-permissions-security-and-privacy.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-kotlin-docs-16-testing-strategy-md",
+      "title": "Testing Strategy",
+      "domains": [
+        "android-apps",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "kotlin/docs/16-testing-strategy.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-kotlin-docs-17-performance-profiling-and-optimization-md",
+      "title": "Performance Profiling And Optimization",
+      "domains": [
+        "android-apps",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "kotlin/docs/17-performance-profiling-and-optimization.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-kotlin-docs-18-accessibility-internationalization-and-theming-md",
+      "title": "Accessibility Internationalization And Theming",
+      "domains": [
+        "android-apps",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "kotlin/docs/18-accessibility-internationalization-and-theming.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-kotlin-docs-19-build-signing-release-and-google-play-md",
+      "title": "Build Signing Release And Google Play",
+      "domains": [
+        "android-apps",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "kotlin/docs/19-build-signing-release-and-google-play.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-kotlin-docs-23-games-overview-choosing-a-route-md",
+      "title": "Games Overview Choosing A Route",
+      "domains": [
+        "android-games",
+        "pc-games"
+      ],
+      "kind": "reference",
+      "path": "kotlin/docs/23-games-overview-choosing-a-route.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-kotlin-docs-26-games-native-graphics-opengl-vulkan-agdk-md",
+      "title": "Games Native Graphics Opengl Vulkan Agdk",
+      "domains": [
+        "android-games",
+        "pc-games"
+      ],
+      "kind": "reference",
+      "path": "kotlin/docs/26-games-native-graphics-opengl-vulkan-agdk.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-kotlin-docs-28-games-performance-input-audio-and-saves-md",
+      "title": "Games Performance Input Audio And Saves",
+      "domains": [
+        "android-games",
+        "pc-games"
+      ],
+      "kind": "reference",
+      "path": "kotlin/docs/28-games-performance-input-audio-and-saves.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-godot-docs-02-project-anatomy-md",
+      "title": "Project Anatomy",
+      "domains": [
+        "android-games",
+        "pc-games"
+      ],
+      "kind": "reference",
+      "path": "godot/docs/02-project-anatomy.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-godot-docs-03-export-pipeline-md",
+      "title": "Export Pipeline",
+      "domains": [
+        "android-games",
+        "pc-games"
+      ],
+      "kind": "reference",
+      "path": "godot/docs/03-export-pipeline.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-godot-docs-08-testing-and-ci-md",
+      "title": "Testing And Ci",
+      "domains": [
+        "android-games",
+        "pc-games"
+      ],
+      "kind": "reference",
+      "path": "godot/docs/08-testing-and-ci.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-flutter-guides-01-getting-started-and-toolchain-md",
+      "title": "Getting Started And Toolchain",
+      "domains": [
+        "windows",
+        "websites",
+        "android-apps"
+      ],
+      "kind": "reference",
+      "path": "flutter/guides/01-getting-started-and-toolchain.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-flutter-guides-03-widgets-and-ui-md",
+      "title": "Widgets And Ui",
+      "domains": [
+        "windows",
+        "websites",
+        "android-apps"
+      ],
+      "kind": "reference",
+      "path": "flutter/guides/03-widgets-and-ui.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-resources-docs-v1-dependencies-abi-md",
+      "title": "Dependencies Abi",
+      "domains": [
+        "dependencies",
+        "windows",
+        "android-apps",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "resources/docs/v1/dependencies-abi.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-resources-docs-v1-runtime-sdk-md",
+      "title": "Runtime Sdk",
+      "domains": [
+        "dependencies",
+        "windows",
+        "android-apps",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "resources/docs/v1/runtime-sdk.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-resources-docs-v1-build-cache-fixtures-md",
+      "title": "Build Cache Fixtures",
+      "domains": [
+        "dependencies",
+        "windows",
+        "android-apps",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "resources/docs/v1/build-cache-fixtures.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "canonical-forai-ai-index-md",
+      "title": "Ai_Index",
+      "domains": [
+        "dependencies",
+        "windows",
+        "websites",
+        "pc-games"
+      ],
+      "kind": "reference",
+      "path": "forai/AI_INDEX.md",
+      "summary": "Existing canonical local DevTools material, indexed without copying it. Follow its domain instructions and stated version limits.",
+      "tags": [
+        "canonical",
+        "existing",
+        "offline"
+      ],
+      "verification": "Local file existence checked. Indexed reference content and its target toolchain were not requalified by this expansion.",
+      "status": "reference-only",
+      "origin": "Existing SeanShaffer88/DevTools domain library",
+      "license": "Existing domain-specific terms and attribution are retained; this index does not relicense them.",
+      "officialSources": []
+    },
+    {
+      "id": "acquire-windows-sdk",
+      "title": "Windows SDK and MSVC Build Tools",
+      "domains": [
+        "dependencies",
+        "pc-games",
+        "windows"
+      ],
+      "kind": "pointer",
+      "summary": "Capture the installed SDK, compiler, linker, CRT version, target architecture and component IDs. Create and verify a vendor offline layout for the selected project workload. Save Win32 API reference selections under their individual terms.",
+      "tags": [
+        "dependency",
+        "acquisition",
+        "missing-payload"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
+      "status": "not-acquired",
+      "origin": "Original acquisition recipe in development/dependency-recipes.json",
+      "license": "Vendor layout and component licenses govern redistribution. Acquire a selected compiler/SDK layout from Microsoft, retain manifest and license evidence.",
+      "officialSources": [
+        "https://learn.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio"
+      ],
+      "requires": [
+        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+      ]
+    },
+    {
+      "id": "acquire-dotnet-nuget",
+      "title": ".NET SDK and NuGet local feed",
+      "domains": [
+        "dependencies",
+        "windows"
+      ],
+      "kind": "pointer",
+      "summary": "Pin SDK in global.json and packages with lockfiles. Collect all transitive nupkg files into a local feed. Expanded global-package folders alone are not a complete transferable feed. Configure a project-scoped NuGet.Config with clear and the local feed.",
+      "tags": [
+        "dependency",
+        "acquisition",
+        "missing-payload"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
+      "status": "not-acquired",
+      "origin": "Original acquisition recipe in development/dependency-recipes.json",
+      "license": "SDK and each package have separate licenses. Retain actual nupkg archives and their notices, with locked versions.",
+      "officialSources": [
+        "https://learn.microsoft.com/en-us/nuget/hosting-packages/local-feeds",
+        "https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-restore"
+      ],
+      "requires": [
+        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+      ]
+    },
+    {
+      "id": "acquire-webview2",
+      "title": "WebView2 Runtime and SDK",
+      "domains": [
+        "dependencies",
+        "websites",
+        "windows"
+      ],
+      "kind": "pointer",
+      "summary": "Record Fixed Version or Evergreen strategy, exact architecture, native loader, runtime version and deployment behavior. Acquire the selected offline installer or fixed-version artifact from the vendor and retain its signatures and notices.",
+      "tags": [
+        "dependency",
+        "acquisition",
+        "missing-payload"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
+      "status": "not-acquired",
+      "origin": "Original acquisition recipe in development/dependency-recipes.json",
+      "license": "Follow Microsoft's runtime redistribution and package terms. Runtime installation is a separate operation.",
+      "officialSources": [
+        "https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution"
+      ],
+      "requires": [
+        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+      ]
+    },
+    {
+      "id": "acquire-android-sdk",
+      "title": "Android SDK, platform/build tools and NDK",
+      "domains": [
+        "android-apps",
+        "android-games",
+        "dependencies"
+      ],
+      "kind": "pointer",
+      "summary": "Pin compileSdk/build tools, NDK, CMake, JDK, Android Gradle Plugin and ABIs. Prepare platform/build-tools/platform-tools and optional NDK packages while connected. Retain SDK package.xml and source.properties, accepted terms and trusted download evidence.",
+      "tags": [
+        "dependency",
+        "acquisition",
+        "missing-payload"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
+      "status": "not-acquired",
+      "origin": "Original acquisition recipe in development/dependency-recipes.json",
+      "license": "SDK packages require their applicable licenses. License acceptance belongs to the developer's environment.",
+      "officialSources": [
+        "https://developer.android.com/tools/sdkmanager",
+        "https://developer.android.com/ndk/downloads"
+      ],
+      "requires": [
+        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+      ]
+    },
+    {
+      "id": "acquire-gradle",
+      "title": "Gradle wrapper, plugin and Maven dependency cache",
+      "domains": [
+        "android-apps",
+        "android-games",
+        "dependencies"
+      ],
+      "kind": "pointer",
+      "summary": "Record wrapper checksum, plugin version, verification metadata and dependency locks. Resolve the project's actual build variants while connected, then preserve the matching Gradle user-home cache and wrapper distribution. A single resolved task does not prove every variant is ready.",
+      "tags": [
+        "dependency",
+        "acquisition",
+        "missing-payload"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
+      "status": "not-acquired",
+      "origin": "Original acquisition recipe in development/dependency-recipes.json",
+      "license": "Plugin, wrapper, Maven artifact and SDK licenses apply separately.",
+      "officialSources": [
+        "https://docs.gradle.org/current/userguide/dependency_caching.html"
+      ],
+      "requires": [
+        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+      ]
+    },
+    {
+      "id": "acquire-node-npm",
+      "title": "Node.js and npm package cache",
+      "domains": [
+        "dependencies",
+        "userscripts",
+        "userstyles",
+        "websites"
+      ],
+      "kind": "pointer",
+      "summary": "Pin Node/npm and package-lock. Prepare the full lock graph in a dedicated cache while connected using the project's npm flags. Review install scripts before any preparation. Retain integrity fields and license files. npm cache verification checks cache integrity, not complete project readiness.",
+      "tags": [
+        "dependency",
+        "acquisition",
+        "missing-payload"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
+      "status": "not-acquired",
+      "origin": "Original acquisition recipe in development/dependency-recipes.json",
+      "license": "Each transitive package's license and bundled assets must be checked.",
+      "officialSources": [
+        "https://docs.npmjs.com/cli/v11/commands/npm-cache/",
+        "https://docs.npmjs.com/cli/v11/commands/npm-ci/"
+      ],
+      "requires": [
+        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+      ]
+    },
+    {
+      "id": "acquire-rust-cargo",
+      "title": "Rust toolchain and Cargo vendored sources",
+      "domains": [
+        "dependencies",
+        "pc-games",
+        "windows"
+      ],
+      "kind": "pointer",
+      "summary": "Pin toolchain, targets and Cargo.lock. Vendor locked crate sources while connected and retain cargo vendor source-replacement configuration. Prepare native libraries and linker toolchains separately. Build scripts and proc macros execute project dependency code.",
+      "tags": [
+        "dependency",
+        "acquisition",
+        "missing-payload"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
+      "status": "not-acquired",
+      "origin": "Original acquisition recipe in development/dependency-recipes.json",
+      "license": "Check every crate and native dependency license; preserve license texts with source snapshots.",
+      "officialSources": [
+        "https://doc.rust-lang.org/cargo/commands/cargo-vendor.html"
+      ],
+      "requires": [
+        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+      ]
+    },
+    {
+      "id": "acquire-python-wheels",
+      "title": "Python and target-specific wheelhouse",
+      "domains": [
+        "dependencies",
+        "websites"
+      ],
+      "kind": "pointer",
+      "summary": "Pin interpreter, OS, architecture, ABI and fully hashed requirements. Download all required wheels for the exact target; build any source-only packages in a controlled matching environment. Retain hashes and notices. A wheelhouse for one target is not a universal cache.",
+      "tags": [
+        "dependency",
+        "acquisition",
+        "missing-payload"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
+      "status": "not-acquired",
+      "origin": "Original acquisition recipe in development/dependency-recipes.json",
+      "license": "Wheel metadata and each bundled native library have their own terms.",
+      "officialSources": [
+        "https://pip.pypa.io/en/stable/cli/pip_download/",
+        "https://pip.pypa.io/en/stable/topics/repeatable-installs/"
+      ],
+      "requires": [
+        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+      ]
+    },
+    {
+      "id": "acquire-cpp-packages",
+      "title": "CMake, vcpkg and native libraries",
+      "domains": [
+        "dependencies",
+        "pc-games",
+        "windows"
+      ],
+      "kind": "pointer",
+      "summary": "Pin compiler, triplet, vcpkg baseline, overlays and CMake presets. Prepare source/download caches and matching binary cache for each triplet. Retain compiler flags, ABI identity, hashes and debug symbols separately. Avoid implicit FetchContent network operations in offline builds.",
+      "tags": [
+        "dependency",
+        "acquisition",
+        "missing-payload"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
+      "status": "not-acquired",
+      "origin": "Original acquisition recipe in development/dependency-recipes.json",
+      "license": "Library licenses, toolchain runtime and binary redistribution rights apply per component.",
+      "officialSources": [
+        "https://learn.microsoft.com/en-us/vcpkg/consume/binary-caching-local",
+        "https://cmake.org/cmake/help/latest/manual/cmake-presets.7.html"
+      ],
+      "requires": [
+        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+      ]
+    },
+    {
+      "id": "acquire-godot",
+      "title": "Godot editor, .NET support and export templates",
+      "domains": [
+        "android-games",
+        "dependencies",
+        "pc-games"
+      ],
+      "kind": "pointer",
+      "summary": "Acquire matching editor and export templates for the project's exact version and target. Keep .NET and native runtime prerequisites where used. Import project assets while connected only if importers require additional downloads, then verify a fresh offline import.",
+      "tags": [
+        "dependency",
+        "acquisition",
+        "missing-payload"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
+      "status": "not-acquired",
+      "origin": "Original acquisition recipe in development/dependency-recipes.json",
+      "license": "Godot MIT and bundled third-party notices apply. Exported games and assets need separate license records.",
+      "officialSources": [
+        "https://docs.godotengine.org/en/4.5/tutorials/export/exporting_projects.html",
+        "https://godotengine.org/license/"
+      ],
+      "requires": [
+        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+      ]
+    },
+    {
+      "id": "acquire-flutter",
+      "title": "Flutter SDK, Dart and pub cache",
+      "domains": [
+        "android-apps",
+        "dependencies",
+        "websites",
+        "windows"
+      ],
+      "kind": "pointer",
+      "summary": "Pin Flutter revision and pubspec.lock. Acquire the selected SDK and platform artifacts, populate the pub cache, and prepare Android/Windows SDKs separately. Review code generators and plugin build steps.",
+      "tags": [
+        "dependency",
+        "acquisition",
+        "missing-payload"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
+      "status": "not-acquired",
+      "origin": "Original acquisition recipe in development/dependency-recipes.json",
+      "license": "SDK, pub packages and platform plugins have separate licenses.",
+      "officialSources": [
+        "https://dart.dev/tools/pub/cmd/pub-get",
+        "https://docs.flutter.dev/install"
+      ],
+      "requires": [
+        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+      ]
+    },
+    {
+      "id": "acquire-browsers",
+      "title": "Target browsers and browser test dependencies",
+      "domains": [
+        "dependencies",
+        "userscripts",
+        "userstyles",
+        "websites"
+      ],
+      "kind": "pointer",
+      "summary": "Pin exact test browser builds, OS and architecture. Save browser-test runner packages and browser binary cache separately. Preserve fonts and rendering context for visual tests. Device/browser installation remains an explicit step.",
+      "tags": [
+        "dependency",
+        "acquisition",
+        "missing-payload"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
+      "status": "not-acquired",
+      "origin": "Original acquisition recipe in development/dependency-recipes.json",
+      "license": "Browser distribution and codec terms vary by vendor and channel.",
+      "officialSources": [
+        "https://playwright.dev/docs/browsers",
+        "https://www.mozilla.org/en-US/MPL/"
+      ],
+      "requires": [
+        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+      ]
+    },
+    {
+      "id": "acquire-userscript-manager",
+      "title": "Userscript manager and documentation",
+      "domains": [
+        "dependencies",
+        "userscripts"
+      ],
+      "kind": "pointer",
+      "summary": "Choose a manager and browser explicitly. Obtain its extension package through the official distribution channel and record version and terms. Use the original localhost fixture and narrow metadata template for offline development. Review grants, updates and remote requirements.",
+      "tags": [
+        "dependency",
+        "acquisition",
+        "missing-payload"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
+      "status": "not-acquired",
+      "origin": "Original acquisition recipe in development/dependency-recipes.json",
+      "license": "Managers have different distribution terms and API behavior. No universal manager package is bundled.",
+      "officialSources": [
+        "https://violentmonkey.github.io/api/metadata-block/",
+        "https://www.tampermonkey.net/documentation.php"
+      ],
+      "requires": [
+        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+      ]
+    },
+    {
+      "id": "acquire-userstyle-manager",
+      "title": "Userstyle manager and CSS target environment",
+      "domains": [
+        "dependencies",
+        "userstyles"
+      ],
+      "kind": "pointer",
+      "summary": "Choose manager/browser/version. Save original site fixtures and styles in the repository. Avoid remote imports and opaque dependencies; save asset licenses and hashes. Verify CSS behavior under forced colors and reduced motion.",
+      "tags": [
+        "dependency",
+        "acquisition",
+        "missing-payload"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
+      "status": "not-acquired",
+      "origin": "Original acquisition recipe in development/dependency-recipes.json",
+      "license": "Retain the manager's source/extension license and individual stylesheet/font/asset terms.",
+      "officialSources": [
+        "https://github.com/openstyles/stylus/wiki/UserCSS"
+      ],
+      "requires": [
+        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+      ]
+    },
+    {
+      "id": "acquire-unity",
+      "title": "Unity editor and licensed packages",
+      "domains": [
+        "android-games",
+        "dependencies",
+        "pc-games"
+      ],
+      "kind": "pointer",
+      "summary": "Use the developer's authorized vendor installation and offline activation workflow where supported. Record editor version, package manifest/lock, required target modules, assets and licenses. Keep proprietary payloads outside the shared repository unless rights are established.",
+      "tags": [
+        "dependency",
+        "acquisition",
+        "missing-payload"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
+      "status": "not-acquired",
+      "origin": "Original acquisition recipe in development/dependency-recipes.json",
+      "license": "Editor, platform modules, Asset Store packages and services are governed by their current vendor terms.",
+      "officialSources": [
+        "https://unity.com/legal",
+        "https://docs.unity3d.com/Manual/upm-ui-offline.html"
+      ],
+      "requires": [
+        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+      ]
+    },
+    {
+      "id": "acquire-unreal",
+      "title": "Unreal Engine and authorized source/content",
+      "domains": [
+        "android-games",
+        "dependencies",
+        "pc-games"
+      ],
+      "kind": "pointer",
+      "summary": "Acquire engine source/binaries and target modules through the developer's authorized account. Keep restricted engine/platform content in the approved private store. Record BuildGraph/toolchain inputs and asset/plugin licenses.",
+      "tags": [
+        "dependency",
+        "acquisition",
+        "missing-payload"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
+      "status": "not-acquired",
+      "origin": "Original acquisition recipe in development/dependency-recipes.json",
+      "license": "Epic EULA, source-access rules, platform SDKs and asset terms govern sharing.",
+      "officialSources": [
+        "https://www.unrealengine.com/en-US/eula/unreal"
+      ],
+      "requires": [
+        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+      ]
+    },
+    {
+      "id": "acquire-platform-services",
+      "title": "Steamworks, consoles and store/service SDKs",
+      "domains": [
+        "android-apps",
+        "android-games",
+        "dependencies",
+        "pc-games"
+      ],
+      "kind": "pointer",
+      "summary": "Use official authorized SDK delivery and retain only the allowed artifacts. Keep authentication data out of DevTools. Isolate platform APIs behind a host adapter and provide original offline test doubles for saves, achievements, billing and networking.",
+      "tags": [
+        "dependency",
+        "acquisition",
+        "missing-payload"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
+      "status": "not-acquired",
+      "origin": "Original acquisition recipe in development/dependency-recipes.json",
+      "license": "Partner access, agreements, credentials and store-specific terms apply.",
+      "officialSources": [
+        "https://partner.steamgames.com/doc/sdk",
+        "https://developer.android.com/google/play/integrity"
+      ],
+      "requires": [
+        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+      ]
+    },
+    {
+      "id": "acquire-media-assets",
+      "title": "Fonts, icons, audio, models and sample datasets",
+      "domains": [
+        "android-games",
+        "dependencies",
+        "pc-games",
+        "userstyles",
+        "websites",
+        "windows"
+      ],
+      "kind": "pointer",
+      "summary": "Prefer original synthetic fixtures. For external assets retain original bytes, creator/source/license, modifications and hashes. Verify fonts can be embedded or redistributed for the selected target, and preserve attribution in packaged artifacts.",
+      "tags": [
+        "dependency",
+        "acquisition",
+        "missing-payload"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion.",
+      "status": "not-acquired",
+      "origin": "Original acquisition recipe in development/dependency-recipes.json",
+      "license": "Each asset has its own rights, attribution and modification restrictions; repository or site labels do not grant universal rights.",
+      "officialSources": [
+        "https://spdx.org/licenses/",
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ],
+      "requires": [
+        "Developer-selected compatible version, target platform and licensed artifact acquisition."
+      ]
+    }
+  ]
+}

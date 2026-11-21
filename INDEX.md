@@ -11,6 +11,18 @@ This file is the router: find the domain, then the file, in seconds.
 4. Use the task routing table for direct jumps to the single best file.
 5. The root `README.md` + `toolkit.json` describe the PowerShell toolkit scripts, a separate thing from the knowledge library. `ai_tools/` holds offline Python CLI checks.
 
+## Offline Development Workflows
+
+Start with [development/README.md](development/README.md) for the cross-domain offline library covering Windows software, Android apps, Android games, websites, PC games, userscripts, userstyles and developer dependencies. Its original guides and templates fill workflow gaps while linking to the canonical domain material below. [SOURCES.json](development/vendor/SOURCES.json) records the small licensed source snapshots actually present.
+
+~~~powershell
+python development/tools/library.py audit
+python development/tools/library.py search "keyboard focus" --domain websites
+python development/tools/library.py plan --domain dependencies
+~~~
+
+The catalog distinguishes local content, reference-only pointers and dependencies that have not been acquired. Search reads curated local files without network access. Read dependency acquisition and licensing notes before preparing an offline toolchain. Validation proves the recorded files and examples, with actual builds and device/browser checks reported separately.
+
 ## Domains
 
 | Domain | Folder | Covers | Start | Single-file bundle |

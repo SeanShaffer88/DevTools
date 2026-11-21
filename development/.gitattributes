@@ -1,0 +1,4 @@
+* text eol=lf
+vendor/** -text -whitespace
+vendor/SOURCES.json text eol=lf
+vendor/README.md text eol=lf

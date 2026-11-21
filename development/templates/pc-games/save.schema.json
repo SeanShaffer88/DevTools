@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Original small game save contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "level", "score"],
+  "properties": {
+    "version": { "const": 1 },
+    "level": { "type": "integer", "minimum": 1, "maximum": 100 },
+    "score": { "type": "integer", "minimum": 0, "maximum": 1000000000 }
+  }
+}

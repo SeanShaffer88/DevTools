@@ -1,7 +1,7 @@
 {
   "repo": "SeanShaffer88/DevTools",
-  "generated": "2026-11-18",
-  "purpose": "Unified development knowledge library (six domains) plus the local developer toolkit",
+  "generated": "2026-11-21",
+  "purpose": "Offline AI development workflows, canonical domain libraries, and the local developer toolkit",
   "startHere": [
     "INDEX.md",
     "README.md"
@@ -95,6 +95,15 @@
       "manifest": "windevkit/manifest.json",
       "bundle": "windevkit/README.md",
       "files": 845
+    },
+    {
+      "id": "development",
+      "folder": "development/",
+      "title": "Offline development workflows and dependency preparation",
+      "covers": "Windows software, Android apps and games, websites, PC games, userscripts, userstyles, developer dependencies, bounded offline search, original templates and licensed source subsets",
+      "manifest": "development/manifest.json",
+      "bundle": "development/README.md",
+      "files": 51
     }
   ],
   "files": [
@@ -2509,6 +2518,312 @@
       "domain": "godot-toolbox",
       "bytes": 3301,
       "summary": ""
+    },
+    {
+      "path": "development/.gitattributes",
+      "domain": "development",
+      "bytes": 103,
+      "summary": "Original offline development resource or validated fixture"
+    },
+    {
+      "path": "development/AGENTS.md",
+      "domain": "development",
+      "bytes": 775,
+      "summary": "Development library maintenance"
+    },
+    {
+      "path": "development/catalog.seed.json",
+      "domain": "development",
+      "bytes": 68189,
+      "summary": "Original offline development resource or validated fixture"
+    },
+    {
+      "path": "development/catalog.vendor.json",
+      "domain": "development",
+      "bytes": 10971,
+      "summary": "Original offline development resource or validated fixture"
+    },
+    {
+      "path": "development/COVERAGE.md",
+      "domain": "development",
+      "bytes": 3267,
+      "summary": "Offline development coverage"
+    },
+    {
+      "path": "development/dependency-recipes.json",
+      "domain": "development",
+      "bytes": 23740,
+      "summary": "Original offline development resource or validated fixture"
+    },
+    {
+      "path": "development/guides/android-apps.md",
+      "domain": "development",
+      "bytes": 3031,
+      "summary": "Android apps"
+    },
+    {
+      "path": "development/guides/android-games.md",
+      "domain": "development",
+      "bytes": 3057,
+      "summary": "Android games"
+    },
+    {
+      "path": "development/guides/dependencies.md",
+      "domain": "development",
+      "bytes": 3554,
+      "summary": "Developer dependencies and offline readiness"
+    },
+    {
+      "path": "development/guides/pc-games.md",
+      "domain": "development",
+      "bytes": 3263,
+      "summary": "PC games"
+    },
+    {
+      "path": "development/guides/userscripts.md",
+      "domain": "development",
+      "bytes": 3223,
+      "summary": "Userscripts"
+    },
+    {
+      "path": "development/guides/userstyles.md",
+      "domain": "development",
+      "bytes": 2942,
+      "summary": "Userstyles"
+    },
+    {
+      "path": "development/guides/websites.md",
+      "domain": "development",
+      "bytes": 3166,
+      "summary": "Websites"
+    },
+    {
+      "path": "development/guides/windows.md",
+      "domain": "development",
+      "bytes": 3351,
+      "summary": "Windows software"
+    },
+    {
+      "path": "development/LICENSE",
+      "domain": "development",
+      "bytes": 1216,
+      "summary": "Original offline development resource or validated fixture"
+    },
+    {
+      "path": "development/manifest.json",
+      "domain": "development",
+      "bytes": 16883,
+      "summary": "Original offline development resource or validated fixture"
+    },
+    {
+      "path": "development/README.md",
+      "domain": "development",
+      "bytes": 2522,
+      "summary": "Offline development library"
+    },
+    {
+      "path": "development/schemas/catalog.schema.json",
+      "domain": "development",
+      "bytes": 2923,
+      "summary": "Original offline development resource or validated fixture"
+    },
+    {
+      "path": "development/schemas/manifest.schema.json",
+      "domain": "development",
+      "bytes": 1116,
+      "summary": "Original offline development resource or validated fixture"
+    },
+    {
+      "path": "development/templates/android-apps/acceptance.md",
+      "domain": "development",
+      "bytes": 1300,
+      "summary": "Android application acceptance"
+    },
+    {
+      "path": "development/templates/android-games/acceptance.md",
+      "domain": "development",
+      "bytes": 1141,
+      "summary": "Android game acceptance"
+    },
+    {
+      "path": "development/templates/dependencies/acquisition.json",
+      "domain": "development",
+      "bytes": 623,
+      "summary": "Original offline development resource or validated fixture"
+    },
+    {
+      "path": "development/templates/pc-games/save.json",
+      "domain": "development",
+      "bytes": 34,
+      "summary": "Original offline development resource or validated fixture"
+    },
+    {
+      "path": "development/templates/pc-games/save.schema.json",
+      "domain": "development",
+      "bytes": 402,
+      "summary": "Original offline development resource or validated fixture"
+    },
+    {
+      "path": "development/templates/userscripts/example.user.js",
+      "domain": "development",
+      "bytes": 978,
+      "summary": "Original offline development resource or validated fixture"
+    },
+    {
+      "path": "development/templates/userstyles/example.user.css",
+      "domain": "development",
+      "bytes": 548,
+      "summary": "Original offline development resource or validated fixture"
+    },
+    {
+      "path": "development/templates/websites/app.js",
+      "domain": "development",
+      "bytes": 611,
+      "summary": "Original offline development resource or validated fixture"
+    },
+    {
+      "path": "development/templates/websites/index.html",
+      "domain": "development",
+      "bytes": 802,
+      "summary": "Original offline development resource or validated fixture"
+    },
+    {
+      "path": "development/templates/websites/style.css",
+      "domain": "development",
+      "bytes": 538,
+      "summary": "Original offline development resource or validated fixture"
+    },
+    {
+      "path": "development/templates/windows/quality-contract.md",
+      "domain": "development",
+      "bytes": 1246,
+      "summary": "Windows application quality contract"
+    },
+    {
+      "path": "development/tests/test_library.py",
+      "domain": "development",
+      "bytes": 6046,
+      "summary": "Original offline development resource or validated fixture"
+    },
+    {
+      "path": "development/tools/library.py",
+      "domain": "development",
+      "bytes": 14364,
+      "summary": "Original offline development resource or validated fixture"
+    },
+    {
+      "path": "development/vendor/android-architecture/docs/ArchitectureLearningJourney.md",
+      "domain": "development",
+      "bytes": 14281,
+      "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
+    },
+    {
+      "path": "development/vendor/android-architecture/docs/ModularizationLearningJourney.md",
+      "domain": "development",
+      "bytes": 10615,
+      "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
+    },
+    {
+      "path": "development/vendor/android-architecture/LICENSE",
+      "domain": "development",
+      "bytes": 11358,
+      "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
+    },
+    {
+      "path": "development/vendor/android-architecture/README.md",
+      "domain": "development",
+      "bytes": 10998,
+      "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
+    },
+    {
+      "path": "development/vendor/godot-manual/LICENSE.txt",
+      "domain": "development",
+      "bytes": 19467,
+      "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
+    },
+    {
+      "path": "development/vendor/godot-manual/README.md",
+      "domain": "development",
+      "bytes": 3549,
+      "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
+    },
+    {
+      "path": "development/vendor/godot-manual/tutorials/export/exporting_for_android.rst",
+      "domain": "development",
+      "bytes": 9182,
+      "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
+    },
+    {
+      "path": "development/vendor/godot-manual/tutorials/inputs/input_examples.rst",
+      "domain": "development",
+      "bytes": 13239,
+      "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
+    },
+    {
+      "path": "development/vendor/godot-manual/tutorials/io/saving_games.rst",
+      "domain": "development",
+      "bytes": 15073,
+      "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
+    },
+    {
+      "path": "development/vendor/normalize-css/LICENSE.md",
+      "domain": "development",
+      "bytes": 1098,
+      "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
+    },
+    {
+      "path": "development/vendor/normalize-css/normalize.css",
+      "domain": "development",
+      "bytes": 6138,
+      "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
+    },
+    {
+      "path": "development/vendor/normalize-css/package.json",
+      "domain": "development",
+      "bytes": 397,
+      "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
+    },
+    {
+      "path": "development/vendor/README.md",
+      "domain": "development",
+      "bytes": 2298,
+      "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
+    },
+    {
+      "path": "development/vendor/SOURCES.json",
+      "domain": "development",
+      "bytes": 9453,
+      "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
+    },
+    {
+      "path": "development/vendor/windows-keyboard/hub/apps/develop/input/keyboard-events.md",
+      "domain": "development",
+      "bytes": 32102,
+      "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
+    },
+    {
+      "path": "development/vendor/windows-keyboard/hub/apps/develop/input/keyboard-interactions.md",
+      "domain": "development",
+      "bytes": 38012,
+      "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
+    },
+    {
+      "path": "development/vendor/windows-keyboard/LICENSE",
+      "domain": "development",
+      "bytes": 18650,
+      "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
+    },
+    {
+      "path": "development/vendor/windows-keyboard/LICENSE-CODE",
+      "domain": "development",
+      "bytes": 1090,
+      "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
+    },
+    {
+      "path": "development/vendor/windows-keyboard/README.md",
+      "domain": "development",
+      "bytes": 2278,
+      "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
     }
   ]
 }
