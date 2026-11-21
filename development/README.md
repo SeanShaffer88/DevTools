@@ -3,7 +3,7 @@
 Original guides and inert examples cover Windows, Android apps/games, websites,
 PC games, userscripts, userstyles and dependencies. Catalog entries distinguish
 original material, pinned vendored references, reference-only pointers and resources
-not acquired. Static examples and source snapshots are not verified applications.
+partial or restricted acquisition coverage. Static examples and source snapshots are not verified applications.
 
 Use installed Python 3.10 or newer; no packages, network, services or background work:
 
@@ -39,3 +39,20 @@ Planning lists guides/examples/references and explicit missing optional resource
 It does not install dependencies or execute examples. Upstream source and license
 metadata must be checked before adapting or distributing third-party material.
 Original library content uses [MIT](LICENSE); `vendor/` retains upstream terms.
+
+## Acquired dependencies and original substitutes
+
+See [acquisitions/README.md](acquisitions/README.md) and its 18 per-recipe reports
+for the exact redistributable payloads, retained licenses, source identities and
+remaining requirements. Binary archives/chunks use a separate streaming verifier
+and are never decoded by the bounded text search. Original contracts and local
+service fakes cover feasible restricted-toolchain workflows without claiming
+vendor API compatibility.
+
+```text
+python development/acquisitions/verify.py verify
+python -m unittest discover -s development/acquisitions/tests -v
+```
+
+No SDK installation, third-party execution, device/browser check or arbitrary
+project offline build is implied.

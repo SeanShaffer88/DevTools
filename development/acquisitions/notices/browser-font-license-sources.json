@@ -1,0 +1,14 @@
+[
+  {
+    "path": "notices/browser-noto-OFL.txt",
+    "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/main/LICENSE",
+    "sizeBytes": 4377,
+    "sha256": "0dab92d0544f7b233403f14b84a663bdbfa746982eda629e7f4f9ffe1b036feb"
+  },
+  {
+    "path": "notices/browser-twemoji-LICENSE.md",
+    "url": "https://raw.githubusercontent.com/mozilla/twemoji-colr/master/LICENSE.md",
+    "sizeBytes": 2172,
+    "sha256": "64419edc28e9163204c3be73f835a8dfc34cd6c9b8f7d067bb685f119f839a99"
+  }
+]

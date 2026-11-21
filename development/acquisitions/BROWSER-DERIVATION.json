@@ -1,0 +1,926 @@
+{
+  "originalUrl": "https://dist.torproject.org/mullvadbrowser/16.0.2/mullvad-browser-windows-x86_64-16.0.2.exe",
+  "originalPublisherSha256": "d2f8c8e98e619c1ac8cbae56ce4f5d0f599fd65f674ca4c9408bdf9be8ac35af",
+  "publisherInputChecksumVerified": true,
+  "sourceVersion": "153.7.0esr-16.0-1-build3",
+  "modified": true,
+  "name": "DevTools browser reference \u2014 derived from Mullvad16.0.2, uBO removed",
+  "extractionTool": "7-Zip26.06 officialrelease; retained scratchpublisherSHA/provenance; extractor launched, installer/browser never launched",
+  "selection": "Only Browser/ subtree of original installer; entire distribution/extensions/uBlock0@raymondhill.net.xpi omitted. All retained member bytes unchanged.",
+  "reason": "Bundled uBO includes Peter Lowe McRae noncommercial asset; avoid granting or relying on commercial redistribution rights. No uBO code/assets included in derived browser.",
+  "trademarks": "Mullvad Browser, Mozilla and third-party names/trademarks belong to their owners. Modified independent reference archive, no vendor endorsement or official package/signature claim.",
+  "inputMembers": [
+    {
+      "path": "AccessibleMarshal.dll",
+      "sizeBytes": 23552,
+      "sha256": "130bf1e9ad7a3fc6cb72f6eb40858e7f405551c06565799390c0f6f46303a039"
+    },
+    {
+      "path": "application.ini",
+      "sizeBytes": 685,
+      "sha256": "5efb50ab248f5d2ef67f13a4c8a0911a69ec51f36155e604726d63ca37f1f853"
+    },
+    {
+      "path": "blank.pdf",
+      "sizeBytes": 8959,
+      "sha256": "81a4b1da9df2cfe8f229abb939591b708e2a6ab7d4bc58d411ddb471d0dc3964"
+    },
+    {
+      "path": "browser/blank.pdf",
+      "sizeBytes": 8959,
+      "sha256": "81a4b1da9df2cfe8f229abb939591b708e2a6ab7d4bc58d411ddb471d0dc3964"
+    },
+    {
+      "path": "browser/confused_fox.pdf",
+      "sizeBytes": 53103,
+      "sha256": "e2916092e9764860829db21b78ab0fbfbb22f976687e65716ba7dbc16e954ce8"
+    },
+    {
+      "path": "browser/omni.ja",
+      "sizeBytes": 19486131,
+      "sha256": "3147b4352edbbf4aef7df0c52ce61155c153e06ac4e6140bf8ad830fe01b7263"
+    },
+    {
+      "path": "browser/VisualElements/VisualElements_150.png",
+      "sizeBytes": 12971,
+      "sha256": "c49b5dd06d19a389272483428873701c16f7f460a34afd186da6b831767a610f"
+    },
+    {
+      "path": "browser/VisualElements/VisualElements_70.png",
+      "sizeBytes": 4066,
+      "sha256": "6c3b617a5aa9530593dded0576279d418a918d70a976c623a15b9f06cb0b4e09"
+    },
+    {
+      "path": "confused_fox.pdf",
+      "sizeBytes": 53103,
+      "sha256": "e2916092e9764860829db21b78ab0fbfbb22f976687e65716ba7dbc16e954ce8"
+    },
+    {
+      "path": "CoreMessagingXP.dll",
+      "sizeBytes": 1032192,
+      "sha256": "b14c691b9dbdce843c3e06c7ebaa9073a6842447e873d4a3e09921d9de8d0c12"
+    },
+    {
+      "path": "d3dcompiler_47.dll",
+      "sizeBytes": 4410176,
+      "sha256": "25ebdf571d4c8dbca43c848a73cea72473da41927064d1399ce5a8c3daa7d0ea"
+    },
+    {
+      "path": "defaults/pref/channel-prefs.js",
+      "sizeBytes": 429,
+      "sha256": "7d9d37eff1dc4e59a6437026602f1953ef58ee46ff3d81dbb8e13b0fd0bec86b"
+    },
+    {
+      "path": "dependentlibs.list",
+      "sizeBytes": 55,
+      "sha256": "612e53338b53449be39f2e9086e15edc7bb3e7aa56c9d65a9d53b9eb3c3cc77d"
+    },
+    {
+      "path": "distribution/extensions/uBlock0@raymondhill.net.xpi",
+      "sizeBytes": 6332093,
+      "sha256": "66d0e3f21ce3b32b1bc0a9399b93cb2c9aa598ef18805d92118c76f66e266c1e"
+    },
+    {
+      "path": "distribution/extensions/{73a6fe31-595d-460b-a920-fcc0f8843232}.xpi",
+      "sizeBytes": 872679,
+      "sha256": "bbd764d65017d88df18ea65eb9981c6c97b79a39df7378e9e01fcfd71a564ab6"
+    },
+    {
+      "path": "distribution/extensions/{d19a89b9-76c1-4a61-bcd4-49e8de916403}.xpi",
+      "sizeBytes": 789111,
+      "sha256": "462cb43b7e87bbae6ea377538c96866dccc193d657f9f430062fdbbab87881fd"
+    },
+    {
+      "path": "fonts/000_README.txt",
+      "sizeBytes": 296,
+      "sha256": "14014e6904c0a496afaf2a7ba6f63926d16d4e8695862d3af439954434765de1"
+    },
+    {
+      "path": "fonts/NotoNaskhArabic-Regular.ttf",
+      "sizeBytes": 247336,
+      "sha256": "6f0a92031367b2f5a2078fe9d24f3433122b61a0bad57c423aad8f3c39aa2e6e"
+    },
+    {
+      "path": "fonts/NotoSans-Regular.ttf",
+      "sizeBytes": 621572,
+      "sha256": "478c558ea716033cd60c03438f628dfa75694dcf6b5f6d505a2f05fd2b4f3823"
+    },
+    {
+      "path": "fonts/NotoSansAdlam-Regular.ttf",
+      "sizeBytes": 93364,
+      "sha256": "4b51541536a7b28142a4571c16dc56e386c05f345ac9739ef8599d8ad4ed5e54"
+    },
+    {
+      "path": "fonts/NotoSansBalinese-Regular.ttf",
+      "sizeBytes": 92380,
+      "sha256": "cee58a184e7e00c4332087ac01870a69ac52fd5fa17ea3783ac728c945af1827"
+    },
+    {
+      "path": "fonts/NotoSansBamum-Regular.ttf",
+      "sizeBytes": 230008,
+      "sha256": "0282610e6923d06a4d120cff3824e829b4535a8c4c57c07e11dbe73475541084"
+    },
+    {
+      "path": "fonts/NotoSansBassaVah-Regular.ttf",
+      "sizeBytes": 8116,
+      "sha256": "8218239377452e05634a91ee8a4338daf0aa96a15673a437533a098eb9c06f53"
+    },
+    {
+      "path": "fonts/NotoSansBatak-Regular.ttf",
+      "sizeBytes": 21920,
+      "sha256": "fff67846a9b39bae335b3f5b8331203ffbd4ad9f5f9f3f0b57e8f48627825c12"
+    },
+    {
+      "path": "fonts/NotoSansBengali-Regular.ttf",
+      "sizeBytes": 143072,
+      "sha256": "b55c62ee531e3214da6c0701daecea89a52ba42db7d8206b92e6b51f397a3193"
+    },
+    {
+      "path": "fonts/NotoSansBuginese-Regular.ttf",
+      "sizeBytes": 7232,
+      "sha256": "bc19f17d7f6e8f280c2cc95ef6d1b67fac25becfe98722f482039a4d84f3c9ba"
+    },
+    {
+      "path": "fonts/NotoSansBuhid-Regular.ttf",
+      "sizeBytes": 5316,
+      "sha256": "328d80e11e7f65f9b6e4bac12de32b7ce42154301c2a14ba92155e32e05939d6"
+    },
+    {
+      "path": "fonts/NotoSansCanadianAboriginal-Regular.ttf",
+      "sizeBytes": 176372,
+      "sha256": "6f489ba696faff1d96f8ace395c0d22fe3b82621f69bf50b337112fb47ff1f17"
+    },
+    {
+      "path": "fonts/NotoSansChakma-Regular.ttf",
+      "sizeBytes": 82348,
+      "sha256": "60ce1d029e35b432dd68cc9f6c94f69bd84d8c97f28f06130186606dd2c3325d"
+    },
+    {
+      "path": "fonts/NotoSansCham-Regular.ttf",
+      "sizeBytes": 32036,
+      "sha256": "d48a34e02b4096eb3f2e008b74459789540598c2274d65fc53012517d0b08d92"
+    },
+    {
+      "path": "fonts/NotoSansCherokee-Regular.ttf",
+      "sizeBytes": 94732,
+      "sha256": "c052352137ae8d283840a0e2991a675d47859d8fdbae5726d373d4f0d97a8c87"
+    },
+    {
+      "path": "fonts/NotoSansCoptic-Regular.ttf",
+      "sizeBytes": 48948,
+      "sha256": "e70bd535d7e6cdf2346eab36ea76441059b18ee14d3243e85240b5e65eb0ad45"
+    },
+    {
+      "path": "fonts/NotoSansDeseret-Regular.ttf",
+      "sizeBytes": 19504,
+      "sha256": "9f384e8a75a059b8efcbead73ef5aa3b504ac3e9d218be5368a20b19bfccdeec"
+    },
+    {
+      "path": "fonts/NotoSansDevanagari-Regular.ttf",
+      "sizeBytes": 244284,
+      "sha256": "306b53ecfb182a504dd8a7446093c316387d2fd8dc350d0792ed1753fe0996cd"
+    },
+    {
+      "path": "fonts/NotoSansElbasan-Regular.ttf",
+      "sizeBytes": 18888,
+      "sha256": "6d52707e91a77e23f389f42b5da65d7047205e7833041fe0b2cd7ff280e14749"
+    },
+    {
+      "path": "fonts/NotoSansEthiopic-Regular.ttf",
+      "sizeBytes": 376804,
+      "sha256": "f6f7fc379db9438959a2b0527e7a2cf36ea9c84626d56ec444fff37fc24c3c10"
+    },
+    {
+      "path": "fonts/NotoSansGeorgian-Regular.ttf",
+      "sizeBytes": 52888,
+      "sha256": "d3e33254b09e7bb2c5cf0f17e554b80462056c5a107097f258d495168c3a9346"
+    },
+    {
+      "path": "fonts/NotoSansGrantha-Regular.ttf",
+      "sizeBytes": 364160,
+      "sha256": "41dd39f2f16e9539751c732f8d276079b98277bec2ea5945232a7ac594198000"
+    },
+    {
+      "path": "fonts/NotoSansGujarati-Regular.ttf",
+      "sizeBytes": 200704,
+      "sha256": "9b5a7aaeeb649a2e75a49d8b006a1f87db1b61c0df3b001609f4e0725d88dbf6"
+    },
+    {
+      "path": "fonts/NotoSansGunjalaGondi-Regular.ttf",
+      "sizeBytes": 69884,
+      "sha256": "bdc8ed1739118d7c1be43cb5b435817fb7a5ae0acb32c89b2ddd66e7e9c2d1b3"
+    },
+    {
+      "path": "fonts/NotoSansGurmukhi-Regular.ttf",
+      "sizeBytes": 55172,
+      "sha256": "658d0207da305a1411c539a8b0bbeda64d4146e54fb4827facddb890b6b90d74"
+    },
+    {
+      "path": "fonts/NotoSansHanifiRohingya-Regular.ttf",
+      "sizeBytes": 27580,
+      "sha256": "ce453eaf8807a9a410cdc2ebeb7ae009e90b9e611342ac239aa59b794bdcefdb"
+    },
+    {
+      "path": "fonts/NotoSansHanunoo-Regular.ttf",
+      "sizeBytes": 7668,
+      "sha256": "ef23d153e9d666becc0d79fa88f0ae21f46138f1285b8eac304661ab35717aed"
+    },
+    {
+      "path": "fonts/NotoSansJavanese-Regular.ttf",
+      "sizeBytes": 120504,
+      "sha256": "81fdea70d379989bafea65eae5a6a96144991b437415744716a49a56f09f747a"
+    },
+    {
+      "path": "fonts/NotoSansKannada-Regular.ttf",
+      "sizeBytes": 182416,
+      "sha256": "9ad74dc64838c6855b96f671fc08e425a58921b9d0c71712ea79c328a27e6e38"
+    },
+    {
+      "path": "fonts/NotoSansKayahLi-Regular.ttf",
+      "sizeBytes": 17428,
+      "sha256": "71235e4d51c4e591b20717c525997c72ee906a9d39ce55f8f8bb8c60e96ab807"
+    },
+    {
+      "path": "fonts/NotoSansKhmer-Regular.ttf",
+      "sizeBytes": 114576,
+      "sha256": "e66675f2082788f0511a714bef5a1748928294b38c8e286a96ea73a864b5e605"
+    },
+    {
+      "path": "fonts/NotoSansKhojki-Regular.ttf",
+      "sizeBytes": 70444,
+      "sha256": "4cdcae034430ea2b5695d39c1b1fcb8fac1d8c32ef7d66615248e72d41781367"
+    },
+    {
+      "path": "fonts/NotoSansKhudawadi-Regular.ttf",
+      "sizeBytes": 18684,
+      "sha256": "9efe023882dd36fbf7d838a7c5ec30e1b22a44f9733af8209dc7b8b30fdd0711"
+    },
+    {
+      "path": "fonts/NotoSansLao-Regular.ttf",
+      "sizeBytes": 35884,
+      "sha256": "0a86e5e1ccfe34ca78c43fac6829dc751b42bcc469272a9a55325aae587bfbe7"
+    },
+    {
+      "path": "fonts/NotoSansLepcha-Regular.ttf",
+      "sizeBytes": 26084,
+      "sha256": "8dad9629d709f0dba5d769988d1466daf300751f6bba2659465aaa6214261590"
+    },
+    {
+      "path": "fonts/NotoSansLimbu-Regular.ttf",
+      "sizeBytes": 12804,
+      "sha256": "5cea5d0f2a089c36ea24e8481f65a2aff5d4b0890db440326cea2c808f82d582"
+    },
+    {
+      "path": "fonts/NotoSansLisu-Regular.ttf",
+      "sizeBytes": 12696,
+      "sha256": "f56f6bca7618c5d95d9e2adf45168844f161dedd95abeadbd58c1fbba7be750d"
+    },
+    {
+      "path": "fonts/NotoSansMahajani-Regular.ttf",
+      "sizeBytes": 22376,
+      "sha256": "82116df1a82007b3a3692b9ab52683ccdc134d37d88b1e38921b07541b5afe08"
+    },
+    {
+      "path": "fonts/NotoSansMalayalam-Regular.ttf",
+      "sizeBytes": 112936,
+      "sha256": "c08de7fa8d032a5d6a4d120fb82c78cec60b362a4e73fa26360d89759ff2a7f9"
+    },
+    {
+      "path": "fonts/NotoSansMandaic-Regular.ttf",
+      "sizeBytes": 29328,
+      "sha256": "0ecb2440205b9fe02fce714ddda98bb59892d4f7eacce2c1f12028b172a34de8"
+    },
+    {
+      "path": "fonts/NotoSansMasaramGondi-Regular.ttf",
+      "sizeBytes": 30628,
+      "sha256": "da26087eb956e722a316a531a42f9f1ee8f8b60bf1a313c5763d71361c729c80"
+    },
+    {
+      "path": "fonts/NotoSansMedefaidrin-Regular.ttf",
+      "sizeBytes": 43112,
+      "sha256": "a91d91b2a94d480b6f95ebd64b66d21705f1823fd83c11a927848d979c776586"
+    },
+    {
+      "path": "fonts/NotoSansMeeteiMayek-Regular.ttf",
+      "sizeBytes": 16584,
+      "sha256": "66dd434ad6211990d95ba598ad8e44dee30fb32556cb2310bc7f246e00c40990"
+    },
+    {
+      "path": "fonts/NotoSansMendeKikakui-Regular.ttf",
+      "sizeBytes": 35196,
+      "sha256": "89496328e57ae33930d147127caf57edb3f23defa835f73ac3f0b1856e16a073"
+    },
+    {
+      "path": "fonts/NotoSansMiao-Regular.ttf",
+      "sizeBytes": 36424,
+      "sha256": "a172b5da5bf602042cb526172ecb279085c906f23d901d882cf6938909f7e574"
+    },
+    {
+      "path": "fonts/NotoSansModi-Regular.ttf",
+      "sizeBytes": 44220,
+      "sha256": "7bebf7f16e7f98695e1003adaa3b1438ef977803aa166fa7d5e6b18c9dfa69b8"
+    },
+    {
+      "path": "fonts/NotoSansMongolian-Regular.ttf",
+      "sizeBytes": 344828,
+      "sha256": "a28ba3cde3de22de7ddc934bd5d5babe54e6ce28c073a288cd978ffcf26b295b"
+    },
+    {
+      "path": "fonts/NotoSansMro-Regular.ttf",
+      "sizeBytes": 6628,
+      "sha256": "2ab2149be222d9671ab2edcbe8736381e2d1550662a368b5087fd9e196bc69b4"
+    },
+    {
+      "path": "fonts/NotoSansMultani-Regular.ttf",
+      "sizeBytes": 16496,
+      "sha256": "12c2437f98173dbff98fa18bcc73c6a44896634fb6d55d8f6d028394af4fc9b9"
+    },
+    {
+      "path": "fonts/NotoSansNewa-Regular.ttf",
+      "sizeBytes": 152712,
+      "sha256": "3aede9a3ab5740babffe75f7c0d97e2329734b8cb470c999be1871362084a8bd"
+    },
+    {
+      "path": "fonts/NotoSansNewTaiLue-Regular.ttf",
+      "sizeBytes": 20288,
+      "sha256": "35499f3b79c2a4683ba2784b0d4c652d58e2c28c48775b33c9e8e94f2dee965a"
+    },
+    {
+      "path": "fonts/NotoSansNKo-Regular.ttf",
+      "sizeBytes": 39592,
+      "sha256": "c756efb2c40f754107d76fa4e401fc3b8b7edec5cc65db549d3d0236ac6d08a1"
+    },
+    {
+      "path": "fonts/NotoSansOlChiki-Regular.ttf",
+      "sizeBytes": 15684,
+      "sha256": "4b1ad6ec4a30277c75fd66465b0b9ae489e19f8fdf44ef3179b6fda7f5ceb32d"
+    },
+    {
+      "path": "fonts/NotoSansOriya-Regular.ttf",
+      "sizeBytes": 114952,
+      "sha256": "38ac5eae2e1666558b88c63bf584349d6f924cca6b3b8867811546734afeb251"
+    },
+    {
+      "path": "fonts/NotoSansOsage-Regular.ttf",
+      "sizeBytes": 20596,
+      "sha256": "7801aa3d99d9da1a8fac388104e9fff4d94ddd28a07579b13a75224660b22fbf"
+    },
+    {
+      "path": "fonts/NotoSansOsmanya-Regular.ttf",
+      "sizeBytes": 16584,
+      "sha256": "85b6f588013bdd027a683a454b5ecf4b1b859b7175ea98219f645be53dfc4753"
+    },
+    {
+      "path": "fonts/NotoSansPahawhHmong-Regular.ttf",
+      "sizeBytes": 18168,
+      "sha256": "93c0c23cc50e5fb1e82a0eeaa8cd2e73d80e5af07be4419b882a2b54898def41"
+    },
+    {
+      "path": "fonts/NotoSansPauCinHau-Regular.ttf",
+      "sizeBytes": 9048,
+      "sha256": "921cdd68b3db2ac8ce8c48aafb09027845db8d8360652e4446ee701f066a98ec"
+    },
+    {
+      "path": "fonts/NotoSansRejang-Regular.ttf",
+      "sizeBytes": 7704,
+      "sha256": "ac84f549caba39e85d0d22a62f4fcf7dcacdf263d01527eb44388e96ce58d785"
+    },
+    {
+      "path": "fonts/NotoSansRunic-Regular.ttf",
+      "sizeBytes": 9856,
+      "sha256": "c43f941ef6c8a4f8217e7ffb332fce74f760140a7fd5919f86347e5e2a10b5c9"
+    },
+    {
+      "path": "fonts/NotoSansSamaritan-Regular.ttf",
+      "sizeBytes": 10788,
+      "sha256": "430aa9e70b6c500c4267e9ecc5165d15bfefc761d86650101deeb7e07260d5ed"
+    },
+    {
+      "path": "fonts/NotoSansSaurashtra-Regular.ttf",
+      "sizeBytes": 35252,
+      "sha256": "8ebdec75287c63310a1aff3660d0fa5b3dd027606c17f69217a5a5a5142f6e63"
+    },
+    {
+      "path": "fonts/NotoSansSharada-Regular.ttf",
+      "sizeBytes": 53372,
+      "sha256": "8350a4cf4b5bdc0707aa5077075b0885a4f3f0f08ed6b49b8e5d142aef4032da"
+    },
+    {
+      "path": "fonts/NotoSansShavian-Regular.ttf",
+      "sizeBytes": 12996,
+      "sha256": "6e2f222f7a24578efe1fd112678e7fe3709e8157793456c75053617848619d1e"
+    },
+    {
+      "path": "fonts/NotoSansSinhala-Regular.ttf",
+      "sizeBytes": 154912,
+      "sha256": "9e32612d47004552f3125e78648a9e2e7899a216ccd3cefbb93a9b5f4c809feb"
+    },
+    {
+      "path": "fonts/NotoSansSoraSompeng-Regular.ttf",
+      "sizeBytes": 8048,
+      "sha256": "3499f8e787031f75771e481a53ca41f6c0b65dbdf149dac3cb319c29c53c28c2"
+    },
+    {
+      "path": "fonts/NotoSansSoyombo-Regular.ttf",
+      "sizeBytes": 66356,
+      "sha256": "31a5e5997360e6d1d574af04da3eefaeb3db18831df795c145634e517e554e1b"
+    },
+    {
+      "path": "fonts/NotoSansSundanese-Regular.ttf",
+      "sizeBytes": 22640,
+      "sha256": "6cf8ae0d063b8af8ab1bc1b8c7041ac92104e74989dcc1217763723ca6a50c9e"
+    },
+    {
+      "path": "fonts/NotoSansSylotiNagri-Regular.ttf",
+      "sizeBytes": 16740,
+      "sha256": "b3bb806a5fe533e550a27b51b28961cb09522f2a700c2c858169d9c8ed6573c4"
+    },
+    {
+      "path": "fonts/NotoSansSymbols-Regular.ttf",
+      "sizeBytes": 226980,
+      "sha256": "d0e98e9a2c046594c5021437273943be7e79e0fd980fde125279e22302212595"
+    },
+    {
+      "path": "fonts/NotoSansSymbols2-Regular.ttf",
+      "sizeBytes": 671568,
+      "sha256": "c4a0a80f0041ce4be81e2478faad22776d23edb98ae3f0d19bd37044820ecf9d"
+    },
+    {
+      "path": "fonts/NotoSansSyriac-Regular.ttf",
+      "sizeBytes": 73796,
+      "sha256": "4440929bf1a47bb50179e8d8495641d208c63d607355e451f29ea2d3e5343290"
+    },
+    {
+      "path": "fonts/NotoSansTagalog-Regular.ttf",
+      "sizeBytes": 7060,
+      "sha256": "8fdf54f14d3869e5bfabb7c552e32ac39a2f7609cc6e857a2e8480da2ad9031f"
+    },
+    {
+      "path": "fonts/NotoSansTagbanwa-Regular.ttf",
+      "sizeBytes": 5940,
+      "sha256": "5ed080972eead72d6f7f074ac2020dd6f82d8158161040f702b539e43a776a28"
+    },
+    {
+      "path": "fonts/NotoSansTaiLe-Regular.ttf",
+      "sizeBytes": 19476,
+      "sha256": "25d2ef9aa4438c7b651ada7f32801e196b5a4a3ca8d6e41cf36e37ecb99aff22"
+    },
+    {
+      "path": "fonts/NotoSansTaiTham-Regular.ttf",
+      "sizeBytes": 116880,
+      "sha256": "b94134811a2f8c26631a728837bb72f74dad87402810fc46b34c310312a6b369"
+    },
+    {
+      "path": "fonts/NotoSansTaiViet-Regular.ttf",
+      "sizeBytes": 30580,
+      "sha256": "5f7e2a8d5cca567620d101534fc34b432e1577ff01f3f1752750050c90b1ca7f"
+    },
+    {
+      "path": "fonts/NotoSansTakri-Regular.ttf",
+      "sizeBytes": 18456,
+      "sha256": "c14fb3d442ee9330d54d22aed37a9ee78ec4038055faa195d62661e4bb9988f9"
+    },
+    {
+      "path": "fonts/NotoSansTamil-Regular.ttf",
+      "sizeBytes": 73992,
+      "sha256": "3c0a186feb3c63c7f6d63e1511dcdc144e745ae09b98e217c83f3e317974f6f9"
+    },
+    {
+      "path": "fonts/NotoSansTelugu-Regular.ttf",
+      "sizeBytes": 235176,
+      "sha256": "b274780b69d1d23fe84b55e809a152cb2ac5306d33864b1f87622f6971871aae"
+    },
+    {
+      "path": "fonts/NotoSansThaana-Regular.ttf",
+      "sizeBytes": 27308,
+      "sha256": "7543935bdcef770c9d3dd54222651b29040e5ec82f3bc58542392b2c7a9cbd3c"
+    },
+    {
+      "path": "fonts/NotoSansTifinagh-Regular.ttf",
+      "sizeBytes": 79376,
+      "sha256": "8058054786bc572007193988654d1ded342bc2538c2d91c50d1a7238ea1a99cc"
+    },
+    {
+      "path": "fonts/NotoSansTifinaghAdrar-Regular.ttf",
+      "sizeBytes": 79000,
+      "sha256": "0c07dd9372f3d542175e3eda76215977f0f8bcdfcd24dd5f3c634bbfac535bdc"
+    },
+    {
+      "path": "fonts/NotoSansTifinaghAgrawImazighen-Regular.ttf",
+      "sizeBytes": 79232,
+      "sha256": "c1750eaaf59d6336971193d1b4d69970e1c5a8c3c079ce2f739f0d1bdff3aa6d"
+    },
+    {
+      "path": "fonts/NotoSansTifinaghAhaggar-Regular.ttf",
+      "sizeBytes": 79508,
+      "sha256": "a4864c1eb95707283eee5dbba64bf6b99edd1011c2b8a9e51c7a1d1bf941ba03"
+    },
+    {
+      "path": "fonts/NotoSansTifinaghAir-Regular.ttf",
+      "sizeBytes": 79560,
+      "sha256": "32b8789d0d47725f8b71824f0ebb393c401f0481fa31906e34b5adf0acda89cd"
+    },
+    {
+      "path": "fonts/NotoSansTifinaghAPT-Regular.ttf",
+      "sizeBytes": 79372,
+      "sha256": "3a024280a937fd6371ed191ae718c1bcfd5379036e7e9048aab4cb5dcdfefdd7"
+    },
+    {
+      "path": "fonts/NotoSansTifinaghAzawagh-Regular.ttf",
+      "sizeBytes": 79660,
+      "sha256": "1fce773308ca5eb9132fd66323feaef0b034ab2b3f63275e93c90ce637d3db44"
+    },
+    {
+      "path": "fonts/NotoSansTifinaghGhat-Regular.ttf",
+      "sizeBytes": 79016,
+      "sha256": "c06c851cbed87d8281688b04d02f26c9d70190816ef30123790553eb8e8e3fa0"
+    },
+    {
+      "path": "fonts/NotoSansTifinaghHawad-Regular.ttf",
+      "sizeBytes": 79184,
+      "sha256": "88cf22f57c3c99964e88cc2b16eccbd8d60dd7e61cbb49fc6944779c7cd17298"
+    },
+    {
+      "path": "fonts/NotoSansTifinaghRhissaIxa-Regular.ttf",
+      "sizeBytes": 79308,
+      "sha256": "3b809a1556fead28de406d878632ea89fa474c4488c41ae7354f7f8b5fa5d719"
+    },
+    {
+      "path": "fonts/NotoSansTifinaghSIL-Regular.ttf",
+      "sizeBytes": 79620,
+      "sha256": "788740f9e2ca1ea75b7351ce4ccac6d583377adbba98740e6ab05ffaf3507fdc"
+    },
+    {
+      "path": "fonts/NotoSansTifinaghTawellemmet-Regular.ttf",
+      "sizeBytes": 79632,
+      "sha256": "8a5f9889d655290a22740bc2c02a7fbbf6a7ab2d5c8de119f76e8644bd8dcff7"
+    },
+    {
+      "path": "fonts/NotoSansTirhuta-Regular.ttf",
+      "sizeBytes": 96848,
+      "sha256": "f7a0d9fa2557ebebbacdc8888556e217c298eb049db6ff6dc210e916a1d9e860"
+    },
+    {
+      "path": "fonts/NotoSansVai-Regular.ttf",
+      "sizeBytes": 91252,
+      "sha256": "3b454157b5fc64cc21fb9c76cc86390997b1540499906179a1d1375e59d1bf33"
+    },
+    {
+      "path": "fonts/NotoSansWancho-Regular.ttf",
+      "sizeBytes": 18448,
+      "sha256": "fb2e48d59128cdea1cee0ba24373bd5ff085a72cf98e53bc1674770c8ac67d9a"
+    },
+    {
+      "path": "fonts/NotoSansWarangCiti-Regular.ttf",
+      "sizeBytes": 27264,
+      "sha256": "f992ab2ede41083879ac42480d360807106afcd060f5df77ae73f79a26067fa5"
+    },
+    {
+      "path": "fonts/NotoSansYi-Regular.ttf",
+      "sizeBytes": 183036,
+      "sha256": "9d5d3f9912f14bee3f32c9d8add8a5dd02910dcabc00e3702a2b9883556852c9"
+    },
+    {
+      "path": "fonts/NotoSansZanabazarSquare-Regular.ttf",
+      "sizeBytes": 20544,
+      "sha256": "4a42d77e15f8f6a295a682369fb941afca2c494bd4f4341882d5562f1ed5ed23"
+    },
+    {
+      "path": "fonts/NotoSerif-Regular.ttf",
+      "sizeBytes": 712444,
+      "sha256": "19e72cd8d595fae5bd74a5206f5d938512e1183d4fed7abb1ec1be1d7efa5f88"
+    },
+    {
+      "path": "fonts/NotoSerifBalinese-Regular.ttf",
+      "sizeBytes": 53872,
+      "sha256": "8282b492a229638518fc586cf55cfe3751ca68f61feb56c89d6bff48607719eb"
+    },
+    {
+      "path": "fonts/NotoSerifBengali-Regular.ttf",
+      "sizeBytes": 324020,
+      "sha256": "c1743dce480147e4563e479ddc31d5ff6544372437428622a54c7c867c50f55b"
+    },
+    {
+      "path": "fonts/NotoSerifDevanagari-Regular.ttf",
+      "sizeBytes": 280180,
+      "sha256": "e272d11d271c61a8d5d0f65764fd368ae53b9f9dabcce244a8941aa8f32ccc70"
+    },
+    {
+      "path": "fonts/NotoSerifDogra-Regular.ttf",
+      "sizeBytes": 28800,
+      "sha256": "f2a5287a3b9d0a9a833c80b6c037fc998bc70544ee5f91f0245869013e171ae3"
+    },
+    {
+      "path": "fonts/NotoSerifEthiopic-Regular.ttf",
+      "sizeBytes": 309844,
+      "sha256": "4d14f10b7436e762d41ddd9486acdc708744bf377a575d855b81b847b9590779"
+    },
+    {
+      "path": "fonts/NotoSerifGeorgian-Regular.ttf",
+      "sizeBytes": 61956,
+      "sha256": "e222862f34ad05bdf950de1049abf6149d250b9e27c1cc482dd645412afb64ff"
+    },
+    {
+      "path": "fonts/NotoSerifGrantha-Regular.ttf",
+      "sizeBytes": 365964,
+      "sha256": "3eb89dbf48e7b2b91893ac32e620509cf541e2445ea2c010f0bfe2e09e9e30fd"
+    },
+    {
+      "path": "fonts/NotoSerifGujarati-Regular.ttf",
+      "sizeBytes": 146056,
+      "sha256": "b8961ff6faf8e5561e3d0109953c4a9798e9bb8e8d48f66c3d1ef038fe45c940"
+    },
+    {
+      "path": "fonts/NotoSerifGurmukhi-Regular.ttf",
+      "sizeBytes": 53316,
+      "sha256": "5ef2d04a6d6fd22959989d14148dcf0ffbb970cc35e6316ba63cd5c146f32667"
+    },
+    {
+      "path": "fonts/NotoSerifKannada-Regular.ttf",
+      "sizeBytes": 194376,
+      "sha256": "95a78c95359dc59b9ec56bdc5bdf8a9642394d2ef87ded945fb3885893b3eac6"
+    },
+    {
+      "path": "fonts/NotoSerifKhmer-Regular.ttf",
+      "sizeBytes": 154372,
+      "sha256": "ef0612212c7417da732dd43c744abf66f4f62c45d4f8962e42c8553230e0da2a"
+    },
+    {
+      "path": "fonts/NotoSerifKhojki-Regular.ttf",
+      "sizeBytes": 146988,
+      "sha256": "ab7738bcbff4be789ca459877eab7f31add89d1515decba4097abcaafcd9d604"
+    },
+    {
+      "path": "fonts/NotoSerifLao-Regular.ttf",
+      "sizeBytes": 42880,
+      "sha256": "a8d38866520f3c96d0e0e43f079f16c72ae4963bbabdf21cae26092c7cb65ec7"
+    },
+    {
+      "path": "fonts/NotoSerifMalayalam-Regular.ttf",
+      "sizeBytes": 111872,
+      "sha256": "45c34ac8c169a37a4fbb5b8fbf507def328bbf36180b08095726d460d577ec1d"
+    },
+    {
+      "path": "fonts/NotoSerifMyanmar-Regular.ttf",
+      "sizeBytes": 277152,
+      "sha256": "fe1a5f1c9cafab515e89e20f884aee3681ccd9f3f2e7bf357c6758d9268535a5"
+    },
+    {
+      "path": "fonts/NotoSerifNPHmong-Regular.ttf",
+      "sizeBytes": 24376,
+      "sha256": "becff5fa38bed12954dc62a8461e80231fa44307f4ae4c96b31a3c0df0e04bfe"
+    },
+    {
+      "path": "fonts/NotoSerifSinhala-Regular.ttf",
+      "sizeBytes": 325860,
+      "sha256": "0d5a63d34ed378e345ec96021d72385c8e288ecd0ea36511a329aed448ede375"
+    },
+    {
+      "path": "fonts/NotoSerifTamil-Regular.ttf",
+      "sizeBytes": 79476,
+      "sha256": "8a8cb015a3afec2998e01aabcb42fb365994132d95dbc2150208b4fefd8dc2e4"
+    },
+    {
+      "path": "fonts/NotoSerifTelugu-Regular.ttf",
+      "sizeBytes": 311724,
+      "sha256": "2b376e0351fb140f2edad9c54e8977f4f1effc4fe72443e152b3f6ad392c6f5f"
+    },
+    {
+      "path": "fonts/NotoSerifTibetan-Regular.ttf",
+      "sizeBytes": 609688,
+      "sha256": "ee97bf3dc56e813651db734c9f35f8f1d41e7e31acf5f7d893e64ad22b292446"
+    },
+    {
+      "path": "fonts/NotoSerifYezidi-Regular.ttf",
+      "sizeBytes": 18252,
+      "sha256": "fb30c28d72e2dd2468a848a2cb282b2781c9ae9b84a9e2e070673edcc4438f7d"
+    },
+    {
+      "path": "fonts/Pyidaungsu-2.5.3_Regular.ttf",
+      "sizeBytes": 189468,
+      "sha256": "df7106c15da76f6a24c10821b43da51f54961f6bc6791fb1fcf21c6c60bb2e10"
+    },
+    {
+      "path": "fonts/TwemojiMozilla.ttf",
+      "sizeBytes": 1474284,
+      "sha256": "6d90152ee0d29e82fe2a87793af5aa4b7ad13e6538360889e141e81ed299ee8e"
+    },
+    {
+      "path": "freebl3.dll",
+      "sizeBytes": 1139712,
+      "sha256": "a0cbff9b9f0dd5cc04e5867e762d4c65054a99eb8b731a7a727c286683a642eb"
+    },
+    {
+      "path": "gkcodecs.dll",
+      "sizeBytes": 9374208,
+      "sha256": "00a04876debfc588fe518ad1427e6a2cd4ed3108b7f4bc9deb2a5174dde821d2"
+    },
+    {
+      "path": "installation_dir_layout/versioned/InstallationDirLayout.dll",
+      "sizeBytes": 12800,
+      "sha256": "d3db7c51d00d4167eb0bf11ce0ccfb5d6f87b4151446c66720334f59becc0fe6"
+    },
+    {
+      "path": "InstallationDirLayout.dll",
+      "sizeBytes": 12800,
+      "sha256": "589b66478280ebefd6a8c628c519d953829a75e736fc83d071e73be11bfc1834"
+    },
+    {
+      "path": "lgpllibs.dll",
+      "sizeBytes": 346624,
+      "sha256": "728d4bdb775eeaa93d92309e62d4e4154242e005b5a13368d941c7b5979b6269"
+    },
+    {
+      "path": "libEGL.dll",
+      "sizeBytes": 218112,
+      "sha256": "c3560f8cce255d98b138de2b045668e4d84e232232a777bed17cbb4e4dc61d46"
+    },
+    {
+      "path": "libGLESv2.dll",
+      "sizeBytes": 5364736,
+      "sha256": "1287e708efe055721250fb7b0c3476b69af1faf577332cf167fba2d53777afb0"
+    },
+    {
+      "path": "marshal.dll",
+      "sizeBytes": 499712,
+      "sha256": "ddf4dc9d52fc4fbd4b62ca2ee6d611f05d77c1cd79f39618a09c7815bde2116c"
+    },
+    {
+      "path": "Microsoft.InputStateManager.dll",
+      "sizeBytes": 446464,
+      "sha256": "1b0a0e141545055d58bbac4fa119db502b368ec6b926641d26f57af99ece2c44"
+    },
+    {
+      "path": "Microsoft.Internal.FrameworkUdk.dll",
+      "sizeBytes": 921600,
+      "sha256": "5a9ec0592d406ad9e14cd39b03efb6f71935e3db36f7d7fe8b2a72a25f09f30a"
+    },
+    {
+      "path": "Microsoft.UI.Composition.OSSupport.dll",
+      "sizeBytes": 57344,
+      "sha256": "e7ec01af02f5e77850c18f50013cc9ec560bb8817d13a1f3191da8c4a73947b8"
+    },
+    {
+      "path": "Microsoft.UI.Input.dll",
+      "sizeBytes": 1560576,
+      "sha256": "d0f132c6716a2102f1e614a2be3d53c377f9516509a182f370aaafe992efa5aa"
+    },
+    {
+      "path": "Microsoft.UI.Windowing.Core.dll",
+      "sizeBytes": 532480,
+      "sha256": "023cba55bf49f1d7ad80747e3278cd9ebeb2944323cc4b434ea9f1bb39d23dc2"
+    },
+    {
+      "path": "Microsoft.UI.Windowing.dll",
+      "sizeBytes": 540672,
+      "sha256": "ef03bf547097ed74e8e921e43a9b93836b43ee2a418533b5a0dcdc72e99dcb4e"
+    },
+    {
+      "path": "Microsoft.WindowsAppRuntime.dll",
+      "sizeBytes": 2590208,
+      "sha256": "e8fda8807bae12dfd2ae366fbe09ac641a6c43d076f1102e5232b0e26ff95fab"
+    },
+    {
+      "path": "Microsoft.WindowsAppRuntime.Insights.Resource.dll",
+      "sizeBytes": 24064,
+      "sha256": "d623a60884c9e5c60ec53ec04cd02da3ea22377f4b856866a3d6dc357fe5270e"
+    },
+    {
+      "path": "mozavcodec.dll",
+      "sizeBytes": 4283904,
+      "sha256": "5603b193a80861f6fbaae068421e1c2dfb1f4d264f8a4983d0b55e97e5757325"
+    },
+    {
+      "path": "mozavutil.dll",
+      "sizeBytes": 611328,
+      "sha256": "7dc9e1592a5e47ea9efa86b09ebc3babce71abccc9ddcd828145fab82c0437d8"
+    },
+    {
+      "path": "mozglue.dll",
+      "sizeBytes": 989696,
+      "sha256": "a50be97eed043128519b9c9b8855441c31abbd16c49c0fe2fa5f583b72cffecb"
+    },
+    {
+      "path": "MullvadBrowser/Docs/ChangeLog.txt",
+      "sizeBytes": 139692,
+      "sha256": "63074bad7b94edac0c3b8b65ca8a9aaf3546e67c98cb434056fc5fbfac2ef913"
+    },
+    {
+      "path": "MullvadBrowser/Docs/Licenses/Firefox.txt",
+      "sizeBytes": 16726,
+      "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85"
+    },
+    {
+      "path": "MullvadBrowser/Docs/Licenses/NoScript.txt",
+      "sizeBytes": 813,
+      "sha256": "2e0cc4147b05ed702509b7f2f290b105409d97419d4c75562953634e9b0faffb"
+    },
+    {
+      "path": "MullvadBrowser/Docs/Licenses/Noto-CJK-Font.txt",
+      "sizeBytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+    },
+    {
+      "path": "MullvadBrowser/Docs/Licenses/Noto-Fonts.txt",
+      "sizeBytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "MullvadBrowser/Docs/Licenses/uBlockOrigin.txt",
+      "sizeBytes": 35126,
+      "sha256": "e73d33841f942fa73aa5a63d4a6399cc39a29564db1dbca0915485842fcb236d"
+    },
+    {
+      "path": "mullvadbrowser.exe",
+      "sizeBytes": 1753600,
+      "sha256": "3923856344ae7027e3b182ff2945603d3b646c45c2ee0036f1a21ade01ba14c6"
+    },
+    {
+      "path": "mullvadbrowser.VisualElementsManifest.xml",
+      "sizeBytes": 557,
+      "sha256": "4d842de08d16aeda214a59be69f6bb0cb273b61139d24126692c1e663776a79e"
+    },
+    {
+      "path": "nmhproxy.exe",
+      "sizeBytes": 817152,
+      "sha256": "d6fc6e3da89e755638bda3265e9eb831a920d86f29c6ac2619edef4b4088ab09"
+    },
+    {
+      "path": "nss3.dll",
+      "sizeBytes": 2825728,
+      "sha256": "926c507a7ca039d02dcc98ff189f66efbd2d7a860fd5c0675590b2ee899d1833"
+    },
+    {
+      "path": "omni.ja",
+      "sizeBytes": 19486131,
+      "sha256": "3147b4352edbbf4aef7df0c52ce61155c153e06ac4e6140bf8ad830fe01b7263"
+    },
+    {
+      "path": "platform.ini",
+      "sizeBytes": 182,
+      "sha256": "dd570949b1fa7a03ccb8c3cda53dde1841474aefb59601ece5a089404cd52ecc"
+    },
+    {
+      "path": "plugin-container.exe",
+      "sizeBytes": 825344,
+      "sha256": "0c3f18c53d680cb1fe33c89c79e15e3c602b37e7b418883c35fc18e3b24a026f"
+    },
+    {
+      "path": "postupdate.exe",
+      "sizeBytes": 503784,
+      "sha256": "d502819bdefa83df4d5bdf78cdafca6199d54e1f6c3ebc5477b95782ec1b3132"
+    },
+    {
+      "path": "precomplete",
+      "sizeBytes": 7302,
+      "sha256": "c08f6cc422900cfd32bbc0d6ac520c63240e7188ed4ae1c968a65839b0866d4c"
+    },
+    {
+      "path": "removed-files",
+      "sizeBytes": 16,
+      "sha256": "52523da24287c4d459131c2e4818a713a732765e06e9bbba1cf353888ba34f9f"
+    },
+    {
+      "path": "softokn3.dll",
+      "sizeBytes": 316416,
+      "sha256": "99c14c33afb89faa54a29828bb01f6148275a6e4bb3faa8c2dfbe6e45f5dc403"
+    },
+    {
+      "path": "update-settings.ini",
+      "sizeBytes": 139,
+      "sha256": "ada1c0c7987a65426ec163dafb6a5c42bb45ea65597f7d16e21e915183f54d2a"
+    },
+    {
+      "path": "updater.exe",
+      "sizeBytes": 1339392,
+      "sha256": "75b84cc4480c7cf3ff88f016225773d202818a2dd6e7ebc5d8777522b5ca9aaf"
+    },
+    {
+      "path": "updater.ini",
+      "sizeBytes": 1311,
+      "sha256": "365d149099939c64a23997380dfb7c59306f0d5b766f2c881596a7901df48a8c"
+    },
+    {
+      "path": "version.json",
+      "sizeBytes": 73,
+      "sha256": "7a418283c7e552dfe4202034e5ea1139b71016344d2622af5ed0591409c3f7de"
+    },
+    {
+      "path": "VisualElements/VisualElements_150.png",
+      "sizeBytes": 12971,
+      "sha256": "c49b5dd06d19a389272483428873701c16f7f460a34afd186da6b831767a610f"
+    },
+    {
+      "path": "VisualElements/VisualElements_70.png",
+      "sizeBytes": 4066,
+      "sha256": "6c3b617a5aa9530593dded0576279d418a918d70a976c623a15b9f06cb0b4e09"
+    },
+    {
+      "path": "xul.dll",
+      "sizeBytes": 191459840,
+      "sha256": "12446c9303c22c8f6775f69647c2d9a985d5c2ccf9119366a6d0981cb452b3b0"
+    }
+  ],
+  "outputSha256": "965003c1f89a0b1c3bd33ea57500a087d4e8ce5f811a9e894b2da8bc5b11ee6f",
+  "outputSizeBytes": 138335420
+}
