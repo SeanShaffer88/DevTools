@@ -9,9 +9,15 @@ From this directory, in PowerShell 7:
 ./verify.ps1 -Task frontend
 ./verify.ps1 -Task build
 ./target/debug/devtools-inspector.exe
-# Explicit owned-window check; capture stays in ignored evidence:
+# Explicit owned-window check; each run writes its own ignored evidence/native-smoke-* directory:
 ./native-smoke.ps1
 ```
+
+The default smoke runs two separate native launches and writes a summary linking both runs. Inspection uses a local Git fixture and checks folder confirmation, restored keyboard focus, rendered Git evidence and Escape dismissal. Cancellation uses a private delayed fixture and verifies the helper and descendants exit before app teardown. Run the default workflow with PowerShell 7.4 or later to configure the cancellation fixture per launch. The default workflow also uses installed Git and the Windows C# compiler. The Startup scenario supports PowerShell 7.0. Pass a single scenario with `-Scenario Startup`, `-Scenario Inspection` or `-Scenario Cancellation` when diagnosing failures.
+
+The smoke locates an exposed owned caption point within a bounded work-area scan and records foreground and occlusion diagnostics. Inspect and Cancel use one verified UI Automation InvokePattern dispatch. Tab navigation and picker Escape remain actual keyboard input.
+
+Run the keyboard smoke test on an unlocked interactive desktop. It may briefly move the pointer to the owned window caption to acquire foreground focus and restores the pointer when it can do so safely. If safe activation is unavailable, the keyboard check reports Unknown.
 
 The explicit build scripts use locally verified Rust 1.99.1 MSVC, VS2022 14.44.35207, Windows SDK 10.0.26100.0, Node 26 and cached locked dependencies; no restore/network flag is enabled. `verify.ps1` copies the existing build runner unchanged into ignored evidence so its logs stay within this pilot. No installers, signing or publishing. Runtime WebView2 profile is explicitly confined to `evidence/webview-profile` using the native builder's absolute-path API.
 
