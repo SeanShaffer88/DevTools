@@ -1,0 +1,292 @@
+{
+  "repo": "devtools-flutter",
+  "generated": "2026-11-18",
+  "purpose": "DevTools Flutter Pack - Flutter development guides, scripts, templates, fixtures and tools",
+  "startHere": [
+    "AGENTS.md",
+    "README.md"
+  ],
+  "readingOrder": [
+    "README.md",
+    "AGENTS.md",
+    "SOURCES.md",
+    "guides/01-getting-started-and-toolchain.md",
+    "guides/02-dart-language-for-flutter.md",
+    "guides/03-widgets-and-ui.md",
+    "guides/04-state-management.md",
+    "guides/05-navigation-and-routing.md",
+    "guides/06-networking-and-data.md",
+    "guides/07-local-storage.md",
+    "guides/08-testing.md",
+    "guides/09-windows-desktop.md",
+    "guides/10-android-release.md",
+    "guides/11-web-and-other-platforms.md",
+    "guides/12-flavors-and-config.md",
+    "guides/13-performance-and-devtools.md",
+    "guides/14-architecture-and-project-structure.md",
+    "reference/commands.md",
+    "reference/dependencies.md",
+    "reference/versions.md",
+    "scripts/README.md",
+    "templates/README.md",
+    "fixtures/README.md",
+    "tools/README.md"
+  ],
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 5683,
+      "summary": "AGENTS.md \u2014 Instructions for AI agents writing Flutter code"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5143,
+      "summary": "Flutter \u2014 App and Desktop Development Pack"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 5199,
+      "summary": "SOURCES.md \u2014 Where this pack's facts come from"
+    },
+    {
+      "path": "fixtures/README.md",
+      "bytes": 1724,
+      "summary": "Fixtures"
+    },
+    {
+      "path": "fixtures/dart/sample_item.dart",
+      "bytes": 4805,
+      "summary": ""
+    },
+    {
+      "path": "fixtures/golden/README.md",
+      "bytes": 2011,
+      "summary": "Golden tests"
+    },
+    {
+      "path": "fixtures/sample-data/items.json",
+      "bytes": 798,
+      "summary": ""
+    },
+    {
+      "path": "fixtures/sample-data/users.json",
+      "bytes": 467,
+      "summary": ""
+    },
+    {
+      "path": "guides/01-getting-started-and-toolchain.md",
+      "bytes": 6563,
+      "summary": "01 \u2014 Getting Started and the Toolchain"
+    },
+    {
+      "path": "guides/02-dart-language-for-flutter.md",
+      "bytes": 7016,
+      "summary": "02 \u2014 The Dart Language for Flutter Developers"
+    },
+    {
+      "path": "guides/03-widgets-and-ui.md",
+      "bytes": 7356,
+      "summary": "03 \u2014 Widgets and UI"
+    },
+    {
+      "path": "guides/04-state-management.md",
+      "bytes": 6569,
+      "summary": "04 \u2014 State Management"
+    },
+    {
+      "path": "guides/05-navigation-and-routing.md",
+      "bytes": 6421,
+      "summary": "05 \u2014 Navigation and Routing"
+    },
+    {
+      "path": "guides/06-networking-and-data.md",
+      "bytes": 6219,
+      "summary": "06 \u2014 Networking and Data"
+    },
+    {
+      "path": "guides/07-local-storage.md",
+      "bytes": 6065,
+      "summary": "07 \u2014 Local Storage"
+    },
+    {
+      "path": "guides/08-testing.md",
+      "bytes": 7023,
+      "summary": "08 \u2014 Testing"
+    },
+    {
+      "path": "guides/09-windows-desktop.md",
+      "bytes": 7664,
+      "summary": "09 \u2014 Windows Desktop"
+    },
+    {
+      "path": "guides/10-android-release.md",
+      "bytes": 6235,
+      "summary": "10 \u2014 Android Release"
+    },
+    {
+      "path": "guides/11-web-and-other-platforms.md",
+      "bytes": 5452,
+      "summary": "11 \u2014 Web and Other Platforms"
+    },
+    {
+      "path": "guides/12-flavors-and-config.md",
+      "bytes": 5541,
+      "summary": "12 \u2014 Flavors and Configuration"
+    },
+    {
+      "path": "guides/13-performance-and-devtools.md",
+      "bytes": 6036,
+      "summary": "13 \u2014 Performance and DevTools"
+    },
+    {
+      "path": "guides/14-architecture-and-project-structure.md",
+      "bytes": 6855,
+      "summary": "14 \u2014 Architecture and Project Structure"
+    },
+    {
+      "path": "reference/commands.md",
+      "bytes": 6208,
+      "summary": "Reference \u2014 flutter / dart Command Cheatsheet"
+    },
+    {
+      "path": "reference/dependencies.md",
+      "bytes": 5757,
+      "summary": "Reference \u2014 Dependencies (the package directory)"
+    },
+    {
+      "path": "reference/versions.md",
+      "bytes": 3425,
+      "summary": "Reference \u2014 Flutter / Dart Versions"
+    },
+    {
+      "path": "scripts/Invoke-FlutterBuild.ps1",
+      "bytes": 4084,
+      "summary": ""
+    },
+    {
+      "path": "scripts/Invoke-FlutterBuild.sh",
+      "bytes": 3445,
+      "summary": ""
+    },
+    {
+      "path": "scripts/New-FlutterProject.ps1",
+      "bytes": 2764,
+      "summary": ""
+    },
+    {
+      "path": "scripts/New-FlutterProject.sh",
+      "bytes": 2556,
+      "summary": ""
+    },
+    {
+      "path": "scripts/README.md",
+      "bytes": 2718,
+      "summary": "Flutter pack \u2014 scripts"
+    },
+    {
+      "path": "scripts/Test-FlutterToolchain.ps1",
+      "bytes": 6219,
+      "summary": ""
+    },
+    {
+      "path": "scripts/Test-FlutterToolchain.sh",
+      "bytes": 4838,
+      "summary": ""
+    },
+    {
+      "path": "scripts/Update-FlutterPack.ps1",
+      "bytes": 3800,
+      "summary": ""
+    },
+    {
+      "path": "scripts/Update-FlutterPack.sh",
+      "bytes": 3163,
+      "summary": ""
+    },
+    {
+      "path": "templates/README.md",
+      "bytes": 2202,
+      "summary": "Templates"
+    },
+    {
+      "path": "templates/app-skeleton/README.md",
+      "bytes": 2907,
+      "summary": "App skeleton"
+    },
+    {
+      "path": "templates/app-skeleton/analysis_options.yaml",
+      "bytes": 889,
+      "summary": ""
+    },
+    {
+      "path": "templates/app-skeleton/lib/app.dart",
+      "bytes": 674,
+      "summary": ""
+    },
+    {
+      "path": "templates/app-skeleton/lib/data/sample_repository.dart",
+      "bytes": 1727,
+      "summary": ""
+    },
+    {
+      "path": "templates/app-skeleton/lib/features/home/home_page.dart",
+      "bytes": 1177,
+      "summary": ""
+    },
+    {
+      "path": "templates/app-skeleton/lib/main.dart",
+      "bytes": 689,
+      "summary": ""
+    },
+    {
+      "path": "templates/app-skeleton/pubspec.yaml",
+      "bytes": 1462,
+      "summary": ""
+    },
+    {
+      "path": "templates/app-skeleton/test/widget_test.dart",
+      "bytes": 1021,
+      "summary": ""
+    },
+    {
+      "path": "templates/github-workflows/flutter-ci.yml",
+      "bytes": 2383,
+      "summary": ""
+    },
+    {
+      "path": "templates/gitignore-flutter",
+      "bytes": 880,
+      "summary": ""
+    },
+    {
+      "path": "templates/msix-config.yaml.example",
+      "bytes": 1857,
+      "summary": ""
+    },
+    {
+      "path": "tools/README.md",
+      "bytes": 1836,
+      "summary": "Flutter pack \u2014 tools"
+    },
+    {
+      "path": "tools/build-ai-bundle.py",
+      "bytes": 4728,
+      "summary": ""
+    },
+    {
+      "path": "tools/check-flutter-project.py",
+      "bytes": 5547,
+      "summary": ""
+    },
+    {
+      "path": "tools/package-snapshot.json",
+      "bytes": 1025,
+      "summary": ""
+    },
+    {
+      "path": "tools/pubspec-audit.py",
+      "bytes": 4792,
+      "summary": ""
+    }
+  ]
+}

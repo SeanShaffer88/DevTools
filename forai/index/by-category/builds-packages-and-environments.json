@@ -1,0 +1,1079 @@
+[
+ {
+  "resource_id": "res-uv-4dbdf48473dd",
+  "name": "uv",
+  "url": "https://docs.astral.sh/uv/",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Python environment, package, tool and project management.",
+  "resource_type": "documentation",
+  "topics": [
+   "python"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "python"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-ruff-9b1836e51615",
+  "name": "Ruff",
+  "url": "https://docs.astral.sh/ruff/",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Extremely fast Python linter and formatter written in Rust; replaces Flake8/Black/isort in one tool — check rule coverage against your existing lint setup.",
+  "resource_type": "documentation",
+  "topics": [
+   "python"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "python"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-pypa-packaging-guide-1e95e11160d0",
+  "name": "PyPA Packaging Guide",
+  "url": "https://packaging.python.org/",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Python distribution, build metadata and publishing.",
+  "resource_type": "reference",
+  "topics": [
+   "python"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "python"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-npm-2334af851f1a",
+  "name": "npm",
+  "url": "https://docs.npmjs.com/",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "JavaScript packages, registry and lockfile workflows.",
+  "resource_type": "documentation",
+  "topics": [
+   "javascript"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "javascript"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-pnpm-bd7e2dcb8077",
+  "name": "pnpm",
+  "url": "https://pnpm.io/",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "JavaScript workspace and package management.",
+  "resource_type": "reference",
+  "topics": [
+   "javascript"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "javascript"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-nuget-0bd79c67df42",
+  "name": "NuGet",
+  "url": "https://learn.microsoft.com/en-us/nuget/",
+  "category_id": "builds-packages-and-environments",
+  "purpose": ".NET dependency packaging and restore: the standard package manager and feed format for .NET libraries; private feeds need their own hosting or Azure Artifacts/GitHub Packages.",
+  "resource_type": "documentation",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-cmake-37f8d8bb9f74",
+  "name": "CMake",
+  "url": "https://cmake.org/documentation/",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Generate native build systems and manage target configuration.",
+  "resource_type": "documentation",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-ninja-e58c783a3ab7",
+  "name": "Ninja",
+  "url": "https://ninja-build.org/manual.html",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Executes generated native build graphs: a tiny, very fast build executor meant to be driven by a generator such as CMake or Meson, not hand-written.",
+  "resource_type": "reference",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-vcpkg-cfb502e006d3",
+  "name": "vcpkg",
+  "url": "https://learn.microsoft.com/en-us/vcpkg/",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "C and C++ dependency management; select triplet and linkage.",
+  "resource_type": "documentation",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-conan-57b074dc8c16",
+  "name": "Conan",
+  "url": "https://docs.conan.io/2/",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "C and C++ packages, profiles and binary dependency management.",
+  "resource_type": "documentation",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-llvm-b75fe7a25842",
+  "name": "LLVM",
+  "url": "https://llvm.org/docs/",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Compiler infrastructure, optimization and binary tooling.",
+  "resource_type": "documentation",
+  "topics": [
+   "build-tools"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-clang-tooling-9dea104ef5fb",
+  "name": "Clang tooling",
+  "url": "https://clang.llvm.org/docs/",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "C-family compiler, diagnostics and source analysis.",
+  "resource_type": "documentation",
+  "topics": [
+   "build-tools"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-meson-9a474202802e",
+  "name": "Meson",
+  "url": "https://mesonbuild.com/",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Native project configuration and dependency integration.",
+  "resource_type": "reference",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-bazel-a32e3e7e3feb",
+  "name": "Bazel",
+  "url": "https://bazel.build/docs",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Build graphs, caching and multi-language build infrastructure.",
+  "resource_type": "documentation",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-gradle-6f5adb8fe921",
+  "name": "Gradle",
+  "url": "https://docs.gradle.org/",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "JVM, Android and extensible build automation.",
+  "resource_type": "documentation",
+  "topics": [
+   "android",
+   "mobile"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "android",
+   "mobile"
+  ]
+ },
+ {
+  "resource_id": "res-maven-04f56608a8d1",
+  "name": "Maven",
+  "url": "https://maven.apache.org/guides/",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "JVM builds, dependency coordinates and publishing.",
+  "resource_type": "reference",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-msbuild-ededf19bed80",
+  "name": "MSBuild",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/msbuild/",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Microsoft project build engine and task extension.",
+  "resource_type": "documentation",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-dev-containers-3a74201815ea",
+  "name": "Dev Containers",
+  "url": "https://containers.dev/",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Portable development-environment specification.",
+  "resource_type": "standard",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-aqtinstall-6e9ccd02dfc7",
+  "name": "aqtinstall",
+  "url": "https://github.com/miurahr/aqtinstall",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Install explicitly selected Qt SDK archive versions and architectures without a global Qt setup. MIT installer; Qt SDK/runtime licenses remain separate. Used aqtinstall 3.3.0 to obtain pinned Qt 5.15.2 MSVC2019 x64 archives for DiffImg; archive SHA256 values recorded.",
+  "resource_type": "repository",
+  "topics": [
+   "api-integration",
+   "desktop"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-pants-5f1183ab8f71",
+  "name": "Pants",
+  "url": "https://github.com/pantsbuild/pants",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Coordinate builds and tests in multi-language repositories; adopt incrementally around supported backends.",
+  "resource_type": "repository",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-buck2-0f8d10b15788",
+  "name": "Buck2",
+  "url": "https://github.com/facebook/buck2",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Build large dependency graphs with caching; plan toolchains and build-rule ownership.",
+  "resource_type": "repository",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-please-354cdbea7769",
+  "name": "Please",
+  "url": "https://github.com/thought-machine/please",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Reproducible multi-language builds; upstream lists Linux, macOS and FreeBSD as actively supported. Verify other platforms before adoption.",
+  "resource_type": "repository",
+  "topics": [
+   "linux"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "linux"
+  ]
+ },
+ {
+  "resource_id": "res-xmake-f77a6bfaad78",
+  "name": "Xmake",
+  "url": "https://github.com/xmake-io/xmake",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Configure native builds using Lua; inspect toolchain and package integration.",
+  "resource_type": "repository",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-ccache-19e3fd0139b0",
+  "name": "ccache",
+  "url": "https://github.com/ccache/ccache",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Cache C and C++ compilation results; configure cache keys and shared-storage trust.",
+  "resource_type": "repository",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-mold-c6dbaebf9836",
+  "name": "mold",
+  "url": "https://github.com/rui314/mold",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Accelerate native linking on supported platforms; verify linker compatibility and deployment licenses.",
+  "resource_type": "repository",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-esbuild-a3f007d462df",
+  "name": "esbuild",
+  "url": "https://github.com/evanw/esbuild",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Bundle and transform JavaScript and TypeScript quickly; run type checking separately.",
+  "resource_type": "repository",
+  "topics": [
+   "javascript",
+   "typescript"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "javascript",
+   "typescript"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-swc-e90e0b38a74c",
+  "name": "SWC",
+  "url": "https://github.com/swc-project/swc",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Compile and transform JavaScript/TypeScript with Rust tooling; verify plugin and syntax compatibility.",
+  "resource_type": "repository",
+  "topics": [
+   "javascript",
+   "rust",
+   "typescript"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "javascript",
+   "rust",
+   "typescript"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-oxc-2d105758f8b3",
+  "name": "Oxc",
+  "url": "https://github.com/oxc-project/oxc",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Rust-based JavaScript tooling components; evaluate individual parser, lint and transform maturity.",
+  "resource_type": "repository",
+  "topics": [
+   "javascript",
+   "rust"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "javascript",
+   "rust"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-biome-af66b9fa88d5",
+  "name": "Biome",
+  "url": "https://github.com/biomejs/biome",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Format and lint web code with unified tooling; check language and rule coverage before migration.",
+  "resource_type": "repository",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-xo-e23064f8f168",
+  "name": "xo",
+  "url": "https://github.com/xojs/xo",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "❤️ JavaScript/TypeScript linter (ESLint wrapper) with great defaults",
+  "resource_type": "repository",
+  "topics": [
+   "javascript",
+   "typescript"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "javascript",
+   "typescript"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-nuitka-fd01a3bc48fd",
+  "name": "Nuitka",
+  "url": "https://github.com/Nuitka/Nuitka",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Nuitka is a Python compiler written in Python. It's fully compatible with Python 2.6, 2.7, 3.4-3.14. You feed it your Python app, it does a lot of clever things, and spits out an executable or extension module.",
+  "resource_type": "repository",
+  "topics": [
+   "build-tools",
+   "python"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "python"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-turborepo-4ee3005e2be7",
+  "name": "turborepo",
+  "url": "https://github.com/vercel/turborepo",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Build system optimized for JavaScript and TypeScript, written in Rust",
+  "resource_type": "repository",
+  "topics": [
+   "build-tools",
+   "javascript",
+   "rust",
+   "typescript"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "javascript",
+   "rust",
+   "typescript"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-golangci-lint-5318121c4148",
+  "name": "golangci-lint",
+  "url": "https://github.com/golangci/golangci-lint",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Fast linters runner for Go: runs dozens of linters in parallel with one config; the standard Go lint gate in CI.",
+  "resource_type": "repository",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-peachpie-ff3f8524b1db",
+  "name": "peachpie",
+  "url": "https://github.com/peachpiecompiler/peachpie",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "PeachPie - the PHP compiler and runtime for .NET and .NET Core",
+  "resource_type": "repository",
+  "topics": [
+   "build-tools",
+   "php"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "php"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-caliburn-micro-8633050f6b92",
+  "name": "Caliburn.Micro",
+  "url": "https://github.com/Caliburn-Micro/Caliburn.Micro",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "A small, yet powerful framework, designed for building applications across all XAML platforms. Its strong support for MV* patterns will enable you to build your solution quickly, without the need to sacrifice code quality or testability.",
+  "resource_type": "repository",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-hadolint-762aae087b95",
+  "name": "hadolint",
+  "url": "https://github.com/hadolint/hadolint",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Dockerfile linter, validate inline bash, written in Haskell",
+  "resource_type": "repository",
+  "topics": [
+   "haskell"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "haskell"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-poetry-5ea9b8595ab5",
+  "name": "Poetry",
+  "url": "https://github.com/python-poetry/poetry",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Python dependency management and packaging with lockfiles and a pyproject-based workflow. Compare against uv and pip-tools for speed and lock resolution policy; both formats differ.",
+  "resource_type": "repository",
+  "topics": [
+   "python"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "python"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-conda-411a640cf68c",
+  "name": "conda",
+  "url": "https://github.com/conda/conda",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Cross-language binary package and environment manager, historically important for scientific and native Python stacks. BSD-3-Clause; channel and solver choice materially change reproducibility.",
+  "resource_type": "repository",
+  "topics": [
+   "python"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "python"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-scoop-c016c4e05e8f",
+  "name": "Scoop",
+  "url": "https://github.com/ScoopInstaller/Scoop",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "User-scope Windows package manager driven by Git manifests, requiring no administrator rights. Convenient for developer tooling; per-user installs and manifest freshness differ from winget or Chocolatey.",
+  "resource_type": "repository",
+  "topics": [
+   "build-tools",
+   "git",
+   "windows"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-chocolatey-99684975b12a",
+  "name": "Chocolatey",
+  "url": "https://github.com/chocolatey/choco",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Machine-wide Windows package manager using NuGet-style packages and PowerShell scripts. Apache-2.0 for the client; review package scripts and licensing before installing with elevated rights.",
+  "resource_type": "repository",
+  "topics": [
+   "build-tools",
+   "windows"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-devbox-30ea8dc05e43",
+  "name": "Devbox",
+  "url": "https://github.com/jetify-com/devbox",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Reproducible per-project development shells built on Nix, with a JSON manifest and lockfile. Nice ergonomics; the Nix store is a real dependency and Windows support is not native.",
+  "resource_type": "repository",
+  "topics": [
+   "windows"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-asdf-bb6ee96b22df",
+  "name": "asdf",
+  "url": "https://github.com/asdf-vm/asdf",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Pluggable version manager for many runtimes through one `.tool-versions` file. Compare with mise for speed and task running; plugin quality and Windows support vary.",
+  "resource_type": "repository",
+  "topics": [
+   "windows"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-webpack-4ab385e18d25",
+  "name": "webpack",
+  "url": "https://github.com/webpack/webpack",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows for loading parts of the application on demand.",
+  "resource_type": "repository",
+  "topics": [
+   "build-tools",
+   "javascript"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "javascript"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-parcel-34fb1817d6a8",
+  "name": "parcel",
+  "url": "https://github.com/parcel-bundler/parcel",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "The zero configuration build tool for the web.",
+  "resource_type": "repository",
+  "topics": [
+   "build-tools"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-rspack-8199cc4b1220",
+  "name": "rspack",
+  "url": "https://github.com/web-infra-dev/rspack",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Fast Rust-based bundler for the web with a modernized webpack API.",
+  "resource_type": "repository",
+  "topics": [
+   "api-integration",
+   "build-tools",
+   "rust"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "rust"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-farm-71559f42c282",
+  "name": "farm",
+  "url": "https://github.com/farm-fe/farm",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Extremely fast Vite-compatible web build tool written in Rust.",
+  "resource_type": "repository",
+  "topics": [
+   "build-tools",
+   "rust"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "rust"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-spack-9676c4f1471d",
+  "name": "spack",
+  "url": "https://github.com/spack/spack",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "A flexible package manager that supports multiple versions, configurations, platforms, and compilers.",
+  "resource_type": "repository",
+  "topics": [
+   "build-tools"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-lightningcss-5b33c41f7059",
+  "name": "lightningcss",
+  "url": "https://github.com/parcel-bundler/lightningcss",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "An extremely fast CSS parser, transformer, bundler, and minifier written in Rust. MPL-2.0: file-level copyleft; modified files must be published.",
+  "resource_type": "repository",
+  "topics": [
+   "build-tools",
+   "rust"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "rust"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-peru-03a49b6530a1",
+  "name": "peru",
+  "url": "https://github.com/buildinspace/peru",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "a generic package manager, for including other people's code in your projects.",
+  "resource_type": "repository",
+  "topics": [
+   "build-tools"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-rollup-6456ebb6dc62",
+  "name": "rollup",
+  "url": "https://github.com/rollup/rollup",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Next-generation ES module bundler. License not detected by GitHub; check the repository license before use.",
+  "resource_type": "repository",
+  "topics": [
+   "build-tools",
+   "git"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-babel-babel-9c190e343aa7",
+  "name": "babel (babel)",
+  "url": "https://github.com/babel/babel",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Babel is a compiler for writing next generation JavaScript.",
+  "resource_type": "repository",
+  "topics": [
+   "build-tools",
+   "javascript"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "javascript"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-grunt-cc94a4e7aac6",
+  "name": "grunt",
+  "url": "https://github.com/gruntjs/grunt",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Grunt: The JavaScript Task Runner.",
+  "resource_type": "repository",
+  "topics": [
+   "javascript"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "javascript"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-sbt-894d965bc29c",
+  "name": "sbt",
+  "url": "https://github.com/sbt/sbt",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "sbt, the interactive build tool.",
+  "resource_type": "repository",
+  "topics": [
+   "build-tools"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-cargo-5c73fb75c4c6",
+  "name": "cargo",
+  "url": "https://github.com/rust-lang/cargo",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "The Rust package manager.",
+  "resource_type": "repository",
+  "topics": [
+   "build-tools",
+   "rust"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "rust"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-berry-4cd5725e5189",
+  "name": "berry",
+  "url": "https://github.com/yarnpkg/berry",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Active development trunk for Yarn.",
+  "resource_type": "repository",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-pyenv-723bfec60cb6",
+  "name": "pyenv",
+  "url": "https://github.com/pyenv/pyenv",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Simple Python version management.",
+  "resource_type": "repository",
+  "topics": [
+   "python"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "python"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-miniforge-23d486b0e795",
+  "name": "miniforge",
+  "url": "https://github.com/conda-forge/miniforge",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "A conda-forge distribution. License not detected by GitHub; check the repository license before use.",
+  "resource_type": "repository",
+  "topics": [
+   "git"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-pip-d45ab8dd0d33",
+  "name": "pip",
+  "url": "https://github.com/pypa/pip",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "The Python package installer.",
+  "resource_type": "repository",
+  "topics": [
+   "python"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "python"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-hatch-548bfc3010f1",
+  "name": "hatch",
+  "url": "https://github.com/pypa/hatch",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Modern, extensible Python project management.",
+  "resource_type": "repository",
+  "topics": [
+   "python"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "python"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-pdm-9ef2cfbb59f3",
+  "name": "pdm",
+  "url": "https://github.com/pdm-project/pdm",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "A modern Python package and dependency manager supporting the latest PEP standards.",
+  "resource_type": "repository",
+  "topics": [
+   "python"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [
+   "python"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-brew-796bf08ed958",
+  "name": "brew",
+  "url": "https://github.com/Homebrew/brew",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "The Package Manager for Everywhere.",
+  "resource_type": "repository",
+  "topics": [
+   "build-tools"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-nix-ccb0f084ee29",
+  "name": "nix",
+  "url": "https://github.com/NixOS/nix",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Nix, the purely functional package manager. LGPL-2.1: dynamic linking is permitted, static linking has obligations.",
+  "resource_type": "repository",
+  "topics": [
+   "build-tools"
+  ],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-nixpkgs-f6ccee9b4fe7",
+  "name": "nixpkgs",
+  "url": "https://github.com/NixOS/nixpkgs",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Nix Packages collection & NixOS.",
+  "resource_type": "repository",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-home-manager-cef16fe1cd0c",
+  "name": "home manager",
+  "url": "https://github.com/nix-community/home-manager",
+  "category_id": "builds-packages-and-environments",
+  "purpose": "Manage a user environment using Nix [maintainer=@khaneliman, @rycee].",
+  "resource_type": "repository",
+  "topics": [],
+  "use_cases": [
+   "deploy-and-operate-software"
+  ],
+  "languages": [],
+  "platforms": []
+ }
+]

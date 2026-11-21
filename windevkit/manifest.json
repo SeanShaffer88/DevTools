@@ -1,0 +1,31 @@
+{
+  "repo": "SeanShaffer88/DevTools",
+  "domain": "windevkit",
+  "mergedFrom": "SeanShaffer88/WinDevKit",
+  "location": "windevkit/",
+  "generated": "2026-11-18",
+  "purpose": "WinDevKit: shared Windows development kits, crates, templates, schemas and tools for the Windows dev community — kits (ImageKit, OCRKit, PDFKit, ThumbKit and more), the Bindings Pack, DLL/app templates, CI/release workflows.",
+  "startHere": [
+    "README.md",
+    "docs/CATALOG.md",
+    "AGENTS.md"
+  ],
+  "topLevel": {
+    ".claude": "1 files",
+    ".gitattributes": "1 files",
+    ".github": "7 files",
+    ".gitignore": "1 files",
+    "AGENTS.md": "1 files",
+    "LICENSE": "1 files",
+    "README.md": "1 files",
+    "crates": "7 files",
+    "docs": "32 files",
+    "examples": "41 files",
+    "kits": "715 files",
+    "schemas": "1 files",
+    "templates": "14 files",
+    "tests": "7 files",
+    "tools": "14 files"
+  },
+  "note": "Deep file map is docs/CATALOG.md. 15 small binary test fixtures (PNG/JPG/PDF) were uploaded through the GitHub web interface; everything else rode this batched push."
+}

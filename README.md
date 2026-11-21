@@ -20,6 +20,7 @@ Start here when working with this toolkit. Global Codex instructions in `C:/User
 | `Export-CrashDiagnostics.ps1` | Bundle one explicit owned process's diagnostics, optional selected logs/minidump | New destination only |
 | `Test-DllContract.ps1` | Static contract checks; explicit trusted-owned primitive calls in a separate child | Unique child-result evidence; executes selected DLL only with acknowledgement |
 | `New-InstallerTestLab.ps1` | Generate a reviewable Windows Sandbox install/upgrade/uninstall lab and guest assertions | New lab/results mapping; does not launch VM or installers on host |
+| `New-BuildSandbox.ps1` | WSL2 (Windows Home compatible) disposable build/test sandbox: `-BuildImage` bakes a hardened C++/Python/C# golden image; `-JobFolder`/`-InboxRoot` run validated job folders offline as an unprivileged user with DevTools mounted read-only, then unregister the distro. Job format: `templates/build-sandbox-job/JOB-FORMAT.md` | New image/results/outbox directories; per-run distro under `%LOCALAPPDATA%\BuildSandbox\instances` removed after each run; `-BuildImage` uses apt network inside the temporary distro only |
 | `Manage-WowClientProfile.ps1` | Create/import/verify client/Interface/Lua profiles with hashed sources and SavedVariables as data | Explicit new profile destination only |
 | `Test-WowLua.ps1` | Real matching-interpreter syntax checks and optional trusted Lua event/API mock harness | Child process only; no source writes or dependency installation |
 | `Test-AndroidArtifact.ps1` | Installed aapt2 manifest/permission decoding, zipalign and apksigner verification | None; never signs/installs |
@@ -140,6 +141,20 @@ Rebuild only when needed using `tools/lua-5.1.5/Build-Lua.ps1 -Destination <new-
 
 `Test-AndroidArtifact.ps1` separately reports binary manifest/permission decoding, ZIP alignment and signature verification. The actual unsigned template APK passes manifest/alignment and correctly fails signature. ZIP 16 KiB alignment is not full ELF load-segment compatibility or release-policy certification. `Invoke-AndroidTest.ps1` requires explicit serial/package/tasks. Startup requires semantic `Status: ok`; printed errors/timeouts and absent evidence are nonpass even with process exit 0. Memory and FrameStats retain raw data without resetting counters. Fake-ADB fixtures prove argv, binary capture and failure orchestration only; no real device execution is claimed.
 
+## Shared Helper Module
+
+New helpers should `Import-Module lib/DevToolsCommon.psm1` instead of copying path, JSON, process or result boilerplate. It provides:
+
+- local path and contained-path resolution that refuses UNC/device paths, ADS, reserved names and reparse points
+- bounded tree, byte, strict UTF-8 and JSON readers
+- atomic writes
+- canonical JSON
+- streamed SHA-256
+- shell-free process execution with timeouts, output caps, closed stdin and Job Object cleanup of descendants
+- result envelopes with secret redaction
+
+See `lib/DevToolsCommon.md` for per-function inputs, security notes, residual risks and an audit of the older duplicated helpers, which remain unchanged. Validate with `tests/Test-DevToolsCommon.ps1`.
+
 ## Versioned Resources
 
 Search `Get-DevReference.ps1 -Resources -Query <text> -Json` for original versioned documentation and recipes. Omit `-Resources` to retain the original six-note library. `resources/index.json` also records approved Lua tool/source provenance. Resource categories include runtime/SDK/dependencies/crash/contracts/installer/WoW/Android/build/fixtures/cache/recipes.
@@ -174,3 +189,33 @@ Add future helpers to `toolkit.json` with parameters, write scope, requirements 
 - Quality resources: `Get-DevReference.ps1 -Resources` searches original UI baselines, device/asset budgets, API/save/IPC schemas and media attribution notes in `resources/quality/v1`. `resources/Test-MediaAttribution.ps1` checks supplied hashes and declared attribution; license strings do not prove legal rights.
 
 Repeatable suites: tests/Test-QualityFoundations.ps1, tests/Test-QualityNative.ps1, tests/Test-QualityGames.ps1. Actual evidence is indexed in toolkit.json. The UIA sidecar uses installed Windows PowerShell 5.1; public helpers require PowerShell 7. UI mockups and PNG baselines are original synthetic fixtures. Real-device, in-game, elevated WPR and installer lifecycle checks remain separate gates. Read helper help before first use.
+
+## AI-native Developer Utilities
+
+The Python 3.10+ standard-library suite adds 15 offline CLI checks for Godot, WoW addons, Rust projects, export profiles, and release manifests. It has no added package dependencies or telemetry. Start with [ai_tools/README.md](ai_tools/README.md) for commands, schemas, limits, and safety notes.
+
+## Knowledge base
+
+The [`knowledge/`](knowledge/) folder of this repo is a self-contained Windows desktop development knowledge base — the rule layers (Elite Prompt, Engineering Contract V4.0, guardrails), tiered project classes and sanctioned stacks, the QUALITY.md gate, SeanPak packaging, the TesselGUI design system, and release verification — written for AI coding agents and human developers. It is built to be downloaded and used locally: start with [`knowledge/manifest.json`](knowledge/manifest.json) and [`knowledge/AGENTS.md`](knowledge/AGENTS.md), or upload [`knowledge/ai-bundle.md`](knowledge/ai-bundle.md) as a single file.
+
+## Flutter pack
+
+The [`flutter/`](flutter/) folder of this repo is a self-contained Flutter development pack — 14 guides (toolchain, Dart, widgets and UI, state management, navigation, networking, storage, testing, Windows desktop, Android release, web and other platforms, flavors, performance, architecture), a verified dependency catalog (Flutter 3.50.0 / Dart 3.14.0 snapshot, November 2026), PowerShell 7 + bash toolchain/build scripts that check and report without installing anything, an app skeleton and CI templates, synthetic fixtures, and offline Python validators. It is built to be downloaded and used locally by AI coding agents and human developers: start with [`flutter/manifest.json`](flutter/manifest.json) and [`flutter/AGENTS.md`](flutter/AGENTS.md), or upload [`flutter/ai-bundle.md`](flutter/ai-bundle.md) as a single file.
+
+## Development knowledge library
+
+This repo is the single home of the development knowledge library — six self-contained domains, each with its own `manifest.json` (file map + reading order), `AGENTS.md` (rules), and `ai-bundle.md` (the whole domain in one file). **Start with [`INDEX.md`](INDEX.md)** — the master map with a task routing table that points straight at the one best file — or the machine-readable [`manifest.json`](manifest.json).
+
+| Domain | Folder | Start |
+| --- | --- | --- |
+| Windows desktop development system | [`knowledge/`](knowledge/) | `knowledge/manifest.json` |
+| Flutter development pack | [`flutter/`](flutter/) | `flutter/manifest.json` |
+| PortableApps.com packaging | [`portableapps/`](portableapps/) | `portableapps/manifest.json` |
+| World of Warcraft addon development | [`wow-addons/`](wow-addons/) | `wow-addons/manifest.json` |
+| Kotlin Android apps and games | [`kotlin/`](kotlin/) | `kotlin/manifest.json` |
+| Godot for Android games and apps | [`godot/`](godot/) | `godot/manifest.json` |
+| AI development resource index | [`ai-resources/`](ai-resources/) | `ai-resources/manifest.json` |
+| ForAI resource library | [`forai/`](forai/) | `forai/AI_INDEX.md` |
+| WinDevKit shared development resources | [`windevkit/`](windevkit/) | `windevkit/docs/CATALOG.md` |
+
+The PortableApps, WoW, Kotlin, and Godot domains were merged in from the former PafDev, WowDev, KotlinDev, and GodotDevTools knowledge repos on 2026-11-18; those repos remain on GitHub untouched. The nine Godot editor addons also live here as a complete, openable Godot project in [`godot/toolbox/`](godot/toolbox/), and the ai-knowledge-vault resource index as [`ai-resources/`](ai-resources/), both merged 2026-11-18. ForAI and WinDevKit followed the same day ([`forai/`](forai/), [`windevkit/`](windevkit/)). With the library complete, the seven copied source repos (PafDev, WowDev, KotlinDev, GodotDevTools, ai-knowledge-vault, ForAI, WinDevKit) were archived on GitHub on 2026-11-18 — they stay readable there, and this repo is the single live home.

@@ -1,0 +1,1434 @@
+[
+  {
+    "name": "Rust — rust-lang.org",
+    "url": "https://www.rust-lang.org/",
+    "kind": "Official site",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Language home; install via rustup, edition and release info."
+  },
+  {
+    "name": "The Rust Book",
+    "url": "https://doc.rust-lang.org/book/",
+    "kind": "Official docs",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Canonical language tutorial; ownership, traits, error handling."
+  },
+  {
+    "name": "crates.io",
+    "url": "https://crates.io/",
+    "kind": "Registry",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Rust package registry; check downloads, docs link, and maintenance before recommending a crate."
+  },
+  {
+    "name": "docs.rs",
+    "url": "https://docs.rs/",
+    "kind": "Docs host",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Rendered docs for nearly every crate and version."
+  },
+  {
+    "name": "Cargo Book",
+    "url": "https://doc.rust-lang.org/cargo/",
+    "kind": "Official docs",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Workspaces, features, profiles, publishing."
+  },
+  {
+    "name": "Python — python.org",
+    "url": "https://www.python.org/",
+    "kind": "Official site",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Downloads, PEP index, release schedule."
+  },
+  {
+    "name": "Python documentation",
+    "url": "https://docs.python.org/3/",
+    "kind": "Official docs",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Standard library reference; verify function behaviour here, not from memory."
+  },
+  {
+    "name": "PyPI",
+    "url": "https://pypi.org/",
+    "kind": "Registry",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Python package index; check version, requires-python, and project links."
+  },
+  {
+    "name": "uv",
+    "url": "https://docs.astral.sh/uv/",
+    "kind": "Tool docs",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Fast Python package/project manager from Astral; replaces pip/virtualenv workflows in many projects."
+  },
+  {
+    "name": "Ruff",
+    "url": "https://docs.astral.sh/ruff/",
+    "kind": "Tool docs",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Python linter/formatter; rule reference is the source of truth for lint codes."
+  },
+  {
+    "name": "Node.js",
+    "url": "https://nodejs.org/en/docs",
+    "kind": "Official docs",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Runtime APIs, LTS schedule, globals."
+  },
+  {
+    "name": "npm",
+    "url": "https://www.npmjs.com/",
+    "kind": "Registry",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "JavaScript package registry; verify package identity carefully — similar names are a supply-chain risk."
+  },
+  {
+    "name": "TypeScript",
+    "url": "https://www.typescriptlang.org/docs/",
+    "kind": "Official docs",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Handbook, tsconfig reference, release notes."
+  },
+  {
+    "name": "Deno",
+    "url": "https://docs.deno.com/",
+    "kind": "Official docs",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Secure JS/TS runtime, standard library, JSR registry."
+  },
+  {
+    "name": "Bun",
+    "url": "https://bun.sh/docs",
+    "kind": "Official docs",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "JS runtime, bundler, test runner, package manager."
+  },
+  {
+    "name": ".NET documentation",
+    "url": "https://learn.microsoft.com/en-us/dotnet/",
+    "kind": "Official docs",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "C#, F#, ASP.NET Core, MAUI, WPF/WinForms entry point."
+  },
+  {
+    "name": "NuGet Gallery",
+    "url": "https://www.nuget.org/",
+    "kind": "Registry",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": ".NET package registry; check target frameworks and license per package."
+  },
+  {
+    "name": "Go — go.dev",
+    "url": "https://go.dev/doc/",
+    "kind": "Official docs",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Language spec, effective Go, module reference."
+  },
+  {
+    "name": "pkg.go.dev",
+    "url": "https://pkg.go.dev/",
+    "kind": "Docs host",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Discover and read docs for Go packages and the standard library."
+  },
+  {
+    "name": "C++ reference (cppreference)",
+    "url": "https://en.cppreference.com/",
+    "kind": "Reference",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "De-facto C/C++ standard library and language reference."
+  },
+  {
+    "name": "CMake documentation",
+    "url": "https://cmake.org/documentation/",
+    "kind": "Official docs",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Build system generator used by most cross-platform C/C++ projects."
+  },
+  {
+    "name": "vcpkg",
+    "url": "https://vcpkg.io/",
+    "kind": "Tool site",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Microsoft C/C++ package manager; port list is searchable online."
+  },
+  {
+    "name": "Conan",
+    "url": "https://conan.io/center",
+    "kind": "Registry",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "C/C++ package manager and Conan Center index."
+  },
+  {
+    "name": "Java — dev.java",
+    "url": "https://dev.java/",
+    "kind": "Official site",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "JDK tutorials, API docs, release information."
+  },
+  {
+    "name": "Gradle",
+    "url": "https://docs.gradle.org/",
+    "kind": "Official docs",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Build tool for JVM/Android; DSL and plugin reference."
+  },
+  {
+    "name": "Maven Central",
+    "url": "https://central.sonatype.com/",
+    "kind": "Registry",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "JVM artifact registry; verify group/artifact coordinates."
+  },
+  {
+    "name": "Git documentation",
+    "url": "https://git-scm.com/doc",
+    "kind": "Official docs",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Pro Git book and command reference."
+  },
+  {
+    "name": "Docker documentation",
+    "url": "https://docs.docker.com/",
+    "kind": "Official docs",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Dockerfile reference, Compose spec, build best practices."
+  },
+  {
+    "name": "Kubernetes documentation",
+    "url": "https://kubernetes.io/docs/home/",
+    "kind": "Official docs",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Concepts, kubectl reference, API reference."
+  },
+  {
+    "name": "GitHub Docs",
+    "url": "https://docs.github.com/",
+    "kind": "Official docs",
+    "category": "Toolchains by language and platform",
+    "category_slug": "toolchains",
+    "note": "Actions, REST/GraphQL APIs, Copilot, code security."
+  },
+  {
+    "name": "Model Context Protocol — modelcontextprotocol.io",
+    "url": "https://modelcontextprotocol.io/",
+    "kind": "Spec / official docs",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Protocol spec, concepts (tools/resources/prompts), transports, and security guidance. Read this first."
+  },
+  {
+    "name": "MCP specification (GitHub)",
+    "url": "https://github.com/modelcontextprotocol/modelcontextprotocol",
+    "kind": "Repo",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Spec source, schemas, and proposals."
+  },
+  {
+    "name": "Official MCP servers",
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "kind": "Repo",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Reference servers: filesystem, fetch, git, memory, sequential-thinking, time, everything (test server), plus archived servers list."
+  },
+  {
+    "name": "MCP Registry",
+    "url": "https://registry.modelcontextprotocol.io/",
+    "kind": "Registry",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Official community registry for discovering public MCP servers."
+  },
+  {
+    "name": "MCP Registry (GitHub)",
+    "url": "https://github.com/modelcontextprotocol/registry",
+    "kind": "Repo",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Registry API and publishing process."
+  },
+  {
+    "name": "MCP Python SDK",
+    "url": "https://github.com/modelcontextprotocol/python-sdk",
+    "kind": "Repo / SDK",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Official Python SDK (FastMCP-style server/client) for building MCP servers."
+  },
+  {
+    "name": "MCP TypeScript SDK",
+    "url": "https://github.com/modelcontextprotocol/typescript-sdk",
+    "kind": "Repo / SDK",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Official TypeScript SDK for servers and clients."
+  },
+  {
+    "name": "MCP C# SDK",
+    "url": "https://github.com/modelcontextprotocol/csharp-sdk",
+    "kind": "Repo / SDK",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Official .NET SDK, maintained with Microsoft."
+  },
+  {
+    "name": "MCP Rust SDK",
+    "url": "https://github.com/modelcontextprotocol/rust-sdk",
+    "kind": "Repo / SDK",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Official Rust SDK (rmcp)."
+  },
+  {
+    "name": "MCP Go SDK",
+    "url": "https://github.com/modelcontextprotocol/go-sdk",
+    "kind": "Repo / SDK",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Official Go SDK, maintained with Google."
+  },
+  {
+    "name": "MCP Java SDK",
+    "url": "https://github.com/modelcontextprotocol/java-sdk",
+    "kind": "Repo / SDK",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Official Java SDK, built on Spring AI infrastructure."
+  },
+  {
+    "name": "GitHub MCP Server",
+    "url": "https://github.com/github/github-mcp-server",
+    "kind": "Repo / server",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "GitHub's official MCP server: repos, issues, PRs, Actions. Prefer this over scraping GitHub."
+  },
+  {
+    "name": "Playwright MCP",
+    "url": "https://github.com/microsoft/playwright-mcp",
+    "kind": "Repo / server",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Microsoft's MCP server for browser automation via Playwright accessibility snapshots."
+  },
+  {
+    "name": "Chrome DevTools MCP",
+    "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "kind": "Repo / server",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Official Chrome DevTools MCP server for debugging, traces, and network inspection."
+  },
+  {
+    "name": "AWS MCP servers (awslabs)",
+    "url": "https://github.com/awslabs/mcp",
+    "kind": "Repo / server collection",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "AWS's suite of MCP servers for AWS services, docs, and architecture guidance."
+  },
+  {
+    "name": "Cloudflare MCP servers",
+    "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "kind": "Repo / server",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Cloudflare's remote MCP servers for Workers, DNS, observability, and more."
+  },
+  {
+    "name": "Stripe Agent Toolkit",
+    "url": "https://github.com/stripe/ai",
+    "kind": "Repo",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Stripe's official tools for agents, including MCP integration for payments APIs."
+  },
+  {
+    "name": "Awesome MCP Servers",
+    "url": "https://github.com/punkpeye/awesome-mcp-servers",
+    "kind": "Curated list",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Large community list of MCP servers by category; a discovery aid — verify each server before use."
+  },
+  {
+    "name": "MCP.so",
+    "url": "https://mcp.so/",
+    "kind": "Directory",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Community directory of MCP servers and clients with categories."
+  },
+  {
+    "name": "Glama MCP directory",
+    "url": "https://glama.ai/mcp/servers",
+    "kind": "Directory",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Searchable MCP server directory with listings and metadata."
+  },
+  {
+    "name": "Smithery",
+    "url": "https://smithery.ai/",
+    "kind": "Directory / registry",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Hosted MCP server discovery and connection service."
+  },
+  {
+    "name": "PulseMCP",
+    "url": "https://www.pulsemcp.com/",
+    "kind": "Directory",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "MCP server directory and weekly newsletter tracking the ecosystem."
+  },
+  {
+    "name": "MCP clients list",
+    "url": "https://modelcontextprotocol.io/clients",
+    "kind": "Official docs",
+    "category": "MCP servers, SDKs, and directories",
+    "category_slug": "mcp-servers",
+    "note": "Which clients support which MCP features — check before assuming a client supports resources/prompts/sampling."
+  },
+  {
+    "name": "LangChain documentation",
+    "url": "https://docs.langchain.com/",
+    "kind": "Official docs",
+    "category": "Agent frameworks and orchestration",
+    "category_slug": "agent-frameworks",
+    "note": "LangChain + LangGraph docs: agents, tools, retrieval, streaming."
+  },
+  {
+    "name": "LangChain (GitHub)",
+    "url": "https://github.com/langchain-ai/langchain",
+    "kind": "Repo",
+    "category": "Agent frameworks and orchestration",
+    "category_slug": "agent-frameworks",
+    "note": "Core LangChain monorepo."
+  },
+  {
+    "name": "LangGraph",
+    "url": "https://github.com/langchain-ai/langgraph",
+    "kind": "Repo",
+    "category": "Agent frameworks and orchestration",
+    "category_slug": "agent-frameworks",
+    "note": "Stateful, durable agent orchestration as graphs; persistence and human-in-the-loop."
+  },
+  {
+    "name": "LlamaIndex documentation",
+    "url": "https://developers.llamaindex.ai/",
+    "kind": "Official docs",
+    "category": "Agent frameworks and orchestration",
+    "category_slug": "agent-frameworks",
+    "note": "Data framework for RAG and agents: ingestion, indexes, query engines, workflows."
+  },
+  {
+    "name": "LlamaIndex (GitHub)",
+    "url": "https://github.com/run-llama/llama_index",
+    "kind": "Repo",
+    "category": "Agent frameworks and orchestration",
+    "category_slug": "agent-frameworks",
+    "note": "LlamaIndex core and integrations."
+  },
+  {
+    "name": "Microsoft Semantic Kernel",
+    "url": "https://learn.microsoft.com/en-us/semantic-kernel/",
+    "kind": "Official docs",
+    "category": "Agent frameworks and orchestration",
+    "category_slug": "agent-frameworks",
+    "note": ".NET/Python/Java AI orchestration SDK from Microsoft."
+  },
+  {
+    "name": "Microsoft AutoGen",
+    "url": "https://github.com/microsoft/autogen",
+    "kind": "Repo",
+    "category": "Agent frameworks and orchestration",
+    "category_slug": "agent-frameworks",
+    "note": "Multi-agent conversation framework from Microsoft Research."
+  },
+  {
+    "name": "CrewAI",
+    "url": "https://docs.crewai.com/",
+    "kind": "Official docs",
+    "category": "Agent frameworks and orchestration",
+    "category_slug": "agent-frameworks",
+    "note": "Role-based multi-agent crews and flows (Python)."
+  },
+  {
+    "name": "OpenAI Agents SDK",
+    "url": "https://openai.github.io/openai-agents-python/",
+    "kind": "Official docs",
+    "category": "Agent frameworks and orchestration",
+    "category_slug": "agent-frameworks",
+    "note": "OpenAI's lightweight agents SDK: agents, handoffs, guardrails, tracing."
+  },
+  {
+    "name": "Claude Agent SDK (Anthropic docs)",
+    "url": "https://code.claude.com/docs/en/agent-sdk/overview",
+    "kind": "Official docs",
+    "category": "Agent frameworks and orchestration",
+    "category_slug": "agent-frameworks",
+    "note": "Anthropic's agent SDK for building agents on Muse."
+  },
+  {
+    "name": "Google Agent Development Kit (ADK)",
+    "url": "https://adk.dev/",
+    "kind": "Official docs",
+    "category": "Agent frameworks and orchestration",
+    "category_slug": "agent-frameworks",
+    "note": "Google's open-source agent framework (Python/Java/Go)."
+  },
+  {
+    "name": "Haystack",
+    "url": "https://docs.haystack.deepset.ai/docs/intro",
+    "kind": "Official docs",
+    "category": "Agent frameworks and orchestration",
+    "category_slug": "agent-frameworks",
+    "note": "deepset's framework for production NLP/RAG pipelines and agents."
+  },
+  {
+    "name": "DSPy",
+    "url": "https://dspy.ai/",
+    "kind": "Official docs",
+    "category": "Agent frameworks and orchestration",
+    "category_slug": "agent-frameworks",
+    "note": "Programmatic (compiled) LLM pipelines from Stanford NLP — declare, don't prompt-engineer by hand."
+  },
+  {
+    "name": "Pydantic AI",
+    "url": "https://pydantic.dev/docs/ai/overview/",
+    "kind": "Official docs",
+    "category": "Agent frameworks and orchestration",
+    "category_slug": "agent-frameworks",
+    "note": "Type-safe Python agent framework from the Pydantic team."
+  },
+  {
+    "name": "smolagents (Hugging Face)",
+    "url": "https://huggingface.co/docs/smolagents",
+    "kind": "Official docs",
+    "category": "Agent frameworks and orchestration",
+    "category_slug": "agent-frameworks",
+    "note": "Minimal agents library where agents write Python code as actions."
+  },
+  {
+    "name": "Mastra",
+    "url": "https://mastra.ai/docs",
+    "kind": "Official docs",
+    "category": "Agent frameworks and orchestration",
+    "category_slug": "agent-frameworks",
+    "note": "TypeScript agent framework: agents, workflows, RAG, evals."
+  },
+  {
+    "name": "Vercel AI SDK",
+    "url": "https://ai-sdk.dev/docs",
+    "kind": "Official docs",
+    "category": "Agent frameworks and orchestration",
+    "category_slug": "agent-frameworks",
+    "note": "TypeScript SDK for AI apps: streaming UI, tool calling, provider-agnostic models."
+  },
+  {
+    "name": "Instructor",
+    "url": "https://python.useinstructor.com/",
+    "kind": "Official docs",
+    "category": "Agent frameworks and orchestration",
+    "category_slug": "agent-frameworks",
+    "note": "Structured outputs from LLMs via Pydantic validation and retries."
+  },
+  {
+    "name": "Ollama",
+    "url": "https://ollama.com/",
+    "kind": "Tool site",
+    "category": "Local inference and model runners",
+    "category_slug": "local-inference",
+    "note": "One-command local model runner (macOS/Windows/Linux) with an OpenAI-compatible API."
+  },
+  {
+    "name": "Ollama (GitHub)",
+    "url": "https://github.com/ollama/ollama",
+    "kind": "Repo",
+    "category": "Local inference and model runners",
+    "category_slug": "local-inference",
+    "note": "Source, model library format, API reference."
+  },
+  {
+    "name": "llama.cpp",
+    "url": "https://github.com/ggml-org/llama.cpp",
+    "kind": "Repo",
+    "category": "Local inference and model runners",
+    "category_slug": "local-inference",
+    "note": "GGUF inference in C/C++; the engine under many local tools. Supports CPU/GPU backends."
+  },
+  {
+    "name": "vLLM",
+    "url": "https://docs.vllm.ai/",
+    "kind": "Official docs",
+    "category": "Local inference and model runners",
+    "category_slug": "local-inference",
+    "note": "High-throughput LLM serving (PagedAttention), OpenAI-compatible server."
+  },
+  {
+    "name": "SGLang",
+    "url": "https://github.com/sgl-project/sglang",
+    "kind": "Repo",
+    "category": "Local inference and model runners",
+    "category_slug": "local-inference",
+    "note": "Fast serving framework with structured generation (RadixAttention)."
+  },
+  {
+    "name": "LM Studio",
+    "url": "https://lmstudio.ai/",
+    "kind": "Tool site",
+    "category": "Local inference and model runners",
+    "category_slug": "local-inference",
+    "note": "Desktop app to discover, download, and serve local models with a GUI."
+  },
+  {
+    "name": "MLX (Apple)",
+    "url": "https://github.com/ml-explore/mlx",
+    "kind": "Repo",
+    "category": "Local inference and model runners",
+    "category_slug": "local-inference",
+    "note": "Apple's array framework for ML on Apple silicon; mlx-lm runs LLMs locally on Macs."
+  },
+  {
+    "name": "whisper.cpp",
+    "url": "https://github.com/ggml-org/whisper.cpp",
+    "kind": "Repo",
+    "category": "Local inference and model runners",
+    "category_slug": "local-inference",
+    "note": "Port of OpenAI Whisper speech recognition in C/C++ for local transcription."
+  },
+  {
+    "name": "GPT4All",
+    "url": "https://www.nomic.ai/gpt4all",
+    "kind": "Tool site",
+    "category": "Local inference and model runners",
+    "category_slug": "local-inference",
+    "note": "Nomic's local chatbot app and ecosystem."
+  },
+  {
+    "name": "Jan",
+    "url": "https://jan.ai/",
+    "kind": "Tool site",
+    "category": "Local inference and model runners",
+    "category_slug": "local-inference",
+    "note": "Open-source offline ChatGPT alternative desktop app."
+  },
+  {
+    "name": "NVIDIA TensorRT-LLM",
+    "url": "https://github.com/NVIDIA/TensorRT-LLM",
+    "kind": "Repo",
+    "category": "Local inference and model runners",
+    "category_slug": "local-inference",
+    "note": "Optimized LLM inference on NVIDIA GPUs for production serving."
+  },
+  {
+    "name": "Hugging Face Text Generation Inference",
+    "url": "https://huggingface.co/docs/text-generation-inference",
+    "kind": "Official docs",
+    "category": "Local inference and model runners",
+    "category_slug": "local-inference",
+    "note": "Production inference server for open models (TGI)."
+  },
+  {
+    "name": "Hugging Face Hub",
+    "url": "https://huggingface.co/models",
+    "kind": "Hub",
+    "category": "Models, hubs, and API providers",
+    "category_slug": "models-and-providers",
+    "note": "The model/dataset hub: model cards carry license, files, and usage snippets. Read the card before recommending a model."
+  },
+  {
+    "name": "Hugging Face documentation",
+    "url": "https://huggingface.co/docs",
+    "kind": "Official docs",
+    "category": "Models, hubs, and API providers",
+    "category_slug": "models-and-providers",
+    "note": "Transformers, Datasets, Diffusers, PEFT, TRL, and Hub APIs."
+  },
+  {
+    "name": "Transformers documentation",
+    "url": "https://huggingface.co/docs/transformers",
+    "kind": "Official docs",
+    "category": "Models, hubs, and API providers",
+    "category_slug": "models-and-providers",
+    "note": "Model architectures and pipelines API reference."
+  },
+  {
+    "name": "OpenAI platform documentation",
+    "url": "https://developers.openai.com/api/docs",
+    "kind": "Official docs",
+    "category": "Models, hubs, and API providers",
+    "category_slug": "models-and-providers",
+    "note": "API reference, models, reasoning, tools, and pricing links."
+  },
+  {
+    "name": "Anthropic Claude documentation",
+    "url": "https://docs.claude.com/",
+    "kind": "Official docs",
+    "category": "Models, hubs, and API providers",
+    "category_slug": "models-and-providers",
+    "note": "Claude API, tool use, prompt engineering, and agent guidance."
+  },
+  {
+    "name": "Google Gemini API documentation",
+    "url": "https://ai.google.dev/gemini-api/docs",
+    "kind": "Official docs",
+    "category": "Models, hubs, and API providers",
+    "category_slug": "models-and-providers",
+    "note": "Gemini models, function calling, embeddings, pricing."
+  },
+  {
+    "name": "Meta Llama",
+    "url": "https://dev.meta.ai/",
+    "kind": "Official site",
+    "category": "Models, hubs, and API providers",
+    "category_slug": "models-and-providers",
+    "note": "Llama models, downloads, and responsible-use docs."
+  },
+  {
+    "name": "Mistral AI documentation",
+    "url": "https://docs.mistral.ai/",
+    "kind": "Official docs",
+    "category": "Models, hubs, and API providers",
+    "category_slug": "models-and-providers",
+    "note": "Mistral models and API (chat, embeddings, OCR)."
+  },
+  {
+    "name": "Cohere documentation",
+    "url": "https://docs.cohere.com/",
+    "kind": "Official docs",
+    "category": "Models, hubs, and API providers",
+    "category_slug": "models-and-providers",
+    "note": "Command, Embed, and Rerank APIs — strong for enterprise RAG."
+  },
+  {
+    "name": "Groq documentation",
+    "url": "https://console.groq.com/docs",
+    "kind": "Official docs",
+    "category": "Models, hubs, and API providers",
+    "category_slug": "models-and-providers",
+    "note": "Very fast inference API (LPU) for open models."
+  },
+  {
+    "name": "Together AI",
+    "url": "https://docs.together.ai/",
+    "kind": "Official docs",
+    "category": "Models, hubs, and API providers",
+    "category_slug": "models-and-providers",
+    "note": "Hosted open-model inference, fine-tuning, and dedicated endpoints."
+  },
+  {
+    "name": "Fireworks AI",
+    "url": "https://docs.fireworks.ai/",
+    "kind": "Official docs",
+    "category": "Models, hubs, and API providers",
+    "category_slug": "models-and-providers",
+    "note": "Fast hosted inference for open models and fine-tunes."
+  },
+  {
+    "name": "Replicate",
+    "url": "https://replicate.com/docs",
+    "kind": "Official docs",
+    "category": "Models, hubs, and API providers",
+    "category_slug": "models-and-providers",
+    "note": "Run community and official models (LLMs, image, audio) via one API."
+  },
+  {
+    "name": "OpenRouter",
+    "url": "https://openrouter.ai/docs",
+    "kind": "Official docs",
+    "category": "Models, hubs, and API providers",
+    "category_slug": "models-and-providers",
+    "note": "One API key routed to many providers/models; useful for comparison."
+  },
+  {
+    "name": "arXiv",
+    "url": "https://arxiv.org/",
+    "kind": "Reference",
+    "category": "Models, hubs, and API providers",
+    "category_slug": "models-and-providers",
+    "note": "Preprint server — where most model papers land first. A paper is a claim, not a benchmark result."
+  },
+  {
+    "name": "Papers With Code",
+    "url": "https://huggingface.co/papers/trending",
+    "kind": "Reference",
+    "category": "Models, hubs, and API providers",
+    "category_slug": "models-and-providers",
+    "note": "Papers linked to code and benchmark leaderboards (SOTA tables)."
+  },
+  {
+    "name": "Pinecone documentation",
+    "url": "https://docs.pinecone.io/",
+    "kind": "Official docs",
+    "category": "RAG, embeddings, vector databases, and search",
+    "category_slug": "rag-and-data",
+    "note": "Managed vector database; indexes, namespaces, metadata filtering."
+  },
+  {
+    "name": "Weaviate documentation",
+    "url": "https://docs.weaviate.io/",
+    "kind": "Official docs",
+    "category": "RAG, embeddings, vector databases, and search",
+    "category_slug": "rag-and-data",
+    "note": "Open-source vector database with hybrid search and built-in vectorizers."
+  },
+  {
+    "name": "Qdrant documentation",
+    "url": "https://qdrant.tech/documentation/",
+    "kind": "Official docs",
+    "category": "RAG, embeddings, vector databases, and search",
+    "category_slug": "rag-and-data",
+    "note": "Open-source vector search engine (Rust), payload filtering, quantization."
+  },
+  {
+    "name": "Milvus documentation",
+    "url": "https://milvus.io/docs",
+    "kind": "Official docs",
+    "category": "RAG, embeddings, vector databases, and search",
+    "category_slug": "rag-and-data",
+    "note": "Large-scale open-source vector database from Zilliz."
+  },
+  {
+    "name": "Chroma documentation",
+    "url": "https://docs.trychroma.com/",
+    "kind": "Official docs",
+    "category": "RAG, embeddings, vector databases, and search",
+    "category_slug": "rag-and-data",
+    "note": "Lightweight embedding database popular for local RAG prototypes."
+  },
+  {
+    "name": "pgvector",
+    "url": "https://github.com/pgvector/pgvector",
+    "kind": "Repo",
+    "category": "RAG, embeddings, vector databases, and search",
+    "category_slug": "rag-and-data",
+    "note": "Vector similarity search inside PostgreSQL — often the simplest production choice if you already run Postgres."
+  },
+  {
+    "name": "FAISS",
+    "url": "https://github.com/facebookresearch/faiss",
+    "kind": "Repo",
+    "category": "RAG, embeddings, vector databases, and search",
+    "category_slug": "rag-and-data",
+    "note": "Meta's library for efficient similarity search and clustering of dense vectors."
+  },
+  {
+    "name": "LanceDB",
+    "url": "https://lancedb.github.io/lancedb/",
+    "kind": "Official docs",
+    "category": "RAG, embeddings, vector databases, and search",
+    "category_slug": "rag-and-data",
+    "note": "Embedded vector database on the Lance columnar format."
+  },
+  {
+    "name": "sqlite-vec",
+    "url": "https://github.com/asg017/sqlite-vec",
+    "kind": "Repo",
+    "category": "RAG, embeddings, vector databases, and search",
+    "category_slug": "rag-and-data",
+    "note": "Vector search extension for SQLite — good for local/offline apps."
+  },
+  {
+    "name": "Elasticsearch documentation",
+    "url": "https://www.elastic.co/docs/reference/elasticsearch",
+    "kind": "Official docs",
+    "category": "RAG, embeddings, vector databases, and search",
+    "category_slug": "rag-and-data",
+    "note": "Full-text + vector (kNN) search; BM25 still matters for hybrid retrieval."
+  },
+  {
+    "name": "OpenAI embeddings guide",
+    "url": "https://developers.openai.com/api/docs/guides/embeddings",
+    "kind": "Official docs",
+    "category": "RAG, embeddings, vector databases, and search",
+    "category_slug": "rag-and-data",
+    "note": "How embeddings work and which model dimensions to expect."
+  },
+  {
+    "name": "Sentence Transformers documentation",
+    "url": "https://www.sbert.net/",
+    "kind": "Official docs",
+    "category": "RAG, embeddings, vector databases, and search",
+    "category_slug": "rag-and-data",
+    "note": "Open embedding models, training, and semantic search recipes."
+  },
+  {
+    "name": "Unstructured",
+    "url": "https://docs.unstructured.io/",
+    "kind": "Official docs",
+    "category": "RAG, embeddings, vector databases, and search",
+    "category_slug": "rag-and-data",
+    "note": "Parsing PDFs/Office/HTML into clean elements for ingestion pipelines."
+  },
+  {
+    "name": "MarkItDown (Microsoft)",
+    "url": "https://github.com/microsoft/markitdown",
+    "kind": "Repo",
+    "category": "RAG, embeddings, vector databases, and search",
+    "category_slug": "rag-and-data",
+    "note": "Convert Office/PDF/etc. to Markdown for LLM ingestion."
+  },
+  {
+    "name": "Docling (IBM)",
+    "url": "https://github.com/docling-project/docling",
+    "kind": "Repo",
+    "category": "RAG, embeddings, vector databases, and search",
+    "category_slug": "rag-and-data",
+    "note": "Document parsing to Markdown/JSON with layout and OCR support."
+  },
+  {
+    "name": "OpenAI Evals",
+    "url": "https://github.com/openai/evals",
+    "kind": "Repo",
+    "category": "Evaluation, observability, and guardrails",
+    "category_slug": "eval-and-observability",
+    "note": "OpenAI's eval framework and registry of benchmarks."
+  },
+  {
+    "name": "promptfoo",
+    "url": "https://www.promptfoo.dev/docs/intro/",
+    "kind": "Official docs",
+    "category": "Evaluation, observability, and guardrails",
+    "category_slug": "eval-and-observability",
+    "note": "CLI-first LLM evals and red-teaming; test prompts/RAG/agents in CI."
+  },
+  {
+    "name": "LangSmith documentation",
+    "url": "https://docs.langchain.com/langsmith",
+    "kind": "Official docs",
+    "category": "Evaluation, observability, and guardrails",
+    "category_slug": "eval-and-observability",
+    "note": "LangChain's tracing, datasets, and evaluation platform (works with other frameworks too)."
+  },
+  {
+    "name": "Langfuse documentation",
+    "url": "https://langfuse.com/docs",
+    "kind": "Official docs",
+    "category": "Evaluation, observability, and guardrails",
+    "category_slug": "eval-and-observability",
+    "note": "Open-source LLM observability: traces, evals, prompt management."
+  },
+  {
+    "name": "Arize Phoenix",
+    "url": "https://github.com/Arize-ai/phoenix",
+    "kind": "Repo",
+    "category": "Evaluation, observability, and guardrails",
+    "category_slug": "eval-and-observability",
+    "note": "Open-source AI observability and evaluation notebooks/platform."
+  },
+  {
+    "name": "Weights & Biases documentation",
+    "url": "https://docs.wandb.ai/",
+    "kind": "Official docs",
+    "category": "Evaluation, observability, and guardrails",
+    "category_slug": "eval-and-observability",
+    "note": "Experiment tracking, W&B Weave for LLM tracing/evals."
+  },
+  {
+    "name": "MLflow documentation",
+    "url": "https://mlflow.org/docs/latest/",
+    "kind": "Official docs",
+    "category": "Evaluation, observability, and guardrails",
+    "category_slug": "eval-and-observability",
+    "note": "Open-source lifecycle platform: tracking, models, LLM evaluation and tracing."
+  },
+  {
+    "name": "Ragas documentation",
+    "url": "https://docs.ragas.io/",
+    "kind": "Official docs",
+    "category": "Evaluation, observability, and guardrails",
+    "category_slug": "eval-and-observability",
+    "note": "RAG evaluation metrics: faithfulness, answer relevancy, context precision/recall."
+  },
+  {
+    "name": "DeepEval",
+    "url": "https://deepeval.com/docs/getting-started",
+    "kind": "Official docs",
+    "category": "Evaluation, observability, and guardrails",
+    "category_slug": "eval-and-observability",
+    "note": "Unit-test-style LLM evaluation framework (Confident AI)."
+  },
+  {
+    "name": "Inspect AI (UK AISI)",
+    "url": "https://inspect.aisi.org.uk/",
+    "kind": "Official docs",
+    "category": "Evaluation, observability, and guardrails",
+    "category_slug": "eval-and-observability",
+    "note": "UK AI Security Institute's framework for rigorous model evaluations."
+  },
+  {
+    "name": "Hugging Face Evaluate",
+    "url": "https://huggingface.co/docs/evaluate",
+    "kind": "Official docs",
+    "category": "Evaluation, observability, and guardrails",
+    "category_slug": "eval-and-observability",
+    "note": "Standard ML/NLP metrics library and leaderboard tooling."
+  },
+  {
+    "name": "NVIDIA NeMo Guardrails",
+    "url": "https://github.com/NVIDIA-NeMo/Guardrails",
+    "kind": "Repo",
+    "category": "Evaluation, observability, and guardrails",
+    "category_slug": "eval-and-observability",
+    "note": "Programmable guardrails (Colang) for LLM apps."
+  },
+  {
+    "name": "Guardrails AI",
+    "url": "https://www.guardrailsai.com/docs",
+    "kind": "Official docs",
+    "category": "Evaluation, observability, and guardrails",
+    "category_slug": "eval-and-observability",
+    "note": "Output validation/retry framework with a validator hub."
+  },
+  {
+    "name": "OWASP Top 10 for LLM Applications",
+    "url": "https://owasp.org/projects/top-10-for-large-language-model-applications",
+    "kind": "Reference",
+    "category": "Evaluation, observability, and guardrails",
+    "category_slug": "eval-and-observability",
+    "note": "The security risk list for LLM apps: prompt injection, insecure output handling, training-data poisoning, etc. Read before shipping."
+  },
+  {
+    "name": "Anthropic prompt engineering guide",
+    "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
+    "kind": "Official docs",
+    "category": "Prompt engineering and context engineering",
+    "category_slug": "prompt-and-context",
+    "note": "Claude prompting: clarity, examples, XML structure, extended thinking."
+  },
+  {
+    "name": "OpenAI prompt engineering guide",
+    "url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+    "kind": "Official docs",
+    "category": "Prompt engineering and context engineering",
+    "category_slug": "prompt-and-context",
+    "note": "Strategy and tactics for GPT-class models, plus reasoning-model guidance."
+  },
+  {
+    "name": "Google Gemini prompting strategies",
+    "url": "https://ai.google.dev/gemini-api/docs/prompting-strategies",
+    "kind": "Official docs",
+    "category": "Prompt engineering and context engineering",
+    "category_slug": "prompt-and-context",
+    "note": "Gemini-specific prompting and media prompting."
+  },
+  {
+    "name": "DAIR Prompt Engineering Guide",
+    "url": "https://www.promptingguide.ai/",
+    "kind": "Guide",
+    "category": "Prompt engineering and context engineering",
+    "category_slug": "prompt-and-context",
+    "note": "Comprehensive community guide: techniques, papers, RAG/agent prompting."
+  },
+  {
+    "name": "Learn Prompting",
+    "url": "https://learnprompting.org/docs/introduction",
+    "kind": "Guide",
+    "category": "Prompt engineering and context engineering",
+    "category_slug": "prompt-and-context",
+    "note": "Free course-style prompting documentation, including security topics."
+  },
+  {
+    "name": "Awesome ChatGPT Prompts",
+    "url": "https://github.com/f/prompts.chat",
+    "kind": "Repo / list",
+    "category": "Prompt engineering and context engineering",
+    "category_slug": "prompt-and-context",
+    "note": "Large prompt-pattern collection; useful as examples, not as verified best practice."
+  },
+  {
+    "name": "Anthropic — Building Effective Agents",
+    "url": "https://www.anthropic.com/research/building-effective-agents",
+    "kind": "Article",
+    "category": "Prompt engineering and context engineering",
+    "category_slug": "prompt-and-context",
+    "note": "Anthropic's patterns: workflows vs agents, prompt chaining, routing, orchestrator-workers, evaluator-optimizer."
+  },
+  {
+    "name": "Anthropic — Effective context engineering",
+    "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+    "kind": "Article",
+    "category": "Prompt engineering and context engineering",
+    "category_slug": "prompt-and-context",
+    "note": "Context windows as a finite resource: compaction, note-taking, sub-agents."
+  },
+  {
+    "name": "OpenAI — A Practical Guide to Building Agents (PDF)",
+    "url": "https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf",
+    "kind": "Guide (PDF)",
+    "category": "Prompt engineering and context engineering",
+    "category_slug": "prompt-and-context",
+    "note": "OpenAI's practitioner guide: when to use agents, guardrails, orchestration patterns."
+  },
+  {
+    "name": "Aider",
+    "url": "https://aider.chat/docs/",
+    "kind": "Official docs",
+    "category": "AI coding tools and software-engineering agents",
+    "category_slug": "coding-agents",
+    "note": "Terminal pair-programming with git integration and repo maps."
+  },
+  {
+    "name": "Cline",
+    "url": "https://github.com/cline/cline",
+    "kind": "Repo",
+    "category": "AI coding tools and software-engineering agents",
+    "category_slug": "coding-agents",
+    "note": "Autonomous coding agent for VS Code with MCP support."
+  },
+  {
+    "name": "Continue",
+    "url": "https://docs.continue.dev/",
+    "kind": "Official docs",
+    "category": "AI coding tools and software-engineering agents",
+    "category_slug": "coding-agents",
+    "note": "Open-source AI code assistant for IDEs; bring-your-own-model, MCP support."
+  },
+  {
+    "name": "OpenHands",
+    "url": "https://github.com/OpenHands/OpenHands",
+    "kind": "Repo",
+    "category": "AI coding tools and software-engineering agents",
+    "category_slug": "coding-agents",
+    "note": "Open platform for autonomous software-development agents."
+  },
+  {
+    "name": "SWE-agent",
+    "url": "https://github.com/SWE-agent/SWE-agent",
+    "kind": "Repo",
+    "category": "AI coding tools and software-engineering agents",
+    "category_slug": "coding-agents",
+    "note": "Princeton's agent that fixes GitHub issues; SWE-bench reference implementation."
+  },
+  {
+    "name": "SWE-bench",
+    "url": "https://www.swebench.com/",
+    "kind": "Benchmark",
+    "category": "AI coding tools and software-engineering agents",
+    "category_slug": "coding-agents",
+    "note": "The standard benchmark for issue-fixing agents; check which split (Lite/Verified) a claim uses."
+  },
+  {
+    "name": "Muse documentation",
+    "url": "https://docs.github.com/en/copilot",
+    "kind": "Official docs",
+    "category": "AI coding tools and software-engineering agents",
+    "category_slug": "coding-agents",
+    "note": "Copilot features, agent mode, code review, and administration."
+  },
+  {
+    "name": "Muse documentation",
+    "url": "https://code.claude.com/docs/en/overview",
+    "kind": "Official docs",
+    "category": "AI coding tools and software-engineering agents",
+    "category_slug": "coding-agents",
+    "note": "Anthropic's terminal coding agent: hooks, subagents, MCP, settings."
+  },
+  {
+    "name": "Gemini CLI",
+    "url": "https://github.com/google-gemini/gemini-cli",
+    "kind": "Repo",
+    "category": "AI coding tools and software-engineering agents",
+    "category_slug": "coding-agents",
+    "note": "Google's open-source terminal agent for Gemini, MCP-compatible."
+  },
+  {
+    "name": "OpenCode",
+    "url": "https://opencode.ai/docs",
+    "kind": "Official docs",
+    "category": "AI coding tools and software-engineering agents",
+    "category_slug": "coding-agents",
+    "note": "Open-source terminal coding agent, provider-agnostic."
+  },
+  {
+    "name": "Roo Code",
+    "url": "https://github.com/RooCodeInc/Roo-Code",
+    "kind": "Repo",
+    "category": "AI coding tools and software-engineering agents",
+    "category_slug": "coding-agents",
+    "note": "VS Code agent (Cline fork) with modes and MCP marketplace."
+  },
+  {
+    "name": "PyTorch documentation",
+    "url": "https://pytorch.org/docs/stable/",
+    "kind": "Official docs",
+    "category": "ML / DL libraries and training toolchains",
+    "category_slug": "ml-libraries",
+    "note": "Tensors, autograd, distributed training, TorchServe/export."
+  },
+  {
+    "name": "TensorFlow documentation",
+    "url": "https://www.tensorflow.org/api_docs",
+    "kind": "Official docs",
+    "category": "ML / DL libraries and training toolchains",
+    "category_slug": "ml-libraries",
+    "note": "Keras-based training and deployment APIs."
+  },
+  {
+    "name": "JAX documentation",
+    "url": "https://docs.jax.dev/",
+    "kind": "Official docs",
+    "category": "ML / DL libraries and training toolchains",
+    "category_slug": "ml-libraries",
+    "note": "Composable transformations (grad/jit/vmap) for ML research."
+  },
+  {
+    "name": "scikit-learn documentation",
+    "url": "https://scikit-learn.org/stable/",
+    "kind": "Official docs",
+    "category": "ML / DL libraries and training toolchains",
+    "category_slug": "ml-libraries",
+    "note": "Classical ML: preprocessing, models, model evaluation — still the right tool for many tabular problems."
+  },
+  {
+    "name": "Hugging Face PEFT",
+    "url": "https://huggingface.co/docs/peft",
+    "kind": "Official docs",
+    "category": "ML / DL libraries and training toolchains",
+    "category_slug": "ml-libraries",
+    "note": "Parameter-efficient fine-tuning: LoRA and friends."
+  },
+  {
+    "name": "Hugging Face TRL",
+    "url": "https://huggingface.co/docs/trl",
+    "kind": "Official docs",
+    "category": "ML / DL libraries and training toolchains",
+    "category_slug": "ml-libraries",
+    "note": "SFT/DPO/RLHF training for Transformers models."
+  },
+  {
+    "name": "Axolotl",
+    "url": "https://github.com/axolotl-ai-cloud/axolotl",
+    "kind": "Repo",
+    "category": "ML / DL libraries and training toolchains",
+    "category_slug": "ml-libraries",
+    "note": "YAML-configured LLM fine-tuning (LoRA/full) across providers."
+  },
+  {
+    "name": "LLaMA-Factory",
+    "url": "https://github.com/hiyouga/LlamaFactory",
+    "kind": "Repo",
+    "category": "ML / DL libraries and training toolchains",
+    "category_slug": "ml-libraries",
+    "note": "Fine-tuning toolkit with web UI for 100+ models."
+  },
+  {
+    "name": "Unsloth",
+    "url": "https://github.com/unslothai/unsloth",
+    "kind": "Repo",
+    "category": "ML / DL libraries and training toolchains",
+    "category_slug": "ml-libraries",
+    "note": "Fast, memory-efficient LoRA/QLoRA fine-tuning notebooks and library."
+  },
+  {
+    "name": "ONNX documentation",
+    "url": "https://onnx.ai/onnx/",
+    "kind": "Official docs",
+    "category": "ML / DL libraries and training toolchains",
+    "category_slug": "ml-libraries",
+    "note": "Open model interchange format and ONNX Runtime for cross-platform inference."
+  },
+  {
+    "name": "NumPy documentation",
+    "url": "https://numpy.org/doc/stable/",
+    "kind": "Official docs",
+    "category": "ML / DL libraries and training toolchains",
+    "category_slug": "ml-libraries",
+    "note": "Array computing foundation of the Python ML stack."
+  },
+  {
+    "name": "pandas documentation",
+    "url": "https://pandas.pydata.org/docs/",
+    "kind": "Official docs",
+    "category": "ML / DL libraries and training toolchains",
+    "category_slug": "ml-libraries",
+    "note": "Tabular data manipulation; read the user guide section relevant to the task."
+  },
+  {
+    "name": "Karpathy — Neural Networks: Zero to Hero",
+    "url": "https://github.com/karpathy/nanoGPT",
+    "kind": "Repo / course",
+    "category": "Learning roadmaps and deep references",
+    "category_slug": "learning",
+    "note": "nanoGPT: the simplest readable GPT training implementation; pair with the YouTube series of the same name."
+  },
+  {
+    "name": "Karpathy — llm.c",
+    "url": "https://github.com/karpathy/llm.c",
+    "kind": "Repo",
+    "category": "Learning roadmaps and deep references",
+    "category_slug": "learning",
+    "note": "GPT training in plain C/CUDA — what frameworks abstract away, made visible."
+  },
+  {
+    "name": "Hugging Face LLM Course",
+    "url": "https://huggingface.co/learn/llm-course",
+    "kind": "Course",
+    "category": "Learning roadmaps and deep references",
+    "category_slug": "learning",
+    "note": "Free course: Transformers, fine-tuning, datasets, sharing models."
+  },
+  {
+    "name": "Microsoft — AI for Beginners",
+    "url": "https://github.com/microsoft/AI-For-Beginners",
+    "kind": "Repo / course",
+    "category": "Learning roadmaps and deep references",
+    "category_slug": "learning",
+    "note": "12-week curriculum: neural networks, CV, NLP, ethics."
+  },
+  {
+    "name": "Microsoft — Generative AI for Beginners",
+    "url": "https://github.com/microsoft/generative-ai-for-beginners",
+    "kind": "Repo / course",
+    "category": "Learning roadmaps and deep references",
+    "category_slug": "learning",
+    "note": "21-lesson course on building GenAI apps (Python/TypeScript/.NET tracks)."
+  },
+  {
+    "name": "Microsoft — ML for Beginners",
+    "url": "https://github.com/microsoft/ML-For-Beginners",
+    "kind": "Repo / course",
+    "category": "Learning roadmaps and deep references",
+    "category_slug": "learning",
+    "note": "Classical ML curriculum with projects."
+  },
+  {
+    "name": "LLM Course (mlabonne)",
+    "url": "https://github.com/mlabonne/llm-course",
+    "kind": "Repo / roadmap",
+    "category": "Learning roadmaps and deep references",
+    "category_slug": "learning",
+    "note": "Roadmap with notebooks: LLM fundamentals, scientist, and engineer tracks."
+  },
+  {
+    "name": "The Illustrated Transformer",
+    "url": "https://jalammar.github.io/illustrated-transformer/",
+    "kind": "Article",
+    "category": "Learning roadmaps and deep references",
+    "category_slug": "learning",
+    "note": "Jay Alammar's visual walkthrough of the Transformer architecture."
+  },
+  {
+    "name": "Fast.ai — Practical Deep Learning",
+    "url": "https://course.fast.ai/",
+    "kind": "Course",
+    "category": "Learning roadmaps and deep references",
+    "category_slug": "learning",
+    "note": "Top-down deep learning course (free)."
+  },
+  {
+    "name": "DeepLearning.AI short courses",
+    "url": "https://www.deeplearning.ai/courses",
+    "kind": "Course index",
+    "category": "Learning roadmaps and deep references",
+    "category_slug": "learning",
+    "note": "Short practitioner courses on RAG, agents, fine-tuning, and evals."
+  },
+  {
+    "name": "Awesome LLM",
+    "url": "https://github.com/Hannibal046/Awesome-LLM",
+    "kind": "Curated list",
+    "category": "Awesome lists and discovery indexes",
+    "category_slug": "awesome-and-discovery",
+    "note": "Papers, training frameworks, tools, and courses around LLMs."
+  },
+  {
+    "name": "Awesome Generative AI",
+    "url": "https://github.com/steven2358/awesome-generative-ai",
+    "kind": "Curated list",
+    "category": "Awesome lists and discovery indexes",
+    "category_slug": "awesome-and-discovery",
+    "note": "Broad GenAI tools and services index."
+  },
+  {
+    "name": "Awesome LangChain",
+    "url": "https://github.com/kyrolabs/awesome-langchain",
+    "kind": "Curated list",
+    "category": "Awesome lists and discovery indexes",
+    "category_slug": "awesome-and-discovery",
+    "note": "LangChain ecosystem projects and resources."
+  },
+  {
+    "name": "Awesome MCP Servers",
+    "url": "https://github.com/punkpeye/awesome-mcp-servers",
+    "kind": "Curated list",
+    "category": "Awesome lists and discovery indexes",
+    "category_slug": "awesome-and-discovery",
+    "note": "MCP server discovery by category (also listed under MCP)."
+  },
+  {
+    "name": "Awesome Production LLM",
+    "url": "https://github.com/jihoo-kim/awesome-production-llm",
+    "kind": "Curated list",
+    "category": "Awesome lists and discovery indexes",
+    "category_slug": "awesome-and-discovery",
+    "note": "Production LLM stack components and case studies."
+  },
+  {
+    "name": "Applied ML (eugeneyan)",
+    "url": "https://github.com/eugeneyan/applied-ml",
+    "kind": "Curated list",
+    "category": "Awesome lists and discovery indexes",
+    "category_slug": "awesome-and-discovery",
+    "note": "Papers and blog posts on production ML systems from real companies."
+  },
+  {
+    "name": "Awesome AI Agents",
+    "url": "https://github.com/e2b-dev/awesome-ai-agents",
+    "kind": "Curated list",
+    "category": "Awesome lists and discovery indexes",
+    "category_slug": "awesome-and-discovery",
+    "note": "Agent frameworks and applications index."
+  },
+  {
+    "name": "Useful Dev Resources (companion repo)",
+    "url": "https://github.com/SeanShaffer88/useful-dev-resources",
+    "kind": "Curated library",
+    "category": "Awesome lists and discovery indexes",
+    "category_slug": "awesome-and-discovery",
+    "note": "SEAN's general developer resource library — 690 entries across 77 categories (Windows, languages, APIs, data, testing…). This repo is the AI-specific companion to it."
+  },
+  {
+    "name": "WinDevKit (companion repo)",
+    "url": "https://github.com/SeanShaffer88/WinDevKit",
+    "kind": "Curated library",
+    "category": "Awesome lists and discovery indexes",
+    "category_slug": "awesome-and-discovery",
+    "note": "SEAN's shared Windows development resources: quality gates, templates, and checklists."
+  }
+]

@@ -1,0 +1,23 @@
+# Analysis options for the app skeleton.
+# Baseline rule set: flutter_lints 6.0.0 (the recommended lints for
+# Flutter apps, packages, and plugins).
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+  # Treat infos as non-fatal by default; CI can tighten this with
+  # `flutter analyze --fatal-infos` if the team wants that gate.
+
+linter:
+  rules:
+    # Rules already enabled by flutter_lints are not repeated here.
+    # A few stricter rules worth opting into (uncomment to enable):
+    # avoid_print: true # use a logger / debugPrint in app code
+    # prefer_const_constructors: true
+    # prefer_const_constructors_in_immutables: true
+    # prefer_const_declarations: true
+    # prefer_final_locals: true
+    # unawaited_futures: true # needs the unawaited() helper from dart:async patterns
+    # use_super_parameters: true

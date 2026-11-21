@@ -296,6 +296,37 @@
     },
     {
       "resultSchemaVersion": 1,
+      "purpose": "Provision and run disposable WSL2 build/test sandboxes (C++/Python/C#) for untrusted job folders; DevTools mounted read-only",
+      "writes": [
+        "Explicit new golden image (+ .sha256, .provision.log), explicit new results directory or outbox run folders; temporary distros under LOCALAPPDATA\\BuildSandbox\\instances are unregistered after use"
+      ],
+      "path": "New-BuildSandbox.ps1",
+      "exitCodes": {
+        "pass": 0,
+        "setup": 125,
+        "unknownOrUnavailable": 3,
+        "failure": 2
+      },
+      "parameters": [
+        "BuildImage",
+        "BaseRootfs",
+        "DotnetPackage",
+        "JobFolder",
+        "Destination",
+        "InboxRoot",
+        "OutboxRoot",
+        "ImagePath",
+        "DevToolsRoot",
+        "NoDevTools",
+        "WorkspaceSizeMB",
+        "ResultsSizeMB",
+        "AllowStepNetwork",
+        "ValidateOnly",
+        "Json"
+      ]
+    },
+    {
+      "resultSchemaVersion": 1,
       "purpose": "Create/import/verify client Interface and Lua profiles as data",
       "writes": [
         "Explicit new profile destination"
@@ -722,5 +753,115 @@
     "validation-quality-foundations.json",
     "validation-quality-native.json",
     "validation-quality-games.json"
-  ]
+  ],
+  "aiUtilities": {
+    "path": "ai_tools/README.md",
+    "runtime": "Python >=3.10; standard library only",
+    "platform": "Windows 11 x64",
+    "thirdPartyDependencies": [],
+    "telemetry": false,
+    "networkPolicy": "No suite telemetry or network calls; CargoSemanticLint forces Cargo offline mode.",
+    "commands": [
+      {
+        "command": "scene-diff",
+        "implementation": "ai_tools/scene_diff.py",
+        "guide": "ai_tools/tools/scene-diff/README.md",
+        "purpose": "Semantic Godot text scene/resource comparison"
+      },
+      {
+        "command": "asset-health-guard",
+        "implementation": "ai_tools/asset_health_guard.py",
+        "guide": "ai_tools/tools/asset-health-guard/README.md",
+        "purpose": "Godot resource, image, audio, and collision checks"
+      },
+      {
+        "command": "signal-flow-spy",
+        "implementation": "ai_tools/signal_flow_spy.py",
+        "guide": "ai_tools/tools/signal-flow-spy/README.md",
+        "purpose": "Static GDScript/C# signal mapping"
+      },
+      {
+        "command": "godot-test-harness",
+        "implementation": "ai_tools/godot_test_harness.py",
+        "guide": "ai_tools/tools/godot-test-harness/README.md",
+        "purpose": "Opt-in headless Godot test runner"
+      },
+      {
+        "command": "input-map-auditor",
+        "implementation": "ai_tools/input_map_auditor.py",
+        "guide": "ai_tools/tools/input-map-auditor/README.md",
+        "purpose": "Godot InputMap/script comparison"
+      },
+      {
+        "command": "state-time-machine-validator",
+        "implementation": "ai_tools/state_time_machine_validator.py",
+        "guide": "ai_tools/tools/state-time-machine-validator/README.md",
+        "purpose": "Versioned JSON state graph validation"
+      },
+      {
+        "command": "toc-manifest-linter",
+        "implementation": "ai_tools/toc_manifest_linter.py",
+        "guide": "ai_tools/tools/toc-manifest-linter/README.md",
+        "purpose": "WoW TOC/XML dependency validation"
+      },
+      {
+        "command": "addon-memory-taint-auditor",
+        "implementation": "ai_tools/addon_memory_taint_auditor.py",
+        "guide": "ai_tools/tools/addon-memory-taint-auditor/README.md",
+        "purpose": "Advisory Lua taint pattern scan"
+      },
+      {
+        "command": "saved-variables-inspector",
+        "implementation": "ai_tools/saved_variables_inspector.py",
+        "guide": "ai_tools/tools/saved-variables-inspector/README.md",
+        "purpose": "Non-executing SavedVariables literal inspection"
+      },
+      {
+        "command": "addon-api-compat-checker",
+        "implementation": "ai_tools/addon_api_compat_checker.py",
+        "guide": "ai_tools/tools/addon-api-compat-checker/README.md",
+        "purpose": "Advisory WoW API compatibility scan"
+      },
+      {
+        "command": "cargo-semantic-lint",
+        "implementation": "ai_tools/cargo_semantic_lint.py",
+        "guide": "ai_tools/tools/cargo-semantic-lint/README.md",
+        "purpose": "Offline Cargo diagnostics"
+      },
+      {
+        "command": "module-dep-graph",
+        "implementation": "ai_tools/module_dep_graph.py",
+        "guide": "ai_tools/tools/module-dep-graph/README.md",
+        "purpose": "Approximate Rust module/import graph"
+      },
+      {
+        "command": "export-matrix",
+        "implementation": "ai_tools/export_matrix.py",
+        "guide": "ai_tools/tools/export-matrix/README.md",
+        "purpose": "Non-executing export profile validation"
+      },
+      {
+        "command": "portable-env-auditor",
+        "implementation": "ai_tools/portable_env_auditor.py",
+        "guide": "ai_tools/tools/portable-env-auditor/README.md",
+        "purpose": "Heuristic URL/telemetry/write-scope scan"
+      },
+      {
+        "command": "release-manifest-gen",
+        "implementation": "ai_tools/release_manifest_gen.py",
+        "guide": "ai_tools/tools/release-manifest-gen/README.md",
+        "purpose": "SHA-256 manifest generation"
+      }
+    ]
+  },
+  "sharedLibrary": {
+    "module": "lib/DevToolsCommon.psm1",
+    "native": "lib/DevToolsProcess.cs",
+    "guide": "lib/DevToolsCommon.md",
+    "validation": "tests/Test-DevToolsCommon.ps1",
+    "purpose": "Hardened path containment, bounded I/O, JSON, validation, hashing, shell-free process execution with Job Object cleanup, result envelopes and redaction for new helpers",
+    "writes": [
+      "Only where callers invoke New-DtRunDirectory or Write-DtFileAtomic"
+    ]
+  }
 }

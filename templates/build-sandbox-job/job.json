@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "description": "Sample job: build and test C++, Python and C# offline inside the WSL2 build sandbox.",
+  "timeoutSeconds": 900,
+  "continueOnFailure": true,
+  "steps": [
+    {
+      "name": "cpp-build",
+      "executable": "g++",
+      "arguments": ["-std=c++20", "-O2", "-Wall", "-Wextra", "-o", "%ARTIFACTS%/hello", "cpp/hello.cpp"],
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "cpp-run",
+      "executable": "%ARTIFACTS%/hello",
+      "arguments": ["sandbox"],
+      "timeoutSeconds": 30
+    },
+    {
+      "name": "cpp-cross-windows",
+      "executable": "x86_64-w64-mingw32-g++",
+      "arguments": ["-std=c++20", "-O2", "-static", "-o", "%ARTIFACTS%/hello.exe", "cpp/hello.cpp"],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "python-test",
+      "executable": "python3",
+      "arguments": ["-m", "pytest", "-q", "python"],
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "csharp-build",
+      "executable": "dotnet",
+      "arguments": ["build", "csharp/HelloCs/HelloCs.csproj", "-c", "Release", "-o", "%ARTIFACTS%/csharp"],
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "csharp-run",
+      "executable": "dotnet",
+      "arguments": ["%ARTIFACTS%/csharp/HelloCs.dll"],
+      "timeoutSeconds": 60
+    },
+    {
+      "name": "devtools-readonly-check",
+      "executable": "sh",
+      "arguments": ["-c", "test -f \"$SANDBOX_DEVTOOLS/README.md\" && ! touch \"$SANDBOX_DEVTOOLS/.write-test\" 2>/dev/null"],
+      "timeoutSeconds": 30
+    },
+    {
+      "name": "isolation-check",
+      "executable": "sh",
+      "arguments": ["-c", "set -e; test \"$(id -un)\" = builder; ! touch /etc/escape 2>/dev/null; test -z \"$(find /mnt/wslg /mnt/wsl /mnt/c -mindepth 1 -print -quit 2>/dev/null)\"; ! python3 -c \"import socket; socket.create_connection(('1.1.1.1', 53), 3)\" 2>/dev/null; echo isolation ok"],
+      "timeoutSeconds": 30
+    }
+  ]
+}

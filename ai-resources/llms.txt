@@ -1,0 +1,30 @@
+# AI Knowledge Vault
+
+> A curated, AI-readable index of toolchains, useful repositories, MCP servers, agent frameworks, local inference, RAG, evaluation, and learning resources. Summaries are pointers — the knowledge lives at the linked primary sources.
+
+179 resources in 12 categories.
+
+## Start here
+
+- [README](README.md): what this is, the point-your-AI prompt, and honest limits
+- [AGENTS](AGENTS.md): instructions for an AI consuming this repo
+
+## Categories
+
+- [Toolchains by language and platform](categories/toolchains.md) (30)
+- [MCP servers, SDKs, and directories](categories/mcp-servers.md) (23)
+- [Agent frameworks and orchestration](categories/agent-frameworks.md) (18)
+- [Local inference and model runners](categories/local-inference.md) (12)
+- [Models, hubs, and API providers](categories/models-and-providers.md) (16)
+- [RAG, embeddings, vector databases, and search](categories/rag-and-data.md) (15)
+- [Evaluation, observability, and guardrails](categories/eval-and-observability.md) (14)
+- [Prompt engineering and context engineering](categories/prompt-and-context.md) (9)
+- [AI coding tools and software-engineering agents](categories/coding-agents.md) (11)
+- [ML / DL libraries and training toolchains](categories/ml-libraries.md) (12)
+- [Learning roadmaps and deep references](categories/learning.md) (10)
+- [Awesome lists and discovery indexes](categories/awesome-and-discovery.md) (9)
+
+## Machine-readable
+
+- [resources.json](resources.json)
+- [resources.csv](resources.csv)

@@ -1,0 +1,337 @@
+# Monorepo release workflow for the kit collection under kits/.
+#
+# One workflow releases any single kit. Three ways to run it:
+#   - Push a tag named <Kit>-v<Version> (e.g. WatchKit-v0.2.1).
+#   - Run it manually (workflow_dispatch), picking the kit and the
+#     version; the release and its tag are created at current main.
+#   - Run it manually with kit = ALL: the release-all job releases
+#     every kit whose <Kit>-v<Version> tag (at the kit's own
+#     Cargo.toml version) does not exist yet, in one dispatch —
+#     the version input is ignored in that mode. Kits already
+#     released are skipped, so re-running ALL is safe. This exists
+#     because releasing the collection one kit at a time never
+#     happened in practice (docs/PAIN_POINTS.md #51).
+# It builds the kit on Windows (static CRT via the kit's own
+# .cargo/config.toml), packages the same zip the kit's standalone
+# release shipped — <Kit>-<Version>-x64.zip holding the DLL, its
+# import lib, the header, LICENSE and README.md (BridgeKit ships
+# its .exe instead) — writes SHA256SUMS.txt for the zip, and
+# attaches both to the GitHub Release for the tag. Kits are exempt
+# from the V2.0 installer (MSI) leg (SEAN, 2026-11-01): a kit
+# release is the zip plus SHA256SUMS.txt.
+# OCRKit fetches its pinned engine sources first (fetch.ps1,
+# SHA-256-verified), exactly as its standalone release did.
+# The per-kit table in the resolve step mirrors each kit's own
+# .github/workflows/release.yml, kept in its folder for reference.
+# Binaries are unsigned.
+name: kits-release
+on:
+  push:
+    tags: ["*-v*"]
+  workflow_dispatch:
+    inputs:
+      kit:
+        description: Kit to release
+        type: choice
+        required: true
+        options:
+          - ALL
+          - ArchiveKit
+          - BridgeKit
+          - ClipKit
+          - CrashKit
+          - DiagKit
+          - EmbedKit
+          - FastSearch
+          - FileMetaKit
+          - FileOpsKit
+          - FixtureKit
+          - HardwareInfo
+          - ImageKit
+          - InstanceKit
+          - JobKit
+          - LinkKit
+          - LogKit
+          - MediaKit
+          - NetKit
+          - NotifyKit
+          - OCRKit
+          - PDFKit
+          - PathKit
+          - ProcessKit
+          - ProviderKit
+          - RegKit
+          - RenameKit
+          - SettingsKit
+          - ShellInteropKit
+          - ShellKit
+          - SignKit
+          - ThumbKit
+          - TimeKit
+          - UiProbeKit
+          - UpdateKit
+          - VaultKit
+          - WatchKit
+      version:
+        description: "Version, e.g. v0.2.1 (ignored when kit is ALL)"
+        type: string
+        required: true
+        default: v0.0.0
+permissions:
+  contents: write
+jobs:
+  release:
+    if: github.event_name == 'push' || inputs.kit != 'ALL'
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Resolve kit + version
+        shell: pwsh
+        env:
+          RELEASE_EVENT: ${{ github.event_name }}
+          RELEASE_KIT: ${{ inputs.kit }}
+          RELEASE_VERSION: ${{ inputs.version }}
+          RELEASE_REF: ${{ github.ref_name }}
+        run: |
+          if ($env:RELEASE_EVENT -eq "workflow_dispatch") {
+            if ($env:GITHUB_REF -cne "refs/heads/main") { throw "Manual releases must run from main" }
+            $kit = $env:RELEASE_KIT
+            $ver = $env:RELEASE_VERSION
+          } else {
+            $tag = $env:RELEASE_REF
+            $idx = $tag.IndexOf("-v")
+            if ($idx -lt 1) { throw "Tag '$tag' is not of the form <Kit>-v<Version>" }
+            $kit = $tag.Substring(0, $idx)
+            $ver = $tag.Substring($idx + 1)
+          }
+          $table = @{
+            ArchiveKit     = @{ lib = "archive_kit";       header = "archivekit.h" }
+            BridgeKit      = @{ exe = "bridgekit" }
+            ClipKit        = @{ lib = "clip_kit";          header = "clipkit.h" }
+            CrashKit       = @{ lib = "crashkit";          header = "crashkit.h" }
+            DiagKit        = @{ lib = "diag_kit";          header = "diagkit.h" }
+            EmbedKit       = @{ lib = "embedkit";          header = "embedkit.h" }
+            FastSearch     = @{ lib = "fast_search";       header = "fastsearch.h" }
+            FileMetaKit    = @{ lib = "file_meta_kit";     header = "filemetakit.h" }
+            FileOpsKit     = @{ lib = "file_ops_kit";      header = "fileopskit.h" }
+            FixtureKit     = @{ lib = "fixture_kit";       header = "fixturekit.h" }
+
+            HardwareInfo   = @{ lib = "hardwareinfo";      header = "hardwareinfo.h" }
+            ImageKit       = @{ lib = "imagekit";          header = "imagekit.h" }
+            InstanceKit    = @{ lib = "instance_kit";      header = "instancekit.h" }
+            JobKit         = @{ lib = "job_kit";           header = "jobkit.h" }
+            LinkKit        = @{ lib = "link_kit";          header = "linkkit.h" }
+            LogKit         = @{ lib = "log_kit";           header = "logkit.h" }
+            MediaKit       = @{ lib = "media_kit";         header = "mediakit.h" }
+            NetKit         = @{ lib = "net_kit";           header = "netkit.h" }
+            NotifyKit      = @{ lib = "notify_kit";        header = "notifykit.h" }
+            OCRKit         = @{ lib = "ocrkit";            header = "ocrkit.h"; fetch = $true }
+            PDFKit         = @{ lib = "pdfkit";            header = "pdfkit.h" }
+            PathKit        = @{ lib = "path_kit";          header = "pathkit.h" }
+            ProcessKit     = @{ lib = "process_kit";       header = "processkit.h" }
+            ProviderKit    = @{ lib = "provider_kit";      header = "providerkit.h" }
+            RegKit         = @{ lib = "reg_kit";           header = "regkit.h" }
+            RenameKit      = @{ lib = "rename_kit";        header = "renamekit.h" }
+            SettingsKit    = @{ lib = "settings_kit";      header = "settingskit.h" }
+            ShellInteropKit = @{ lib = "shell_interop_kit"; header = "shellinteropkit.h" }
+            ShellKit       = @{ lib = "shell_kit";         header = "shellkit.h" }
+            SignKit        = @{ lib = "sign_kit";          header = "signkit.h" }
+            ThumbKit       = @{ lib = "thumb_kit";         header = "thumbkit.h" }
+            TimeKit        = @{ lib = "timekit";           header = "timekit.h" }
+            UiProbeKit     = @{ lib = "ui_probe_kit";      header = "uiprobekit.h" }
+            UpdateKit      = @{ lib = "updatekit";         header = "updatekit.h" }
+            VaultKit       = @{ lib = "vaultkit";          header = "vaultkit.h" }
+            WatchKit       = @{ lib = "watch_kit";         header = "watchkit.h" }
+          }
+          if (-not ($table.Keys -ccontains $kit)) { throw "Unknown kit '$kit' — no packaging data in kits-release.yml" }
+          if ($ver -cnotmatch '\Av(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(?:-(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(?:\.(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?(?:\+[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?\z') { throw "Invalid release version '$ver'" }
+          python -c 'import pathlib, sys, tomllib; source = tomllib.loads((pathlib.Path("kits") / sys.argv[1] / "Cargo.toml").read_text(encoding="utf-8"))["package"]["version"]; sys.exit(0 if source == sys.argv[2][1:] else f"Version mismatch: source {source}, release {sys.argv[2]}")' $kit $ver
+          if ($LASTEXITCODE -ne 0) { throw "Kit source/version validation failed" }
+          $releaseSha = git rev-parse HEAD
+          if ($LASTEXITCODE -ne 0 -or $releaseSha -cnotmatch '\A[0-9a-f]{40}\z') { throw "Cannot resolve checked-out commit" }
+          $tag = "$kit-$ver"
+          $tagRef = "refs/tags/$tag"
+          $gitArgs = @('ls-remote', 'origin', $tagRef, "$tagRef^{}")
+          $remoteRefs = @(git @gitArgs)
+          if ($LASTEXITCODE -ne 0) { throw "Cannot verify remote release tag" }
+          $remoteTags = @{}
+          foreach ($remoteRef in $remoteRefs) {
+            if ($remoteRef -cnotmatch '\A([0-9a-f]{40})\s+(refs/tags/\S+)\z') { throw "Invalid remote tag response" }
+            $remoteTags[$Matches[2]] = $Matches[1]
+          }
+          $remoteSha = if ($remoteTags.ContainsKey("$tagRef^{}")) { $remoteTags["$tagRef^{}"] } else { $remoteTags[$tagRef] }
+          if ($remoteSha -and $remoteSha -cne $releaseSha) { throw "Release tag does not match checked-out commit" }
+          "KIT_RELEASE_SHA=$releaseSha" >> $env:GITHUB_ENV
+          $e = $table[$kit]
+          "KIT=$kit"     >> $env:GITHUB_ENV
+          "VER=$ver"     >> $env:GITHUB_ENV
+          "TAG=$kit-$ver" >> $env:GITHUB_ENV
+          "KIT_LIB=$($e.lib)"   >> $env:GITHUB_ENV
+          "HEADER=$($e.header)" >> $env:GITHUB_ENV
+          "EXE=$($e.exe)"       >> $env:GITHUB_ENV
+          "FETCH=$($e.fetch -eq $true)" >> $env:GITHUB_ENV
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Fetch pinned engine sources (OCRKit, SHA-256 verified)
+        if: env.FETCH == 'True'
+        working-directory: kits/${{ env.KIT }}
+        run: ./fetch.ps1
+      - name: Build release (static CRT via the kit's .cargo/config.toml)
+        working-directory: kits/${{ env.KIT }}
+        run: cargo build --release --locked
+      - name: Package zip + SHA256SUMS.txt
+        shell: pwsh
+        working-directory: kits/${{ env.KIT }}
+        run: |
+          $stage = "$env:GITHUB_WORKSPACE/dist/$env:KIT-$env:VER-x64"
+          New-Item -ItemType Directory -Force $stage | Out-Null
+          if ($env:EXE) {
+            Copy-Item "target/release/$env:EXE.exe" $stage
+          } else {
+            Copy-Item "target/release/$env:KIT_LIB.dll" $stage
+            Copy-Item "target/release/$env:KIT_LIB.dll.lib" $stage
+            Copy-Item "include/$env:HEADER" $stage
+          }
+          Copy-Item LICENSE $stage
+          Copy-Item README.md $stage
+          $zip = "$env:GITHUB_WORKSPACE/dist/$env:KIT-$env:VER-x64.zip"
+          Compress-Archive -Path "$stage/*" -DestinationPath $zip
+          $hash = (Get-FileHash $zip -Algorithm SHA256).Hash.ToLower()
+          "$hash  $env:KIT-$env:VER-x64.zip" | Out-File -Encoding ascii "$env:GITHUB_WORKSPACE/dist/SHA256SUMS.txt"
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG }}
+          target_commitish: ${{ env.KIT_RELEASE_SHA }}
+          files: |
+            dist/*.zip
+            dist/SHA256SUMS.txt
+  release-all:
+    if: github.event_name == 'workflow_dispatch' && inputs.kit == 'ALL'
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        kit:
+          - ArchiveKit
+          - BridgeKit
+          - ClipKit
+          - CrashKit
+          - DiagKit
+          - EmbedKit
+          - FastSearch
+          - FileMetaKit
+          - FileOpsKit
+          - FixtureKit
+          - HardwareInfo
+          - ImageKit
+          - InstanceKit
+          - JobKit
+          - LinkKit
+          - LogKit
+          - MediaKit
+          - NetKit
+          - NotifyKit
+          - OCRKit
+          - PDFKit
+          - PathKit
+          - ProcessKit
+          - ProviderKit
+          - RegKit
+          - RenameKit
+          - SettingsKit
+          - ShellInteropKit
+          - ShellKit
+          - SignKit
+          - ThumbKit
+          - TimeKit
+          - UiProbeKit
+          - UpdateKit
+          - VaultKit
+          - WatchKit
+    steps:
+      - uses: actions/checkout@v4
+      - name: Resolve kit (version from Cargo.toml; skip if released)
+        id: resolve
+        shell: pwsh
+        env:
+          KIT: ${{ matrix.kit }}
+          KIT_RELEASE_SHA: ${{ github.sha }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $dir = "kits/$env:KIT"
+          $cargo = Get-Content "$dir/Cargo.toml" -Raw
+          $m = [regex]::Match($cargo, '(?ms)^\[package\]\s.*?^version\s*=\s*"([^"]+)"')
+          if (-not $m.Success) { throw "no [package] version in $dir/Cargo.toml" }
+          $ver = $m.Groups[1].Value
+          $tag = "$env:KIT-v$ver"
+          "KIT=$env:KIT" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          "VER=$ver" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          "TAG=$tag" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          "KIT_RELEASE_SHA=$env:KIT_RELEASE_SHA" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          $existing = git ls-remote --tags origin "refs/tags/$tag"
+          if ($existing) {
+            Write-Host "skip: $tag already released"
+            "skip=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+            exit 0
+          }
+          # Binary + header names are derived from the kit itself,
+          # verified 2026-11-12 to match the single-kit table for
+          # every kit: the [lib] name (or the package name with
+          # dashes as underscores) is the DLL name, the one header
+          # in include/ is the shipped header, and BridgeKit's
+          # [[bin]] name is its exe.
+          $libName = ([regex]::Match($cargo, '(?ms)^\[lib\]\s.*?^name\s*=\s*"([^"]+)"')).Groups[1].Value
+          if (-not $libName) {
+            $pkg = ([regex]::Match($cargo, '(?ms)^\[package\]\s.*?^name\s*=\s*"([^"]+)"')).Groups[1].Value
+            $libName = $pkg -replace '-', '_'
+          }
+          "KIT_LIB=$libName" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          $binName = ([regex]::Match($cargo, '(?ms)^\[\[bin\]\]\s.*?^name\s*=\s*"([^"]+)"')).Groups[1].Value
+          if ($binName) {
+            "EXE=$binName" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          } else {
+            $headers = Get-ChildItem "$dir/include/*.h"
+            if ($headers.Count -ne 1) { throw "expected exactly one header in $dir/include" }
+            "HEADER=$($headers[0].Name)" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          }
+      - name: Fetch pinned engine sources
+        if: steps.resolve.outputs.skip != 'true' && matrix.kit == 'OCRKit'
+        shell: pwsh
+        working-directory: kits/${{ matrix.kit }}
+        run: ./fetch.ps1
+      - name: Build release
+        if: steps.resolve.outputs.skip != 'true'
+        shell: pwsh
+        working-directory: kits/${{ matrix.kit }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          cargo build --release --locked
+      - name: Package zip + SHA256SUMS.txt
+        if: steps.resolve.outputs.skip != 'true'
+        shell: pwsh
+        working-directory: kits/${{ matrix.kit }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $stage = "$env:GITHUB_WORKSPACE/dist/$env:KIT-$env:VER-x64"
+          New-Item -ItemType Directory -Force $stage | Out-Null
+          if ($env:EXE) {
+            Copy-Item "target/release/$env:EXE.exe" $stage
+          } else {
+            Copy-Item "target/release/$env:KIT_LIB.dll" $stage
+            Copy-Item "target/release/$env:KIT_LIB.dll.lib" $stage
+            Copy-Item "include/$env:HEADER" $stage
+          }
+          Copy-Item LICENSE $stage
+          Copy-Item README.md $stage
+          $zip = "$env:GITHUB_WORKSPACE/dist/$env:KIT-$env:VER-x64.zip"
+          Compress-Archive -Path "$stage/*" -DestinationPath $zip
+          $hash = (Get-FileHash $zip -Algorithm SHA256).Hash.ToLower()
+          "$hash  $env:KIT-$env:VER-x64.zip" | Out-File -Encoding ascii "$env:GITHUB_WORKSPACE/dist/SHA256SUMS.txt"
+      - uses: softprops/action-gh-release@v2
+        if: steps.resolve.outputs.skip != 'true'
+        with:
+          tag_name: ${{ env.TAG }}
+          target_commitish: ${{ env.KIT_RELEASE_SHA }}
+          files: |
+            dist/*.zip
+            dist/SHA256SUMS.txt
