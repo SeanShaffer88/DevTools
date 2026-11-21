@@ -2535,7 +2535,7 @@
       "path": "development/acquisitions/.gitignore",
       "domain": "development",
       "summary": "Offline acquisition payload, original tool/fixture or retained license/provenance. See development/acquisitions/inventory.json and README for exact identity and limits.",
-      "bytes": 19
+      "bytes": 48
     },
     {
       "path": "development/acquisitions/BROWSER-DERIVATION.json",
@@ -6771,7 +6771,7 @@
       "path": "development/acquisitions/original/LICENSE",
       "domain": "development",
       "summary": "Offline acquisition payload, original tool/fixture or retained license/provenance. See development/acquisitions/inventory.json and README for exact identity and limits.",
-      "bytes": 1090
+      "bytes": 1069
     },
     {
       "path": "development/acquisitions/original/media/check.svg",
