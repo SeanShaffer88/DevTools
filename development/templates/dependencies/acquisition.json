@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Inert acquisition plan; never execute fields as commands",
+  "components": [
+    {
+      "id": "replace-with-project-component",
+      "status": "not-acquired",
+      "version": null,
+      "hostArchitecture": null,
+      "targetArchitecture": null,
+      "officialSource": null,
+      "expectedSha256": null,
+      "licenseEvidence": null,
+      "redistributionReviewed": false,
+      "destination": null,
+      "cacheLocation": null,
+      "diskBudgetBytes": null,
+      "verificationExecutable": null,
+      "verificationArguments": [],
+      "observedResult": "NotRun"
+    }
+  ]
+}

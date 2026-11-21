@@ -1,0 +1,403 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Original inert acquisition and offline-readiness recipes for developer-managed dependencies. Recipes do not execute commands or grant distribution rights.",
+  "statusScope": "not-acquired means this development pack contains no vendor toolchain binary/cache payload. Existing host installations must be inventoried separately.",
+  "artifactEvidenceFields": [
+    "name",
+    "version",
+    "source",
+    "sha256",
+    "license",
+    "provenance",
+    "capturedUtc",
+    "targetOS",
+    "architecture",
+    "verification"
+  ],
+  "recipes": [
+    {
+      "id": "windows-sdk",
+      "title": "Windows SDK and MSVC Build Tools",
+      "domains": [
+        "windows",
+        "pc-games"
+      ],
+      "status": "not-acquired",
+      "versionPolicy": "Select and record exact project-compatible versions, OS, architecture and checksums before acquiring artifacts.",
+      "officialSources": [
+        "https://learn.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio"
+      ],
+      "distributionNotes": "Vendor layout and component licenses govern redistribution. Acquire a selected compiler/SDK layout from Microsoft, retain manifest and license evidence.",
+      "prepare": "Capture the installed SDK, compiler, linker, CRT version, target architecture and component IDs. Create and verify a vendor offline layout for the selected project workload. Save Win32 API reference selections under their individual terms.",
+      "offlineVerification": "Invoke-DevBuild.ps1 with the project's reviewed executable and argument array",
+      "localAlternatives": [
+        "knowledge/manifest.json",
+        "windevkit/docs/CATALOG.md"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion."
+    },
+    {
+      "id": "dotnet-nuget",
+      "title": ".NET SDK and NuGet local feed",
+      "domains": [
+        "windows",
+        "dependencies"
+      ],
+      "status": "not-acquired",
+      "versionPolicy": "Select and record exact project-compatible versions, OS, architecture and checksums before acquiring artifacts.",
+      "officialSources": [
+        "https://learn.microsoft.com/en-us/nuget/hosting-packages/local-feeds",
+        "https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-restore"
+      ],
+      "distributionNotes": "SDK and each package have separate licenses. Retain actual nupkg archives and their notices, with locked versions.",
+      "prepare": "Pin SDK in global.json and packages with lockfiles. Collect all transitive nupkg files into a local feed. Expanded global-package folders alone are not a complete transferable feed. Configure a project-scoped NuGet.Config with clear and the local feed.",
+      "offlineVerification": "dotnet restore --locked-mode --source <local-feed>; then dotnet build --no-restore",
+      "localAlternatives": [
+        "Get-DependencyAudit.ps1"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion."
+    },
+    {
+      "id": "webview2",
+      "title": "WebView2 Runtime and SDK",
+      "domains": [
+        "windows",
+        "websites"
+      ],
+      "status": "not-acquired",
+      "versionPolicy": "Select and record exact project-compatible versions, OS, architecture and checksums before acquiring artifacts.",
+      "officialSources": [
+        "https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution"
+      ],
+      "distributionNotes": "Follow Microsoft's runtime redistribution and package terms. Runtime installation is a separate operation.",
+      "prepare": "Record Fixed Version or Evergreen strategy, exact architecture, native loader, runtime version and deployment behavior. Acquire the selected offline installer or fixed-version artifact from the vendor and retain its signatures and notices.",
+      "offlineVerification": "Test-RuntimeRequirements.ps1 with explicit application requirements",
+      "localAlternatives": [
+        "Test-RuntimeRequirements.ps1"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion."
+    },
+    {
+      "id": "android-sdk",
+      "title": "Android SDK, platform/build tools and NDK",
+      "domains": [
+        "android-apps",
+        "android-games"
+      ],
+      "status": "not-acquired",
+      "versionPolicy": "Select and record exact project-compatible versions, OS, architecture and checksums before acquiring artifacts.",
+      "officialSources": [
+        "https://developer.android.com/tools/sdkmanager",
+        "https://developer.android.com/ndk/downloads"
+      ],
+      "distributionNotes": "SDK packages require their applicable licenses. License acceptance belongs to the developer's environment.",
+      "prepare": "Pin compileSdk/build tools, NDK, CMake, JDK, Android Gradle Plugin and ABIs. Prepare platform/build-tools/platform-tools and optional NDK packages while connected. Retain SDK package.xml and source.properties, accepted terms and trusted download evidence.",
+      "offlineVerification": "Inspect selected SDK via Test-SdkCompleteness.ps1; offline build using the actual Gradle wrapper",
+      "localAlternatives": [
+        "Test-SdkCompleteness.ps1",
+        "kotlin/manifest.json"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion."
+    },
+    {
+      "id": "gradle",
+      "title": "Gradle wrapper, plugin and Maven dependency cache",
+      "domains": [
+        "android-apps",
+        "android-games",
+        "dependencies"
+      ],
+      "status": "not-acquired",
+      "versionPolicy": "Select and record exact project-compatible versions, OS, architecture and checksums before acquiring artifacts.",
+      "officialSources": [
+        "https://docs.gradle.org/current/userguide/dependency_caching.html"
+      ],
+      "distributionNotes": "Plugin, wrapper, Maven artifact and SDK licenses apply separately.",
+      "prepare": "Record wrapper checksum, plugin version, verification metadata and dependency locks. Resolve the project's actual build variants while connected, then preserve the matching Gradle user-home cache and wrapper distribution. A single resolved task does not prove every variant is ready.",
+      "offlineVerification": "gradlew.bat --offline <reviewed-project-tasks>",
+      "localAlternatives": [
+        "kotlin/manifest.json"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion."
+    },
+    {
+      "id": "node-npm",
+      "title": "Node.js and npm package cache",
+      "domains": [
+        "websites",
+        "userscripts",
+        "userstyles",
+        "dependencies"
+      ],
+      "status": "not-acquired",
+      "versionPolicy": "Select and record exact project-compatible versions, OS, architecture and checksums before acquiring artifacts.",
+      "officialSources": [
+        "https://docs.npmjs.com/cli/v11/commands/npm-cache/",
+        "https://docs.npmjs.com/cli/v11/commands/npm-ci/"
+      ],
+      "distributionNotes": "Each transitive package's license and bundled assets must be checked.",
+      "prepare": "Pin Node/npm and package-lock. Prepare the full lock graph in a dedicated cache while connected using the project's npm flags. Review install scripts before any preparation. Retain integrity fields and license files. npm cache verification checks cache integrity, not complete project readiness.",
+      "offlineVerification": "npm ci --offline --ignore-scripts --cache <prepared-cache> in a fresh disposable project copy; review required build scripts separately",
+      "localAlternatives": [
+        "Get-DependencyAudit.ps1"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion."
+    },
+    {
+      "id": "rust-cargo",
+      "title": "Rust toolchain and Cargo vendored sources",
+      "domains": [
+        "windows",
+        "pc-games",
+        "dependencies"
+      ],
+      "status": "not-acquired",
+      "versionPolicy": "Select and record exact project-compatible versions, OS, architecture and checksums before acquiring artifacts.",
+      "officialSources": [
+        "https://doc.rust-lang.org/cargo/commands/cargo-vendor.html"
+      ],
+      "distributionNotes": "Check every crate and native dependency license; preserve license texts with source snapshots.",
+      "prepare": "Pin toolchain, targets and Cargo.lock. Vendor locked crate sources while connected and retain cargo vendor source-replacement configuration. Prepare native libraries and linker toolchains separately. Build scripts and proc macros execute project dependency code.",
+      "offlineVerification": "cargo build --offline --locked against the prepared source replacement",
+      "localAlternatives": [
+        "pilots/tauri-inspector/README.md"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion."
+    },
+    {
+      "id": "python-wheels",
+      "title": "Python and target-specific wheelhouse",
+      "domains": [
+        "dependencies",
+        "websites"
+      ],
+      "status": "not-acquired",
+      "versionPolicy": "Select and record exact project-compatible versions, OS, architecture and checksums before acquiring artifacts.",
+      "officialSources": [
+        "https://pip.pypa.io/en/stable/cli/pip_download/",
+        "https://pip.pypa.io/en/stable/topics/repeatable-installs/"
+      ],
+      "distributionNotes": "Wheel metadata and each bundled native library have their own terms.",
+      "prepare": "Pin interpreter, OS, architecture, ABI and fully hashed requirements. Download all required wheels for the exact target; build any source-only packages in a controlled matching environment. Retain hashes and notices. A wheelhouse for one target is not a universal cache.",
+      "offlineVerification": "python -m pip install --no-index --find-links <wheelhouse> --require-hashes -r requirements.txt in a fresh virtual environment",
+      "localAlternatives": [
+        "development/guides/dependencies.md"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion."
+    },
+    {
+      "id": "cpp-packages",
+      "title": "CMake, vcpkg and native libraries",
+      "domains": [
+        "windows",
+        "pc-games",
+        "dependencies"
+      ],
+      "status": "not-acquired",
+      "versionPolicy": "Select and record exact project-compatible versions, OS, architecture and checksums before acquiring artifacts.",
+      "officialSources": [
+        "https://learn.microsoft.com/en-us/vcpkg/consume/binary-caching-local",
+        "https://cmake.org/cmake/help/latest/manual/cmake-presets.7.html"
+      ],
+      "distributionNotes": "Library licenses, toolchain runtime and binary redistribution rights apply per component.",
+      "prepare": "Pin compiler, triplet, vcpkg baseline, overlays and CMake presets. Prepare source/download caches and matching binary cache for each triplet. Retain compiler flags, ABI identity, hashes and debug symbols separately. Avoid implicit FetchContent network operations in offline builds.",
+      "offlineVerification": "Configure and build reviewed CMake presets with dependency fetching disabled and prepared caches",
+      "localAlternatives": [
+        "Resolve-NativeDependencies.ps1"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion."
+    },
+    {
+      "id": "godot",
+      "title": "Godot editor, .NET support and export templates",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "status": "not-acquired",
+      "versionPolicy": "Select and record exact project-compatible versions, OS, architecture and checksums before acquiring artifacts.",
+      "officialSources": [
+        "https://docs.godotengine.org/en/4.5/tutorials/export/exporting_projects.html",
+        "https://godotengine.org/license/"
+      ],
+      "distributionNotes": "Godot MIT and bundled third-party notices apply. Exported games and assets need separate license records.",
+      "prepare": "Acquire matching editor and export templates for the project's exact version and target. Keep .NET and native runtime prerequisites where used. Import project assets while connected only if importers require additional downloads, then verify a fresh offline import.",
+      "offlineVerification": "Run installed Godot --headless --path <owned-project> --editor --quit, then explicit trusted project tests/export",
+      "localAlternatives": [
+        "godot/manifest.json",
+        "development/vendor/godot-manual/LICENSE.txt"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion."
+    },
+    {
+      "id": "flutter",
+      "title": "Flutter SDK, Dart and pub cache",
+      "domains": [
+        "android-apps",
+        "websites",
+        "windows"
+      ],
+      "status": "not-acquired",
+      "versionPolicy": "Select and record exact project-compatible versions, OS, architecture and checksums before acquiring artifacts.",
+      "officialSources": [
+        "https://dart.dev/tools/pub/cmd/pub-get",
+        "https://docs.flutter.dev/install"
+      ],
+      "distributionNotes": "SDK, pub packages and platform plugins have separate licenses.",
+      "prepare": "Pin Flutter revision and pubspec.lock. Acquire the selected SDK and platform artifacts, populate the pub cache, and prepare Android/Windows SDKs separately. Review code generators and plugin build steps.",
+      "offlineVerification": "dart pub get --offline; then actual project-specific Flutter build/test commands",
+      "localAlternatives": [
+        "flutter/manifest.json"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion."
+    },
+    {
+      "id": "browsers",
+      "title": "Target browsers and browser test dependencies",
+      "domains": [
+        "websites",
+        "userscripts",
+        "userstyles"
+      ],
+      "status": "not-acquired",
+      "versionPolicy": "Select and record exact project-compatible versions, OS, architecture and checksums before acquiring artifacts.",
+      "officialSources": [
+        "https://playwright.dev/docs/browsers",
+        "https://www.mozilla.org/en-US/MPL/"
+      ],
+      "distributionNotes": "Browser distribution and codec terms vary by vendor and channel.",
+      "prepare": "Pin exact test browser builds, OS and architecture. Save browser-test runner packages and browser binary cache separately. Preserve fonts and rendering context for visual tests. Device/browser installation remains an explicit step.",
+      "offlineVerification": "Run browser tests against installed selected executable with network disabled and verify all asset requests are local",
+      "localAlternatives": [
+        "development/guides/websites.md"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion."
+    },
+    {
+      "id": "userscript-manager",
+      "title": "Userscript manager and documentation",
+      "domains": [
+        "userscripts"
+      ],
+      "status": "not-acquired",
+      "versionPolicy": "Select and record exact project-compatible versions, OS, architecture and checksums before acquiring artifacts.",
+      "officialSources": [
+        "https://violentmonkey.github.io/api/metadata-block/",
+        "https://www.tampermonkey.net/documentation.php"
+      ],
+      "distributionNotes": "Managers have different distribution terms and API behavior. No universal manager package is bundled.",
+      "prepare": "Choose a manager and browser explicitly. Obtain its extension package through the official distribution channel and record version and terms. Use the original localhost fixture and narrow metadata template for offline development. Review grants, updates and remote requirements.",
+      "offlineVerification": "Run the original localhost userscript fixture in the selected manager; inspect mutation cleanup and storage behavior",
+      "localAlternatives": [
+        "development/guides/userscripts.md"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion."
+    },
+    {
+      "id": "userstyle-manager",
+      "title": "Userstyle manager and CSS target environment",
+      "domains": [
+        "userstyles"
+      ],
+      "status": "not-acquired",
+      "versionPolicy": "Select and record exact project-compatible versions, OS, architecture and checksums before acquiring artifacts.",
+      "officialSources": [
+        "https://github.com/openstyles/stylus/wiki/UserCSS"
+      ],
+      "distributionNotes": "Retain the manager's source/extension license and individual stylesheet/font/asset terms.",
+      "prepare": "Choose manager/browser/version. Save original site fixtures and styles in the repository. Avoid remote imports and opaque dependencies; save asset licenses and hashes. Verify CSS behavior under forced colors and reduced motion.",
+      "offlineVerification": "Apply the scoped original style to a localhost fixture in the selected manager and browser",
+      "localAlternatives": [
+        "development/guides/userstyles.md"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion."
+    },
+    {
+      "id": "unity",
+      "title": "Unity editor and licensed packages",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "status": "not-acquired",
+      "versionPolicy": "Select and record exact project-compatible versions, OS, architecture and checksums before acquiring artifacts.",
+      "officialSources": [
+        "https://unity.com/legal",
+        "https://docs.unity3d.com/Manual/upm-ui-offline.html"
+      ],
+      "distributionNotes": "Editor, platform modules, Asset Store packages and services are governed by their current vendor terms.",
+      "prepare": "Use the developer's authorized vendor installation and offline activation workflow where supported. Record editor version, package manifest/lock, required target modules, assets and licenses. Keep proprietary payloads outside the shared repository unless rights are established.",
+      "offlineVerification": "Open and build the selected owned project with cached compatible packages in the licensed environment",
+      "localAlternatives": [
+        "development/guides/pc-games.md"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion."
+    },
+    {
+      "id": "unreal",
+      "title": "Unreal Engine and authorized source/content",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "status": "not-acquired",
+      "versionPolicy": "Select and record exact project-compatible versions, OS, architecture and checksums before acquiring artifacts.",
+      "officialSources": [
+        "https://www.unrealengine.com/en-US/eula/unreal"
+      ],
+      "distributionNotes": "Epic EULA, source-access rules, platform SDKs and asset terms govern sharing.",
+      "prepare": "Acquire engine source/binaries and target modules through the developer's authorized account. Keep restricted engine/platform content in the approved private store. Record BuildGraph/toolchain inputs and asset/plugin licenses.",
+      "offlineVerification": "Build the selected owned project in the licensed target environment without dependency network requests",
+      "localAlternatives": [
+        "development/guides/pc-games.md"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion."
+    },
+    {
+      "id": "platform-services",
+      "title": "Steamworks, consoles and store/service SDKs",
+      "domains": [
+        "pc-games",
+        "android-apps",
+        "android-games"
+      ],
+      "status": "not-acquired",
+      "versionPolicy": "Select and record exact project-compatible versions, OS, architecture and checksums before acquiring artifacts.",
+      "officialSources": [
+        "https://partner.steamgames.com/doc/sdk",
+        "https://developer.android.com/google/play/integrity"
+      ],
+      "distributionNotes": "Partner access, agreements, credentials and store-specific terms apply.",
+      "prepare": "Use official authorized SDK delivery and retain only the allowed artifacts. Keep authentication data out of DevTools. Isolate platform APIs behind a host adapter and provide original offline test doubles for saves, achievements, billing and networking.",
+      "offlineVerification": "Run local adapter contract tests, then separately test the authorized vendor integration",
+      "localAlternatives": [
+        "development/guides/pc-games.md"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion."
+    },
+    {
+      "id": "media-assets",
+      "title": "Fonts, icons, audio, models and sample datasets",
+      "domains": [
+        "windows",
+        "websites",
+        "pc-games",
+        "android-games",
+        "userstyles"
+      ],
+      "status": "not-acquired",
+      "versionPolicy": "Select and record exact project-compatible versions, OS, architecture and checksums before acquiring artifacts.",
+      "officialSources": [
+        "https://spdx.org/licenses/",
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ],
+      "distributionNotes": "Each asset has its own rights, attribution and modification restrictions; repository or site labels do not grant universal rights.",
+      "prepare": "Prefer original synthetic fixtures. For external assets retain original bytes, creator/source/license, modifications and hashes. Verify fonts can be embedded or redistributed for the selected target, and preserve attribution in packaged artifacts.",
+      "offlineVerification": "resources/Test-MediaAttribution.ps1 against supplied attribution and hashes",
+      "localAlternatives": [
+        "resources/Test-MediaAttribution.ps1"
+      ],
+      "verification": "Original preparation recipe checked against cited vendor concepts. Acquisition, installation and these ecosystem builds were not executed by this library expansion."
+    }
+  ]
+}

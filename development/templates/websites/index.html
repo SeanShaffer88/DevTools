@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Local task note example</title>
+<link rel="stylesheet" href="style.css">
+<main>
+  <h1>Task note</h1>
+  <p>Local example. Nothing is saved or sent.</p>
+  <form id="note-form">
+    <label for="note">Note (up to 200 characters)</label>
+    <input id="note" name="note" maxlength="200" required autocomplete="off">
+    <button type="submit" disabled>Preview note</button>
+  </form>
+  <p id="status" role="status"></p>
+  <section aria-labelledby="preview-title"><h2 id="preview-title">Preview</h2><p id="preview">No note yet.</p></section>
+  <noscript>The preview requires JavaScript. This example sends no form data.</noscript>
+</main>
+<script src="app.js"></script>
+</html>
