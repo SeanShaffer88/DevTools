@@ -27,9 +27,10 @@ fn actual_cli_adapter_parity_spaces_unicode() {
     let result=devtools_inspector::adapter::inspect(path.clone(),17,Arc::new(AtomicBool::new(false)));
     assert_eq!(result.status,"completed","{result:?}");
     let cfg:serde_json::Value=serde_json::from_str(include_str!("../host-config.json")).unwrap();
+    let helper=std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join(cfg["helper"].as_str().unwrap()).canonicalize().unwrap();
     let baseline=fixture.join("baseline.ps1");
     std::fs::write(&baseline,"param([string]$Helper,[string]$ProjectPath)\n[Console]::OutputEncoding=[Text.UTF8Encoding]::new($false)\n& $Helper -ProjectPath $ProjectPath -MaxDepth 2 -Json\n").unwrap();
-    let cli=Command::new(cfg["pwsh"].as_str().unwrap()).args(["-NoProfile","-NonInteractive","-File",baseline.to_str().unwrap(),"-Helper",cfg["helper"].as_str().unwrap(),"-ProjectPath",&path]).output().unwrap();
+    let cli=Command::new(cfg["pwsh"].as_str().unwrap()).args(["-NoProfile","-NonInteractive","-File",baseline.to_str().unwrap(),"-Helper",helper.to_str().unwrap().strip_prefix("\\\\?\\").unwrap_or(helper.to_str().unwrap()),"-ProjectPath",&path]).output().unwrap();
     assert!(cli.status.success());
     let mut expected=validate_report(std::str::from_utf8(&cli.stdout).unwrap(),&path).unwrap();
     let mut actual=result.report.unwrap();

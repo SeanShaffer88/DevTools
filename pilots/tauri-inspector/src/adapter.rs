@@ -1,8 +1,9 @@
+use crate::child_process::{self, Child, Job};
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 use sha2::{Digest, Sha256};
-use std::{fs, io::Read, path::{Path, PathBuf}, process::{Command, Stdio}, sync::{atomic::{AtomicBool, Ordering}, Arc, mpsc}, time::{Duration, Instant}};
-use std::os::windows::{fs::MetadataExt, io::AsRawHandle, process::CommandExt};
+use std::{fs, io::Read, path::{Path, PathBuf}, sync::{atomic::{AtomicBool, Ordering}, Arc, mpsc}, time::{Duration, Instant}};
+use std::os::windows::{fs::MetadataExt, io::AsRawHandle};
 
 const LIMIT: usize = 1024 * 1024;
 #[derive(Deserialize)]
@@ -47,30 +48,21 @@ pub fn validate_report(raw: &str, path: &str) -> Result<Value,String> {
     Ok(v)
 }
 
+fn pinned_source_path(path: &str) -> Result<PathBuf, String> {
+    let path = Path::new(path);
+    let source = if path.is_absolute() { path.to_path_buf() } else {
+        Path::new(env!("CARGO_MANIFEST_DIR")).join(path)
+    };
+    let canonical = fs::canonicalize(source).map_err(|e| e.to_string())?;
+    if !canonical.is_file() { return Err("Pinned source must be a file.".into()); }
+    Ok(canonical)
+}
+
 fn verify_file(path:&str, expected:&str)->Result<(),String> {
     let bytes=fs::read(path).map_err(|e|e.to_string())?;
     if format!("{:X}",Sha256::digest(bytes)) != expected {return Err("Pinned host/helper changed. Review trusted configuration before rebuilding.".into())}
     Ok(())
 }
-
-// Windows Job handle is local to the worker thread; never shared or exposed over IPC.
-struct Job(windows_sys::Win32::Foundation::HANDLE);
-impl Job {
-    fn attach(child:&std::process::Child)->Result<Self,String> {
-        use windows_sys::Win32::System::JobObjects::*;
-        // SAFETY: null security/name; initialized structure; borrowed live child process handle.
-        unsafe {
-            let h=CreateJobObjectW(std::ptr::null(),std::ptr::null());
-            if h.is_null(){return Err(std::io::Error::last_os_error().to_string())}
-            let job=Self(h);
-            let mut info:JOBOBJECT_EXTENDED_LIMIT_INFORMATION=std::mem::zeroed();
-            info.BasicLimitInformation.LimitFlags=JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE;
-            if SetInformationJobObject(h,JobObjectExtendedLimitInformation,&info as *const _ as *const _,std::mem::size_of_val(&info) as u32)==0 || AssignProcessToJobObject(h,child.as_raw_handle())==0 {return Err(std::io::Error::last_os_error().to_string())}
-            Ok(job)
-        }
-    }
-}
-impl Drop for Job {fn drop(&mut self){unsafe{windows_sys::Win32::Foundation::CloseHandle(self.0);}}}
 
 struct Reader {
     rx: mpsc::Receiver<Result<Vec<u8>,String>>,
@@ -121,17 +113,25 @@ pub fn inspect(path:String,id:u64,cancel:Arc<AtomicBool>)->Evidence {
         let path=validate_path(&path)?;
 
         let config:HostConfig=serde_json::from_str(include_str!("../host-config.json")).map_err(|e|e.to_string())?;
-        verify_file(&config.pwsh,&config.pwsh_hash)?;verify_file(&config.helper,&config.helper_hash)?;verify_file(&config.wrapper,&config.wrapper_hash)?;
+        let helper = pinned_source_path(&config.helper)?;
+        let wrapper = pinned_source_path(&config.wrapper)?;
+        let helper = helper.to_str().ok_or("Pinned helper path is not Unicode")?;
+        let wrapper = wrapper.to_str().ok_or("Pinned wrapper path is not Unicode")?;
+        verify_file(&config.pwsh,&config.pwsh_hash)?;
+        verify_file(helper,&config.helper_hash)?;
+        verify_file(wrapper,&config.wrapper_hash)?;
+        // PowerShell's -File authorization requires the ordinary absolute DOS spelling.
+        let wrapper = wrapper.strip_prefix("\\\\?\\").unwrap_or(wrapper);
+        let bytes = wrapper.as_bytes();
+        if bytes.len() < 3 || !bytes[0].is_ascii_alphabetic() || bytes[1] != b':' || bytes[2] != b'\\' {
+            return Err("Pinned wrapper must be on a local drive.".into());
+        }
         if cancel.load(Ordering::SeqCst){e.status="cancelled".into();return Ok(())}
         let path=path.to_string_lossy().strip_prefix("\\\\?\\").unwrap_or(&path.to_string_lossy()).to_string();
-        let mut command=Command::new(config.pwsh);
-        command.args(["-NoProfile","-NonInteractive","-File",&config.wrapper,"-ProjectPath",&path])
-            .creation_flags(0x08000000).stdin(Stdio::null()).stdout(Stdio::piped()).stderr(Stdio::piped());
-        let mut child=command.spawn().map_err(|e|e.to_string())?;
-        let job=match Job::attach(&child){Ok(j)=>j,Err(err)=>{let _=child.kill();let _=child.wait();return Err(err)}};
-        let out=reader(child.stdout.take().ok_or("Missing stdout")?);
-        let err=reader(child.stderr.take().ok_or("Missing stderr")?);
-        let result=collect(&mut child,job,out,err,&cancel,Duration::from_secs(15));
+        let (child, job, stdout, stderr) = child_process::spawn(
+            &config.pwsh, &["-NoProfile", "-NonInteractive", "-File", wrapper, "-ProjectPath", &path],
+        ).map_err(|e| format!("Could not create inspection process in its Windows Job: {e}"))?;
+        let result = collect(&child, job, reader(stdout), reader(stderr), &cancel, Duration::from_secs(15));
 
         let (code,stdout,stderr,status)=result?;
         e.exit_code=code;e.stdout=stdout;e.stderr=stderr;e.status=status.into();
@@ -144,22 +144,54 @@ pub fn inspect(path:String,id:u64,cancel:Arc<AtomicBool>)->Evidence {
     e.duration_ms=started.elapsed().as_millis() as u64;e
 }
 
-fn collect(child:&mut std::process::Child,job:Job,out:Reader,err:Reader,cancel:&AtomicBool,timeout:Duration)->Result<(Option<i32>,String,String,&'static str),String>{
-    let started=Instant::now();let mut stdout=None;let mut stderr=None;let mut exit=None;let status;
+fn reap_root(child: &Child) -> Option<i32> {
+    let deadline = Instant::now() + Duration::from_millis(250);
     loop {
-        if stdout.is_none(){if let Ok(v)=out.rx.try_recv(){stdout=Some(v?)}}
-        if stderr.is_none(){if let Ok(v)=err.rx.try_recv(){stderr=Some(v?)}}
-        let overflow=stdout.as_ref().is_some_and(|v|v.len()>LIMIT)||stderr.as_ref().is_some_and(|v|v.len()>LIMIT);
-        if cancel.load(Ordering::SeqCst)||started.elapsed()>=timeout||overflow {
-            status=if overflow{"output_limit"}else if cancel.load(Ordering::SeqCst){"cancelled"}else{"timed_out"};
-            let _=child.kill();exit=child.wait().ok().and_then(|v|v.code());break
+        match child.try_exit() {
+            Ok(Some(code)) => return Some(code),
+            Ok(None) if Instant::now() < deadline => std::thread::sleep(Duration::from_millis(5)),
+            _ => return None,
         }
-        if exit.is_none(){if let Some(code)=child.try_wait().map_err(|e|e.to_string())?{exit=Some(code.code().unwrap_or(-1))}}
-        if exit.is_some() && stdout.is_some() && stderr.is_some(){status="completed";break}
-        std::thread::sleep(Duration::from_millis(15));
     }
-    drop(job); // kill owned descendants before draining inherited pipe handles
-    let stdout=out.finish(stdout);let stderr=err.finish(stderr);
+}
+
+fn collect(child:&Child,job:Job,out:Reader,err:Reader,cancel:&AtomicBool,timeout:Duration)->Result<(Option<i32>,String,String,&'static str),String>{
+    let started = Instant::now();
+    let mut stdout = None;
+    let mut stderr = None;
+    let mut exit = None;
+    let status = (|| -> Result<&'static str, String> {
+        loop {
+            let stdout_update = if stdout.is_none() { out.rx.try_recv().ok() } else { None };
+            let stderr_update = if stderr.is_none() { err.rx.try_recv().ok() } else { None };
+            let mut reader_error = None;
+            for (received, update) in [(&mut stdout, stdout_update), (&mut stderr, stderr_update)] {
+                match update {
+                    Some(Ok(bytes)) => *received = Some(bytes),
+                    Some(Err(error)) => { reader_error.get_or_insert(error); }
+                    None => {}
+                }
+            }
+            let overflow = stdout.as_ref().is_some_and(|v| v.len() > LIMIT)
+                || stderr.as_ref().is_some_and(|v| v.len() > LIMIT);
+            if overflow { return Ok("output_limit"); }
+            if cancel.load(Ordering::SeqCst) { return Ok("cancelled"); }
+            if started.elapsed() >= timeout { return Ok("timed_out"); }
+            if let Some(error) = reader_error { return Err(error); }
+            if exit.is_none() {
+                exit = child.try_exit().map_err(|e| e.to_string())?;
+            }
+            if exit.is_some() && stdout.is_some() && stderr.is_some() { return Ok("completed"); }
+            std::thread::sleep(Duration::from_millis(15));
+        }
+    })();
+
+    // Close the job first so owned descendants cannot keep either capture pipe open.
+    drop(job);
+    if exit.is_none() { exit = reap_root(child); }
+    let stdout = out.finish(stdout);
+    let stderr = err.finish(stderr);
+    let status = status?;
     let decode=|v:Vec<u8>|->Result<String,String>{
         let capped=&v[..v.len().min(LIMIT)];
         match std::str::from_utf8(capped) {
@@ -172,7 +204,11 @@ fn collect(child:&mut std::process::Child,job:Job,out:Reader,err:Reader,cancel:&
             Err(_)=>Err("Helper emitted non UTF-8 evidence".into()),
         }
     };
-    Ok((exit,decode(stdout?)?,decode(stderr?)?,status))
+    if status == "completed" {
+        Ok((exit, decode(stdout?)?, decode(stderr?)?, status))
+    } else {
+        Ok((exit, decode(stdout.unwrap_or_default())?, decode(stderr.unwrap_or_default())?, status))
+    }
 }
 
 #[cfg(test)]
@@ -182,13 +218,90 @@ mod tests {
 
         let config:HostConfig=serde_json::from_str(include_str!("../host-config.json")).unwrap();
         // Synthetic trusted test workload only; never exposed as a host command.
-        let mut child=Command::new(config.pwsh).args(["-NoProfile","-NonInteractive","-Command",script]).creation_flags(0x08000000).stdout(Stdio::piped()).stderr(Stdio::piped()).spawn().unwrap();
-        let job=Job::attach(&child).unwrap();
-        let out=reader(child.stdout.take().unwrap());let err=reader(child.stderr.take().unwrap());
-        let result=collect(&mut child,job,out,err,&flag,timeout).unwrap();assert!(child.try_wait().unwrap().is_some());result
+        let (child, job, stdout, stderr) = child_process::spawn(
+            &config.pwsh, &["-NoProfile", "-NonInteractive", "-Command", script],
+        ).unwrap();
+        let result = collect(&child, job, reader(stdout), reader(stderr), &flag, timeout).unwrap();
+        assert!(child.try_exit().unwrap().is_some());
+        result
+    }
+    #[test]
+    fn relative_pins_resolve_to_this_checkout_and_reject_wrong_hash() {
+        let config: HostConfig = serde_json::from_str(include_str!("../host-config.json")).unwrap();
+        let wrapper = pinned_source_path(&config.wrapper).unwrap();
+        assert_eq!(wrapper, fs::canonicalize(Path::new(env!("CARGO_MANIFEST_DIR")).join("inspect-project.ps1")).unwrap());
+        let helper = pinned_source_path(&config.helper).unwrap();
+        assert_eq!(helper, fs::canonicalize(Path::new(env!("CARGO_MANIFEST_DIR")).join("../../Get-ProjectInfo.ps1")).unwrap());
+        verify_file(wrapper.to_str().unwrap(), &config.wrapper_hash).unwrap();
+        assert!(verify_file(wrapper.to_str().unwrap(), &"0".repeat(64)).is_err());
+    }
+
+    #[test]
+    fn launch_preserves_quoted_unicode_arguments_and_eof_stdin() {
+        let script = r#"[Console]::OutputEncoding=[Text.UTF8Encoding]::new($false); [Console]::Write('space ü "quoted" \'); [Console]::Error.Write([Console]::Read())"#;
+        let result = exercise(script, Arc::new(AtomicBool::new(false)), Duration::from_secs(5));
+        assert_eq!(result.0, Some(0));
+        assert_eq!(result.1, r#"space ü "quoted" \"#);
+        assert_eq!(result.2, "-1");
+        assert_eq!(result.3, "completed");
     }
     #[test]fn timeout_is_bounded(){let start=Instant::now();assert_eq!(exercise("Start-Sleep -Seconds 30",Arc::new(AtomicBool::new(false)),Duration::from_millis(150)).3,"timed_out");assert!(start.elapsed()<Duration::from_secs(3))}
     #[test]fn in_flight_cancellation_is_bounded(){let flag=Arc::new(AtomicBool::new(false));let signal=flag.clone();std::thread::spawn(move||{std::thread::sleep(Duration::from_millis(150));signal.store(true,Ordering::SeqCst)});let start=Instant::now();assert_eq!(exercise("Start-Sleep -Seconds 30",flag,Duration::from_secs(10)).3,"cancelled");assert!(start.elapsed()<Duration::from_secs(3))}
+    #[test]
+    fn in_flight_cancellation_stops_root_and_live_descendant() {
+        use std::os::windows::io::{FromRawHandle, OwnedHandle};
+        use windows_sys::Win32::{
+            Foundation::{WAIT_OBJECT_0, WAIT_TIMEOUT},
+            System::Threading::{OpenProcess, WaitForSingleObject},
+        };
+
+        let config: HostConfig = serde_json::from_str(include_str!("../host-config.json")).unwrap();
+        let stamp = std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_nanos();
+        let ready = std::env::temp_dir().join(format!("devtools-job-{}-{stamp}.txt", std::process::id()));
+        let escaped = ready.to_string_lossy().replace('\'', "''");
+        let script = format!(
+            "$p=Start-Process -FilePath (Get-Process -Id $PID).Path -ArgumentList '-NoProfile','-NonInteractive','-Command','Start-Sleep -Seconds 30' -NoNewWindow -PassThru; \
+             [IO.File]::WriteAllText('{escaped}', \"$PID $($p.Id)\"); Start-Sleep -Seconds 30"
+        );
+        let (child, job, stdout, stderr) = child_process::spawn(
+            &config.pwsh, &["-NoProfile", "-NonInteractive", "-Command", &script],
+        ).unwrap();
+        let deadline = Instant::now() + Duration::from_secs(8);
+        let process_ids = loop {
+            if let Ok(text) = fs::read_to_string(&ready) {
+                let ids: Result<Vec<u32>, _> = text.split_whitespace().map(str::parse).collect();
+                if let Ok(ids) = ids {
+                    if ids.len() == 2 {
+                        break ids;
+                    }
+                }
+            }
+            assert!(Instant::now() < deadline, "child readiness was not observed");
+            assert!(child.try_exit().unwrap().is_none(), "root exited before readiness");
+            std::thread::sleep(Duration::from_millis(20));
+        };
+        fs::remove_file(&ready).unwrap();
+        assert_ne!(process_ids[0], process_ids[1]);
+
+        let wait_handles: Vec<_> = process_ids.iter().map(|&pid| {
+            // SAFETY: only synchronize access is requested for IDs from the owned fixture.
+            let raw = unsafe { OpenProcess(0x00100000, 0, pid) };
+            assert!(!raw.is_null(), "owned PID {pid} was not accessible");
+            let handle = unsafe { OwnedHandle::from_raw_handle(raw) };
+            assert_eq!(unsafe { WaitForSingleObject(handle.as_raw_handle(), 0) }, WAIT_TIMEOUT);
+            handle
+        }).collect();
+
+        let cancel = AtomicBool::new(true);
+        let result = collect(&child, job, reader(stdout), reader(stderr), &cancel, Duration::from_secs(5)).unwrap();
+        assert_eq!(result.3, "cancelled");
+        assert!(child.try_exit().unwrap().is_some());
+        for handle in wait_handles {
+            assert_eq!(unsafe { WaitForSingleObject(handle.as_raw_handle(), 2000) }, WAIT_OBJECT_0);
+        }
+    }
+
+
     #[test]fn preserves_failure_exit_and_stderr(){let r=exercise("[Console]::Error.Write('test failure'); exit 7",Arc::new(AtomicBool::new(false)),Duration::from_secs(5));assert_eq!(r.0,Some(7));assert_eq!(r.2,"test failure")}
     #[test]fn output_limit_is_bounded(){let r=exercise("[Console]::Write(('x' * 1100000))",Arc::new(AtomicBool::new(false)),Duration::from_secs(5));assert_eq!(r.3,"output_limit");assert_eq!(r.1.len(),LIMIT)}    #[test]fn unicode_timeout_retains_diagnostics(){let r=exercise("[Console]::OutputEncoding=[Text.UTF8Encoding]::new($false); [Console]::Write('診断ü'); [Console]::Error.Write('échec'); Start-Sleep -Seconds 30",Arc::new(AtomicBool::new(false)),Duration::from_secs(2));assert_eq!(r.3,"timed_out");assert_eq!(r.1,"診断ü");assert_eq!(r.2,"échec")}
     #[test]fn unicode_cancel_retains_diagnostics(){let flag=Arc::new(AtomicBool::new(false));let signal=flag.clone();let setter=std::thread::spawn(move||{std::thread::sleep(Duration::from_secs(2));signal.store(true,Ordering::SeqCst)});let r=exercise("[Console]::OutputEncoding=[Text.UTF8Encoding]::new($false); [Console]::Write('診断ü'); [Console]::Error.Write('échec'); Start-Sleep -Seconds 30",flag,Duration::from_secs(10));setter.join().unwrap();assert_eq!(r.3,"cancelled");assert_eq!(r.1,"診断ü");assert_eq!(r.2,"échec")}

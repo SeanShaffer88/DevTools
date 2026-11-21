@@ -10,7 +10,7 @@ $env:INCLUDE="$vc/include;$sdk/Include/10.0.26100.0/um;$sdk/Include/10.0.26100.0
 $null=New-Item -ItemType Directory "$PSScriptRoot/evidence" -Force
 # Preserve the authoritative runner byte-for-byte; its PSScriptRoot determines log scope.
 Copy-Item "$PSScriptRoot/../../Invoke-DevBuild.ps1" "$PSScriptRoot/evidence/Invoke-DevBuild.ps1" -Force
-$exe='C:/Program Files/Rust stable MSVC 1.99/bin/cargo.exe'
+$exe='C:/Program Files/Rust stable MSVC 1.100/bin/cargo.exe'
 $argsList=if($Task -eq 'build'){@('build','--offline','--locked')}else{@('test','--offline','--no-default-features')}
 $artifacts=if($Task -eq 'build'){@('target/debug/devtools-inspector.exe')}else{@()}
 if($Task -eq 'frontend'){$exe='C:/Program Files/nodejs/node.exe';$argsList=@('--test','tests/frontend.test.mjs')}

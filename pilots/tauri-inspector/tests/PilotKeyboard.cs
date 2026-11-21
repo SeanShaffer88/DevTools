@@ -121,6 +121,10 @@ public static class PilotKeyboard {
     }
 
     public static string ClickOwnedCaption(IntPtr window, uint owner) {
+        return ClickOwnedCaption(window, owner, true);
+    }
+
+    static string ClickOwnedCaption(IntPtr window, uint owner, bool allowTemporaryRaise) {
         var diagnostic = new System.Text.StringBuilder();
         diagnostic.AppendFormat("target={0};foreground={1};visible={2};minimized={3};",
             window.ToInt64(), GetForegroundWindow().ToInt64(), IsWindowVisible(window), IsIconic(window));
@@ -224,6 +228,41 @@ public static class PilotKeyboard {
                 diagnostic.AppendFormat("attempts={0};candidates={1};occluded={2};offWork={3};", attempts, candidates, occluded, offWork);
                 CaptionDiagnostics = diagnostic.ToString() + occluder;
                 if (scanClock.ElapsedMilliseconds < 1200) System.Threading.Thread.Sleep(40);
+            }
+            if (allowTemporaryRaise && candidates > 0 && occluded == candidates &&
+                WindowProcess(window) == owner && !KeysHeld() && PointerRoutingClear(window, owner)) {
+                const long topmostStyle = 8;
+                bool wasTopmost = (GetWindowLongPtr(window, -20).ToInt64() & topmostStyle) != 0;
+                if (!wasTopmost) {
+                    string priorDiagnostic = CaptionDiagnostics;
+                    uint temporaryFlags = noSize | noMove | noActivate | noOwnerZOrder | asyncWindowPos;
+                    try {
+                        if (!SetWindowPos(window, new IntPtr(-1), 0, 0, 0, 0, temporaryFlags))
+                            return "TemporaryRaiseDenied";
+                        var raiseClock = System.Diagnostics.Stopwatch.StartNew();
+                        while (WindowProcess(window) == owner &&
+                            (GetWindowLongPtr(window, -20).ToInt64() & topmostStyle) == 0 &&
+                            raiseClock.ElapsedMilliseconds < 200) System.Threading.Thread.Sleep(10);
+                        if (WindowProcess(window) != owner ||
+                            (GetWindowLongPtr(window, -20).ToInt64() & topmostStyle) == 0)
+                            return "TemporaryRaiseUnavailable";
+                        return ClickOwnedCaption(window, owner, false);
+                    } finally {
+                        if (WindowProcess(window) == owner) {
+                            bool requested = SetWindowPos(window, new IntPtr(-2), 0, 0, 0, 0, temporaryFlags);
+                            var restoreClock = System.Diagnostics.Stopwatch.StartNew();
+                            while (WindowProcess(window) == owner &&
+                                (GetWindowLongPtr(window, -20).ToInt64() & topmostStyle) != 0 &&
+                                restoreClock.ElapsedMilliseconds < 200) System.Threading.Thread.Sleep(10);
+                            bool restored = WindowProcess(window) != owner ||
+                                (requested && (GetWindowLongPtr(window, -20).ToInt64() & topmostStyle) == 0);
+                            CaptionDiagnostics = priorDiagnostic + "temporaryTopmost=True;restored=" +
+                                restored + ";" + CaptionDiagnostics;
+                            if (!restored)
+                                throw new InvalidOperationException("Owned window z-order restoration failed.");
+                        }
+                    }
+                }
             }
             return "CaptionUnavailable";
         } finally {
