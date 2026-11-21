@@ -4,14 +4,26 @@ using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
+using System.Text;
 
 class NetworkProbe {
     [DllImport("kernel32.dll")] static extern IntPtr GetCurrentProcess();
     [DllImport("advapi32.dll",SetLastError=true)] static extern bool OpenProcessToken(IntPtr p,uint access,out IntPtr token);
     [DllImport("advapi32.dll",SetLastError=true)] static extern bool GetTokenInformation(IntPtr t,int cls,IntPtr buffer,int size,out int needed);
     [DllImport("kernel32.dll")] static extern bool CloseHandle(IntPtr handle);
+    [DllImport("kernel32.dll",CharSet=CharSet.Unicode,SetLastError=true)] static extern uint GetTempPath(uint size,StringBuilder path);
+    [DllImport("kernel32.dll",CharSet=CharSet.Unicode,SetLastError=true)] static extern uint GetTempFileName(string path,string prefix,uint unique,StringBuilder name);
     static int Main(string[] args) {
         if(args.Length!=3) return 64;
+        if(args[0]=="temp") {
+            var temp=new StringBuilder(1024);uint length=GetTempPath(1024,temp);
+            var name=new StringBuilder(1024);uint created=length>0?GetTempFileName(temp.ToString(),"DVT",0,name):0;
+            int error=created==0?Marshal.GetLastWin32Error():0;
+            bool exists=created!=0 && System.IO.File.Exists(name.ToString());
+            if(exists)System.IO.File.Delete(name.ToString());
+            Console.WriteLine("{\"tempPathBase64\":\""+Convert.ToBase64String(Encoding.UTF8.GetBytes(temp.ToString()))+"\",\"created\":"+(exists?"true":"false")+",\"error\":"+error+"}");
+            return exists?0:70;
+        }
         if(args[0]=="echo") {Console.WriteLine("{\"argumentBase64\":\""+Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(args[2]))+"\"}");return 0;}
         if(args[0]=="sleep") { System.Threading.Thread.Sleep(60000); return 0; }
         if(args[0]=="hang") {

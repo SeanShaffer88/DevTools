@@ -35,6 +35,17 @@ function Map-AliasPath([string]$Value) {
     }
     return $Value
 }
+function Remove-OwnedShadow([string]$Path) {
+    if(!$Path.StartsWith($script:owned+'\',[StringComparison]::OrdinalIgnoreCase)){throw 'Shadow cleanup escaped disposable root.'}
+    $pending=[Collections.Generic.Stack[string]]::new();$pending.Push($Path);$count=0
+    while($pending.Count) {
+        $item=Get-Item -LiteralPath $pending.Pop() -Force
+        if(++$count -gt 200000){throw 'Shadow cleanup entry limit exceeded.'}
+        if($item.Attributes -band [IO.FileAttributes]::ReparsePoint){throw 'Linked entry refused during shadow cleanup.'}
+        if($item.PSIsContainer){foreach($child in [IO.Directory]::EnumerateFileSystemEntries($item.FullName)){$pending.Push($child)}}
+    }
+    [IO.Directory]::Delete($Path,$true)
+}
 if ((Get-Item -LiteralPath $Request).Length -gt 1048576) { throw 'Request exceeds 1 MiB.' }
 $config = Get-Content -LiteralPath $Request -Raw | ConvertFrom-Json -AsHashtable
 if ($config -isnot [System.Collections.IDictionary]) { throw 'Request must be an object.' }
@@ -79,6 +90,12 @@ if ($config.ContainsKey('environment')) {
         $environment[$name] = $config.environment[$name]
     }
 }
+if(!$environment.ContainsKey('LOCALAPPDATA')){throw 'An explicit owned writable LOCALAPPDATA directory is required.'}
+$localData=Require-Owned $environment['LOCALAPPDATA']
+if(!(Test-Path -LiteralPath $localData -PathType Container)){throw 'LOCALAPPDATA must be an existing directory.'}
+$localWritable=$false
+foreach($path in $writeRoots){if($localData-eq $path-or $localData.StartsWith($path+'\',[StringComparison]::OrdinalIgnoreCase)){$localWritable=$true}}
+if(!$localWritable){throw 'LOCALAPPDATA must be inside a declared writable root.'}
 $lockPath = Get-SafePath (Join-Path $owned '.devtools-offline.lock') $false
 try { $rootLock = [IO.File]::Open($lockPath,[IO.FileMode]::OpenOrCreate,[IO.FileAccess]::ReadWrite,[IO.FileShare]::None) }
 catch { throw 'Another offline operation holds this disposable root, or its lock cannot be opened.' }
@@ -89,8 +106,10 @@ $sidText = $null
 $driveAlias = $null
 $aliasMutex = $null
 $aliasMutexHeld = $false
+$shadowProfile = $null
+$shadowCreated = $false
 $originalAcls = [Collections.Generic.List[object]]::new()
-$record = [ordered]@{schemaVersion=1; profile=$profile; networkPolicy='AppContainer with zero capabilities'; executable=$executable; workingDirectory=$working; exitCode=$null; valid=$false; profileDeleted=$false; aclsRestored=$false; stdout=$stdout; stderr=$stderr; error=$null; artifacts=@()}
+$record = [ordered]@{schemaVersion=1; profile=$profile; networkPolicy='AppContainer with zero capabilities'; executable=$executable; workingDirectory=$working; exitCode=$null; valid=$false; profileDeleted=$false; aclsRestored=$false; shadowProfileRemoved=$true; stdout=$stdout; stderr=$stderr; error=$null; artifacts=@()}
 try {
     if ($config.ContainsKey('useDriveAlias')) {
         if ($config.useDriveAlias -isnot [bool]) { throw 'useDriveAlias must be boolean.' }
@@ -111,6 +130,18 @@ try {
     $sidText = [OfflineNative]::CreateProfile($profile)
     $sid = [Security.Principal.SecurityIdentifier]::new($sidText)
     $record.appContainerSid = $sidText
+    # CreateProcess redirects TEMP/TMP beneath the caller's LOCALAPPDATA.
+    # This current-profile-only shadow remains inside the declared writable root.
+    $packages=Get-SafePath (Join-Path $localData 'Packages') $false
+    [IO.Directory]::CreateDirectory($packages)|Out-Null
+    $shadowProfile=Get-SafePath (Join-Path $packages $profile.ToLowerInvariant()) $false
+    if(Test-Path -LiteralPath $shadowProfile){throw 'Profile-shadow directory already exists; refusing reuse.'}
+    [OfflineNative]::CreateDirectoryExclusive($shadowProfile)
+    $shadowCreated=$true;$record.shadowProfileRemoved=$false
+    $shadowTemp=Join-Path $shadowProfile 'AC\Temp'
+    [IO.Directory]::CreateDirectory($shadowTemp)|Out-Null
+    $record.shadowProfilePath=$shadowProfile
+    $record.redirectedTempPrepared=$shadowTemp
     $grantPaths = @($owned) + @($writeRoots | Select-Object -Unique)
     foreach ($path in $grantPaths) {
         if ($originalAcls | Where-Object path -EQ $path) { continue }
@@ -149,6 +180,10 @@ try {
     $record.error = $_.Exception.Message
 } finally {
     $aclErrors = @()
+    if($shadowCreated) {
+        try {Remove-OwnedShadow $shadowProfile;$record.shadowProfileRemoved=!(Test-Path -LiteralPath $shadowProfile)}
+        catch {$record.error='Owned profile-shadow cleanup failed: '+$_.Exception.Message;$record.shadowProfileRemoved=$false}
+    }
     for ($i=$originalAcls.Count-1; $i -ge 0; $i--) {
         try {
             $saved = $originalAcls[$i]
@@ -182,7 +217,7 @@ try {
     }
     if ($aliasMutexHeld) { $aliasMutex.ReleaseMutex() }
     if ($aliasMutex) { $aliasMutex.Dispose() }
-    $record.valid = $record.valid -and $record.aclsRestored -and $record.profileDeleted
+    $record.valid = $record.valid -and $record.aclsRestored -and $record.profileDeleted -and $record.shadowProfileRemoved
     $json = $record | ConvertTo-Json -Depth 12
     $stream = [IO.File]::Open($resultPath,[IO.FileMode]::CreateNew,[IO.FileAccess]::Write,[IO.FileShare]::Read)
     try { $bytes=[Text.Encoding]::UTF8.GetBytes($json); $stream.Write($bytes); $stream.Flush($true) } finally { $stream.Dispose() }

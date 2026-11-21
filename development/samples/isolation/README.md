@@ -54,6 +54,16 @@ only Windows system location variables and the explicit request environment pass
 Supply owned `USERPROFILE`, `APPDATA` and `LOCALAPPDATA` values for profile-aware
 Windows runtimes; an incomplete environment can fail before process startup.
 
+`LOCALAPPDATA` must name an existing directory under a declared writable root.
+Windows rewrites the child's temporary paths to
+`LOCALAPPDATA/Packages/<current-profile>/AC/Temp`; merely setting `TEMP` is not
+enough. After creating the unique profile, the runner exclusively creates that
+profile's shadow directory inside the owned writable tree. It never creates a
+shadow beneath the inherited real user profile or reuses a preexisting shadow.
+After job quiescence it removes only this new shadow, refusing links, and verifies
+absence before restoring ACLs and deleting the AppContainer profile. This makes
+native `GetTempFileName` usable without relaxing isolation or host permissions.
+
 An exclusive per-root file handle prevents simultaneous operations from racing
 their ACL snapshots. Contending requests fail before profile creation or ACL
 changes. The zero-byte `.devtools-offline.lock` remains inside the disposable
@@ -90,6 +100,7 @@ pwsh -NoProfile -File development/samples/isolation/Test-OfflineIsolation.ps1 -W
 pwsh -NoProfile -File development/samples/isolation/Test-OfflineFailures.ps1 -WorkDirectory C:/Task/new-negative-tests
 pwsh -NoProfile -File development/samples/isolation/Test-OfflineConcurrency.ps1 -WorkDirectory C:/Task/new-concurrency-test
 pwsh -NoProfile -File development/samples/isolation/Test-OfflineAlias.ps1 -WorkDirectory C:/Task/new-alias-test
+pwsh -NoProfile -File development/samples/isolation/Test-OfflineTemp.ps1 -WorkDirectory C:/Task/new-temp-test
 ```
 
 The live canary connects to an owned loopback listener outside the container,
@@ -123,3 +134,5 @@ Primary API basis:
 - https://learn.microsoft.com/en-us/windows/win32/secauthz/implementing-an-appcontainer
 - https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-initializeprocthreadattributelist
 - https://learn.microsoft.com/en-us/windows/win32/procthread/job-objects
+- https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-gettemppathw
+- https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-gettempfilenamew

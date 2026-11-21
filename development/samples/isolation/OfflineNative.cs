@@ -50,6 +50,7 @@ public static class OfflineNative {
     [DllImport("advapi32.dll")] static extern bool EqualSid(IntPtr a,IntPtr b);
     [DllImport("kernel32.dll",CharSet=CharSet.Unicode,SetLastError=true)] static extern uint QueryDosDevice(string name,[Out]char[] target,uint length);
     [DllImport("kernel32.dll",CharSet=CharSet.Unicode,SetLastError=true)] static extern bool DefineDosDevice(uint flags,string name,string target);
+    [DllImport("kernel32.dll",CharSet=CharSet.Unicode,SetLastError=true)] static extern bool CreateDirectory(string path,IntPtr security);
     [DllImport("advapi32.dll",SetLastError=true)] static extern bool OpenProcessToken(IntPtr process,uint access,out IntPtr token);
     [DllImport("advapi32.dll",SetLastError=true)] static extern bool GetTokenInformation(IntPtr token,int cls,IntPtr data,int size,out int needed);
     static void Check(bool ok,string op) { if(!ok) {int code=Marshal.GetLastWin32Error();throw new Win32Exception(code,op+": "+new Win32Exception(code).Message+" ("+code+")");} }
@@ -58,6 +59,7 @@ public static class OfflineNative {
         if(hr!=0) Marshal.ThrowExceptionForHR(hr);
         try { return new SecurityIdentifier(sid).Value; } finally { FreeSid(sid); }
     }
+    public static void CreateDirectoryExclusive(string path) {Check(CreateDirectory(path,IntPtr.Zero),"Create unique owned profile-shadow directory");}
     public static string[] DriveTargets(string name) {
         var buffer=new char[65536];uint n=QueryDosDevice(name,buffer,(uint)buffer.Length);
         if(n==0) {int error=Marshal.GetLastWin32Error();if(error==2||error==3)return new string[0];throw new Win32Exception(error,"Query session DOS drive");}
