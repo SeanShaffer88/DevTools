@@ -1841,6 +1841,36 @@
       "requires": [
         "A successful PAF build does not prove installation, upgrade, relocation or runtime portability."
       ]
+    },
+    {
+      "id": "godot-physics-guide",
+      "title": "Godot realistic physics: verified resources and caveats",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "guide",
+      "path": "godot/docs/physics-resources.md",
+      "summary": "Godot 4.7.2 physics guidance and all 11 requested resource dispositions; licensed pinned source subsets, prerequisites and unverified runtime limits.",
+      "tags": [
+        "godot",
+        "physics",
+        "jolt",
+        "ragdoll",
+        "softbody",
+        "vehicle",
+        "rope",
+        "buoyancy",
+        "golf"
+      ],
+      "status": "original",
+      "verification": "Source-backed guide and offline inventory; third-party addons not built or executed.",
+      "origin": "Original DevTools content, 2026-11-22",
+      "license": "MIT; development/LICENSE",
+      "officialSources": [
+        "https://docs.godotengine.org/en/4.7/tutorials/physics/soft_body.html",
+        "https://docs.godotengine.org/en/4.7/classes/class_rigidbody3d.html"
+      ]
     }
   ]
 }

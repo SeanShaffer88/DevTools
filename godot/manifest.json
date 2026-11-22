@@ -1,6 +1,6 @@
 {
   "repo": "SeanShaffer88/DevTools",
-  "generated": "2026-11-17",
+  "generated": "2026-11-22",
   "purpose": "Godot Android development — knowledge base",
   "startHere": [
     "AGENTS.md",
@@ -19,6 +19,7 @@
     "docs/07-asset-store.md",
     "docs/08-testing-and-ci.md",
     "docs/09-permissions.md",
+    "docs/physics-resources.md",
     "reference/android-preset-options.md",
     "reference/version-matrix.md",
     "checklists/first-export-checklist.md",
@@ -35,12 +36,12 @@
     },
     {
       "path": "README.md",
-      "bytes": 4584,
+      "bytes": 5585,
       "summary": "Godot Android development — knowledge base"
     },
     {
       "path": "SOURCES.md",
-      "bytes": 2591,
+      "bytes": 3044,
       "summary": "SOURCES.md — where the facts live"
     },
     {
@@ -137,6 +138,166 @@
       "path": "tools/build-ai-bundle.py",
       "bytes": 4415,
       "summary": ""
+    },
+    {
+      "path": "docs/physics-resources.md",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 9183
+    },
+    {
+      "path": "physics/.gitattributes",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 44
+    },
+    {
+      "path": "physics/README.md",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 365
+    },
+    {
+      "path": "physics/vendor/godot-physics-api/doc/classes/CollisionObject3D.xml",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 13259
+    },
+    {
+      "path": "physics/vendor/godot-physics-api/doc/classes/PhysicalBone3D.xml",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 9482
+    },
+    {
+      "path": "physics/vendor/godot-physics-api/doc/classes/PhysicalBoneSimulator3D.xml",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 1962
+    },
+    {
+      "path": "physics/vendor/godot-physics-api/doc/classes/RigidBody3D.xml",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 23453
+    },
+    {
+      "path": "physics/vendor/godot-physics-api/doc/classes/SoftBody3D.xml",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 10391
+    },
+    {
+      "path": "physics/vendor/godot-physics-api/doc/classes/VehicleBody3D.xml",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 3614
+    },
+    {
+      "path": "physics/vendor/godot-physics-api/LICENSE.txt",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 1149
+    },
+    {
+      "path": "physics/vendor/godot-physics-manual/LICENSE.txt",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 19467
+    },
+    {
+      "path": "physics/vendor/godot-physics-manual/tutorials/physics/interpolation/advanced_physics_interpolation.rst",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 8735
+    },
+    {
+      "path": "physics/vendor/godot-physics-manual/tutorials/physics/physics_introduction.rst",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 21283
+    },
+    {
+      "path": "physics/vendor/godot-physics-manual/tutorials/physics/ragdoll_system.rst",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 12190
+    },
+    {
+      "path": "physics/vendor/godot-physics-manual/tutorials/physics/soft_body.rst",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 8513
+    },
+    {
+      "path": "physics/vendor/godot-physics-manual/tutorials/physics/using_jolt_physics.rst",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 15211
+    },
+    {
+      "path": "physics/vendor/godot-rapier/ARCHITECTURE.md",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 3443
+    },
+    {
+      "path": "physics/vendor/godot-rapier/LICENSE",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 1102
+    },
+    {
+      "path": "physics/vendor/godot-rapier/README.md",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 9639
+    },
+    {
+      "path": "physics/vendor/godot-rapier/THIRDPARTY.txt",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 17012
+    },
+    {
+      "path": "physics/vendor/ocean3d-lite/addons/ocean3d_lite/floating_body.gd",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 4862
+    },
+    {
+      "path": "physics/vendor/ocean3d-lite/LICENSE.md",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 1075
+    },
+    {
+      "path": "physics/vendor/ocean3d-lite/README.md",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 1537
+    },
+    {
+      "path": "physics/vendor/openfairway/addons/openfairway/physics/Aerodynamics.cs",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 4282
+    },
+    {
+      "path": "physics/vendor/openfairway/addons/openfairway/physics/BounceCalculator.cs",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 23220
+    },
+    {
+      "path": "physics/vendor/openfairway/addons/openfairway/README.md",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 26450
+    },
+    {
+      "path": "physics/vendor/openfairway/LICENSE",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 1036
+    },
+    {
+      "path": "physics/vendor/verlet-rope/addons/verlet_rope_4/Physics/VerletRopeRigid.cs",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 14439
+    },
+    {
+      "path": "physics/vendor/verlet-rope/addons/verlet_rope_4/Physics/VerletRopeSimulated.cs",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 27201
+    },
+    {
+      "path": "physics/vendor/verlet-rope/LICENSE",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 1148
+    },
+    {
+      "path": "physics/vendor/verlet-rope/README.md",
+      "summary": "Pinned physics reference; see docs/physics-resources.md for license and verification limits",
+      "bytes": 6009
+    },
+    {
+      "path": "docs/.gitattributes",
+      "bytes": 33,
+      "summary": "Preserve the physics guide byte identity across Windows checkouts"
     }
   ],
   "domain": "godot",
