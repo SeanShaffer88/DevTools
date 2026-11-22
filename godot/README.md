@@ -85,3 +85,7 @@ that unlock anything, no selling data.
 ## Editor addons (toolbox)
 
 The nine Godot editor addons from GodotDevTools live in [`toolbox/`](toolbox/) as a complete, openable Godot project — open `toolbox/` in Godot and the addons under `toolbox/addons/` are live: accessibility, asset health, dialogue/quest, export doctor, network simulation, responsive UI, scene search, time machine, and visual regression. Start with [`toolbox/README.md`](toolbox/README.md).
+
+## Realistic physics references
+
+[Physics resources](docs/physics-resources.md) covers soft bodies, ragdolls, Jolt, interpolation, vehicle limitations and six community resource dispositions. Licensed pinned text/source subsets are available offline; addons are not installed or runtime verified.

@@ -36,3 +36,7 @@ re-check the starred rows before any release.
   August 2025; check the repo's releases page).
 - The official Discord invite string and the godot-ci images'
   exact bundled SDK components.
+
+## Physics reference capture — 2026-11-22
+
+[Physics resources](docs/physics-resources.md) links Godot 4.7 manual / 4.7.2 API snapshots and licensed community subsets. [Central provenance](../development/vendor/SOURCES.json) retains immutable commits, exact byte identities, capture date, licenses and attribution. Kodeco is reference only; the requested Physics Gotchas identity remains unresolved. Third-party addons were not installed or executed.

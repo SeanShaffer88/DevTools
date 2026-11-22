@@ -127,3 +127,7 @@ Original [platform samples](development/samples/README.md) provide a reproducibl
 ## Provenance
 
 Merged 2026-11-18 from PafDev, WowDev, KotlinDev, and the knowledge layer of GodotDevTools, joining the Windows desktop base (`knowledge/`, 2026-11-17) and the Flutter pack (`flutter/`, 2026-11-18) already here. Domain content is unchanged apart from a banner in each domain README and merge fields in each domain manifest. The Godot editor addons project followed on 2026-11-18 as `godot/toolbox/` (complete and openable in Godot), and the ai-knowledge-vault resource index as `ai-resources/`. Binary files in the toolbox (demo PNGs and the addon release zips) were uploaded through the GitHub web interface because the batched text push cannot carry binaries; the source repo's generated `.godot/` editor cache and local `reports/` output were not carried over. ForAI and WinDevKit joined on 2026-11-18 (`forai/`, `windevkit/`). With the library complete, the seven copied source repos — PafDev, WowDev, KotlinDev, GodotDevTools, ai-knowledge-vault, ForAI, and WinDevKit — were archived on GitHub on 2026-11-18; this repo is their single live home. Archived repos stay readable and downloadable on GitHub, and can be unarchived at any time.
+
+## Godot realistic physics
+
+[Godot physics resources](godot/docs/physics-resources.md) covers all 11 requested references, corrected API guidance and licensed offline source subsets. Addon source presence is not installation or runtime verification.

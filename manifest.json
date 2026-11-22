@@ -1,6 +1,6 @@
 {
   "repo": "SeanShaffer88/DevTools",
-  "generated": "2026-11-21",
+  "generated": "2026-11-22",
   "purpose": "Offline AI development workflows, canonical domain libraries, and the local developer toolkit",
   "startHere": [
     "INDEX.md",
@@ -45,7 +45,7 @@
       "mergedFrom": "SeanShaffer88/GodotDevTools (knowledge/ layer)",
       "manifest": "godot/manifest.json",
       "bundle": "godot/ai-bundle.md",
-      "files": 24,
+      "files": 152,
       "toolbox": "godot/toolbox/"
     },
     {
@@ -1628,13 +1628,13 @@
     {
       "path": "godot/README.md",
       "domain": "godot",
-      "bytes": 4864,
+      "bytes": 5585,
       "summary": "Godot Android development \u2014 knowledge base"
     },
     {
       "path": "godot/SOURCES.md",
       "domain": "godot",
-      "bytes": 2591,
+      "bytes": 3044,
       "summary": "SOURCES.md \u2014 where the facts live"
     },
     {
@@ -1718,7 +1718,7 @@
     {
       "path": "godot/manifest.json",
       "domain": "godot",
-      "bytes": 3651,
+      "bytes": 10815,
       "summary": ""
     },
     {
@@ -1766,7 +1766,7 @@
     {
       "path": "INDEX.md",
       "domain": "root",
-      "bytes": 9982,
+      "bytes": 16367,
       "summary": "Master map: domain table + task routing for the whole library"
     },
     {
@@ -8324,13 +8324,13 @@
     {
       "path": "development/catalog.seed.json",
       "domain": "development",
-      "bytes": 79930,
+      "bytes": 80984,
       "summary": "Original offline development resource or validated fixture"
     },
     {
       "path": "development/catalog.vendor.json",
       "domain": "development",
-      "bytes": 10971,
+      "bytes": 36685,
       "summary": "Original offline development resource or validated fixture"
     },
     {
@@ -8402,7 +8402,7 @@
     {
       "path": "development/manifest.json",
       "domain": "development",
-      "bytes": 22823,
+      "bytes": 29648,
       "summary": "Original offline development resource or validated fixture"
     },
     {
@@ -8792,7 +8792,7 @@
     {
       "path": "development/vendor/SOURCES.json",
       "domain": "development",
-      "bytes": 9453,
+      "bytes": 25260,
       "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
     },
     {
@@ -8896,6 +8896,198 @@
       "domain": "development",
       "bytes": 38012,
       "summary": "Pinned upstream text subset; exact source, hash, license and attribution in development/vendor/SOURCES.json"
+    },
+    {
+      "path": "godot/docs/physics-resources.md",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 9183
+    },
+    {
+      "path": "godot/physics/.gitattributes",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 44
+    },
+    {
+      "path": "godot/physics/README.md",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 365
+    },
+    {
+      "path": "godot/physics/vendor/godot-physics-api/doc/classes/CollisionObject3D.xml",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 13259
+    },
+    {
+      "path": "godot/physics/vendor/godot-physics-api/doc/classes/PhysicalBone3D.xml",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 9482
+    },
+    {
+      "path": "godot/physics/vendor/godot-physics-api/doc/classes/PhysicalBoneSimulator3D.xml",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 1962
+    },
+    {
+      "path": "godot/physics/vendor/godot-physics-api/doc/classes/RigidBody3D.xml",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 23453
+    },
+    {
+      "path": "godot/physics/vendor/godot-physics-api/doc/classes/SoftBody3D.xml",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 10391
+    },
+    {
+      "path": "godot/physics/vendor/godot-physics-api/doc/classes/VehicleBody3D.xml",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 3614
+    },
+    {
+      "path": "godot/physics/vendor/godot-physics-api/LICENSE.txt",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 1149
+    },
+    {
+      "path": "godot/physics/vendor/godot-physics-manual/LICENSE.txt",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 19467
+    },
+    {
+      "path": "godot/physics/vendor/godot-physics-manual/tutorials/physics/interpolation/advanced_physics_interpolation.rst",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 8735
+    },
+    {
+      "path": "godot/physics/vendor/godot-physics-manual/tutorials/physics/physics_introduction.rst",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 21283
+    },
+    {
+      "path": "godot/physics/vendor/godot-physics-manual/tutorials/physics/ragdoll_system.rst",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 12190
+    },
+    {
+      "path": "godot/physics/vendor/godot-physics-manual/tutorials/physics/soft_body.rst",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 8513
+    },
+    {
+      "path": "godot/physics/vendor/godot-physics-manual/tutorials/physics/using_jolt_physics.rst",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 15211
+    },
+    {
+      "path": "godot/physics/vendor/godot-rapier/ARCHITECTURE.md",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 3443
+    },
+    {
+      "path": "godot/physics/vendor/godot-rapier/LICENSE",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 1102
+    },
+    {
+      "path": "godot/physics/vendor/godot-rapier/README.md",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 9639
+    },
+    {
+      "path": "godot/physics/vendor/godot-rapier/THIRDPARTY.txt",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 17012
+    },
+    {
+      "path": "godot/physics/vendor/ocean3d-lite/addons/ocean3d_lite/floating_body.gd",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 4862
+    },
+    {
+      "path": "godot/physics/vendor/ocean3d-lite/LICENSE.md",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 1075
+    },
+    {
+      "path": "godot/physics/vendor/ocean3d-lite/README.md",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 1537
+    },
+    {
+      "path": "godot/physics/vendor/openfairway/addons/openfairway/physics/Aerodynamics.cs",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 4282
+    },
+    {
+      "path": "godot/physics/vendor/openfairway/addons/openfairway/physics/BounceCalculator.cs",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 23220
+    },
+    {
+      "path": "godot/physics/vendor/openfairway/addons/openfairway/README.md",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 26450
+    },
+    {
+      "path": "godot/physics/vendor/openfairway/LICENSE",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 1036
+    },
+    {
+      "path": "godot/physics/vendor/verlet-rope/addons/verlet_rope_4/Physics/VerletRopeRigid.cs",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 14439
+    },
+    {
+      "path": "godot/physics/vendor/verlet-rope/addons/verlet_rope_4/Physics/VerletRopeSimulated.cs",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 27201
+    },
+    {
+      "path": "godot/physics/vendor/verlet-rope/LICENSE",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 1148
+    },
+    {
+      "path": "godot/physics/vendor/verlet-rope/README.md",
+      "domain": "godot",
+      "summary": "Godot physics resources and pinned licensed offline provenance",
+      "bytes": 6009
+    },
+    {
+      "path": "godot/docs/.gitattributes",
+      "bytes": 33,
+      "summary": "Preserve the physics guide byte identity across Windows checkouts",
+      "domain": "godot"
     }
   ]
 }
