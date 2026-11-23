@@ -1,6 +1,6 @@
 # INDEX — DevTools knowledge library master map
 
-One repo, nine development knowledge bases and resource collections, plus the local developer toolkit.
+One repo, twelve development knowledge bases and resource collections, plus the local developer toolkit.
 This file is the router: find the domain, then the file, in seconds.
 
 ## How an AI should use this repo
@@ -38,6 +38,9 @@ Original [platform samples](development/samples/README.md) provide a reproducibl
 | Godot for Android games and apps | [`godot/`](godot/) | Godot engine versions, project anatomy, Android export pipeline, Google Play, plugins, testing/CI, permissions | [godot/manifest.json](godot/manifest.json) | [godot/ai-bundle.md](godot/ai-bundle.md) |
 | Windows desktop development system | [`knowledge/`](knowledge/) | Rule layers (Elite Prompt, Engineering Contract V4.0, guardrails), tiers + sanctioned stacks, QUALITY.md gate, SeanPak packaging, TesselGUI design, release verification | [knowledge/manifest.json](knowledge/manifest.json) | [knowledge/ai-bundle.md](knowledge/ai-bundle.md) |
 | Flutter development pack | [`flutter/`](flutter/) | Toolchain, Dart, widgets/UI, state, navigation, networking, storage, testing, Windows desktop, Android release, flavors, performance, architecture | [flutter/manifest.json](flutter/manifest.json) | [flutter/ai-bundle.md](flutter/ai-bundle.md) |
+| Offline development workflows | [`development/`](development/) | Cross-domain offline library: Windows software, Android apps and games, websites, PC games, userscripts/userstyles, developer dependencies, PortableApps, WoW addons — guides, templates, platform samples, offline payloads | [development/README.md](development/README.md) | [development/README.md](development/README.md) |
+| AV/EDR scrub-tool index | [`av-scrub-index/`](av-scrub-index/) | Machine-readable dataset of official antivirus/EDR removal tools: downloads, silent switches, Safe Mode notes, JSON schema | [av-scrub-index/dist/index.json](av-scrub-index/dist/index.json) | [av-scrub-index/README.md](av-scrub-index/README.md) |
+| Prompt-engineering library | [`prompt-architect/`](prompt-architect/) | Prompt Architect: how models read prompts, pattern catalogue, blueprints for nine task classes, cost/safety guides, evaluation rubric | [prompt-architect/fundamentals/how-llms-read-prompts.md](prompt-architect/fundamentals/how-llms-read-prompts.md) | [prompt-architect/guides/cheat-sheet.md](prompt-architect/guides/cheat-sheet.md) |
 
 ## Task routing — the one best file
 
@@ -118,6 +121,11 @@ Original [platform samples](development/samples/README.md) provide a reproducibl
 | WinDevKit kit catalog (all kits) | [windevkit/docs/CATALOG.md](windevkit/docs/CATALOG.md) |
 | WinDevKit pain points / why the kits exist | [windevkit/docs/PAIN_POINTS.md](windevkit/docs/PAIN_POINTS.md) |
 
+| AV/EDR official removal tools dataset (JSON) | [av-scrub-index/dist/index.json](av-scrub-index/dist/index.json) |
+| AV/EDR removal tools schema | [av-scrub-index/data/schema/uninstaller.schema.json](av-scrub-index/data/schema/uninstaller.schema.json) |
+| Prompt engineering: how models read prompts | [prompt-architect/fundamentals/how-llms-read-prompts.md](prompt-architect/fundamentals/how-llms-read-prompts.md) |
+| Prompt engineering cheat sheet | [prompt-architect/guides/cheat-sheet.md](prompt-architect/guides/cheat-sheet.md) |
+
 ## Same task, different stack — pick by stack first
 
 - **Releasing an Android app:** Kotlin → `kotlin/docs/19-build-signing-release-and-google-play.md` · Godot → `godot/docs/05-google-play.md` · Flutter → `flutter/guides/10-android-release.md`. Play deadlines that apply to all: `kotlin/reference/play-requirements-and-deadlines.md`.
@@ -126,7 +134,7 @@ Original [platform samples](development/samples/README.md) provide a reproducibl
 
 ## Provenance
 
-Merged 2026-11-18 from PafDev, WowDev, KotlinDev, and the knowledge layer of GodotDevTools, joining the Windows desktop base (`knowledge/`, 2026-11-17) and the Flutter pack (`flutter/`, 2026-11-18) already here. Domain content is unchanged apart from a banner in each domain README and merge fields in each domain manifest. The Godot editor addons project followed on 2026-11-18 as `godot/toolbox/` (complete and openable in Godot), and the ai-knowledge-vault resource index as `ai-resources/`. Binary files in the toolbox (demo PNGs and the addon release zips) were uploaded through the GitHub web interface because the batched text push cannot carry binaries; the source repo's generated `.godot/` editor cache and local `reports/` output were not carried over. ForAI and WinDevKit joined on 2026-11-18 (`forai/`, `windevkit/`). With the library complete, the seven copied source repos — PafDev, WowDev, KotlinDev, GodotDevTools, ai-knowledge-vault, ForAI, and WinDevKit — were archived on GitHub on 2026-11-18; this repo is their single live home. Archived repos stay readable and downloadable on GitHub, and can be unarchived at any time.
+Merged 2026-11-18 from PafDev, WowDev, KotlinDev, and the knowledge layer of GodotDevTools, joining the Windows desktop base (`knowledge/`, 2026-11-17) and the Flutter pack (`flutter/`, 2026-11-18) already here. Domain content is unchanged apart from a banner in each domain README and merge fields in each domain manifest. The Godot editor addons project followed on 2026-11-18 as `godot/toolbox/` (complete and openable in Godot), and the ai-knowledge-vault resource index as `ai-resources/`. Binary files in the toolbox (demo PNGs and the addon release zips) were uploaded through the GitHub web interface because the batched text push cannot carry binaries; the source repo's generated `.godot/` editor cache and local `reports/` output were not carried over. ForAI and WinDevKit joined on 2026-11-18 (`forai/`, `windevkit/`). With the library complete, the seven copied source repos — PafDev, WowDev, KotlinDev, GodotDevTools, ai-knowledge-vault, ForAI, and WinDevKit — were archived on GitHub on 2026-11-18; this repo is their single live home. Archived repos stay readable and downloadable on GitHub, and can be unarchived at any time. On 2026-11-23 a full audit of every owned repo added the last two resource collections that belonged here — the AV-Scrub-Index dataset (`av-scrub-index/`) and the Prompt Architect library (`prompt-architect/`); their source repos remain live and unarchived.
 
 ## Godot realistic physics
 

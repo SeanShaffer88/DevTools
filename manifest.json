@@ -104,6 +104,26 @@
       "manifest": "development/manifest.json",
       "bundle": "development/README.md",
       "files": 1063
+    },
+    {
+      "id": "av-scrub-index",
+      "folder": "av-scrub-index/",
+      "title": "AV/EDR scrub-tool index",
+      "covers": "Machine-readable dataset of official AV/EDR/XDR uninstall and scrub utilities: vendor removal tools, direct download URLs, silent/force arguments, Safe Mode notes, JSON schema",
+      "mergedFrom": "SeanShaffer88/av-scrub-index",
+      "manifest": "av-scrub-index/manifest.json",
+      "bundle": "av-scrub-index/README.md",
+      "files": 46
+    },
+    {
+      "id": "prompt-architect",
+      "folder": "prompt-architect/",
+      "title": "Prompt Architect prompt-engineering library",
+      "covers": "Prompt-engineering contract library: how models read prompts, five-component prompt architecture, pattern catalogue, production blueprints for nine task classes, cost/safety/multi-turn guides, evaluation rubric with harness",
+      "mergedFrom": "SeanShaffer88/prompt-architect",
+      "manifest": "prompt-architect/manifest.json",
+      "bundle": "prompt-architect/README.md",
+      "files": 144
     }
   ],
   "files": [

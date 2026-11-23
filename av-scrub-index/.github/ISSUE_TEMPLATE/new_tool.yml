@@ -1,0 +1,72 @@
+name: Submit a New Removal Tool
+description: Add an official uninstallation utility to the dataset.
+title: "[New Tool]: "
+labels: ["tool-submission"]
+body:
+  - type: input
+    id: vendor
+    attributes:
+      label: Vendor Name
+      placeholder: "e.g., ESET"
+    validations:
+      required: true
+  - type: input
+    id: tool_name
+    attributes:
+      label: Official Tool Name
+      placeholder: "e.g., ESET Uninstaller"
+    validations:
+      required: true
+  - type: dropdown
+    id: distribution
+    attributes:
+      label: Distribution Model
+      options:
+        - public
+        - portal_gated
+    validations:
+      required: true
+  - type: input
+    id: download_url
+    attributes:
+      label: Direct Download URL
+      description: Required for public CDN binaries; leave blank for portal-gated enterprise tools.
+      placeholder: "https://..."
+    validations:
+      required: false
+  - type: input
+    id: official_docs_url
+    attributes:
+      label: Official Vendor Documentation / Portal URL
+      placeholder: "https://support.example.com/..."
+    validations:
+      required: true
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Market Tier
+      options:
+        - consumer
+        - enterprise
+        - both
+    validations:
+      required: true
+  - type: checkboxes
+    id: execution_flags
+    attributes:
+      label: Operational Requirements
+      options:
+        - label: Requires Windows Safe Mode to operate
+        - label: Requires system reboot upon completion
+        - label: Command-line only (CLI)
+  - type: input
+    id: silent_args
+    attributes:
+      label: Silent / Unattended CLI Flags
+      placeholder: "e.g., /silent, --nodetect"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Operational Notes
+      description: Any caveats such as CAPTCHA prompts, Tamper Protection prerequisites, maintenance tokens, or supported product families.
+      placeholder: "e.g., Disable Tamper Protection before running..."
