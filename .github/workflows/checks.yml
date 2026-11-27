@@ -1,0 +1,46 @@
+name: checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: PowerShell scripts parse cleanly
+        shell: pwsh
+        run: |
+          $bad = 0; $n = 0
+          Get-ChildItem -Recurse -Filter *.ps1 | ForEach-Object {
+            $n++; $t = $null; $e = $null
+            $null = [Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$t, [ref]$e)
+            if ($e.Count) { $bad++; Write-Output "::error file=$($_.FullName)::$($e[0].Message)" }
+          }
+          "Parsed $n scripts, $bad with errors"
+          if ($bad) { exit 1 }
+
+      - name: AI tools tests
+        run: python -m unittest discover -s tests -p "test_*.py" -v
+
+      - name: windevkit tests
+        working-directory: windevkit
+        run: python -m unittest discover -s tests -v
+
+      - name: Development library audit
+        run: python development/tools/library.py audit --format text
+
+      - name: Knowledge library links and manifests
+        run: python tests/check_knowledge.py
