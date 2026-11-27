@@ -61,10 +61,14 @@ jobs:
           New-Item -ItemType Directory -Force -Path $work, $evidence, (Join-Path $env:GITHUB_WORKSPACE 'work/devtools-reliability-wave/scenarios') | Out-Null
           "DEVTOOLS_CI_WORK=$work" >> $env:GITHUB_ENV
           "DEVTOOLS_CI_EVIDENCE=$evidence" >> $env:GITHUB_ENV
-          # The runner image also ships newer SDKs (e.g. 11.0.x), and dotnet picks
-          # the newest by default. Generated fixtures target net10.0 and build
-          # offline with NuGet sources cleared, which needs the matching .NET 10
-          # SDK, so pin it for everything built under this folder.
+          # ilammy/msvc-dev-cmd exports Platform=x64. MSBuild reads environment
+          # variables as properties, so .NET fixture builds would land in
+          # bin\x64\Release instead of bin\Release, where the tests look for
+          # them. No test needs Platform for native builds, so clear it.
+          "Platform=" >> $env:GITHUB_ENV
+          # The runner image also ships newer SDKs (e.g. 11.0.x) and dotnet picks
+          # the newest by default. The fixtures target net10.0, so keep them on
+          # the matching .NET 10 SDK for everything built under this folder.
           $sdk = dotnet --list-sdks | ForEach-Object { ($_ -split ' ')[0] } |
             Where-Object { $_ -like '10.0.*' } | Sort-Object { [version]$_ } | Select-Object -Last 1
           if (-not $sdk) { throw 'No .NET 10 SDK found on the runner' }
