@@ -7,6 +7,7 @@ boilerplate from making unrelated records look relevant.
 import argparse
 import json
 import re
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -69,6 +70,8 @@ def rank_results(rows, query, *, category="", topic="", resource_type="", use_ca
 
 
 def main():
+    # JSON output contains non-ASCII names; a cp1252 Windows console cannot encode them.
+    sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("query", help="all terms must match searchable catalog fields")
     parser.add_argument("--category", default="", help="category name substring")

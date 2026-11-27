@@ -48,7 +48,8 @@ try{
  $addon=& (Join-Path $toolRoot 'Test-WowAddon.ps1') -AddonPath $projects.WowAddon -InterfaceVersion 30300 -Json | ConvertFrom-Json;Assert $addon.valid 'Generated addon validates'
  $dotnet=Run 'dotnet.exe' @('build',(Join-Path $projects.WindowsConsole 'SampleWindowsConsole.csproj'),'--configuration','Release','--nologo') $projects.WindowsConsole
  $managedOutput=Get-ChildItem -LiteralPath (Join-Path $projects.WindowsConsole 'bin\Release') -Filter 'SampleWindowsConsole.dll' -File -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
- Assert ($null -ne $managedOutput) '.NET source actually compiles offline'
+ if($null -eq $managedOutput){Write-Host ('dotnet build output:'+[Environment]::NewLine+$dotnet.Stdout+$dotnet.Stderr)}
+Assert ($null -ne $managedOutput) '.NET source actually compiles offline'
  $native=$projects.NativeDll
  $nativeRun=Run 'cmake.exe' @('-S','.','-B','build','-G','Ninja') $native
  $nativeBuild=Run 'cmake.exe' @('--build','build') $native

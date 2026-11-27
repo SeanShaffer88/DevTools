@@ -27,6 +27,11 @@ def slug(value):
     return re.sub(r"[^a-z0-9]+", "-", value.casefold()).strip("-")
 
 
+def text_size(path):
+    """Byte size with LF line endings, so Windows (CRLF) checkouts match the committed stats."""
+    return len(path.read_bytes().replace(b"\r\n", b"\n"))
+
+
 def build(rows):
     categories = collections.Counter(row["category"] for row in rows)
     groups_path = ROOT / "index" / "category-groups.json"
@@ -39,8 +44,8 @@ def build(rows):
                 "resource_count": group["resource_count"],
                 "category_count": group["category_count"],
             })
-    canonical_bytes = RESOURCES.stat().st_size
-    compact_bytes = (ROOT / "index" / "resources.compact.json").stat().st_size
+    canonical_bytes = text_size(RESOURCES)
+    compact_bytes = text_size(ROOT / "index" / "resources.compact.json")
     windows = {name: count for name, count in categories.items() if name.startswith("Windows /")}
     return {
         "version": 1,
@@ -67,7 +72,7 @@ def build(rows):
         "sizes_bytes": {
             "resources.json": canonical_bytes,
             "index/resources.compact.json": compact_bytes,
-            "llms-full.txt": (ROOT / "llms-full.txt").stat().st_size if (ROOT / "llms-full.txt").exists() else 0,
+            "llms-full.txt": text_size(ROOT / "llms-full.txt") if (ROOT / "llms-full.txt").exists() else 0,
             "compact_percent_of_canonical": round(100 * compact_bytes / canonical_bytes, 1),
         },
     }
