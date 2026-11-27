@@ -61,7 +61,17 @@ class Program{static int Main(string[] args){var log=Environment.GetEnvironmentV
  $androidSdk=$env:ANDROID_HOME
  if([string]::IsNullOrWhiteSpace($androidSdk)){$androidSdk=$env:ANDROID_SDK_ROOT}
  if([string]::IsNullOrWhiteSpace($androidSdk)){throw 'Set ANDROID_HOME or ANDROID_SDK_ROOT to run Android resource tests.'}
- $summary=Get-Content -LiteralPath (Join-Path $tool 'validation-summary.json') -Raw|ConvertFrom-Json;$apk=@($summary.artifacts|Where-Object{$_.path.EndsWith('.apk')})[0].path;$r=& (Join-Path $tool 'Test-AndroidArtifact.ps1') -ApkPath $apk -BuildToolsRoot (Join-Path $androidSdk 'build-tools\36.0.0') -Json|ConvertFrom-Json;$executions.Add(@{command='Actual installed aapt2/zipalign/apksigner verification of existing unsigned template APK';exitCode=$global:LASTEXITCODE;artifact=$apk;findings=$r.findings});Assert (@($r.findings|Where-Object{$_.id -eq 'manifest' -and $_.status -eq 'Pass'}).Count -eq 1) 'Actual aapt2 decodes binary manifest';Assert (@($r.findings|Where-Object{$_.id -eq 'alignment' -and $_.status -eq 'Pass'}).Count -eq 1) 'Actual zipalign16KiB ZIP alignment';Assert (@($r.findings|Where-Object{$_.id -eq 'signature' -and $_.status -eq 'Fail'}).Count -eq 1 -and $global:LASTEXITCODE -eq 2) 'Actual unsigned APK signature correctly rejected'
+ $androidProject=Join-Path $fixture 'Android Artifact With Spaces'
+ $generated=& (Join-Path $tool 'New-DevProject.ps1') -Template AndroidApp -Destination $androidProject -Name ArtifactVerify -Json|ConvertFrom-Json
+ Assert ($generated.created -and $generated.files.Count -gt 0) 'Generate APK for actual SDK verification'
+ $build=& (Join-Path $tool 'Invoke-DevBuild.ps1') -ProjectPath $androidProject -Executable 'pwsh.exe' -ArgumentList @('-NoProfile','-File',(Join-Path $androidProject 'Build.ps1'),'-SdkPath',$androidSdk) -TimeoutSeconds 120
+ $executions.Add(@{command='Build generated Android app fixture for installed SDK verification';exitCode=$global:LASTEXITCODE})
+ Assert ($global:LASTEXITCODE -eq 0) 'Generated Android app builds with installed SDK'
+ $apk=Get-ChildItem -LiteralPath (Join-Path $androidProject 'build') -Filter '*-unsigned.apk' -File -Recurse|Select-Object -First 1
+ Assert ($null -ne $apk) 'Generated APK available for SDK verification'
+ $r=& (Join-Path $tool 'Test-AndroidArtifact.ps1') -ApkPath $apk.FullName -BuildToolsRoot (Join-Path $androidSdk 'build-tools\36.0.0') -Json|ConvertFrom-Json
+ $executions.Add(@{command='Actual installed aapt2/zipalign/apksigner verification of generated unsigned template APK';exitCode=$global:LASTEXITCODE;artifact=$apk.Name;findings=$r.findings})
+ Assert (@($r.findings|Where-Object{$_.id -eq 'manifest' -and $_.status -eq 'Pass'}).Count -eq 1) 'Actual aapt2 decodes binary manifest';Assert (@($r.findings|Where-Object{$_.id -eq 'alignment' -and $_.status -eq 'Pass'}).Count -eq 1) 'Actual zipalign16KiB ZIP alignment';Assert (@($r.findings|Where-Object{$_.id -eq 'signature' -and $_.status -eq 'Fail'}).Count -eq 1 -and $global:LASTEXITCODE -eq 2) 'Actual unsigned APK signature correctly rejected'
  $exitCode=0
 }catch{$failure=$_.Exception.Message;Write-Output $_}finally{Remove-Item Env:DEVTOOLS_TEST_ADB_MODE,Env:DEVTOOLS_TEST_ADB_LOG -ErrorAction SilentlyContinue}
 $evidence=@{schemaVersion=1;observedUtc=[DateTime]::UtcNow.ToString('o');command='pwsh -NoProfile -File tests/Test-PlatformResources.ps1';exitCode=$exitCode;fixturePath=$fixture;checks=$checks.ToArray();executions=$executions.ToArray();unperformed=$unperformed;failure=$failure};$evidence|ConvertTo-Json -Depth 25|Set-Content -LiteralPath $evidencePath;Write-Output "$($checks.Count) checks; exit $exitCode; $fixture";exit $exitCode
