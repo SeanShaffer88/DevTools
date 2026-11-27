@@ -94,7 +94,9 @@ else if(args.Contains("logcat")) Console.WriteLine(mode=="large"?new string('x',
 return 0;
 '@)
  $r=Run 'dotnet.exe' @('build',(Join-Path $fakeRoot 'FakeAdb.csproj'),'-c','Release','--nologo') $fakeRoot
- $fake=Join-Path $fakeRoot 'bin\Release\net10.0\FakeAdb.exe';$env:DEVTOOLS_FAKE_ADB_LOG=Join-Path $fixture 'adb-argv.jsonl';$env:DEVTOOLS_FAKE_ADB_MODE=''
+ $fakeOutput=Get-ChildItem -LiteralPath (Join-Path $fakeRoot 'bin') -Filter 'FakeAdb.exe' -File -Recurse | Select-Object -First 1
+ Assert ($null -ne $fakeOutput) 'Fake ADB executable built'
+ $fake=$fakeOutput.FullName;$env:DEVTOOLS_FAKE_ADB_LOG=Join-Path $fixture 'adb-argv.jsonl';$env:DEVTOOLS_FAKE_ADB_MODE=''
  Copy-Item -LiteralPath $fake -Destination (Join-Path (Split-Path $fake) 'adb.exe')
  $env:PATH=(Split-Path $fake)+';'+$oldPath
  $apkFixture=Join-Path $fixture 'Fixture.apk';New-Zip $apkFixture @{'AndroidManifest.xml'='<manifest/>'; 'classes.dex'='dex';'lib/arm64-v8a/example.so'='elf';'assets/example.txt'='asset'}
