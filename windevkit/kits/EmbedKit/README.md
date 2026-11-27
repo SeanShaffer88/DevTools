@@ -29,7 +29,8 @@ external dependencies beyond the OS, and the runtime version is
   (ONNX Runtime 1.31.0). Newer runtimes remain compatible; an older
   runtime is refused with a precise `EK_ERR_NOT_SUPPORTED` message
   naming the version it reported.
-- `pins.txt` pins the exact 1.31.0 packages (with SHA-256) as a
+- `pins.txt` pins the exact 1.31.0 runtime (Microsoft's
+  `Microsoft.ML.OnnxRuntime` NuGet package, SHA-512) as a
   known-good source; `fetch.ps1` / `fetch.sh` download and
   hash-verify them into `fixtures/` (gitignored) for development
   and for the end-to-end proof. `fetch` is a developer convenience

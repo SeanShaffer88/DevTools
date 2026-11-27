@@ -1,0 +1,112 @@
+name: Repository validation
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  python:
+    name: Python ${{ matrix.python-version }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.11", "3.15"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: AI utility tests
+        run: |
+          python -m compileall -q ai_tools
+          python -m unittest -v tests.test_ai_tools
+      - name: ForAI catalog validation
+        working-directory: forai
+        run: |
+          python scripts/validate.py
+          python -m unittest discover -s tests -v
+          python scripts/search.py SQLite --json
+      - name: AI resource catalog validation
+        working-directory: ai-resources
+        run: |
+          python scripts/validate.py
+          python scripts/search.py "mcp server" --json
+      - name: WinDevKit Python tests
+        working-directory: windevkit
+        run: |
+          python -m py_compile tools/verify.py tools/publish.py tools/scaffold-dll.py tests/test_verify.py
+          python -m unittest discover -s tests -v
+
+  windows-toolkit:
+    name: Windows 11 x64 toolkit tests
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+      - name: Prepare isolated test output
+        shell: pwsh
+        run: |
+          $base = Join-Path $env:RUNNER_TEMP 'devtools-ci'
+          $work = Join-Path $base 'work'
+          $evidence = Join-Path $base 'evidence'
+          New-Item -ItemType Directory -Force -Path $work, $evidence, (Join-Path $env:GITHUB_WORKSPACE 'work/devtools-reliability-wave/scenarios') | Out-Null
+          "DEVTOOLS_CI_WORK=$work" >> $env:GITHUB_ENV
+          "DEVTOOLS_CI_EVIDENCE=$evidence" >> $env:GITHUB_ENV
+          # The runner image also ships newer SDKs (e.g. 11.0.x), and dotnet picks
+          # the newest by default. Generated fixtures target net10.0 and build
+          # offline with NuGet sources cleared, which needs the matching .NET 10
+          # SDK, so pin it for everything built under this folder.
+          $sdk = dotnet --list-sdks | ForEach-Object { ($_ -split ' ')[0] } |
+            Where-Object { $_ -like '10.0.*' } | Sort-Object { [version]$_ } | Select-Object -Last 1
+          if (-not $sdk) { throw 'No .NET 10 SDK found on the runner' }
+          @{ sdk = @{ version = $sdk; rollForward = 'disable' } } | ConvertTo-Json |
+            Set-Content -Encoding utf8 (Join-Path $base 'global.json')
+          "Pinned .NET SDK $sdk for $base"
+      - name: Shared helper tests
+        shell: pwsh
+        run: ./tests/Test-DevToolsCommon.ps1 -WorkRoot "$env:DEVTOOLS_CI_WORK"
+      - name: Core toolkit tests
+        shell: pwsh
+        run: ./tests/Test-DevTools.ps1 -WorkRoot "$env:DEVTOOLS_CI_WORK" -EvidenceDirectory "$env:DEVTOOLS_CI_EVIDENCE"
+      - name: Extension tests
+        shell: pwsh
+        run: ./tests/Test-Extensions.ps1 -WorkRoot "$env:DEVTOOLS_CI_WORK" -EvidenceDirectory "$env:DEVTOOLS_CI_EVIDENCE"
+      - name: Package reference tests
+        shell: pwsh
+        run: ./tests/Test-PackageReferences.ps1 -WorkRoot "$env:DEVTOOLS_CI_WORK" -EvidenceDirectory "$env:DEVTOOLS_CI_EVIDENCE"
+      - name: Platform resource tests
+        shell: pwsh
+        run: ./tests/Test-PlatformResources.ps1 -WorkRoot "$env:DEVTOOLS_CI_WORK" -EvidenceDirectory "$env:DEVTOOLS_CI_EVIDENCE"
+      - name: Quality foundation tests
+        shell: pwsh
+        run: ./tests/Test-QualityFoundations.ps1 -EvidenceDirectory "$env:DEVTOOLS_CI_EVIDENCE"
+      - name: Quality game tests
+        shell: pwsh
+        run: ./tests/Test-QualityGames.ps1 -WorkRoot "$env:DEVTOOLS_CI_WORK" -EvidenceDirectory "$env:DEVTOOLS_CI_EVIDENCE"
+      - name: Native quality tests
+        shell: pwsh
+        run: ./tests/Test-QualityNative.ps1 -WorkRoot "$env:DEVTOOLS_CI_WORK" -EvidenceDirectory "$env:DEVTOOLS_CI_EVIDENCE"
+      - name: Native policy tests
+        shell: pwsh
+        run: ./tests/Test-ReliabilityNativePolicy.ps1 -Destination "$env:RUNNER_TEMP/devtools-ci/policy"
+      - name: Native symbol vault tests
+        shell: pwsh
+        run: ./tests/Test-ReliabilityNativeVault.ps1 -Destination "$env:RUNNER_TEMP/devtools-ci/symbol-vault"
+      - name: Strict scenario tests
+        shell: pwsh
+        run: ./tests/Test-ReliabilityScenariosCore.ps1
+      - name: Runtime and SDK tests
+        shell: pwsh
+        run: ./tests/Test-RuntimeSdkDependencies.ps1 -WorkRoot "$env:DEVTOOLS_CI_WORK" -EvidenceDirectory "$env:DEVTOOLS_CI_EVIDENCE"
+      - name: Windows diagnostics tests
+        shell: pwsh
+        run: ./tests/Test-WindowsDiagnostics.ps1 -WorkRoot "$env:DEVTOOLS_CI_WORK" -EvidenceDirectory "$env:DEVTOOLS_CI_EVIDENCE"

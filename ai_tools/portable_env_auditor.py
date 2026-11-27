@@ -6,7 +6,7 @@ from .common import walk_files,read_text,finding,finish
 
 SUFFIXES={".py",".rs",".ps1",".psm1",".cs",".js",".ts",".gd",".lua",".toml",".json",".yml",".yaml"}
 NETWORK=re.compile(r'https?://|wss?://|(?:telemetry|analytics|tracking|sentry|segment|mixpanel|amplitude)',re.I)
-WRITE=re.compile(r'\b(?:write_text|write_bytes|open|File\.(?:Write|Append|Create)|MoveFile|CreateFile|mkdir|makedirs)\b',re.I)
+WRITE=re.compile(r'\b(?:write_text|write_bytes|open|(?:std::)?fs::write|File\.(?:Write|Append|Create)|MoveFile|CreateFile|mkdir|makedirs)\b',re.I)
 def main(argv=None):
  p=argparse.ArgumentParser(description=__doc__);p.add_argument("root",type=Path);p.add_argument("--max-files",type=int,default=20000);p.add_argument("--text",action="store_true");a=p.parse_args(argv)
  root=a.root.resolve(); findings=[]

@@ -21,7 +21,7 @@ def main(argv=None):
  used=set(); hardcoded=[]
  for f in walk_files(root,{".gd",".cs"}):
   code=read_text(f); rel=f.relative_to(root).as_posix()
-  for m in re.finditer(r'(?:is_action(?:_just_(?:pressed|released))?|get_action_strength)\s*\(\s*["\']([^"\']+)',code):
+  for m in re.finditer(r'(?:is_action(?:_just_(?:pressed|released)|_(?:pressed|released))?|get_action_strength)\s*\(\s*["\']([^"\']+)',code):
    used.add(m.group(1))
    if m.group(1) not in actions: findings.append(finding("MissingInputAction",rel,"error",f"Input action {m.group(1)!r} is absent from project.godot"))
   if re.search(r'\bKEY_[A-Z0-9_]+|\bKeyCode\.[A-Za-z]+',code):

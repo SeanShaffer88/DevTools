@@ -1,0 +1,7 @@
+config_version=5
+
+[input]
+move_left={
+"deadzone": 0.5,
+"events": []
+}

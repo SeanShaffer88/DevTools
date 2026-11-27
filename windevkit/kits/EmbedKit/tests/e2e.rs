@@ -3,7 +3,7 @@
 //! explicitly (after fetch.sh / fetch.ps1):
 //!
 //!   EK_E2E=1 \
-//!   EK_ORT_LIB=fixtures/ort/lib/libonnxruntime.so.1.31.0 \
+//!   EK_ORT_LIB=fixtures/ort/lib/libonnxruntime.so \
 //!   EK_MODEL=fixtures/model.onnx EK_VOCAB=fixtures/vocab.txt \
 //!   cargo test --test e2e -- --ignored --nocapture
 //!

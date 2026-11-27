@@ -47,13 +47,12 @@ try{
  $r=& $generator -Template NativeDll -Destination (Join-Path $destLink 'Child') -Name Clean -Json | ConvertFrom-Json;Assert (-not $r.created -and -not(Test-Path -LiteralPath (Join-Path $outside 'Child'))) 'Reject destination ancestor junction'
  $addon=& (Join-Path $toolRoot 'Test-WowAddon.ps1') -AddonPath $projects.WowAddon -InterfaceVersion 30300 -Json | ConvertFrom-Json;Assert $addon.valid 'Generated addon validates'
  $dotnet=Run 'dotnet.exe' @('build',(Join-Path $projects.WindowsConsole 'SampleWindowsConsole.csproj'),'--configuration','Release','--nologo') $projects.WindowsConsole
- Assert (Test-Path -LiteralPath (Join-Path $projects.WindowsConsole 'bin\Release\net10.0\SampleWindowsConsole.dll')) '.NET source actually compiles offline'
+ $managedOutput=Get-ChildItem -LiteralPath (Join-Path $projects.WindowsConsole 'bin\Release') -Filter 'SampleWindowsConsole.dll' -File -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
+ if($null -eq $managedOutput){Write-Host ('dotnet build output:'+[Environment]::NewLine+$dotnet.Stdout+$dotnet.Stderr)}
+Assert ($null -ne $managedOutput) '.NET source actually compiles offline'
  $native=$projects.NativeDll
- $vcvars='C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvars64.bat'
- if($native -match '[&|<>%^!]' -or $vcvars -match '[&|<>%^!]'){throw 'Unsafe shell metacharacter in test-only compiler path.'}
- $nativeCommand='@call "'+$vcvars+'" >nul'+"`r`n"+'@if errorlevel 1 exit /b %errorlevel%'+"`r`n"+'@cmake -S . -B build -G Ninja'+"`r`n"+'@if errorlevel 1 exit /b %errorlevel%'+"`r`n"+'@cmake --build build'
- [IO.File]::WriteAllText((Join-Path $native 'compile.cmd'),$nativeCommand)
- $nativeRun=Run 'cmd.exe' @('/d','/c','compile.cmd') $native
+ $nativeRun=Run 'cmake.exe' @('-S','.','-B','build','-G','Ninja') $native
+ $nativeBuild=Run 'cmake.exe' @('--build','build') $native
  $nativeDll=Join-Path $native 'build\SampleNativeDll.dll'
  $nativeInfo=& (Join-Path $toolRoot 'Get-DllInfo.ps1') -Path $nativeDll -Json | ConvertFrom-Json
  Assert ($nativeInfo.valid -and @($nativeInfo.image.Exports | Where-Object Name -ceq 'SampleNativeDll_Add').Count -eq 1) 'Generated native DLL compiles and exports C ABI'

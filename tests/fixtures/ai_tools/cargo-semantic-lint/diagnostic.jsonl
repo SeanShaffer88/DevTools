@@ -1,0 +1,1 @@
+{"reason":"compiler-message","message":{"level":"error","message":"cannot find value `missing` in this scope","code":{"code":"E0425"},"spans":[{"file_name":"src/lib.rs","line_start":4,"column_start":9,"is_primary":true}],"rendered":"error[E0425]: cannot find value `missing` in this scope"}}

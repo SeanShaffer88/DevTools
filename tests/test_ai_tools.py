@@ -2,11 +2,17 @@
 import json
 import contextlib
 import io
+import sys
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
+import subprocess
 
 from ai_tools.scene_diff import parse
+from ai_tools.scene_diff import main as scene_diff_main
+from ai_tools.asset_health_guard import main as asset_health_main
+from ai_tools.signal_flow_spy import main as signal_flow_main
 from ai_tools.saved_variables_inspector import Parser
 from ai_tools.__main__ import COMMANDS
 from ai_tools.toc_manifest_linter import main as toc_main
@@ -17,6 +23,13 @@ from ai_tools.release_manifest_gen import main as release_main
 from ai_tools.signal_flow_spy import main as signal_main
 from ai_tools.input_map_auditor import main as input_main
 from ai_tools.asset_health_guard import main as asset_main
+from ai_tools.input_map_auditor import main as input_map_main
+from ai_tools.addon_memory_taint_auditor import main as taint_main
+from ai_tools.addon_api_compat_checker import main as api_compat_main
+from ai_tools.cargo_semantic_lint import run as cargo_run
+from ai_tools.module_dep_graph import main as module_graph_main
+from ai_tools.export_matrix import main as export_matrix_main
+from ai_tools.portable_env_auditor import main as portable_env_main
 
 
 def run_json(main, argv):
@@ -31,6 +44,14 @@ def write_tree(root, files):
         path = Path(root) / rel
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(text, encoding="utf-8")
+
+FIXTURES = Path(__file__).parent / "fixtures" / "ai_tools"
+
+def run_json(main_fn, args):
+    output = io.StringIO()
+    with contextlib.redirect_stdout(output):
+        code = main_fn([str(x) for x in args])
+    return code, json.loads(output.getvalue())
 
 class AiToolsTests(unittest.TestCase):
     def test_dispatcher_has_fifteen_tools(self):
@@ -168,6 +189,17 @@ class AiToolsTests(unittest.TestCase):
             self.assertEqual(payload["actions"], ["jump", "unused_action"])
             self.assertEqual(unused, ["Action 'unused_action' has no detected script use"])
 
+    def test_input_map_auditor_recognizes_pressed_and_released_calls(self):
+        with tempfile.TemporaryDirectory() as d:
+            write_tree(d, {
+                "project.godot": '[input]\njump={\n"deadzone": 0.5,\n"events": []\n}\n',
+                "player.gd": 'extends Node\nfunc _process(_d):\n\tInput.is_action_pressed("jump")\n\tInput.is_action_just_released("jump")\n',
+            })
+            code, payload = run_json(input_map_main, [d])
+            self.assertEqual(code, 0)
+            self.assertEqual(payload["usedActions"], ["jump"])
+            self.assertNotIn("MissingInputAction", [x["code"] for x in payload["findings"]])
+
     def test_asset_health_guard_treats_format_paths_as_dynamic(self):
         with tempfile.TemporaryDirectory() as d:
             write_tree(d, {
@@ -182,6 +214,118 @@ class AiToolsTests(unittest.TestCase):
             self.assertEqual(missing, ["Missing res://resources/heroes/missing.tres"])
             self.assertEqual(len(dynamic), 5)
             self.assertTrue(all(f["severity"] == "info" for f in dynamic))
+
+    def test_fixture_directory_exists_for_every_command(self):
+        self.assertEqual({p.name for p in FIXTURES.iterdir() if p.is_dir()}, set(COMMANDS))
+
+    def test_scene_diff_fixture(self):
+        code, payload = run_json(scene_diff_main, [
+            FIXTURES / "scene-diff" / "before.tscn",
+            FIXTURES / "scene-diff" / "after.tscn",
+        ])
+        self.assertEqual(code, 0)
+        self.assertEqual(payload["addedNodes"], ["Camera"])
+        self.assertTrue(any(x["property"] == "position" for x in payload["changedProperties"]))
+
+    def test_asset_guard_fixture_reports_missing_res_path(self):
+        code, payload = run_json(asset_health_main, [FIXTURES / "asset-health-guard"])
+        self.assertEqual(code, 2)
+        self.assertIn("MissingResource", [x["code"] for x in payload["findings"]])
+
+    def test_signal_spy_fixture_flags_unbound_signal(self):
+        code, payload = run_json(signal_flow_main, [FIXTURES / "signal-flow-spy"])
+        self.assertEqual(code, 0)
+        self.assertIn("UnknownConnection", [x["code"] for x in payload["findings"]])
+
+    def test_harness_fixture_captures_child_failure(self):
+        fixture = FIXTURES / "godot-test-harness"
+        code, payload = run_json(harness_main, [
+            fixture, "--godot", sys.executable, "--test-script", "test.gd",
+            "--timeout", "5", "--allow-project-code",
+        ])
+        self.assertEqual(code, 2)
+        self.assertFalse(payload["passed"])
+        self.assertFalse(payload.get("timedOut", False))
+
+    def test_input_map_fixture_flags_missing_action(self):
+        code, payload = run_json(input_map_main, [FIXTURES / "input-map-auditor"])
+        self.assertEqual(code, 2)
+        self.assertIn("MissingInputAction", [x["code"] for x in payload["findings"]])
+
+    def test_state_machine_fixture_flags_dangling_edge(self):
+        code, payload = run_json(state_main, [
+            FIXTURES / "state-time-machine-validator" / "state.json", "--expected-version", "2",
+        ])
+        self.assertEqual(code, 2)
+        self.assertIn("DanglingTransition", [x["code"] for x in payload["findings"]])
+
+    def test_toc_fixture_resolves_nested_xml_loads(self):
+        code, payload = run_json(toc_main, [
+            FIXTURES / "toc-manifest-linter", "--interface", "110200",
+        ])
+        self.assertEqual(code, 0)
+        paths = [x["path"] for x in payload["loadOrder"]]
+        self.assertIn("Nested.xml", paths)
+        self.assertIn("Main.lua", paths)
+
+    def test_taint_fixture_flags_review_patterns(self):
+        code, payload = run_json(taint_main, [FIXTURES / "addon-memory-taint-auditor"])
+        self.assertEqual(code, 0)
+        codes = {x["code"] for x in payload["findings"]}
+        self.assertIn("ProtectedGlobalWrite", codes)
+        self.assertIn("CombatFrameMutation", codes)
+
+    def test_saved_variables_fixture_parses_nested_table(self):
+        code, payload = run_json(saved_main, [
+            FIXTURES / "saved-variables-inspector" / "Saved.lua", "--json-data",
+        ])
+        self.assertEqual(code, 0)
+        self.assertTrue(payload["valid"])
+        self.assertTrue(payload["data"]["FixtureDB"]["profile"]["enabled"])
+
+    def test_api_compat_fixture_flags_catalog_symbol(self):
+        code, payload = run_json(api_compat_main, [
+            FIXTURES / "addon-api-compat-checker", "--interface", "110200",
+        ])
+        self.assertEqual(code, 0)
+        self.assertIn("GetSpellInfo", payload["matchedSymbols"])
+
+    def test_cargo_fixture_parses_rustc_diagnostic_offline(self):
+        fixture = FIXTURES / "cargo-semantic-lint" / "diagnostic.jsonl"
+        line = fixture.read_text(encoding="utf-8")
+        fake = subprocess.CompletedProcess(args=["cargo"], returncode=101, stdout=line, stderr="")
+        with patch("ai_tools.cargo_semantic_lint.subprocess.run", return_value=fake) as mocked:
+            result = cargo_run(["cargo", "check"], FIXTURES / "cargo-semantic-lint", 5)
+        self.assertEqual(result["diagnostics"][0]["line"], 4)
+        self.assertEqual(mocked.call_args.kwargs["env"]["CARGO_NET_OFFLINE"], "true")
+        self.assertFalse(mocked.call_args.kwargs["shell"])
+
+    def test_module_graph_fixture_finds_cycle(self):
+        code, payload = run_json(module_graph_main, [FIXTURES / "module-dep-graph"])
+        self.assertEqual(code, 2)
+        self.assertTrue(payload["cycles"])
+
+    def test_export_matrix_fixture_validates_all_targets(self):
+        fixture = FIXTURES / "export-matrix"
+        code, payload = run_json(export_matrix_main, [
+            fixture, "--profiles", fixture / "profiles.json",
+        ])
+        self.assertEqual(code, 0)
+        self.assertEqual(payload["profilesChecked"], 3)
+        self.assertFalse(payload["buildsRun"])
+
+    def test_portable_env_fixture_reports_network_and_write_markers(self):
+        code, payload = run_json(portable_env_main, [FIXTURES / "portable-env-auditor"])
+        self.assertEqual(code, 0)
+        codes = {x["code"] for x in payload["findings"]}
+        self.assertIn("NetworkOrTelemetryMarker", codes)
+        self.assertIn("PotentialBroadWrite", codes)
+
+    def test_release_fixture_hashes_payloads_and_suggests_names(self):
+        code, payload = run_json(release_main, [FIXTURES / "release-manifest-gen"])
+        self.assertEqual(code, 0)
+        self.assertEqual(payload["fileCount"], 2)
+        self.assertEqual(len(payload["renameSuggestions"]), 2)
 
 if __name__ == "__main__":
     unittest.main()
