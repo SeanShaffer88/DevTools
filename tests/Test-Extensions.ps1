@@ -47,7 +47,7 @@ try{
  $r=& $generator -Template NativeDll -Destination (Join-Path $destLink 'Child') -Name Clean -Json | ConvertFrom-Json;Assert (-not $r.created -and -not(Test-Path -LiteralPath (Join-Path $outside 'Child'))) 'Reject destination ancestor junction'
  $addon=& (Join-Path $toolRoot 'Test-WowAddon.ps1') -AddonPath $projects.WowAddon -InterfaceVersion 30300 -Json | ConvertFrom-Json;Assert $addon.valid 'Generated addon validates'
  $dotnet=Run 'dotnet.exe' @('build',(Join-Path $projects.WindowsConsole 'SampleWindowsConsole.csproj'),'--configuration','Release','--nologo') $projects.WindowsConsole
- $managedOutput=Get-ChildItem -LiteralPath (Join-Path $projects.WindowsConsole 'bin\Release') -Filter 'SampleWindowsConsole.dll' -File -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
+ $managedOutput=Get-ChildItem -LiteralPath (Join-Path $projects.WindowsConsole 'bin') -Filter 'SampleWindowsConsole.dll' -File -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
  if($null -eq $managedOutput){Write-Host ('dotnet build output:'+[Environment]::NewLine+$dotnet.Stdout+$dotnet.Stderr)}
 Assert ($null -ne $managedOutput) '.NET source actually compiles offline'
  $native=$projects.NativeDll
