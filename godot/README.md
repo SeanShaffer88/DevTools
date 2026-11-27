@@ -58,10 +58,11 @@ needs a server, an account, or this repository's website.
 - [docs/03-export-pipeline.md](docs/03-export-pipeline.md) — prerequisites, template vs Gradle exports, signing, icons, headless exports.
 - [docs/04-languages.md](docs/04-languages.md) — GDScript by default; C# (experimental on Android); GDExtension.
 - [docs/05-google-play.md](docs/05-google-play.md) — the hard requirements in force: AAB, target API 36, 16 KB pages, Billing Library 8+.
-- [docs/06-plugins.md](docs/06-plugins.md) — the v2 Android plugin system, Play Billing, AdMob, and Java interop without a plugin.
+- [docs/06-plugins.md](docs/06-plugins.md) — the v2 Android plugin system, Play Billing, AdMob, Play Games Services, Firebase/analytics options, and Java interop without a plugin.
 - [docs/07-asset-store.md](docs/07-asset-store.md) — the Asset Store (and the deprecated Asset Library), how addons land in a project.
 - [docs/08-testing-and-ci.md](docs/08-testing-and-ci.md) — one-click deploy, GUT and GdUnit4 headless, the godot-ci route.
 - [docs/09-permissions.md](docs/09-permissions.md) — Android permissions in the export preset and at runtime.
+- [docs/10-renderers.md](docs/10-renderers.md) — Compatibility vs Mobile vs Forward+ on Android: features, cost, fallback.
 - [reference/version-matrix.md](reference/version-matrix.md) — Godot version ↔ SDK components ↔ Play requirements, one page.
 - [reference/android-preset-options.md](reference/android-preset-options.md) — the Android export preset's option groups.
 - [templates/](templates/) — the Godot 4.x `.gitignore` and project seeding notes.

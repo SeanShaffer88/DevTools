@@ -17,7 +17,7 @@ floors before every release — they rise yearly.
 - [ ] Play App Signing enrollment understood: the uploaded AAB is
       signed with the upload key; Google signs for distribution
 - [ ] If the app bills through Play: billing plugin is the
-      first-party 2.x line bundling **PBL 8+**, and purchases are
+      godot-sdk-integrations 2.x line bundling **PBL 8+**, and purchases are
       acknowledged (docs/06)
 - [ ] Permissions declared = permissions used (docs/09)
 - [ ] Tests ran in CI with the executed-count check green

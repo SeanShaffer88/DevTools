@@ -51,7 +51,7 @@ For apps that bill through Google Play: PBL 7 stopped being
 acceptable for new apps and updates on August 31, 2026 (extensions
 ended November 1, 2026), so **PBL 8+ is required** (the library
 itself is at 9.1.0, June 2026; PBL 8's own deadline is Aug 2027).
-The first-party Godot billing plugin's current build bundles
+The Godot billing plugin (godot-sdk-integrations)'s current build bundles
 billing-ktx 8.0.0 and satisfies this — older plugin builds may
 not (docs/06).
 

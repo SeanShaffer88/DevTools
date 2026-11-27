@@ -1,6 +1,6 @@
 {
   "repo": "SeanShaffer88/DevTools",
-  "generated": "2026-11-22",
+  "generated": "2026-11-27",
   "purpose": "Godot Android development — knowledge base",
   "startHere": [
     "AGENTS.md",
@@ -19,6 +19,7 @@
     "docs/07-asset-store.md",
     "docs/08-testing-and-ci.md",
     "docs/09-permissions.md",
+    "docs/10-renderers.md",
     "docs/physics-resources.md",
     "reference/android-preset-options.md",
     "reference/version-matrix.md",
@@ -36,12 +37,12 @@
     },
     {
       "path": "README.md",
-      "bytes": 5585,
+      "bytes": 5759,
       "summary": "Godot Android development — knowledge base"
     },
     {
       "path": "SOURCES.md",
-      "bytes": 3044,
+      "bytes": 4073,
       "summary": "SOURCES.md — where the facts live"
     },
     {
@@ -51,7 +52,7 @@
     },
     {
       "path": "checklists/play-release-checklist.md",
-      "bytes": 1182,
+      "bytes": 1193,
       "summary": "Google Play release checklist"
     },
     {
@@ -76,12 +77,12 @@
     },
     {
       "path": "docs/05-google-play.md",
-      "bytes": 2826,
+      "bytes": 2839,
       "summary": "05 — Google Play: the hard requirements in force"
     },
     {
       "path": "docs/06-plugins.md",
-      "bytes": 2749,
+      "bytes": 7688,
       "summary": "06 — Android plugins"
     },
     {
@@ -100,6 +101,11 @@
       "summary": "09 — Android permissions"
     },
     {
+      "path": "docs/10-renderers.md",
+      "bytes": 3306,
+      "summary": "10 — Choosing a renderer for Android"
+    },
+    {
       "path": "examples/README.md",
       "bytes": 922,
       "summary": "Examples"
@@ -111,7 +117,7 @@
     },
     {
       "path": "reference/version-matrix.md",
-      "bytes": 1805,
+      "bytes": 1820,
       "summary": "Version matrix (checked 2026-11-17)"
     },
     {
