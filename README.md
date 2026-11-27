@@ -190,6 +190,17 @@ Add future helpers to `toolkit.json` with parameters, write scope, requirements 
 
 Repeatable suites: tests/Test-QualityFoundations.ps1, tests/Test-QualityNative.ps1, tests/Test-QualityGames.ps1. Actual evidence is indexed in toolkit.json. The UIA sidecar uses installed Windows PowerShell 5.1; public helpers require PowerShell 7. UI mockups and PNG baselines are original synthetic fixtures. Real-device, in-game, elevated WPR and installer lifecycle checks remain separate gates. Read helper help before first use.
 
+## Workflow Tools
+
+Two standalone Python CLIs for local project workflows live in [`workflow_tools/`](workflow_tools/README.md): [GateRunner](workflow_tools/gaterunner/README.md) runs a reviewed `gate.toml`; [FieldVerify](workflow_tools/fieldverify/README.md) runs a reviewed machine-checklist and writes a local evidence bundle. GateRunner requires Python 3.11+; FieldVerify requires Python 3.10+. Both use the standard library at runtime. These commands execute user-configured checks—review their configuration first. FieldVerify reports stay local; review logs before sharing.
+
+From the repository root on Windows 11 x64:
+
+```powershell
+py -3.11 .\workflow_tools\gaterunner\gaterunner.py run .\workflow_tools\gaterunner\gate.toml --dry-run
+py -3 .\workflow_tools\fieldverify\fieldverify.py init --out "$env:TEMP\fieldverify.json"
+```
+
 ## AI-native Developer Utilities
 
 The Python 3.10+ standard-library suite adds 15 offline CLI checks for Godot, WoW addons, Rust projects, export profiles, and release manifests. It has no added package dependencies or telemetry. Start with [ai_tools/README.md](ai_tools/README.md) for commands, schemas, limits, and safety notes.
