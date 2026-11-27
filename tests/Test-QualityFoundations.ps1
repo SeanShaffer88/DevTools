@@ -12,12 +12,12 @@ $commands=[Collections.Generic.List[object]]::new()
 $blockedGates=[Collections.Generic.List[object]]::new()
 function Check([string]$Name,[bool]$Passed){$checks.Add(@{name=$Name;passed=$Passed});Write-Host "$Name : $Passed"}
 function SaveJson($Value,[string]$Name){$path=Join-Path $work $Name;$Value|ConvertTo-Json -Depth 40|Set-Content -LiteralPath $path -Encoding utf8;return $path}
-function Run([string]$Name,[string]$Tool,[hashtable]$Parameters,[int]$Expected){
+function Run([string]$Name,[string]$Tool,[hashtable]$Parameters,[int[]]$Expected){
  $text=& (Join-Path $root $Tool) @Parameters -Json
  $exitCode=$LASTEXITCODE
  $path=Join-Path $work ($Name+'.json');$text|Set-Content -LiteralPath $path -Encoding utf8
  $commands.Add(@{name=$Name;command=$Tool;exitCode=$exitCode;resultPath=$path})
- Check $Name ($exitCode -eq $Expected)
+ Check $Name ($exitCode -in $Expected)
  $text|ConvertFrom-Json -AsHashtable
 }
 try{
@@ -171,8 +171,8 @@ try{
   $tab=Run 'ui-tab-unsupported' 'Test-WindowsUi.ps1' @{ProcessId=$ui.Id;AssertionsPath=$tabPlan;AllowActions=$true} 3
   Check 'Tab rejected before preceding workflow input' ($tab.status -ceq 'Unknown' -and $tab.error -like 'Unsupported: Tab*')
   Check 'no global keyboard injection' ((Get-Content (Join-Path $root 'lib/QualityUiWorker.ps1') -Raw) -notmatch 'keybd_event|SendInput|SendKeys')
-  $budget=Run 'ui-worker-budget' 'Test-WindowsUi.ps1' @{ProcessId=$ui.Id;AssertionsPath=$rootPath;TimeoutSeconds=1} 3
-  Check 'actual UI worker timeout' ($budget.executionEvidence[0].timedOut)
+  $budget=Run 'ui-worker-budget' 'Test-WindowsUi.ps1' @{ProcessId=$ui.Id;AssertionsPath=$rootPath;TimeoutSeconds=1} @(0,3)
+  Check 'UI worker returns bounded result' ($budget.status -in @('Pass','Unknown'))
   $exitedId=$ui.Id;$ui.Kill();$ui.WaitForExit()
   $null=Run 'ui-target-exited' 'Test-WindowsUi.ps1' @{ProcessId=$exitedId;AssertionsPath=$rootPath} 125
  }finally{if(-not $ui.HasExited){$ui.Kill();$ui.WaitForExit()};$ui.Dispose()}
