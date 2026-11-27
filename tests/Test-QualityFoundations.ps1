@@ -81,14 +81,14 @@ try{
  Check 'actual child timeout' ($timed.TimedOut -and $timed.ExitCode -eq 124)
  $clPath=(Get-Command cl.exe -CommandType Application -ErrorAction Stop).Source
  $vc=$env:VCToolsInstallDir
- if([string]::IsNullOrWhiteSpace($vc)){$vcArch=Split-Path -LiteralPath $clPath -Parent;$vcHost=Split-Path -LiteralPath $vcArch -Parent;$vcBinRoot=Split-Path -LiteralPath $vcHost -Parent;$vc=Split-Path -LiteralPath $vcBinRoot -Parent}
+ if([string]::IsNullOrWhiteSpace($vc)){$vcArch=[IO.Path]::GetDirectoryName($clPath);$vcHost=[IO.Path]::GetDirectoryName($vcArch);$vcBinRoot=[IO.Path]::GetDirectoryName($vcHost);$vc=[IO.Path]::GetDirectoryName($vcBinRoot)}
  $sdk=$env:WindowsSdkDir
  if([string]::IsNullOrWhiteSpace($sdk)){$sdk=Join-Path ([Environment]::GetFolderPath('ProgramFilesX86')) 'Windows Kits\10'}
  $sdkVersion=$env:WindowsSDKVersion
  if([string]::IsNullOrWhiteSpace($sdkVersion)){$sdkVersion=(Get-ChildItem -LiteralPath (Join-Path $sdk 'Include') -Directory -ErrorAction Stop|Where-Object{$_.Name -match '^\d+\.\d+\.\d+\.\d+$'}|Sort-Object {[version]$_.Name} -Descending|Select-Object -First 1).Name}
  $sdkVersion=$sdkVersion.TrimEnd([char]92)
- $sdkInclude=Join-Path (Join-Path $sdk 'Include') $sdkVersion;$sdkLib=Join-Path (Join-Path $sdk 'Lib') $sdkVersion;$vcInclude=Join-Path $vc 'include';$vcLib=Join-Path (Join-Path $vc 'lib') 'x64';$compilerBin=Split-Path -LiteralPath $clPath -Parent
- if(-not(Test-Path -LiteralPath $vcInclude -PathType Container)-or -not(Test-Path -LiteralPath $sdkInclude -PathType Container)-or -not(Test-Path -LiteralPath $sdkLib -PathType Container)){throw 'Configured MSVC and Windows SDK paths are unavailable.'}
+ $sdkInclude=Join-Path (Join-Path $sdk 'Include') $sdkVersion;$sdkLib=Join-Path (Join-Path $sdk 'Lib') $sdkVersion;$vcInclude=Join-Path $vc 'include';$vcLib=Join-Path (Join-Path $vc 'lib') 'x64';$compilerBin=[IO.Path]::GetDirectoryName($clPath)
+ if(-not (Test-Path -LiteralPath $vcInclude -PathType Container) -or -not (Test-Path -LiteralPath $sdkInclude -PathType Container) -or -not (Test-Path -LiteralPath $sdkLib -PathType Container)) { throw 'Configured MSVC and Windows SDK paths are unavailable.' }
  foreach($mode in @('safe','overflow')){
   $compile=@('/nologo','/fsanitize=address','/Zi','/Od','/MD',('/I'+$vcInclude))
   foreach($inc in @('ucrt','shared','um')){$compile+=('/I'+(Join-Path $sdkInclude $inc))}
@@ -176,7 +176,7 @@ try{
   $exitedId=$ui.Id;$ui.Kill();$ui.WaitForExit()
   $null=Run 'ui-target-exited' 'Test-WindowsUi.ps1' @{ProcessId=$exitedId;AssertionsPath=$rootPath} 125
  }finally{if(-not $ui.HasExited){$ui.Kill();$ui.WaitForExit()};$ui.Dispose()}
-}catch{Check ('unexpected: '+$_.Exception.Message) $false;$_|Out-String|Set-Content (Join-Path $work 'failure.log')}
+}catch{Check ('unexpected line '+$_.InvocationInfo.ScriptLineNumber+': '+$_.Exception.Message) $false;$_|Out-String|Set-Content (Join-Path $work 'failure.log')}
 $failed=@($checks|Where-Object {-not $_.passed}).Count
 $code=if($failed){2}elseif($blockedGates.Count){3}else{0}
 @{schemaVersion=1;command='pwsh -NoProfile -File tests/Test-QualityFoundations.ps1';exitCode=$code;observedUtc=[DateTime]::UtcNow.ToString('o');fixturePath=$fixture;artifactRoot=$work;blockedGates=$blockedGates.ToArray();checks=$checks.ToArray();commands=$commands.ToArray();passed=$checks.Count-$failed;failed=$failed;limits=@{childOutputBytes=2097152;fixtureEntries=10000;fixtureBytes=134217728};limitations=@('Positive UIA coverage uses the owned WPF fixture. WinForms bridge qualification remains Unknown: observed Pane children without stable IDs or Value/Invoke patterns.','No foreign applications, device, installer, release or external-service actions performed.')}|ConvertTo-Json -Depth 40|Set-Content -LiteralPath $evidencePath -Encoding utf8
