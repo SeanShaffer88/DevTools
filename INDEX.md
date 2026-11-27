@@ -84,6 +84,8 @@ Original [platform samples](development/samples/README.md) provide a reproducibl
 | Google Play from Godot | [godot/docs/05-google-play.md](godot/docs/05-google-play.md) |
 | Godot first-export checklist | [godot/checklists/first-export-checklist.md](godot/checklists/first-export-checklist.md) |
 | Godot Android permissions | [godot/docs/09-permissions.md](godot/docs/09-permissions.md) |
+| Godot Android plugins (billing, AdMob, Play Games, Firebase) | [godot/docs/06-plugins.md](godot/docs/06-plugins.md) |
+| Godot renderer choice for Android | [godot/docs/10-renderers.md](godot/docs/10-renderers.md) |
 | Windows project tiers and sanctioned stacks | [knowledge/docs/02-tiers-and-stacks.md](knowledge/docs/02-tiers-and-stacks.md) |
 | Stack decision table (task to stack) | [knowledge/reference/stack-decision-table.md](knowledge/reference/stack-decision-table.md) |
 | Package a Windows program with SeanPak | [knowledge/docs/08-packaging-seanpak.md](knowledge/docs/08-packaging-seanpak.md) |

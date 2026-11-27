@@ -22,4 +22,4 @@ SOURCES.md).
 | AAB for new apps + Play App Signing | Aug 2021 | Pre-Aug-2021 apps may still update as APK |
 | Target API 36 for new apps/updates | Aug 31, 2026 | Existing apps: API 35+ to stay discoverable |
 | 16 KB page support (API 35+ targets) | Enforced in stages; hard line Feb 1, 2027 for updates | Godot: ship from 4.5+ |
-| Play Billing Library 8+ | Aug 31, 2026 (extensions ended Nov 1, 2026) | First-party plugin's current build bundles 8.0.0 |
+| Play Billing Library 8+ | Aug 31, 2026 (extensions ended Nov 1, 2026) | The godot-sdk-integrations plugin's current build bundles 8.0.0 |

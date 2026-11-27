@@ -18,6 +18,11 @@ re-check the starred rows before any release.
 | Play Billing versions * | Play Billing release notes + deprecation schedule | developer.android.com |
 | Billing plugin | godot-sdk-integrations/godot-google-play-billing | github.com/godot-sdk-integrations |
 | AdMob plugin | poingstudios/godot-admob-plugin | github.com/poingstudios |
+| Renderer choice * | "Overview of renderers" (checked 2026-11-27, 4.7) | docs.godotengine.org → Tutorials → Rendering |
+| Play Games plugin * | godot-sdk-integrations/godot-play-game-services (checked 2026-11-27) | github.com/godot-sdk-integrations |
+| Plugin org status | godot-sdk-integrations org description: community-maintained, not Foundation-endorsed (checked 2026-11-27) | github.com/godot-sdk-integrations |
+| Firebase plugins * | Asset Store listings + repos named in docs/06 (checked 2026-11-27) | store.godotengine.org · github.com |
+| GA4 Measurement Protocol | Google Analytics developer docs | developers.google.com/analytics/devguides/collection/protocol/ga4 |
 | CI images | abarichello/godot-ci | github.com/abarichello/godot-ci |
 | Asset Store | Godot blog + store | godotengine.org · store.godotengine.org |
 | Demo projects | godotengine/godot-demo-projects | github.com/godotengine |
@@ -34,6 +39,13 @@ re-check the starred rows before any release.
   the 35 series — the templates appear to run ahead of the docs).
 - The exact latest release of the billing plugin (2.0.0 attested
   August 2025; check the repo's releases page).
+- Whether `godot-sdk-integrations/godot-admob` exists: an Asset
+  Store page links it, but the org's repository list (2026-11-27)
+  doesn't show it.
+- The Godot 4 Play Games plugin's exact feature list (the 4.x
+  README doesn't list features in text).
+- Whether analytics SDKs need EEA/UK consent beyond the Data
+  Safety form for a given game.
 - The official Discord invite string and the godot-ci images'
   exact bundled SDK components.
 
