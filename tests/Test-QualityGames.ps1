@@ -53,7 +53,7 @@ try{
  $ref=Join-Path (Join-Path $refPack.FullName 'ref') 'net10.0'
  $hostPackRoot=Join-Path (Join-Path $dotnetRoot 'packs') 'Microsoft.NETCore.App.Host.win-x64';$hostPack=Get-ChildItem -LiteralPath $hostPackRoot -Directory -ErrorAction Stop|Where-Object{$_.Name -match '^10\.' -and (Test-Path -LiteralPath (Join-Path (Join-Path (Join-Path (Join-Path $_.FullName 'runtimes') 'win-x64') 'native') 'apphost.exe') -PathType Leaf)}|Sort-Object {[version]$_.Name} -Descending|Select-Object -First 1
  if(-not $hostPack){throw 'Installed .NET 10 x64 apphost pack not found.'}
- $appHostTemplate=Join-Path (Join-Path (Join-Path (Join-Path (Join-Path $hostPack.FullName 'runtimes') 'win-x64') 'native') 'apphost.exe'
+ $appHostTemplate=Join-Path (Join-Path (Join-Path (Join-Path $hostPack.FullName 'runtimes') 'win-x64') 'native') 'apphost.exe'
  $runtimeRoot=Join-Path (Join-Path $dotnetRoot 'shared') 'Microsoft.NETCore.App';$runtime=(Get-ChildItem -LiteralPath $runtimeRoot -Directory -ErrorAction Stop|Where-Object{$_.Name -match '^10\.\d+\.\d+$'}|Sort-Object {[version]$_.Name} -Descending|Select-Object -First 1).Name
  if(-not $runtime){throw 'Installed .NET 10 runtime not found.'}
  foreach($required in @($csc,(Join-Path $sdk 'Microsoft.NET.HostModel.dll'),$ref,$appHostTemplate)){Assert (Test-Path -LiteralPath $required) "Verified installed compiler input $required"}
