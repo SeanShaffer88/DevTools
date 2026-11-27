@@ -61,7 +61,9 @@ Assert ($null -ne $managedOutput) '.NET source actually compiles offline'
  Add-Type -TypeDefinition $probe
  Assert ([NativeSampleProbe]::Add(2,3) -eq 5) 'Trusted generated native sample ordinary function call'
  Assert ([NativeSampleProbe]::Add([int]::MaxValue,1) -eq [int]::MaxValue -and [NativeSampleProbe]::Add([int]::MinValue,-1) -eq [int]::MinValue) 'Trusted generated native sample saturates arithmetic'
- $sdk='C:\Users\Sean Shaffer\AppData\Local\Android\Sdk'
+ $sdk=$env:ANDROID_HOME
+ if([string]::IsNullOrWhiteSpace($sdk)){$sdk=$env:ANDROID_SDK_ROOT}
+ if([string]::IsNullOrWhiteSpace($sdk)){throw 'Set ANDROID_HOME or ANDROID_SDK_ROOT to run Android template tests.'}
  foreach($kind in @('AndroidApp','AndroidGame')){
   $project=$projects[$kind];$r=Run 'pwsh.exe' @('-NoProfile','-File',(Join-Path $project 'Build.ps1'),'-SdkPath',$sdk) $project
   $apk=Get-ChildItem -LiteralPath (Join-Path $project 'build') -Filter '*-unsigned.apk' -File -Recurse | Select-Object -First 1
