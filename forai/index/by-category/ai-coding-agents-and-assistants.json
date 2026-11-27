@@ -1,0 +1,494 @@
+[
+ {
+  "resource_id": "res-aider-162cd229018e",
+  "name": "Aider",
+  "url": "https://aider.chat/docs/",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Terminal pair-programming with git integration and repo maps.",
+  "resource_type": "documentation",
+  "topics": [
+   "ai",
+   "git"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-cline-06056a1759e6",
+  "name": "Cline",
+  "url": "https://github.com/cline/cline",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Autonomous coding agent for VS Code with MCP support.",
+  "resource_type": "repository",
+  "topics": [
+   "ai",
+   "mcp"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-continue-e908a88a69c5",
+  "name": "Continue",
+  "url": "https://docs.continue.dev/",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Open-source AI code assistant for IDEs; bring-your-own-model, MCP support.",
+  "resource_type": "documentation",
+  "topics": [
+   "ai",
+   "mcp"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-openhands-4946ad9d5cbc",
+  "name": "OpenHands",
+  "url": "https://github.com/OpenHands/OpenHands",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Open platform for autonomous software-development agents.",
+  "resource_type": "repository",
+  "topics": [
+   "ai"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-swe-agent-d4f9c9bc5ce3",
+  "name": "SWE-agent",
+  "url": "https://github.com/SWE-agent/SWE-agent",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Princeton's agent that fixes GitHub issues; SWE-bench reference implementation.",
+  "resource_type": "repository",
+  "topics": [
+   "ai"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-swe-bench-9856b43a0df8",
+  "name": "SWE-bench",
+  "url": "https://www.swebench.com/",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "The standard benchmark for issue-fixing agents; check which split (Lite/Verified) a claim uses.",
+  "resource_type": "reference",
+  "topics": [
+   "ai",
+   "testing"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-muse-documentation-bf34ed192d1c",
+  "name": "Muse documentation",
+  "url": "https://docs.github.com/en/copilot",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Copilot features, agent mode, code review, and administration.",
+  "resource_type": "documentation",
+  "topics": [
+   "ai"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-muse-documentation-6f5ba62de735",
+  "name": "Muse documentation",
+  "url": "https://code.claude.com/docs/en/overview",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Anthropic's terminal coding agent: hooks, subagents, MCP, settings.",
+  "resource_type": "documentation",
+  "topics": [
+   "ai",
+   "mcp"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-gemini-cli-8720c1a0092d",
+  "name": "Gemini CLI",
+  "url": "https://github.com/google-gemini/gemini-cli",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Google's open-source terminal agent for Gemini, MCP-compatible.",
+  "resource_type": "repository",
+  "topics": [
+   "ai",
+   "mcp"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-opencode-d4450af0d9ca",
+  "name": "OpenCode",
+  "url": "https://opencode.ai/docs",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Open-source terminal coding agent, provider-agnostic.",
+  "resource_type": "documentation",
+  "topics": [
+   "ai"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-roo-code-043e08fde087",
+  "name": "Roo Code",
+  "url": "https://github.com/RooCodeInc/Roo-Code",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "VS Code agent (Cline fork) with modes and MCP marketplace.",
+  "resource_type": "repository",
+  "topics": [
+   "ai",
+   "mcp"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-codex-cli-openai-e0e47a2efccf",
+  "name": "Codex CLI (OpenAI)",
+  "url": "https://github.com/openai/codex",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "OpenAI's open-source terminal coding agent (Rust) for the Codex models; sandboxed approvals model.",
+  "resource_type": "repository",
+  "topics": [
+   "ai",
+   "rust"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [
+   "rust"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-goose-block-44f75c4bf291",
+  "name": "Goose (Block)",
+  "url": "https://block.github.io/goose/",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Block's open-source, extensible AI agent (Rust) that installs, executes, and tests code; strong MCP support.",
+  "resource_type": "repository",
+  "topics": [
+   "ai",
+   "mcp",
+   "rust"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [
+   "rust"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-kilo-code-d34b76119001",
+  "name": "Kilo Code",
+  "url": "https://github.com/Kilo-Org/kilocode",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Popular open-source VS Code agent (Cline/Roo lineage) with modes, MCP marketplace, and multi-model support.",
+  "resource_type": "repository",
+  "topics": [
+   "ai",
+   "mcp"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-devin-cognition-68244c9d4353",
+  "name": "Devin (Cognition)",
+  "url": "https://docs.devin.ai/",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Cognition's autonomous software-engineering agent product; docs cover sessions, knowledge, and API use.",
+  "resource_type": "documentation",
+  "topics": [
+   "ai",
+   "api-integration"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-kiro-aws-6b1debf6e2f3",
+  "name": "Kiro (AWS)",
+  "url": "https://kiro.dev/docs/",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "AWS's spec-driven agentic IDE: requirements/design/tasks before code, built for production workflows.",
+  "resource_type": "documentation",
+  "topics": [
+   "ai",
+   "cloud"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-tabby-b07791a5a320",
+  "name": "Tabby",
+  "url": "https://tabby.tabbyml.com/docs/",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Self-hosted AI coding assistant (completion and chat) for teams that cannot send code to a cloud.",
+  "resource_type": "documentation",
+  "topics": [
+   "ai",
+   "cloud"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-llm-cli-simon-willison-6d5b9a6fc60b",
+  "name": "LLM CLI (Simon Willison)",
+  "url": "https://llm.datasette.io/",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Command-line tool to run prompts against many models from the shell, with logging to SQLite and plugin-extensible providers.",
+  "resource_type": "reference",
+  "topics": [
+   "ai",
+   "database",
+   "llm",
+   "observability"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-claude-code-f4394d91f9c2",
+  "name": "Claude Code",
+  "url": "https://github.com/anthropics/claude-code",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Anthropic's terminal coding agent: repository-aware edits, commands, and MCP tools. The repository is issue/tracking surface, not the product source; usage requires an account and follows Anthropic's terms.",
+  "resource_type": "repository",
+  "topics": [
+   "ai",
+   "git",
+   "mcp"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-open-design-0bf67605f2a9",
+  "name": "open design",
+  "url": "https://github.com/nexu-io/open-design",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "The 1st Collaborative AI Design Agent Workspace. Local-first and open source. Create motion, prototypes, websites, apps, dashboards, presentations, images, and videos with your team and AI agents.",
+  "resource_type": "repository",
+  "topics": [
+   "ai"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-claude-howto-70668bf2e7d5",
+  "name": "claude howto",
+  "url": "https://github.com/luongnv89/claude-howto",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
+  "resource_type": "repository",
+  "topics": [
+   "ai"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-assistant-ui-90f0a3871a05",
+  "name": "assistant ui",
+  "url": "https://github.com/assistant-ui/assistant-ui",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Typescript/React Library for AI Chat.",
+  "resource_type": "repository",
+  "topics": [
+   "ai",
+   "typescript"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [
+   "typescript"
+  ],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-codexbar-c35c4d5f092b",
+  "name": "CodexBar",
+  "url": "https://github.com/steipete/CodexBar",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Show usage stats for OpenAI Codex and Claude Code, without having to login.",
+  "resource_type": "repository",
+  "topics": [
+   "ai"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-desktopcommandermcp-1a61ce5adf51",
+  "name": "DesktopCommanderMCP",
+  "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities.",
+  "resource_type": "repository",
+  "topics": [
+   "ai",
+   "mcp"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-claude-squad-a54d21eead60",
+  "name": "claude squad",
+  "url": "https://github.com/smtg-ai/claude-squad",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Manage multiple AI terminal agents like Claude Code, Codex, OpenCode, and Amp. AGPL-3.0: network use can trigger source-disclosure obligations.",
+  "resource_type": "repository",
+  "topics": [
+   "ai"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-planning-with-files-e4139ef87a46",
+  "name": "planning with files",
+  "url": "https://github.com/OthmanAdi/planning-with-files",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Persistent file-based planning for AI coding agents and long-running tasks. Crash-proof markdown plans, session recovery after /clear and compaction, per-turn re-injection against context rot, deterministic completion gate.",
+  "resource_type": "repository",
+  "topics": [
+   "ai"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-claude-seo-890a4537aaad",
+  "name": "claude seo",
+  "url": "https://github.com/AgriciDaniel/claude-seo",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce,.",
+  "resource_type": "repository",
+  "topics": [
+   "ai"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-claude-skills-c16397bfcb69",
+  "name": "claude skills",
+  "url": "https://github.com/Jeffallan/claude-skills",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "67 Specialized Skills for Full-Stack Developers. Transform Claude Code into your expert pair programmer.",
+  "resource_type": "repository",
+  "topics": [
+   "ai"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ },
+ {
+  "resource_id": "res-crush-c9869f821b02",
+  "name": "crush",
+  "url": "https://github.com/charmbracelet/crush",
+  "category_id": "ai-coding-agents-and-assistants",
+  "purpose": "Glamourous agentic coding for all. License not detected by GitHub; check the repository license before use.",
+  "resource_type": "repository",
+  "topics": [
+   "ai",
+   "git"
+  ],
+  "use_cases": [
+   "build-or-evaluate-ai-systems"
+  ],
+  "languages": [],
+  "platforms": []
+ }
+]

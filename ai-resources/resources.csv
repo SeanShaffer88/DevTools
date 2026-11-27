@@ -1,0 +1,180 @@
+name,url,kind,category,category_slug,note
+Rust — rust-lang.org,https://www.rust-lang.org/,Official site,Toolchains by language and platform,toolchains,"Language home; install via rustup, edition and release info."
+The Rust Book,https://doc.rust-lang.org/book/,Official docs,Toolchains by language and platform,toolchains,"Canonical language tutorial; ownership, traits, error handling."
+crates.io,https://crates.io/,Registry,Toolchains by language and platform,toolchains,"Rust package registry; check downloads, docs link, and maintenance before recommending a crate."
+docs.rs,https://docs.rs/,Docs host,Toolchains by language and platform,toolchains,Rendered docs for nearly every crate and version.
+Cargo Book,https://doc.rust-lang.org/cargo/,Official docs,Toolchains by language and platform,toolchains,"Workspaces, features, profiles, publishing."
+Python — python.org,https://www.python.org/,Official site,Toolchains by language and platform,toolchains,"Downloads, PEP index, release schedule."
+Python documentation,https://docs.python.org/3/,Official docs,Toolchains by language and platform,toolchains,"Standard library reference; verify function behaviour here, not from memory."
+PyPI,https://pypi.org/,Registry,Toolchains by language and platform,toolchains,"Python package index; check version, requires-python, and project links."
+uv,https://docs.astral.sh/uv/,Tool docs,Toolchains by language and platform,toolchains,Fast Python package/project manager from Astral; replaces pip/virtualenv workflows in many projects.
+Ruff,https://docs.astral.sh/ruff/,Tool docs,Toolchains by language and platform,toolchains,Python linter/formatter; rule reference is the source of truth for lint codes.
+Node.js,https://nodejs.org/en/docs,Official docs,Toolchains by language and platform,toolchains,"Runtime APIs, LTS schedule, globals."
+npm,https://www.npmjs.com/,Registry,Toolchains by language and platform,toolchains,JavaScript package registry; verify package identity carefully — similar names are a supply-chain risk.
+TypeScript,https://www.typescriptlang.org/docs/,Official docs,Toolchains by language and platform,toolchains,"Handbook, tsconfig reference, release notes."
+Deno,https://docs.deno.com/,Official docs,Toolchains by language and platform,toolchains,"Secure JS/TS runtime, standard library, JSR registry."
+Bun,https://bun.sh/docs,Official docs,Toolchains by language and platform,toolchains,"JS runtime, bundler, test runner, package manager."
+.NET documentation,https://learn.microsoft.com/en-us/dotnet/,Official docs,Toolchains by language and platform,toolchains,"C#, F#, ASP.NET Core, MAUI, WPF/WinForms entry point."
+NuGet Gallery,https://www.nuget.org/,Registry,Toolchains by language and platform,toolchains,.NET package registry; check target frameworks and license per package.
+Go — go.dev,https://go.dev/doc/,Official docs,Toolchains by language and platform,toolchains,"Language spec, effective Go, module reference."
+pkg.go.dev,https://pkg.go.dev/,Docs host,Toolchains by language and platform,toolchains,Discover and read docs for Go packages and the standard library.
+C++ reference (cppreference),https://en.cppreference.com/,Reference,Toolchains by language and platform,toolchains,De-facto C/C++ standard library and language reference.
+CMake documentation,https://cmake.org/documentation/,Official docs,Toolchains by language and platform,toolchains,Build system generator used by most cross-platform C/C++ projects.
+vcpkg,https://vcpkg.io/,Tool site,Toolchains by language and platform,toolchains,Microsoft C/C++ package manager; port list is searchable online.
+Conan,https://conan.io/center,Registry,Toolchains by language and platform,toolchains,C/C++ package manager and Conan Center index.
+Java — dev.java,https://dev.java/,Official site,Toolchains by language and platform,toolchains,"JDK tutorials, API docs, release information."
+Gradle,https://docs.gradle.org/,Official docs,Toolchains by language and platform,toolchains,Build tool for JVM/Android; DSL and plugin reference.
+Maven Central,https://central.sonatype.com/,Registry,Toolchains by language and platform,toolchains,JVM artifact registry; verify group/artifact coordinates.
+Git documentation,https://git-scm.com/doc,Official docs,Toolchains by language and platform,toolchains,Pro Git book and command reference.
+Docker documentation,https://docs.docker.com/,Official docs,Toolchains by language and platform,toolchains,"Dockerfile reference, Compose spec, build best practices."
+Kubernetes documentation,https://kubernetes.io/docs/home/,Official docs,Toolchains by language and platform,toolchains,"Concepts, kubectl reference, API reference."
+GitHub Docs,https://docs.github.com/,Official docs,Toolchains by language and platform,toolchains,"Actions, REST/GraphQL APIs, Copilot, code security."
+Model Context Protocol — modelcontextprotocol.io,https://modelcontextprotocol.io/,Spec / official docs,"MCP servers, SDKs, and directories",mcp-servers,"Protocol spec, concepts (tools/resources/prompts), transports, and security guidance. Read this first."
+MCP specification (GitHub),https://github.com/modelcontextprotocol/modelcontextprotocol,Repo,"MCP servers, SDKs, and directories",mcp-servers,"Spec source, schemas, and proposals."
+Official MCP servers,https://github.com/modelcontextprotocol/servers,Repo,"MCP servers, SDKs, and directories",mcp-servers,"Reference servers: filesystem, fetch, git, memory, sequential-thinking, time, everything (test server), plus archived servers list."
+MCP Registry,https://registry.modelcontextprotocol.io/,Registry,"MCP servers, SDKs, and directories",mcp-servers,Official community registry for discovering public MCP servers.
+MCP Registry (GitHub),https://github.com/modelcontextprotocol/registry,Repo,"MCP servers, SDKs, and directories",mcp-servers,Registry API and publishing process.
+MCP Python SDK,https://github.com/modelcontextprotocol/python-sdk,Repo / SDK,"MCP servers, SDKs, and directories",mcp-servers,Official Python SDK (FastMCP-style server/client) for building MCP servers.
+MCP TypeScript SDK,https://github.com/modelcontextprotocol/typescript-sdk,Repo / SDK,"MCP servers, SDKs, and directories",mcp-servers,Official TypeScript SDK for servers and clients.
+MCP C# SDK,https://github.com/modelcontextprotocol/csharp-sdk,Repo / SDK,"MCP servers, SDKs, and directories",mcp-servers,"Official .NET SDK, maintained with Microsoft."
+MCP Rust SDK,https://github.com/modelcontextprotocol/rust-sdk,Repo / SDK,"MCP servers, SDKs, and directories",mcp-servers,Official Rust SDK (rmcp).
+MCP Go SDK,https://github.com/modelcontextprotocol/go-sdk,Repo / SDK,"MCP servers, SDKs, and directories",mcp-servers,"Official Go SDK, maintained with Google."
+MCP Java SDK,https://github.com/modelcontextprotocol/java-sdk,Repo / SDK,"MCP servers, SDKs, and directories",mcp-servers,"Official Java SDK, built on Spring AI infrastructure."
+GitHub MCP Server,https://github.com/github/github-mcp-server,Repo / server,"MCP servers, SDKs, and directories",mcp-servers,"GitHub's official MCP server: repos, issues, PRs, Actions. Prefer this over scraping GitHub."
+Playwright MCP,https://github.com/microsoft/playwright-mcp,Repo / server,"MCP servers, SDKs, and directories",mcp-servers,Microsoft's MCP server for browser automation via Playwright accessibility snapshots.
+Chrome DevTools MCP,https://github.com/ChromeDevTools/chrome-devtools-mcp,Repo / server,"MCP servers, SDKs, and directories",mcp-servers,"Official Chrome DevTools MCP server for debugging, traces, and network inspection."
+AWS MCP servers (awslabs),https://github.com/awslabs/mcp,Repo / server collection,"MCP servers, SDKs, and directories",mcp-servers,"AWS's suite of MCP servers for AWS services, docs, and architecture guidance."
+Cloudflare MCP servers,https://github.com/cloudflare/mcp-server-cloudflare,Repo / server,"MCP servers, SDKs, and directories",mcp-servers,"Cloudflare's remote MCP servers for Workers, DNS, observability, and more."
+Stripe Agent Toolkit,https://github.com/stripe/ai,Repo,"MCP servers, SDKs, and directories",mcp-servers,"Stripe's official tools for agents, including MCP integration for payments APIs."
+Awesome MCP Servers,https://github.com/punkpeye/awesome-mcp-servers,Curated list,"MCP servers, SDKs, and directories",mcp-servers,Large community list of MCP servers by category; a discovery aid — verify each server before use.
+MCP.so,https://mcp.so/,Directory,"MCP servers, SDKs, and directories",mcp-servers,Community directory of MCP servers and clients with categories.
+Glama MCP directory,https://glama.ai/mcp/servers,Directory,"MCP servers, SDKs, and directories",mcp-servers,Searchable MCP server directory with listings and metadata.
+Smithery,https://smithery.ai/,Directory / registry,"MCP servers, SDKs, and directories",mcp-servers,Hosted MCP server discovery and connection service.
+PulseMCP,https://www.pulsemcp.com/,Directory,"MCP servers, SDKs, and directories",mcp-servers,MCP server directory and weekly newsletter tracking the ecosystem.
+MCP clients list,https://modelcontextprotocol.io/clients,Official docs,"MCP servers, SDKs, and directories",mcp-servers,Which clients support which MCP features — check before assuming a client supports resources/prompts/sampling.
+LangChain documentation,https://docs.langchain.com/,Official docs,Agent frameworks and orchestration,agent-frameworks,"LangChain + LangGraph docs: agents, tools, retrieval, streaming."
+LangChain (GitHub),https://github.com/langchain-ai/langchain,Repo,Agent frameworks and orchestration,agent-frameworks,Core LangChain monorepo.
+LangGraph,https://github.com/langchain-ai/langgraph,Repo,Agent frameworks and orchestration,agent-frameworks,"Stateful, durable agent orchestration as graphs; persistence and human-in-the-loop."
+LlamaIndex documentation,https://developers.llamaindex.ai/,Official docs,Agent frameworks and orchestration,agent-frameworks,"Data framework for RAG and agents: ingestion, indexes, query engines, workflows."
+LlamaIndex (GitHub),https://github.com/run-llama/llama_index,Repo,Agent frameworks and orchestration,agent-frameworks,LlamaIndex core and integrations.
+Microsoft Semantic Kernel,https://learn.microsoft.com/en-us/semantic-kernel/,Official docs,Agent frameworks and orchestration,agent-frameworks,.NET/Python/Java AI orchestration SDK from Microsoft.
+Microsoft AutoGen,https://github.com/microsoft/autogen,Repo,Agent frameworks and orchestration,agent-frameworks,Multi-agent conversation framework from Microsoft Research.
+CrewAI,https://docs.crewai.com/,Official docs,Agent frameworks and orchestration,agent-frameworks,Role-based multi-agent crews and flows (Python).
+OpenAI Agents SDK,https://openai.github.io/openai-agents-python/,Official docs,Agent frameworks and orchestration,agent-frameworks,"OpenAI's lightweight agents SDK: agents, handoffs, guardrails, tracing."
+Claude Agent SDK (Anthropic docs),https://code.claude.com/docs/en/agent-sdk/overview,Official docs,Agent frameworks and orchestration,agent-frameworks,Anthropic's agent SDK for building agents on Muse.
+Google Agent Development Kit (ADK),https://adk.dev/,Official docs,Agent frameworks and orchestration,agent-frameworks,Google's open-source agent framework (Python/Java/Go).
+Haystack,https://docs.haystack.deepset.ai/docs/intro,Official docs,Agent frameworks and orchestration,agent-frameworks,deepset's framework for production NLP/RAG pipelines and agents.
+DSPy,https://dspy.ai/,Official docs,Agent frameworks and orchestration,agent-frameworks,"Programmatic (compiled) LLM pipelines from Stanford NLP — declare, don't prompt-engineer by hand."
+Pydantic AI,https://pydantic.dev/docs/ai/overview/,Official docs,Agent frameworks and orchestration,agent-frameworks,Type-safe Python agent framework from the Pydantic team.
+smolagents (Hugging Face),https://huggingface.co/docs/smolagents,Official docs,Agent frameworks and orchestration,agent-frameworks,Minimal agents library where agents write Python code as actions.
+Mastra,https://mastra.ai/docs,Official docs,Agent frameworks and orchestration,agent-frameworks,"TypeScript agent framework: agents, workflows, RAG, evals."
+Vercel AI SDK,https://ai-sdk.dev/docs,Official docs,Agent frameworks and orchestration,agent-frameworks,"TypeScript SDK for AI apps: streaming UI, tool calling, provider-agnostic models."
+Instructor,https://python.useinstructor.com/,Official docs,Agent frameworks and orchestration,agent-frameworks,Structured outputs from LLMs via Pydantic validation and retries.
+Ollama,https://ollama.com/,Tool site,Local inference and model runners,local-inference,One-command local model runner (macOS/Windows/Linux) with an OpenAI-compatible API.
+Ollama (GitHub),https://github.com/ollama/ollama,Repo,Local inference and model runners,local-inference,"Source, model library format, API reference."
+llama.cpp,https://github.com/ggml-org/llama.cpp,Repo,Local inference and model runners,local-inference,GGUF inference in C/C++; the engine under many local tools. Supports CPU/GPU backends.
+vLLM,https://docs.vllm.ai/,Official docs,Local inference and model runners,local-inference,"High-throughput LLM serving (PagedAttention), OpenAI-compatible server."
+SGLang,https://github.com/sgl-project/sglang,Repo,Local inference and model runners,local-inference,Fast serving framework with structured generation (RadixAttention).
+LM Studio,https://lmstudio.ai/,Tool site,Local inference and model runners,local-inference,"Desktop app to discover, download, and serve local models with a GUI."
+MLX (Apple),https://github.com/ml-explore/mlx,Repo,Local inference and model runners,local-inference,Apple's array framework for ML on Apple silicon; mlx-lm runs LLMs locally on Macs.
+whisper.cpp,https://github.com/ggml-org/whisper.cpp,Repo,Local inference and model runners,local-inference,Port of OpenAI Whisper speech recognition in C/C++ for local transcription.
+GPT4All,https://www.nomic.ai/gpt4all,Tool site,Local inference and model runners,local-inference,Nomic's local chatbot app and ecosystem.
+Jan,https://jan.ai/,Tool site,Local inference and model runners,local-inference,Open-source offline ChatGPT alternative desktop app.
+NVIDIA TensorRT-LLM,https://github.com/NVIDIA/TensorRT-LLM,Repo,Local inference and model runners,local-inference,Optimized LLM inference on NVIDIA GPUs for production serving.
+Hugging Face Text Generation Inference,https://huggingface.co/docs/text-generation-inference,Official docs,Local inference and model runners,local-inference,Production inference server for open models (TGI).
+Hugging Face Hub,https://huggingface.co/models,Hub,"Models, hubs, and API providers",models-and-providers,"The model/dataset hub: model cards carry license, files, and usage snippets. Read the card before recommending a model."
+Hugging Face documentation,https://huggingface.co/docs,Official docs,"Models, hubs, and API providers",models-and-providers,"Transformers, Datasets, Diffusers, PEFT, TRL, and Hub APIs."
+Transformers documentation,https://huggingface.co/docs/transformers,Official docs,"Models, hubs, and API providers",models-and-providers,Model architectures and pipelines API reference.
+OpenAI platform documentation,https://developers.openai.com/api/docs,Official docs,"Models, hubs, and API providers",models-and-providers,"API reference, models, reasoning, tools, and pricing links."
+Anthropic Claude documentation,https://docs.claude.com/,Official docs,"Models, hubs, and API providers",models-and-providers,"Claude API, tool use, prompt engineering, and agent guidance."
+Google Gemini API documentation,https://ai.google.dev/gemini-api/docs,Official docs,"Models, hubs, and API providers",models-and-providers,"Gemini models, function calling, embeddings, pricing."
+Meta Llama,https://dev.meta.ai/,Official site,"Models, hubs, and API providers",models-and-providers,"Llama models, downloads, and responsible-use docs."
+Mistral AI documentation,https://docs.mistral.ai/,Official docs,"Models, hubs, and API providers",models-and-providers,"Mistral models and API (chat, embeddings, OCR)."
+Cohere documentation,https://docs.cohere.com/,Official docs,"Models, hubs, and API providers",models-and-providers,"Command, Embed, and Rerank APIs — strong for enterprise RAG."
+Groq documentation,https://console.groq.com/docs,Official docs,"Models, hubs, and API providers",models-and-providers,Very fast inference API (LPU) for open models.
+Together AI,https://docs.together.ai/,Official docs,"Models, hubs, and API providers",models-and-providers,"Hosted open-model inference, fine-tuning, and dedicated endpoints."
+Fireworks AI,https://docs.fireworks.ai/,Official docs,"Models, hubs, and API providers",models-and-providers,Fast hosted inference for open models and fine-tunes.
+Replicate,https://replicate.com/docs,Official docs,"Models, hubs, and API providers",models-and-providers,"Run community and official models (LLMs, image, audio) via one API."
+OpenRouter,https://openrouter.ai/docs,Official docs,"Models, hubs, and API providers",models-and-providers,One API key routed to many providers/models; useful for comparison.
+arXiv,https://arxiv.org/,Reference,"Models, hubs, and API providers",models-and-providers,"Preprint server — where most model papers land first. A paper is a claim, not a benchmark result."
+Papers With Code,https://huggingface.co/papers/trending,Reference,"Models, hubs, and API providers",models-and-providers,Papers linked to code and benchmark leaderboards (SOTA tables).
+Pinecone documentation,https://docs.pinecone.io/,Official docs,"RAG, embeddings, vector databases, and search",rag-and-data,"Managed vector database; indexes, namespaces, metadata filtering."
+Weaviate documentation,https://docs.weaviate.io/,Official docs,"RAG, embeddings, vector databases, and search",rag-and-data,Open-source vector database with hybrid search and built-in vectorizers.
+Qdrant documentation,https://qdrant.tech/documentation/,Official docs,"RAG, embeddings, vector databases, and search",rag-and-data,"Open-source vector search engine (Rust), payload filtering, quantization."
+Milvus documentation,https://milvus.io/docs,Official docs,"RAG, embeddings, vector databases, and search",rag-and-data,Large-scale open-source vector database from Zilliz.
+Chroma documentation,https://docs.trychroma.com/,Official docs,"RAG, embeddings, vector databases, and search",rag-and-data,Lightweight embedding database popular for local RAG prototypes.
+pgvector,https://github.com/pgvector/pgvector,Repo,"RAG, embeddings, vector databases, and search",rag-and-data,Vector similarity search inside PostgreSQL — often the simplest production choice if you already run Postgres.
+FAISS,https://github.com/facebookresearch/faiss,Repo,"RAG, embeddings, vector databases, and search",rag-and-data,Meta's library for efficient similarity search and clustering of dense vectors.
+LanceDB,https://lancedb.github.io/lancedb/,Official docs,"RAG, embeddings, vector databases, and search",rag-and-data,Embedded vector database on the Lance columnar format.
+sqlite-vec,https://github.com/asg017/sqlite-vec,Repo,"RAG, embeddings, vector databases, and search",rag-and-data,Vector search extension for SQLite — good for local/offline apps.
+Elasticsearch documentation,https://www.elastic.co/docs/reference/elasticsearch,Official docs,"RAG, embeddings, vector databases, and search",rag-and-data,Full-text + vector (kNN) search; BM25 still matters for hybrid retrieval.
+OpenAI embeddings guide,https://developers.openai.com/api/docs/guides/embeddings,Official docs,"RAG, embeddings, vector databases, and search",rag-and-data,How embeddings work and which model dimensions to expect.
+Sentence Transformers documentation,https://www.sbert.net/,Official docs,"RAG, embeddings, vector databases, and search",rag-and-data,"Open embedding models, training, and semantic search recipes."
+Unstructured,https://docs.unstructured.io/,Official docs,"RAG, embeddings, vector databases, and search",rag-and-data,Parsing PDFs/Office/HTML into clean elements for ingestion pipelines.
+MarkItDown (Microsoft),https://github.com/microsoft/markitdown,Repo,"RAG, embeddings, vector databases, and search",rag-and-data,Convert Office/PDF/etc. to Markdown for LLM ingestion.
+Docling (IBM),https://github.com/docling-project/docling,Repo,"RAG, embeddings, vector databases, and search",rag-and-data,Document parsing to Markdown/JSON with layout and OCR support.
+OpenAI Evals,https://github.com/openai/evals,Repo,"Evaluation, observability, and guardrails",eval-and-observability,OpenAI's eval framework and registry of benchmarks.
+promptfoo,https://www.promptfoo.dev/docs/intro/,Official docs,"Evaluation, observability, and guardrails",eval-and-observability,CLI-first LLM evals and red-teaming; test prompts/RAG/agents in CI.
+LangSmith documentation,https://docs.langchain.com/langsmith,Official docs,"Evaluation, observability, and guardrails",eval-and-observability,"LangChain's tracing, datasets, and evaluation platform (works with other frameworks too)."
+Langfuse documentation,https://langfuse.com/docs,Official docs,"Evaluation, observability, and guardrails",eval-and-observability,"Open-source LLM observability: traces, evals, prompt management."
+Arize Phoenix,https://github.com/Arize-ai/phoenix,Repo,"Evaluation, observability, and guardrails",eval-and-observability,Open-source AI observability and evaluation notebooks/platform.
+Weights & Biases documentation,https://docs.wandb.ai/,Official docs,"Evaluation, observability, and guardrails",eval-and-observability,"Experiment tracking, W&B Weave for LLM tracing/evals."
+MLflow documentation,https://mlflow.org/docs/latest/,Official docs,"Evaluation, observability, and guardrails",eval-and-observability,"Open-source lifecycle platform: tracking, models, LLM evaluation and tracing."
+Ragas documentation,https://docs.ragas.io/,Official docs,"Evaluation, observability, and guardrails",eval-and-observability,"RAG evaluation metrics: faithfulness, answer relevancy, context precision/recall."
+DeepEval,https://deepeval.com/docs/getting-started,Official docs,"Evaluation, observability, and guardrails",eval-and-observability,Unit-test-style LLM evaluation framework (Confident AI).
+Inspect AI (UK AISI),https://inspect.aisi.org.uk/,Official docs,"Evaluation, observability, and guardrails",eval-and-observability,UK AI Security Institute's framework for rigorous model evaluations.
+Hugging Face Evaluate,https://huggingface.co/docs/evaluate,Official docs,"Evaluation, observability, and guardrails",eval-and-observability,Standard ML/NLP metrics library and leaderboard tooling.
+NVIDIA NeMo Guardrails,https://github.com/NVIDIA-NeMo/Guardrails,Repo,"Evaluation, observability, and guardrails",eval-and-observability,Programmable guardrails (Colang) for LLM apps.
+Guardrails AI,https://www.guardrailsai.com/docs,Official docs,"Evaluation, observability, and guardrails",eval-and-observability,Output validation/retry framework with a validator hub.
+OWASP Top 10 for LLM Applications,https://owasp.org/projects/top-10-for-large-language-model-applications,Reference,"Evaluation, observability, and guardrails",eval-and-observability,"The security risk list for LLM apps: prompt injection, insecure output handling, training-data poisoning, etc. Read before shipping."
+Anthropic prompt engineering guide,https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview,Official docs,Prompt engineering and context engineering,prompt-and-context,"Claude prompting: clarity, examples, XML structure, extended thinking."
+OpenAI prompt engineering guide,https://developers.openai.com/api/docs/guides/prompt-engineering,Official docs,Prompt engineering and context engineering,prompt-and-context,"Strategy and tactics for GPT-class models, plus reasoning-model guidance."
+Google Gemini prompting strategies,https://ai.google.dev/gemini-api/docs/prompting-strategies,Official docs,Prompt engineering and context engineering,prompt-and-context,Gemini-specific prompting and media prompting.
+DAIR Prompt Engineering Guide,https://www.promptingguide.ai/,Guide,Prompt engineering and context engineering,prompt-and-context,"Comprehensive community guide: techniques, papers, RAG/agent prompting."
+Learn Prompting,https://learnprompting.org/docs/introduction,Guide,Prompt engineering and context engineering,prompt-and-context,"Free course-style prompting documentation, including security topics."
+Awesome ChatGPT Prompts,https://github.com/f/prompts.chat,Repo / list,Prompt engineering and context engineering,prompt-and-context,"Large prompt-pattern collection; useful as examples, not as verified best practice."
+Anthropic — Building Effective Agents,https://www.anthropic.com/research/building-effective-agents,Article,Prompt engineering and context engineering,prompt-and-context,"Anthropic's patterns: workflows vs agents, prompt chaining, routing, orchestrator-workers, evaluator-optimizer."
+Anthropic — Effective context engineering,https://www.anthropic.com/research/effective-context-engineering-for-ai-agents,Article,Prompt engineering and context engineering,prompt-and-context,"Context windows as a finite resource: compaction, note-taking, sub-agents."
+OpenAI — A Practical Guide to Building Agents (PDF),https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf,Guide (PDF),Prompt engineering and context engineering,prompt-and-context,"OpenAI's practitioner guide: when to use agents, guardrails, orchestration patterns."
+Aider,https://aider.chat/docs/,Official docs,AI coding tools and software-engineering agents,coding-agents,Terminal pair-programming with git integration and repo maps.
+Cline,https://github.com/cline/cline,Repo,AI coding tools and software-engineering agents,coding-agents,Autonomous coding agent for VS Code with MCP support.
+Continue,https://docs.continue.dev/,Official docs,AI coding tools and software-engineering agents,coding-agents,"Open-source AI code assistant for IDEs; bring-your-own-model, MCP support."
+OpenHands,https://github.com/OpenHands/OpenHands,Repo,AI coding tools and software-engineering agents,coding-agents,Open platform for autonomous software-development agents.
+SWE-agent,https://github.com/SWE-agent/SWE-agent,Repo,AI coding tools and software-engineering agents,coding-agents,Princeton's agent that fixes GitHub issues; SWE-bench reference implementation.
+SWE-bench,https://www.swebench.com/,Benchmark,AI coding tools and software-engineering agents,coding-agents,The standard benchmark for issue-fixing agents; check which split (Lite/Verified) a claim uses.
+Muse documentation,https://docs.github.com/en/copilot,Official docs,AI coding tools and software-engineering agents,coding-agents,"Copilot features, agent mode, code review, and administration."
+Muse documentation,https://code.claude.com/docs/en/overview,Official docs,AI coding tools and software-engineering agents,coding-agents,"Anthropic's terminal coding agent: hooks, subagents, MCP, settings."
+Gemini CLI,https://github.com/google-gemini/gemini-cli,Repo,AI coding tools and software-engineering agents,coding-agents,"Google's open-source terminal agent for Gemini, MCP-compatible."
+OpenCode,https://opencode.ai/docs,Official docs,AI coding tools and software-engineering agents,coding-agents,"Open-source terminal coding agent, provider-agnostic."
+Roo Code,https://github.com/RooCodeInc/Roo-Code,Repo,AI coding tools and software-engineering agents,coding-agents,VS Code agent (Cline fork) with modes and MCP marketplace.
+PyTorch documentation,https://pytorch.org/docs/stable/,Official docs,ML / DL libraries and training toolchains,ml-libraries,"Tensors, autograd, distributed training, TorchServe/export."
+TensorFlow documentation,https://www.tensorflow.org/api_docs,Official docs,ML / DL libraries and training toolchains,ml-libraries,Keras-based training and deployment APIs.
+JAX documentation,https://docs.jax.dev/,Official docs,ML / DL libraries and training toolchains,ml-libraries,Composable transformations (grad/jit/vmap) for ML research.
+scikit-learn documentation,https://scikit-learn.org/stable/,Official docs,ML / DL libraries and training toolchains,ml-libraries,"Classical ML: preprocessing, models, model evaluation — still the right tool for many tabular problems."
+Hugging Face PEFT,https://huggingface.co/docs/peft,Official docs,ML / DL libraries and training toolchains,ml-libraries,Parameter-efficient fine-tuning: LoRA and friends.
+Hugging Face TRL,https://huggingface.co/docs/trl,Official docs,ML / DL libraries and training toolchains,ml-libraries,SFT/DPO/RLHF training for Transformers models.
+Axolotl,https://github.com/axolotl-ai-cloud/axolotl,Repo,ML / DL libraries and training toolchains,ml-libraries,YAML-configured LLM fine-tuning (LoRA/full) across providers.
+LLaMA-Factory,https://github.com/hiyouga/LlamaFactory,Repo,ML / DL libraries and training toolchains,ml-libraries,Fine-tuning toolkit with web UI for 100+ models.
+Unsloth,https://github.com/unslothai/unsloth,Repo,ML / DL libraries and training toolchains,ml-libraries,"Fast, memory-efficient LoRA/QLoRA fine-tuning notebooks and library."
+ONNX documentation,https://onnx.ai/onnx/,Official docs,ML / DL libraries and training toolchains,ml-libraries,Open model interchange format and ONNX Runtime for cross-platform inference.
+NumPy documentation,https://numpy.org/doc/stable/,Official docs,ML / DL libraries and training toolchains,ml-libraries,Array computing foundation of the Python ML stack.
+pandas documentation,https://pandas.pydata.org/docs/,Official docs,ML / DL libraries and training toolchains,ml-libraries,Tabular data manipulation; read the user guide section relevant to the task.
+Karpathy — Neural Networks: Zero to Hero,https://github.com/karpathy/nanoGPT,Repo / course,Learning roadmaps and deep references,learning,nanoGPT: the simplest readable GPT training implementation; pair with the YouTube series of the same name.
+Karpathy — llm.c,https://github.com/karpathy/llm.c,Repo,Learning roadmaps and deep references,learning,"GPT training in plain C/CUDA — what frameworks abstract away, made visible."
+Hugging Face LLM Course,https://huggingface.co/learn/llm-course,Course,Learning roadmaps and deep references,learning,"Free course: Transformers, fine-tuning, datasets, sharing models."
+Microsoft — AI for Beginners,https://github.com/microsoft/AI-For-Beginners,Repo / course,Learning roadmaps and deep references,learning,"12-week curriculum: neural networks, CV, NLP, ethics."
+Microsoft — Generative AI for Beginners,https://github.com/microsoft/generative-ai-for-beginners,Repo / course,Learning roadmaps and deep references,learning,21-lesson course on building GenAI apps (Python/TypeScript/.NET tracks).
+Microsoft — ML for Beginners,https://github.com/microsoft/ML-For-Beginners,Repo / course,Learning roadmaps and deep references,learning,Classical ML curriculum with projects.
+LLM Course (mlabonne),https://github.com/mlabonne/llm-course,Repo / roadmap,Learning roadmaps and deep references,learning,"Roadmap with notebooks: LLM fundamentals, scientist, and engineer tracks."
+The Illustrated Transformer,https://jalammar.github.io/illustrated-transformer/,Article,Learning roadmaps and deep references,learning,Jay Alammar's visual walkthrough of the Transformer architecture.
+Fast.ai — Practical Deep Learning,https://course.fast.ai/,Course,Learning roadmaps and deep references,learning,Top-down deep learning course (free).
+DeepLearning.AI short courses,https://www.deeplearning.ai/courses,Course index,Learning roadmaps and deep references,learning,"Short practitioner courses on RAG, agents, fine-tuning, and evals."
+Awesome LLM,https://github.com/Hannibal046/Awesome-LLM,Curated list,Awesome lists and discovery indexes,awesome-and-discovery,"Papers, training frameworks, tools, and courses around LLMs."
+Awesome Generative AI,https://github.com/steven2358/awesome-generative-ai,Curated list,Awesome lists and discovery indexes,awesome-and-discovery,Broad GenAI tools and services index.
+Awesome LangChain,https://github.com/kyrolabs/awesome-langchain,Curated list,Awesome lists and discovery indexes,awesome-and-discovery,LangChain ecosystem projects and resources.
+Awesome MCP Servers,https://github.com/punkpeye/awesome-mcp-servers,Curated list,Awesome lists and discovery indexes,awesome-and-discovery,MCP server discovery by category (also listed under MCP).
+Awesome Production LLM,https://github.com/jihoo-kim/awesome-production-llm,Curated list,Awesome lists and discovery indexes,awesome-and-discovery,Production LLM stack components and case studies.
+Applied ML (eugeneyan),https://github.com/eugeneyan/applied-ml,Curated list,Awesome lists and discovery indexes,awesome-and-discovery,Papers and blog posts on production ML systems from real companies.
+Awesome AI Agents,https://github.com/e2b-dev/awesome-ai-agents,Curated list,Awesome lists and discovery indexes,awesome-and-discovery,Agent frameworks and applications index.
+Useful Dev Resources (companion repo),https://github.com/SeanShaffer88/useful-dev-resources,Curated library,Awesome lists and discovery indexes,awesome-and-discovery,"SEAN's general developer resource library — 690 entries across 77 categories (Windows, languages, APIs, data, testing…). This repo is the AI-specific companion to it."
+WinDevKit (companion repo),https://github.com/SeanShaffer88/WinDevKit,Curated library,Awesome lists and discovery indexes,awesome-and-discovery,"SEAN's shared Windows development resources: quality gates, templates, and checklists."

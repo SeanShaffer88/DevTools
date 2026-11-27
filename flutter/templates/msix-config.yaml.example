@@ -1,0 +1,43 @@
+# Example msix package configuration for a Flutter Windows app.
+#
+# The `msix` pub package (https://pub.dev/packages/msix) reads a
+# `msix_config:` section from the project's pubspec.yaml. Copy the
+# section below into pubspec.yaml, replace every placeholder, add the
+# dev dependency, then build with:
+#
+#   flutter build windows --release
+#   dart run msix:create
+#
+# Add to dev_dependencies in pubspec.yaml (check the current version
+# on pub.dev before pinning):
+#   msix: ^3.16.0  # EXAMPLE ONLY — re-check before use
+#
+# An MSIX can be distributed through the Microsoft Store (which signs
+# it for you) or sideloaded/self-distributed, in which case it must
+# be signed with a certificate your users' machines trust — an
+# unsigned MSIX will not install. Store submission also requires the
+# identity values below to match the Partner Center reservation
+# exactly.
+
+msix_config:
+  # Store / package display name shown to users.
+  display_name: My App
+  # Publisher identity. For Store apps this must match Partner Center
+  # (looks like: CN=12345678-1234-1234-1234-123456789012).
+  publisher_display_name: Example Publisher
+  identity_name: ExamplePublisher.MyApp
+  # publisher: CN=... # required for self-signed / sideloaded builds
+  # Package version in four-part form (major.minor.build.revision).
+  msix_version: 1.0.0.0
+  # Path to the app icon used for the package logos (PNG, 256x256+).
+  logo_path: assets/icon.png
+  # Capabilities the package requests — keep this list minimal and
+  # honest; the Store reviews declared capabilities.
+  capabilities: internetClient
+  # languages supported by the package resources.
+  languages: en-us
+  # Architecture for the produced package.
+  architecture: x64
+  # Set to true only for packages that will go through the Store's
+  # certification; leave false for local test installs.
+  # store: false

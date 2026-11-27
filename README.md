@@ -197,3 +197,27 @@ The Python 3.10+ standard-library suite adds 15 offline CLI checks for Godot, Wo
 ## Knowledge base
 
 The [`knowledge/`](knowledge/) folder of this repo is a self-contained Windows desktop development knowledge base — the rule layers (Elite Prompt, Engineering Contract V4.0, guardrails), tiered project classes and sanctioned stacks, the QUALITY.md gate, SeanPak packaging, the TesselGUI design system, and release verification — written for AI coding agents and human developers. It is built to be downloaded and used locally: start with [`knowledge/manifest.json`](knowledge/manifest.json) and [`knowledge/AGENTS.md`](knowledge/AGENTS.md), or upload [`knowledge/ai-bundle.md`](knowledge/ai-bundle.md) as a single file.
+
+## Flutter pack
+
+The [`flutter/`](flutter/) folder of this repo is a self-contained Flutter development pack — 14 guides (toolchain, Dart, widgets and UI, state management, navigation, networking, storage, testing, Windows desktop, Android release, web and other platforms, flavors, performance, architecture), a verified dependency catalog (Flutter 3.50.0 / Dart 3.14.0 snapshot, November 2026), PowerShell 7 + bash toolchain/build scripts that check and report without installing anything, an app skeleton and CI templates, synthetic fixtures, and offline Python validators. It is built to be downloaded and used locally by AI coding agents and human developers: start with [`flutter/manifest.json`](flutter/manifest.json) and [`flutter/AGENTS.md`](flutter/AGENTS.md), or upload [`flutter/ai-bundle.md`](flutter/ai-bundle.md) as a single file.
+
+## Development knowledge library
+
+This repo is the single home of the development knowledge library — six self-contained domains, each with its own `manifest.json` (file map + reading order), `AGENTS.md` (rules), and `ai-bundle.md` (the whole domain in one file). **Start with [`INDEX.md`](INDEX.md)** — the master map with a task routing table that points straight at the one best file — or the machine-readable [`manifest.json`](manifest.json).
+
+| Domain | Folder | Start |
+| --- | --- | --- |
+| Windows desktop development system | [`knowledge/`](knowledge/) | `knowledge/manifest.json` |
+| Flutter development pack | [`flutter/`](flutter/) | `flutter/manifest.json` |
+| PortableApps.com packaging | [`portableapps/`](portableapps/) | `portableapps/manifest.json` |
+| World of Warcraft addon development | [`wow-addons/`](wow-addons/) | `wow-addons/manifest.json` |
+| Kotlin Android apps and games | [`kotlin/`](kotlin/) | `kotlin/manifest.json` |
+| Godot for Android games and apps | [`godot/`](godot/) | `godot/manifest.json` |
+| AI development resource index | [`ai-resources/`](ai-resources/) | `ai-resources/manifest.json` |
+| AV/EDR scrub-tool index | [`av-scrub-index/`](av-scrub-index/) | `av-scrub-index/dist/index.json` |
+| Prompt-engineering library | [`prompt-architect/`](prompt-architect/) | `prompt-architect/README.md` |
+| ForAI resource library | [`forai/`](forai/) | `forai/AI_INDEX.md` |
+| WinDevKit shared development resources | [`windevkit/`](windevkit/) | `windevkit/docs/CATALOG.md` |
+
+The PortableApps, WoW, Kotlin, and Godot domains were merged in from the former PafDev, WowDev, KotlinDev, and GodotDevTools knowledge repos on 2026-11-18; those repos remain on GitHub untouched. The nine Godot editor addons also live here as a complete, openable Godot project in [`godot/toolbox/`](godot/toolbox/), and the ai-knowledge-vault resource index as [`ai-resources/`](ai-resources/), both merged 2026-11-18. ForAI and WinDevKit followed the same day ([`forai/`](forai/), [`windevkit/`](windevkit/)). With the library complete, the seven copied source repos (PafDev, WowDev, KotlinDev, GodotDevTools, ai-knowledge-vault, ForAI, WinDevKit) were archived on GitHub on 2026-11-18 — they stay readable there, and this repo is the single live home. A full audit of every owned repo on 2026-11-23 added the final two resource collections: [`av-scrub-index/`](av-scrub-index/) and [`prompt-architect/`](prompt-architect/); their source repos were archived on GitHub on 2026-11-23.

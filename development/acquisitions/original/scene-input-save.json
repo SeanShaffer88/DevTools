@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "coordinateSystem": "right-handed-y-up",
+  "entities": [{"id": "player", "position": [0, 0, 0]}],
+  "inputActions": {"moveLeft": "ArrowLeft", "confirm": "Enter", "cancel": "Escape"},
+  "save": {"version": 1, "slot": "example", "checkpoint": "start"}
+}

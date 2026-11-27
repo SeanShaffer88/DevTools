@@ -1,0 +1,15 @@
+{
+  "repo": "SeanShaffer88/DevTools",
+  "domain": "prompt-architect",
+  "mergedFrom": "SeanShaffer88/prompt-architect",
+  "location": "prompt-architect/",
+  "merged": "2026-11-23",
+  "purpose": "Prompt-engineering contract library: how models read prompts, a five-component prompt architecture, a pattern catalogue, production blueprints for nine task classes, cost/safety/multi-turn guides, and an evaluation rubric with harness.",
+  "startHere": [
+    "README.md",
+    "fundamentals/how-llms-read-prompts.md",
+    "guides/cheat-sheet.md"
+  ],
+  "files": 143,
+  "note": "Copied in full from the live source repo during the 2026-11-23 audit of all owned repos. The source repo was archived on GitHub on 2026-11-23, after this copy was verified."
+}

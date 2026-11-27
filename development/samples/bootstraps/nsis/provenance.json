@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "version": "3.13-devtools-relocatable",
+  "officialPublisherBinary": false,
+  "sourceModified": false,
+  "preparationIsolation": "Host preparation, not an offline-isolation proof",
+  "buildExitCode": 0,
+  "versionProbeExitCode": 0,
+  "versionOutput": "v3.13",
+  "compilerSha256": "d0a400fbac738b54dd122baf08aa599e6a2f98c9674771a29b933a111d6290d3",
+  "compilerArchitecture": "x86",
+  "relocationsPresent": true,
+  "dynamicBase": true,
+  "staticCrt": true,
+  "zlibVersion": "1.4",
+  "files": [
+    {
+      "path": "development/acquisitions/payloads/nsis-compatible-win-x86/nsis-3.13-devtools-relocatable-x86.zip",
+      "sizeBytes": 2490549,
+      "sha256": "090af40642cbd11fa9fddc8f052a8fdad9f241b2a6194bace6350e24b4c2adeb"
+    },
+    {
+      "path": "development/acquisitions/payloads/nsis-compatible-bootstrap/scons-4.11.1-py3-none-any.whl",
+      "sizeBytes": 4123659,
+      "sha256": "454cef364348053422696e3d2ecb4fa593c96a624f955842eaaea64f95c8d11d"
+    },
+    {
+      "path": "development/acquisitions/payloads/nsis-compatible-bootstrap/scons-4.11.1.tar.gz",
+      "sizeBytes": 3268963,
+      "sha256": "4210d1a80a62e986029208117991b6347ccaaaab37b67463a3ff31ee065dc487"
+    },
+    {
+      "path": "development/acquisitions/payloads/nsis-compatible-bootstrap/zlib-1.4.tar.gz",
+      "sizeBytes": 1507140,
+      "sha256": "02dd159783677a749c04adbdd02b55b8a2bcc7e054f51b76b549199a916ad584"
+    }
+  ],
+  "sources": {
+    "nsis": "https://prdownloads.sourceforge.net/nsis/nsis-3.13-src.tar.bz2?download",
+    "stock": "https://prdownloads.sourceforge.net/nsis/nsis-3.13.zip?download",
+    "zlib": "https://zlib.net/zlib-1.4.tar.gz",
+    "scons": "https://pypi.org/project/SCons/4.11.1/"
+  },
+  "zlibPublisherHashVerified": true,
+  "sconsPublisherHashVerified": true,
+  "compilerSource": "Existing nsis-source resource a8ffe024602d46b6d766f9e1ce30c324ad2a24daeacd3efc2642d436a0c157ac",
+  "runtimeSource": "Existing stock ZIP ba63dffc4410ee89193e1cb5a41989991bd77c61068da17e3156d136b7b0b3d8",
+  "limits": [
+    "Actual isolated probe and sample build recorded separately by sample builder.",
+    "Only compiler host is relocatable; generated stock installer stubs retain upstream properties.",
+    "No generated installer installation/runtime portability validation."
+  ]
+}

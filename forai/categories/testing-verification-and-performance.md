@@ -1,0 +1,98 @@
+# Testing verification and performance
+
+[All categories](README.md) · [AI selection guide](../AGENTS.md)
+
+Historical discovery notes dated 2026-10-21. Verify suitability before adoption.
+
+| Resource | Useful for / constraints |
+|---|---|
+| [Playwright](https://playwright.dev/docs/intro) | Browser end-to-end testing; install matching browser binaries. |
+| [pytest](https://docs.pytest.org/) | Python unit and integration test framework with fixtures and a huge plugin ecosystem; the default choice for new Python test suites. |
+| [Hypothesis](https://hypothesis.readthedocs.io/) | Property-based tests and shrinking for Python. |
+| [Vitest](https://vitest.dev/guide/) | JavaScript and TypeScript test runner built on Vite: Jest-compatible APIs with much faster watch mode; natural fit for Vite projects. |
+| [Testing Library](https://testing-library.com/docs/) | UI tests using observable user-facing behavior. |
+| [JUnit](https://junit.org/) | JVM testing framework (JUnit 5) for Java and Kotlin unit tests; the standard runner other JVM test tools build on. |
+| [xUnit.net](https://xunit.net/) | .NET testing framework, the common default for new C# test projects alongside NUnit and MSTest. |
+| [GoogleTest](https://google.github.io/googletest/) | C++ unit test framework with GoogleMock for mocking; the standard choice for CMake-based C++ projects. |
+| [Catch2](https://github.com/catchorg/Catch2) | C++ test and benchmark framework: header-friendly, natural test syntax, and built-in micro-benchmarks; also cross-listed under Windows testing. |
+| [Testcontainers](https://docs.docker.com/testcontainers/) | Run real service dependencies in tests; needs a compatible container runtime. |
+| [Pact](https://docs.pact.io/) | Consumer/provider contracts for HTTP and messages. |
+| [WireMock](https://wiremock.org/docs/) | HTTP service stubs and integration simulations. |
+| [k6](https://grafana.com/docs/k6/latest/) | Load and performance tests with explicit thresholds. |
+| [Locust](https://docs.locust.io/) | Python-programmed load testing: define user behaviour in Python code and scale out across workers; good when scenarios are more than plain HTTP request lists. |
+| [BenchmarkDotNet](https://benchmarkdotnet.org/) | .NET microbenchmarking with controlled execution. |
+| [Google Benchmark](https://github.com/google/benchmark) | C++ microbenchmarks; representative workload selection remains essential. |
+| [LLVM sanitizers](https://clang.llvm.org/docs/AddressSanitizer.html) | Native memory-error detection; support depends on platform and compiler. |
+| [libFuzzer](https://llvm.org/docs/LibFuzzer.html) | Coverage-guided native fuzzing engine built into LLVM/Clang for C/C++ targets; usually paired with sanitizers and a corpus — see also AFL++ for standalone fuzzing. |
+
+Project discovery checked 2026-10-22 (source inspection only; no tested revival):
+
+| Resource | Useful for / constraints |
+|---|---|
+| [DiffImg community fork](https://github.com/arbruijn/diffimg) | Standalone Qt/C++ screenshot-difference GUI. arbruijn fork descends from sandsmark/lingo/xbee; independent Windows Qt 6.12 x64 revival: https://github.com/SeanShaffer88/DiffImg-Windows/releases/tag/v2.6.0 . Adds JSON/JUnit CI reports, failure-file navigation, scoped HTML exports and RGB pixel inspection atop folder comparisons, profiles/masks and recoverable baseline approval. GPLv3 binary distribution with corresponding sources/notices; self-signed Authenticode is not public Windows trust. Equal dimensions and 8-bit white-matte RGB; compare WinMerge. |
+
+## Expansion — 2026-10-23
+
+Scoped metadata and README checks. See the [full expansion and evidence limits](../catalogs/development-expansion-2026-10-23.md); licensing notes and source identifiers are recorded there.
+
+| Resource | Useful for / constraints |
+|---|---|
+| [fast-check](https://github.com/dubzzz/fast-check) | Generate and shrink JavaScript/TypeScript property tests; retain seeds for reproducibility. |
+| [Mock Service Worker](https://github.com/mswjs/msw) | Intercept network requests in browser and Node tests; keep mocks aligned with real contracts. |
+| [tox](https://github.com/tox-dev/tox) | Run Python checks across isolated environments; provision the required interpreter versions. |
+| [Nox](https://github.com/wntrblm/nox) | Define Python test sessions as code; manage interpreter and dependency matrices explicitly. |
+| [StrykerJS](https://github.com/stryker-mutator/stryker-js) | Mutation testing for JavaScript and TypeScript; budget runtime and inspect equivalent mutants. |
+| [mutmut](https://github.com/boxed/mutmut) | Find Python test gaps through mutation; upstream requires WSL on Windows. Run against committed test code and inspect surviving mutations. |
+| [jqwik](https://github.com/jqwik-team/jqwik) | Property-based tests on the JUnit Platform. Upstream reports maintenance mode and an additional Anti-AI Usage Clause from v1.10; review those terms before use. |
+| [TLA+ tools](https://github.com/tlaplus/tlaplus) | Model concurrent protocols and check invariants; bounded models do not prove implementation correctness. |
+| [cargo-nextest](https://github.com/nextest-rs/nextest) | Run Rust test binaries with scheduling and retries; confirm differences from cargo test. |
+| [proptest](https://github.com/proptest-rs/proptest) | Property-based Rust tests with shrinking; persist regressions and constrain generators. |
+
+## Expansion — 2026-10-27
+
+A further 500-resource development discovery pass. Entries below were selected from curated project indexes and checked against GitHub repository API metadata only; see the [expansion notes and evidence limits](../catalogs/development-expansion-2026-10-27.md).
+
+| Resource | Useful for / constraints |
+|---|---|
+| [mocha](https://github.com/mochajs/mocha) | ☕️ Classic, reliable, trusted test framework for Node.js and the browser |
+| [core](https://github.com/adonisjs/core) | AdonisJS is a TypeScript-first web framework for building web apps and API servers. It comes with support for testing, modern tooling, an ecosystem of official packages, and more. |
+| [nightwatch](https://github.com/nightwatchjs/nightwatch) | Integrated end-to-end testing framework written in Node.js and using W3C Webdriver API. Developed at @browserstack |
+| [cherrybomb](https://github.com/blst-security/cherrybomb) | Stop half-done APIs! Cherrybomb is a CLI tool that helps you avoid undefined user behaviour by auditing your API specifications, validating them and running API security tests. |
+| [trust](https://github.com/japaric/trust) | Travis CI and AppVeyor template to test your Rust crate on 5 architectures and publish binary releases of it for Linux, macOS and Windows |
+| [fortio](https://github.com/fortio/fortio) | Fortio load testing library, command line tool, advanced echo server and web UI in go (golang). Allows to specify a set query-per-second load and record latency histograms and other useful stats. |
+| [xtd](https://github.com/gammasoft71/xtd) | Free open-source modern C++20/23 framework to create console (CLI), forms (GUI like WinForms) and unit test (xUnit) applications and libraries on Windows, macOS, Linux, iOS, Android, FreeBSD, Haiku, and SerenityOS. |
+| [kahlan](https://github.com/kahlan/kahlan) | :heavy_check_mark: PHP Test Framework for Freedom, Truth, and Justice |
+| [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers) | Simple one-liner tests for common Rails functionality |
+| [swift-composable-architecture](https://github.com/pointfreeco/swift-composable-architecture) | A library for building applications in a consistent and understandable way, with composition, testing, and ergonomics in mind. |
+| [patrol](https://github.com/leancodepl/patrol) | Flutter-first UI testing framework. Ready for action! |
+| [container-structure-test](https://github.com/GoogleContainerTools/container-structure-test) | validate the structure of your container images |
+| [http-prompt](https://github.com/httpie/http-prompt) | An interactive command-line HTTP and API testing client built on top of HTTPie featuring autocomplete, syntax highlighting, and more. https://twitter.com/httpie |
+| [vuesion](https://github.com/vuesion/vuesion) | The original open-source Vuesion 5: a Nuxt 3 boilerplate with design system, Storybook, Figma UI kit, authentication and testing. MIT licensed, no longer maintained. Active development continues as the commercial Vuesion on Nuxt 4 with workspaces, billing and AI agent skills. |
+| [vue-testing-library](https://github.com/testing-library/vue-testing-library) | 🦎 Simple and complete Vue.js testing utilities that encourage good testing practices. |
+
+<!-- expansion-2026-11-10:begin -->
+## Expansion — 2026-11-10
+
+Repository metadata and primary documentation pages checked, not read end to end: latest release, license, and current maintenance are yours to verify before adopting. See the [expansion notes and evidence limits](../catalogs/expansion-2026-11-10.md).
+
+| Resource | Useful for / constraints |
+|---|---|
+| [Cypress](https://github.com/cypress-io/cypress) | Browser end-to-end and component testing with time-travel debugging and an interactive runner. Great developer experience; Cypress-specific architecture and per-seat cloud pricing are trade-offs against WebDriver-based suites. |
+| [Jest](https://github.com/jestjs/jest) | JavaScript and TypeScript unit testing with snapshots, fake timers, and built-in coverage. CJS/ESM interop and transform configuration are the usual friction points; Vitest is the common Vite-native alternative. |
+| [Robot Framework](https://github.com/robotframework/robotframework) | Keyword-driven acceptance testing and RPA with a plain-text syntax and a large library ecosystem. Strong for cross-team readable tests; less natural for developer-first unit-level TDD. |
+| [Selenium](https://github.com/seleniumhq/selenium) | WebDriver implementations and Grid for browser automation in Java, Python, JavaScript, .NET, Ruby, and Rust. The W3C-protocol baseline with the widest browser and language coverage; you assemble the test framework yourself. |
+| [WebdriverIO](https://github.com/webdriverio/webdriverio) | Node.js test framework on WebDriver and Chrome DevTools protocols, with runner, assertions, and mobile support. Choose it when you want a batteries-included JS suite that can also drive native apps. |
+<!-- expansion-2026-11-10:end -->
+
+<!-- expansion-2026-11-11:begin -->
+## Expansion — 2026-11-11
+
+Repository metadata and primary documentation pages checked, not read end to end: latest release, license, and current maintenance are yours to verify before adopting. See the [expansion notes and evidence limits](../catalogs/expansion-2026-11-11.md).
+
+| Resource | Useful for / constraints |
+|---|---|
+| [AFLplusplus](https://github.com/AFLplusplus/AFLplusplus) | AFL++ is a state-of-the-art fuzzer, and #1 in benchmarks. It was originally based on AFL. Today it comes with qemu 5.1, collision-free coverage, enhanced laf-intel & redqueen, AFLfast++ power schedules, MOpt mutators,. AGPL-3.0: network use can trigger source-disclosure obligations. |
+| [ApplicationInspector](https://github.com/microsoft/ApplicationInspector) | A source code analyzer built for surfacing features of interest and other characteristics to answer the question 'What's in the code?' quickly using static analysis with a json based rules engine. |
+| [oss fuzz](https://github.com/google/oss-fuzz) | OSS-Fuzz - continuous fuzzing for open source software. |
+| [sanitizers](https://github.com/google/sanitizers) | AddressSanitizer, ThreadSanitizer, MemorySanitizer. License not detected by GitHub; check the repository license before use. |
+<!-- expansion-2026-11-11:end -->

@@ -1,0 +1,2307 @@
+[
+  {
+    "path": "Browser/fonts/NotoNaskhArabic-Regular.ttf",
+    "sizeBytes": 247336,
+    "sha256": "6f0a92031367b2f5a2078fe9d24f3433122b61a0bad57c423aad8f3c39aa2e6e",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/arabic)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org"
+      },
+      {
+        "nameId": 14,
+        "text": "https://openfontlicense.org"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSans-Regular.ttf",
+    "sizeBytes": 621572,
+    "sha256": "478c558ea716033cd60c03438f628dfa75694dcf6b5f6d505a2f05fd2b4f3823",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/latin-greek-cyrillic)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansAdlam-Regular.ttf",
+    "sizeBytes": 93364,
+    "sha256": "4b51541536a7b28142a4571c16dc56e386c05f345ac9739ef8599d8ad4ed5e54",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/adlam)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansBalinese-Regular.ttf",
+    "sizeBytes": 92380,
+    "sha256": "cee58a184e7e00c4332087ac01870a69ac52fd5fa17ea3783ac728c945af1827",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/balinese)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansBamum-Regular.ttf",
+    "sizeBytes": 230008,
+    "sha256": "0282610e6923d06a4d120cff3824e829b4535a8c4c57c07e11dbe73475541084",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/bamum)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansBassaVah-Regular.ttf",
+    "sizeBytes": 8116,
+    "sha256": "8218239377452e05634a91ee8a4338daf0aa96a15673a437533a098eb9c06f53",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/bassa-vah)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansBatak-Regular.ttf",
+    "sizeBytes": 21920,
+    "sha256": "fff67846a9b39bae335b3f5b8331203ffbd4ad9f5f9f3f0b57e8f48627825c12",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/batak)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansBengali-Regular.ttf",
+    "sizeBytes": 143072,
+    "sha256": "b55c62ee531e3214da6c0701daecea89a52ba42db7d8206b92e6b51f397a3193",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2025 The Noto Project Authors (https://github.com/notofonts/bengali)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org"
+      },
+      {
+        "nameId": 14,
+        "text": "https://openfontlicense.org/"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansBuginese-Regular.ttf",
+    "sizeBytes": 7232,
+    "sha256": "bc19f17d7f6e8f280c2cc95ef6d1b67fac25becfe98722f482039a4d84f3c9ba",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/buginese)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansBuhid-Regular.ttf",
+    "sizeBytes": 5316,
+    "sha256": "328d80e11e7f65f9b6e4bac12de32b7ce42154301c2a14ba92155e32e05939d6",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/buhid)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansCanadianAboriginal-Regular.ttf",
+    "sizeBytes": 176372,
+    "sha256": "6f489ba696faff1d96f8ace395c0d22fe3b82621f69bf50b337112fb47ff1f17",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/canadian-aboriginal)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansChakma-Regular.ttf",
+    "sizeBytes": 82348,
+    "sha256": "60ce1d029e35b432dd68cc9f6c94f69bd84d8c97f28f06130186606dd2c3325d",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/chakma)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansCham-Regular.ttf",
+    "sizeBytes": 32036,
+    "sha256": "d48a34e02b4096eb3f2e008b74459789540598c2274d65fc53012517d0b08d92",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/cham)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansCherokee-Regular.ttf",
+    "sizeBytes": 94732,
+    "sha256": "c052352137ae8d283840a0e2991a675d47859d8fdbae5726d373d4f0d97a8c87",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/cherokee)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansCoptic-Regular.ttf",
+    "sizeBytes": 48948,
+    "sha256": "e70bd535d7e6cdf2346eab36ea76441059b18ee14d3243e85240b5e65eb0ad45",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/coptic)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansDeseret-Regular.ttf",
+    "sizeBytes": 19504,
+    "sha256": "9f384e8a75a059b8efcbead73ef5aa3b504ac3e9d218be5368a20b19bfccdeec",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/deseret)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansDevanagari-Regular.ttf",
+    "sizeBytes": 244284,
+    "sha256": "306b53ecfb182a504dd8a7446093c316387d2fd8dc350d0792ed1753fe0996cd",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/devanagari)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansElbasan-Regular.ttf",
+    "sizeBytes": 18888,
+    "sha256": "6d52707e91a77e23f389f42b5da65d7047205e7833041fe0b2cd7ff280e14749",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/elbasan)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansEthiopic-Regular.ttf",
+    "sizeBytes": 376804,
+    "sha256": "f6f7fc379db9438959a2b0527e7a2cf36ea9c84626d56ec444fff37fc24c3c10",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/ethiopic)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansGeorgian-Regular.ttf",
+    "sizeBytes": 52888,
+    "sha256": "d3e33254b09e7bb2c5cf0f17e554b80462056c5a107097f258d495168c3a9346",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/georgian)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansGrantha-Regular.ttf",
+    "sizeBytes": 364160,
+    "sha256": "41dd39f2f16e9539751c732f8d276079b98277bec2ea5945232a7ac594198000",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/grantha)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansGujarati-Regular.ttf",
+    "sizeBytes": 200704,
+    "sha256": "9b5a7aaeeb649a2e75a49d8b006a1f87db1b61c0df3b001609f4e0725d88dbf6",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/gujarati)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansGunjalaGondi-Regular.ttf",
+    "sizeBytes": 69884,
+    "sha256": "bdc8ed1739118d7c1be43cb5b435817fb7a5ae0acb32c89b2ddd66e7e9c2d1b3",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/gunjala-gondi)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansGurmukhi-Regular.ttf",
+    "sizeBytes": 55172,
+    "sha256": "658d0207da305a1411c539a8b0bbeda64d4146e54fb4827facddb890b6b90d74",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/gurmukhi)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansHanifiRohingya-Regular.ttf",
+    "sizeBytes": 27580,
+    "sha256": "ce453eaf8807a9a410cdc2ebeb7ae009e90b9e611342ac239aa59b794bdcefdb",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/hanifi-rohingya)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansHanunoo-Regular.ttf",
+    "sizeBytes": 7668,
+    "sha256": "ef23d153e9d666becc0d79fa88f0ae21f46138f1285b8eac304661ab35717aed",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/hanunoo)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansJavanese-Regular.ttf",
+    "sizeBytes": 120504,
+    "sha256": "81fdea70d379989bafea65eae5a6a96144991b437415744716a49a56f09f747a",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/javanese)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansKannada-Regular.ttf",
+    "sizeBytes": 182416,
+    "sha256": "9ad74dc64838c6855b96f671fc08e425a58921b9d0c71712ea79c328a27e6e38",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/kannada)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansKayahLi-Regular.ttf",
+    "sizeBytes": 17428,
+    "sha256": "71235e4d51c4e591b20717c525997c72ee906a9d39ce55f8f8bb8c60e96ab807",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/kayah-li)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansKhmer-Regular.ttf",
+    "sizeBytes": 114576,
+    "sha256": "e66675f2082788f0511a714bef5a1748928294b38c8e286a96ea73a864b5e605",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/khmer)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansKhojki-Regular.ttf",
+    "sizeBytes": 70444,
+    "sha256": "4cdcae034430ea2b5695d39c1b1fcb8fac1d8c32ef7d66615248e72d41781367",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/khojki)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansKhudawadi-Regular.ttf",
+    "sizeBytes": 18684,
+    "sha256": "9efe023882dd36fbf7d838a7c5ec30e1b22a44f9733af8209dc7b8b30fdd0711",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/khudawadi)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansLao-Regular.ttf",
+    "sizeBytes": 35884,
+    "sha256": "0a86e5e1ccfe34ca78c43fac6829dc751b42bcc469272a9a55325aae587bfbe7",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/lao)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansLepcha-Regular.ttf",
+    "sizeBytes": 26084,
+    "sha256": "8dad9629d709f0dba5d769988d1466daf300751f6bba2659465aaa6214261590",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/lepcha)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansLimbu-Regular.ttf",
+    "sizeBytes": 12804,
+    "sha256": "5cea5d0f2a089c36ea24e8481f65a2aff5d4b0890db440326cea2c808f82d582",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/limbu)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org"
+      },
+      {
+        "nameId": 14,
+        "text": "https://openfontlicense.org"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansLisu-Regular.ttf",
+    "sizeBytes": 12696,
+    "sha256": "f56f6bca7618c5d95d9e2adf45168844f161dedd95abeadbd58c1fbba7be750d",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/lisu)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansMahajani-Regular.ttf",
+    "sizeBytes": 22376,
+    "sha256": "82116df1a82007b3a3692b9ab52683ccdc134d37d88b1e38921b07541b5afe08",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/mahajani)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansMalayalam-Regular.ttf",
+    "sizeBytes": 112936,
+    "sha256": "c08de7fa8d032a5d6a4d120fb82c78cec60b362a4e73fa26360d89759ff2a7f9",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/malayalam)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansMandaic-Regular.ttf",
+    "sizeBytes": 29328,
+    "sha256": "0ecb2440205b9fe02fce714ddda98bb59892d4f7eacce2c1f12028b172a34de8",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/mandaic)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org"
+      },
+      {
+        "nameId": 14,
+        "text": "https://openfontlicense.org"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansMasaramGondi-Regular.ttf",
+    "sizeBytes": 30628,
+    "sha256": "da26087eb956e722a316a531a42f9f1ee8f8b60bf1a313c5763d71361c729c80",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/masaram-gondi)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org"
+      },
+      {
+        "nameId": 14,
+        "text": "https://openfontlicense.org"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansMedefaidrin-Regular.ttf",
+    "sizeBytes": 43112,
+    "sha256": "a91d91b2a94d480b6f95ebd64b66d21705f1823fd83c11a927848d979c776586",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/medefaidrin)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansMeeteiMayek-Regular.ttf",
+    "sizeBytes": 16584,
+    "sha256": "66dd434ad6211990d95ba598ad8e44dee30fb32556cb2310bc7f246e00c40990",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/meetei-mayek)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansMendeKikakui-Regular.ttf",
+    "sizeBytes": 35196,
+    "sha256": "89496328e57ae33930d147127caf57edb3f23defa835f73ac3f0b1856e16a073",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/mende-kikakui)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansMiao-Regular.ttf",
+    "sizeBytes": 36424,
+    "sha256": "a172b5da5bf602042cb526172ecb279085c906f23d901d882cf6938909f7e574",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/miao)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansModi-Regular.ttf",
+    "sizeBytes": 44220,
+    "sha256": "7bebf7f16e7f98695e1003adaa3b1438ef977803aa166fa7d5e6b18c9dfa69b8",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/modi)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansMongolian-Regular.ttf",
+    "sizeBytes": 344828,
+    "sha256": "a28ba3cde3de22de7ddc934bd5d5babe54e6ce28c073a288cd978ffcf26b295b",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2023 The Noto Project Authors (https://github.com/notofonts/mongolian)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansMro-Regular.ttf",
+    "sizeBytes": 6628,
+    "sha256": "2ab2149be222d9671ab2edcbe8736381e2d1550662a368b5087fd9e196bc69b4",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/mro)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansMultani-Regular.ttf",
+    "sizeBytes": 16496,
+    "sha256": "12c2437f98173dbff98fa18bcc73c6a44896634fb6d55d8f6d028394af4fc9b9",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/multani)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansNewa-Regular.ttf",
+    "sizeBytes": 152712,
+    "sha256": "3aede9a3ab5740babffe75f7c0d97e2329734b8cb470c999be1871362084a8bd",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/newa)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansNewTaiLue-Regular.ttf",
+    "sizeBytes": 20288,
+    "sha256": "35499f3b79c2a4683ba2784b0d4c652d58e2c28c48775b33c9e8e94f2dee965a",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/new-tai-lue)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansNKo-Regular.ttf",
+    "sizeBytes": 39592,
+    "sha256": "c756efb2c40f754107d76fa4e401fc3b8b7edec5cc65db549d3d0236ac6d08a1",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/nko)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansOlChiki-Regular.ttf",
+    "sizeBytes": 15684,
+    "sha256": "4b1ad6ec4a30277c75fd66465b0b9ae489e19f8fdf44ef3179b6fda7f5ceb32d",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/ol-chiki)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansOriya-Regular.ttf",
+    "sizeBytes": 114952,
+    "sha256": "38ac5eae2e1666558b88c63bf584349d6f924cca6b3b8867811546734afeb251",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/oriya)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansOsage-Regular.ttf",
+    "sizeBytes": 20596,
+    "sha256": "7801aa3d99d9da1a8fac388104e9fff4d94ddd28a07579b13a75224660b22fbf",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/osage)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansOsmanya-Regular.ttf",
+    "sizeBytes": 16584,
+    "sha256": "85b6f588013bdd027a683a454b5ecf4b1b859b7175ea98219f645be53dfc4753",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/osmanya)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansPahawhHmong-Regular.ttf",
+    "sizeBytes": 18168,
+    "sha256": "93c0c23cc50e5fb1e82a0eeaa8cd2e73d80e5af07be4419b882a2b54898def41",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/pahawh-hmong)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansPauCinHau-Regular.ttf",
+    "sizeBytes": 9048,
+    "sha256": "921cdd68b3db2ac8ce8c48aafb09027845db8d8360652e4446ee701f066a98ec",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/pau-cin-hau)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansRejang-Regular.ttf",
+    "sizeBytes": 7704,
+    "sha256": "ac84f549caba39e85d0d22a62f4fcf7dcacdf263d01527eb44388e96ce58d785",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/rejang)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org"
+      },
+      {
+        "nameId": 14,
+        "text": "https://openfontlicense.org"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansRunic-Regular.ttf",
+    "sizeBytes": 9856,
+    "sha256": "c43f941ef6c8a4f8217e7ffb332fce74f760140a7fd5919f86347e5e2a10b5c9",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/runic)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansSamaritan-Regular.ttf",
+    "sizeBytes": 10788,
+    "sha256": "430aa9e70b6c500c4267e9ecc5165d15bfefc761d86650101deeb7e07260d5ed",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/samaritan)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansSaurashtra-Regular.ttf",
+    "sizeBytes": 35252,
+    "sha256": "8ebdec75287c63310a1aff3660d0fa5b3dd027606c17f69217a5a5a5142f6e63",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/saurashtra)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansSharada-Regular.ttf",
+    "sizeBytes": 53372,
+    "sha256": "8350a4cf4b5bdc0707aa5077075b0885a4f3f0f08ed6b49b8e5d142aef4032da",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/sharada)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansShavian-Regular.ttf",
+    "sizeBytes": 12996,
+    "sha256": "6e2f222f7a24578efe1fd112678e7fe3709e8157793456c75053617848619d1e",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/shavian)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansSinhala-Regular.ttf",
+    "sizeBytes": 154912,
+    "sha256": "9e32612d47004552f3125e78648a9e2e7899a216ccd3cefbb93a9b5f4c809feb",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/sinhala)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansSoraSompeng-Regular.ttf",
+    "sizeBytes": 8048,
+    "sha256": "3499f8e787031f75771e481a53ca41f6c0b65dbdf149dac3cb319c29c53c28c2",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/sora-sompeng)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansSoyombo-Regular.ttf",
+    "sizeBytes": 66356,
+    "sha256": "31a5e5997360e6d1d574af04da3eefaeb3db18831df795c145634e517e554e1b",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/soyombo)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansSundanese-Regular.ttf",
+    "sizeBytes": 22640,
+    "sha256": "6cf8ae0d063b8af8ab1bc1b8c7041ac92104e74989dcc1217763723ca6a50c9e",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/sundanese)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansSylotiNagri-Regular.ttf",
+    "sizeBytes": 16740,
+    "sha256": "b3bb806a5fe533e550a27b51b28961cb09522f2a700c2c858169d9c8ed6573c4",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/syloti-nagri)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansSymbols-Regular.ttf",
+    "sizeBytes": 226980,
+    "sha256": "d0e98e9a2c046594c5021437273943be7e79e0fd980fde125279e22302212595",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/symbols)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansSymbols2-Regular.ttf",
+    "sizeBytes": 671568,
+    "sha256": "c4a0a80f0041ce4be81e2478faad22776d23edb98ae3f0d19bd37044820ecf9d",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/symbols)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansSyriac-Regular.ttf",
+    "sizeBytes": 73796,
+    "sha256": "4440929bf1a47bb50179e8d8495641d208c63d607355e451f29ea2d3e5343290",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/syriac)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTagalog-Regular.ttf",
+    "sizeBytes": 7060,
+    "sha256": "8fdf54f14d3869e5bfabb7c552e32ac39a2f7609cc6e857a2e8480da2ad9031f",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tagalog)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTagbanwa-Regular.ttf",
+    "sizeBytes": 5940,
+    "sha256": "5ed080972eead72d6f7f074ac2020dd6f82d8158161040f702b539e43a776a28",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tagbanwa)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTaiLe-Regular.ttf",
+    "sizeBytes": 19476,
+    "sha256": "25d2ef9aa4438c7b651ada7f32801e196b5a4a3ca8d6e41cf36e37ecb99aff22",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tai-le)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTaiTham-Regular.ttf",
+    "sizeBytes": 116880,
+    "sha256": "b94134811a2f8c26631a728837bb72f74dad87402810fc46b34c310312a6b369",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tai-tham)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTaiViet-Regular.ttf",
+    "sizeBytes": 30580,
+    "sha256": "5f7e2a8d5cca567620d101534fc34b432e1577ff01f3f1752750050c90b1ca7f",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tai-viet)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTakri-Regular.ttf",
+    "sizeBytes": 18456,
+    "sha256": "c14fb3d442ee9330d54d22aed37a9ee78ec4038055faa195d62661e4bb9988f9",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/takri)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTamil-Regular.ttf",
+    "sizeBytes": 73992,
+    "sha256": "3c0a186feb3c63c7f6d63e1511dcdc144e745ae09b98e217c83f3e317974f6f9",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tamil)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTelugu-Regular.ttf",
+    "sizeBytes": 235176,
+    "sha256": "b274780b69d1d23fe84b55e809a152cb2ac5306d33864b1f87622f6971871aae",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/telugu)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansThaana-Regular.ttf",
+    "sizeBytes": 27308,
+    "sha256": "7543935bdcef770c9d3dd54222651b29040e5ec82f3bc58542392b2c7a9cbd3c",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/thaana)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTifinagh-Regular.ttf",
+    "sizeBytes": 79376,
+    "sha256": "8058054786bc572007193988654d1ded342bc2538c2d91c50d1a7238ea1a99cc",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tifinagh)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTifinaghAdrar-Regular.ttf",
+    "sizeBytes": 79000,
+    "sha256": "0c07dd9372f3d542175e3eda76215977f0f8bcdfcd24dd5f3c634bbfac535bdc",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tifinagh)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTifinaghAgrawImazighen-Regular.ttf",
+    "sizeBytes": 79232,
+    "sha256": "c1750eaaf59d6336971193d1b4d69970e1c5a8c3c079ce2f739f0d1bdff3aa6d",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tifinagh)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTifinaghAhaggar-Regular.ttf",
+    "sizeBytes": 79508,
+    "sha256": "a4864c1eb95707283eee5dbba64bf6b99edd1011c2b8a9e51c7a1d1bf941ba03",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tifinagh)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTifinaghAir-Regular.ttf",
+    "sizeBytes": 79560,
+    "sha256": "32b8789d0d47725f8b71824f0ebb393c401f0481fa31906e34b5adf0acda89cd",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tifinagh)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTifinaghAPT-Regular.ttf",
+    "sizeBytes": 79372,
+    "sha256": "3a024280a937fd6371ed191ae718c1bcfd5379036e7e9048aab4cb5dcdfefdd7",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tifinagh)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTifinaghAzawagh-Regular.ttf",
+    "sizeBytes": 79660,
+    "sha256": "1fce773308ca5eb9132fd66323feaef0b034ab2b3f63275e93c90ce637d3db44",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tifinagh)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTifinaghGhat-Regular.ttf",
+    "sizeBytes": 79016,
+    "sha256": "c06c851cbed87d8281688b04d02f26c9d70190816ef30123790553eb8e8e3fa0",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tifinagh)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTifinaghHawad-Regular.ttf",
+    "sizeBytes": 79184,
+    "sha256": "88cf22f57c3c99964e88cc2b16eccbd8d60dd7e61cbb49fc6944779c7cd17298",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tifinagh)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTifinaghRhissaIxa-Regular.ttf",
+    "sizeBytes": 79308,
+    "sha256": "3b809a1556fead28de406d878632ea89fa474c4488c41ae7354f7f8b5fa5d719",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tifinagh)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTifinaghSIL-Regular.ttf",
+    "sizeBytes": 79620,
+    "sha256": "788740f9e2ca1ea75b7351ce4ccac6d583377adbba98740e6ab05ffaf3507fdc",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tifinagh)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTifinaghTawellemmet-Regular.ttf",
+    "sizeBytes": 79632,
+    "sha256": "8a5f9889d655290a22740bc2c02a7fbbf6a7ab2d5c8de119f76e8644bd8dcff7",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tifinagh)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansTirhuta-Regular.ttf",
+    "sizeBytes": 96848,
+    "sha256": "f7a0d9fa2557ebebbacdc8888556e217c298eb049db6ff6dc210e916a1d9e860",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tirhuta)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansVai-Regular.ttf",
+    "sizeBytes": 91252,
+    "sha256": "3b454157b5fc64cc21fb9c76cc86390997b1540499906179a1d1375e59d1bf33",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/vai)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansWancho-Regular.ttf",
+    "sizeBytes": 18448,
+    "sha256": "fb2e48d59128cdea1cee0ba24373bd5ff085a72cf98e53bc1674770c8ac67d9a",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/wancho)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansWarangCiti-Regular.ttf",
+    "sizeBytes": 27264,
+    "sha256": "f992ab2ede41083879ac42480d360807106afcd060f5df77ae73f79a26067fa5",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/warang-citi)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansYi-Regular.ttf",
+    "sizeBytes": 183036,
+    "sha256": "9d5d3f9912f14bee3f32c9d8add8a5dd02910dcabc00e3702a2b9883556852c9",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/yi)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSansZanabazarSquare-Regular.ttf",
+    "sizeBytes": 20544,
+    "sha256": "4a42d77e15f8f6a295a682369fb941afca2c494bd4f4341882d5562f1ed5ed23",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/zanabazar-square)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerif-Regular.ttf",
+    "sizeBytes": 712444,
+    "sha256": "19e72cd8d595fae5bd74a5206f5d938512e1183d4fed7abb1ec1be1d7efa5f88",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/latin-greek-cyrillic)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifBalinese-Regular.ttf",
+    "sizeBytes": 53872,
+    "sha256": "8282b492a229638518fc586cf55cfe3751ca68f61feb56c89d6bff48607719eb",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/balinese)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org"
+      },
+      {
+        "nameId": 14,
+        "text": "https://openfontlicense.org"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifBengali-Regular.ttf",
+    "sizeBytes": 324020,
+    "sha256": "c1743dce480147e4563e479ddc31d5ff6544372437428622a54c7c867c50f55b",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2025 The Noto Project Authors (https://github.com/notofonts/bengali)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org/"
+      },
+      {
+        "nameId": 14,
+        "text": "https://openfontlicense.org/"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifDevanagari-Regular.ttf",
+    "sizeBytes": 280180,
+    "sha256": "e272d11d271c61a8d5d0f65764fd368ae53b9f9dabcce244a8941aa8f32ccc70",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/devanagari)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifDogra-Regular.ttf",
+    "sizeBytes": 28800,
+    "sha256": "f2a5287a3b9d0a9a833c80b6c037fc998bc70544ee5f91f0245869013e171ae3",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/dogra)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifEthiopic-Regular.ttf",
+    "sizeBytes": 309844,
+    "sha256": "4d14f10b7436e762d41ddd9486acdc708744bf377a575d855b81b847b9590779",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/ethiopic)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifGeorgian-Regular.ttf",
+    "sizeBytes": 61956,
+    "sha256": "e222862f34ad05bdf950de1049abf6149d250b9e27c1cc482dd645412afb64ff",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/georgian)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifGrantha-Regular.ttf",
+    "sizeBytes": 365964,
+    "sha256": "3eb89dbf48e7b2b91893ac32e620509cf541e2445ea2c010f0bfe2e09e9e30fd",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/grantha)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifGujarati-Regular.ttf",
+    "sizeBytes": 146056,
+    "sha256": "b8961ff6faf8e5561e3d0109953c4a9798e9bb8e8d48f66c3d1ef038fe45c940",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/gujarati)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifGurmukhi-Regular.ttf",
+    "sizeBytes": 53316,
+    "sha256": "5ef2d04a6d6fd22959989d14148dcf0ffbb970cc35e6316ba63cd5c146f32667",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/gurmukhi)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifKannada-Regular.ttf",
+    "sizeBytes": 194376,
+    "sha256": "95a78c95359dc59b9ec56bdc5bdf8a9642394d2ef87ded945fb3885893b3eac6",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/kannada)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifKhmer-Regular.ttf",
+    "sizeBytes": 154372,
+    "sha256": "ef0612212c7417da732dd43c744abf66f4f62c45d4f8962e42c8553230e0da2a",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/khmer)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifKhojki-Regular.ttf",
+    "sizeBytes": 146988,
+    "sha256": "ab7738bcbff4be789ca459877eab7f31add89d1515decba4097abcaafcd9d604",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/khojki)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifLao-Regular.ttf",
+    "sizeBytes": 42880,
+    "sha256": "a8d38866520f3c96d0e0e43f079f16c72ae4963bbabdf21cae26092c7cb65ec7",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/lao)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifMalayalam-Regular.ttf",
+    "sizeBytes": 111872,
+    "sha256": "45c34ac8c169a37a4fbb5b8fbf507def328bbf36180b08095726d460d577ec1d",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/malayalam)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifMyanmar-Regular.ttf",
+    "sizeBytes": 277152,
+    "sha256": "fe1a5f1c9cafab515e89e20f884aee3681ccd9f3f2e7bf357c6758d9268535a5",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/myanmar)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifNPHmong-Regular.ttf",
+    "sizeBytes": 24376,
+    "sha256": "becff5fa38bed12954dc62a8461e80231fa44307f4ae4c96b31a3c0df0e04bfe",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/nyiakeng-puachue-hmong)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifSinhala-Regular.ttf",
+    "sizeBytes": 325860,
+    "sha256": "0d5a63d34ed378e345ec96021d72385c8e288ecd0ea36511a329aed448ede375",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/sinhala)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifTamil-Regular.ttf",
+    "sizeBytes": 79476,
+    "sha256": "8a8cb015a3afec2998e01aabcb42fb365994132d95dbc2150208b4fefd8dc2e4",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tamil)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifTelugu-Regular.ttf",
+    "sizeBytes": 311724,
+    "sha256": "2b376e0351fb140f2edad9c54e8977f4f1effc4fe72443e152b3f6ad392c6f5f",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/telugu)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifTibetan-Regular.ttf",
+    "sizeBytes": 609688,
+    "sha256": "ee97bf3dc56e813651db734c9f35f8f1d41e7e31acf5f7d893e64ad22b292446",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tibetan)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/NotoSerifYezidi-Regular.ttf",
+    "sizeBytes": 18252,
+    "sha256": "fb30c28d72e2dd2468a848a2cb282b2781c9ae9b84a9e2e070673edcc4438f7d",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/yezidi)"
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "https://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/Pyidaungsu-2.5.3_Regular.ttf",
+    "sizeBytes": 189468,
+    "sha256": "df7106c15da76f6a24c10821b43da51f54961f6bc6791fb1fcf21c6c60bb2e10",
+    "embeddedNotices": [
+      {
+        "nameId": 0,
+        "text": "Copyright (c) 2014 by MCF. All rights reserved."
+      },
+      {
+        "nameId": 13,
+        "text": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL"
+      },
+      {
+        "nameId": 14,
+        "text": "http://scripts.sil.org/OFL"
+      }
+    ]
+  },
+  {
+    "path": "Browser/fonts/TwemojiMozilla.ttf",
+    "sizeBytes": 1474284,
+    "sha256": "6d90152ee0d29e82fe2a87793af5aa4b7ad13e6538360889e141e81ed299ee8e",
+    "embeddedNotices": []
+  }
+]

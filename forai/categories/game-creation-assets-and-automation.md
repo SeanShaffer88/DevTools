@@ -1,0 +1,102 @@
+# Game creation assets and automation
+
+[All categories](README.md) · [AI selection guide](../AGENTS.md)
+
+Checked 2026-10-22 for Emberline asset production and future game projects. Repository/README/license evidence is scoped; only the selected Kenney subset and glTF Validator were exercised locally. MCP servers, engines, and music models were not installed or connected by this catalog update.
+
+| Resource | Useful for / constraints |
+|---|---|
+| [Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) | Claude-oriented game-production template. Borrow concise art direction, asset provenance, and observed-playtest gates; adapt to the consuming agent and avoid installing its full hierarchy into an existing project. MIT repository; README and art-bible workflow inspected. Not a Codex-native plugin or game runtime. Repository metadata checked 2026-10-22: last push 2026-10-19, not archived. |
+| [UnrealClaude](https://github.com/Natfii/UnrealClaude) | Claude Code/editor and MCP integration for Unreal Engine 5.7. Relevant to Unreal projects; requires the engine and compatible editor plugin, not an upgrade path for a small WebView game. Nested UnrealClaude/LICENSE inspected: MIT. README supports Win64/Linux/macOS; engine and Claude access have separate requirements. Repository metadata checked 2026-10-22: last push 2026-06-26, not archived. |
+| [Godot MCP](https://github.com/Coding-Solo/godot-mcp) | Launch and inspect Godot projects through MCP. Candidate for a deliberate Godot port; existing three.js projects do not gain Godot features by adding this server. MIT metadata and README inspected; installed Godot plus Node.js >=18/npm required. Runtime compatibility not tested. Repository metadata checked 2026-10-22: last push 2026-04-16, not archived. |
+| [ACE-Step 1.5](https://github.com/ace-step/ACE-Step-1.5) | Local music authoring model for exporting game soundtrack files. Generate on the development machine and ship audio, not the model. Select model/backend by available GPU memory. MIT repository LICENSE inspected; Python 3.11-3.12, CUDA recommended; other backends documented. Variant memory requirements differ. Specific weight license/output suitability and runtime quality still require validation. Repository metadata checked 2026-10-22: last push 2026-10-11, not archived. |
+| [Blender Lab MCP](https://projects.blender.org/lab/blender_mcp) | Official Blender Lab bridge for scene inspection and Python automation. Small first-party candidate for modeling, material work, and export; requires Blender 5.1+, add-on, server and MCP client. Official Blender page, source overview and GPL3+ license reviewed. Executes generated Python with full Blender privileges; use a controlled asset workspace. Not installed or runtime tested. |
+| [MCP for Blender](https://github.com/ahujasid/mcp-for-blender) | Third-party Blender authoring/MCP bridge with render inspection and optional asset/model services. More features than the minimal Blender Lab bridge; audit external-service and telemetry options. MIT metadata and README reviewed. Former ahujasid/blender-mcp URL redirects here; PyPI name mcp-for-blender. Optional premium/generation services are separate from local Blender operation. Repository metadata checked 2026-10-22: last push 2026-10-20, not archived. |
+| [glTF Transform](https://github.com/donmccurdy/glTF-Transform) | Script GLB/glTF inspection, deduplication, resizing and optimization in a repeatable asset build pipeline. Fits three.js and engines that import glTF. MIT metadata/README reviewed. Node LTS CLI and JS/TS SDK; bundle any chosen runtime decoders locally and verify extensions against target renderer. Repository metadata checked 2026-10-22: last push 2026-10-20, not archived. |
+| [meshoptimizer / gltfpack](https://github.com/zeux/meshoptimizer) | Reduce mesh size and rendering cost; gltfpack optimizes glTF assets. Suitable after visual baseline checks, especially repeated props and LODs. MIT metadata/README reviewed. Compressed output can require matching runtime decoding; compare before/after shape, UVs, animation and device cost. Repository metadata checked 2026-10-22: last push 2026-10-14, not archived. |
+| [KTX Software](https://github.com/KhronosGroup/KTX-Software) | KTX2 texture authoring/transcoding tools for mobile GPU texture budgets. Consider only after profiling; compressed download size differs from decoded GPU memory. LICENSE.md reviewed: primarily Apache-2.0 with bundled component licenses. etcdec is a documented non-open-source special case removable with LIBKTX_FEATURE_ETC_UNPACK=NO; review the actual build. Repository metadata checked 2026-10-22: last push 2026-10-22, not archived. |
+| [glTF Validator](https://github.com/KhronosGroup/glTF-Validator) | Validate binary and JSON glTF, buffer access, references and specification conformance before integrating assets. Apache-2.0 metadata/README and npm package metadata reviewed. Used locally on an Emberline candidate asset subset; validation does not replace visual or device tests. Repository metadata checked 2026-10-22: last push 2026-10-06, not archived. |
+| [Blender glTF importer/exporter](https://github.com/KhronosGroup/glTF-Blender-IO) | Official Khronos Blender glTF pipeline for baking/exporting engine-portable geometry, materials and animation. Apache-2.0 metadata/README reviewed. Bundled with Blender 2.80+; use the version matching the installed Blender rather than copying current main into an older release. Repository metadata checked 2026-10-22: last push 2026-10-22, not archived. |
+| [Mobile MCP](https://github.com/mobile-next/mobile-mcp) | Local Android/iOS device and emulator control through accessibility snapshots or screenshot coordinates. Useful for native startup, save and lifecycle QA. Apache-2.0 metadata/README/roadmap reviewed. Android WebView DOM support is still listed as planned; canvas games need screenshot/coordinate checks. Telemetry opt-out documented: MOBILEMCP_DISABLE_TELEMETRY=1. Remote-device services are separate. Repository metadata checked 2026-10-22: last push 2026-10-18, not archived. |
+| [Maestro](https://github.com/mobile-dev-inc/Maestro) | Repeatable Android UI flows for installation, menus, permissions and lifecycle smoke tests; complements renderer-level and manual gameplay checks. Apache-2.0 metadata/README reviewed. Local CLI/Studio and MCP workflows documented. Device setup required; UI selectors do not identify arbitrary WebGL world objects. Repository metadata checked 2026-10-22: last push 2026-10-22, not archived. |
+| [jsfxr](https://github.com/chr15m/jsfxr) | Author small synthesized feedback sounds and export WAV files for offline games. Good for rewards/tool/UI cues, less suited to realistic wind or character foley. Unlicense metadata and README reviewed. Audition generated results and preserve authoring parameters; listing is not an integration or quality benchmark. Repository metadata checked 2026-10-22: last push 2026-05-05, not archived. |
+| [Audacity MCP](https://github.com/xDarkzx/Audacity-MCP) | Automate audio cleanup, editing and export through a local Audacity scripting bridge. Candidate for finishing recorded ambience or generated music. Apache-2.0 metadata/README reviewed. Targets Audacity 3.x mod-script-pipe; maintainer states it cannot control Audacity 4. Do not assume compatibility with a newer installed Audacity. Repository metadata checked 2026-10-22: last push 2026-10-14, not archived. |
+| [Kenney Train Kit](https://kenney.nl/assets/train-kit) | Coherent train, carriage and rail models for a stylized railway game. Select a small subset, recolor and add original settlement details. Official ZIP downloaded; packaged License.txt inspected: CC0, Train Kit 1.1; credits include Kenney, Guus Vermeulen and Tony Schaer. Selected GLBs retained with provenance. |
+| [Kenney Nature Kit](https://kenney.nl/assets/nature-kit) | Low-poly pines, rocks, logs, bridges and camp props suitable for a consistent mobile environment. Snow treatment and game-specific silhouettes still need an art pass. Official ZIP downloaded; packaged License.txt inspected: CC0, Nature Kit 2.1. Selected GLBs retained with provenance; not all assets were validated. |
+| [Quaternius Ultimate Nature Pack](https://quaternius.com/packs/ultimatenature.html) | Alternative low-poly nature collection including pine/snowy variants; useful when it provides better silhouettes than the primary chosen kit. Official pack page and creator itch page reviewed: CC0; FBX/OBJ/Blend formats. Pack not downloaded or imported; conversion and exact selected-asset checks remain. |
+| [Poly Haven](https://polyhaven.com/) | Source HDRIs, textures and models for authored materials and lighting references. Downsample and stylize selected assets for mobile rather than importing high-resolution packs wholesale. Official license page inspected: downloadable assets CC0. Website/API terms are distinct; no asset downloaded in this check. |
+| [ambientCG](https://ambientcg.com/) | Source CC0 snow, wood, rock and other surfaces for a constrained material palette. Bake/resize only selected maps and budget decoded GPU memory. Official license documentation inspected: downloadable assets and previews CC0. No individual material downloaded or benchmarked in this check. |
+
+## Food and camp props — 2026-10-23
+
+| Resource | Useful for / constraints |
+|---|---|
+| [Kenney Food Kit](https://kenney.nl/assets/food-kit) | Small stylized food, cookware and table props for offline games. Select only needed GLBs and their palette texture; keep edible props out of automatic snow shaders. Official pack page and downloaded 2.0 ZIP license inspected: CC0. Six selected food GLBs plus four further Nature Kit props passed glTF Validator with zero errors/warnings; local paths and exact hashes retained in Emberline. Scope is the selected subset, not an audit of all 200 models or a phone performance check. |
+
+## Expansion — 2026-10-23
+
+Scoped metadata and README checks. See the [full expansion and evidence limits](../catalogs/development-expansion-2026-10-23.md); licensing notes and source identifiers are recorded there.
+
+| Resource | Useful for / constraints |
+|---|---|
+| [Bevy](https://github.com/bevyengine/bevy) | Build games with Rust and an entity-component-system architecture; track API migration requirements. |
+| [Defold](https://github.com/defold/defold) | Develop and export games with Lua scripting; review the custom license and target-platform requirements. |
+| [Phaser](https://github.com/phaserjs/phaser) | Create browser games with JavaScript or TypeScript; test rendering and input on target devices. |
+| [PixiJS](https://github.com/pixijs/pixijs) | Render interactive 2D graphics in browsers; choose compatible rendering backends and asset pipelines. |
+| [Babylon.js](https://github.com/BabylonJS/Babylon.js) | Build browser 3D scenes and applications; measure GPU capabilities and asset loading. |
+| [Rapier](https://github.com/dimforge/rapier) | Integrate Rust-based 2D or 3D rigid-body physics; validate bindings and simulation settings. |
+| [Jolt Physics](https://github.com/jrouwe/JoltPhysics) | C++ rigid-body simulation for games; verify compiler, CPU features and integration model. |
+| [Box2D](https://github.com/erincatto/box2d) | Simulate 2D rigid bodies; review current API generation and numerical assumptions. |
+| [raylib](https://github.com/raysan5/raylib) | Build graphics and games with a compact C API; confirm backend and platform build dependencies. |
+| [Flecs](https://github.com/SanderMertens/flecs) | Add an entity-component system to C or C++ applications; plan data ownership and scheduling. |
+
+## Expansion — 2026-10-27
+
+A further 500-resource development discovery pass. Entries below were selected from curated project indexes and checked against GitHub repository API metadata only; see the [expansion notes and evidence limits](../catalogs/development-expansion-2026-10-27.md).
+
+| Resource | Useful for / constraints |
+|---|---|
+| [ezEngine](https://github.com/ezEngine/ezEngine) | An open source C++ game engine. |
+| [nCine](https://github.com/nCine/nCine) | A cross-platform 2D game engine |
+| [game-datasets](https://github.com/leomaurodesenv/game-datasets) | :video_game: A curated list of awesome game datasets, and tools to artificial intelligence in games |
+
+<!-- expansion-2026-11-10:begin -->
+## Expansion — 2026-11-10
+
+Repository metadata and primary documentation pages checked, not read end to end: latest release, license, and current maintenance are yours to verify before adopting. See the [expansion notes and evidence limits](../catalogs/expansion-2026-11-10.md).
+
+| Resource | Useful for / constraints |
+|---|---|
+| [Blender](https://github.com/blender/blender) | 3D modeling, animation, and asset pipeline with a Python API and glTF/FBX export. GPL for the application; exported assets remain yours, but bundled add-ons have their own terms. |
+<!-- expansion-2026-11-10:end -->
+
+<!-- expansion-2026-11-11:begin -->
+## Expansion — 2026-11-11
+
+Repository metadata and primary documentation pages checked, not read end to end: latest release, license, and current maintenance are yours to verify before adopting. See the [expansion notes and evidence limits](../catalogs/expansion-2026-11-11.md).
+
+| Resource | Useful for / constraints |
+|---|---|
+| [awesome bevy](https://github.com/bevyengine/bevy-assets) | A collection of Bevy assets, plugins, learning resources, and apps made by the community. No license detected by GitHub; default copyright applies, so treat reuse as unsupported. |
+| [awesome godot](https://github.com/Calinou/awesome-godot) | A curated list of free/libre plugins, scripts and add-ons for Godot. |
+| [beehave](https://github.com/bitbrain/beehave) | behavior tree AI for Godot Engine. |
+| [bullet3](https://github.com/bulletphysics/bullet3) | Bullet Physics SDK: real-time collision detection and multi-physics simulation for VR, games, visual effects, robotics, machine learning etc. License not detected by GitHub; check the repository license before use. |
+| [dialogic](https://github.com/dialogic-godot/dialogic) | Create Dialogs, Visual Novels, RPGs, and manage Characters with Godot to create your Game! |
+| [entt](https://github.com/skypjack/entt) | Gaming meets modern C++ - a fast and reliable entity component system (ECS) and much more. |
+| [FNA](https://github.com/FNA-XNA/FNA) | FNA - Accuracy-focused XNA4 reimplementation for open platforms. No license detected by GitHub; default copyright applies, so treat reuse as unsupported. |
+| [FXGL](https://github.com/AlmasB/FXGL) | Java / JavaFX / Kotlin Game Library (Engine). |
+| [GameDev Resources](https://github.com/Kavex/GameDev-Resources) | video_game: :game_die: A wonderful list of Game Development resources. No license detected by GitHub; default copyright applies, so treat reuse as unsupported. |
+| [GameFramework](https://github.com/EllanJiang/GameFramework) | This is literally a game framework, based on Unity game engine. It encapsulates commonly used game modules during development, and, to a large degree, standardises the process,. |
+| [godot demo projects](https://github.com/godotengine/godot-demo-projects) | Demonstration and Template Projects. |
+| [godot jolt](https://github.com/godot-jolt/godot-jolt) | Godot Jolt is a Godot extension that integrates the Jolt physics engine. |
+| [libgdx](https://github.com/libgdx/libgdx) | Desktop/Android/HTML5/iOS Java game development framework. |
+| [love](https://github.com/love2d/love) | LÖVE is an awesome 2D game framework for Lua. License not detected by GitHub; check the repository license before use. |
+| [macroquad](https://github.com/not-fl3/macroquad) | Cross-platform game engine in Rust. |
+| [magictools](https://github.com/ellisonleao/magictools) | video_game: :pencil: A list of Game Development resources to make magic happen. |
+| [MonoGame](https://github.com/MonoGame/MonoGame) | One framework for creating powerful cross-platform games. License not detected by GitHub; check the repository license before use. |
+| [PankuConsole](https://github.com/Ark2000/PankuConsole) | Feature-packed real-time debugging toolkit for Godot Engine. |
+| [QFramework](https://github.com/liangxiegame/QFramework) | Godot/Unity3D System Design Architecture. |
+| [redot engine](https://github.com/Redot-Engine/redot-engine) | Redot Engine – Multi-platform 2D and 3D game engine. |
+| [Terrain3D](https://github.com/TokisanGames/Terrain3D) | A high performance, editable terrain system for Godot 4. |
+| [UnityCsReference](https://github.com/Unity-Technologies/UnityCsReference) | Unity C# reference source code. License not detected by GitHub; check the repository license before use. |
+<!-- expansion-2026-11-11:end -->

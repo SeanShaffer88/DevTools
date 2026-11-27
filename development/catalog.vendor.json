@@ -1,0 +1,779 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "vendor-windows-keyboard-keyboard-interactions",
+      "title": "Windows Keyboard \u2014 keyboard-interactions.md",
+      "domains": [
+        "windows"
+      ],
+      "kind": "reference",
+      "path": "development/vendor/windows-keyboard/hub/apps/develop/input/keyboard-interactions.md",
+      "summary": "Pinned primary-source reference. Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "tags": [
+        "offline",
+        "primary-source",
+        "windows-keyboard"
+      ],
+      "verification": "Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "status": "vendored",
+      "origin": "https://github.com/MicrosoftDocs/windows-dev-docs@a3812316d9d6678be4e526ffb4b1c4f3958d956d",
+      "license": "CC-BY-4.0 (documentation); MIT (code)",
+      "licenseFile": "development/vendor/windows-keyboard/LICENSE",
+      "officialSources": [
+        "https://raw.githubusercontent.com/MicrosoftDocs/windows-dev-docs/a3812316d9d6678be4e526ffb4b1c4f3958d956d/hub/apps/develop/input/keyboard-interactions.md"
+      ],
+      "sha256": "707f5e7e2dcc00079a3589eb8c175d79b4c3b6da46fde5dfabced2075d5936b9",
+      "sizeBytes": 38012
+    },
+    {
+      "id": "vendor-windows-keyboard-keyboard-events",
+      "title": "Windows Keyboard \u2014 keyboard-events.md",
+      "domains": [
+        "windows"
+      ],
+      "kind": "reference",
+      "path": "development/vendor/windows-keyboard/hub/apps/develop/input/keyboard-events.md",
+      "summary": "Pinned primary-source reference. Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "tags": [
+        "offline",
+        "primary-source",
+        "windows-keyboard"
+      ],
+      "verification": "Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "status": "vendored",
+      "origin": "https://github.com/MicrosoftDocs/windows-dev-docs@a3812316d9d6678be4e526ffb4b1c4f3958d956d",
+      "license": "CC-BY-4.0 (documentation); MIT (code)",
+      "licenseFile": "development/vendor/windows-keyboard/LICENSE",
+      "officialSources": [
+        "https://raw.githubusercontent.com/MicrosoftDocs/windows-dev-docs/a3812316d9d6678be4e526ffb4b1c4f3958d956d/hub/apps/develop/input/keyboard-events.md"
+      ],
+      "sha256": "2d482541483db758d726b72b0bc9763702fb1546c22c3babe53e3a081441524f",
+      "sizeBytes": 32102
+    },
+    {
+      "id": "vendor-godot-manual-input-examples",
+      "title": "Godot Manual \u2014 input_examples.rst",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "development/vendor/godot-manual/tutorials/inputs/input_examples.rst",
+      "summary": "Pinned primary-source reference. Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "tags": [
+        "offline",
+        "primary-source",
+        "godot-manual"
+      ],
+      "verification": "Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "status": "vendored",
+      "origin": "https://github.com/godotengine/godot-docs@33e08e14c517541fac3d9069e82fb3ee2fc99a10",
+      "license": "CC-BY-3.0",
+      "licenseFile": "development/vendor/godot-manual/LICENSE.txt",
+      "officialSources": [
+        "https://raw.githubusercontent.com/godotengine/godot-docs/33e08e14c517541fac3d9069e82fb3ee2fc99a10/tutorials/inputs/input_examples.rst"
+      ],
+      "sha256": "90359a6ab0c45bd034c19e67547a2643b63576287e421a9683482ab19d142b84",
+      "sizeBytes": 13239
+    },
+    {
+      "id": "vendor-godot-manual-saving-games",
+      "title": "Godot Manual \u2014 saving_games.rst",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "development/vendor/godot-manual/tutorials/io/saving_games.rst",
+      "summary": "Pinned primary-source reference. Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "tags": [
+        "offline",
+        "primary-source",
+        "godot-manual"
+      ],
+      "verification": "Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "status": "vendored",
+      "origin": "https://github.com/godotengine/godot-docs@33e08e14c517541fac3d9069e82fb3ee2fc99a10",
+      "license": "CC-BY-3.0",
+      "licenseFile": "development/vendor/godot-manual/LICENSE.txt",
+      "officialSources": [
+        "https://raw.githubusercontent.com/godotengine/godot-docs/33e08e14c517541fac3d9069e82fb3ee2fc99a10/tutorials/io/saving_games.rst"
+      ],
+      "sha256": "b4e8b1662e3c810d1a1f9f854de872fd278ed073d4c899712542dbd459514162",
+      "sizeBytes": 15073
+    },
+    {
+      "id": "vendor-godot-manual-exporting-for-android",
+      "title": "Godot Manual \u2014 exporting_for_android.rst",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "development/vendor/godot-manual/tutorials/export/exporting_for_android.rst",
+      "summary": "Pinned primary-source reference. Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "tags": [
+        "offline",
+        "primary-source",
+        "godot-manual"
+      ],
+      "verification": "Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "status": "vendored",
+      "origin": "https://github.com/godotengine/godot-docs@33e08e14c517541fac3d9069e82fb3ee2fc99a10",
+      "license": "CC-BY-3.0",
+      "licenseFile": "development/vendor/godot-manual/LICENSE.txt",
+      "officialSources": [
+        "https://raw.githubusercontent.com/godotengine/godot-docs/33e08e14c517541fac3d9069e82fb3ee2fc99a10/tutorials/export/exporting_for_android.rst"
+      ],
+      "sha256": "aa509b5b79a8130c2f05b57010ef00b76526b56b67e30cfb36ea5a10c6baa6ea",
+      "sizeBytes": 9182
+    },
+    {
+      "id": "vendor-normalize-css-normalize",
+      "title": "Normalize Css \u2014 normalize.css",
+      "domains": [
+        "websites",
+        "userstyles",
+        "dependencies"
+      ],
+      "kind": "reference",
+      "path": "development/vendor/normalize-css/normalize.css",
+      "summary": "Pinned primary-source reference. Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "tags": [
+        "offline",
+        "primary-source",
+        "normalize-css"
+      ],
+      "verification": "Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "status": "vendored",
+      "origin": "https://github.com/necolas/normalize.css@fc091cce1534909334c1911709a39c22d406977b",
+      "license": "MIT",
+      "licenseFile": "development/vendor/normalize-css/LICENSE.md",
+      "officialSources": [
+        "https://raw.githubusercontent.com/necolas/normalize.css/fc091cce1534909334c1911709a39c22d406977b/normalize.css"
+      ],
+      "sha256": "580818700724d42d7fcc4979b0197971fca1c6d2e0286769237a0ac897df5512",
+      "sizeBytes": 6138
+    },
+    {
+      "id": "vendor-android-architecture-architecturelearningjourney",
+      "title": "Android Architecture \u2014 ArchitectureLearningJourney.md",
+      "domains": [
+        "android-apps",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "development/vendor/android-architecture/docs/ArchitectureLearningJourney.md",
+      "summary": "Pinned primary-source reference. Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "tags": [
+        "offline",
+        "primary-source",
+        "android-architecture"
+      ],
+      "verification": "Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "status": "vendored",
+      "origin": "https://github.com/android/nowinandroid@2982e63cb691ad49cd009aab43dc206fee6699c2",
+      "license": "Apache-2.0",
+      "licenseFile": "development/vendor/android-architecture/LICENSE",
+      "officialSources": [
+        "https://raw.githubusercontent.com/android/nowinandroid/2982e63cb691ad49cd009aab43dc206fee6699c2/docs/ArchitectureLearningJourney.md"
+      ],
+      "sha256": "08e096c1067ef6cf92cc118793e81454ff9fb8ee11964013277b5fdb6c90517b",
+      "sizeBytes": 14281
+    },
+    {
+      "id": "vendor-android-architecture-modularizationlearningjourney",
+      "title": "Android Architecture \u2014 ModularizationLearningJourney.md",
+      "domains": [
+        "android-apps",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "development/vendor/android-architecture/docs/ModularizationLearningJourney.md",
+      "summary": "Pinned primary-source reference. Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "tags": [
+        "offline",
+        "primary-source",
+        "android-architecture"
+      ],
+      "verification": "Exact source bytes retained with license and SHA-256. Readable text subset; external images, includes and links are not mirrored. Code and target engines were not executed.",
+      "status": "vendored",
+      "origin": "https://github.com/android/nowinandroid@2982e63cb691ad49cd009aab43dc206fee6699c2",
+      "license": "Apache-2.0",
+      "licenseFile": "development/vendor/android-architecture/LICENSE",
+      "officialSources": [
+        "https://raw.githubusercontent.com/android/nowinandroid/2982e63cb691ad49cd009aab43dc206fee6699c2/docs/ModularizationLearningJourney.md"
+      ],
+      "sha256": "1beb4673b2535ee5c8bb651b4410f8de91e59c6f476ab0447fabdb14ed6e2bc9",
+      "sizeBytes": 10615
+    },
+    {
+      "id": "godot-physics-manual-tutorials-physics-soft-body-rst",
+      "title": "godot-physics-manual \u2014 tutorials/physics/soft_body.rst",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/godot-physics-manual/tutorials/physics/soft_body.rst",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "godot-physics-manual"
+      ],
+      "verification": "Exact pinned source bytes retained. Text subset only; external images/includes are not mirrored. No engine or addon code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/godotengine/godot-docs@9adca4c1c72917bfe1b7be3108abed5ce26696a6",
+      "license": "CC-BY-3.0",
+      "licenseFile": "godot/physics/vendor/godot-physics-manual/LICENSE.txt",
+      "officialSources": [
+        "https://raw.githubusercontent.com/godotengine/godot-docs/9adca4c1c72917bfe1b7be3108abed5ce26696a6/tutorials/physics/soft_body.rst"
+      ],
+      "sha256": "27f501dfda42fe4ab9fde1d219781edc86487528f03d6902296f7f1fdd80895d",
+      "sizeBytes": 8513
+    },
+    {
+      "id": "godot-physics-manual-tutorials-physics-ragdoll-system-rst",
+      "title": "godot-physics-manual \u2014 tutorials/physics/ragdoll_system.rst",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/godot-physics-manual/tutorials/physics/ragdoll_system.rst",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "godot-physics-manual"
+      ],
+      "verification": "Exact pinned source bytes retained. Text subset only; external images/includes are not mirrored. No engine or addon code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/godotengine/godot-docs@9adca4c1c72917bfe1b7be3108abed5ce26696a6",
+      "license": "CC-BY-3.0",
+      "licenseFile": "godot/physics/vendor/godot-physics-manual/LICENSE.txt",
+      "officialSources": [
+        "https://raw.githubusercontent.com/godotengine/godot-docs/9adca4c1c72917bfe1b7be3108abed5ce26696a6/tutorials/physics/ragdoll_system.rst"
+      ],
+      "sha256": "db4e9a6eef93cd2769d4fc19c3f9d0364987a0920eae29b6a58420b74c3be4f4",
+      "sizeBytes": 12190
+    },
+    {
+      "id": "godot-physics-manual-tutorials-physics-using-jolt-physics-rst",
+      "title": "godot-physics-manual \u2014 tutorials/physics/using_jolt_physics.rst",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/godot-physics-manual/tutorials/physics/using_jolt_physics.rst",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "godot-physics-manual"
+      ],
+      "verification": "Exact pinned source bytes retained. Text subset only; external images/includes are not mirrored. No engine or addon code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/godotengine/godot-docs@9adca4c1c72917bfe1b7be3108abed5ce26696a6",
+      "license": "CC-BY-3.0",
+      "licenseFile": "godot/physics/vendor/godot-physics-manual/LICENSE.txt",
+      "officialSources": [
+        "https://raw.githubusercontent.com/godotengine/godot-docs/9adca4c1c72917bfe1b7be3108abed5ce26696a6/tutorials/physics/using_jolt_physics.rst"
+      ],
+      "sha256": "d18a89d8ce2ba3f56f15744ee6477ad6c75fbff5c2dd081c957db26577422dc0",
+      "sizeBytes": 15211
+    },
+    {
+      "id": "godot-physics-manual-tutorials-physics-interpolation-advanced-physics-interpolation-rst",
+      "title": "godot-physics-manual \u2014 tutorials/physics/interpolation/advanced_physics_interpolation.rst",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/godot-physics-manual/tutorials/physics/interpolation/advanced_physics_interpolation.rst",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "godot-physics-manual"
+      ],
+      "verification": "Exact pinned source bytes retained. Text subset only; external images/includes are not mirrored. No engine or addon code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/godotengine/godot-docs@9adca4c1c72917bfe1b7be3108abed5ce26696a6",
+      "license": "CC-BY-3.0",
+      "licenseFile": "godot/physics/vendor/godot-physics-manual/LICENSE.txt",
+      "officialSources": [
+        "https://raw.githubusercontent.com/godotengine/godot-docs/9adca4c1c72917bfe1b7be3108abed5ce26696a6/tutorials/physics/interpolation/advanced_physics_interpolation.rst"
+      ],
+      "sha256": "6a670a213245e7d9949c29bff97b58bbf95123142d85141d045785afc61ba73d",
+      "sizeBytes": 8735
+    },
+    {
+      "id": "godot-physics-manual-tutorials-physics-physics-introduction-rst",
+      "title": "godot-physics-manual \u2014 tutorials/physics/physics_introduction.rst",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/godot-physics-manual/tutorials/physics/physics_introduction.rst",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "godot-physics-manual"
+      ],
+      "verification": "Exact pinned source bytes retained. Text subset only; external images/includes are not mirrored. No engine or addon code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/godotengine/godot-docs@9adca4c1c72917bfe1b7be3108abed5ce26696a6",
+      "license": "CC-BY-3.0",
+      "licenseFile": "godot/physics/vendor/godot-physics-manual/LICENSE.txt",
+      "officialSources": [
+        "https://raw.githubusercontent.com/godotengine/godot-docs/9adca4c1c72917bfe1b7be3108abed5ce26696a6/tutorials/physics/physics_introduction.rst"
+      ],
+      "sha256": "54abe974f3a48b5e6e436f4c1113c568643af7db44ce4593f672fc29a19c850b",
+      "sizeBytes": 21283
+    },
+    {
+      "id": "godot-physics-api-doc-classes-rigidbody3d-xml",
+      "title": "godot-physics-api \u2014 doc/classes/RigidBody3D.xml",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/godot-physics-api/doc/classes/RigidBody3D.xml",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "godot-physics-api"
+      ],
+      "verification": "Exact pinned source bytes retained. Text subset only; external images/includes are not mirrored. No engine or addon code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/godotengine/godot@ed1daf0bf001b61586d9930840f2f1394092c079",
+      "license": "MIT",
+      "licenseFile": "godot/physics/vendor/godot-physics-api/LICENSE.txt",
+      "officialSources": [
+        "https://raw.githubusercontent.com/godotengine/godot/ed1daf0bf001b61586d9930840f2f1394092c079/doc/classes/RigidBody3D.xml"
+      ],
+      "sha256": "c5b666b642d1f40b70c25a255e09936626fc340e6bbb69ee7fffcf99ec2e211f",
+      "sizeBytes": 23453
+    },
+    {
+      "id": "godot-physics-api-doc-classes-vehiclebody3d-xml",
+      "title": "godot-physics-api \u2014 doc/classes/VehicleBody3D.xml",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/godot-physics-api/doc/classes/VehicleBody3D.xml",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "godot-physics-api"
+      ],
+      "verification": "Exact pinned source bytes retained. Text subset only; external images/includes are not mirrored. No engine or addon code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/godotengine/godot@ed1daf0bf001b61586d9930840f2f1394092c079",
+      "license": "MIT",
+      "licenseFile": "godot/physics/vendor/godot-physics-api/LICENSE.txt",
+      "officialSources": [
+        "https://raw.githubusercontent.com/godotengine/godot/ed1daf0bf001b61586d9930840f2f1394092c079/doc/classes/VehicleBody3D.xml"
+      ],
+      "sha256": "91ccfa733677ac72899a3a5da85b16a958467729bbad0fe887a4ddb2b252acf8",
+      "sizeBytes": 3614
+    },
+    {
+      "id": "godot-physics-api-doc-classes-softbody3d-xml",
+      "title": "godot-physics-api \u2014 doc/classes/SoftBody3D.xml",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/godot-physics-api/doc/classes/SoftBody3D.xml",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "godot-physics-api"
+      ],
+      "verification": "Exact pinned source bytes retained. Text subset only; external images/includes are not mirrored. No engine or addon code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/godotengine/godot@ed1daf0bf001b61586d9930840f2f1394092c079",
+      "license": "MIT",
+      "licenseFile": "godot/physics/vendor/godot-physics-api/LICENSE.txt",
+      "officialSources": [
+        "https://raw.githubusercontent.com/godotengine/godot/ed1daf0bf001b61586d9930840f2f1394092c079/doc/classes/SoftBody3D.xml"
+      ],
+      "sha256": "d184b6ab4cfce395dbdd291a14fea0b37aa6b5610d389f6bf0bd9a9d602e4cba",
+      "sizeBytes": 10391
+    },
+    {
+      "id": "godot-physics-api-doc-classes-physicalbone3d-xml",
+      "title": "godot-physics-api \u2014 doc/classes/PhysicalBone3D.xml",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/godot-physics-api/doc/classes/PhysicalBone3D.xml",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "godot-physics-api"
+      ],
+      "verification": "Exact pinned source bytes retained. Text subset only; external images/includes are not mirrored. No engine or addon code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/godotengine/godot@ed1daf0bf001b61586d9930840f2f1394092c079",
+      "license": "MIT",
+      "licenseFile": "godot/physics/vendor/godot-physics-api/LICENSE.txt",
+      "officialSources": [
+        "https://raw.githubusercontent.com/godotengine/godot/ed1daf0bf001b61586d9930840f2f1394092c079/doc/classes/PhysicalBone3D.xml"
+      ],
+      "sha256": "a75202fdfc95bb46d527dc11565d86ffc26b58ad625b3081008cf5de1f3a2255",
+      "sizeBytes": 9482
+    },
+    {
+      "id": "godot-physics-api-doc-classes-physicalbonesimulator3d-xml",
+      "title": "godot-physics-api \u2014 doc/classes/PhysicalBoneSimulator3D.xml",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/godot-physics-api/doc/classes/PhysicalBoneSimulator3D.xml",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "godot-physics-api"
+      ],
+      "verification": "Exact pinned source bytes retained. Text subset only; external images/includes are not mirrored. No engine or addon code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/godotengine/godot@ed1daf0bf001b61586d9930840f2f1394092c079",
+      "license": "MIT",
+      "licenseFile": "godot/physics/vendor/godot-physics-api/LICENSE.txt",
+      "officialSources": [
+        "https://raw.githubusercontent.com/godotengine/godot/ed1daf0bf001b61586d9930840f2f1394092c079/doc/classes/PhysicalBoneSimulator3D.xml"
+      ],
+      "sha256": "9f02e9b91f8c99aebd7e8020163978c89810fd09fa6621dbdc6cc8153480a9bc",
+      "sizeBytes": 1962
+    },
+    {
+      "id": "godot-physics-api-doc-classes-collisionobject3d-xml",
+      "title": "godot-physics-api \u2014 doc/classes/CollisionObject3D.xml",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/godot-physics-api/doc/classes/CollisionObject3D.xml",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "godot-physics-api"
+      ],
+      "verification": "Exact pinned source bytes retained. Text subset only; external images/includes are not mirrored. No engine or addon code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/godotengine/godot@ed1daf0bf001b61586d9930840f2f1394092c079",
+      "license": "MIT",
+      "licenseFile": "godot/physics/vendor/godot-physics-api/LICENSE.txt",
+      "officialSources": [
+        "https://raw.githubusercontent.com/godotengine/godot/ed1daf0bf001b61586d9930840f2f1394092c079/doc/classes/CollisionObject3D.xml"
+      ],
+      "sha256": "8df8abf328c2f4c2e2d651655d0b7ef05d670290d8c1216abdd4f3cab70b58ba",
+      "sizeBytes": 13259
+    },
+    {
+      "id": "godot-rapier-readme-md",
+      "title": "godot-rapier \u2014 README.md",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/godot-rapier/README.md",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "godot-rapier"
+      ],
+      "verification": "Exact pinned source bytes retained. Partial reference subset only; not a complete installable addon or dependency graph. No code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/appsinacup/godot-rapier-physics@7bd25b62de20078419f059e6a157df5ded350902",
+      "license": "MIT",
+      "licenseFile": "godot/physics/vendor/godot-rapier/LICENSE",
+      "officialSources": [
+        "https://raw.githubusercontent.com/appsinacup/godot-rapier-physics/7bd25b62de20078419f059e6a157df5ded350902/README.md"
+      ],
+      "sha256": "5f0a88248955e0e6de34647bf9c9bf13d29af6bf9b7af3c62303c3e27b1194c7",
+      "sizeBytes": 9639
+    },
+    {
+      "id": "godot-rapier-architecture-md",
+      "title": "godot-rapier \u2014 ARCHITECTURE.md",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/godot-rapier/ARCHITECTURE.md",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "godot-rapier"
+      ],
+      "verification": "Exact pinned source bytes retained. Partial reference subset only; not a complete installable addon or dependency graph. No code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/appsinacup/godot-rapier-physics@7bd25b62de20078419f059e6a157df5ded350902",
+      "license": "MIT",
+      "licenseFile": "godot/physics/vendor/godot-rapier/LICENSE",
+      "officialSources": [
+        "https://raw.githubusercontent.com/appsinacup/godot-rapier-physics/7bd25b62de20078419f059e6a157df5ded350902/ARCHITECTURE.md"
+      ],
+      "sha256": "281a00031781c830e148ae45af91726f68749ac12e2aa4f20a5782e249e3a0d5",
+      "sizeBytes": 3443
+    },
+    {
+      "id": "verlet-rope-readme-md",
+      "title": "verlet-rope \u2014 README.md",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/verlet-rope/README.md",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "verlet-rope"
+      ],
+      "verification": "Exact pinned source bytes retained. Partial reference subset only; not a complete installable addon or dependency graph. No code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/Tshmofen/verlet-rope-4@adc5ec5884d5e04bc09bda262c0e28543f83878a",
+      "license": "MIT",
+      "licenseFile": "godot/physics/vendor/verlet-rope/LICENSE",
+      "officialSources": [
+        "https://raw.githubusercontent.com/Tshmofen/verlet-rope-4/adc5ec5884d5e04bc09bda262c0e28543f83878a/README.md"
+      ],
+      "sha256": "0dd81e01146d8afe35f0d4d5a8f7c54ab50ef9c17841a8824d5b6887903e5d57",
+      "sizeBytes": 6009
+    },
+    {
+      "id": "verlet-rope-addons-verlet-rope-4-physics-verletropesimulated-cs",
+      "title": "verlet-rope \u2014 addons/verlet_rope_4/Physics/VerletRopeSimulated.cs",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/verlet-rope/addons/verlet_rope_4/Physics/VerletRopeSimulated.cs",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "verlet-rope"
+      ],
+      "verification": "Exact pinned source bytes retained. Partial reference subset only; not a complete installable addon or dependency graph. No code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/Tshmofen/verlet-rope-4@adc5ec5884d5e04bc09bda262c0e28543f83878a",
+      "license": "MIT",
+      "licenseFile": "godot/physics/vendor/verlet-rope/LICENSE",
+      "officialSources": [
+        "https://raw.githubusercontent.com/Tshmofen/verlet-rope-4/adc5ec5884d5e04bc09bda262c0e28543f83878a/addons/verlet_rope_4/Physics/VerletRopeSimulated.cs"
+      ],
+      "sha256": "be1c1221ee6beb6db2ffe74b01d185b9f56a0a7b6f2d0f51e3502a3a04a6379d",
+      "sizeBytes": 27201
+    },
+    {
+      "id": "verlet-rope-addons-verlet-rope-4-physics-verletroperigid-cs",
+      "title": "verlet-rope \u2014 addons/verlet_rope_4/Physics/VerletRopeRigid.cs",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/verlet-rope/addons/verlet_rope_4/Physics/VerletRopeRigid.cs",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "verlet-rope"
+      ],
+      "verification": "Exact pinned source bytes retained. Partial reference subset only; not a complete installable addon or dependency graph. No code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/Tshmofen/verlet-rope-4@adc5ec5884d5e04bc09bda262c0e28543f83878a",
+      "license": "MIT",
+      "licenseFile": "godot/physics/vendor/verlet-rope/LICENSE",
+      "officialSources": [
+        "https://raw.githubusercontent.com/Tshmofen/verlet-rope-4/adc5ec5884d5e04bc09bda262c0e28543f83878a/addons/verlet_rope_4/Physics/VerletRopeRigid.cs"
+      ],
+      "sha256": "211f00eaa83aa791b8423d44076580e0e1b86a634616ad359ac2120b2232d0e9",
+      "sizeBytes": 14439
+    },
+    {
+      "id": "ocean3d-lite-readme-md",
+      "title": "ocean3d-lite \u2014 README.md",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/ocean3d-lite/README.md",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "ocean3d-lite"
+      ],
+      "verification": "Exact pinned source bytes retained. Partial reference subset only; not a complete installable addon or dependency graph. No code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/Ocean3D-Org/ocean3d-lite@dd5306329a9b72e341fe5930ee8f36f8b70d59b0",
+      "license": "MIT",
+      "licenseFile": "godot/physics/vendor/ocean3d-lite/LICENSE.md",
+      "officialSources": [
+        "https://raw.githubusercontent.com/Ocean3D-Org/ocean3d-lite/dd5306329a9b72e341fe5930ee8f36f8b70d59b0/README.md"
+      ],
+      "sha256": "d53560e82a5bda6991f14eb2b2c15895ac0d0748701bab82a7b235e9c6960f8c",
+      "sizeBytes": 1537
+    },
+    {
+      "id": "ocean3d-lite-addons-ocean3d-lite-floating-body-gd",
+      "title": "ocean3d-lite \u2014 addons/ocean3d_lite/floating_body.gd",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/ocean3d-lite/addons/ocean3d_lite/floating_body.gd",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "ocean3d-lite"
+      ],
+      "verification": "Exact pinned source bytes retained. Partial reference subset only; not a complete installable addon or dependency graph. No code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/Ocean3D-Org/ocean3d-lite@dd5306329a9b72e341fe5930ee8f36f8b70d59b0",
+      "license": "MIT",
+      "licenseFile": "godot/physics/vendor/ocean3d-lite/LICENSE.md",
+      "officialSources": [
+        "https://raw.githubusercontent.com/Ocean3D-Org/ocean3d-lite/dd5306329a9b72e341fe5930ee8f36f8b70d59b0/addons/ocean3d_lite/floating_body.gd"
+      ],
+      "sha256": "8c286e62fd13192154155fd9beb75fdf746b504374f14576d94814c64b85c224",
+      "sizeBytes": 4862
+    },
+    {
+      "id": "openfairway-addons-openfairway-readme-md",
+      "title": "openfairway \u2014 addons/openfairway/README.md",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/openfairway/addons/openfairway/README.md",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "openfairway"
+      ],
+      "verification": "Exact pinned source bytes retained. Partial reference subset only; not a complete installable addon or dependency graph. No code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/digitalhand/openfairway@4f3e11be005e7fd118fd0ae6946a85eed4bed8bb",
+      "license": "MIT",
+      "licenseFile": "godot/physics/vendor/openfairway/LICENSE",
+      "officialSources": [
+        "https://raw.githubusercontent.com/digitalhand/openfairway/4f3e11be005e7fd118fd0ae6946a85eed4bed8bb/addons/openfairway/README.md"
+      ],
+      "sha256": "605944619aacacd2432a3e094160100f4b326e1b19ef4583abe284c8b2f455d3",
+      "sizeBytes": 26450
+    },
+    {
+      "id": "openfairway-addons-openfairway-physics-aerodynamics-cs",
+      "title": "openfairway \u2014 addons/openfairway/physics/Aerodynamics.cs",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/openfairway/addons/openfairway/physics/Aerodynamics.cs",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "openfairway"
+      ],
+      "verification": "Exact pinned source bytes retained. Partial reference subset only; not a complete installable addon or dependency graph. No code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/digitalhand/openfairway@4f3e11be005e7fd118fd0ae6946a85eed4bed8bb",
+      "license": "MIT",
+      "licenseFile": "godot/physics/vendor/openfairway/LICENSE",
+      "officialSources": [
+        "https://raw.githubusercontent.com/digitalhand/openfairway/4f3e11be005e7fd118fd0ae6946a85eed4bed8bb/addons/openfairway/physics/Aerodynamics.cs"
+      ],
+      "sha256": "392df44dd602ff4cdb034caee4333e555d28109499a60a920460e8ed203d74ad",
+      "sizeBytes": 4282
+    },
+    {
+      "id": "openfairway-addons-openfairway-physics-bouncecalculator-cs",
+      "title": "openfairway \u2014 addons/openfairway/physics/BounceCalculator.cs",
+      "domains": [
+        "pc-games",
+        "android-games"
+      ],
+      "kind": "reference",
+      "path": "godot/physics/vendor/openfairway/addons/openfairway/physics/BounceCalculator.cs",
+      "summary": "Pinned licensed physics reference subset; not an installed or runtime-verified addon.",
+      "tags": [
+        "godot",
+        "physics",
+        "offline",
+        "openfairway"
+      ],
+      "verification": "Exact pinned source bytes retained. Partial reference subset only; not a complete installable addon or dependency graph. No code executed.",
+      "status": "vendored",
+      "origin": "https://github.com/digitalhand/openfairway@4f3e11be005e7fd118fd0ae6946a85eed4bed8bb",
+      "license": "MIT",
+      "licenseFile": "godot/physics/vendor/openfairway/LICENSE",
+      "officialSources": [
+        "https://raw.githubusercontent.com/digitalhand/openfairway/4f3e11be005e7fd118fd0ae6946a85eed4bed8bb/addons/openfairway/physics/BounceCalculator.cs"
+      ],
+      "sha256": "498dea31d4c689bd2a1294ab41df42ae019ecc8ae98dd2a82a3c68bbff92ef69",
+      "sizeBytes": 23220
+    }
+  ]
+}

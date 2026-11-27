@@ -1,0 +1,15 @@
+{
+  "repo": "SeanShaffer88/DevTools",
+  "domain": "av-scrub-index",
+  "mergedFrom": "SeanShaffer88/av-scrub-index",
+  "location": "av-scrub-index/",
+  "merged": "2026-11-23",
+  "purpose": "Machine-readable dataset of official AV/EDR/XDR uninstall and scrub utilities: vendor removal tools, direct download URLs, silent/force arguments, Safe Mode notes, with a JSON schema.",
+  "startHere": [
+    "README.md",
+    "dist/index.json",
+    "data/schema/uninstaller.schema.json"
+  ],
+  "files": 45,
+  "note": "Copied in full from the live source repo during the 2026-11-23 audit of all owned repos. The source repo was archived on GitHub on 2026-11-23, after this copy was verified."
+}

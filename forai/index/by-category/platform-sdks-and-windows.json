@@ -1,0 +1,555 @@
+[
+ {
+  "resource_id": "res-windows-sdk-eb3cb2b29617",
+  "name": "Windows SDK",
+  "url": "https://learn.microsoft.com/en-us/windows/apps/windows-sdk/",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Win32 and WinRT headers, libraries and build tools; choose the target OS and SDK deliberately.",
+  "resource_type": "documentation",
+  "topics": [
+   "api-integration",
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-windows-app-sdk-7a6c5840b01b",
+  "name": "Windows App SDK",
+  "url": "https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Modern Windows application APIs; check deployment model and runtime requirements.",
+  "resource_type": "documentation",
+  "topics": [
+   "api-integration",
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-win32-api-9dbecd4dfc7e",
+  "name": "Win32 API",
+  "url": "https://learn.microsoft.com/en-us/windows/win32/api/",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Native Windows platform reference, including COM and system services.",
+  "resource_type": "documentation",
+  "topics": [
+   "api-integration",
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-wdk-ebee780a015c",
+  "name": "WDK",
+  "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Driver development, signing and debugging; requires a dedicated compatibility plan.",
+  "resource_type": "documentation",
+  "topics": [
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-net-160e31ae9b61",
+  "name": ".NET",
+  "url": "https://learn.microsoft.com/en-us/dotnet/",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Managed runtime, C#, base libraries and application frameworks.",
+  "resource_type": "documentation",
+  "topics": [
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-asp-net-core-ada99bbb255d",
+  "name": "ASP.NET Core",
+  "url": "https://learn.microsoft.com/en-us/aspnet/core/",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "HTTP APIs, authentication, web applications and real-time services.",
+  "resource_type": "documentation",
+  "topics": [
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-webview2-263b309e1f44",
+  "name": "WebView2",
+  "url": "https://learn.microsoft.com/en-us/microsoft-edge/webview2/",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Embed Edge web content; account for runtime distribution and host boundaries.",
+  "resource_type": "documentation",
+  "topics": [
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-powershell-sdk-0163a76a3564",
+  "name": "PowerShell SDK",
+  "url": "https://learn.microsoft.com/en-us/powershell/scripting/developer/",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Automation modules and hosting PowerShell within applications.",
+  "resource_type": "documentation",
+  "topics": [
+   "api-integration",
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-windows-ui-automation-f4153420cd22",
+  "name": "Windows UI Automation",
+  "url": "https://learn.microsoft.com/en-us/windows/win32/winauto/entry-uiauto-win32",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Accessibility and application automation through supported control patterns.",
+  "resource_type": "documentation",
+  "topics": [
+   "accessibility",
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-microsoft-sysinternals-ce2b9d1ab120",
+  "name": "Microsoft Sysinternals",
+  "url": "https://learn.microsoft.com/en-us/sysinternals/",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Process, filesystem and system diagnostics.",
+  "resource_type": "documentation",
+  "topics": [
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-windbg-7d52570c1184",
+  "name": "WinDbg",
+  "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Native crash dumps, symbols and kernel or user-mode debugging.",
+  "resource_type": "documentation",
+  "topics": [
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-wsl-f36ac584eaac",
+  "name": "WSL",
+  "url": "https://learn.microsoft.com/en-us/windows/wsl/",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Linux development environment on Windows; distinguish host and guest paths.",
+  "resource_type": "documentation",
+  "topics": [
+   "linux",
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "linux",
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-windows-job-objects-e47af6dfc945",
+  "name": "Windows Job Objects",
+  "url": "https://learn.microsoft.com/en-us/windows/win32/procthread/job-objects",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Windows process-tree lifetime and resource limits; suspended creation plus assignment prevents child escape before containment. Kill-on-close stops owned descendants; persistent build daemons need explicit handling.",
+  "resource_type": "documentation",
+  "topics": [
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-winhttp-request-and-redirect-options-ab1fdc3053a3",
+  "name": "WinHTTP request and redirect options",
+  "url": "https://learn.microsoft.com/en-us/windows/win32/winhttp/option-flags",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Configure WinHTTP redirect, timeout and request options. Check option-setting return values; TLS downgrade refusal does not establish publisher authenticity or freshness.",
+  "resource_type": "documentation",
+  "topics": [
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-microsoft-visual-c-runtime-deployment-13d985642cb0",
+  "name": "Microsoft Visual C++ runtime deployment",
+  "url": "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Identify supported MSVC runtime packages and architecture/version requirements from Microsoft. Preserve redistribution terms; do not obtain individual runtime DLLs from arbitrary sites.",
+  "resource_type": "documentation",
+  "topics": [
+   "architecture",
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-micaforeveryone-0f6b087f3bc8",
+  "name": "MicaForEveryone",
+  "url": "https://github.com/MicaForEveryone/MicaForEveryone",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Mica For Everyone is a tool to enable backdrop effects on the title bars of Win32 apps on Windows 11.",
+  "resource_type": "repository",
+  "topics": [
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-winsafe-79e2d90bbe1a",
+  "name": "winsafe",
+  "url": "https://github.com/rodrigocfd/winsafe",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Windows API and GUI in safe, idiomatic Rust.",
+  "resource_type": "repository",
+  "topics": [
+   "api-integration",
+   "rust",
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [
+   "rust"
+  ],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-windigo-85817397c637",
+  "name": "windigo",
+  "url": "https://github.com/rodrigocfd/windigo",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Windows API and GUI in idiomatic Go.",
+  "resource_type": "repository",
+  "topics": [
+   "api-integration",
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-workspacer-8330829fb30e",
+  "name": "workspacer",
+  "url": "https://github.com/workspacer/workspacer",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "a tiling window manager for Windows.",
+  "resource_type": "repository",
+  "topics": [
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-swift-win32-ac7ecca2a8a4",
+  "name": "swift win32",
+  "url": "https://github.com/compnerd/swift-win32",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "A Windows application framework for Swift.",
+  "resource_type": "repository",
+  "topics": [
+   "swift",
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [
+   "swift"
+  ],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-qwindowkit-06139a8dad6d",
+  "name": "qwindowkit",
+  "url": "https://github.com/stdware/qwindowkit",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Cross-platform frameless window framework for Qt. Support Windows, macOS, Linux.",
+  "resource_type": "repository",
+  "topics": [
+   "desktop",
+   "linux",
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "linux",
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-nappgui-src-fcd25f55269e",
+  "name": "nappgui src",
+  "url": "https://github.com/frang75/nappgui_src",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "SDK for building cross-platform desktop apps in ANSI-C.",
+  "resource_type": "repository",
+  "topics": [
+   "api-integration",
+   "desktop",
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-files-80f7665b30ef",
+  "name": "Files",
+  "url": "https://github.com/files-community/Files",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "A modern file manager that helps users organize their files and folders.",
+  "resource_type": "repository",
+  "topics": [
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-calculator-22fe1f37e77b",
+  "name": "calculator",
+  "url": "https://github.com/microsoft/calculator",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Windows Calculator: A simple yet powerful calculator that ships with Windows.",
+  "resource_type": "repository",
+  "topics": [
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-fluentui-system-icons-5ed4e4ce3ace",
+  "name": "fluentui system icons",
+  "url": "https://github.com/microsoft/fluentui-system-icons",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Fluent System Icons are a collection of familiar, friendly and modern icons from Microsoft.",
+  "resource_type": "repository",
+  "topics": [
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-windows-ui-composition-win32-samples-3bec30f0babc",
+  "name": "Windows.UI.Composition Win32 Samples",
+  "url": "https://github.com/microsoft/Windows.UI.Composition-Win32-Samples",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "Windows.UI.Composition Win32 Samples.",
+  "resource_type": "repository",
+  "topics": [
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-devhome-d571cd895ca6",
+  "name": "DevHome",
+  "url": "https://github.com/microsoft/devhome",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "The new Dev Home experience for Windows!",
+  "resource_type": "repository",
+  "topics": [
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ },
+ {
+  "resource_id": "res-autohotkey-6ff533a2f91a",
+  "name": "AutoHotkey",
+  "url": "https://github.com/AutoHotkey/AutoHotkey",
+  "category_id": "platform-sdks-and-windows",
+  "purpose": "AutoHotkey - macro-creation and automation-oriented scripting utility for Windows. GPL-2.0: derivative works must stay under the GPL.",
+  "resource_type": "repository",
+  "topics": [
+   "windows"
+  ],
+  "use_cases": [
+   "build-or-debug-platform-software",
+   "implement-with-a-language-or-sdk"
+  ],
+  "languages": [],
+  "platforms": [
+   "windows"
+  ]
+ }
+]

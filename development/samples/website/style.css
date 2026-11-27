@@ -1,0 +1,1 @@
+body { font: 1rem system-ui, sans-serif; background: #f5f6f8; color: #172033; margin: 2rem; } main { max-width: 36rem; } button { font: inherit; padding: .75rem 1.5rem; border: 2px solid currentColor; border-radius: .4rem; background: #2758ac; color: white; } button:focus-visible { outline: 3px solid #172033; outline-offset: 3px; }

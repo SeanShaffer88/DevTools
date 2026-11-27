@@ -1,0 +1,741 @@
+{
+  "schemaVersion": 1,
+  "catalogSha256": "58b1b4cfb6044cdd336ed963ebda6767455d413aef2d4b5bee20a2074981a504",
+  "files": [
+    {
+      "id": "windows-windows-md",
+      "path": "development/guides/windows.md",
+      "sizeBytes": 3351,
+      "sha256": "99bd3f7ef5f2b90d0333a78f98b2675a35af0800248a300458ffb29ecffada4d",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "windows-quality-contract-md",
+      "path": "development/templates/windows/quality-contract.md",
+      "sizeBytes": 1246,
+      "sha256": "24a7d3a97ac3afce284c61def2ee3425012ae1770d1bc33f5bc075d8a25b97e0",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "android-apps-android-apps-md",
+      "path": "development/guides/android-apps.md",
+      "sizeBytes": 3031,
+      "sha256": "a6405521a5bf1ebfa67482ad58566f05b3e19789ffcfa507ae26e3314a23d5a8",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "android-apps-acceptance-md",
+      "path": "development/templates/android-apps/acceptance.md",
+      "sizeBytes": 1300,
+      "sha256": "3217aca5a311b3d9f484211a71e0abad44a78d3d6de4b96bdb8e9fd762b8fdbb",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "android-games-android-games-md",
+      "path": "development/guides/android-games.md",
+      "sizeBytes": 3057,
+      "sha256": "03d021f31ea0901c60c6cfaa1bbf7871b4c50ffe8597e6397a0383032087866a",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "android-games-acceptance-md",
+      "path": "development/templates/android-games/acceptance.md",
+      "sizeBytes": 1141,
+      "sha256": "22f2170957446b874b5e24120fe7e72451d3cf6de763cb1ffcd3d888762bb2ae",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "websites-websites-md",
+      "path": "development/guides/websites.md",
+      "sizeBytes": 3166,
+      "sha256": "0e0cef05b7fe40cebdfef9087a120e75b4c88c699bc1ef0b5b003605d1d8de57",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "websites-app-js",
+      "path": "development/templates/websites/app.js",
+      "sizeBytes": 611,
+      "sha256": "ac16a1c11ce076ac53ea3ad6c8cd40dcb611304d794422aed8186346552626c2",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "websites-index-html",
+      "path": "development/templates/websites/index.html",
+      "sizeBytes": 802,
+      "sha256": "259a62ac4147be8677660804663398f0b807c4a66862e3e7bdc8ea185ddcf471",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "websites-style-css",
+      "path": "development/templates/websites/style.css",
+      "sizeBytes": 538,
+      "sha256": "fa1637f773809672784743fadf5a109badbef0db67a999a9027637ba6ecb33f2",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "pc-games-pc-games-md",
+      "path": "development/guides/pc-games.md",
+      "sizeBytes": 3263,
+      "sha256": "580ac2b2ab5c28845a5e65e6e913faaf81ce9a26ebd922ac3beaaa71809336d5",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "pc-games-save-json",
+      "path": "development/templates/pc-games/save.json",
+      "sizeBytes": 34,
+      "sha256": "ba0e9265c603b36c31bbe63eab43c6538249ea243e5ef6f97afad187f0b58a65",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "pc-games-save-schema-json",
+      "path": "development/templates/pc-games/save.schema.json",
+      "sizeBytes": 402,
+      "sha256": "98618094ab0e5442b369e7b171114af3f36e2dcf36136417f6c5640aee65c93f",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "userscripts-userscripts-md",
+      "path": "development/guides/userscripts.md",
+      "sizeBytes": 3223,
+      "sha256": "68bf3c94c40691c071b4324ea83f1fa47192ca91f287ef0a1ee8ff9fe6d3f9ae",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "userscripts-example-user-js",
+      "path": "development/templates/userscripts/example.user.js",
+      "sizeBytes": 978,
+      "sha256": "f0673b5575bf691e90128841344e08783030bb5dac82fe497630318e9df0e342",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "userstyles-userstyles-md",
+      "path": "development/guides/userstyles.md",
+      "sizeBytes": 2942,
+      "sha256": "5fb6e8276c05c7296aa736a20e9fb28d809a58b0454849a4e899ce2792f0df92",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "userstyles-example-user-css",
+      "path": "development/templates/userstyles/example.user.css",
+      "sizeBytes": 548,
+      "sha256": "22943e81773d60e7f7b013e411f66182b205f0f5290b7f87dff234c764f8a3c2",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "dependencies-dependencies-md",
+      "path": "development/guides/dependencies.md",
+      "sizeBytes": 3554,
+      "sha256": "fc5b1d007c0678a637d19ec7d42cdb7b36061eedb7637a308403a3611d424f5a",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "dependencies-acquisition-json",
+      "path": "development/templates/dependencies/acquisition.json",
+      "sizeBytes": 623,
+      "sha256": "cbf887637eee39019188b943eff549d5631b8f34db948e1e985eda53e6bd4222",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "dependency-readiness-recipes",
+      "path": "development/dependency-recipes.json",
+      "sizeBytes": 35163,
+      "sha256": "68180a992d4790d67d21d519e5deacaf3c6b7e0a9f251f6c37aa796930d2e9de",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "canonical-knowledge-docs-02-tiers-and-stacks-md",
+      "path": "knowledge/docs/02-tiers-and-stacks.md",
+      "sizeBytes": 2679,
+      "sha256": "ef0f69122ff3e13f541c3551f5e026f3822362bc38d81ed994b20a90a216301e",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-knowledge-docs-03-engineering-contract-md",
+      "path": "knowledge/docs/03-engineering-contract.md",
+      "sizeBytes": 1989,
+      "sha256": "ff71b9f049813b45a9c5955b8a64451dfb83fed4a90615b9211a7af31c61ba96",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-knowledge-docs-04-quality-gates-md",
+      "path": "knowledge/docs/04-quality-gates.md",
+      "sizeBytes": 3078,
+      "sha256": "74e1cbe691c728a259a8f3a362c72234fb6c5fb879ab98738da93e19af339701",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-knowledge-docs-05-guardrails-md",
+      "path": "knowledge/docs/05-guardrails.md",
+      "sizeBytes": 2861,
+      "sha256": "9f9c84393cb5b15b83478ca3c6c90e3b7cc2356b4da63443180db927761ec4cb",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-knowledge-docs-06-every-program-rules-md",
+      "path": "knowledge/docs/06-every-program-rules.md",
+      "sizeBytes": 3025,
+      "sha256": "70bef00be835935d55619f52fc9ddea49563cc95aea00bf2f363d5ff81115501",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-knowledge-docs-07-design-tesselgui-md",
+      "path": "knowledge/docs/07-design-tesselgui.md",
+      "sizeBytes": 2006,
+      "sha256": "7a6c267b354275134641a898a32140a4b96d484efef7c552cd90f005940db202",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-knowledge-docs-08-packaging-seanpak-md",
+      "path": "knowledge/docs/08-packaging-seanpak.md",
+      "sizeBytes": 2424,
+      "sha256": "89db97f7ea4290e113fd02c6bed16ee48519559b747993953fc1ea5cb8deb986",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-knowledge-docs-09-release-and-verification-md",
+      "path": "knowledge/docs/09-release-and-verification.md",
+      "sizeBytes": 2467,
+      "sha256": "e96a3bcee749aac5cdedfcb7614030cf4752fbb83785a83728da0cea66433506",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-windevkit-docs-catalog-md",
+      "path": "windevkit/docs/CATALOG.md",
+      "sizeBytes": 13440,
+      "sha256": "4a05c6603beb86a61cb24523b36e2392857de7f25c01da66f0d3038c17a065a3",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-portableapps-docs-07-end-to-end-workflow-md",
+      "path": "portableapps/docs/07-end-to-end-workflow.md",
+      "sizeBytes": 8309,
+      "sha256": "c910c39011e88bee9652f0ecb5d031289df29b5e586c07500517e35de96a3676",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-kotlin-docs-03-project-setup-gradle-and-tooling-md",
+      "path": "kotlin/docs/03-project-setup-gradle-and-tooling.md",
+      "sizeBytes": 7770,
+      "sha256": "21e6a7722ee184660ff5dd54be08700a9c6f9876ede3448ef4d11e7557f714f9",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-kotlin-docs-04-app-anatomy-lifecycle-and-components-md",
+      "path": "kotlin/docs/04-app-anatomy-lifecycle-and-components.md",
+      "sizeBytes": 7485,
+      "sha256": "3ed03957472637f0900335cf2952dc2550430ff97ce45b361695ba62aed7db37",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-kotlin-docs-05-jetpack-compose-ui-md",
+      "path": "kotlin/docs/05-jetpack-compose-ui.md",
+      "sizeBytes": 8079,
+      "sha256": "6ba585455b75ce908e84ab9811957e77e5869b5913e02f5739250a6b31e155eb",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-kotlin-docs-10-coroutines-flow-and-concurrency-md",
+      "path": "kotlin/docs/10-coroutines-flow-and-concurrency.md",
+      "sizeBytes": 7192,
+      "sha256": "7fa1da591b75292f36b73f79f991b1d19281463f1e6b276fb749c8aebab53fb4",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-kotlin-docs-11-data-persistence-room-datastore-files-md",
+      "path": "kotlin/docs/11-data-persistence-room-datastore-files.md",
+      "sizeBytes": 7593,
+      "sha256": "c084c4920a575229f499a205593db401b55e92f38a8ed592bea96d2cb178a22a",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-kotlin-docs-15-permissions-security-and-privacy-md",
+      "path": "kotlin/docs/15-permissions-security-and-privacy.md",
+      "sizeBytes": 9434,
+      "sha256": "1b3465d3804c7fa746c26b219bddea8de45f5a0d2a2d37014f11820fbd519d7c",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-kotlin-docs-16-testing-strategy-md",
+      "path": "kotlin/docs/16-testing-strategy.md",
+      "sizeBytes": 10136,
+      "sha256": "f19af18705959c58a78c49c00b45200e6b2f58a8203d078b9077666498954d72",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-kotlin-docs-17-performance-profiling-and-optimization-md",
+      "path": "kotlin/docs/17-performance-profiling-and-optimization.md",
+      "sizeBytes": 11712,
+      "sha256": "06e5263cadf16df6b74bbefa73cf26072736eac5bf951ef7ffd08d068f26d871",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-kotlin-docs-18-accessibility-internationalization-and-theming-md",
+      "path": "kotlin/docs/18-accessibility-internationalization-and-theming.md",
+      "sizeBytes": 12383,
+      "sha256": "7580f7211b1841321780a5e67b85e7af39f39037e45f818c3cc90d636d09ac74",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-kotlin-docs-19-build-signing-release-and-google-play-md",
+      "path": "kotlin/docs/19-build-signing-release-and-google-play.md",
+      "sizeBytes": 10338,
+      "sha256": "3e3f4c0862610b522c0a7a88893521d5ab1435a3ca002cfc243a5d7c416e216e",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-kotlin-docs-23-games-overview-choosing-a-route-md",
+      "path": "kotlin/docs/23-games-overview-choosing-a-route.md",
+      "sizeBytes": 7967,
+      "sha256": "283941d5aaa19129c10415aff1c5b51abe2efa8754c8d248014bc9359d48ab23",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-kotlin-docs-26-games-native-graphics-opengl-vulkan-agdk-md",
+      "path": "kotlin/docs/26-games-native-graphics-opengl-vulkan-agdk.md",
+      "sizeBytes": 6791,
+      "sha256": "0199b08233fd0f72ff965f4b1a1bb0f2e27be3d60622cd67ce2dd768b1bb7629",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-kotlin-docs-28-games-performance-input-audio-and-saves-md",
+      "path": "kotlin/docs/28-games-performance-input-audio-and-saves.md",
+      "sizeBytes": 8841,
+      "sha256": "5892209c5c784ed8d41329fe5fda1a4060f65ea1a90151e045ab2755ec114456",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-godot-docs-02-project-anatomy-md",
+      "path": "godot/docs/02-project-anatomy.md",
+      "sizeBytes": 2467,
+      "sha256": "18bfe93b45502c8c7dbc186c408739d7cbf2b976edc6a197a3195bc4bb6a28ea",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-godot-docs-03-export-pipeline-md",
+      "path": "godot/docs/03-export-pipeline.md",
+      "sizeBytes": 3684,
+      "sha256": "76f0ced0c5a65eb132e68768d7670883cd62380da2985fac364fd743a6a57ddd",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-godot-docs-08-testing-and-ci-md",
+      "path": "godot/docs/08-testing-and-ci.md",
+      "sizeBytes": 2067,
+      "sha256": "0b15b7aa98a8858df1305eb784cb94291a1036cf5d507aa0e6aca8ef45699e4b",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-flutter-guides-01-getting-started-and-toolchain-md",
+      "path": "flutter/guides/01-getting-started-and-toolchain.md",
+      "sizeBytes": 6563,
+      "sha256": "eec25debecf19882d92c15cbcc4d9283906bca28406a3fad800bd1fccc83a2de",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-flutter-guides-03-widgets-and-ui-md",
+      "path": "flutter/guides/03-widgets-and-ui.md",
+      "sizeBytes": 7356,
+      "sha256": "dffe3ffe2e68a327fb3fd77e7f2ec5cf01f5f950b67ec313bb278eee7844ec8e",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-resources-docs-v1-dependencies-abi-md",
+      "path": "resources/docs/v1/dependencies-abi.md",
+      "sizeBytes": 1303,
+      "sha256": "71d54248166a971a816d45bdabbb2ff95bc6c243201e30060f55e91b99c98fc0",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-resources-docs-v1-runtime-sdk-md",
+      "path": "resources/docs/v1/runtime-sdk.md",
+      "sizeBytes": 1324,
+      "sha256": "269c94ffa030777a8e3ca27315f2e374d7c77064f3e18c55b2b077133f69e05f",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-resources-docs-v1-build-cache-fixtures-md",
+      "path": "resources/docs/v1/build-cache-fixtures.md",
+      "sizeBytes": 1191,
+      "sha256": "bd6362eb82be6bf08595e8864a4da0c020175d58b6ee6640670161b8e51dd080",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "canonical-forai-ai-index-md",
+      "path": "forai/AI_INDEX.md",
+      "sizeBytes": 4400,
+      "sha256": "eb7dff3aed12acac8f74817bafbba1f2c27a95e918f08ea875aabf43c4720118",
+      "identityEncoding": "utf8-lf"
+    },
+    {
+      "id": "acquire-windows-sdk",
+      "path": "development/acquisitions/recipes/windows-sdk.md",
+      "sizeBytes": 1020,
+      "sha256": "7237e36e854fccd925d7c38eb16676b596472ce0799ecb8e772359c09924118f",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-dotnet-nuget",
+      "path": "development/acquisitions/recipes/dotnet-nuget.md",
+      "sizeBytes": 1240,
+      "sha256": "4b78b04d7a459faffbd3fb5965ce18902d409b0b2bc9428d1f85d14ea91c647a",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-webview2",
+      "path": "development/acquisitions/recipes/webview2.md",
+      "sizeBytes": 784,
+      "sha256": "22a9511f1db1fe5f4b372f87482a4f8b71573851c04a34d0c539fcc1443123c4",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-android-sdk",
+      "path": "development/acquisitions/recipes/android-sdk.md",
+      "sizeBytes": 1317,
+      "sha256": "fbe9dc8e86f033f6a895ce2db03bfbbf614818bc4ed07449f8f782df7d5cc062",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-gradle",
+      "path": "development/acquisitions/recipes/gradle.md",
+      "sizeBytes": 1010,
+      "sha256": "ac08e8aca7c767a3f932bb1cb5b13b7099f790e3082e903669115d8b00ea3438",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-node-npm",
+      "path": "development/acquisitions/recipes/node-npm.md",
+      "sizeBytes": 830,
+      "sha256": "b52017afdb9db08504771c70fd00ae528c6b8bf52865b0b3c61d24217ddf2dc8",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-rust-cargo",
+      "path": "development/acquisitions/recipes/rust-cargo.md",
+      "sizeBytes": 856,
+      "sha256": "88d3671b46a03bb5704d485a4a8dacf7a13ff871156e7b8913698ba3a1c2d0e8",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-python-wheels",
+      "path": "development/acquisitions/recipes/python-wheels.md",
+      "sizeBytes": 971,
+      "sha256": "c4b291024fe0ef7a6cf573e2e35b468319292cb56ec17f184e9b22ef0da4ff8f",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-cpp-packages",
+      "path": "development/acquisitions/recipes/cpp-packages.md",
+      "sizeBytes": 880,
+      "sha256": "df10fdde901468eec469c064d1ffe3231273709d2a61282ae827c58fc5c390d0",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-godot",
+      "path": "development/acquisitions/recipes/godot.md",
+      "sizeBytes": 932,
+      "sha256": "6290b062b5163a6d0c897489671e1384e48a39b867768035b166dfba5faf79c8",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-flutter",
+      "path": "development/acquisitions/recipes/flutter.md",
+      "sizeBytes": 1101,
+      "sha256": "a0444fee432c7c21c7779efca00818104d04f7620c1de59896b5f8de4634113c",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-browsers",
+      "path": "development/acquisitions/recipes/browsers.md",
+      "sizeBytes": 1560,
+      "sha256": "aa710cb8e9466c6dd1fe96fbf5ad36025ce495fec54cdc4f18385265beb128c6",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-userscript-manager",
+      "path": "development/acquisitions/recipes/userscript-manager.md",
+      "sizeBytes": 882,
+      "sha256": "63dbae65eac2e3d7fa0dcbbc82863bfd67cf29fa96bae906ff65f47f0baca598",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-userstyle-manager",
+      "path": "development/acquisitions/recipes/userstyle-manager.md",
+      "sizeBytes": 814,
+      "sha256": "180838641a014b2568f2629d452258a34fcb95b38a7460c622a7ef3344127822",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-unity",
+      "path": "development/acquisitions/recipes/unity.md",
+      "sizeBytes": 1144,
+      "sha256": "ebfb08f90cf46e01f751a263eaf7b4845c853e57b8e2a3416b7d7df3bd5965c7",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-unreal",
+      "path": "development/acquisitions/recipes/unreal.md",
+      "sizeBytes": 1018,
+      "sha256": "44a10b1bb14ff81e9437879ef7155081be3624aa22e2f1ee42a9fd17f5f5656d",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-platform-services",
+      "path": "development/acquisitions/recipes/platform-services.md",
+      "sizeBytes": 1124,
+      "sha256": "a49b39ef1bb301b422b96d7e2a3f63eeda92c64a4537563149a2a6da3527f168",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-media-assets",
+      "path": "development/acquisitions/recipes/media-assets.md",
+      "sizeBytes": 1089,
+      "sha256": "90c4a62dc06b87e4b0cbdea157afe71a338bba8bf2a2658518e546b749235bac",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "sample-portableapps-guide",
+      "path": "development/guides/portableapps.md",
+      "sizeBytes": 2090,
+      "sha256": "302d26e64fba781d72ffe267d9052902fa888e29cf52f1a7257d77c77f552936",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "sample-portableapps-template",
+      "path": "development/samples/portableapps/help.html",
+      "sizeBytes": 252,
+      "sha256": "80f4b48dea8f17a9e799f35f741be582e977469c0d09f2b843893a452ea21852",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "sample-wow-addons-guide",
+      "path": "development/guides/wow-addons.md",
+      "sizeBytes": 1280,
+      "sha256": "12122df67a8e023ae261b8d5f20158145d44ba8472c258e05dbd83bd209aff46",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "sample-wow-addons-example",
+      "path": "development/samples/wow-addon/OfflineSample.lua",
+      "sizeBytes": 154,
+      "sha256": "aabf64742bf444d39ad7a36be00a6da9c0d97ab59f5acd6f0db4e3ed272a4b6f",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "acquire-portableapps",
+      "path": "development/acquisitions/recipes/portableapps.md",
+      "sizeBytes": 2132,
+      "sha256": "4ff922ac7e294b413d8c9513911c77f3115fa580b55ea3923e18ba87a3d89c68",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "godot-physics-guide",
+      "path": "godot/docs/physics-resources.md",
+      "sizeBytes": 9183,
+      "sha256": "e8c748645ab8d8b744ec41699372998c321cd78674007f0fee77d1cbc848ca1d",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "vendor-windows-keyboard-keyboard-interactions",
+      "path": "development/vendor/windows-keyboard/hub/apps/develop/input/keyboard-interactions.md",
+      "sizeBytes": 38012,
+      "sha256": "707f5e7e2dcc00079a3589eb8c175d79b4c3b6da46fde5dfabced2075d5936b9",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "vendor-windows-keyboard-keyboard-events",
+      "path": "development/vendor/windows-keyboard/hub/apps/develop/input/keyboard-events.md",
+      "sizeBytes": 32102,
+      "sha256": "2d482541483db758d726b72b0bc9763702fb1546c22c3babe53e3a081441524f",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "vendor-godot-manual-input-examples",
+      "path": "development/vendor/godot-manual/tutorials/inputs/input_examples.rst",
+      "sizeBytes": 13239,
+      "sha256": "90359a6ab0c45bd034c19e67547a2643b63576287e421a9683482ab19d142b84",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "vendor-godot-manual-saving-games",
+      "path": "development/vendor/godot-manual/tutorials/io/saving_games.rst",
+      "sizeBytes": 15073,
+      "sha256": "b4e8b1662e3c810d1a1f9f854de872fd278ed073d4c899712542dbd459514162",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "vendor-godot-manual-exporting-for-android",
+      "path": "development/vendor/godot-manual/tutorials/export/exporting_for_android.rst",
+      "sizeBytes": 9182,
+      "sha256": "aa509b5b79a8130c2f05b57010ef00b76526b56b67e30cfb36ea5a10c6baa6ea",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "vendor-normalize-css-normalize",
+      "path": "development/vendor/normalize-css/normalize.css",
+      "sizeBytes": 6138,
+      "sha256": "580818700724d42d7fcc4979b0197971fca1c6d2e0286769237a0ac897df5512",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "vendor-android-architecture-architecturelearningjourney",
+      "path": "development/vendor/android-architecture/docs/ArchitectureLearningJourney.md",
+      "sizeBytes": 14281,
+      "sha256": "08e096c1067ef6cf92cc118793e81454ff9fb8ee11964013277b5fdb6c90517b",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "vendor-android-architecture-modularizationlearningjourney",
+      "path": "development/vendor/android-architecture/docs/ModularizationLearningJourney.md",
+      "sizeBytes": 10615,
+      "sha256": "1beb4673b2535ee5c8bb651b4410f8de91e59c6f476ab0447fabdb14ed6e2bc9",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "godot-physics-manual-tutorials-physics-soft-body-rst",
+      "path": "godot/physics/vendor/godot-physics-manual/tutorials/physics/soft_body.rst",
+      "sizeBytes": 8513,
+      "sha256": "27f501dfda42fe4ab9fde1d219781edc86487528f03d6902296f7f1fdd80895d",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "godot-physics-manual-tutorials-physics-ragdoll-system-rst",
+      "path": "godot/physics/vendor/godot-physics-manual/tutorials/physics/ragdoll_system.rst",
+      "sizeBytes": 12190,
+      "sha256": "db4e9a6eef93cd2769d4fc19c3f9d0364987a0920eae29b6a58420b74c3be4f4",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "godot-physics-manual-tutorials-physics-using-jolt-physics-rst",
+      "path": "godot/physics/vendor/godot-physics-manual/tutorials/physics/using_jolt_physics.rst",
+      "sizeBytes": 15211,
+      "sha256": "d18a89d8ce2ba3f56f15744ee6477ad6c75fbff5c2dd081c957db26577422dc0",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "godot-physics-manual-tutorials-physics-interpolation-advanced-physics-interpolation-rst",
+      "path": "godot/physics/vendor/godot-physics-manual/tutorials/physics/interpolation/advanced_physics_interpolation.rst",
+      "sizeBytes": 8735,
+      "sha256": "6a670a213245e7d9949c29bff97b58bbf95123142d85141d045785afc61ba73d",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "godot-physics-manual-tutorials-physics-physics-introduction-rst",
+      "path": "godot/physics/vendor/godot-physics-manual/tutorials/physics/physics_introduction.rst",
+      "sizeBytes": 21283,
+      "sha256": "54abe974f3a48b5e6e436f4c1113c568643af7db44ce4593f672fc29a19c850b",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "godot-physics-api-doc-classes-rigidbody3d-xml",
+      "path": "godot/physics/vendor/godot-physics-api/doc/classes/RigidBody3D.xml",
+      "sizeBytes": 23453,
+      "sha256": "c5b666b642d1f40b70c25a255e09936626fc340e6bbb69ee7fffcf99ec2e211f",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "godot-physics-api-doc-classes-vehiclebody3d-xml",
+      "path": "godot/physics/vendor/godot-physics-api/doc/classes/VehicleBody3D.xml",
+      "sizeBytes": 3614,
+      "sha256": "91ccfa733677ac72899a3a5da85b16a958467729bbad0fe887a4ddb2b252acf8",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "godot-physics-api-doc-classes-softbody3d-xml",
+      "path": "godot/physics/vendor/godot-physics-api/doc/classes/SoftBody3D.xml",
+      "sizeBytes": 10391,
+      "sha256": "d184b6ab4cfce395dbdd291a14fea0b37aa6b5610d389f6bf0bd9a9d602e4cba",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "godot-physics-api-doc-classes-physicalbone3d-xml",
+      "path": "godot/physics/vendor/godot-physics-api/doc/classes/PhysicalBone3D.xml",
+      "sizeBytes": 9482,
+      "sha256": "a75202fdfc95bb46d527dc11565d86ffc26b58ad625b3081008cf5de1f3a2255",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "godot-physics-api-doc-classes-physicalbonesimulator3d-xml",
+      "path": "godot/physics/vendor/godot-physics-api/doc/classes/PhysicalBoneSimulator3D.xml",
+      "sizeBytes": 1962,
+      "sha256": "9f02e9b91f8c99aebd7e8020163978c89810fd09fa6621dbdc6cc8153480a9bc",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "godot-physics-api-doc-classes-collisionobject3d-xml",
+      "path": "godot/physics/vendor/godot-physics-api/doc/classes/CollisionObject3D.xml",
+      "sizeBytes": 13259,
+      "sha256": "8df8abf328c2f4c2e2d651655d0b7ef05d670290d8c1216abdd4f3cab70b58ba",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "godot-rapier-readme-md",
+      "path": "godot/physics/vendor/godot-rapier/README.md",
+      "sizeBytes": 9639,
+      "sha256": "5f0a88248955e0e6de34647bf9c9bf13d29af6bf9b7af3c62303c3e27b1194c7",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "godot-rapier-architecture-md",
+      "path": "godot/physics/vendor/godot-rapier/ARCHITECTURE.md",
+      "sizeBytes": 3443,
+      "sha256": "281a00031781c830e148ae45af91726f68749ac12e2aa4f20a5782e249e3a0d5",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "verlet-rope-readme-md",
+      "path": "godot/physics/vendor/verlet-rope/README.md",
+      "sizeBytes": 6009,
+      "sha256": "0dd81e01146d8afe35f0d4d5a8f7c54ab50ef9c17841a8824d5b6887903e5d57",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "verlet-rope-addons-verlet-rope-4-physics-verletropesimulated-cs",
+      "path": "godot/physics/vendor/verlet-rope/addons/verlet_rope_4/Physics/VerletRopeSimulated.cs",
+      "sizeBytes": 27201,
+      "sha256": "be1c1221ee6beb6db2ffe74b01d185b9f56a0a7b6f2d0f51e3502a3a04a6379d",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "verlet-rope-addons-verlet-rope-4-physics-verletroperigid-cs",
+      "path": "godot/physics/vendor/verlet-rope/addons/verlet_rope_4/Physics/VerletRopeRigid.cs",
+      "sizeBytes": 14439,
+      "sha256": "211f00eaa83aa791b8423d44076580e0e1b86a634616ad359ac2120b2232d0e9",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "ocean3d-lite-readme-md",
+      "path": "godot/physics/vendor/ocean3d-lite/README.md",
+      "sizeBytes": 1537,
+      "sha256": "d53560e82a5bda6991f14eb2b2c15895ac0d0748701bab82a7b235e9c6960f8c",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "ocean3d-lite-addons-ocean3d-lite-floating-body-gd",
+      "path": "godot/physics/vendor/ocean3d-lite/addons/ocean3d_lite/floating_body.gd",
+      "sizeBytes": 4862,
+      "sha256": "8c286e62fd13192154155fd9beb75fdf746b504374f14576d94814c64b85c224",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "openfairway-addons-openfairway-readme-md",
+      "path": "godot/physics/vendor/openfairway/addons/openfairway/README.md",
+      "sizeBytes": 26450,
+      "sha256": "605944619aacacd2432a3e094160100f4b326e1b19ef4583abe284c8b2f455d3",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "openfairway-addons-openfairway-physics-aerodynamics-cs",
+      "path": "godot/physics/vendor/openfairway/addons/openfairway/physics/Aerodynamics.cs",
+      "sizeBytes": 4282,
+      "sha256": "392df44dd602ff4cdb034caee4333e555d28109499a60a920460e8ed203d74ad",
+      "identityEncoding": "raw-bytes"
+    },
+    {
+      "id": "openfairway-addons-openfairway-physics-bouncecalculator-cs",
+      "path": "godot/physics/vendor/openfairway/addons/openfairway/physics/BounceCalculator.cs",
+      "sizeBytes": 23220,
+      "sha256": "498dea31d4c689bd2a1294ab41df42ae019ecc8ae98dd2a82a3c68bbff92ef69",
+      "identityEncoding": "raw-bytes"
+    }
+  ]
+}
