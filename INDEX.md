@@ -10,6 +10,7 @@ This file is the router: find the domain, then the file, in seconds.
 3. Short on context? Upload the domain's `ai-bundle.md` instead — the whole domain in one file.
 4. Use the task routing table for direct jumps to the single best file.
 5. The root `README.md` + `toolkit.json` describe the PowerShell toolkit scripts, a separate thing from the knowledge library. `ai_tools/` holds offline Python CLI checks.
+6. For local workflow automation, see [`workflow_tools/README.md`](workflow_tools/README.md); review each gate/checklist before running it.
 
 ## Offline Development Workflows
 
@@ -46,6 +47,8 @@ Original [platform samples](development/samples/README.md) provide a reproducibl
 
 | Task / question | Go to |
 | --- | --- |
+| Run a configured local quality gate | [workflow_tools/gaterunner/README.md](workflow_tools/gaterunner/README.md) |
+| Bundle machine-specific verification evidence | [workflow_tools/fieldverify/README.md](workflow_tools/fieldverify/README.md) |
 | Package a Windows app as PortableApps.com Portable | [portableapps/docs/07-end-to-end-workflow.md](portableapps/docs/07-end-to-end-workflow.md) |
 | PortableApps format specification | [portableapps/docs/01-format-spec.md](portableapps/docs/01-format-spec.md) |
 | PortableApps Launcher INI key (any key) | [portableapps/reference/launcher-keys.md](portableapps/reference/launcher-keys.md) |

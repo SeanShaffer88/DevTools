@@ -47,7 +47,7 @@ try{
  $r=& $generator -Template NativeDll -Destination (Join-Path $destLink 'Child') -Name Clean -Json | ConvertFrom-Json;Assert (-not $r.created -and -not(Test-Path -LiteralPath (Join-Path $outside 'Child'))) 'Reject destination ancestor junction'
  $addon=& (Join-Path $toolRoot 'Test-WowAddon.ps1') -AddonPath $projects.WowAddon -InterfaceVersion 30300 -Json | ConvertFrom-Json;Assert $addon.valid 'Generated addon validates'
  $dotnet=Run 'dotnet.exe' @('build',(Join-Path $projects.WindowsConsole 'SampleWindowsConsole.csproj'),'--configuration','Release','--nologo') $projects.WindowsConsole
- $managedOutput=Get-ChildItem -LiteralPath (Join-Path $projects.WindowsConsole 'bin\Release') -Filter 'SampleWindowsConsole.dll' -File -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
+ $managedOutput=Get-ChildItem -LiteralPath (Join-Path $projects.WindowsConsole 'bin') -Filter 'SampleWindowsConsole.dll' -File -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
  if($null -eq $managedOutput){Write-Host ('dotnet build output:'+[Environment]::NewLine+$dotnet.Stdout+$dotnet.Stderr)}
 Assert ($null -ne $managedOutput) '.NET source actually compiles offline'
  $native=$projects.NativeDll
@@ -61,7 +61,9 @@ Assert ($null -ne $managedOutput) '.NET source actually compiles offline'
  Add-Type -TypeDefinition $probe
  Assert ([NativeSampleProbe]::Add(2,3) -eq 5) 'Trusted generated native sample ordinary function call'
  Assert ([NativeSampleProbe]::Add([int]::MaxValue,1) -eq [int]::MaxValue -and [NativeSampleProbe]::Add([int]::MinValue,-1) -eq [int]::MinValue) 'Trusted generated native sample saturates arithmetic'
- $sdk='C:\Users\Sean Shaffer\AppData\Local\Android\Sdk'
+ $sdk=$env:ANDROID_HOME
+ if([string]::IsNullOrWhiteSpace($sdk)){$sdk=$env:ANDROID_SDK_ROOT}
+ if([string]::IsNullOrWhiteSpace($sdk)){throw 'Set ANDROID_HOME or ANDROID_SDK_ROOT to run Android template tests.'}
  foreach($kind in @('AndroidApp','AndroidGame')){
   $project=$projects[$kind];$r=Run 'pwsh.exe' @('-NoProfile','-File',(Join-Path $project 'Build.ps1'),'-SdkPath',$sdk) $project
   $apk=Get-ChildItem -LiteralPath (Join-Path $project 'build') -Filter '*-unsigned.apk' -File -Recurse | Select-Object -First 1
@@ -92,7 +94,9 @@ else if(args.Contains("logcat")) Console.WriteLine(mode=="large"?new string('x',
 return 0;
 '@)
  $r=Run 'dotnet.exe' @('build',(Join-Path $fakeRoot 'FakeAdb.csproj'),'-c','Release','--nologo') $fakeRoot
- $fake=Join-Path $fakeRoot 'bin\Release\net10.0\FakeAdb.exe';$env:DEVTOOLS_FAKE_ADB_LOG=Join-Path $fixture 'adb-argv.jsonl';$env:DEVTOOLS_FAKE_ADB_MODE=''
+ $fakeOutput=Get-ChildItem -LiteralPath (Join-Path $fakeRoot 'bin') -Filter 'FakeAdb.exe' -File -Recurse | Select-Object -First 1
+ Assert ($null -ne $fakeOutput) 'Fake ADB executable built'
+ $fake=$fakeOutput.FullName;$env:DEVTOOLS_FAKE_ADB_LOG=Join-Path $fixture 'adb-argv.jsonl';$env:DEVTOOLS_FAKE_ADB_MODE=''
  Copy-Item -LiteralPath $fake -Destination (Join-Path (Split-Path $fake) 'adb.exe')
  $env:PATH=(Split-Path $fake)+';'+$oldPath
  $apkFixture=Join-Path $fixture 'Fixture.apk';New-Zip $apkFixture @{'AndroidManifest.xml'='<manifest/>'; 'classes.dex'='dex';'lib/arm64-v8a/example.so'='elf';'assets/example.txt'='asset'}
